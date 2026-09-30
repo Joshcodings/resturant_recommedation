@@ -6,3 +6,4 @@ tastematch/dist/
 .DS_Store
 __pycache__/
 *.pyc
+hf_space/
