@@ -24,6 +24,11 @@ export default function DiscoverView() {
   const [needsOnlineDelivery, setNeedsOnlineDelivery] = useState(false);
   const [activePreset, setActivePreset] = useState<MoodPreset | null>(null);
 
+  // Engine controls: Mode, Proximity Radius, Diversification
+  const [mode, setMode] = useState<'strict' | 'flexible'>('flexible');
+  const [radiusKm, setRadiusKm] = useState<number | null>(null);
+  const [diversificationLambda, setDiversificationLambda] = useState(0.85);
+
   // Live priority sliders
   const [weights, setWeights] = useState<PriorityWeights>(DEFAULT_WEIGHTS);
 
@@ -69,10 +74,25 @@ export default function DiscoverView() {
       needsTableBooking,
       needsOnlineDelivery,
       topN: 3,
+      mode,
+      radiusKm,
+      diversificationLambda,
     };
 
     return recommend(data, query, activePreset);
-  }, [data, country, city, effectivePriceRange, cuisines, needsTableBooking, needsOnlineDelivery, activePreset]);
+  }, [
+    data,
+    country,
+    city,
+    effectivePriceRange,
+    cuisines,
+    needsTableBooking,
+    needsOnlineDelivery,
+    activePreset,
+    mode,
+    radiusKm,
+    diversificationLambda,
+  ]);
 
   // Live re-ranking over qualifyingPool using priority sliders (amendment 1)
   const rankedRestaurants = useMemo(() => {
@@ -108,7 +128,7 @@ export default function DiscoverView() {
   };
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px 80px' }}>
+    <div className="page-container">
       {/* Hero Section */}
       <section style={{ paddingTop: 96, paddingBottom: 32 }}>
         <h1
@@ -181,6 +201,12 @@ export default function DiscoverView() {
             onOnlineDeliveryChange={setNeedsOnlineDelivery}
             weights={weights}
             onWeightsChange={setWeights}
+            mode={mode}
+            onModeChange={setMode}
+            radiusKm={radiusKm}
+            onRadiusChange={setRadiusKm}
+            diversificationLambda={diversificationLambda}
+            onDiversificationChange={setDiversificationLambda}
           />
         </div>
       </section>
@@ -189,26 +215,87 @@ export default function DiscoverView() {
       <section style={{ marginTop: 24 }}>
         {/* Notices and Warnings */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 20 }}>
-          {recommendation?.isLimitedData && (
-            <div
+          {/* Active Mode and Filter Status Badges */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+            <span
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: 6,
-                padding: '4px 12px',
+                gap: 4,
+                padding: '3px 10px',
                 borderRadius: 999,
-                border: '1px solid var(--warn)',
-                color: 'var(--warn)',
                 fontSize: 12,
+                fontWeight: 600,
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 500,
-                alignSelf: 'flex-start',
+                background: mode === 'strict' ? 'rgba(200, 240, 60, 0.15)' : 'var(--surface-2)',
+                color: mode === 'strict' ? 'var(--accent-deep)' : 'var(--text-muted)',
+                border: '1px solid var(--border)',
               }}
             >
-              <AlertTriangle size={14} strokeWidth={1.5} />
-              <span>Limited data: {recommendation.cityRestaurantCount} restaurants</span>
-            </div>
-          )}
+              {mode === 'strict' ? '🔒 Strict Mode' : '⚡ Flexible Mode'}
+            </span>
+
+            {radiusKm !== null && (
+              <span
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 4,
+                  padding: '3px 10px',
+                  borderRadius: 999,
+                  fontSize: 12,
+                  fontFamily: 'Inter, sans-serif',
+                  background: 'var(--surface-2)',
+                  color: 'var(--text)',
+                  border: '1px solid var(--border)',
+                }}
+              >
+                📍 Within {radiusKm} km
+              </span>
+            )}
+
+            {recommendation?.isLimitedData && (
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '3px 10px',
+                  borderRadius: 999,
+                  border: '1px solid var(--warn)',
+                  color: 'var(--warn)',
+                  fontSize: 12,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 500,
+                }}
+              >
+                <AlertTriangle size={14} strokeWidth={1.5} />
+                <span>Limited data: {recommendation.cityRestaurantCount} restaurants</span>
+              </div>
+            )}
+
+            {/* Exact match label (amendment 13) */}
+            {recommendation?.stage === 'exact_all' && (
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '3px 10px',
+                  borderRadius: 999,
+                  border: '1px solid var(--accent)',
+                  background: 'var(--surface-2)',
+                  color: 'var(--accent-deep)',
+                  fontSize: 12,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 600,
+                }}
+              >
+                <CheckCircle2 size={13} strokeWidth={2} />
+                <span>Exact match</span>
+              </div>
+            )}
+          </div>
 
           {/* Stage notices */}
           {recommendation?.notice && (
@@ -224,40 +311,40 @@ export default function DiscoverView() {
               }}
             >
               <Info size={16} strokeWidth={1.5} color="var(--accent-deep)" style={{ flexShrink: 0, marginTop: 2 }} />
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: 14,
-                  lineHeight: '20px',
-                  color: 'var(--text)',
-                  fontFamily: 'Inter, sans-serif',
-                }}
-              >
-                {recommendation.notice}
-              </p>
-            </div>
-          )}
-
-          {/* Exact match label (amendment 13) */}
-          {recommendation?.stage === 'exact_all' && (
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                padding: '3px 10px',
-                borderRadius: 999,
-                border: '1px solid var(--accent)',
-                background: 'var(--surface-2)',
-                color: 'var(--accent-deep)',
-                fontSize: 12,
-                fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
-                alignSelf: 'flex-start',
-              }}
-            >
-              <CheckCircle2 size={13} strokeWidth={2} />
-              <span>Exact match</span>
+              <div>
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: 14,
+                    lineHeight: '20px',
+                    color: 'var(--text)',
+                    fontFamily: 'Inter, sans-serif',
+                  }}
+                >
+                  {recommendation.notice}
+                </p>
+                {recommendation.relaxedCriteria && recommendation.relaxedCriteria.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 6 }}>
+                    {recommendation.relaxedCriteria.map(item => (
+                      <span
+                        key={item}
+                        style={{
+                          fontSize: 11,
+                          padding: '2px 8px',
+                          borderRadius: 4,
+                          background: 'rgba(255, 184, 77, 0.15)',
+                          color: 'var(--warn)',
+                          border: '1px solid rgba(255, 184, 77, 0.3)',
+                          fontWeight: 500,
+                          fontFamily: 'Inter, sans-serif',
+                        }}
+                      >
+                        Relaxed: {item}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>

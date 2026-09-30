@@ -9,6 +9,12 @@ interface Props {
   onOnlineDeliveryChange: (val: boolean) => void;
   weights: PriorityWeights;
   onWeightsChange: (weights: PriorityWeights) => void;
+  mode?: 'strict' | 'flexible';
+  onModeChange?: (mode: 'strict' | 'flexible') => void;
+  radiusKm?: number | null;
+  onRadiusChange?: (radius: number | null) => void;
+  diversificationLambda?: number;
+  onDiversificationChange?: (val: number) => void;
 }
 
 export default function MoreOptions({
@@ -18,6 +24,12 @@ export default function MoreOptions({
   onOnlineDeliveryChange,
   weights,
   onWeightsChange,
+  mode = 'flexible',
+  onModeChange,
+  radiusKm = null,
+  onRadiusChange,
+  diversificationLambda = 0.85,
+  onDiversificationChange,
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -115,6 +127,126 @@ export default function MoreOptions({
               <Bike size={15} strokeWidth={1.5} color="var(--text-muted)" />
               <span>Needs online delivery</span>
             </label>
+          </div>
+
+          {/* Engine Mode & Radius Controls */}
+          <div style={{ borderTop: '1px solid var(--border)', paddingTop: 12, display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+              <div>
+                <span style={{ fontSize: 13, fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif", color: 'var(--text)' }}>
+                  Recommendation Mode
+                </span>
+                <p style={{ margin: '2px 0 0', fontSize: 11, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                  Choose strict matching or controlled progressive relaxation
+                </p>
+              </div>
+
+              {onModeChange && (
+                <div style={{ display: 'flex', background: 'var(--surface-2)', padding: 3, borderRadius: 8, border: '1px solid var(--border)' }}>
+                  <button
+                    type="button"
+                    onClick={() => onModeChange('flexible')}
+                    style={{
+                      padding: '4px 10px',
+                      borderRadius: 6,
+                      fontSize: 12,
+                      fontWeight: mode === 'flexible' ? 600 : 400,
+                      background: mode === 'flexible' ? 'var(--accent)' : 'transparent',
+                      color: mode === 'flexible' ? 'var(--accent-ink)' : 'var(--text-muted)',
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Flexible (Auto-Relax)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onModeChange('strict')}
+                    style={{
+                      padding: '4px 10px',
+                      borderRadius: 6,
+                      fontSize: 12,
+                      fontWeight: mode === 'strict' ? 600 : 400,
+                      background: mode === 'strict' ? 'var(--accent)' : 'transparent',
+                      color: mode === 'strict' ? 'var(--accent-ink)' : 'var(--text-muted)',
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Strict (Exact Only)
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Proximity Radius */}
+            {onRadiusChange && (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+                <div>
+                  <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--text)' }}>
+                    Proximity Filter
+                  </span>
+                  <span style={{ fontSize: 11, color: 'var(--text-muted)', marginLeft: 6 }}>
+                    (from city center)
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: 4 }}>
+                  {[
+                    { label: 'Any distance', val: null },
+                    { label: 'Within 3 km', val: 3 },
+                    { label: 'Within 5 km', val: 5 },
+                    { label: 'Within 10 km', val: 10 },
+                  ].map(opt => {
+                    const active = radiusKm === opt.val;
+                    return (
+                      <button
+                        key={opt.label}
+                        type="button"
+                        onClick={() => onRadiusChange(opt.val)}
+                        style={{
+                          height: 28,
+                          padding: '0 8px',
+                          borderRadius: 6,
+                          fontSize: 11,
+                          fontWeight: active ? 600 : 400,
+                          background: active ? 'var(--surface-2)' : 'transparent',
+                          color: active ? 'var(--accent-deep)' : 'var(--text-muted)',
+                          border: active ? '1px solid var(--accent)' : '1px solid var(--border)',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        {opt.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Diversification MMR Control */}
+            {onDiversificationChange && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: 'var(--text-muted)' }}>
+                  <span>Maximal Marginal Relevance (MMR) Diversification</span>
+                  <span style={{ color: 'var(--text)', fontVariantNumeric: 'tabular-nums' }}>
+                    {diversificationLambda < 0.7 ? 'High Diversity' : diversificationLambda > 0.85 ? 'Focus on Top Score' : 'Balanced'}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min={0.5}
+                  max={1.0}
+                  step={0.05}
+                  value={diversificationLambda}
+                  onChange={e => onDiversificationChange(Number(e.target.value))}
+                  style={{ width: '100%', accentColor: 'var(--accent)', height: 4 }}
+                />
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: 'var(--text-muted)' }}>
+                  <span>Explore Variety</span>
+                  <span>Strict Relevance</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Priority sliders heading & reset */}

@@ -11,7 +11,7 @@ import InsightsView from '@/views/InsightsView';
 import StyleguideView from '@/views/StyleguideView';
 import AboutModal from '@/components/modals/AboutModal';
 import ShortlistDrawer from '@/components/modals/ShortlistDrawer';
-import { Sun, Moon, Heart, Info } from 'lucide-react';
+import { Sun, Moon, Heart, Info, Search, Users, BarChart3 } from 'lucide-react';
 import type { RestaurantParsed } from '@/types/restaurant';
 import './index.css';
 
@@ -28,6 +28,7 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
 
   return (
     <header
+      className="top-bar-header"
       style={{
         height: 64,
         position: 'sticky',
@@ -37,7 +38,6 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
         borderBottom: '1px solid var(--border)',
         display: 'flex',
         alignItems: 'center',
-        padding: '0 24px',
         gap: 20,
       }}
     >
@@ -72,7 +72,7 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
       </NavLink>
 
       {/* Nav tabs: Discover, Group, Insights, About */}
-      <nav style={{ display: 'flex', gap: 6, flex: 1 }} aria-label="Main navigation">
+      <nav className="desktop-nav" aria-label="Main navigation">
         {[
           { to: '/', label: 'Discover' },
           { to: '/group', label: 'Group' },
@@ -274,6 +274,26 @@ function AppShell() {
       </main>
 
       <Footer onOpenAbout={() => setIsAboutOpen(true)} />
+
+      {/* Mobile Bottom Navigation Bar (below 768px) */}
+      <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
+        <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+          <Search size={18} strokeWidth={2} />
+          <span>Discover</span>
+        </NavLink>
+        <NavLink to="/group" className={({ isActive }) => (isActive ? 'active' : '')}>
+          <Users size={18} strokeWidth={2} />
+          <span>Group</span>
+        </NavLink>
+        <NavLink to="/insights" className={({ isActive }) => (isActive ? 'active' : '')}>
+          <BarChart3 size={18} strokeWidth={2} />
+          <span>Insights</span>
+        </NavLink>
+        <button onClick={() => setIsAboutOpen(true)} type="button">
+          <Info size={18} strokeWidth={2} />
+          <span>About</span>
+        </button>
+      </nav>
 
       {/* Global Modals */}
       <AboutModal open={isAboutOpen} onClose={() => setIsAboutOpen(false)} />

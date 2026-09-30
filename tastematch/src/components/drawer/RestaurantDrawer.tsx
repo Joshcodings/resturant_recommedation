@@ -9,24 +9,58 @@ import { PRICE_TIERS } from '@/lib/currency';
 import type { ScoredRestaurant } from '@/types/recommendation';
 import type { RestaurantParsed } from '@/types/restaurant';
 
-function CompactCard({ r, onOpen }: { r: RestaurantParsed; onOpen: () => void }) {
+function CompactCard({ r, onOpen }: { r: RestaurantParsed & { similarity?: number }; onOpen: () => void }) {
+  const matchPct = r.similarity !== undefined ? Math.round(r.similarity * 100) : null;
   return (
     <button
       onClick={onOpen}
       style={{
-        minWidth: 160, padding: 12,
-        background: 'var(--surface-2)', border: '1px solid var(--border)', borderRadius: 10,
-        textAlign: 'left', cursor: 'pointer', flexShrink: 0,
+        minWidth: 170,
+        padding: 12,
+        background: 'var(--surface-2)',
+        border: '1px solid var(--border)',
+        borderRadius: 10,
+        textAlign: 'left',
+        cursor: 'pointer',
+        flexShrink: 0,
       }}
     >
-      <div style={{ fontSize: 20, marginBottom: 4 }}>{getCuisineEmoji(r.cuisineList)}</div>
-      <div style={{
-        fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 600,
-        color: 'var(--text)', lineHeight: '18px', marginBottom: 2,
-        overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: 136,
-      }}>{r.restaurant_name}</div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+        <span style={{ fontSize: 20 }}>{getCuisineEmoji(r.cuisineList)}</span>
+        {matchPct !== null && (
+          <span
+            style={{
+              fontSize: 10,
+              fontWeight: 600,
+              padding: '2px 6px',
+              borderRadius: 4,
+              background: 'var(--surface)',
+              color: 'var(--accent-deep)',
+              border: '1px solid var(--border)',
+            }}
+          >
+            {matchPct}% match
+          </span>
+        )}
+      </div>
+      <div
+        style={{
+          fontFamily: "'Space Grotesk', sans-serif",
+          fontSize: 13,
+          fontWeight: 600,
+          color: 'var(--text)',
+          lineHeight: '18px',
+          marginBottom: 2,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+          maxWidth: 144,
+        }}
+      >
+        {r.restaurant_name}
+      </div>
       <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-        ⭐ {r.aggregate_rating.toFixed(1)}
+        ⭐ {r.aggregate_rating.toFixed(1)} · {r.locality}
       </div>
     </button>
   );
@@ -214,13 +248,89 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
         );
       })()}
 
-          {/* Why this pick */}
-          {r.whyThisPick && (
-            <div style={{
-              fontSize: 14, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', lineHeight: '20px',
-              borderLeft: '2px solid var(--accent)', paddingLeft: 12,
-            }}>{r.whyThisPick}</div>
-          )}
+          {/* Explainable AI Attribution Section */}
+          <div
+            style={{
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              borderRadius: 10,
+              padding: 14,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 10,
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ fontSize: 13, fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif", color: 'var(--text)' }}>
+                Recommendation Explanation
+              </span>
+              <span
+                style={{
+                  fontSize: 10,
+                  padding: '1px 6px',
+                  borderRadius: 4,
+                  background: 'var(--surface)',
+                  color: 'var(--accent-deep)',
+                  border: '1px solid var(--border)',
+                  fontWeight: 600,
+                }}
+              >
+                Explainable AI
+              </span>
+            </div>
+
+            {r.whyThisPick && (
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: 13,
+                  lineHeight: '19px',
+                  color: 'var(--text)',
+                  fontFamily: 'Inter, sans-serif',
+                  borderLeft: '2px solid var(--accent)',
+                  paddingLeft: 10,
+                }}
+              >
+                {r.whyThisPick}
+              </p>
+            )}
+
+            {r.explanation && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', marginTop: 4 }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                  <span>🍴</span>
+                  <span>{r.explanation.cuisineSummary}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                  <span>⭐</span>
+                  <span>{r.explanation.qualitySummary}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                  <span>💵</span>
+                  <span>{r.explanation.priceSummary}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                  <span>👥</span>
+                  <span>{r.explanation.popularitySummary}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                  <span>📍</span>
+                  <span>{r.explanation.locationSummary}</span>
+                </div>
+
+                {r.explanation.relaxedItems && r.explanation.relaxedItems.length > 0 && (
+                  <div style={{ marginTop: 4, padding: 8, borderRadius: 6, background: 'rgba(255, 184, 77, 0.1)', border: '1px solid rgba(255, 184, 77, 0.25)', color: 'var(--warn)', fontSize: 11 }}>
+                    <strong>Progressive Relaxation Applied:</strong>
+                    <ul style={{ margin: '4px 0 0', paddingLeft: 16 }}>
+                      {r.explanation.relaxedItems.map(item => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           {/* More like this */}
           {similar.length > 0 && (

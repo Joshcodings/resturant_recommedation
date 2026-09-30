@@ -122,13 +122,11 @@ export default function SearchBar({
 
   return (
     <div
+      className="search-bar-grid"
       style={{
         background: 'var(--surface)',
         border: '1px solid var(--border)',
         borderRadius: 12,
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr)) auto',
-        gap: 1,
         backgroundColor: 'var(--border)',
         overflow: 'visible',
         position: 'relative',
@@ -138,12 +136,11 @@ export default function SearchBar({
       {/* Segment 1: Country & City */}
       <div
         ref={cityDropdownRef}
+        className="search-bar-seg-1"
         style={{
           background: 'var(--surface)',
           padding: '10px 16px',
           position: 'relative',
-          borderTopLeftRadius: 11,
-          borderBottomLeftRadius: 11,
         }}
       >
         <div style={{ fontSize: 11, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -438,18 +435,18 @@ export default function SearchBar({
 
       {/* Segment 4: Find Button */}
       <div
+        className="search-bar-seg-4"
         style={{
           background: 'var(--surface)',
           padding: '10px 14px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderTopRightRadius: 11,
-          borderBottomRightRadius: 11,
         }}
       >
         <button
           onClick={onFind}
+          className="search-bar-find-btn"
           style={{
             height: 44,
             padding: '0 24px',

@@ -223,6 +223,123 @@ body {
   stroke-width: 1px;
 }
 
+/* ─── Responsive Navigation & Layout ─────────────────────────────────────── */
+.desktop-nav {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+
+.mobile-bottom-nav {
+  display: none;
+}
+
+.top-bar-header {
+  padding: 0 24px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.search-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) auto;
+  gap: 1px;
+}
+
+.search-bar-seg-1 {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.search-bar-seg-4 {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+@media (max-width: 767px) {
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .top-bar-header {
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+
+  .page-container {
+    padding: 0 14px 96px !important;
+  }
+
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    z-index: 45;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-bottom-nav a,
+  .mobile-bottom-nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .mobile-bottom-nav a.active {
+    color: var(--accent-deep);
+    font-weight: 600;
+  }
+
+  .search-bar-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-bar-seg-1 {
+    border-radius: 11px 11px 0 0 !important;
+  }
+
+  .search-bar-seg-4 {
+    border-radius: 0 0 11px 11px !important;
+  }
+
+  .search-bar-find-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .compare-tray-container {
+    bottom: 56px !important;
+    padding: 8px 12px !important;
+  }
+
+  .modal-overlay-responsive {
+    padding: 8px !important;
+  }
+}
+
 /* ─── Responsive Split View ─────────────────────────────────────────────── */
 @media (max-width: 1023px) {
   .split-view-container {
@@ -233,6 +350,7 @@ body {
   }
   .mobile-map-button {
     display: block !important;
+    bottom: 72px !important;
   }
 }
 
@@ -247,4 +365,5 @@ body {
     display: none !important;
   }
 }
+
 

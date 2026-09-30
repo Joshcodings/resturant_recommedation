@@ -13,6 +13,7 @@ export function CompareTray({ onCompare }: Props) {
 
   return (
     <div
+      className="compare-tray-container"
       style={{
         position: 'fixed',
         bottom: 0,
@@ -133,6 +134,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
 
   return (
     <div
+      className="modal-overlay-responsive"
       style={{
         position: 'fixed',
         inset: 0,

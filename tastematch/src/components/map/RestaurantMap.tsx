@@ -26,14 +26,17 @@ function makePin(rank: number, active: boolean): L.DivIcon {
 function MapCenter({ restaurants }: { restaurants: ScoredRestaurant[] }) {
   const map = useMap();
   useEffect(() => {
+    map.invalidateSize();
+    const timer = setTimeout(() => map.invalidateSize(), 150);
     const pts = restaurants.filter(r => r.hasCoords);
-    if (pts.length === 0) return;
+    if (pts.length === 0) return () => clearTimeout(timer);
     if (pts.length === 1) {
       map.setView([pts[0].latitude, pts[0].longitude], 14);
     } else {
       const bounds = L.latLngBounds(pts.map(r => [r.latitude, r.longitude]));
       map.fitBounds(bounds, { padding: [40, 40] });
     }
+    return () => clearTimeout(timer);
   }, [map, restaurants]);
   return null;
 }

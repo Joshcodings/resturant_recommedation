@@ -41,7 +41,7 @@ export default function GroupView() {
   };
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px 80px' }}>
+    <div className="page-container">
       {/* Header */}
       <section style={{ paddingTop: 64, paddingBottom: 24 }}>
         <div
@@ -164,7 +164,7 @@ export default function GroupView() {
             <span style={{ fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               Price Range
             </span>
-            <div style={{ display: 'flex', gap: 4 }}>
+            <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
               {[
                 { label: 'Any', value: null },
                 { label: 'Budget ●', value: 1 },

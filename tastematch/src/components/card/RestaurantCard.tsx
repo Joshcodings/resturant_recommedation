@@ -218,7 +218,7 @@ export default function RestaurantCard({
       {/* Stat row: Rating, Votes, Cost for two */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
         {/* Rating */}
-        <div>
+        <div style={{ minWidth: 0 }}>
           <div
             className="count-up"
             style={{
@@ -236,13 +236,16 @@ export default function RestaurantCard({
         </div>
 
         {/* Votes */}
-        <div style={{ paddingTop: 6 }}>
+        <div style={{ paddingTop: 6, minWidth: 0 }}>
           <div
             style={{
               fontSize: 14,
               color: 'var(--text-muted)',
               fontFamily: 'Inter, system-ui, sans-serif',
               fontVariantNumeric: 'tabular-nums',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
             }}
           >
             {formatVotes(r.votes)} votes
@@ -268,7 +271,7 @@ export default function RestaurantCard({
         </div>
 
         {/* Cost cell (Requirement 7) */}
-        <div style={{ paddingTop: 4 }}>
+        <div style={{ paddingTop: 4, minWidth: 0 }}>
           <div
             style={{
               fontFamily: 'Inter, system-ui, sans-serif',
@@ -329,6 +332,27 @@ export default function RestaurantCard({
           {tier.name} {tier.dots}
         </span>
 
+        {/* Distance Badge if available */}
+        {r.distanceKm !== undefined && (
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '3px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+              fontWeight: 500,
+            }}
+            title={`Approx. ${r.distanceKm.toFixed(1)} km from city center`}
+          >
+            📍 {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}
+          </span>
+        )}
+
         {r.has_table_booking === 1 && (
           <span
             aria-label="Table booking available"
@@ -349,19 +373,42 @@ export default function RestaurantCard({
         )}
       </div>
 
-      {/* Why this pick */}
+      {/* Why this pick with Explainable AI attribution */}
       {r.whyThisPick && (
         <div
           style={{
-            fontSize: 14,
+            fontSize: 13,
             color: 'var(--text-muted)',
             fontFamily: 'Inter, system-ui, sans-serif',
-            lineHeight: '20px',
+            lineHeight: '19px',
             borderLeft: '2px solid var(--accent)',
             paddingLeft: 12,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 4,
           }}
         >
-          {r.whyThisPick}
+          <div>{r.whyThisPick}</div>
+          {r.explanation?.relaxedItems && r.explanation.relaxedItems.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginTop: 2 }}>
+              {r.explanation.relaxedItems.map(item => (
+                <span
+                  key={item}
+                  style={{
+                    fontSize: 10,
+                    padding: '2px 6px',
+                    borderRadius: 4,
+                    background: 'rgba(255, 184, 77, 0.15)',
+                    color: 'var(--warn)',
+                    border: '1px solid rgba(255, 184, 77, 0.3)',
+                    fontWeight: 500,
+                  }}
+                >
+                  ⚠️ {item}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       )}
 
