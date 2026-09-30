@@ -1,0 +1,6 @@
+node_modules/
+tastematch/node_modules/
+tastematch/dist/
+.ipynb_checkpoints/
+*.log
+.DS_Store
