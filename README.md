@@ -1,4 +1,4 @@
-# Restaurant Recommendation & Intelligence Platform
+# Restaurant Recommendation and  Intelligence Platform
 
 > An explainable restaurant recommendation and restaurant intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries).
 
@@ -8,7 +8,7 @@ This repository contains two complete implementations:
 
 ---
 
-## 🚀 1-Click Deployment to Streamlit Community Cloud
+## 1-Click Deployment to Streamlit Community Cloud
 
 The Streamlit app is fully configured and ready to deploy for free on [Streamlit Community Cloud](https://share.streamlit.io).
 
@@ -32,7 +32,7 @@ The Streamlit app is fully configured and ready to deploy for free on [Streamlit
 
 ---
 
-## 💻 Running the Streamlit App Locally
+## Running the Streamlit App Locally
 
 ```bash
 # Clone the repository
@@ -50,7 +50,7 @@ The app will automatically open in your default browser at `http://localhost:850
 
 ---
 
-## 🌐 Running the TasteMatch React Web App
+## Running the TasteMatch React Web App
 
 For the static React + Vite web platform:
 
