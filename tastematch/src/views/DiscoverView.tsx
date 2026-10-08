@@ -6,6 +6,8 @@ import type { MoodPreset } from '@/config/presets';
 import SearchBar from '@/components/search/SearchBar';
 import PresetChips from '@/components/search/PresetChips';
 import MoreOptions from '@/components/search/MoreOptions';
+import PlaceTypeChips from '@/components/search/PlaceTypeChips';
+import AreaDropdown from '@/components/search/AreaDropdown';
 import RestaurantCard from '@/components/card/RestaurantCard';
 import RestaurantMap from '@/components/map/RestaurantMap';
 import RestaurantDrawer from '@/components/drawer/RestaurantDrawer';
@@ -23,6 +25,8 @@ export default function DiscoverView() {
   const [needsTableBooking, setNeedsTableBooking] = useState(false);
   const [needsOnlineDelivery, setNeedsOnlineDelivery] = useState(false);
   const [activePreset, setActivePreset] = useState<MoodPreset | null>(null);
+  const [selectedPlaceType, setSelectedPlaceType] = useState<string | null>(null);
+  const [selectedArea, setSelectedArea] = useState<string | null>(null);
 
   // Engine controls: Mode, Proximity Radius, Diversification
   const [mode, setMode] = useState<'strict' | 'flexible'>('flexible');
@@ -113,20 +117,63 @@ export default function DiscoverView() {
     }));
   }, [recommendation, weights]);
 
+  // Places in current city for locality / place_type options
+  const cityRestaurants = useMemo(() => {
+    return data.filter(r => r.country === country && r.city === city);
+  }, [data, country, city]);
+
+  const localityCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const r of cityRestaurants) {
+      if (r.locality) {
+        counts[r.locality] = (counts[r.locality] || 0) + 1;
+      }
+    }
+    return Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  }, [cityRestaurants]);
+
+  const placeTypeCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const r of cityRestaurants) {
+      if (r.place_type) {
+        counts[r.place_type] = (counts[r.place_type] || 0) + 1;
+      }
+    }
+    return counts;
+  }, [cityRestaurants]);
+
+  const hasOsmData = useMemo(() => {
+    return cityRestaurants.some(r => r.data_source === 'OpenStreetMap');
+  }, [cityRestaurants]);
+
+  // Filter ranked pool by area & place type if selected
+  const filteredRankedRestaurants = useMemo(() => {
+    let pool = rankedRestaurants;
+    if (selectedPlaceType) {
+      pool = pool.filter(r => r.place_type === selectedPlaceType);
+    }
+    if (selectedArea) {
+      pool = pool.filter(r => r.locality === selectedArea);
+    }
+    return pool;
+  }, [rankedRestaurants, selectedPlaceType, selectedArea]);
+
   // Sliced for display
   const displayedRestaurants = useMemo(() => {
-    return rankedRestaurants.slice(0, topN);
-  }, [rankedRestaurants, topN]);
+    return filteredRankedRestaurants.slice(0, topN);
+  }, [filteredRankedRestaurants, topN]);
 
   // Surprise Me Handler
   const handleSurpriseMe = () => {
-    if (rankedRestaurants.length === 0) return;
-    const randomIdx = Math.floor(Math.random() * rankedRestaurants.length);
-    setDrawerRestaurant(rankedRestaurants[randomIdx]);
+    if (filteredRankedRestaurants.length === 0) return;
+    const randomIdx = Math.floor(Math.random() * filteredRankedRestaurants.length);
+    setDrawerRestaurant(filteredRankedRestaurants[randomIdx]);
   };
 
   const handleShowMore = () => {
-    setTopN(prev => Math.min(prev + 3, 10, rankedRestaurants.length));
+    setTopN(prev => Math.min(prev + 3, 10, filteredRankedRestaurants.length));
   };
 
   return (
@@ -169,11 +216,15 @@ export default function DiscoverView() {
             onCountryChange={c => {
               setCountry(c);
               setCuisines([]);
+              setSelectedPlaceType(null);
+              setSelectedArea(null);
             }}
             selectedCity={city}
             onCityChange={c => {
               setCity(c);
               setCuisines([]);
+              setSelectedPlaceType(null);
+              setSelectedArea(null);
             }}
             selectedPrice={priceRange}
             onPriceChange={setPriceRange}
@@ -185,6 +236,24 @@ export default function DiscoverView() {
               window.scrollTo({ top: 380, behavior: 'smooth' });
             }}
           />
+
+          {/* Area & Place Type Filters (OSM / Multi-locality markets) */}
+          {(localityCounts.filter(l => l.count >= 5).length >= 3 || hasOsmData) && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', marginTop: 12 }}>
+              <AreaDropdown
+                localities={localityCounts}
+                selectedArea={selectedArea}
+                onSelectArea={setSelectedArea}
+              />
+              {hasOsmData && (
+                <PlaceTypeChips
+                  selectedType={selectedPlaceType}
+                  onSelectType={setSelectedPlaceType}
+                  counts={placeTypeCounts}
+                />
+              )}
+            </div>
+          )}
 
           {/* Preset Chips */}
           <PresetChips
@@ -441,7 +510,7 @@ export default function DiscoverView() {
               ))}
 
               {/* Show more button (up to 10) (amendment 1) */}
-              {displayedRestaurants.length < rankedRestaurants.length && displayedRestaurants.length < 10 && (
+              {displayedRestaurants.length < filteredRankedRestaurants.length && displayedRestaurants.length < 10 && (
                 <button
                   onClick={handleShowMore}
                   style={{
@@ -461,7 +530,7 @@ export default function DiscoverView() {
                     marginTop: 8,
                   }}
                 >
-                  <span>Show more ({displayedRestaurants.length} of {Math.min(10, rankedRestaurants.length)})</span>
+                  <span>Show more ({displayedRestaurants.length} of {Math.min(10, filteredRankedRestaurants.length)})</span>
                   <ChevronDown size={16} strokeWidth={1.5} />
                 </button>
               )}

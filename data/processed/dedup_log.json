@@ -31,6 +31,58 @@
     "distance_m": 1
   },
   {
+    "city": "Benin City",
+    "kept_id": 10019941571031,
+    "kept_name": "Bar",
+    "dropped": [
+      {
+        "id": 10019941571621,
+        "name": "Bar",
+        "source_id": "node/1994157162"
+      }
+    ],
+    "distance_m": 20
+  },
+  {
+    "city": "Benin City",
+    "kept_id": 10021532007591,
+    "kept_name": "Drinking Bar",
+    "dropped": [
+      {
+        "id": 10021545405091,
+        "name": "Drinking Bar",
+        "source_id": "node/2154540509"
+      }
+    ],
+    "distance_m": 42
+  },
+  {
+    "city": "Benin City",
+    "kept_id": 10047705403801,
+    "kept_name": "Clubhouse",
+    "dropped": [
+      {
+        "id": 10004843138252,
+        "name": "Clubhouse",
+        "source_id": "way/484313825"
+      }
+    ],
+    "distance_m": 10
+  },
+  {
+    "city": "Benin City",
+    "kept_id": 10133087262521,
+    "kept_name": "The Patio Restaurant and Lounge",
+    "dropped": [
+      {
+        "id": 10133087270751,
+        "name": "The Patio",
+        "source_id": "node/13308727075"
+      }
+    ],
+    "distance_m": 6
+  },
+  {
     "city": "Lagos",
     "kept_id": 10052186373191,
     "kept_name": "The Grill Room",

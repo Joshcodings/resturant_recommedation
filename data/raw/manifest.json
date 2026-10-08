@@ -7,6 +7,13 @@
     "timestamp": "2026-10-08T10:20:15.329827+00:00"
   },
   {
+    "element_count": 123,
+    "file": "ng_benin_city_Benin City_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:20000,6.335,5.6278);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](aro",
+    "sha256": "71257ee750cf8d00f3e290ef609420ba1a4d7efabf200677835724711c1b69b7",
+    "timestamp": "2026-10-08T20:38:30.358018+00:00"
+  },
+  {
     "element_count": 27,
     "file": "ng_ibadan_Ibadan_around.json",
     "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:25000,7.3775,3.947);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](aro",

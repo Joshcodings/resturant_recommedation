@@ -1,0 +1,1373 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-08T20:41:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1994157103,
+  "lat": 6.3769032,
+  "lon": 5.6385973,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157162,
+  "lat": 6.3770288,
+  "lon": 5.6387271,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157272,
+  "lat": 6.3730892,
+  "lon": 5.6382069,
+  "tags": {
+    "amenity": "bar",
+    "name": "De Groove",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157296,
+  "lat": 6.3662252,
+  "lon": 5.6254247,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157336,
+  "lat": 6.3641881,
+  "lon": 5.6287553,
+  "tags": {
+    "amenity": "bar",
+    "name": "Favour Plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157466,
+  "lat": 6.3753194,
+  "lon": 5.6372632,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama Faith Restaurant",
+    "smoking": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1994157657,
+  "lat": 6.3728546,
+  "lon": 5.6372493,
+  "tags": {
+    "amenity": "bar",
+    "name": "Osas Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1994158103,
+  "lat": 6.3769225,
+  "lon": 5.6307160,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 1995053059,
+  "lat": 6.3632492,
+  "lon": 5.5890852,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Country Man Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 1995053452,
+  "lat": 6.3632878,
+  "lon": 5.5889376,
+  "tags": {
+    "amenity": "bar",
+    "name": "Eddy Mega Grove and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2072621197,
+  "lat": 6.3643546,
+  "lon": 5.6282008,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2072656843,
+  "lat": 6.3582502,
+  "lon": 5.5863922,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846037,
+  "lat": 6.3067022,
+  "lon": 5.6202347,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Annavini Restaurant and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846058,
+  "lat": 6.3046227,
+  "lon": 5.6228188,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chop Ville Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846071,
+  "lat": 6.3114234,
+  "lon": 5.6232479,
+  "tags": {
+    "amenity": "bar",
+    "name": "De Consulate Lounge and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846108,
+  "lat": 6.3084272,
+  "lon": 5.6233024,
+  "tags": {
+    "amenity": "bar",
+    "name": "FEJ Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846153,
+  "lat": 6.3138026,
+  "lon": 5.6268736,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Jonvee Kitchen and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846221,
+  "lat": 6.3231048,
+  "lon": 5.6269161,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Mr Bigg's",
+    "brand:wikidata": "Q955488",
+    "cuisine": "nigerian",
+    "name": "Mr Bigg's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846379,
+  "lat": 6.3070405,
+  "lon": 5.6229769,
+  "tags": {
+    "amenity": "bar",
+    "name": "Tastes Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846419,
+  "lat": 6.3042787,
+  "lon": 5.6252693,
+  "tags": {
+    "amenity": "bar",
+    "name": "Tripple J Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846446,
+  "lat": 6.3118403,
+  "lon": 5.6240576,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Waynitaz Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846448,
+  "lat": 6.3074982,
+  "lon": 5.6193783,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Whatan Chinese Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2075846633,
+  "lat": 6.3043696,
+  "lon": 5.6249851,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:street": "Adesuwa Road",
+    "amenity": "bar",
+    "name": "4040 Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2152943041,
+  "lat": 6.2917544,
+  "lon": 5.5874550,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2152943720,
+  "lat": 6.3102099,
+  "lon": 5.5999416,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2152957990,
+  "lat": 6.3074154,
+  "lon": 5.6168963,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Caavan Restaurant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2152991556,
+  "lat": 6.3277554,
+  "lon": 5.6296544,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Debbis Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 2152999906,
+  "lat": 6.3075068,
+  "lon": 5.6170251,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Dementry Lodge"
+  }
+},
+{
+  "type": "node",
+  "id": 2153200421,
+  "lat": 6.3334510,
+  "lon": 5.6185246,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2153200759,
+  "lat": 6.3375959,
+  "lon": 5.6145324,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2153203386,
+  "lat": 6.3117840,
+  "lon": 5.6153217,
+  "tags": {
+    "amenity": "bar",
+    "name": "Ekhoe garden & bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2153204738,
+  "lat": 6.3075823,
+  "lon": 5.6171654,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Final Lap Event"
+  }
+},
+{
+  "type": "node",
+  "id": 2154540509,
+  "lat": 6.3372212,
+  "lon": 5.6145697,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2154542877,
+  "lat": 6.3157033,
+  "lon": 5.6030593,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Empire Fries Eatery"
+  }
+},
+{
+  "type": "node",
+  "id": 2154545042,
+  "lat": 6.3128707,
+  "lon": 5.6072939,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Favic Restuarant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2154560074,
+  "lat": 6.3067201,
+  "lon": 5.6118506,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Indigo Restaurant & Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 2154571168,
+  "lat": 6.3119078,
+  "lon": 5.6147372,
+  "tags": {
+    "amenity": "bar",
+    "name": "Lincx cuiline"
+  }
+},
+{
+  "type": "node",
+  "id": 2154572050,
+  "lat": 6.3107976,
+  "lon": 5.6144504,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Madam Ihama Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2154575232,
+  "lat": 6.2985068,
+  "lon": 5.6023117,
+  "tags": {
+    "addr:housenumber": "66",
+    "addr:street": "Oko Central",
+    "amenity": "fast_food",
+    "name": "Mat Ice",
+    "phone": "+2348163385534",
+    "website": "https://maticefastfood.com"
+  }
+},
+{
+  "type": "node",
+  "id": 2154575304,
+  "lat": 6.3093373,
+  "lon": 5.6165788,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:postcode": "300102",
+    "addr:street": "Ihama Road",
+    "alt_name": "Matice Ihama Road",
+    "amenity": "fast_food",
+    "name": "Mat-ice",
+    "phone": "+234 816 338 5534"
+  }
+},
+{
+  "type": "node",
+  "id": 2154575305,
+  "lat": 6.3109772,
+  "lon": 5.5976228,
+  "tags": {
+    "amenity": "bar",
+    "name": "Mathida's Place"
+  }
+},
+{
+  "type": "node",
+  "id": 2155626500,
+  "lat": 6.3099512,
+  "lon": 5.6027419,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2155705784,
+  "lat": 6.3163074,
+  "lon": 5.6071918,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr food"
+  }
+},
+{
+  "type": "node",
+  "id": 2155707772,
+  "lat": 6.3338089,
+  "lon": 5.6143686,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Olive's Place"
+  }
+},
+{
+  "type": "node",
+  "id": 2155718739,
+  "lat": 6.3042191,
+  "lon": 5.6190515,
+  "tags": {
+    "amenity": "bar",
+    "name": "Rea Africa Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2155732870,
+  "lat": 6.3137441,
+  "lon": 5.6105118,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Toks international restaurant & bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2155738162,
+  "lat": 6.3134640,
+  "lon": 5.6113098,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Victorious kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 2161037157,
+  "lat": 6.3131622,
+  "lon": 5.6115759,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Asotime groove"
+  }
+},
+{
+  "type": "node",
+  "id": 2161042283,
+  "lat": 6.3233504,
+  "lon": 5.6127623,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "brand:wikidata": "Q23461416",
+    "cuisine": "chicken",
+    "internet_access:fee": "no",
+    "name": "Chicken Republic",
+    "opening_hours": "24/7",
+    "smoking": "no",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2161047810,
+  "lat": 6.3334519,
+  "lon": 5.6204099,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2161061673,
+  "lat": 6.3189986,
+  "lon": 5.6079639,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Markachin Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2161074363,
+  "lat": 6.3067949,
+  "lon": 5.6142844,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Restaurant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2161108497,
+  "lat": 6.3130613,
+  "lon": 5.5996490,
+  "tags": {
+    "amenity": "bar",
+    "name": "Swiss Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2161108505,
+  "lat": 6.3138082,
+  "lon": 5.6070207,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Tarex Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2161108591,
+  "lat": 6.3069474,
+  "lon": 5.6122200,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "The Gouremet Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2161118782,
+  "lat": 6.3128855,
+  "lon": 5.6115631,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Vics food"
+  }
+},
+{
+  "type": "node",
+  "id": 2161182517,
+  "lat": 6.3154632,
+  "lon": 5.6084946,
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "70's Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 2344220888,
+  "lat": 6.3429010,
+  "lon": 5.5964487,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Licking Finger Restaurant and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344258129,
+  "lat": 6.3407680,
+  "lon": 5.6100340,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344263191,
+  "lat": 6.3303343,
+  "lon": 5.5959387,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Casunny Restaurant/bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344263194,
+  "lat": 6.3297584,
+  "lon": 5.5993825,
+  "tags": {
+    "amenity": "bar",
+    "name": "J's Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344263199,
+  "lat": 6.3303121,
+  "lon": 5.5978950,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Resturant/bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344263204,
+  "lat": 6.3281603,
+  "lon": 5.5991348,
+  "tags": {
+    "amenity": "bar",
+    "name": "Triple Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344305767,
+  "lat": 6.3318190,
+  "lon": 5.5969758,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344305771,
+  "lat": 6.3308137,
+  "lon": 5.5959460,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "D. favours fast food"
+  }
+},
+{
+  "type": "node",
+  "id": 2344316144,
+  "lat": 6.3330892,
+  "lon": 5.6045996,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mat-ice"
+  }
+},
+{
+  "type": "node",
+  "id": 2344316145,
+  "lat": 6.3328421,
+  "lon": 5.6040760,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 2344328614,
+  "lat": 6.3264551,
+  "lon": 5.6002394,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chinomnso Restaurant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344414242,
+  "lat": 6.3334061,
+  "lon": 5.6045471,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Eddies Restaurant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344414244,
+  "lat": 6.3358775,
+  "lon": 5.6088414,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:postcode": "300102",
+    "addr:street": "Ekenhuan Road",
+    "alt_name": "GT Food Ekenhuan",
+    "amenity": "fast_food",
+    "name": "GT Plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 2344459609,
+  "lat": 6.3237522,
+  "lon": 5.5918287,
+  "tags": {
+    "amenity": "bar",
+    "name": "De Bubbles Restuarant & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344540224,
+  "lat": 6.3227862,
+  "lon": 5.5983886,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "S & J Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 2344543051,
+  "lat": 6.3355666,
+  "lon": 5.6086877,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Pepper Rice Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 2344543054,
+  "lat": 6.3367119,
+  "lon": 5.6104246,
+  "tags": {
+    "amenity": "bar",
+    "name": "Rich Bar and Car Wash"
+  }
+},
+{
+  "type": "node",
+  "id": 2344554568,
+  "lat": 6.3245116,
+  "lon": 5.6143334,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Claypot resturant and bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344584251,
+  "lat": 6.3395727,
+  "lon": 5.5956259,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Aroma Food"
+  }
+},
+{
+  "type": "node",
+  "id": 2344584279,
+  "lat": 6.3400222,
+  "lon": 5.5977415,
+  "tags": {
+    "amenity": "bar",
+    "name": "Decency"
+  }
+},
+{
+  "type": "node",
+  "id": 2344590773,
+  "lat": 6.3270276,
+  "lon": 5.5807645,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "B Revolution Food/Bar/car wash"
+  }
+},
+{
+  "type": "node",
+  "id": 2344596598,
+  "lat": 6.3429813,
+  "lon": 5.6081033,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2344596599,
+  "lat": 6.3430657,
+  "lon": 5.6053006,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2349297921,
+  "lat": 6.3231967,
+  "lon": 5.6118903,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Tetrazzini Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 2349397489,
+  "lat": 6.3376384,
+  "lon": 5.6146597,
+  "tags": {
+    "amenity": "bar",
+    "name": "Eddy Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2349475771,
+  "lat": 6.3443209,
+  "lon": 5.6360195,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Two Sister Food Centre"
+  }
+},
+{
+  "type": "node",
+  "id": 2350879753,
+  "lat": 6.3456367,
+  "lon": 5.6251540,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Kada Fried"
+  }
+},
+{
+  "type": "node",
+  "id": 2350879754,
+  "lat": 6.3448178,
+  "lon": 5.6258795,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Kencuisine Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 2350899854,
+  "lat": 6.3501814,
+  "lon": 5.6192239,
+  "tags": {
+    "amenity": "bar",
+    "name": "De Wise Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2350899886,
+  "lat": 6.3419113,
+  "lon": 5.6204305,
+  "tags": {
+    "amenity": "bar",
+    "name": "Top Billy Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2350899899,
+  "lat": 6.3436331,
+  "lon": 5.6194988,
+  "tags": {
+    "amenity": "bar",
+    "name": "Twin Light Bars"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967884,
+  "lat": 6.3034021,
+  "lon": 5.6226279,
+  "tags": {
+    "amenity": "bar",
+    "name": "Asophil event center & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967889,
+  "lat": 6.3039749,
+  "lon": 5.6242233,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Decency home of food"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967890,
+  "lat": 6.2938270,
+  "lon": 5.6137071,
+  "tags": {
+    "amenity": "bar",
+    "name": "Drinking Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967900,
+  "lat": 6.3070976,
+  "lon": 5.6110127,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Kays sensation fast food"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967906,
+  "lat": 6.3041468,
+  "lon": 5.6239838,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mudies kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967907,
+  "lat": 6.2960150,
+  "lon": 5.6145630,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mumy's kitchen & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967910,
+  "lat": 6.2756143,
+  "lon": 5.6102007,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Paliament Bar, kitchen & car wash"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967914,
+  "lat": 6.3142724,
+  "lon": 5.6290282,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Rima restaurant quick home"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967915,
+  "lat": 6.2684079,
+  "lon": 5.6100901,
+  "tags": {
+    "amenity": "bar",
+    "name": "Rock com home of friends Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967919,
+  "lat": 6.2972659,
+  "lon": 5.6284494,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Tripple T kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 2394967926,
+  "lat": 6.3069095,
+  "lon": 5.6121430,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "the gourment restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 4770540380,
+  "lat": 6.4126028,
+  "lon": 5.6818829,
+  "tags": {
+    "amenity": "bar",
+    "name": "Clubhouse"
+  }
+},
+{
+  "type": "node",
+  "id": 4770554692,
+  "lat": 6.4127394,
+  "lon": 5.6819262,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Eingang Kantine"
+  }
+},
+{
+  "type": "node",
+  "id": 4883792846,
+  "lat": 6.4151769,
+  "lon": 5.6925101,
+  "tags": {
+    "amenity": "bar",
+    "name": "Ihovbor Bush Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5325310727,
+  "lat": 6.2948707,
+  "lon": 5.5630661,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:street": "1st Utagban Road",
+    "amenity": "fast_food",
+    "name": "BAKE & EAT PASTRIES",
+    "opening_hours": "Mo-Sa 08:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 5477937721,
+  "lat": 6.3410711,
+  "lon": 5.6135427,
+  "tags": {
+    "addr:housenumber": "25b",
+    "addr:postcode": "11012",
+    "addr:street": "Siluko Road",
+    "amenity": "restaurant",
+    "internet_access": "wlan",
+    "name": "Mama Twins African Kitchen",
+    "opening_hours": "Mo-Su 10:00-19:00",
+    "operator": "Mama twins",
+    "phone": "07058213447",
+    "website": "http://www.facebook.com/mamatwinsafricankitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 6268569385,
+  "lat": 6.3131785,
+  "lon": 5.6160160,
+  "tags": {
+    "addr:street": "Boundary Rd",
+    "amenity": "restaurant",
+    "cuisine": "chinese;regional",
+    "name": "Buka Queen"
+  }
+},
+{
+  "type": "node",
+  "id": 6446504385,
+  "lat": 6.2881399,
+  "lon": 5.5889094,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Canteen NPDC BENIN"
+  }
+},
+{
+  "type": "node",
+  "id": 12788148873,
+  "lat": 6.2982266,
+  "lon": 5.6302727,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:street": "Evbuomwan Street",
+    "amenity": "restaurant",
+    "cuisine": "nigerian_dishes",
+    "diet:organic": "yes",
+    "name": "Mummy J Kitchen",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "phone": "08052046919"
+  }
+},
+{
+  "type": "node",
+  "id": 13308726252,
+  "lat": 6.3064694,
+  "lon": 5.6130369,
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:housenumber": "33b",
+    "addr:postcode": "300251",
+    "addr:street": "Akhionbare Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "name": "The Patio Restaurant and Lounge",
+    "phone": "+234 807 777 0568",
+    "reservation": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13308727075,
+  "lat": 6.3065016,
+  "lon": 5.6129985,
+  "tags": {
+    "addr:city": "benin city",
+    "addr:postcode": "300102",
+    "addr:street": "Akhionbare Street",
+    "amenity": "restaurant",
+    "name": "The Patio",
+    "phone": "+234 807 777 0568"
+  }
+},
+{
+  "type": "way",
+  "id": 44659779,
+  "center": {
+    "lat": 6.3384124,
+    "lon": 5.6291201
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Mr Bigg's",
+    "brand:wikidata": "Q955488",
+    "building": "yes",
+    "cuisine": "nigerian",
+    "name": "Mr Bigg's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 44977336,
+  "center": {
+    "lat": 6.2759091,
+    "lon": 5.6088223
+  },
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:housenumber": "8",
+    "addr:postcode": "300252",
+    "addr:street": "Emiliano Edosonwa St, Oka,",
+    "amenity": "cafe",
+    "building": "yes",
+    "building:levels": "1",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Asgard Lounge & Restaurant",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 47158112,
+  "center": {
+    "lat": 6.3142571,
+    "lon": 5.6091736
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Shadows Bar and Lounge"
+  }
+},
+{
+  "type": "way",
+  "id": 84169689,
+  "center": {
+    "lat": 6.3154896,
+    "lon": 5.6076501
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Good Food Restaurant and Bar"
+  }
+},
+{
+  "type": "way",
+  "id": 84172218,
+  "center": {
+    "lat": 6.3368694,
+    "lon": 5.6237863
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "building": "yes",
+    "name": "Kaydees Fast Food"
+  }
+},
+{
+  "type": "way",
+  "id": 84594358,
+  "center": {
+    "lat": 6.3048577,
+    "lon": 5.6281567
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "building": "yes",
+    "name": "C & A Kitchen"
+  }
+},
+{
+  "type": "way",
+  "id": 85515983,
+  "center": {
+    "lat": 6.3222951,
+    "lon": 5.6115135
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "building": "yes",
+    "name": "Kaydees"
+  }
+},
+{
+  "type": "way",
+  "id": 188794695,
+  "center": {
+    "lat": 6.3777515,
+    "lon": 5.6393540
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Restaurants and Bar"
+  }
+},
+{
+  "type": "way",
+  "id": 189363893,
+  "center": {
+    "lat": 6.3568854,
+    "lon": 5.5799689
+  },
+  "tags": {
+    "amenity": "bar",
+    "name": "BAR"
+  }
+},
+{
+  "type": "way",
+  "id": 189364535,
+  "center": {
+    "lat": 6.3550843,
+    "lon": 5.5834670
+  },
+  "tags": {
+    "amenity": "bar",
+    "name": "LADY V STORE"
+  }
+},
+{
+  "type": "way",
+  "id": 484313823,
+  "center": {
+    "lat": 6.4128123,
+    "lon": 5.6817541
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "german",
+    "name": "Cantine"
+  }
+},
+{
+  "type": "way",
+  "id": 484313825,
+  "center": {
+    "lat": 6.4126792,
+    "lon": 5.6818299
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Clubhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 1381157659,
+  "center": {
+    "lat": 6.3081714,
+    "lon": 5.6174999
+  },
+  "tags": {
+    "addr:city": "Benin City",
+    "addr:housenumber": "3",
+    "addr:postcode": "300102",
+    "addr:street": "imuetiyan st",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "building": "yes",
+    "cuisine": "african",
+    "delivery": "yes",
+    "diet:local": "yes",
+    "name": "Capacity Food Plug",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "outdoor_seating": "yes",
+    "phone": "+2348164275934",
+    "smoking": "outside",
+    "website": "https://capacityfoodplug.com"
+  }
+},
+{
+  "type": "way",
+  "id": 1393499503,
+  "center": {
+    "lat": 6.3952553,
+    "lon": 5.6190645
+  },
+  "tags": {
+    "addr:city": "Benin city",
+    "addr:street": "University of Benin, Ugbowo",
+    "amenity": "restaurant",
+    "building": "yes",
+    "layer": "1",
+    "name": "Food Court (Buka)"
+  }
+}
+
+  ]
+}
