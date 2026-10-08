@@ -1,0 +1,34 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T16:36:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 501513077,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2010963",
+    "alt_name": "Iganmu Siding",
+    "fixme": "no population estimate available, defaulted to village",
+    "name": "Iganmu",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 14162800564,
+  "tags": {
+    "name": "Orile Iganmu",
+    "place": "suburb"
+  }
+}
+
+  ]
+}

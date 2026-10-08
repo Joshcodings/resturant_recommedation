@@ -109,13 +109,17 @@ export default function RestaurantMap({ restaurants, hoveredId, onPinHover, onPi
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 13, minWidth: 160 }}>
                     <strong style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{r.restaurant_name}</strong>
                     <br />
-                    <span style={{ color: '#666' }}>{r.locality}</span>
+                    <span style={{ color: '#666' }}>{r.locality || r.city}</span>
                     <br />
-                    <span>⭐ {r.aggregate_rating.toFixed(1)}</span>
+                    <span>⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}</span>
                     <span style={{ margin: '0 6px', color: '#888' }}>·</span>
-                    <span style={{ fontWeight: 600 }}>{costInfo.display}</span>
-                    <br />
-                    <span style={{ fontSize: 11, color: '#888' }}>{tier.name} {tier.dots}</span>
+                    <span style={{ fontWeight: 600 }}>{r.hasPrice ? costInfo.display : 'n/a'}</span>
+                    {r.hasPrice && (
+                      <>
+                        <br />
+                        <span style={{ fontSize: 11, color: '#888' }}>{tier.name} {tier.dots}</span>
+                      </>
+                    )}
                   </div>
                 );
               })()}

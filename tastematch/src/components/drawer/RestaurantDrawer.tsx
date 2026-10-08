@@ -60,7 +60,7 @@ function CompactCard({ r, onOpen }: { r: RestaurantParsed & { similarity?: numbe
         {r.restaurant_name}
       </div>
       <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-        ⭐ {r.aggregate_rating.toFixed(1)} · {r.locality}
+        ⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'} · {r.locality || r.city}
       </div>
     </button>
   );
@@ -153,24 +153,37 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
           ><X size={18} strokeWidth={1.5} /></button>
         </div>
 
+        {/* OSM info bar if applicable */}
+        {r.data_source === 'OpenStreetMap' && (
+          <div style={{ padding: '12px 20px 0', display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+            <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--surface-2)', padding: '2px 8px', borderRadius: 4, border: '1px solid var(--border)' }}>
+              OpenStreetMap Data
+            </span>
+            {r.place_type && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>📍 {r.place_type.replace('_', ' ')}</span>}
+            {r.opening_hours && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>🕒 {r.opening_hours}</span>}
+            {r.phone && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>📞 {r.phone}</span>}
+            {r.website && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}><a href={r.website} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}>🌐 Website</a></span>}
+          </div>
+        )}
+
         {/* Content */}
         <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 20 }}>
 
           {/* Stats grid */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
             <div style={{ background: 'var(--surface-2)', borderRadius: 8, padding: 12, border: '1px solid var(--border)' }}>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 600, color: 'var(--text)', fontVariantNumeric: 'tabular-nums' }}>
-                {r.aggregate_rating.toFixed(1)}
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: r.hasRating ? 20 : 14, fontWeight: 600, color: r.hasRating ? 'var(--text)' : 'var(--text-muted)', fontVariantNumeric: 'tabular-nums', lineHeight: '24px' }}>
+                {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}
               </div>
               <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', marginTop: 2 }}>Rating</div>
             </div>
 
             <div style={{ background: 'var(--surface-2)', borderRadius: 8, padding: 12, border: '1px solid var(--border)' }}>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 600, color: 'var(--text)', fontVariantNumeric: 'tabular-nums' }}>
-                {formatVotes(r.votes)}
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: r.hasRating ? 20 : 14, fontWeight: 600, color: r.hasRating ? 'var(--text)' : 'var(--text-muted)', fontVariantNumeric: 'tabular-nums', lineHeight: '24px' }}>
+                {r.hasRating ? formatVotes(r.votes) : 'n/a'}
               </div>
               <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', marginTop: 2 }}>Votes</div>
-              {isFewVotes(r.votes) && (
+              {r.hasRating && isFewVotes(r.votes) && (
                 <span style={{ display: 'inline-block', marginTop: 4, padding: '0 6px', height: 18, lineHeight: '18px', border: '1px solid var(--border)', borderRadius: 999, fontSize: 10, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
                   few votes
                 </span>
@@ -181,8 +194,8 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
               const costInfo = formatDual(r.average_cost_for_two, r.currency);
               return (
                 <div style={{ background: 'var(--surface-2)', borderRadius: 8, padding: 12, border: '1px solid var(--border)' }}>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 600, color: 'var(--text)', fontVariantNumeric: 'tabular-nums' }}>
-                    {costInfo.display}
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: r.hasPrice ? 20 : 14, fontWeight: 600, color: r.hasPrice ? 'var(--text)' : 'var(--text-muted)', fontVariantNumeric: 'tabular-nums', lineHeight: '24px' }}>
+                    {r.hasPrice ? costInfo.display : 'n/a'}
                   </div>
                   <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', marginTop: 2 }}>
                     {costInfo.listed ? costInfo.listed : 'Cost for two'}
@@ -210,7 +223,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
           {(() => {
             const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
             const costInfo = formatDual(r.average_cost_for_two, r.currency);
-            const tierTooltip = `${tier.name}: ${costInfo.display} for two in ${r.country}${costInfo.listed ? ` (${costInfo.listed})` : ''}`;
+            const tierTooltip = r.hasPrice ? `${tier.name}: ${costInfo.display} for two in ${r.country}${costInfo.listed ? ` (${costInfo.listed})` : ''}` : 'Price unavailable';
             return (
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -231,7 +244,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
                     title={tierTooltip}
                     aria-label={tierTooltip}
                   >
-                    {tier.name} {tier.dots}
+                    {r.hasPrice ? `${tier.name} ${tier.dots}` : 'n/a'}
                   </span>
                 </div>
             {r.has_table_booking === 1 && (

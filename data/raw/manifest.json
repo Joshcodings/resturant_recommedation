@@ -1,0 +1,30 @@
+[
+  {
+    "element_count": 126,
+    "file": "ng_abuja_Abuja_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:25000,9.0579,7.4951);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](ar",
+    "sha256": "69effa5effabed275b646d8745a78a32c04e196964fddb1ed6ff554cc27996e7",
+    "timestamp": "2026-10-08T10:20:15.329827+00:00"
+  },
+  {
+    "element_count": 27,
+    "file": "ng_ibadan_Ibadan_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:25000,7.3775,3.947);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](aro",
+    "sha256": "3b5dbe296d4a6ff395406baac59b9bb523ba0089d9e6a9d83b0c7794436f493d",
+    "timestamp": "2026-10-08T10:27:08.330712+00:00"
+  },
+  {
+    "element_count": 244,
+    "file": "ng_lagos_Lagos_admin.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\narea[\"name\"=\"Lagos\"][\"admin_level\"=\"4\"][\"boundary\"=\"administrative\"]->.a;\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](area.a);\n  way[\"am",
+    "sha256": "531590bac12a2d83e94500fcc35ffa33873a760133e8231863247c43d51178a4",
+    "timestamp": "2026-10-07T16:37:34.827656+00:00"
+  },
+  {
+    "element_count": 43,
+    "file": "ng_port_harcourt_Port Harcourt_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:20000,4.8156,7.0498);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](ar",
+    "sha256": "15e6f00e407013b1d2f07db625c39f0e404b2af11a43aea864d7e3d9f328c0be",
+    "timestamp": "2026-10-08T10:50:01.946320+00:00"
+  }
+]

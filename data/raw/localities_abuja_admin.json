@@ -1,0 +1,256 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T20:27:41Z",
+    "timestamp_areas_base": "2026-10-06T13:12:56Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 31384766,
+  "lat": 9.0761981,
+  "lon": 7.4759718,
+  "tags": {
+    "name": "Wuse II District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 1144395123,
+  "lat": 9.0131423,
+  "lon": 7.4813472,
+  "tags": {
+    "fixme": "might be misplaced",
+    "is_in": "Abuja",
+    "name": "Garki",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 3720581997,
+  "lat": 9.0555912,
+  "lon": 7.3747691,
+  "tags": {
+    "name": "NCCE Quarters Karmo",
+    "place": "quarter"
+  }
+},
+{
+  "type": "node",
+  "id": 4994567225,
+  "lat": 8.9910376,
+  "lon": 7.3574905,
+  "tags": {
+    "name": "CBN Quaters Lugbe Phase 2",
+    "place": "quarter"
+  }
+},
+{
+  "type": "node",
+  "id": 8329698302,
+  "lat": 9.0620454,
+  "lon": 7.4665551,
+  "tags": {
+    "name": "Wuse District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8329790546,
+  "lat": 9.0423462,
+  "lon": 7.5196863,
+  "tags": {
+    "name": "Asokoro District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8329790549,
+  "lat": 9.0900989,
+  "lon": 7.4908053,
+  "tags": {
+    "name": "Maitama District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8329790550,
+  "lat": 9.0352005,
+  "lon": 7.4818316,
+  "tags": {
+    "name": "Garki District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8329790551,
+  "lat": 9.0321656,
+  "lon": 7.4985821,
+  "tags": {
+    "name": "Garki II District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8334726076,
+  "lat": 9.0112476,
+  "lon": 7.5072730,
+  "tags": {
+    "name": "Guzape District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8335781694,
+  "lat": 9.0691100,
+  "lon": 7.4435303,
+  "tags": {
+    "name": "Utako District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8335781759,
+  "lat": 9.0837669,
+  "lon": 7.4493904,
+  "tags": {
+    "name": "Mabushi District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8335781760,
+  "lat": 9.0906699,
+  "lon": 7.4274406,
+  "tags": {
+    "name": "Kado District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8335781797,
+  "lat": 9.0194624,
+  "lon": 7.4643335,
+  "tags": {
+    "name": "Durumi District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8335809217,
+  "lat": 9.0081772,
+  "lon": 7.4799035,
+  "tags": {
+    "name": "Gudu District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337332089,
+  "lat": 9.0646229,
+  "lon": 7.4210076,
+  "tags": {
+    "name": "Jabi District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337402166,
+  "lat": 9.0339259,
+  "lon": 7.4496812,
+  "tags": {
+    "name": "Kukwaba District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337402167,
+  "lat": 9.0497696,
+  "lon": 7.4425337,
+  "tags": {
+    "name": "Wuye District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337402178,
+  "lat": 9.1096209,
+  "lon": 7.4387542,
+  "tags": {
+    "name": "Jahi District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337413720,
+  "lat": 9.1098210,
+  "lon": 7.3929654,
+  "tags": {
+    "name": "Gwarinpa",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337446867,
+  "lat": 9.0411976,
+  "lon": 7.4206411,
+  "tags": {
+    "name": "Dakibiyu District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8337446895,
+  "lat": 9.0031570,
+  "lon": 7.4456131,
+  "tags": {
+    "name": "Kaura District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8339196656,
+  "lat": 9.1028513,
+  "lon": 7.4617179,
+  "tags": {
+    "name": "Katampe District",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 10147161018,
+  "lat": 9.1259727,
+  "lon": 7.3115527,
+  "tags": {
+    "addr:street": "Guidna Community",
+    "name": "Guidna",
+    "place": "neighbourhood"
+  }
+}
+
+  ]
+}

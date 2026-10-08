@@ -1,0 +1,3375 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T16:38:38Z",
+    "timestamp_areas_base": "2026-10-06T13:12:56Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 639043269,
+  "lat": 6.4898849,
+  "lon": 3.3565432,
+  "tags": {
+    "amenity": "fast_food",
+    "key": "Mr Biggs at Bode Thomas",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 889266159,
+  "lat": 6.4829394,
+  "lon": 3.0322295,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Meals on the Move"
+  }
+},
+{
+  "type": "node",
+  "id": 1513600883,
+  "lat": 6.4312641,
+  "lon": 3.4326615,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama Cass"
+  }
+},
+{
+  "type": "node",
+  "id": 1523336782,
+  "lat": 6.4482173,
+  "lon": 3.4706901,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "regional",
+    "name": "Tantalizers"
+  }
+},
+{
+  "type": "node",
+  "id": 2330811676,
+  "lat": 6.4389711,
+  "lon": 3.4378767,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "lebanese",
+    "name": "Cactus",
+    "source:name": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2987186867,
+  "lat": 6.4679413,
+  "lon": 3.2934139,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Tantalizers",
+    "brand:wikidata": "Q7683795",
+    "cuisine": "nigerian",
+    "name": "Tantalizers",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2990336532,
+  "lat": 6.5896335,
+  "lon": 3.3325658,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mr. Bigs"
+  }
+},
+{
+  "type": "node",
+  "id": 2991768156,
+  "lat": 6.4768064,
+  "lon": 3.2754520,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3011772580,
+  "lat": 6.4710998,
+  "lon": 3.3126418,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:street": "Festac Link Road",
+    "alt_name": "Mega Chicken Festac",
+    "amenity": "fast_food",
+    "contact:phone": "+234 8150903543",
+    "name": "Mega Chicken",
+    "website": "https://www.megachicken.com.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 3013698730,
+  "lat": 6.5825385,
+  "lon": 3.3599404,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "New China Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 3023669229,
+  "lat": 6.4649977,
+  "lon": 3.2905491,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fada Land"
+  }
+},
+{
+  "type": "node",
+  "id": 3476309985,
+  "lat": 6.4434290,
+  "lon": 3.4242342,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Bogobiri House Hotel and Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 3833641197,
+  "lat": 6.6115094,
+  "lon": 3.3588398,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "Fried_Yam_&_Fried_Fish_with_Stew",
+    "name": "Fired Yam Joint",
+    "note": "opening_hours tag read \"< 10:30 | sunrise>-< 04:00 | sunset>\", unclear how to translate that into valid syntax",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4115220694,
+  "lat": 6.4405794,
+  "lon": 3.3214741,
+  "tags": {
+    "amenity": "bar",
+    "name": "Abi Bar- Miss Elliot Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 4115220695,
+  "lat": 6.4350098,
+  "lon": 3.3244418,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Beachland Club"
+  }
+},
+{
+  "type": "node",
+  "id": 4193719013,
+  "lat": 6.4374396,
+  "lon": 3.4556872,
+  "tags": {
+    "addr:city": "Lekki, Lagos",
+    "addr:street": "Admiralty Way",
+    "amenity": "restaurant",
+    "capacity": "50",
+    "cuisine": "african_food_and_international_cuisines",
+    "name": "The place",
+    "smoking": "outside",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4270075603,
+  "lat": 6.5916665,
+  "lon": 3.3597559,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "37A",
+    "addr:street": "Opebi Road",
+    "amenity": "fast_food",
+    "cuisine": "regional",
+    "delivery": "yes",
+    "name": "Chicken Republic Opebi",
+    "phone": "+234 80 9016 5924",
+    "smoking": "no",
+    "takeaway": "yes",
+    "website": "https://www.chicken-republic.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 4334833890,
+  "lat": 6.6015464,
+  "lon": 3.3529799,
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:postcode": "100581",
+    "addr:street": "Ogundana Street",
+    "amenity": "bar",
+    "cuisine": "fish;noodles;grill;fish_and_chips;barbecue",
+    "name": "7 Points Bar and Grill",
+    "opening_hours": "Mo-Su 12:00-00:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4601458189,
+  "lat": 6.4267866,
+  "lon": 3.4168635,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "brand:wikipedia": "en:Domino's Pizza",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "name:en": "Domino's Pizza",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4611739491,
+  "lat": 6.4551048,
+  "lon": 3.4291029,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "19",
+    "addr:street": "Glover Road",
+    "amenity": "restaurant",
+    "name": "Restaurant La Provence",
+    "name:en": "Restaurant La Provence",
+    "opening_hours": "Mo-Su 07:00-00:00"
+  }
+},
+{
+  "type": "node",
+  "id": 4612227790,
+  "lat": 6.4486656,
+  "lon": 3.4307265,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Flaky's Kitchen",
+    "name:en": "Flaky's Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 4612319092,
+  "lat": 6.4482799,
+  "lon": 3.4305365,
+  "tags": {
+    "amenity": "bar",
+    "name": "Liquidhof",
+    "name:en": "Liquidhof"
+  }
+},
+{
+  "type": "node",
+  "id": 4612340489,
+  "lat": 6.4483611,
+  "lon": 3.4305945,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Samantha's / Kali Burger Bar / Village Grill",
+    "name:en": "Samantha's / Kali Burger Bar / Village Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 4612446489,
+  "lat": 6.4480369,
+  "lon": 3.4303493,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Juice Lounge",
+    "name:en": "Juice Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 4716828098,
+  "lat": 6.4264427,
+  "lon": 3.4254092,
+  "tags": {
+    "addr:housenumber": "7B",
+    "addr:street": "Karimu Kotun Street",
+    "amenity": "bar",
+    "name": "Rooftop Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 4716873592,
+  "lat": 6.4263855,
+  "lon": 3.4253719,
+  "tags": {
+    "addr:housenumber": "7B",
+    "addr:street": "Karimu Kotun Street",
+    "amenity": "restaurant",
+    "name": "Talindo Steak House",
+    "name:en": "Talindo Steak House",
+    "wikidata": "Q136825364"
+  }
+},
+{
+  "type": "node",
+  "id": 4729314593,
+  "lat": 6.4451990,
+  "lon": 3.4177461,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "41",
+    "addr:street": "Ribadu Road",
+    "amenity": "restaurant",
+    "name": "Sultans Pizza & Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 4742766615,
+  "lat": 6.4358445,
+  "lon": 3.4510502,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4750411024,
+  "lat": 6.4659450,
+  "lon": 3.4530740,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Banana Island Patisserie"
+  }
+},
+{
+  "type": "node",
+  "id": 4781798315,
+  "lat": 6.5850736,
+  "lon": 3.3334641,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4781798316,
+  "lat": 6.5849528,
+  "lon": 3.3334715,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "brand:wikidata": "Q23461416",
+    "cuisine": "chicken",
+    "name": "Chicken Republic",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4839316521,
+  "lat": 6.4995338,
+  "lon": 3.3456450,
+  "tags": {
+    "addr:housenumber": "2c",
+    "addr:street": "Eloseh Street",
+    "amenity": "bar",
+    "name": "Debby bar",
+    "phone": "09090615937"
+  }
+},
+{
+  "type": "node",
+  "id": 4946299659,
+  "lat": 6.4521232,
+  "lon": 3.4354857,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Glover Court Suya"
+  }
+},
+{
+  "type": "node",
+  "id": 4946299672,
+  "lat": 6.4270022,
+  "lon": 3.4305222,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "1415 Italian Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 4946299673,
+  "lat": 6.4262707,
+  "lon": 3.4303434,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Kuramo Sports Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 4946299674,
+  "lat": 6.4260368,
+  "lon": 3.4299647,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "The Sky Restaruant"
+  }
+},
+{
+  "type": "node",
+  "id": 4946299675,
+  "lat": 6.4262636,
+  "lon": 3.4305788,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Red Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5108265574,
+  "lat": 6.4264785,
+  "lon": 3.4302580,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Crossroads Tex-Mex"
+  }
+},
+{
+  "type": "node",
+  "id": 5108265855,
+  "lat": 6.4367723,
+  "lon": 3.4148024,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Lagoon Restaurant",
+    "wikidata": "Q136892706"
+  }
+},
+{
+  "type": "node",
+  "id": 5108265856,
+  "lat": 6.4369330,
+  "lon": 3.4150797,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Marcelino's Pastry Shop"
+  }
+},
+{
+  "type": "node",
+  "id": 5108265863,
+  "lat": 6.4324011,
+  "lon": 3.4170280,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Basilico Italian",
+    "wikidata": "Q136812367"
+  }
+},
+{
+  "type": "node",
+  "id": 5109675167,
+  "lat": 6.4360226,
+  "lon": 3.4439461,
+  "tags": {
+    "amenity": "bar",
+    "name": "Five Cowries"
+  }
+},
+{
+  "type": "node",
+  "id": 5141633783,
+  "lat": 6.4265230,
+  "lon": 3.4155288,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "La Veranda",
+    "wikidata": "Q136823591"
+  }
+},
+{
+  "type": "node",
+  "id": 5142960822,
+  "lat": 6.4228228,
+  "lon": 3.4479243,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Amazon Spur Steak Ranch"
+  }
+},
+{
+  "type": "node",
+  "id": 5144668732,
+  "lat": 6.4368590,
+  "lon": 3.4173974,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Voyage Restaurant",
+    "wikidata": "Q136806412"
+  }
+},
+{
+  "type": "node",
+  "id": 5144668733,
+  "lat": 6.4370050,
+  "lon": 3.4171300,
+  "tags": {
+    "amenity": "bar",
+    "name": "Surface Bar & Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 5154214232,
+  "lat": 6.4378286,
+  "lon": 3.5079429,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Yin Yang Express"
+  }
+},
+{
+  "type": "node",
+  "id": 5154214234,
+  "lat": 6.4374326,
+  "lon": 3.5090152,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Fab Juice Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5154214235,
+  "lat": 6.4374110,
+  "lon": 3.5088586,
+  "tags": {
+    "amenity": "bar",
+    "name": "Rhapsody"
+  }
+},
+{
+  "type": "node",
+  "id": 5160398201,
+  "lat": 6.4229535,
+  "lon": 3.4479271,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Cafe Neo @ Landmark"
+  }
+},
+{
+  "type": "node",
+  "id": 5160398210,
+  "lat": 6.4314410,
+  "lon": 3.4263969,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Cafè Neo @ fourteen36"
+  }
+},
+{
+  "type": "node",
+  "id": 5174125727,
+  "lat": 6.4436150,
+  "lon": 3.3672843,
+  "tags": {
+    "addr:housenumber": "No 11",
+    "addr:street": "Randle Avenue",
+    "amenity": "fast_food",
+    "cuisine": "arab;african",
+    "email": "apapa.park@gmail.com",
+    "name": "Apapa Amusement Park",
+    "opening_hours": "Mo-Su 09:00-20:00",
+    "operator": "cccltd",
+    "phone": "08099901118",
+    "website": "http://www.apapapark.com"
+  }
+},
+{
+  "type": "node",
+  "id": 5184438463,
+  "lat": 6.4434073,
+  "lon": 3.5298558,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Spice Bowl"
+  }
+},
+{
+  "type": "node",
+  "id": 5184439052,
+  "lat": 6.4359933,
+  "lon": 3.4447717,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "HotPot"
+  }
+},
+{
+  "type": "node",
+  "id": 5218637316,
+  "lat": 6.4347670,
+  "lon": 3.4227527,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "SoHo Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5218637317,
+  "lat": 6.4348494,
+  "lon": 3.4228088,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Milano Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5218637318,
+  "lat": 6.4549718,
+  "lon": 3.4365418,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Da Vinci Bar & Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5218637319,
+  "lat": 6.4536091,
+  "lon": 3.4454950,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "The Grill Room"
+  }
+},
+{
+  "type": "node",
+  "id": 5218637320,
+  "lat": 6.4536044,
+  "lon": 3.4457757,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Saraya Deli"
+  }
+},
+{
+  "type": "node",
+  "id": 5230078832,
+  "lat": 6.5844933,
+  "lon": 3.3575660,
+  "tags": {
+    "addr:city": "Ikeja",
+    "addr:country": "NG",
+    "addr:housenumber": "53",
+    "addr:street": "Isaac John Street",
+    "amenity": "restaurant",
+    "brand": "Spur",
+    "brand:wikidata": "Q7581546",
+    "cuisine": "steak_house",
+    "email": "goldeneaglespur2016@gmail.com",
+    "name": "Golden Eagle Spur",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "phone": "+234 14 531 270",
+    "website": "https://www.spursteakranches.com/ng/restaurant/international/lagos/ikeja-gra/golden-eagles-spur"
+  }
+},
+{
+  "type": "node",
+  "id": 5231558257,
+  "lat": 6.5836458,
+  "lon": 3.3602938,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "La Giara Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5231558258,
+  "lat": 6.5836827,
+  "lon": 3.3598886,
+  "tags": {
+    "amenity": "bar",
+    "name": "Goodies Pub"
+  }
+},
+{
+  "type": "node",
+  "id": 5231558375,
+  "lat": 6.5819338,
+  "lon": 3.3589115,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "CUT Steakhouse",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5238498830,
+  "lat": 6.5817265,
+  "lon": 3.3588797,
+  "tags": {
+    "amenity": "bar",
+    "name": "R Bar",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5238498831,
+  "lat": 6.5819262,
+  "lon": 3.3587888,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Iyeru Okin",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5238498832,
+  "lat": 6.5819077,
+  "lon": 3.3586042,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Choco-Latte",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5241138913,
+  "lat": 6.5494966,
+  "lon": 3.3875082,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Bonjour Bakery"
+  }
+},
+{
+  "type": "node",
+  "id": 5243385082,
+  "lat": 6.4292644,
+  "lon": 3.4304112,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "88"
+  }
+},
+{
+  "type": "node",
+  "id": 5243385153,
+  "lat": 6.4261259,
+  "lon": 3.4305371,
+  "tags": {
+    "amenity": "bar",
+    "name": "Calabash Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5243385158,
+  "lat": 6.4304916,
+  "lon": 3.4214068,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "nigerian;african",
+    "name": "Nok by Alara",
+    "website": "http://www.nokbyalara.com/",
+    "wikidata": "Q136825083"
+  }
+},
+{
+  "type": "node",
+  "id": 5243385166,
+  "lat": 6.4347414,
+  "lon": 3.4228809,
+  "tags": {
+    "amenity": "bar",
+    "name": "Ariya Terrace Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5243385167,
+  "lat": 6.4350593,
+  "lon": 3.4230115,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Lobby Café"
+  }
+},
+{
+  "type": "node",
+  "id": 5246332242,
+  "lat": 6.4294174,
+  "lon": 3.4197897,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "36",
+    "addr:street": "Adeola Odeku Street",
+    "alt_name": "The Spice Route Adeola Odeku",
+    "amenity": "restaurant",
+    "name": "Spice Route",
+    "phone": "+234 8080208080",
+    "website": "https://spicerouterestaurants.com/",
+    "wikidata": "Q136891748"
+  }
+},
+{
+  "type": "node",
+  "id": 5246332243,
+  "lat": 6.4295055,
+  "lon": 3.4198446,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Debonairs Pizza",
+    "brand:wikidata": "Q65079407",
+    "brand:wikipedia": "en:Debonairs Pizza",
+    "cuisine": "pizza",
+    "name": "Debonairs Pizza",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5257055421,
+  "lat": 6.5735642,
+  "lon": 3.3478242,
+  "tags": {
+    "addr:street": "Oduduwa Cresent",
+    "amenity": "restaurant",
+    "name": "Harzoyka Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5325724230,
+  "lat": 6.4359339,
+  "lon": 3.4512094,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Bistro 7 Express"
+  }
+},
+{
+  "type": "node",
+  "id": 5325724231,
+  "lat": 6.4359350,
+  "lon": 3.4511200,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Schwarma Co"
+  }
+},
+{
+  "type": "node",
+  "id": 5325724303,
+  "lat": 6.5856393,
+  "lon": 3.3570602,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "62",
+    "addr:street": "Isaac John Street",
+    "alt_name": "Sweet Sensation Gra",
+    "amenity": "restaurant",
+    "name": "Sweet Sensation",
+    "phone": "+234 805 209 0028",
+    "website": "https://sweetsensation.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 5381826554,
+  "lat": 6.4536457,
+  "lon": 3.4455622,
+  "tags": {
+    "amenity": "bar",
+    "name": "The Grill Room Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5645791721,
+  "lat": 6.4293938,
+  "lon": 3.4094583,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "indian",
+    "name": "Sherlaton"
+  }
+},
+{
+  "type": "node",
+  "id": 5647946287,
+  "lat": 6.4379750,
+  "lon": 3.4122090,
+  "tags": {
+    "amenity": "cafe",
+    "name": "My Coffee House"
+  }
+},
+{
+  "type": "node",
+  "id": 5649291417,
+  "lat": 6.6142578,
+  "lon": 3.3577949,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5649291418,
+  "lat": 6.6144550,
+  "lon": 3.3579236,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Krispy Kreme"
+  }
+},
+{
+  "type": "node",
+  "id": 5649292323,
+  "lat": 6.6140953,
+  "lon": 3.3578754,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Shawarma & Co"
+  }
+},
+{
+  "type": "node",
+  "id": 5649292326,
+  "lat": 6.6141859,
+  "lon": 3.3578727,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Mugg & Bean"
+  }
+},
+{
+  "type": "node",
+  "id": 5649292330,
+  "lat": 6.6139328,
+  "lon": 3.3571270,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Casper & Gambini's"
+  }
+},
+{
+  "type": "node",
+  "id": 5649292359,
+  "lat": 6.4481758,
+  "lon": 3.4802583,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "26",
+    "addr:street": "Admiralty Way",
+    "amenity": "restaurant",
+    "name": "The Harvest Lagos",
+    "website": "theharvestlagos.com"
+  }
+},
+{
+  "type": "node",
+  "id": 5649641156,
+  "lat": 6.4385344,
+  "lon": 3.4320892,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Marco Polo Express"
+  }
+},
+{
+  "type": "node",
+  "id": 5661711450,
+  "lat": 6.4368129,
+  "lon": 3.4189692,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "brand:wikipedia": "en:Kilimanjaro (restaurant)",
+    "cuisine": "nigerian",
+    "name": "Kilimanjaro",
+    "operator": "Sundry Foods Limited",
+    "phone": "+234 807 5091489",
+    "takeaway": "yes",
+    "website": "https://www.kilimanjaro-restaurants.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 5665787421,
+  "lat": 6.5393263,
+  "lon": 3.2852741,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Papaz"
+  }
+},
+{
+  "type": "node",
+  "id": 5678261932,
+  "lat": 6.5784280,
+  "lon": 3.3215546,
+  "tags": {
+    "amenity": "bar",
+    "name": "Air France KLM Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5777682234,
+  "lat": 6.4356558,
+  "lon": 3.4566187,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Peppercorn Avenue"
+  }
+},
+{
+  "type": "node",
+  "id": 5781683230,
+  "lat": 6.5063862,
+  "lon": 3.3742223,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "11",
+    "addr:place": "Sabo Yaba",
+    "addr:street": "Commercial Avenue",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Cafe Neo"
+  }
+},
+{
+  "type": "node",
+  "id": 5866525796,
+  "lat": 6.4260205,
+  "lon": 3.4286039,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "80",
+    "addr:street": "Adetokunbo Ademola Street",
+    "amenity": "bar",
+    "level": "4",
+    "name": "RUE 80",
+    "name:en": "Maison Rooftop",
+    "note": "Inside Maison Fahrenheit on the rooftop.",
+    "operator": "Fahrenheit Hospitality",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5912282957,
+  "lat": 6.5979410,
+  "lon": 3.3536679,
+  "tags": {
+    "addr:city": "Ikeja",
+    "addr:country": "NG",
+    "addr:housenumber": "17-19",
+    "addr:postcode": "100281",
+    "addr:state": "Lagos",
+    "addr:street": "Allen Avenue",
+    "amenity": "cafe",
+    "contact:facebook": "https://www.facebook.com/dreamfieldsaladandjuicebar/",
+    "cuisine": "juice;salad",
+    "delivery": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Dreamfield Juice & Salad Bar",
+    "opening_hours": "Mo-Th 06:30-20:30;Fr 06:30-22:00;Sa 09:00-22:00;Su 13:00-20:30",
+    "phone": "+234 906 000 7683",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502701,
+  "lat": 6.4313846,
+  "lon": 3.4285126,
+  "tags": {
+    "amenity": "bar",
+    "name": "Shaunz Bar & Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502722,
+  "lat": 6.5784951,
+  "lon": 3.3218017,
+  "tags": {
+    "amenity": "bar",
+    "name": "Oasis Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502723,
+  "lat": 6.5785888,
+  "lon": 3.3208372,
+  "tags": {
+    "amenity": "bar",
+    "name": "SDS Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502724,
+  "lat": 6.5784765,
+  "lon": 3.3212599,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502725,
+  "lat": 6.5784858,
+  "lon": 3.3214771,
+  "tags": {
+    "amenity": "bar",
+    "name": "Heineken Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502726,
+  "lat": 6.5785587,
+  "lon": 3.3211685,
+  "tags": {
+    "amenity": "bar",
+    "name": "Gabfol Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 5943502727,
+  "lat": 6.5784296,
+  "lon": 3.3206117,
+  "tags": {
+    "amenity": "bar",
+    "name": "ASL Premium Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 6033848803,
+  "lat": 6.4282835,
+  "lon": 3.4369451,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "B.L. Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 6137339403,
+  "lat": 6.5371081,
+  "lon": 3.2603751,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Kingston Joe",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6146218727,
+  "lat": 6.5833899,
+  "lon": 3.3606242,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Pumpkin Leaf"
+  }
+},
+{
+  "type": "node",
+  "id": 6173422190,
+  "lat": 6.4441490,
+  "lon": 3.4241942,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "192",
+    "addr:street": "Awolowo Road",
+    "alt_name": "Domino's Pizza Awolowo Road",
+    "amenity": "fast_food",
+    "branch": "Ikoyi",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "takeaway": "yes",
+    "website": "https://www.dominos.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 6173422204,
+  "lat": 6.4425649,
+  "lon": 3.4211756,
+  "tags": {
+    "amenity": "restaurant",
+    "brand": "Pizza Hut",
+    "brand:wikidata": "Q191615",
+    "cuisine": "pizza",
+    "name": "Pizza Hut"
+  }
+},
+{
+  "type": "node",
+  "id": 6670475658,
+  "lat": 6.4350737,
+  "lon": 3.4142491,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "16",
+    "addr:street": "Kofo Abayomi Road",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "cuisine": "thai",
+    "name": "Thai Thai",
+    "opening_hours": "Mo-Su 11:00-21:00",
+    "phone": "+2349091172906",
+    "takeaway": "yes",
+    "website": "https://www.thaithai.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 6716346185,
+  "lat": 6.4341307,
+  "lon": 3.4316601,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "864A",
+    "addr:postcode": "101241",
+    "addr:street": "Bishop Aboyade Cole Street",
+    "alt_name": "Eric Kayser Victoria Island",
+    "amenity": "restaurant",
+    "contact:website": "https://www.maison-kayser.com/gb/boulangeries/223400101-victoria-island.html",
+    "cuisine": "french",
+    "name": "Eric Kayser Artisan Boulanger",
+    "phone": "+234 906 0004 887"
+  }
+},
+{
+  "type": "node",
+  "id": 6863933664,
+  "lat": 6.4319078,
+  "lon": 3.4355417,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "242B",
+    "addr:postcode": "100001",
+    "addr:street": "Muri Okunola Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "chinese;indian;international;regional",
+    "internet_access": "yes",
+    "name": "Indigo Bar Restaurant  and Suites",
+    "opening_hours": "Mo-Su 10:00-02:00",
+    "outdoor_seating": "yes",
+    "phone": "+234 803 7755 755",
+    "reservation": "recommended",
+    "website": "http://www.indigolagos.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 6967294249,
+  "lat": 6.5722905,
+  "lon": 3.3669876,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr Bigg's"
+  }
+},
+{
+  "type": "node",
+  "id": 6973195670,
+  "lat": 6.4958980,
+  "lon": 3.3875825,
+  "tags": {
+    "addr:street": "Raimi Street",
+    "amenity": "fast_food",
+    "name": "Ita baale"
+  }
+},
+{
+  "type": "node",
+  "id": 6973195672,
+  "lat": 6.4939255,
+  "lon": 3.3940875,
+  "tags": {
+    "amenity": "bar",
+    "name": "Djebete Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 6988249205,
+  "lat": 6.4944084,
+  "lon": 3.3881907,
+  "tags": {
+    "addr:street": "Migbewe I",
+    "amenity": "bar",
+    "name": "Bar",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6991204554,
+  "lat": 6.5969986,
+  "lon": 3.3961932,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr Bigg's"
+  }
+},
+{
+  "type": "node",
+  "id": 6993892361,
+  "lat": 6.4350729,
+  "lon": 3.4219234,
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "mexican",
+    "delivery": "yes",
+    "name": "El Padrino",
+    "opening_hours:kitchen": "Mo-Fr 10:00-18",
+    "outdoor_seating": "yes",
+    "phone": "+2348162315581",
+    "takeaway": "yes",
+    "website": "https://elpadrino.ng"
+  }
+},
+{
+  "type": "node",
+  "id": 6993969350,
+  "lat": 6.6377803,
+  "lon": 3.3698424,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6997541334,
+  "lat": 6.6025666,
+  "lon": 3.3059391,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chicken",
+    "name": "Tastee"
+  }
+},
+{
+  "type": "node",
+  "id": 7001088765,
+  "lat": 6.6115384,
+  "lon": 3.3114679,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Tantataste"
+  }
+},
+{
+  "type": "node",
+  "id": 7005551085,
+  "lat": 6.5292437,
+  "lon": 3.3870555,
+  "tags": {
+    "addr:street": "Bariga Road",
+    "amenity": "fast_food",
+    "name": "Chicken Republic"
+  }
+},
+{
+  "type": "node",
+  "id": 7116862051,
+  "lat": 6.4404064,
+  "lon": 3.4604906,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "19",
+    "addr:street": "Da-Silva Street",
+    "amenity": "restaurant",
+    "name": "Stories Lagos"
+  }
+},
+{
+  "type": "node",
+  "id": 7267104701,
+  "lat": 6.6129836,
+  "lon": 3.5018078,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "LKC"
+  }
+},
+{
+  "type": "node",
+  "id": 7286930391,
+  "lat": 6.5999667,
+  "lon": 3.3811097,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Food House"
+  }
+},
+{
+  "type": "node",
+  "id": 7333552242,
+  "lat": 6.4684549,
+  "lon": 3.2975665,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "brand:wikipedia": "en:Domino's Pizza",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7390898561,
+  "lat": 6.4401301,
+  "lon": 3.5165205,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Molabat kitchen",
+    "opening_hours": "Mo-Fr 09:00-22:00",
+    "phone": "+2349077941319",
+    "website": "https://molabatkitchen.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 7391141991,
+  "lat": 6.4332973,
+  "lon": 3.4296855,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "14",
+    "addr:street": "Adeola Hopewell Street",
+    "amenity": "restaurant",
+    "name": "Sabor",
+    "opening_hours": "Tu-Su 12:00-00:00",
+    "phone": "+234 817 987 8912",
+    "website": "http://www.saborlagos.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 7419153033,
+  "lat": 6.6260867,
+  "lon": 3.3533578,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "chicken",
+    "name": "Mega Chicken",
+    "website": "https://www.megachicken.com.ng"
+  }
+},
+{
+  "type": "node",
+  "id": 7424609862,
+  "lat": 6.4475916,
+  "lon": 3.4692881,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Lagos Tea House"
+  }
+},
+{
+  "type": "node",
+  "id": 7500803765,
+  "lat": 6.4998047,
+  "lon": 3.5846367,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chicken King"
+  }
+},
+{
+  "type": "node",
+  "id": 8554836918,
+  "lat": 6.4564952,
+  "lon": 3.4456956,
+  "tags": {
+    "addr:street": "Alexander Avenue",
+    "amenity": "bar",
+    "cuisine": "african;regional",
+    "name": "Danfo",
+    "name:en": "Danfo Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8920097433,
+  "lat": 6.4474575,
+  "lon": 3.4643371,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "12e",
+    "addr:postcode": "+234",
+    "addr:street": "Admiralty Way",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "italian;pizza;chinese;burger;regional;sandwich",
+    "delivery": "yes",
+    "diet:gluten_free": "yes",
+    "diet:healthy": "yes",
+    "diet:meat": "yes",
+    "diet:mediterranean": "yes",
+    "diet:non-vegetarian": "yes",
+    "diet:organic": "yes",
+    "diet:vegetarian": "yes",
+    "ele": "2",
+    "email": "info@circa.com.ng",
+    "image": "https://circa.com.ng/#group1-2",
+    "name": "Circa NonPareil",
+    "opening_hours": "Tu-Su 10:00-21:00",
+    "outdoor_seating": "yes",
+    "phone": "+2348179999960",
+    "reservation": "required",
+    "takeaway": "yes",
+    "website": "https://circa.com.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 9248888854,
+  "lat": 6.4305707,
+  "lon": 3.4242599,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "brunch",
+    "name": "Delis Coffee Shop"
+  }
+},
+{
+  "type": "node",
+  "id": 9248888868,
+  "lat": 6.4334020,
+  "lon": 3.4203374,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "brunch",
+    "name": "Craft Gourmet"
+  }
+},
+{
+  "type": "node",
+  "id": 9248888869,
+  "lat": 6.4318911,
+  "lon": 3.4175550,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "La Brioche"
+  }
+},
+{
+  "type": "node",
+  "id": 9685011127,
+  "lat": 6.4457270,
+  "lon": 3.4578142,
+  "tags": {
+    "addr:city": "LEKKI",
+    "addr:housenumber": "Beside Fidelity Bank",
+    "addr:postcode": "101233",
+    "addr:street": "Admiralty Way",
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "delivery": "yes",
+    "name": "Amala Sky Lagos",
+    "phone": "+234 807 777 6962"
+  }
+},
+{
+  "type": "node",
+  "id": 9686362599,
+  "lat": 6.6415350,
+  "lon": 3.3097903,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Domino’s pizza"
+  }
+},
+{
+  "type": "node",
+  "id": 9938771491,
+  "lat": 6.5483888,
+  "lon": 3.3876489,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "296",
+    "addr:street": "Apapa-Oworonshoki Expressway",
+    "alt_name": "Burger King Gbagada",
+    "amenity": "fast_food",
+    "branch": "Gbagada",
+    "brand": "Burger King",
+    "brand:wikidata": "Q177054",
+    "cuisine": "burger",
+    "name": "Burger King",
+    "opening_hours": "Mo-Su 10:00-21:00",
+    "phone": "08092345351",
+    "takeaway": "yes",
+    "website": "https://order.burger-king.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 10127865628,
+  "lat": 6.5883503,
+  "lon": 3.4003337,
+  "tags": {
+    "amenity": "fast_food",
+    "contact:twitter": "creative_verse",
+    "currency:XBT": "yes",
+    "name": "Pandix HuB",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "yes",
+    "payment:onchain": "yes",
+    "survey:date": "2022-10-25"
+  }
+},
+{
+  "type": "node",
+  "id": 10759789405,
+  "lat": 6.4217112,
+  "lon": 2.8886003,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mie-Mie"
+  }
+},
+{
+  "type": "node",
+  "id": 11121934210,
+  "lat": 6.4701520,
+  "lon": 3.6302355,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Miss_ini_spicy"
+  }
+},
+{
+  "type": "node",
+  "id": 11121934217,
+  "lat": 6.4737781,
+  "lon": 3.6275858,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama Vero"
+  }
+},
+{
+  "type": "node",
+  "id": 11121934220,
+  "lat": 6.4736511,
+  "lon": 3.6306015,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Sapphire Taste"
+  }
+},
+{
+  "type": "node",
+  "id": 11121943204,
+  "lat": 6.4733586,
+  "lon": 3.6280716,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Wolewajeun"
+  }
+},
+{
+  "type": "node",
+  "id": 11235625032,
+  "lat": 6.5516610,
+  "lon": 3.3599815,
+  "tags": {
+    "addr:city": "Ilupeju, Lagos",
+    "addr:housenumber": "1",
+    "addr:street": "Olabisi Street",
+    "amenity": "restaurant",
+    "name": "Spice And Grill",
+    "phone": "08036395555"
+  }
+},
+{
+  "type": "node",
+  "id": 11287504106,
+  "lat": 6.4442171,
+  "lon": 3.4239490,
+  "tags": {
+    "addr:city": "Ikoyi",
+    "addr:housenumber": "190",
+    "addr:postcode": "101233",
+    "addr:street": "Awolowo Road",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "email": "bazu95@yahoo.com",
+    "min_age": "20",
+    "mobile": "+2349032113978",
+    "name": "SILK LAGOS",
+    "opening_hours": "We-Su 18:00-03:00",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "smoking": "separated",
+    "website": "https://www.thesilklagos.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11518274350,
+  "lat": 6.4261084,
+  "lon": 3.4131743,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "24",
+    "addr:postcode": "101241",
+    "addr:street": "Idejo Street",
+    "amenity": "bar",
+    "name": "Booze.ng",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 11708247043,
+  "lat": 6.4341350,
+  "lon": 3.4316492,
+  "tags": {
+    "addr:city": "Eti-Osa",
+    "addr:housenumber": "864B",
+    "addr:street": "Bishop Aboyade Cole Street",
+    "amenity": "restaurant",
+    "cuisine": "lebanese",
+    "name": "Leila Restaurant",
+    "opening_hours": "Mo-Su 09:00-23:00",
+    "phone": "+2348035791444",
+    "website": "https://www.leilarestaurant.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11941737848,
+  "lat": 6.4358972,
+  "lon": 3.4509282,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Burger King",
+    "brand:wikidata": "Q177054",
+    "brand:wikipedia": "en:Burger King",
+    "cuisine": "burger",
+    "name": "Burger King",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12020579958,
+  "lat": 6.4310093,
+  "lon": 3.4776680,
+  "tags": {
+    "addr:city": "Lekki, Lagos",
+    "addr:housenumber": "7",
+    "addr:postcode": "105102",
+    "addr:street": "Plot 7 QMB Builders road off elf bustop Ikate Elegushi Lekki 105102",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "contact:facebook": "desector.lagos",
+    "cuisine": "pizza;burger;sandwich;chicken;fish;seafood;juice;french;pasta;salad;dessert;steak_house;regional",
+    "diet:vegetarian": "yes",
+    "email": "desectorpub@gmail.com",
+    "highchair": "yes",
+    "name": "desector pub & restaurant",
+    "opening_hours": "Mo-Su 12:00-03:00",
+    "phone": "+234  806 287 4382",
+    "reservation": "yes",
+    "takeaway": "yes",
+    "website": "https://desectorpub.com/",
+    "website:menu": "https://desectorpub.com/menus/"
+  }
+},
+{
+  "type": "node",
+  "id": 12035213580,
+  "lat": 6.4307508,
+  "lon": 3.4374689,
+  "tags": {
+    "addr:city": "Victoria Island",
+    "addr:housenumber": "99",
+    "addr:postcode": "101243",
+    "addr:street": "Ajose Adeogun Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "african;continental",
+    "delivery": "yes",
+    "diet:healthy": "yes",
+    "email": "rsvp@mercuryrooftop.com",
+    "name": "Mercury Lagos",
+    "opening_hours": "Tu-Su 19:00-03:00",
+    "phone": "+2349011111225",
+    "website": "www.rahdahrooftop.com"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469938,
+  "lat": 6.6055202,
+  "lon": 3.4251273,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Sumptuous eatery & mini restaurant",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469939,
+  "lat": 6.6089011,
+  "lon": 3.4321427,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Mama T food canteen",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469940,
+  "lat": 6.6075023,
+  "lon": 3.4223958,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "D,dots",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469941,
+  "lat": 6.6075364,
+  "lon": 3.4224214,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Olori enny",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "needs repair"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469942,
+  "lat": 6.6082313,
+  "lon": 3.4146461,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "mini delight",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469943,
+  "lat": 6.6078717,
+  "lon": 3.4279333,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Naina Food Canteen",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469944,
+  "lat": 6.6030957,
+  "lon": 3.4190523,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Temptation fast_food",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "others"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469945,
+  "lat": 6.6010740,
+  "lon": 3.4202406,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Spog",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469946,
+  "lat": 6.6064107,
+  "lon": 3.4089877,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "delite cravings",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469947,
+  "lat": 6.6109999,
+  "lon": 3.4139620,
+  "tags": {
+    "amenity": "restaurant",
+    "facility_manager": "private/Individual",
+    "name": "Manna kitchen",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469948,
+  "lat": 6.6014290,
+  "lon": 3.4181900,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Liquor Castle",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469949,
+  "lat": 6.6071173,
+  "lon": 3.4324020,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Lady B beer palour",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469950,
+  "lat": 6.6082295,
+  "lon": 3.4263916,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Dkibo cool John",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "non-functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469951,
+  "lat": 6.6064774,
+  "lon": 3.4263248,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Arise shine bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "non-functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469952,
+  "lat": 6.6067511,
+  "lon": 3.4086733,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Goldberg bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469953,
+  "lat": 6.6031600,
+  "lon": 3.4211000,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "D c bar & suites",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "non-functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469954,
+  "lat": 6.6085547,
+  "lon": 3.4321369,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Ife joints",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469955,
+  "lat": 6.6059542,
+  "lon": 3.4093327,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Chi best night club",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469956,
+  "lat": 6.6050636,
+  "lon": 3.4298985,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Iya orobo base",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469957,
+  "lat": 6.6010099,
+  "lon": 3.4179120,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Budweiser bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469958,
+  "lat": 6.6084268,
+  "lon": 3.4264893,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Versatile bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469959,
+  "lat": 6.6066525,
+  "lon": 3.4262997,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Friday bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469960,
+  "lat": 6.6085726,
+  "lon": 3.4227301,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Babas restaurant and bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469961,
+  "lat": 6.5992465,
+  "lon": 3.4209013,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Paparazzi bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469962,
+  "lat": 6.6063877,
+  "lon": 3.4220083,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Beer Hub",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469963,
+  "lat": 6.6069199,
+  "lon": 3.4083684,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "ENE BAR",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469964,
+  "lat": 6.6051221,
+  "lon": 3.4161599,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "House 24",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469965,
+  "lat": 6.6080333,
+  "lon": 3.4316267,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "Angle 90 joint",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469966,
+  "lat": 6.6064284,
+  "lon": 3.4090225,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "24hrs grade chicken",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12281469967,
+  "lat": 6.6086818,
+  "lon": 3.4229627,
+  "tags": {
+    "amenity": "bar",
+    "facility_manager": "private/Individual",
+    "name": "U.C Restaurant & Bar",
+    "operator": "private/individual",
+    "source:position": "gps",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12591002582,
+  "lat": 6.4751918,
+  "lon": 3.6191471,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "Km 48",
+    "addr:postcode": "101001",
+    "addr:street": "Lekki - Epe Expy, opposite Blenco Supermarket, Eti-Osa, Sangotedo",
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "diet:local": "yes",
+    "name": "Chow Village",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "phone": "+2349135757038"
+  }
+},
+{
+  "type": "node",
+  "id": 12919060489,
+  "lat": 6.4302186,
+  "lon": 3.4259496,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "26",
+    "addr:postcode": "106104",
+    "addr:street": "Karimu Kotun Street",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "brewery": "yes",
+    "min_age": "18",
+    "mobile": "+2349161465000",
+    "name": "Frozen Cabana Lagos",
+    "opening_hours": "Mo-Su 14:00-03:00"
+  }
+},
+{
+  "type": "node",
+  "id": 13039092014,
+  "lat": 6.4428561,
+  "lon": 3.4729848,
+  "tags": {
+    "addr:city": "lekki",
+    "addr:housenumber": "1E",
+    "addr:postcode": "106104",
+    "addr:street": "Babatope Bejide Crescent",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "name": "Kachi’s kitchen",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "phone": "+2349126000026"
+  }
+},
+{
+  "type": "node",
+  "id": 13090093192,
+  "lat": 6.4280516,
+  "lon": 3.4322539,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "19B",
+    "addr:street": "Sinari Daranijo Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "name": "The Mayfair lagos",
+    "opening_hours": "Tues - Sun 16:00 - 02:00",
+    "phone": "+2349135576891"
+  }
+},
+{
+  "type": "node",
+  "id": 13092338354,
+  "lat": 6.5198884,
+  "lon": 3.3980219,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:street": "University Road",
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "diet:meat": "yes",
+    "name": "yamoriah"
+  }
+},
+{
+  "type": "node",
+  "id": 13131419453,
+  "lat": 6.4297695,
+  "lon": 3.4331337,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "25",
+    "addr:postcode": "106104",
+    "addr:street": "Gafari Animashaun Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "name": "The Mania House",
+    "opening_hours": "Mo-Su 11:00-02:00",
+    "phone": "+2348144258984"
+  }
+},
+{
+  "type": "node",
+  "id": 13421752852,
+  "lat": 6.4428693,
+  "lon": 3.4210086,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "97",
+    "addr:postcode": "332222",
+    "addr:street": "Awolowo Road",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "email": "Purplejasminecafe@gmail.com",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Purple Jasmine cafe",
+    "opening_hours": "24/7",
+    "outdoor_seating": "no",
+    "phone": "+2348148247243"
+  }
+},
+{
+  "type": "node",
+  "id": 13536246693,
+  "lat": 6.4471734,
+  "lon": 3.4045376,
+  "tags": {
+    "addr:housenumber": "10",
+    "addr:street": "Berkley Street",
+    "amenity": "bar",
+    "brewery": "yes",
+    "min_age": "18",
+    "name": "Balo's Place",
+    "opening_hours": "24/7",
+    "payment:cash": "yes",
+    "payment:debit_cards": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13943316070,
+  "lat": 6.4590478,
+  "lon": 3.1997415,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Madam U. C Quality Kitchen",
+    "wikidata": "Q136841251"
+  }
+},
+{
+  "type": "node",
+  "id": 13953171063,
+  "lat": 6.4337025,
+  "lon": 3.4168093,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Cilantro",
+    "wikidata": "Q136813087"
+  }
+},
+{
+  "type": "node",
+  "id": 13953171073,
+  "lat": 6.4294423,
+  "lon": 3.4228033,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "307",
+    "addr:street": "Adeola Odeku Street",
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes",
+    "wikidata": "Q136871000"
+  }
+},
+{
+  "type": "node",
+  "id": 13953171074,
+  "lat": 6.4290640,
+  "lon": 3.4192338,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Jevinik",
+    "wikidata": "Q136849442"
+  }
+},
+{
+  "type": "node",
+  "id": 13953171097,
+  "lat": 6.4274806,
+  "lon": 3.4215816,
+  "tags": {
+    "amenity": "restaurant",
+    "brand": "Johnny Rockets",
+    "brand:wikidata": "Q1051593",
+    "cuisine": "burger",
+    "name": "Johnny Rockets",
+    "wikidata": "Q136814437"
+  }
+},
+{
+  "type": "node",
+  "id": 13953183879,
+  "lat": 6.4275244,
+  "lon": 3.4254253,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Yogurt Frenzy",
+    "wikidata": "Q136822622"
+  }
+},
+{
+  "type": "node",
+  "id": 13953183880,
+  "lat": 6.4277592,
+  "lon": 3.4258641,
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "14C",
+    "addr:street": "Karimu Kotun Street",
+    "amenity": "cafe",
+    "name": "Araba's Caffe Tranche",
+    "wikidata": "Q109362278"
+  }
+},
+{
+  "type": "node",
+  "id": 14024376519,
+  "lat": 6.4969413,
+  "lon": 3.1140911,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chicken;barbecue;pasta",
+    "name": "dele foods and grills",
+    "phone": "08083372894"
+  }
+},
+{
+  "type": "way",
+  "id": 411937274,
+  "center": {
+    "lat": 6.4356906,
+    "lon": 3.4211247
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Goodies"
+  }
+},
+{
+  "type": "way",
+  "id": 482055903,
+  "center": {
+    "lat": 6.4229449,
+    "lon": 3.4445575
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "3/4",
+    "addr:street": "Water Corporation Road",
+    "amenity": "restaurant",
+    "building": "yes",
+    "check_date": "2023-06-17",
+    "height": "15",
+    "name": "Hard Rock Cafe"
+  }
+},
+{
+  "type": "way",
+  "id": 482055904,
+  "center": {
+    "lat": 6.4230301,
+    "lon": 3.4442210
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "4",
+    "addr:street": "Water Corporation Road",
+    "amenity": "restaurant",
+    "building": "yes",
+    "check_date": "2023-06-17",
+    "height": "15",
+    "name": "Shiro"
+  }
+},
+{
+  "type": "way",
+  "id": 482242686,
+  "center": {
+    "lat": 6.4230710,
+    "lon": 3.4272740
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "brand": "Johnny Rockets",
+    "brand:wikidata": "Q1051593",
+    "building": "yes",
+    "cuisine": "burger",
+    "name": "Johnny Rockets"
+  }
+},
+{
+  "type": "way",
+  "id": 529219699,
+  "center": {
+    "lat": 6.4372836,
+    "lon": 3.4147322
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Churrasco"
+  }
+},
+{
+  "type": "way",
+  "id": 529219701,
+  "center": {
+    "lat": 6.4371806,
+    "lon": 3.4152096
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Fusion"
+  }
+},
+{
+  "type": "way",
+  "id": 529219703,
+  "center": {
+    "lat": 6.4372120,
+    "lon": 3.4149354
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Lagoon Waterfront Bar"
+  }
+},
+{
+  "type": "way",
+  "id": 531627776,
+  "center": {
+    "lat": 6.4281548,
+    "lon": 3.4189653
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Cafè Neo @ cre8"
+  }
+},
+{
+  "type": "way",
+  "id": 536134419,
+  "center": {
+    "lat": 6.4291333,
+    "lon": 3.4246091
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "864a Bishop Aboyade St,",
+    "addr:street": "Victoria Island, Lagos 106104, Lagos",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Leila Restaurant Lagos",
+    "phone": "+2348035791444"
+  }
+},
+{
+  "type": "way",
+  "id": 536234702,
+  "center": {
+    "lat": 6.4385306,
+    "lon": 3.4273364
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "10",
+    "name": "Nigerian Law School Cafeteria"
+  }
+},
+{
+  "type": "way",
+  "id": 536736960,
+  "center": {
+    "lat": 6.4551852,
+    "lon": 3.4292586
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "5.0",
+    "name": "Casa Lydia Restaurant"
+  }
+},
+{
+  "type": "way",
+  "id": 537017514,
+  "center": {
+    "lat": 6.4324179,
+    "lon": 3.4169023
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "13",
+    "addr:street": "Musa Yardua Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "6",
+    "name": "Pizza-Riah"
+  }
+},
+{
+  "type": "way",
+  "id": 537017517,
+  "center": {
+    "lat": 6.4326412,
+    "lon": 3.4168192
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "10",
+    "name": "Crust and Cream",
+    "wikidata": "Q136849335"
+  }
+},
+{
+  "type": "way",
+  "id": 539335437,
+  "center": {
+    "lat": 6.4681302,
+    "lon": 3.2979325
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "building": "yes",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 543998062,
+  "center": {
+    "lat": 6.4640338,
+    "lon": 3.4345807
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "BG Gardens"
+  }
+},
+{
+  "type": "way",
+  "id": 551464847,
+  "center": {
+    "lat": 6.5855507,
+    "lon": 3.3573164
+  },
+  "tags": {
+    "addr:city": "Ikeja",
+    "addr:housenumber": "60",
+    "addr:street": "Isaac John Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "7",
+    "name": "Zen Garden"
+  }
+},
+{
+  "type": "way",
+  "id": 560577518,
+  "center": {
+    "lat": 6.4333246,
+    "lon": 3.4385048
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "6",
+    "name": "Chocolate Royale"
+  }
+},
+{
+  "type": "way",
+  "id": 560577519,
+  "center": {
+    "lat": 6.4330097,
+    "lon": 3.4390341
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "ArAbesQue"
+  }
+},
+{
+  "type": "way",
+  "id": 560577520,
+  "center": {
+    "lat": 6.4333003,
+    "lon": 3.4381585
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Café Royal Lekki Peninsula"
+  }
+},
+{
+  "type": "way",
+  "id": 603511880,
+  "center": {
+    "lat": 6.4301846,
+    "lon": 3.4369841
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "92B",
+    "addr:street": "Younis Bashorun Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "SOUTH Eatery"
+  }
+},
+{
+  "type": "way",
+  "id": 610029905,
+  "center": {
+    "lat": 6.4345947,
+    "lon": 3.4161959
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "6",
+    "name": "Backyard Bar & Grill"
+  }
+},
+{
+  "type": "way",
+  "id": 625093263,
+  "center": {
+    "lat": 6.5964662,
+    "lon": 3.3544952
+  },
+  "tags": {
+    "addr:city": "Ikeja",
+    "addr:country": "NG",
+    "addr:housenumber": "5",
+    "addr:postcode": "100281",
+    "addr:state": "Lagos",
+    "addr:street": "Allen Avenue",
+    "amenity": "restaurant",
+    "building": "commercial",
+    "building:levels": "6",
+    "cuisine": "nigerian",
+    "name": "Mama Cass",
+    "website": "https://mamacassng.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 625815368,
+  "center": {
+    "lat": 6.4466096,
+    "lon": 3.4726598
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "The House Café"
+  }
+},
+{
+  "type": "way",
+  "id": 625815411,
+  "center": {
+    "lat": 6.4380234,
+    "lon": 3.4370886
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "5",
+    "name": "La Taverna"
+  }
+},
+{
+  "type": "way",
+  "id": 627612172,
+  "center": {
+    "lat": 6.4269373,
+    "lon": 3.4271217
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "height": "5",
+    "name": "Bottles Restaurant",
+    "website": "http://bottlesrestaurant.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 641988232,
+  "center": {
+    "lat": 6.4228617,
+    "lon": 3.4455846
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "3-4",
+    "addr:postcode": "106104",
+    "addr:street": "Water Corporation Road, Victoria Island, Itirin",
+    "amenity": "restaurant",
+    "building": "retail",
+    "cuisine": "pizza",
+    "height": "25",
+    "name": "Carven Arena"
+  }
+},
+{
+  "type": "way",
+  "id": 653342929,
+  "center": {
+    "lat": 6.4241681,
+    "lon": 3.4201059
+  },
+  "tags": {
+    "addr:city": "lagos",
+    "addr:housenumber": "41",
+    "addr:postcode": "101241",
+    "addr:street": "Bishop Oluwole Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "building": "yes",
+    "cuisine": "african",
+    "email": "Dulleslagos@gmail.com",
+    "name": "Dulles Lagos",
+    "opening_hours": "Tu-Su 12:00-02:00",
+    "phone": "+234 916 000 6045",
+    "website": "https://app.dinesurf.com/restaurants/dulles-lagos?tab=menus"
+  }
+},
+{
+  "type": "way",
+  "id": 662625486,
+  "center": {
+    "lat": 6.4286721,
+    "lon": 3.4327581
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "32",
+    "addr:street": "Gafari Animashaun Street",
+    "amenity": "restaurant",
+    "name": "Orchid House",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 689435680,
+  "center": {
+    "lat": 6.4248300,
+    "lon": 3.4167480
+  },
+  "tags": {
+    "addr:city": "Lagaos",
+    "addr:housenumber": "4b",
+    "addr:place": "Victoria Island",
+    "addr:street": "Ologun Agbaje Street",
+    "amenity": "fast_food",
+    "cuisine": "american",
+    "delivery": "yes",
+    "name": "Road Chef",
+    "opening_hours": "08:00-22:00",
+    "operator": "Road Chef",
+    "payment:notes": "yes",
+    "phone": "08180390112",
+    "takeaway": "yes",
+    "website": "http://www.roadchefdrivethru.com"
+  }
+},
+{
+  "type": "way",
+  "id": 740741853,
+  "center": {
+    "lat": 6.4463120,
+    "lon": 3.4054758
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "34",
+    "addr:street": "McCarthy Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "building:levels": "2",
+    "cuisine": "jollof_rice;ewa_aganyin;moi_moi;nigerian;ponmo",
+    "name": "Ghana High",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "phone": "08166399027"
+  }
+},
+{
+  "type": "way",
+  "id": 742173943,
+  "center": {
+    "lat": 6.4470775,
+    "lon": 3.4049075
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "14",
+    "addr:street": "Berkley Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "building:levels": "1",
+    "cuisine": "nigerian;swallow",
+    "name": "Iya Eba",
+    "opening_hours": "Mo-Sa 09:00-22:00"
+  }
+},
+{
+  "type": "way",
+  "id": 744431847,
+  "center": {
+    "lat": 6.5716693,
+    "lon": 3.3661926
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "pasta;jollof_rice",
+    "name": "The Place"
+  }
+},
+{
+  "type": "way",
+  "id": 747932511,
+  "center": {
+    "lat": 6.6018564,
+    "lon": 3.3050173
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:street": "Akowonjo Road",
+    "alt_name": "Chicken Republic Akowonjo",
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Chicken Republic",
+    "website": "https://www.chicken-republic.com/store-locator/"
+  }
+},
+{
+  "type": "way",
+  "id": 848374714,
+  "center": {
+    "lat": 6.4403778,
+    "lon": 3.4554209
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:street": "Admiralty Way",
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 922935436,
+  "center": {
+    "lat": 6.4311285,
+    "lon": 3.4234796
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:street": "Akin Adesola Street",
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Flowershop Cafe",
+    "website": "https://flowershopcafe.com.ng/"
+  }
+},
+{
+  "type": "way",
+  "id": 923043479,
+  "center": {
+    "lat": 6.4314391,
+    "lon": 3.4205915
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "282",
+    "addr:street": "Akin-Olugbade Street",
+    "alt_name": "Art Cafe Victoria Island",
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Art Cafe",
+    "website": "https://thehomestoresng.com/art-cafe/",
+    "wikidata": "Q109354107"
+  }
+},
+{
+  "type": "way",
+  "id": 929247756,
+  "center": {
+    "lat": 6.5588191,
+    "lon": 3.3709179
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Pedigree Lounge"
+  }
+},
+{
+  "type": "way",
+  "id": 996863575,
+  "center": {
+    "lat": 6.4475298,
+    "lon": 3.4574966
+  },
+  "tags": {
+    "addr:city": "LEKKI",
+    "addr:housenumber": "3",
+    "addr:postcode": "106104",
+    "addr:street": "Ogbunike Street",
+    "amenity": "bar",
+    "building": "yes",
+    "name": "MEDUSA LAGOS",
+    "opening_hours": "Tu-Su 12:00-04:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1002110435,
+  "center": {
+    "lat": 6.4277247,
+    "lon": 3.4373037
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "breakfast;bread;french",
+    "name": "La Brioche",
+    "website": "http://www.labriocheng.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1010161637,
+  "center": {
+    "lat": 6.4601862,
+    "lon": 3.4277713
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "15",
+    "addr:street": "Oba Adeyinka Oyekan Avenue",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "burger;pizza;coffee_shop;american;italian;ice_cream;sandwich;seafood;fish_and_chips",
+    "name": "The Greenhouse Lagos",
+    "opening_hours": "Mo-Su 10:00-23:00",
+    "phone": "+2347005555550",
+    "website": "https://thegreenhouse.ng/"
+  }
+},
+{
+  "type": "way",
+  "id": 1088946157,
+  "center": {
+    "lat": 6.6693838,
+    "lon": 3.6715355
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "retail",
+    "name": "Iya Adura"
+  }
+},
+{
+  "type": "way",
+  "id": 1239810331,
+  "center": {
+    "lat": 6.4259972,
+    "lon": 3.4131997
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "24",
+    "addr:postcode": "101241",
+    "addr:street": "Idejo Street",
+    "amenity": "cafe",
+    "building": "commercial",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "33",
+    "opening_hours": "24/7",
+    "outdoor_seating": "no",
+    "phone": "+2349090007771",
+    "website": "https://booze.ng"
+  }
+},
+{
+  "type": "way",
+  "id": 1245818419,
+  "center": {
+    "lat": 6.5768313,
+    "lon": 3.3561843
+  },
+  "tags": {
+    "addr:city": "Lagos",
+    "addr:housenumber": "45c",
+    "addr:postcode": "100271",
+    "addr:street": "Sobo Arobiodu Street",
+    "alt_name": "Hua Han Garden",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "korean;chinese",
+    "name": "Hua Han",
+    "name:en": "Hua Han Korean Restaurant",
+    "name:ko": "화한식당",
+    "name:zh-Hans": "华韩餐厅",
+    "name:zh-Hant": "華韓餐廳",
+    "name:zh-Latn-pinyin": "huá hán cāntīng",
+    "phone": "+234 909 867 7777",
+    "source": "microsoft/BuildingFootprints"
+  }
+},
+{
+  "type": "way",
+  "id": 1253396670,
+  "center": {
+    "lat": 6.4375190,
+    "lon": 3.4848215
+  },
+  "tags": {
+    "addr:city": "Lekki",
+    "addr:postcode": "106104",
+    "addr:street": "Primewaterview Gardens II",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "building": "commercial_block",
+    "cuisine": "regional;chicken;fish_and_chips;barbecue;fish;soup;fries;african;grill;seafood",
+    "delivery": "yes",
+    "description": "The Home Of Authentic Native African Food & Storytelling. LOKITO is a native African restaurant where authentic African food is made and served fresh.",
+    "diet:chicken": "yes",
+    "diet:fish": "yes",
+    "diet:healthy": "yes",
+    "diet:local": "yes",
+    "diet:meat": "yes",
+    "diet:pescetarian": "yes",
+    "diet:plant-based": "yes",
+    "name": "Lokito Restaurant",
+    "opening_hours": "Tu-Su 12-12",
+    "phone": "+2349070949514",
+    "reservation": "yes",
+    "smoking": "isolated",
+    "takeaway": "yes",
+    "website:menu": "https://lokitofoods.tas.ink"
+  }
+},
+{
+  "type": "way",
+  "id": 1273388840,
+  "center": {
+    "lat": 6.4304183,
+    "lon": 3.4777036
+  },
+  "tags": {
+    "addr:city": "Lekki, Lagos",
+    "addr:postcode": "105102",
+    "addr:street": "Plot 7 QMB Builders road off elf bustop Ikate Elegushi",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "OMS House",
+    "opening_hours": "Mo-Su 12:00-03:00",
+    "phone": "0806 287 4382",
+    "website": "https://desectorpub.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1354893132,
+  "center": {
+    "lat": 6.4851239,
+    "lon": 3.8731707
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "convention hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1373912034,
+  "center": {
+    "lat": 6.4454377,
+    "lon": 3.4176431
+  },
+  "tags": {
+    "addr:city": "Lagos Island",
+    "addr:housename": "Syrian Club",
+    "addr:street": "Ribadu Road",
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Syrian Club"
+  }
+},
+{
+  "type": "way",
+  "id": 1475512199,
+  "center": {
+    "lat": 6.4471725,
+    "lon": 3.4045420
+  },
+  "tags": {
+    "addr:housenumber": "10",
+    "addr:street": "Berkley Street",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "building": "shed",
+    "name": "Balo's Place",
+    "outdoor_seating": "yes",
+    "smoking": "yes"
+  }
+}
+
+  ]
+}

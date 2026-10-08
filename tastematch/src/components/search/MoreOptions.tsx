@@ -15,6 +15,7 @@ interface Props {
   onRadiusChange?: (radius: number | null) => void;
   diversificationLambda?: number;
   onDiversificationChange?: (val: number) => void;
+  caps?: { hasRatings: boolean; hasPrices: boolean; hasBooking: boolean };
 }
 
 export default function MoreOptions({
@@ -30,6 +31,7 @@ export default function MoreOptions({
   onRadiusChange,
   diversificationLambda = 0.85,
   onDiversificationChange,
+  caps = { hasRatings: true, hasPrices: true, hasBooking: true },
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -87,6 +89,7 @@ export default function MoreOptions({
           {/* Service toggles */}
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <label
+              title={!caps.hasBooking ? "Table booking data isn't available for this city" : undefined}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -94,14 +97,16 @@ export default function MoreOptions({
                 fontSize: 13,
                 fontFamily: 'Inter, sans-serif',
                 color: 'var(--text)',
-                cursor: 'pointer',
+                cursor: !caps.hasBooking ? 'not-allowed' : 'pointer',
+                opacity: !caps.hasBooking ? 0.5 : 1,
               }}
             >
               <input
                 type="checkbox"
                 checked={needsTableBooking}
                 onChange={e => onTableBookingChange(e.target.checked)}
-                style={{ accentColor: 'var(--accent)', width: 16, height: 16 }}
+                disabled={!caps.hasBooking}
+                style={{ accentColor: 'var(--accent)', width: 16, height: 16, cursor: !caps.hasBooking ? 'not-allowed' : 'pointer' }}
               />
               <Utensils size={15} strokeWidth={1.5} color="var(--text-muted)" />
               <span>Needs table booking</span>
@@ -282,16 +287,16 @@ export default function MoreOptions({
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
               {[
-                { key: 'rating' as const, label: 'Rating' },
-                { key: 'cuisineMatch' as const, label: 'Cuisine Match' },
-                { key: 'popularity' as const, label: 'Popularity' },
-                { key: 'cost' as const, label: 'Cost (Cheaper)' },
+                { key: 'rating' as const, label: 'Rating', disabled: !caps.hasRatings, tooltip: "Rating data isn't available for this city" },
+                { key: 'cuisineMatch' as const, label: 'Cuisine Match', disabled: false },
+                { key: 'popularity' as const, label: 'Popularity', disabled: !caps.hasRatings, tooltip: "Popularity data isn't available for this city" },
+                { key: 'cost' as const, label: 'Cost (Cheaper)', disabled: !caps.hasPrices, tooltip: "Price data isn't available for this city" },
               ].map(s => (
-                <div key={s.key} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: 'var(--text-muted)' }}>
+                <div key={s.key} style={{ display: 'flex', flexDirection: 'column', gap: 4 }} title={s.disabled ? s.tooltip : undefined}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: s.disabled ? 'var(--text-muted)' : 'var(--text-muted)', opacity: s.disabled ? 0.5 : 1 }}>
                     <span>{s.label}</span>
-                    <span style={{ fontVariantNumeric: 'tabular-nums', color: 'var(--text)' }}>
-                      {weights[s.key]}
+                    <span style={{ fontVariantNumeric: 'tabular-nums', color: s.disabled ? 'var(--text-muted)' : 'var(--text)' }}>
+                      {s.disabled ? '-' : weights[s.key]}
                     </span>
                   </div>
                   <input
@@ -300,7 +305,14 @@ export default function MoreOptions({
                     max={100}
                     value={weights[s.key]}
                     onChange={e => handleSliderChange(s.key, Number(e.target.value))}
-                    style={{ width: '100%', accentColor: 'var(--accent)', height: 4 }}
+                    disabled={s.disabled}
+                    style={{ 
+                      width: '100%', 
+                      accentColor: 'var(--accent)', 
+                      height: 4, 
+                      opacity: s.disabled ? 0.5 : 1,
+                      cursor: s.disabled ? 'not-allowed' : 'pointer'
+                    }}
                   />
                 </div>
               ))}

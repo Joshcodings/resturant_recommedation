@@ -60,9 +60,9 @@ export default function RestaurantCard({
   const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
   const costInfo = formatDual(r.average_cost_for_two, r.currency);
 
-  const tierTooltip = `${tier.name}: ${costInfo.display} for two in ${r.country}${
+  const tierTooltip = r.hasPrice ? `${tier.name}: ${costInfo.display} for two in ${r.country}${
     costInfo.listed ? ` (${costInfo.listed})` : ''
-  }`;
+  }` : 'Price unavailable';
 
   return (
     <article
@@ -114,6 +114,24 @@ export default function RestaurantCard({
           {emoji}
         </div>
         <div style={{ flex: 1 }} />
+        {r.data_source === 'OpenStreetMap' && (
+          <span
+            style={{
+              padding: '2px 6px',
+              borderRadius: 4,
+              fontSize: 10,
+              fontWeight: 600,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-muted)',
+              fontFamily: 'Inter, sans-serif',
+              marginRight: 8,
+            }}
+            title="Data from OpenStreetMap"
+          >
+            OSM
+          </span>
+        )}
         <span
           style={{
             fontFamily: "'Space Grotesk', system-ui, sans-serif",
@@ -172,7 +190,7 @@ export default function RestaurantCard({
             fontFamily: 'Inter, system-ui, sans-serif',
           }}
         >
-          {r.locality} · {r.city}
+          {r.locality || r.city} {r.locality ? `· ${r.city}` : ''}
         </p>
       </div>
 
@@ -223,50 +241,54 @@ export default function RestaurantCard({
             className="count-up"
             style={{
               fontFamily: "'Space Grotesk', system-ui, sans-serif",
-              fontSize: 28,
+              fontSize: r.hasRating ? 28 : 16,
               fontWeight: 600,
-              lineHeight: '34px',
-              color: 'var(--text)',
+              lineHeight: r.hasRating ? '34px' : '34px',
+              color: r.hasRating ? 'var(--text)' : 'var(--text-muted)',
               fontVariantNumeric: 'tabular-nums',
             }}
           >
-            {r.aggregate_rating.toFixed(1)}
+            {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}
           </div>
-          <RatingBar value={r.aggregate_rating} />
+          {r.hasRating && <RatingBar value={r.aggregate_rating!} />}
         </div>
 
         {/* Votes */}
         <div style={{ paddingTop: 6, minWidth: 0 }}>
-          <div
-            style={{
-              fontSize: 14,
-              color: 'var(--text-muted)',
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontVariantNumeric: 'tabular-nums',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            {formatVotes(r.votes)} votes
-          </div>
-          {isFewVotes(r.votes) && (
-            <span
-              style={{
-                display: 'inline-block',
-                marginTop: 2,
-                padding: '0 6px',
-                height: 18,
-                lineHeight: '18px',
-                border: '1px solid var(--border)',
-                borderRadius: 999,
-                fontSize: 10,
-                color: 'var(--text-muted)',
-                fontFamily: 'Inter, system-ui, sans-serif',
-              }}
-            >
-              few votes
-            </span>
+          {r.hasRating && (
+            <>
+              <div
+                style={{
+                  fontSize: 14,
+                  color: 'var(--text-muted)',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontVariantNumeric: 'tabular-nums',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                {formatVotes(r.votes)} votes
+              </div>
+              {isFewVotes(r.votes) && (
+                <span
+                  style={{
+                    display: 'inline-block',
+                    marginTop: 2,
+                    padding: '0 6px',
+                    height: 18,
+                    lineHeight: '18px',
+                    border: '1px solid var(--border)',
+                    borderRadius: 999,
+                    fontSize: 10,
+                    color: 'var(--text-muted)',
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                  }}
+                >
+                  few votes
+                </span>
+              )}
+            </>
           )}
         </div>
 

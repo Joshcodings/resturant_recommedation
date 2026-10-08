@@ -28,7 +28,7 @@ function mkR(overrides: Partial<RestaurantParsed> = {}): RestaurantParsed {
     latitude:           28.6,
     longitude:          77.2,
     cuisineList:        ['Continental'],
-    hasCoords:          true,
+    hasCoords: true, hasRating: true, hasPrice: true,
     ...overrides,
   };
 }
@@ -81,7 +81,7 @@ describe('Stage a — exact match', () => {
     const data = makeTestCity(extras);
     const result = recommend(data, { ...BASE_QUERY, cuisines: ['Italian'] });
 
-    const ratings = result.qualifyingPool.slice(0, 3).map(r => r.weighted_rating);
+    const ratings = result.qualifyingPool.slice(0, 3).map(r => r.weighted_rating!);
     expect(ratings[0]).toBeGreaterThanOrEqual(ratings[1]);
     expect(ratings[1]).toBeGreaterThanOrEqual(ratings[2]);
   });

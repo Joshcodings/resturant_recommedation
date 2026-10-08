@@ -34,8 +34,10 @@ export default function SearchBar({
   onCuisinesChange,
   onFind,
 }: Props) {
-  const { data, countryCityIndex, getCuisines } = useRestaurants();
+  const { data, countryCityIndex, getCuisines, getCityCapabilities } = useRestaurants();
   const { selectedCurrency, ratesState } = useCurrency();
+
+  const caps = getCityCapabilities(selectedCity);
 
   const priceOptions = useMemo(() => {
     const opts: Array<{
@@ -289,9 +291,9 @@ export default function SearchBar({
             return (
               <button
                 key={opt.label}
-                disabled={isPriceOverriddenByPreset}
+                disabled={isPriceOverriddenByPreset || !caps.hasPrices}
                 onClick={() => onPriceChange(opt.value)}
-                title={opt.tooltip}
+                title={!caps.hasPrices ? "Price data isn't available for this city" : opt.tooltip}
                 aria-label={opt.tooltip}
                 style={{
                   flex: '1 1 auto',
@@ -303,8 +305,8 @@ export default function SearchBar({
                   color: isActive ? 'var(--accent-ink)' : 'var(--text)',
                   fontSize: 12,
                   fontWeight: isActive ? 600 : 500,
-                  cursor: isPriceOverriddenByPreset ? 'not-allowed' : 'pointer',
-                  opacity: isPriceOverriddenByPreset ? 0.6 : 1,
+                  cursor: (isPriceOverriddenByPreset || !caps.hasPrices) ? 'not-allowed' : 'pointer',
+                  opacity: (isPriceOverriddenByPreset || !caps.hasPrices) ? 0.6 : 1,
                   whiteSpace: 'nowrap',
                 }}
               >

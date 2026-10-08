@@ -207,7 +207,11 @@ function Footer({ onOpenAbout }: { onOpenAbout: () => void }) {
           </div>
           <p style={{ margin: 0, fontSize: 12 }}>
             Data source: Public Zomato dataset (Kaggle). This is an older snapshot with no explicit date; restaurants may have closed.
-            Approx. 90% of records are from the Delhi NCR region. Unrated restaurants are excluded.
+            Approx. 90% of records are from the Delhi NCR region.
+          </p>
+          <p style={{ margin: '6px 0 0', fontSize: 11 }}>
+            Restaurant location data © OpenStreetMap contributors, available under the Open Database License (ODbL).
+            Nigeria data retrieved 2026-10-07. OpenStreetMap is community-mapped, so many places are missing or out of date.
           </p>
           <p style={{ margin: '6px 0 0', fontSize: 11 }}>
             Prices come from an older dataset snapshot and are converted at today's indicative exchange rates, so treat amounts as rough estimates. Current menu prices are likely higher. Rates are not for financial use.{' '}

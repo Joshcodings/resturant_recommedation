@@ -1,0 +1,59 @@
+{
+  "capturedAt": "2026-10-07T16:56:29+01:00",
+  "description": "Stage 0 regression fixture. Captured from restaurants.json (7403 records) by scripts/capture_regression.py before any Nigeria code changes. These IDs and scores must remain unchanged after null-safety and Nigeria work.",
+  "India/New Delhi (price 2, North Indian + Chinese, table booking)": {
+    "top10_ids": [18161577, 18430901, 4227, 6144, 18332869, 310592, 307571, 309865, 1060, 18398618],
+    "top10_names": [
+      "Spezia Bistro",
+      "Ghar Bistro Cafe",
+      "Chill'm Bar & Cafe",
+      "Indus Flavour",
+      "London Street Kitchen",
+      "The Vintage Avenue",
+      "Wood Box Cafe",
+      "FrenZone",
+      "Flaming Chilli Pepper",
+      "The Masala Trail"
+    ],
+    "top10_scores": [4.792, 4.628, 4.571, 4.572, 4.488, 4.38, 4.324, 4.311, 4.225, 4.065],
+    "stage": "exact_all",
+    "notice": null,
+    "cityRestaurantCount": 4048,
+    "isLimitedData": false
+  },
+  "USA/Orlando (price 4, Italian)": {
+    "top10_ids": [17059541, 17061205, 17059012, 17058534, 17064266, 17060869, 17057925, 17057397, 17061231, 17060516],
+    "top10_names": [
+      "Maggiano's Little Italy",
+      "Yellow Dog Eats",
+      "Hollerbach's Willow Tree Caf",
+      "Earl of Sandwich",
+      "Hawkers Asian Street Fare",
+      "Texas de Brazil",
+      "Caf Tu Tu Tango",
+      "'Ohana",
+      "The Ravenous Pig",
+      "Seasons 52 Fresh Grill"
+    ],
+    "top10_scores": [4.88, 4.867, 4.778, 4.676, 4.579, 4.588, 4.579, 4.481, 4.391, 4.389],
+    "stage": "relaxed_price_1_cuisine_ignored",
+    "notice": "No exact cuisine match. Showing top-rated restaurants within price range \u00b11 (cuisine filter relaxed).",
+    "cityRestaurantCount": 20,
+    "isLimitedData": true
+  },
+  "India/Lucknow (price 3, Continental)": {
+    "top10_ids": [801690, 800326, 800273, 801693, 800237],
+    "top10_names": [
+      "Mocha",
+      "Royal Sky",
+      "The Urban Terrace",
+      "Bar Bar",
+      "Percussion"
+    ],
+    "top10_scores": [4.999, 4.648, 4.314, 4.249, 4.169],
+    "stage": "exact_all",
+    "notice": null,
+    "cityRestaurantCount": 21,
+    "isLimitedData": true
+  }
+}

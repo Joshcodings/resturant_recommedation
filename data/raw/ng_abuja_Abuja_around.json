@@ -1,0 +1,1769 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T20:26:41Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 31450344,
+  "lat": 9.0472689,
+  "lon": 7.5362034,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fish"
+  }
+},
+{
+  "type": "node",
+  "id": 560983277,
+  "lat": 9.0405615,
+  "lon": 7.4654403,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "nigerian",
+    "name": "Bukkateen"
+  }
+},
+{
+  "type": "node",
+  "id": 889008138,
+  "lat": 9.0619204,
+  "lon": 7.4176986,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 2216184200,
+  "lat": 9.0723109,
+  "lon": 7.4908125,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Reno's"
+  }
+},
+{
+  "type": "node",
+  "id": 2941745556,
+  "lat": 9.1064084,
+  "lon": 7.4842151,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Panama Balangu"
+  }
+},
+{
+  "type": "node",
+  "id": 4219094797,
+  "lat": 9.0523088,
+  "lon": 7.4859620,
+  "tags": {
+    "addr:housenumber": "252A",
+    "addr:street": "Herbert Macaulay Way",
+    "amenity": "restaurant",
+    "cuisine": "international",
+    "name": "Panache",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "phone": "+23496233313"
+  }
+},
+{
+  "type": "node",
+  "id": 4234317389,
+  "lat": 9.0723578,
+  "lon": 7.4890086,
+  "tags": {
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "amenity": "fast_food",
+    "name": "Pizzarama"
+  }
+},
+{
+  "type": "node",
+  "id": 4235488038,
+  "lat": 9.0617923,
+  "lon": 7.4180455,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Southern Fried Chicken"
+  }
+},
+{
+  "type": "node",
+  "id": 4599721500,
+  "lat": 9.0764448,
+  "lon": 7.4249562,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Kafeteria"
+  }
+},
+{
+  "type": "node",
+  "id": 4599721501,
+  "lat": 9.0767320,
+  "lon": 7.4251792,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Sumptuous"
+  }
+},
+{
+  "type": "node",
+  "id": 4637364692,
+  "lat": 9.1021327,
+  "lon": 7.4805193,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "traffic"
+  }
+},
+{
+  "type": "node",
+  "id": 4637395590,
+  "lat": 9.0699244,
+  "lon": 7.4896341,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "river plate secret garden",
+    "name:en": "river plate secret garden"
+  }
+},
+{
+  "type": "node",
+  "id": 4760503230,
+  "lat": 9.0558721,
+  "lon": 7.4766597,
+  "tags": {
+    "amenity": "cafe",
+    "name": "under the mango tree",
+    "name:en": "under the mango tree"
+  }
+},
+{
+  "type": "node",
+  "id": 5226030821,
+  "lat": 9.0760557,
+  "lon": 7.4733216,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "poisson"
+  }
+},
+{
+  "type": "node",
+  "id": 5234383121,
+  "lat": 9.0143064,
+  "lon": 7.6355122,
+  "tags": {
+    "amenity": "bar",
+    "name": "Tuturu wine shops",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 5241268222,
+  "lat": 9.0144933,
+  "lon": 7.6358483,
+  "tags": {
+    "amenity": "bar",
+    "name": "NNPC Joint"
+  }
+},
+{
+  "type": "node",
+  "id": 5342211521,
+  "lat": 9.0210915,
+  "lon": 7.6511596,
+  "tags": {
+    "amenity": "bar",
+    "name": "New Nyanya Palmwine Joint"
+  }
+},
+{
+  "type": "node",
+  "id": 5448332307,
+  "lat": 9.0746290,
+  "lon": 7.4946321,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Oriental Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5448332308,
+  "lat": 9.0746973,
+  "lon": 7.4950061,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Zuma Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 5448332309,
+  "lat": 9.0742998,
+  "lon": 7.4946972,
+  "tags": {
+    "amenity": "bar",
+    "name": "Capital Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5448332310,
+  "lat": 9.0738642,
+  "lon": 7.4944187,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fulani Bar & Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 5448332311,
+  "lat": 9.0744243,
+  "lon": 7.4943882,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Suya Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 5448933326,
+  "lat": 8.9787650,
+  "lon": 7.5621450,
+  "tags": {
+    "amenity": "bar",
+    "name": "Don Steppers"
+  }
+},
+{
+  "type": "node",
+  "id": 5622679121,
+  "lat": 9.0733522,
+  "lon": 7.4712319,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "112",
+    "addr:street": "Aminu Kano Crescent",
+    "alt_name": "Kentucky Fried Chicken",
+    "alt_name:en": "KFC Aminu Kano",
+    "amenity": "fast_food",
+    "branch": "Wuse 2",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5738793043,
+  "lat": 9.0745705,
+  "lon": 7.4953794,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Plano Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 6013989885,
+  "lat": 9.0847170,
+  "lon": 7.4772564,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "JD Park"
+  }
+},
+{
+  "type": "node",
+  "id": 6023248896,
+  "lat": 9.0489350,
+  "lon": 7.5059823,
+  "tags": {
+    "amenity": "bar",
+    "name": "Grilled fish from CI",
+    "name:fr": "Poisson grillé"
+  }
+},
+{
+  "type": "node",
+  "id": 6068305688,
+  "lat": 9.0744619,
+  "lon": 7.4749187,
+  "tags": {
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "amenity": "bar",
+    "name": "Bature Brewery",
+    "opening_hours": "Tu-Fr 17:00-23:00; Sa-Su 15:00-00:00",
+    "website": "https://www.baturebrewery.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 6068313291,
+  "lat": 9.0846933,
+  "lon": 7.4777618,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "name": "Wazobia Restaurant and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 6226970887,
+  "lat": 9.0854512,
+  "lon": 7.4713240,
+  "tags": {
+    "amenity": "bar",
+    "name": "Famous potatoes"
+  }
+},
+{
+  "type": "node",
+  "id": 6237969385,
+  "lat": 9.0638973,
+  "lon": 7.4292480,
+  "tags": {
+    "amenity": "bar",
+    "name": "The penthouse, kirmu plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 6524137485,
+  "lat": 9.0988484,
+  "lon": 7.4901994,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "indian;lebanese",
+    "name": "Cilantro"
+  }
+},
+{
+  "type": "node",
+  "id": 6589985501,
+  "lat": 9.1181087,
+  "lon": 7.3949243,
+  "tags": {
+    "addr:city": "Gwarinpa",
+    "addr:housenumber": "Plot 505B",
+    "addr:street": "46 Crescent",
+    "amenity": "cafe",
+    "name": "NIBCARD Games Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 6700203985,
+  "lat": 9.0784748,
+  "lon": 7.4789499,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "City Parc Bush Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 6864045530,
+  "lat": 9.0797218,
+  "lon": 7.5004808,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "31",
+    "addr:postcode": "900271",
+    "addr:street": "Gana Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "chinese;indian;regional;international;african;nigerian",
+    "internet_access": "yes",
+    "name": "Indigo Restaurant and Lounge",
+    "opening_hours": "Mo-Su 10:00-02:00",
+    "outdoor_seating": "yes",
+    "phone": "+234 805 7755 755",
+    "reservation": "yes",
+    "website": "https://instagram.com/indigorestaurantabuja"
+  }
+},
+{
+  "type": "node",
+  "id": 8063795190,
+  "lat": 9.1006927,
+  "lon": 7.4058610,
+  "tags": {
+    "amenity": "bar",
+    "name": "Happy Jatau"
+  }
+},
+{
+  "type": "node",
+  "id": 8196228179,
+  "lat": 9.0551174,
+  "lon": 7.3852100,
+  "tags": {
+    "addr:city": "Abuja Nigeria",
+    "addr:housenumber": "Shop 4",
+    "addr:postcode": "900102",
+    "addr:street": "Grace Court Estate, IDU Impresit, Karmo",
+    "amenity": "restaurant",
+    "cuisine": "pizza;regional;burger;sandwich;chicken;fish_and_chips;steak_house;seafood;international",
+    "delivery": "yes",
+    "diet:dairy_free": "yes",
+    "diet:diabetes": "yes",
+    "diet:egg_free": "yes",
+    "diet:fruitarian": "yes",
+    "diet:meat": "yes",
+    "diet:sugar_free": "yes",
+    "diet:vegetarian": "yes",
+    "email": "Bitesandgrills@gmail.com",
+    "internet_access": "wlan",
+    "name": "Bites & Grills",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "outdoor_seating": "yes",
+    "phone": "+234 81 728 924 07",
+    "reservation": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8196228180,
+  "lat": 9.0551401,
+  "lon": 7.3855293,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Bites & Grils"
+  }
+},
+{
+  "type": "node",
+  "id": 8196228181,
+  "lat": 9.0550856,
+  "lon": 7.3852325,
+  "tags": {
+    "addr:city": "Abuja Nigeria",
+    "addr:housenumber": "Shop 4",
+    "addr:postcode": "900102",
+    "addr:street": "Grace Court Estate, IDU Impresit, Karmo",
+    "amenity": "fast_food",
+    "cuisine": "pizza;burger;sandwich;fish_and_chips;steak_house;international;chicken",
+    "delivery": "yes",
+    "diet:dairy_free": "yes",
+    "diet:diabetes": "yes",
+    "diet:fruitarian": "yes",
+    "diet:meat": "yes",
+    "diet:sugar_free": "yes",
+    "diet:vegetarian": "yes",
+    "drive_through": "yes",
+    "email": "Bitesandgrills@gmail.com",
+    "internet_access": "wlan",
+    "name": "Bites & Grills",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "operator": "Bites & Grills",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "phone": "+234 81 728 924 07",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8323579141,
+  "lat": 9.0746867,
+  "lon": 7.4755750,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "215",
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "amenity": "restaurant",
+    "brand": "Johnny Rockets",
+    "brand:wikidata": "Q1051593",
+    "brand:wikipedia": "en:Johnny Rockets",
+    "building": "yes",
+    "cuisine": "burger",
+    "name": "Johnny Rockets",
+    "phone": "+234 703 883 3881"
+  }
+},
+{
+  "type": "node",
+  "id": 8345910486,
+  "lat": 9.0640349,
+  "lon": 7.4586552,
+  "tags": {
+    "amenity": "restaurant",
+    "level": "1",
+    "name": "The Vue by Cilantro"
+  }
+},
+{
+  "type": "node",
+  "id": 8357551963,
+  "lat": 9.0841031,
+  "lon": 7.5007175,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "The Salad Guru"
+  }
+},
+{
+  "type": "node",
+  "id": 8367237917,
+  "lat": 9.0553547,
+  "lon": 7.4897983,
+  "tags": {
+    "amenity": "cafe",
+    "name": "My Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 8367587117,
+  "lat": 9.0550803,
+  "lon": 7.4899420,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "name": "Nkoyo"
+  }
+},
+{
+  "type": "node",
+  "id": 8367587318,
+  "lat": 9.0554094,
+  "lon": 7.4897123,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "mexican",
+    "name": "Nomis"
+  }
+},
+{
+  "type": "node",
+  "id": 8629329017,
+  "lat": 9.0745393,
+  "lon": 7.4749805,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Muzi Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 9229877615,
+  "lat": 9.0669298,
+  "lon": 7.4912250,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Nip N Nosh"
+  }
+},
+{
+  "type": "node",
+  "id": 9230172696,
+  "lat": 9.0663242,
+  "lon": 7.4941306,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "spanish;italian",
+    "name": "La Taverna"
+  }
+},
+{
+  "type": "node",
+  "id": 9310271563,
+  "lat": 9.0580816,
+  "lon": 7.4863947,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Silk Road"
+  }
+},
+{
+  "type": "node",
+  "id": 9577867314,
+  "lat": 9.0797545,
+  "lon": 7.4807955,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Grey Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 9577867315,
+  "lat": 9.0798428,
+  "lon": 7.4807481,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Today's Bukka"
+  }
+},
+{
+  "type": "node",
+  "id": 9577919533,
+  "lat": 9.0763655,
+  "lon": 7.4771756,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Beirut Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 9648481173,
+  "lat": 9.0377148,
+  "lon": 7.4804293,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "1",
+    "addr:street": "Renao street",
+    "amenity": "restaurant",
+    "cuisine": "african_delicacies;chinese;regional",
+    "name": "RENAO ABUJA",
+    "opening_hours": "Mo-Su 11:00-23:00",
+    "phone": "+2349065995603",
+    "website": "https://renaoabuja.com"
+  }
+},
+{
+  "type": "node",
+  "id": 9968158689,
+  "lat": 9.0750583,
+  "lon": 7.4640460,
+  "tags": {
+    "amenity": "cafe",
+    "name": "The Cube Café"
+  }
+},
+{
+  "type": "node",
+  "id": 9968183938,
+  "lat": 9.0697924,
+  "lon": 7.4786601,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "2",
+    "addr:street": "Atakpame Street",
+    "alt_name": "Galaxy Pizza Wuse 2",
+    "amenity": "restaurant",
+    "cuisine": "pizza",
+    "name": "Galaxy Pizza",
+    "phone": "+234 811 276 0422",
+    "website": "https://galaxypizza.com.ng/"
+  }
+},
+{
+  "type": "node",
+  "id": 10225142566,
+  "lat": 9.1398809,
+  "lon": 7.3819358,
+  "tags": {
+    "amenity": "bar",
+    "name": "SDP  Snooker spot (kriz Lounge)"
+  }
+},
+{
+  "type": "node",
+  "id": 10992401494,
+  "lat": 9.0793674,
+  "lon": 7.4768429,
+  "tags": {
+    "addr:city": "abuja",
+    "addr:housenumber": "55",
+    "addr:postcode": "900288",
+    "addr:street": "Kumasi Crescent",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "regional;burger;coffee_shop",
+    "name": "TOPPFCT",
+    "opening_hours": "24/7",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "phone": "+2348071419423"
+  }
+},
+{
+  "type": "node",
+  "id": 11049395905,
+  "lat": 9.0762928,
+  "lon": 7.4605633,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Spice Platter"
+  }
+},
+{
+  "type": "node",
+  "id": 11169503180,
+  "lat": 9.0790837,
+  "lon": 7.5004215,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "33",
+    "addr:postcode": "900271",
+    "addr:street": "Gana Street",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "brewery": "yes",
+    "min_age": "18",
+    "name": "PURO",
+    "opening_hours": "24/7",
+    "phone": "0813 109 6966",
+    "smoking": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11379921885,
+  "lat": 9.0692464,
+  "lon": 7.4888043,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "10",
+    "addr:postcode": "900288",
+    "addr:street": "Kolda Street",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "min_age": "18",
+    "name": "SPEAKEASY_NG",
+    "opening_hours": "thursday - SUNDAY"
+  }
+},
+{
+  "type": "node",
+  "id": 11478728169,
+  "lat": 9.0722345,
+  "lon": 7.4667902,
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:street": "Lingu Crescent",
+    "air_conditioning": "yes",
+    "alt_name": "The Charcoal Grill Restaurant & Coffee Lounge",
+    "amenity": "restaurant",
+    "cuisine": "african;breakfast;burger;grill",
+    "email": "thecharcoalgrill@hotmail.co.uk",
+    "level": "1",
+    "name": "The Charcoal Grill",
+    "opening_hours": "Mo-Sa 08:00-23:00; Su 10:00-23:00",
+    "phone": "+234 811 131 1177;+234 818 111 6161",
+    "toilets:access": "customers",
+    "website": "https://www.charcoalgrillabuja.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11494714869,
+  "lat": 9.0522785,
+  "lon": 7.4758278,
+  "tags": {
+    "addr:street": "Olusegun Obasajo Way",
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:website": "www.kfc.com",
+    "brand:wikidata": "Q524757",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11519115769,
+  "lat": 9.0763109,
+  "lon": 7.4870931,
+  "tags": {
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "amenity": "restaurant",
+    "cuisine": "american;asian;burger;cake;chicken;chinese;coffee_shop",
+    "name": "Morr Food",
+    "opening_hours": "24/7",
+    "phone": "07043800000"
+  }
+},
+{
+  "type": "node",
+  "id": 11533207380,
+  "lat": 9.0782726,
+  "lon": 7.5005914,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "39",
+    "addr:postcode": "900271",
+    "addr:street": "Gana Street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "african_dishes",
+    "delivery": "yes",
+    "email": "bandgbygq@gmail.com",
+    "name": "BULL AND GATE",
+    "opening_hours": "Mo-Su 09:00-03:00",
+    "phone": "+2348063394414",
+    "reservation": "yes",
+    "smoking": "separated",
+    "website": "https://linktr.ee/bullandgate"
+  }
+},
+{
+  "type": "node",
+  "id": 11581828753,
+  "lat": 9.0530584,
+  "lon": 7.4793539,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:street": "Mohammadu Buhari Way",
+    "amenity": "restaurant",
+    "cuisine": "sandwich;burger;african",
+    "level": "1",
+    "name": "Le Petit Square",
+    "opening_hours": "Mo-Sa 08:30-20:30"
+  }
+},
+{
+  "type": "node",
+  "id": 11659559413,
+  "lat": 8.9910211,
+  "lon": 7.3938771,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "cuisine": "pizza",
+    "indoor_seating": "yes",
+    "name": "Domino's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11809703185,
+  "lat": 9.0004052,
+  "lon": 7.4727889,
+  "tags": {
+    "amenity": "restaurant",
+    "level": "1",
+    "name": "Kings Delicacy Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 11922113362,
+  "lat": 9.0165838,
+  "lon": 7.4105419,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "cuisine": "chicken",
+    "level": "0",
+    "name": "Chicken Republic",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11922113363,
+  "lat": 9.0164081,
+  "lon": 7.4106259,
+  "tags": {
+    "amenity": "restaurant",
+    "brand": "Pizza Hut",
+    "cuisine": "pizza",
+    "level": "0",
+    "name": "Pizza Hut",
+    "opening_hours": "Mo-Th 10:00-22:00; Fr-Su 10:00-23:00; PH 09:30-12:00 open",
+    "takeaway": "yes",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 12128497098,
+  "lat": 8.9679514,
+  "lon": 7.4394939,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "barbecue;burger;mediterranean;sandwich",
+    "name": "Kammies Kitchen",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "takeaway": "only"
+  }
+},
+{
+  "type": "node",
+  "id": 12177387877,
+  "lat": 9.0708336,
+  "lon": 7.4834267,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "63",
+    "addr:postcode": "900288",
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "african",
+    "delivery": "yes",
+    "email": "eneyesuccess@gmail.com",
+    "name": "Bills Restaurant and Rooftop Lounge",
+    "opening_hours": "24/7",
+    "phone": "+2349038377630",
+    "website": "https://billsrestaurant.africa.restaurant/"
+  }
+},
+{
+  "type": "node",
+  "id": 12208663180,
+  "lat": 8.9906059,
+  "lon": 7.3937966,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "delivery": "yes",
+    "indoor_seating": "yes",
+    "level": "0",
+    "name": "Dodo Pizza",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12208663181,
+  "lat": 8.9906433,
+  "lon": 7.3936409,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Krispy Kreme",
+    "brand:wikidata": "Q1192805",
+    "cuisine": "donut",
+    "indoor_seating": "yes",
+    "name": "Krispy Kreme",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12391461556,
+  "lat": 9.0724391,
+  "lon": 7.4756151,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "2",
+    "addr:postcode": "900288",
+    "addr:street": "sakono street",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "african",
+    "email": "Checkpointabuja@gmail.com",
+    "name": "Checkpoint Restaurant and Lounge",
+    "opening_hours": "Mo-Su 12:00-02:00",
+    "phone": "+2349165555055"
+  }
+},
+{
+  "type": "node",
+  "id": 12467012300,
+  "lat": 9.0806004,
+  "lon": 7.4762028,
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "3",
+    "addr:street": "Eldoret Close",
+    "amenity": "restaurant",
+    "bar": "yes",
+    "cuisine": "regional;chicken;fish;african",
+    "description": "Restaurant & Pool Bar",
+    "name": "Breeze",
+    "opening_hours": "Mo-Fr 12:00-24:00; Sa,Su 12:00-01:00",
+    "outdoor_seating": "yes",
+    "phone": "07047044915",
+    "website": "https://www.instagram.com/breeze.abuja/"
+  }
+},
+{
+  "type": "node",
+  "id": 12473917821,
+  "lat": 8.9923466,
+  "lon": 7.4266223,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "ANGEL'S HOME"
+  }
+},
+{
+  "type": "node",
+  "id": 12588281873,
+  "lat": 9.0908963,
+  "lon": 7.4888310,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chopsticks"
+  }
+},
+{
+  "type": "node",
+  "id": 12755619201,
+  "lat": 9.1454395,
+  "lon": 7.3441939,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "name": "IYABS PLACE",
+    "opening_hours": "Mo-Sa 08:00-20:00"
+  }
+},
+{
+  "type": "node",
+  "id": 12755620801,
+  "lat": 9.1454492,
+  "lon": 7.3441895,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "IYABS PLACE",
+    "opening_hours": "Mo-Sa 09:00-21:00"
+  }
+},
+{
+  "type": "node",
+  "id": 12776367223,
+  "lat": 9.0689858,
+  "lon": 7.4817273,
+  "tags": {
+    "addr:city": "ABUJA",
+    "addr:housenumber": "2A",
+    "addr:postcode": "900288",
+    "addr:street": "Bouar Street, off Bangui Street.",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "email": "evrorestaurant2@gmail.com",
+    "min_age": "18",
+    "mobile": "+2348148400074",
+    "name": "Evro Restaurant & Lounge",
+    "opening_hours": "Mo-Su 08:00-05:00"
+  }
+},
+{
+  "type": "node",
+  "id": 12984921096,
+  "lat": 9.0770032,
+  "lon": 7.4257395,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12984921098,
+  "lat": 9.0765654,
+  "lon": 7.4252700,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12984986404,
+  "lat": 9.0765919,
+  "lon": 7.4254334,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Burger King",
+    "brand:wikidata": "Q177054",
+    "cuisine": "burger",
+    "name": "Burger King",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13254385856,
+  "lat": 8.9970546,
+  "lon": 7.4693116,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Calabar Pot"
+  }
+},
+{
+  "type": "node",
+  "id": 13977980361,
+  "lat": 9.0318534,
+  "lon": 7.5888247,
+  "tags": {
+    "amenity": "bar",
+    "check_date": "2026-06-30",
+    "name": "Bauchi Palace Resort"
+  }
+},
+{
+  "type": "node",
+  "id": 13978285031,
+  "lat": 9.0443546,
+  "lon": 7.5885242,
+  "tags": {
+    "amenity": "restaurant",
+    "check_date": "2026-06-30",
+    "name": "Mom's Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 13987544720,
+  "lat": 8.9548291,
+  "lon": 7.6846586,
+  "tags": {
+    "amenity": "bar",
+    "check_date": "2026-07-04",
+    "name": "Free Town Garden"
+  }
+},
+{
+  "type": "node",
+  "id": 13987544722,
+  "lat": 8.9547738,
+  "lon": 7.6838419,
+  "tags": {
+    "amenity": "bar",
+    "check_date": "2026-07-04",
+    "name": "20-20 Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 14019797901,
+  "lat": 9.0522544,
+  "lon": 7.5120175,
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "Margaret Thatcher Close",
+    "amenity": "cafe",
+    "contact:instagram": "maishayicoffee",
+    "name": "MaiShayi Coffee Roasters",
+    "opening_hours": "Mo-Su 09:00-23:00"
+  }
+},
+{
+  "type": "node",
+  "id": 14020304102,
+  "lat": 9.0815972,
+  "lon": 7.4836040,
+  "tags": {
+    "addr:housenumber": "168",
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "amenity": "restaurant",
+    "contact:instagram": "havanaabuja",
+    "email": "havanaabuja@gmail.com",
+    "name": "Havana Restaurant",
+    "opening_hours": "Su-Th 12:00-23:00; Fr-Sa 12:00-01:00",
+    "website": "https://www.havanaabuja.com"
+  }
+},
+{
+  "type": "node",
+  "id": 14129261865,
+  "lat": 9.0968424,
+  "lon": 7.4804647,
+  "tags": {
+    "amenity": "restaurant",
+    "check_date": "2026-08-27",
+    "name": "Urban Village"
+  }
+},
+{
+  "type": "way",
+  "id": 176843653,
+  "center": {
+    "lat": 9.0814803,
+    "lon": 7.4767345
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "indian",
+    "name": "Wakkis",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 176919888,
+  "center": {
+    "lat": 9.0825547,
+    "lon": 7.4671686
+  },
+  "tags": {
+    "addr:housename": "Tantalizers",
+    "addr:housenumber": "33",
+    "addr:postcode": "900288",
+    "addr:street": "Aminu Kano Crescent",
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Tantilizers",
+    "source": "Bing",
+    "website": "https://tantalizersnig.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 181653526,
+  "center": {
+    "lat": 9.0687152,
+    "lon": 7.4815434
+  },
+  "tags": {
+    "addr:housenumber": "494",
+    "addr:street": "Bangui Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "regional",
+    "name": "Jevinik",
+    "phone": "+2347015863699",
+    "source": "Bing",
+    "website": "https://www.jevinik.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 219651175,
+  "center": {
+    "lat": 9.0654842,
+    "lon": 7.4733322
+  },
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:street": "Kampala Close",
+    "alt_name": "City View Restaurant Wuse",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "City View Restaurant and Grill",
+    "name:en": "City View Restaurant and Grill",
+    "source": "Bing",
+    "website": "http://cityviewrestaurantandgrill.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 220545582,
+  "center": {
+    "lat": 9.0800824,
+    "lon": 7.5000066
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Southern Fried Chicken",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 299203358,
+  "center": {
+    "lat": 9.0755313,
+    "lon": 7.4987076
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "The Pasha"
+  }
+},
+{
+  "type": "way",
+  "id": 299451021,
+  "center": {
+    "lat": 9.1025969,
+    "lon": 7.4791924
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "cuisine": "coffee_shop",
+    "name": "French Bakery"
+  }
+},
+{
+  "type": "way",
+  "id": 300348530,
+  "center": {
+    "lat": 9.0768883,
+    "lon": 7.4614082
+  },
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "5",
+    "addr:street": "Bujumbura Street",
+    "amenity": "cafe",
+    "building": "yes",
+    "cuisine": "international",
+    "name": "Salamander"
+  }
+},
+{
+  "type": "way",
+  "id": 424704775,
+  "center": {
+    "lat": 9.0811112,
+    "lon": 7.4366791
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "BluCabana"
+  }
+},
+{
+  "type": "way",
+  "id": 743690568,
+  "center": {
+    "lat": 9.0792487,
+    "lon": 7.4774870
+  },
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "49",
+    "addr:street": "Kumasi Crescent",
+    "alt_name": "L & N Kitchen",
+    "amenity": "restaurant",
+    "building": "commercial",
+    "contact:phone": "+234 704 485 4619",
+    "name": "L and N Kitchen",
+    "website": "https://www.landnkitchen.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 752629694,
+  "center": {
+    "lat": 8.9596378,
+    "lon": 7.4989396
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "level": "1",
+    "name": "Shamalinks Cuisine Restaurant & Bar"
+  }
+},
+{
+  "type": "way",
+  "id": 776646793,
+  "center": {
+    "lat": 9.0737900,
+    "lon": 7.4755074
+  },
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "1",
+    "addr:street": "Adetokunbo Ademola Crescent",
+    "alt_name": "Mandi Place & Restaurant",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Mandi",
+    "phone": "+234 905 555 1383",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 776646819,
+  "center": {
+    "lat": 9.0714475,
+    "lon": 7.4778947
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "brand:wikidata": "Q23461416",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Chicken Republic",
+    "roof:shape": "gabled",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 778635334,
+  "center": {
+    "lat": 9.0666436,
+    "lon": 7.4902190
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "italian;pizza",
+    "name": "Secret Garden",
+    "roof:shape": "pyramidal"
+  }
+},
+{
+  "type": "way",
+  "id": 881248855,
+  "center": {
+    "lat": 9.0551768,
+    "lon": 7.3853675
+  },
+  "tags": {
+    "addr:city": "Abuja Nigeria",
+    "addr:housenumber": "Shop 4",
+    "addr:postcode": "900102",
+    "addr:street": "Grace Court Estate IDU Impresit, Karmo",
+    "amenity": "restaurant",
+    "building": "residential",
+    "cuisine": "burger;pizza;chicken;sandwich;fish_and_chips;seafood;regional;chinese;steak_house",
+    "delivery": "yes",
+    "diet:dairy": "yes",
+    "diet:dairy_free": "yes",
+    "diet:egg_free": "yes",
+    "diet:gluten_free": "yes",
+    "diet:meat": "yes",
+    "diet:vegetarian": "yes",
+    "email": "Bitesandgrills@gmail.com",
+    "internet_access": "wlan",
+    "name": "Bites & Grills",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "outdoor_seating": "yes",
+    "phone": "+234 81 728 924 07",
+    "reservation": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 891293840,
+  "center": {
+    "lat": 9.0823283,
+    "lon": 7.4664772
+  },
+  "tags": {
+    "addr:housename": "DrumStix",
+    "addr:housenumber": "32",
+    "addr:postcode": "900288",
+    "addr:street": "Aminu Kano Crescent",
+    "alt_name": "Anti Ajobi",
+    "amenity": "fast_food",
+    "building": "commercial",
+    "cuisine": "chicken",
+    "name": "Drumstix",
+    "website": "http://www.drumstixnigeria.com"
+  }
+},
+{
+  "type": "way",
+  "id": 893909959,
+  "center": {
+    "lat": 9.0542329,
+    "lon": 7.5268879
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "The Pavilion"
+  }
+},
+{
+  "type": "way",
+  "id": 894564085,
+  "center": {
+    "lat": 9.0695270,
+    "lon": 7.4246702
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "indian",
+    "name": "Serendib"
+  }
+},
+{
+  "type": "way",
+  "id": 899488907,
+  "center": {
+    "lat": 9.0844715,
+    "lon": 7.5006976
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "The Cube Café",
+    "website": "https://www.facebook.com/thecubeartcafe/"
+  }
+},
+{
+  "type": "way",
+  "id": 999889096,
+  "center": {
+    "lat": 9.0657203,
+    "lon": 7.4896383
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "name": "The Junkyard Grill"
+  }
+},
+{
+  "type": "way",
+  "id": 999889100,
+  "center": {
+    "lat": 9.0622573,
+    "lon": 7.4903697
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Grills 101"
+  }
+},
+{
+  "type": "way",
+  "id": 999889102,
+  "center": {
+    "lat": 9.0783427,
+    "lon": 7.4776920
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Keje Grill"
+  }
+},
+{
+  "type": "way",
+  "id": 999921007,
+  "center": {
+    "lat": 9.0845761,
+    "lon": 7.4825522
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "thai",
+    "name": "Siam City Garden"
+  }
+},
+{
+  "type": "way",
+  "id": 1085885753,
+  "center": {
+    "lat": 9.0904886,
+    "lon": 7.4941615
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "steak_house;mexican;burger;italian",
+    "name": "Cantina",
+    "website": "https://cantinang.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1086236989,
+  "center": {
+    "lat": 9.0850293,
+    "lon": 7.4894896
+  },
+  "tags": {
+    "addr:city": "Abuja",
+    "addr:housenumber": "2787",
+    "addr:street": "Shehu Shagari Way",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "lebanese;pizza;burger",
+    "name": "New Yorker",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 1087447485,
+  "center": {
+    "lat": 9.0991003,
+    "lon": 7.4827302
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Café de Vie"
+  }
+},
+{
+  "type": "way",
+  "id": 1122738882,
+  "center": {
+    "lat": 9.0454066,
+    "lon": 7.5014889
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "chicken;local_dishes",
+    "diet:fish": "yes",
+    "diet:halal": "yes",
+    "diet:local": "yes",
+    "diet:meat": "yes",
+    "name": "Shagalinku"
+  }
+},
+{
+  "type": "way",
+  "id": 1125028499,
+  "center": {
+    "lat": 9.0274456,
+    "lon": 7.5859737
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Ojueleba"
+  }
+},
+{
+  "type": "way",
+  "id": 1207249998,
+  "center": {
+    "lat": 8.9957991,
+    "lon": 7.4361702
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Steelbox lounge"
+  }
+},
+{
+  "type": "way",
+  "id": 1207250019,
+  "center": {
+    "lat": 9.0000512,
+    "lon": 7.4282955
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "C palms lounge and garden"
+  }
+},
+{
+  "type": "way",
+  "id": 1207250021,
+  "center": {
+    "lat": 8.9976278,
+    "lon": 7.4302348
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "building": "yes",
+    "name": "tapadia bukka"
+  }
+},
+{
+  "type": "way",
+  "id": 1274075736,
+  "center": {
+    "lat": 9.0324702,
+    "lon": 7.4977458
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "regional",
+    "name": "Biobak Kitchen"
+  }
+},
+{
+  "type": "way",
+  "id": 1411437160,
+  "center": {
+    "lat": 9.0541332,
+    "lon": 7.4608153
+  },
+  "tags": {
+    "addr:street": "Bamako Street",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Chester Fries"
+  }
+},
+{
+  "type": "way",
+  "id": 1411662262,
+  "center": {
+    "lat": 9.1172393,
+    "lon": 7.4094251
+  },
+  "tags": {
+    "addr:city": "Gwarinpa",
+    "addr:housenumber": "35",
+    "addr:postcode": "900108",
+    "addr:street": "4th Avenue",
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "building": "yes",
+    "contact:facebook": "https://web.facebook.com/profile.php?id=61561327642278",
+    "email": "35on4thsb@gmail.com",
+    "name": "35 On 4th",
+    "opening_hours": "Mo-Su 12:00-00:00",
+    "outdoor_seating": "yes",
+    "smoking": "outside"
+  }
+},
+{
+  "type": "way",
+  "id": 1411662859,
+  "center": {
+    "lat": 9.1035100,
+    "lon": 7.4046751
+  },
+  "tags": {
+    "addr:street": "PA Michael Imoudu Avenue",
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Chicken Republic",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "takeaway": "yes",
+    "toilets:access": "customers",
+    "wheelchair": "yes"
+  }
+}
+
+  ]
+}

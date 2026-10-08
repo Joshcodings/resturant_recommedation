@@ -123,14 +123,14 @@ export function CompareModal({ open, onClose }: ModalProps) {
   const bestCostIdx = minCost < Infinity ? convertedCosts.indexOf(minCost) : -1;
 
   // Best rating
-  const ratings = compareTray.map(r => r.aggregate_rating);
+  const ratings = compareTray.map(r => r.hasRating ? r.aggregate_rating! : -1);
   const maxRating = Math.max(...ratings);
-  const bestRatingIdx = ratings.indexOf(maxRating);
+  const bestRatingIdx = maxRating > -1 ? ratings.indexOf(maxRating) : -1;
 
   // Best votes
-  const votes = compareTray.map(r => r.votes);
+  const votes = compareTray.map(r => r.hasRating ? r.votes! : -1);
   const maxVotes = Math.max(...votes);
-  const bestVotesIdx = votes.indexOf(maxVotes);
+  const bestVotesIdx = maxVotes > -1 ? votes.indexOf(maxVotes) : -1;
 
   return (
     <div
@@ -307,7 +307,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                         fontWeight: isBest ? 600 : 400,
                       }}
                     >
-                      ⭐ {r.aggregate_rating.toFixed(1)}
+                      ⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}
                     </td>
                   );
                 })}
@@ -330,7 +330,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                         fontWeight: isBest ? 600 : 400,
                       }}
                     >
-                      {r.votes.toLocaleString()}
+                      {r.hasRating ? r.votes!.toLocaleString() : 'n/a'}
                     </td>
                   );
                 })}

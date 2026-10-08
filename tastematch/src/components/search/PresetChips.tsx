@@ -1,13 +1,16 @@
 import { MOOD_PRESETS, type MoodPreset } from '@/config/presets';
 import { Sparkles } from 'lucide-react';
 
+import type { CityCapabilities } from '@/lib/capabilities';
+
 interface Props {
   activePreset: MoodPreset | null;
   onSelectPreset: (preset: MoodPreset | null) => void;
   onSurpriseMe: () => void;
+  caps?: CityCapabilities;
 }
 
-export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe }: Props) {
+export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe, caps }: Props) {
   return (
     <div
       style={{
@@ -20,9 +23,27 @@ export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe
     >
       {MOOD_PRESETS.map(p => {
         const isActive = activePreset?.id === p.id;
+        
+        let missingCap = '';
+        if (p.requiredCapabilities) {
+          for (const req of p.requiredCapabilities) {
+            if (caps && !caps[req]) {
+              if (req === 'hasRatings') missingCap = 'Rating data is not available';
+              else if (req === 'hasPrices') missingCap = 'Price data is not available';
+              else if (req === 'hasBooking') missingCap = 'Table booking info is not available';
+              else missingCap = 'Required data is not available';
+              break;
+            }
+          }
+        }
+        
+        const isDisabled = !!missingCap;
+
         return (
           <button
             key={p.id}
+            disabled={isDisabled}
+            title={missingCap || undefined}
             onClick={() => onSelectPreset(isActive ? null : p)}
             style={{
               height: 36,
@@ -34,7 +55,8 @@ export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: 13,
               fontWeight: isActive ? 600 : 500,
-              cursor: 'pointer',
+              cursor: isDisabled ? 'not-allowed' : 'pointer',
+              opacity: isDisabled ? 0.5 : 1,
               display: 'inline-flex',
               alignItems: 'center',
               gap: 6,

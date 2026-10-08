@@ -41,14 +41,16 @@ export function formatCost(cost: number | null, currency: string): string {
 /**
  * Format vote count with commas.
  */
-export function formatVotes(votes: number): string {
+export function formatVotes(votes: number | null): string {
+  if (votes === null) return '0';
   return votes.toLocaleString();
 }
 
 /**
  * Determine if a restaurant has so few votes it needs a "few votes" badge.
  */
-export function isFewVotes(votes: number): boolean {
+export function isFewVotes(votes: number | null): boolean {
+  if (votes === null) return false; // unrated places don't get the 'few votes' badge
   return votes < 20;
 }
 
@@ -59,12 +61,12 @@ export function whyThisPick(params: {
   cuisineMatch: number;
   chosenCuisines: string[];
   servedCuisines: string[];
-  rating: number;
-  votes: number;
-  priceRange: number;
+  rating: number | null;
+  votes: number | null;
+  priceRange: number | null;
   inputPriceRange: number | null;
   stage: string;
-  locality: string;
+  locality: string | null;
 }): string {
   const { cuisineMatch, chosenCuisines, servedCuisines, rating, votes, priceRange, inputPriceRange, stage, locality } = params;
 
@@ -72,17 +74,27 @@ export function whyThisPick(params: {
     servedCuisines.some(s => s.toLowerCase() === c.toLowerCase())
   );
 
-  const ratingStr = rating.toFixed(1);
-  const votesStr = votes.toLocaleString();
-  const priceInRange = inputPriceRange === null || priceRange === inputPriceRange;
+  const loc = locality || 'this area';
+  const hasRating = rating !== null && votes !== null;
+  const ratingStr = hasRating ? rating!.toFixed(1) : '';
+  const votesStr = hasRating ? votes!.toLocaleString() : '';
+  const priceInRange = inputPriceRange === null || priceRange === inputPriceRange || priceRange === null;
 
-  if (stage === 'exact_all' && chosenCuisines.length > 0 && cuisineMatch > 0) {
-    return `Serves ${matchedCuisines.length} of your ${chosenCuisines.length} cuisine${chosenCuisines.length > 1 ? 's' : ''}, rated ${ratingStr} from ${votesStr} votes${priceInRange ? ', in your price range' : ''}.`;
+  if (hasRating) {
+    if (stage === 'exact_all' && chosenCuisines.length > 0 && cuisineMatch > 0) {
+      return `Serves ${matchedCuisines.length} of your ${chosenCuisines.length} cuisine${chosenCuisines.length > 1 ? 's' : ''}, rated ${ratingStr} from ${votesStr} votes${priceInRange ? ', in your price range' : ''}.`;
+    }
+    if (chosenCuisines.length === 0) {
+      return `Rated ${ratingStr} from ${votesStr} votes in ${loc}${priceInRange ? ', in your price range' : `, price tier ${priceRange}`}.`;
+    }
+    return `Top pick in ${loc} with ${votesStr} votes and a ${ratingStr} rating${priceInRange ? '' : `, relaxed to price tier ${priceRange}`}.`;
+  } else {
+    // Unrated (Nigeria)
+    if (chosenCuisines.length > 0 && cuisineMatch > 0) {
+      return `Serves ${matchedCuisines.length} of your ${chosenCuisines.length} cuisine${chosenCuisines.length > 1 ? 's' : ''} in ${loc}.`;
+    }
+    return `Notable spot in ${loc}.`;
   }
-  if (chosenCuisines.length === 0) {
-    return `Rated ${ratingStr} from ${votesStr} votes in ${locality}${priceInRange ? ', in your price range' : `, price tier ${priceRange}`}.`;
-  }
-  return `Top pick in ${locality} with ${votesStr} votes and a ${ratingStr} rating${priceInRange ? '' : `, relaxed to price tier ${priceRange}`}.`;
 }
 
 /**

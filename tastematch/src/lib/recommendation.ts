@@ -10,7 +10,12 @@ import { STAGE_NOTICES, STAGE_NOTICES_ANY_PRICE } from '@/types/recommendation';
 import { whyThisPick } from '@/lib/formatters';
 import type { MoodPreset } from '@/config/presets';
 import { haversineDistance, computeCentroid, isValidCoordinate } from '@/lib/location';
+import { UNRATED_WEIGHTS } from '@/config/rankingWeights';
 import { PRICE_TIERS } from '@/lib/currency';
+
+export function isNum(x: number | null | undefined): x is number {
+  return typeof x === 'number' && !isNaN(x) && x !== null;
+}
 
 // ─── Priority Slider Weights ─────────────────────────────────────────────────
 
@@ -38,10 +43,37 @@ export function liveScore(r: ScoredRestaurant, weights: PriorityWeights): number
   const wP    = weights.popularity   / 50;
   const wCost = weights.cost         / 50;
 
-  const fRating  = r.weighted_rating / 5.0;
+  // Unrated cities fallback logic (Nigeria)
+  if (!r.hasRating) {
+    // According to plan: (count present of: cuisine, opening_hours, phone, website, address) / 5
+    const presentCount =
+      (r.cuisineList.length > 0 && r.cuisines !== 'Unspecified' ? 1 : 0) +
+      (r.opening_hours ? 1 : 0) +
+      (r.phone ? 1 : 0) +
+      (r.website ? 1 : 0) +
+      (r.address || r.locality ? 1 : 0);
+    const detailScore = presentCount / 5.0;
+
+    const prox = r.distanceKm !== undefined ? Math.max(0, 1.0 - r.distanceKm / 10.0) : 0.5;
+
+    if (weights.cuisineMatch > 0) {
+      return (
+        UNRATED_WEIGHTS.withCuisineRequest.cuisineMatch * r.cuisineMatch +
+        UNRATED_WEIGHTS.withCuisineRequest.proximity * prox +
+        UNRATED_WEIGHTS.withCuisineRequest.listingDetail * detailScore
+      );
+    } else {
+      return (
+        UNRATED_WEIGHTS.noCuisineRequest.proximity * prox +
+        UNRATED_WEIGHTS.noCuisineRequest.listingDetail * detailScore
+      );
+    }
+  }
+
+  const fRating  = isNum(r.weighted_rating) ? r.weighted_rating / 5.0 : 0;
   const fCuisine = r.cuisineMatch;
-  const fPop     = Math.min(1.0, Math.log10(r.votes + 1) / Math.log10(5000)); // clamped (amendment 11)
-  const fCost    = 1.0 - (r.price_range - 1) / 3;
+  const fPop     = isNum(r.votes) ? Math.min(1.0, Math.log10(r.votes + 1) / Math.log10(5000)) : 0;
+  const fCost    = isNum(r.price_range) ? 1.0 - (r.price_range - 1) / 3 : 0.5;
 
   return wR * fRating + wC * fCuisine + wP * fPop + wCost * fCost;
 }
@@ -62,23 +94,19 @@ function computeCuisineMatch(wanted: Set<string>, cuisineList: string[]): number
 
 export function applyPresetFilter(pool: RestaurantParsed[], preset: MoodPreset): RestaurantParsed[] {
   return pool.filter(r => {
-    if (preset.minRating     !== null && r.aggregate_rating < preset.minRating)  return false;
-    if (preset.minVotes      !== null && r.votes < preset.minVotes)               return false;
-    if (preset.maxVotes      !== null && r.votes > preset.maxVotes)               return false;
+    if (preset.minRating     !== null && (!isNum(r.aggregate_rating) || r.aggregate_rating < preset.minRating)) return false;
+    if (preset.minVotes      !== null && (!isNum(r.votes) || r.votes < preset.minVotes)) return false;
+    if (preset.maxVotes      !== null && (!isNum(r.votes) || r.votes > preset.maxVotes)) return false;
     if (preset.requireTableBooking  && r.has_table_booking  !== 1)               return false;
     if (preset.requireOnlineDelivery && r.has_online_delivery !== 1)             return false;
-    if (preset.minPriceRange !== null && r.price_range < preset.minPriceRange)   return false;
-    if (preset.maxPriceRange !== null && r.price_range > preset.maxPriceRange)   return false;
+    if (preset.minPriceRange !== null && (!isNum(r.price_range) || r.price_range < preset.minPriceRange)) return false;
+    if (preset.maxPriceRange !== null && (!isNum(r.price_range) || r.price_range > preset.maxPriceRange)) return false;
     return true;
   });
 }
 
 // ─── Diversification (Maximal Marginal Relevance - MMR) ──────────────────────
 
-/**
- * Computes pairwise similarity between two restaurants based on cuisine Jaccard and locality.
- * Returns a value in [0, 1].
- */
 export function computePairwiseSimilarity(a: RestaurantParsed, b: RestaurantParsed): number {
   const setA = new Set(a.cuisineList.map(c => c.toLowerCase()));
   const setB = new Set(b.cuisineList.map(c => c.toLowerCase()));
@@ -89,15 +117,14 @@ export function computePairwiseSimilarity(a: RestaurantParsed, b: RestaurantPars
   }
   const union = new Set([...setA, ...setB]).size;
   const cuisineJaccard = union > 0 ? intersection / union : 0;
-  const sameLocality = a.locality.toLowerCase() === b.locality.toLowerCase() ? 1.0 : 0.0;
+  
+  const locA = (a.locality || '').toLowerCase();
+  const locB = (b.locality || '').toLowerCase();
+  const sameLocality = (locA && locA === locB) ? 1.0 : 0.0;
 
   return 0.7 * cuisineJaccard + 0.3 * sameLocality;
 }
 
-/**
- * Applies Maximal Marginal Relevance (MMR) diversification to candidate restaurants.
- * Balances relevance (higher score) with novelty (dissimilarity to already picked items).
- */
 export function applyMMRDiversification(
   candidates: ScoredRestaurant[],
   lambda = 0.85,
@@ -137,7 +164,6 @@ export function applyMMRDiversification(
     selected.push(chosen);
   }
 
-  // Append any remaining candidates so full qualifying pool is preserved
   return [...selected, ...remaining];
 }
 
@@ -156,36 +182,43 @@ function buildExplanation(
 
   const cuisineSummary =
     cuisines.length === 0
-      ? `Serves ${r.cuisineList.slice(0, 3).join(', ')}`
+      ? r.cuisineList.length > 0 ? `Serves ${r.cuisineList.slice(0, 3).join(', ')}` : 'Cuisine details unavailable'
       : matched.length > 0
       ? `Matches ${matched.length} of ${cuisines.length} requested cuisines (${matched.join(', ')})`
       : `Popular choice serving ${r.cuisineList.slice(0, 2).join(', ')}`;
 
-  const qualitySummary = `Bayesian weighted rating ${r.weighted_rating.toFixed(2)}/5.0 (${r.aggregate_rating.toFixed(1)} raw from ${r.votes.toLocaleString()} votes)`;
+  const qualitySummary = r.hasRating && isNum(r.weighted_rating) && isNum(r.aggregate_rating)
+    ? `Bayesian weighted rating ${r.weighted_rating.toFixed(2)}/5.0 (${r.aggregate_rating.toFixed(1)} raw from ${(r.votes || 0).toLocaleString()} votes)`
+    : `Sourced from OpenStreetMap (unrated region)`;
 
-  const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
-  const priceSummary =
-    priceRange === null
+  let priceSummary = 'Price unavailable';
+  if (isNum(r.price_range)) {
+    const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4)];
+    priceSummary = priceRange === null
       ? `${tier.name} tier (${tier.dots})`
       : r.price_range === priceRange
       ? `Exact match for ${tier.name} tier (${tier.dots})`
       : `${tier.name} tier (${tier.dots}), within tolerance of your requested tier`;
+  }
 
-  const popularitySummary =
-    r.votes >= 500
+  let popularitySummary = 'Popularity metrics unavailable';
+  if (isNum(r.votes)) {
+    popularitySummary = r.votes >= 500
       ? `High crowd confidence with ${r.votes.toLocaleString()} verified ratings`
       : r.votes >= 50
       ? `Solid community feedback (${r.votes.toLocaleString()} reviews)`
       : `Boutique discovery (${r.votes.toLocaleString()} reviews)`;
+  }
 
   const services: string[] = [];
   if (r.has_table_booking === 1) services.push('table booking');
   if (r.has_online_delivery === 1) services.push('online delivery');
   const servicesSummary = services.length > 0 ? `Offers ${services.join(' & ')}` : undefined;
 
+  const locName = r.locality || r.city;
   const locationSummary = r.distanceKm !== undefined
-    ? `${r.locality}, ${r.city} (${r.distanceKm.toFixed(1)} km from center)`
-    : `${r.locality}, ${r.city}`;
+    ? `${locName} (${r.distanceKm.toFixed(1)} km from center)`
+    : `${locName}`;
 
   return {
     cuisineSummary,
@@ -200,14 +233,6 @@ function buildExplanation(
 
 // ─── Core Recommendation Engine ──────────────────────────────────────────────
 
-/**
- * Pure recommendation pipeline function.
- *
- * Architecture:
- * User Preferences -> Candidate Generation -> Filtering -> Content Similarity
- * -> Preference Matching -> Quality Score -> Progressive Relaxation / Strict Mode
- * -> Diversification (MMR) -> Explainable Recommendation
- */
 export function recommend(
   allData: RestaurantParsed[],
   query: RecommendationQuery,
@@ -226,15 +251,18 @@ export function recommend(
     diversificationLambda = 0.85,
   } = query;
 
-  // ── 1. Candidate Generation ───────────────────────────────────────────────
   let pool = allData.filter(r => r.country === country && r.city === city);
   const cityRestaurantCount = pool.length;
   const isLimitedData = cityRestaurantCount < 30;
 
-  // Compute centroid and distances
+  // Determine scoring mode based on city capabilities (Nigeria uses unrated)
+  const isRatedCity = pool.some(r => 
+    r.hasRating === true || (typeof r.aggregate_rating === 'number' && r.aggregate_rating !== null)
+  );
+  const scoringMode = isRatedCity ? 'rated' : 'unrated';
+
   const centroid = computeCentroid(pool);
 
-  // ── 2. Filtering ──────────────────────────────────────────────────────────
   if (needsTableBooking)   pool = pool.filter(r => r.has_table_booking   === 1);
   if (needsOnlineDelivery) pool = pool.filter(r => r.has_online_delivery  === 1);
 
@@ -249,25 +277,32 @@ export function recommend(
       isLimitedData,
       mode,
       relaxedCriteria: [],
+      scoringMode,
     };
   }
 
-  // ── 3. Content Similarity & Base Scoring ──────────────────────────────────
   const wanted = new Set(cuisines);
   const anyPrice = priceRange === null;
 
   const scored: ScoredRestaurant[] = pool.map(r => {
     const cuisineMatch = computeCuisineMatch(wanted, r.cuisineList);
-    const score        = r.weighted_rating + 0.5 * cuisineMatch;
-
     let distanceKm: number | undefined;
     if (centroid && isValidCoordinate(r.latitude, r.longitude)) {
-      distanceKm = haversineDistance(
-        centroid.latitude,
-        centroid.longitude,
-        r.latitude,
-        r.longitude,
-      );
+      distanceKm = haversineDistance(centroid.latitude, centroid.longitude, r.latitude, r.longitude);
+    }
+    
+    let score = 0;
+    if (isRatedCity) {
+      score = (r.weighted_rating || 0) + 0.5 * cuisineMatch;
+    } else {
+      const detailScore = 
+        ((r.phone ? 1 : 0) + (r.opening_hours ? 1 : 0) + (r.website ? 1 : 0) + ((r.address || r.locality) ? 1 : 0)) / 4.0;
+      const prox = distanceKm !== undefined ? Math.max(0, 1.0 - distanceKm / 10.0) : 0.5;
+      if (wanted.size > 0) {
+        score = 0.5 * cuisineMatch + 0.3 * prox + 0.2 * detailScore;
+      } else {
+        score = 0.6 * prox + 0.4 * detailScore;
+      }
     }
 
     return {
@@ -280,32 +315,25 @@ export function recommend(
     };
   });
 
-  // Filter by radius if requested and distances are available
   let filteredScored = scored;
   if (radiusKm !== null && radiusKm > 0) {
-    const withinRadius = scored.filter(
-      r => r.distanceKm !== undefined && r.distanceKm <= radiusKm
-    );
-    if (withinRadius.length > 0) {
-      filteredScored = withinRadius;
-    }
+    const withinRadius = scored.filter(r => r.distanceKm !== undefined && r.distanceKm <= radiusKm);
+    if (withinRadius.length > 0) filteredScored = withinRadius;
   }
 
-  // ── 4. Progressive Relaxation or Strict Mode ──────────────────────────────
   let chosenStage: RelaxationStage = 'exact_all';
   let finalPool: ScoredRestaurant[] = [];
   const relaxedCriteria: string[] = [];
 
-  if (mode === 'strict') {
-    let sub = filteredScored;
-    if (!anyPrice) {
-      sub = sub.filter(r => r.price_range === priceRange);
-    }
-    if (wanted.size > 0) {
-      sub = sub.filter(r => r.cuisineMatch > 0);
-    }
+  // For unrated cities, skip strict price/cuisine matching
+  const effectiveMode = isRatedCity ? mode : 'flexible';
 
-    const sorted = [...sub].sort((a, b) => b.score - a.score || b.votes - a.votes);
+  if (effectiveMode === 'strict' && isRatedCity) {
+    let sub = filteredScored;
+    if (!anyPrice) sub = sub.filter(r => r.price_range === priceRange);
+    if (wanted.size > 0) sub = sub.filter(r => r.cuisineMatch > 0);
+
+    const sorted = [...sub].sort((a, b) => b.score - a.score || (b.votes || 0) - (a.votes || 0));
     const seen = new Set<string>();
     const deduped: ScoredRestaurant[] = [];
     for (const r of sorted) {
@@ -314,11 +342,9 @@ export function recommend(
         deduped.push(r);
       }
     }
-
     chosenStage = 'exact_all';
     finalPool = deduped;
   } else {
-    // Flexible Mode: Progressive Relaxation
     type StageSpec = {
       id: RelaxationStage;
       priceTol: number | 'any';
@@ -353,17 +379,22 @@ export function recommend(
 
     for (const stage of stages) {
       if (anyPrice && stage.skipWhenAnyPrice) continue;
+      // Skip price stages if city has no price data
+      if (!isRatedCity && stage.priceTol !== 'any') continue;
 
       let sub = filteredScored;
 
-      if (!anyPrice && stage.priceTol !== 'any') {
-        sub = sub.filter(r => Math.abs(r.price_range - priceRange!) <= (stage.priceTol as number));
+      if (!anyPrice && stage.priceTol !== 'any' && isRatedCity) {
+        sub = sub.filter(r => {
+          if (!isNum(r.price_range)) return false;
+          return Math.abs(r.price_range - (priceRange as number)) <= (stage.priceTol as number);
+        });
       }
       if (stage.needCuisine && wanted.size > 0) {
         sub = sub.filter(r => r.cuisineMatch > 0);
       }
 
-      const sorted = [...sub].sort((a, b) => b.score - a.score || b.votes - a.votes);
+      const sorted = [...sub].sort((a, b) => b.score - a.score || (b.votes || 0) - (a.votes || 0));
       const seen = new Set<string>();
       const deduped: ScoredRestaurant[] = [];
       for (const r of sorted) {
@@ -382,14 +413,12 @@ export function recommend(
     }
   }
 
-  // ── 5. Diversification (MMR) ─────────────────────────────────────────────
   const diversifiedPool = applyMMRDiversification(finalPool, diversificationLambda, Math.max(topN, 10));
 
-  // ── 6. Explainable AI & "Why this pick" Generation ───────────────────────
-  const noticeMap = anyPrice ? STAGE_NOTICES_ANY_PRICE : STAGE_NOTICES;
+  const noticeMap = (anyPrice || !isRatedCity) ? STAGE_NOTICES_ANY_PRICE : STAGE_NOTICES;
   let notice = noticeMap[chosenStage];
 
-  if (mode === 'strict' && finalPool.length === 0) {
+  if (effectiveMode === 'strict' && finalPool.length === 0) {
     notice = 'Strict Mode: No restaurants matched all requested criteria exactly.';
   }
 
@@ -415,8 +444,8 @@ export function recommend(
     notice,
     cityRestaurantCount,
     isLimitedData,
-    mode,
+    mode: effectiveMode,
     relaxedCriteria,
+    scoringMode,
   };
 }
-

@@ -1,0 +1,1438 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T16:39:41Z",
+    "timestamp_areas_base": "2026-10-06T13:12:56Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 501361574,
+  "lat": 6.5771463,
+  "lon": 3.3661931,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2019111",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Maryland",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501379109,
+  "lat": 6.6299076,
+  "lon": 3.3724894,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48490",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Olowoira",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501379116,
+  "lat": 6.6346410,
+  "lon": 3.3540057,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48495",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Aguda",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501392258,
+  "lat": 6.4503484,
+  "lon": 3.6137358,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2022171",
+    "alt_name": "Awgawmbaw",
+    "is_in:country": "Nigeria",
+    "name": "Ogombo",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501392318,
+  "lat": 6.5502091,
+  "lon": 3.4021999,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2024542",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Oworonṣoki",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501392560,
+  "lat": 6.5072516,
+  "lon": 3.5804701,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2017524",
+    "is_in:country": "Nigeria",
+    "name": "Langbasa",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501392570,
+  "lat": 6.4673130,
+  "lon": 3.7318468,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2017421",
+    "is_in:country": "Nigeria",
+    "name": "Lakowe",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501393414,
+  "lat": 6.4848676,
+  "lon": 3.8883472,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2010498",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ibeju",
+    "name:en": "Ibeju",
+    "name:yo": "Ìbẹ̀jù",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501396306,
+  "lat": 6.4701718,
+  "lon": 3.3811132,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "58381",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Iddo",
+    "place": "suburb",
+    "source": "GNS",
+    "wikidata": "Q5987805"
+  }
+},
+{
+  "type": "node",
+  "id": 501422907,
+  "lat": 6.6326080,
+  "lon": 3.3407753,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48499",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ogba",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501432097,
+  "lat": 6.4292788,
+  "lon": 3.4885399,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "47377",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ikate",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501456724,
+  "lat": 6.6058999,
+  "lon": 3.4287753,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2021829",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Odogun",
+    "place": "neighbourhood",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501463418,
+  "lat": 6.5750008,
+  "lon": 3.3905268,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2022203",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ogudu",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501463453,
+  "lat": 6.5161550,
+  "lon": 3.2548660,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2011417",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ijegun",
+    "place": "suburb",
+    "source": "GNS",
+    "wikidata": "Q5995165"
+  }
+},
+{
+  "type": "node",
+  "id": 501464088,
+  "lat": 6.6229165,
+  "lon": 3.3203386,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-1997850",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Agege",
+    "name:ru": "Агеге",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501479339,
+  "lat": 6.5909586,
+  "lon": 3.3762021,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48470",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Oshosun",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501483481,
+  "lat": 6.6008263,
+  "lon": 3.3912012,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48473",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Orisigun",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501483931,
+  "lat": 6.4667006,
+  "lon": 3.3678244,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2011451",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ijora",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501485554,
+  "lat": 6.6417812,
+  "lon": 3.3605076,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48497",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Omole",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501492354,
+  "lat": 6.5099252,
+  "lon": 3.6159537,
+  "tags": {
+    "name": "Badore",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 501496440,
+  "lat": 6.5752564,
+  "lon": 3.2839038,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2010765",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Idimu",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501496581,
+  "lat": 6.4862553,
+  "lon": 3.3856122,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2005731",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ebute-Metta",
+    "place": "suburb",
+    "source": "GNS",
+    "wikidata": "Q5332126"
+  }
+},
+{
+  "type": "node",
+  "id": 501497108,
+  "lat": 6.4425757,
+  "lon": 3.3113695,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "47540",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Kirikiri",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501499101,
+  "lat": 6.5172706,
+  "lon": 3.3666275,
+  "tags": {
+    "is_in:country": "Nigeria",
+    "name": "Jibowu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 501501091,
+  "lat": 6.4288783,
+  "lon": 3.4551385,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2019089",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Maroko",
+    "name:en": "Maroko",
+    "name:fr": "Maroko",
+    "name:ru": "Мароко",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501507968,
+  "lat": 6.4022662,
+  "lon": 3.3938323,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48736",
+    "description": "In 1965, Queen Elizabeth was here. This community has been in existence since the colonial masters in the 18th century. It was named by the British Colonial Masters.",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Tarkwa",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501513077,
+  "lat": 6.4824237,
+  "lon": 3.3641616,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2010963",
+    "alt_name": "Iganmu Siding",
+    "fixme": "no population estimate available, defaulted to village",
+    "name": "Iganmu",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501513101,
+  "lat": 6.6636025,
+  "lon": 3.2894910,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2011362",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Ifako Ijaiye",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501514506,
+  "lat": 6.6010014,
+  "lon": 3.3644638,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48477",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Oregun",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501516175,
+  "lat": 6.5383560,
+  "lon": 3.3719309,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2026732",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Somolu",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501517933,
+  "lat": 6.6300260,
+  "lon": 3.2782319,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "48429",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Alimosho",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501521901,
+  "lat": 6.5831224,
+  "lon": 3.4036164,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2024163",
+    "fixme": "no population estimate available, defaulted to village",
+    "is_in:country": "Nigeria",
+    "name": "Oruba",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 889257358,
+  "lat": 6.4949214,
+  "lon": 3.1374150,
+  "tags": {
+    "name": "Alasia",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 1484920806,
+  "lat": 6.6180809,
+  "lon": 3.3777821,
+  "tags": {
+    "name": "Magodo",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 3698552678,
+  "lat": 6.4497407,
+  "lon": 3.2558405,
+  "tags": {
+    "name": "Satellite Town",
+    "place": "suburb",
+    "source": "Geonames",
+    "wikidata": "Q25043209",
+    "wikipedia": "en:Satellite Town, Lagos"
+  }
+},
+{
+  "type": "node",
+  "id": 5485534155,
+  "lat": 6.4640452,
+  "lon": 3.5465209,
+  "tags": {
+    "name": "Victoria Garden City",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 5777682236,
+  "lat": 6.4538491,
+  "lon": 3.5781822,
+  "tags": {
+    "is_in:country": "Nigeria",
+    "name": "Lekki Phase II",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 7218320128,
+  "lat": 6.6173622,
+  "lon": 3.3975281,
+  "tags": {
+    "name": "Agiliti",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 7633424022,
+  "lat": 6.3879241,
+  "lon": 2.7107263,
+  "tags": {
+    "name": "Adougbé Gbago",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13172237689,
+  "lat": 6.5595994,
+  "lon": 3.3319920,
+  "tags": {
+    "name": "Mafoluku",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13176760049,
+  "lat": 6.4958525,
+  "lon": 3.3923367,
+  "tags": {
+    "name": "Makoko",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13182173449,
+  "lat": 6.5307684,
+  "lon": 4.0004157,
+  "tags": {
+    "name": "Lekki Free Trade Zone",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13182173454,
+  "lat": 6.4081775,
+  "lon": 4.1309558,
+  "tags": {
+    "name": "Apakin",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13235411955,
+  "lat": 6.5550545,
+  "lon": 3.3592829,
+  "tags": {
+    "name": "Ilupeju",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13236892515,
+  "lat": 6.5287361,
+  "lon": 3.3905600,
+  "tags": {
+    "name": "Akoka",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13236892517,
+  "lat": 6.4481563,
+  "lon": 3.3335102,
+  "tags": {
+    "name": "Ajegunle",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13240049114,
+  "lat": 6.6085499,
+  "lon": 3.4148861,
+  "tags": {
+    "name": "Owode Onirin",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13438564581,
+  "lat": 6.4409234,
+  "lon": 3.8543393,
+  "tags": {
+    "name": "Eleko",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13438579461,
+  "lat": 6.4270724,
+  "lon": 3.5926861,
+  "tags": {
+    "name": "Okun-Ajah",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13438611761,
+  "lat": 6.5074022,
+  "lon": 3.3217586,
+  "tags": {
+    "name": "Cele",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13439326189,
+  "lat": 6.5275837,
+  "lon": 3.3508701,
+  "tags": {
+    "name": "Mushin",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13439326192,
+  "lat": 6.5003659,
+  "lon": 3.3279727,
+  "tags": {
+    "name": "Ijesha",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13615594756,
+  "lat": 6.5457713,
+  "lon": 3.3234792,
+  "tags": {
+    "name": "Ajao Estate",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13943393312,
+  "lat": 6.4748063,
+  "lon": 3.1905347,
+  "tags": {
+    "name": "Okokomaiko",
+    "place": "neighbourhood",
+    "wikidata": "Q20707589",
+    "wikipedia": "en:Okokomaiko"
+  }
+},
+{
+  "type": "node",
+  "id": 13943621146,
+  "lat": 6.4687629,
+  "lon": 3.1801700,
+  "tags": {
+    "name": "Kemberi",
+    "place": "neighbourhood",
+    "wikidata": "Q94751059"
+  }
+},
+{
+  "type": "node",
+  "id": 13943621149,
+  "lat": 6.4568232,
+  "lon": 3.1689779,
+  "tags": {
+    "name": "Sabo Oniba",
+    "place": "neighbourhood",
+    "wikidata": "Q94751048"
+  }
+},
+{
+  "type": "node",
+  "id": 13943621160,
+  "lat": 6.4611959,
+  "lon": 3.1494756,
+  "tags": {
+    "name": "Shibiri",
+    "place": "neighbourhood",
+    "wikidata": "Q24232826",
+    "wikipedia": "en:Shibiri"
+  }
+},
+{
+  "type": "node",
+  "id": 13943674507,
+  "lat": 6.4522655,
+  "lon": 3.1351834,
+  "tags": {
+    "name": "Etegbin",
+    "place": "neighbourhood",
+    "wikidata": "Q94751052"
+  }
+},
+{
+  "type": "node",
+  "id": 13943699530,
+  "lat": 6.4650788,
+  "lon": 3.1570408,
+  "tags": {
+    "name": "Ilogbo Elegba",
+    "place": "neighbourhood",
+    "wikidata": "Q20707599",
+    "wikipedia": "en:Ilogbo Elegba"
+  }
+},
+{
+  "type": "node",
+  "id": 13943709265,
+  "lat": 6.4449691,
+  "lon": 3.1359401,
+  "tags": {
+    "name": "Egan",
+    "place": "neighbourhood",
+    "wikidata": "Q94751049"
+  }
+},
+{
+  "type": "node",
+  "id": 14056882944,
+  "lat": 6.3820996,
+  "lon": 2.7223875,
+  "tags": {
+    "name": "Seme Border",
+    "place": "neighbourhood",
+    "wikidata": "Q15043617",
+    "wikipedia": "en:Seme Border"
+  }
+},
+{
+  "type": "node",
+  "id": 14089428416,
+  "lat": 6.4370225,
+  "lon": 3.5230757,
+  "tags": {
+    "name": "Igbo-Efon",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136561161,
+  "lat": 6.4658901,
+  "lon": 3.3229698,
+  "tags": {
+    "name": "Alaba",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136561162,
+  "lat": 6.4792997,
+  "lon": 3.3339337,
+  "tags": {
+    "name": "Coker",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136561163,
+  "lat": 6.4693654,
+  "lon": 3.3423906,
+  "tags": {
+    "name": "Amukoko",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136561164,
+  "lat": 6.5405923,
+  "lon": 3.3472984,
+  "tags": {
+    "name": "Papa Ajao",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136565353,
+  "lat": 6.4631971,
+  "lon": 3.3988256,
+  "tags": {
+    "name": "Ílubirin",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 14136596430,
+  "lat": 6.4781545,
+  "lon": 3.3115508,
+  "tags": {
+    "name": "Amuwo Odofin",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136598607,
+  "lat": 6.5068212,
+  "lon": 3.3754881,
+  "tags": {
+    "name": "Yaba",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136598608,
+  "lat": 6.5107689,
+  "lon": 3.3622950,
+  "tags": {
+    "name": "Ojuelegba",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136598612,
+  "lat": 6.4882076,
+  "lon": 3.3334000,
+  "tags": {
+    "name": "Ijesha Tedo",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136619313,
+  "lat": 6.5081363,
+  "lon": 3.3300486,
+  "tags": {
+    "name": "Itire",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14136619314,
+  "lat": 6.5204650,
+  "lon": 3.3357171,
+  "tags": {
+    "name": "Ilasamaja",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161627785,
+  "lat": 6.6173097,
+  "lon": 3.2973386,
+  "tags": {
+    "name": "Iyana Ipaja",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161627786,
+  "lat": 6.6163576,
+  "lon": 3.3130585,
+  "tags": {
+    "name": "Dopemu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161627787,
+  "lat": 6.6507455,
+  "lon": 3.3246707,
+  "tags": {
+    "name": "Iju",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161627788,
+  "lat": 6.6123935,
+  "lon": 3.3384467,
+  "tags": {
+    "name": "Oba Akran",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161645999,
+  "lat": 6.6415639,
+  "lon": 3.3685088,
+  "tags": {
+    "name": "Ojodu Berger",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161650366,
+  "lat": 6.5437484,
+  "lon": 3.2782278,
+  "tags": {
+    "name": "Egbe",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161650367,
+  "lat": 6.5494509,
+  "lon": 3.2934360,
+  "tags": {
+    "name": "Ejigbo",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161650370,
+  "lat": 6.6020338,
+  "lon": 3.2437944,
+  "tags": {
+    "name": "Ayobo",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161650371,
+  "lat": 6.6095490,
+  "lon": 3.2672941,
+  "tags": {
+    "name": "Ipaja",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161651102,
+  "lat": 6.5287883,
+  "lon": 3.3619850,
+  "tags": {
+    "name": "Fadeyi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161651103,
+  "lat": 6.5371923,
+  "lon": 3.3603349,
+  "tags": {
+    "name": "Onipanu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161651104,
+  "lat": 6.5218560,
+  "lon": 3.3564119,
+  "tags": {
+    "name": "Idi Oro",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161651105,
+  "lat": 6.5140712,
+  "lon": 3.3482316,
+  "tags": {
+    "name": "Idi Araba",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161651106,
+  "lat": 6.5912072,
+  "lon": 3.2889640,
+  "tags": {
+    "name": "Egbeda",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161659115,
+  "lat": 6.5255628,
+  "lon": 3.3727490,
+  "tags": {
+    "name": "Igbobi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161659116,
+  "lat": 6.5523384,
+  "lon": 3.3699998,
+  "tags": {
+    "name": "Obanikoro",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161659117,
+  "lat": 6.5448952,
+  "lon": 3.3735519,
+  "tags": {
+    "name": "Pedro",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161661413,
+  "lat": 6.5059053,
+  "lon": 3.1919485,
+  "tags": {
+    "name": "Ikogbo",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161661414,
+  "lat": 6.4692652,
+  "lon": 3.2535747,
+  "tags": {
+    "name": "Trade Fair Complex",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161672098,
+  "lat": 6.5184365,
+  "lon": 3.2888933,
+  "tags": {
+    "name": "Isheri Osun",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161672538,
+  "lat": 6.5727240,
+  "lon": 3.3741262,
+  "tags": {
+    "name": "Mende",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161672539,
+  "lat": 6.5638023,
+  "lon": 3.3722780,
+  "tags": {
+    "name": "Anthony",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161672540,
+  "lat": 6.5657460,
+  "lon": 3.3874895,
+  "tags": {
+    "name": "Ifako",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161687529,
+  "lat": 6.5377715,
+  "lon": 3.2233622,
+  "tags": {
+    "name": "Akesan",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161693334,
+  "lat": 6.5870705,
+  "lon": 3.3791462,
+  "tags": {
+    "name": "Ojota",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161693335,
+  "lat": 6.5774984,
+  "lon": 3.3862881,
+  "tags": {
+    "name": "Ogudu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161693336,
+  "lat": 6.5694248,
+  "lon": 3.3803068,
+  "tags": {
+    "name": "Kosofe",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161693338,
+  "lat": 6.6044246,
+  "lon": 3.3954467,
+  "tags": {
+    "name": "Mile 12",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161693339,
+  "lat": 6.5779839,
+  "lon": 3.4057970,
+  "tags": {
+    "name": "Agboyi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161700675,
+  "lat": 6.4490790,
+  "lon": 3.4061391,
+  "tags": {
+    "name": "Obalende",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161700676,
+  "lat": 6.4587118,
+  "lon": 3.4167395,
+  "tags": {
+    "name": "Dolphin Estate",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14161700677,
+  "lat": 6.4642221,
+  "lon": 3.4528670,
+  "tags": {
+    "name": "Banana Island",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14162800564,
+  "lat": 6.4773283,
+  "lon": 3.3457731,
+  "tags": {
+    "name": "Orile Iganmu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14168934941,
+  "lat": 6.6711446,
+  "lon": 3.3022156,
+  "tags": {
+    "name": "Ojokoro",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14168934942,
+  "lat": 6.6597047,
+  "lon": 3.2557698,
+  "tags": {
+    "name": "Alagbado",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008681,
+  "lat": 6.4445362,
+  "lon": 3.5083077,
+  "tags": {
+    "name": "Osapa London",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008682,
+  "lat": 6.4470015,
+  "lon": 3.5181123,
+  "tags": {
+    "name": "Agungi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008684,
+  "lat": 6.4420758,
+  "lon": 3.5310859,
+  "tags": {
+    "name": "Chevron",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008685,
+  "lat": 6.4467593,
+  "lon": 3.5448689,
+  "tags": {
+    "name": "Eleganza",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008686,
+  "lat": 6.4338309,
+  "lon": 3.4904566,
+  "tags": {
+    "name": "Chisco",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008689,
+  "lat": 6.4677902,
+  "lon": 3.6083292,
+  "tags": {
+    "name": "Olokonla",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008690,
+  "lat": 6.4610585,
+  "lon": 3.6830354,
+  "tags": {
+    "name": "Eko Akete",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008691,
+  "lat": 6.4751830,
+  "lon": 3.7194980,
+  "tags": {
+    "name": "Eputu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008692,
+  "lat": 6.4755522,
+  "lon": 3.7584598,
+  "tags": {
+    "name": "Gbogije",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14169008693,
+  "lat": 6.4709457,
+  "lon": 3.8167864,
+  "tags": {
+    "name": "Aiyeteju",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14178015854,
+  "lat": 6.5125737,
+  "lon": 3.3824862,
+  "tags": {
+    "name": "Onike",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14178015855,
+  "lat": 6.5776173,
+  "lon": 3.3516301,
+  "tags": {
+    "name": "Ikeja G.R.A",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14178015856,
+  "lat": 6.5893321,
+  "lon": 3.3618978,
+  "tags": {
+    "name": "Opebi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 14178015857,
+  "lat": 6.6222623,
+  "lon": 3.3556086,
+  "tags": {
+    "name": "Agidingbi",
+    "place": "suburb"
+  }
+}
+
+  ]
+}

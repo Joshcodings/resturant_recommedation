@@ -59,8 +59,14 @@ export function morelikeThis(
 
   function score(r: RestaurantParsed): number {
     const cuisineSim = cosine(targetVec, cuisineVector(r.cuisineList, vocab));
-    const priceSim   = 1 - Math.abs(r.price_range - target.price_range) / 3;
-    const ratingSim  = 1 - Math.abs(r.aggregate_rating - target.aggregate_rating) / 5;
+    const priceSim = (r.price_range !== null && target.price_range !== null)
+      ? 1 - Math.abs(r.price_range - target.price_range) / 3
+      : 0.5; // fallback neutral score if either is null
+    
+    const ratingSim = (r.aggregate_rating !== null && target.aggregate_rating !== null)
+      ? 1 - Math.abs(r.aggregate_rating - target.aggregate_rating) / 5
+      : 0.5; // fallback neutral score
+      
     return 0.55 * cuisineSim + 0.25 * priceSim + 0.20 * ratingSim;
   }
 

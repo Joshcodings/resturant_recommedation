@@ -58,8 +58,11 @@ export default function InsightsView() {
       return { total: 0, avgRating: 0, totalVotes: 0, deliveryPct: 0, bookingPct: 0 };
     }
     const total = cityData.length;
-    const avgRating = cityData.reduce((s, r) => s + r.aggregate_rating, 0) / total;
-    const totalVotes = cityData.reduce((s, r) => s + r.votes, 0);
+    const ratedData = cityData.filter(r => r.hasRating);
+    const ratedCount = Math.max(ratedData.length, 1);
+    
+    const avgRating = ratedData.reduce((s, r) => s + (r.aggregate_rating || 0), 0) / ratedCount;
+    const totalVotes = ratedData.reduce((s, r) => s + (r.votes || 0), 0);
     const deliveryPct = Math.round((cityData.filter(r => r.has_online_delivery === 1).length / total) * 100);
     const bookingPct = Math.round((cityData.filter(r => r.has_table_booking === 1).length / total) * 100);
 
@@ -90,9 +93,9 @@ export default function InsightsView() {
   const priceRatingData = useMemo(() => {
     const tiers = [1, 2, 3, 4] as const;
     return tiers.map(tier => {
-      const match = cityData.filter(r => r.price_range === tier);
+      const match = cityData.filter(r => r.price_range === tier && r.hasRating);
       const avg = match.length > 0
-        ? match.reduce((sum, r) => sum + r.aggregate_rating, 0) / match.length
+        ? match.reduce((sum, r) => sum + (r.aggregate_rating || 0), 0) / match.length
         : 0;
       return {
         priceTier: `Tier ${tier}`,
@@ -106,11 +109,13 @@ export default function InsightsView() {
   const bestLocalitiesData = useMemo(() => {
     const locMap: Record<string, { totalWeighted: number; count: number }> = {};
     for (const r of cityData) {
-      if (!locMap[r.locality]) {
-        locMap[r.locality] = { totalWeighted: 0, count: 0 };
+      if (!r.hasRating) continue;
+      const key = r.locality || r.city;
+      if (!locMap[key]) {
+        locMap[key] = { totalWeighted: 0, count: 0 };
       }
-      locMap[r.locality].totalWeighted += r.weighted_rating;
-      locMap[r.locality].count += 1;
+      locMap[key].totalWeighted += r.weighted_rating || 0;
+      locMap[key].count += 1;
     }
 
     return Object.entries(locMap)

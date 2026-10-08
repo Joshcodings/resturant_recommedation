@@ -1,0 +1,365 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-08T10:29:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2453679845,
+  "lat": 7.4189015,
+  "lon": 3.9108621,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Mr Bigs"
+  }
+},
+{
+  "type": "node",
+  "id": 2453679847,
+  "lat": 7.4219761,
+  "lon": 3.9103846,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Tantalizers"
+  }
+},
+{
+  "type": "node",
+  "id": 2594871709,
+  "lat": 7.4170017,
+  "lon": 3.9106009,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:street": "Obafemi Awolowo Avenue",
+    "amenity": "bar",
+    "name": "Plat'Num"
+  }
+},
+{
+  "type": "node",
+  "id": 2594871713,
+  "lat": 7.4192971,
+  "lon": 3.8978739,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:street": "Obafemi Awolowo Avenue",
+    "amenity": "bar",
+    "name": "411"
+  }
+},
+{
+  "type": "node",
+  "id": 2594871746,
+  "lat": 7.4376716,
+  "lon": 3.9089846,
+  "tags": {
+    "amenity": "bar",
+    "name": "TinTin"
+  }
+},
+{
+  "type": "node",
+  "id": 2594871749,
+  "lat": 7.4332293,
+  "lon": 3.9065005,
+  "tags": {
+    "amenity": "bar",
+    "name": "Hideout"
+  }
+},
+{
+  "type": "node",
+  "id": 2639256408,
+  "lat": 7.3667717,
+  "lon": 3.8605083,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:street": "Alaafin Avenue",
+    "amenity": "restaurant",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 2639256412,
+  "lat": 7.4005054,
+  "lon": 3.8904498,
+  "tags": {
+    "addr:city": "Mokola, Ibadam",
+    "amenity": "restaurant",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 2883203615,
+  "lat": 7.4383180,
+  "lon": 3.8947412,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "internet_access": "no",
+    "name": "U&I",
+    "operator": "University of Ibadan",
+    "smoking": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3084902247,
+  "lat": 7.3616537,
+  "lon": 3.9100178,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Yeye Osun Cool Spot"
+  }
+},
+{
+  "type": "node",
+  "id": 3085023329,
+  "lat": 7.3777827,
+  "lon": 3.9028278,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Bukateria"
+  }
+},
+{
+  "type": "node",
+  "id": 3085040768,
+  "lat": 7.3671455,
+  "lon": 3.9001585,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 3711163928,
+  "lat": 7.4340368,
+  "lon": 3.9438724,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:postcode": "200222",
+    "addr:street": "Beside Banby Hospital, Iyana-Olopa Akobo",
+    "amenity": "fast_food",
+    "name": "Taste Atlas"
+  }
+},
+{
+  "type": "node",
+  "id": 5755968259,
+  "lat": 7.3948220,
+  "lon": 3.9240663,
+  "tags": {
+    "addr:city": "IBADAN",
+    "addr:postcode": "23402",
+    "addr:street": "Old Ife Road",
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "capacity": "50",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6137116552,
+  "lat": 7.4009014,
+  "lon": 3.8936395,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:postcode": "234102",
+    "addr:street": "Queen Elizabeth II Road",
+    "amenity": "restaurant",
+    "capacity": "50",
+    "cuisine": "pizza;french;regional",
+    "delivery": "yes",
+    "name": "LADE'S CUISINE",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7109128187,
+  "lat": 7.4156183,
+  "lon": 3.9153309,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Ibachi"
+  }
+},
+{
+  "type": "node",
+  "id": 7109303287,
+  "lat": 7.4187154,
+  "lon": 3.9145002,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Oliver's cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 8479716525,
+  "lat": 7.3876988,
+  "lon": 3.8915993,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:housenumber": "6",
+    "addr:street": "MKO Abiola Way",
+    "amenity": "restaurant",
+    "cuisine": "fish_and_chips;international",
+    "name": "Stone Café Bar & Grill",
+    "opening_hours": "24/7",
+    "phone": "+2349027727773",
+    "website": "https://www.instagram.com/stonecafeibadan/"
+  }
+},
+{
+  "type": "node",
+  "id": 9316149078,
+  "lat": 7.4301072,
+  "lon": 3.9892693,
+  "tags": {
+    "addr:city": "Oluwa",
+    "addr:housenumber": "204",
+    "addr:postcode": "30241",
+    "addr:street": "Iwo Road",
+    "amenity": "fast_food",
+    "brand": "McDonald's",
+    "brand:wikidata": "Q38076",
+    "brand:wikipedia": "en:McDonald's",
+    "cuisine": "burger",
+    "name": "McDonald's",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "opening_hours:covid19": "Mo-Su 08:00-20:00",
+    "phone": "+17076892033",
+    "takeaway": "yes",
+    "website": "www.mcdonalds.com"
+  }
+},
+{
+  "type": "node",
+  "id": 11049145167,
+  "lat": 7.3613008,
+  "lon": 3.8682118,
+  "tags": {
+    "amenity": "bar",
+    "name": "CLUB SWITCH"
+  }
+},
+{
+  "type": "node",
+  "id": 11904282706,
+  "lat": 7.4328497,
+  "lon": 3.9427164,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:postcode": "200222",
+    "addr:street": "Iyana Olopa, Akobo",
+    "amenity": "restaurant",
+    "name": "BiteMore Akobo",
+    "opening_hours": "Mo-Su 09:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 11904302798,
+  "lat": 7.4336631,
+  "lon": 3.9434411,
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:postcode": "200222",
+    "addr:street": "Iyana-Olopa, Akobo",
+    "amenity": "restaurant",
+    "cuisine": "chicken;ice_cream;donut",
+    "name": "Chicken Republic, Akobo",
+    "opening_hours": "Mo-Su 09:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 14107981987,
+  "lat": 7.4182257,
+  "lon": 3.9005535,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "the44 Garden Bar & Restaurant",
+    "opening_hours": "Mo-Su,PH 00:00+"
+  }
+},
+{
+  "type": "way",
+  "id": 608141740,
+  "center": {
+    "lat": 7.3922655,
+    "lon": 3.9611834
+  },
+  "tags": {
+    "addr:city": "Ibadan",
+    "addr:street": "Old Ife Road",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "MR BIGGS"
+  }
+},
+{
+  "type": "way",
+  "id": 653073198,
+  "center": {
+    "lat": 7.3481515,
+    "lon": 3.8796976
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "delivery": "no",
+    "name": "Tantalizers Restaurant",
+    "outdoor_seating": "no",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 746374037,
+  "center": {
+    "lat": 7.4960845,
+    "lon": 3.9095436
+  },
+  "tags": {
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Cappa bar - Community store",
+    "operator": "International Institute of Tropical Agriculture"
+  }
+},
+{
+  "type": "way",
+  "id": 846775519,
+  "center": {
+    "lat": 7.4170426,
+    "lon": 3.9105523
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "commercial",
+    "building:levels": "2",
+    "level": "1",
+    "name": "Platimum"
+  }
+}
+
+  ]
+}

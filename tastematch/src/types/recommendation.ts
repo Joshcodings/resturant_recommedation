@@ -73,4 +73,5 @@ export interface RecommendationResult {
   isLimitedData: boolean;   // cityRestaurantCount < 30
   mode?: 'strict' | 'flexible';
   relaxedCriteria?: string[];
+  scoringMode: 'rated' | 'unrated';
 }

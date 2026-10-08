@@ -181,12 +181,12 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
                   >
                     <MapPin size={11} strokeWidth={1.5} />
                     <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {r.locality}
+                      {r.locality || r.city}
                     </span>
                     <span>·</span>
-                    <span>⭐ {r.aggregate_rating.toFixed(1)}</span>
+                    <span>⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}</span>
                     <span>·</span>
-                    <span>{formatCost(r.average_cost_for_two, r.currency)}</span>
+                    <span>{r.hasPrice ? formatCost(r.average_cost_for_two, r.currency) : 'n/a'}</span>
                   </div>
                 </div>
                 <button

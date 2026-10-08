@@ -48,7 +48,7 @@ export function groupRecommend(
 
   // Sort: min(matchA, matchB) desc, then weighted_rating desc (amendment 2 — no additive blend)
   scored.sort((a, b) =>
-    b.consensus - a.consensus || b.weighted_rating - a.weighted_rating
+    b.consensus - a.consensus || (b.weighted_rating || 0) - (a.weighted_rating || 0)
   );
 
   // Deduplicate by name

@@ -11,20 +11,45 @@ function parseRestaurants(raw: Restaurant[]): RestaurantParsed[] {
       .map(c => c.trim())
       .filter(Boolean),
     hasCoords: !!(r.latitude && r.longitude && r.latitude !== 0 && r.longitude !== 0),
+    hasRating: typeof r.aggregate_rating === 'number' && r.aggregate_rating !== null,
+    hasPrice: typeof r.price_range === 'number' && r.price_range !== null,
   }));
 }
 
-/**
- * Load and parse restaurants.json exactly once.
- * Uses import.meta.env.BASE_URL so the path resolves correctly on
- * GitHub Pages, Netlify, and Vercel (amendment 7).
- */
 export async function loadRestaurants(): Promise<RestaurantParsed[]> {
   if (_data) return _data;
-  const url = `${import.meta.env.BASE_URL}data/restaurants.json`;
-  const res = await fetch(url);
+  
+  // 1. Load original Zomato data
+  const baseUrl = import.meta.env.BASE_URL;
+  const res = await fetch(`${baseUrl}data/restaurants.json`);
   if (!res.ok) throw new Error(`Failed to load restaurants.json: ${res.status}`);
   const raw: Restaurant[] = await res.json();
+  
+  // 2. Discover extra datasets via manifest
+  try {
+    const manifestRes = await fetch(`${baseUrl}data/manifest.json`);
+    if (manifestRes.ok) {
+      const manifest = await manifestRes.json();
+      for (const entry of manifest) {
+        if (entry.file) {
+          try {
+            const extraRes = await fetch(`${baseUrl}data/${entry.file}`);
+            if (extraRes.ok) {
+              const extraData = await extraRes.json();
+              raw.push(...extraData);
+            } else {
+              console.warn(`Failed to load extra dataset ${entry.file}: ${extraRes.status}`);
+            }
+          } catch (err) {
+            console.warn(`Error loading extra dataset ${entry.file}:`, err);
+          }
+        }
+      }
+    }
+  } catch (err) {
+    console.warn('No valid manifest.json found, or failed to parse. Proceeding with base data only.');
+  }
+
   _data = parseRestaurants(raw);
   return _data;
 }

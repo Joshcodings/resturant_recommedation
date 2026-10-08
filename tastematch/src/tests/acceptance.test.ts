@@ -16,6 +16,8 @@ beforeAll(() => {
       .map(c => c.trim())
       .filter(Boolean),
     hasCoords: !!(r.latitude && r.longitude && r.latitude !== 0 && r.longitude !== 0),
+    hasRating: typeof r.aggregate_rating === 'number' && r.aggregate_rating !== null,
+    hasPrice: typeof r.price_range === 'number' && r.price_range !== null,
   }));
 });
 

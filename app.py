@@ -1,12 +1,49 @@
 import pandas as pd
 import streamlit as st
+import json
+import os
+import numpy as np
 
 st.set_page_config(page_title="Restaurant Recommender", page_icon="🍽️")
 
 @st.cache_data
 def load():
-    d = pd.read_csv("reco_app.csv")
-    d["cuisine_list"] = d["cuisines"].str.split(",").apply(lambda xs: [x.strip() for x in xs])
+    base_dir = os.path.join("tastematch", "public", "data")
+    
+    with open(os.path.join(base_dir, "restaurants.json"), "r", encoding="utf-8") as f:
+        data = json.load(f)
+        
+    try:
+        with open(os.path.join(base_dir, "manifest.json"), "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+            for entry in manifest:
+                if "file" in entry:
+                    with open(os.path.join(base_dir, entry["file"]), "r", encoding="utf-8") as ext_f:
+                        extra_data = json.load(ext_f)
+                        data.extend(extra_data)
+    except Exception as e:
+        print(f"No valid manifest found or failed to load: {e}")
+        
+    d = pd.DataFrame(data)
+    
+    # Handle cuisines which might be None
+    def split_cuisines(c):
+        if pd.isna(c) or not isinstance(c, str):
+            return []
+        return [x.strip() for x in c.split(",")]
+        
+    d["cuisine_list"] = d["cuisines"].apply(split_cuisines)
+    
+    # Ensure nullable types for math
+    if "aggregate_rating" in d.columns:
+        d["aggregate_rating"] = pd.to_numeric(d["aggregate_rating"], errors="coerce")
+    if "votes" in d.columns:
+        d["votes"] = pd.to_numeric(d["votes"], errors="coerce")
+    if "price_range" in d.columns:
+        d["price_range"] = pd.to_numeric(d["price_range"], errors="coerce")
+    if "weighted_rating" in d.columns:
+        d["weighted_rating"] = pd.to_numeric(d["weighted_rating"], errors="coerce")
+        
     return d
 
 reco = load()
@@ -19,12 +56,26 @@ def recommend(country, city, price_range=None, cuisines=None,
     if online_delivery:
         pool = pool[pool["has_online_delivery"] == 1]
     if pool.empty:
-        return pool, "No rated restaurants match this city and these service needs."
+        return pool, "No restaurants match this city and these service needs."
 
     wanted = set(cuisines or [])
     pool["cuisine_match"] = pool["cuisine_list"].apply(
         lambda xs: len(wanted & set(xs)) / len(wanted) if wanted else 0.0)
-    pool["score"] = pool["weighted_rating"] + 0.5 * pool["cuisine_match"]
+        
+    # Unrated logic fallback
+    has_ratings = pool["weighted_rating"].notna().any()
+    
+    if has_ratings:
+        pool["score"] = pool["weighted_rating"].fillna(0) + 0.5 * pool["cuisine_match"]
+    else:
+        # If unrated, score by cuisine_match
+        pool["score"] = 0.5 * pool["cuisine_match"]
+        # Add completeness bonus if data_source is OpenStreetMap
+        if "data_source" in pool.columns:
+            # simple completeness check for OSM
+            pool["score"] += pool["phone"].notna().astype(int) * 0.1
+            pool["score"] += pool["opening_hours"].notna().astype(int) * 0.1
+            pool["score"] += pool["website"].notna().astype(int) * 0.1
 
     stages = [
         ("Exact price range, cuisine required", 0, True),
@@ -35,12 +86,23 @@ def recommend(country, city, price_range=None, cuisines=None,
     for label, tol, need_cuisine in stages:
         sub = pool
         if price_range is not None:
-            sub = sub[(sub["price_range"] - price_range).abs() <= tol]
+            # If price_range is missing in data, treat as mismatch unless tol is large enough
+            # We can allow missing prices if tol >= 4 (any price range)
+            if tol >= 4:
+                pass # any price
+            else:
+                price_diff = (sub["price_range"] - price_range).abs()
+                sub = sub[price_diff <= tol]
+                
         if need_cuisine and wanted:
             sub = sub[sub["cuisine_match"] > 0]
         sub = sub.sort_values("score", ascending=False).drop_duplicates("restaurant_name")
         if len(sub) >= top_n:
             break
+            
+    if not has_ratings:
+        label += " (Unrated city, ordered by completeness)"
+        
     return sub.head(top_n), label
 
 st.title("🍽️ Restaurant Recommender")
@@ -54,7 +116,10 @@ cities = sorted(reco.loc[reco["country"] == country, "city"].unique())
 city = st.sidebar.selectbox("City", cities)
 
 in_city = reco[(reco["country"] == country) & (reco["city"] == city)]
-if len(in_city) < 30:
+has_ratings = in_city["weighted_rating"].notna().any()
+if not has_ratings:
+    st.sidebar.warning(f"{len(in_city)} locations from OpenStreetMap. No ratings available.")
+elif len(in_city) < 30:
     st.sidebar.warning(f"Only {len(in_city)} rated restaurants here, so choices are limited.")
 
 any_price = st.sidebar.checkbox("Any price range")
@@ -74,16 +139,32 @@ if st.sidebar.button("Recommend", type="primary"):
         (st.info if note.startswith("Relaxed") else st.success)(note)
         for _, r in res.iterrows():
             st.subheader(r["restaurant_name"])
-            st.write(f"📍 {r['locality']}  ·  🍴 {r['cuisines']}")
-            cost = r["average_cost_for_two"]
-            cost_txt = "n/a" if pd.isna(cost) else f"{int(cost)} {r['currency']}"
+            st.write(f"📍 {r.get('locality', r['city'])}  ·  🍴 {r['cuisines']}")
+            
             c1, c2, c3, c4 = st.columns(4)
-            c1.metric("Rating", r["aggregate_rating"])
-            c2.metric("Votes", int(r["votes"]))
+            
+            agg = r.get("aggregate_rating")
+            c1.metric("Rating", f"{agg:.1f}" if pd.notna(agg) else "Unrated")
+            
+            votes = r.get("votes")
+            c2.metric("Votes", int(votes) if pd.notna(votes) else "n/a")
+            
+            cost = r.get("average_cost_for_two")
+            curr = r.get("currency", "")
+            cost_txt = "n/a" if pd.isna(cost) else f"{int(cost)} {curr}"
             c3.metric("Cost for two", cost_txt)
-            c4.metric("Price range", int(r["price_range"]))
-            st.caption(f"Table booking: {'Yes' if r['has_table_booking'] == 1 else 'No'}  ·  "
-                       f"Online delivery: {'Yes' if r['has_online_delivery'] == 1 else 'No'}")
+            
+            pr = r.get("price_range")
+            c4.metric("Price range", int(pr) if pd.notna(pr) else "n/a")
+            
+            has_tb = r.get("has_table_booking")
+            has_od = r.get("has_online_delivery")
+            st.caption(f"Table booking: {'Yes' if has_tb == 1 else 'No' if has_tb == 0 else 'Unknown'}  ·  "
+                       f"Online delivery: {'Yes' if has_od == 1 else 'No' if has_od == 0 else 'Unknown'}")
+                       
+            ds = r.get("data_source")
+            if pd.notna(ds) and ds == "OpenStreetMap":
+                st.caption(f"OSM Location | {r.get('place_type', '').replace('_', ' ').title()}")
             st.divider()
 else:
     st.write("Choose your preferences in the sidebar, then press **Recommend**.")

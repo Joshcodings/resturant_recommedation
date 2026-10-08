@@ -62,3 +62,32 @@ npm run dev
 ```
 
 See [tastematch/README.md](tastematch/README.md) for full documentation on the hybrid recommendation pipeline, evaluation benchmark, and Vercel/Netlify deployment.
+
+---
+
+## 🗺️ New Markets & OpenStreetMap (Beta)
+
+We are actively expanding into new markets starting with Nigeria (**Lagos**, **Abuja**, and **Port Harcourt**). Because the original Zomato dataset did not cover these regions, we fetch live place data from **OpenStreetMap (OSM) via Overpass API**.
+
+### Verified Dataset Coverage (from `scripts/validate_datasets.py`):
+- **Total OSM Records**: 408 places
+  - **Lagos**: 242 (59.3%)
+  - **Abuja**: 123 (30.1%)
+  - **Port Harcourt**: 43 (10.5%)
+- **Attribute Coverage**:
+  - Cuisines: 120 / 408 (29.4%)
+  - Localities: 246 / 408 (60.3%)
+  - Addresses: 125 / 408 (30.6%)
+  - Opening Hours: 64 / 408 (15.7%)
+  - Phone: 56 / 408 (13.7%)
+  - Website: 56 / 408 (13.7%)
+- **Place Types**:
+  - Restaurants: 223
+  - Fast Food: 78
+  - Bars: 75
+  - Cafes: 32
+
+### Capabilities & Engine Behavior:
+- **Unrated/Unpriced Mode**: OSM data lacks standard Zomato ratings and average cost fields. The recommendation engine dynamically switches to an unrated heuristic mode — ranking places strictly by cuisine match, proximity, and listing completeness.
+- **Graceful UI Degradation**: The UI dynamically hides sliders and options that require missing data fields, providing transparent context.
+- **Data Attribution**: The data extracted for these regions is licensed under [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/). See [NOTICE-OSM.md](NOTICE-OSM.md) for details.

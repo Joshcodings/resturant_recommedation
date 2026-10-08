@@ -124,8 +124,8 @@ export function runRecommendationEvaluation(
     // Has at least 1 wanted cuisine, within +/-1 price, and weighted_rating >= 3.8
     const isRelevant = (r: RestaurantParsed): boolean => {
       const sharesCuisine = r.cuisineList.some(c => wantedCuisines.has(c.toLowerCase()));
-      const priceClose = Math.abs(r.price_range - q.priceRange) <= 1;
-      const qualityPass = r.weighted_rating >= 3.75;
+      const priceClose = r.hasPrice && Math.abs(r.price_range! - q.priceRange) <= 1;
+      const qualityPass = r.hasRating && r.weighted_rating! >= 3.75;
       return sharesCuisine && priceClose && qualityPass;
     };
 
@@ -135,7 +135,7 @@ export function runRecommendationEvaluation(
 
     // 1. Baseline (Top-Rated)
     const baselineRecs = [...cityPool]
-      .sort((a, b) => b.weighted_rating - a.weighted_rating)
+      .sort((a, b) => (b.weighted_rating || 0) - (a.weighted_rating || 0))
       .slice(0, k);
 
     // 2. Content-Based
@@ -145,13 +145,13 @@ export function runRecommendationEvaluation(
         const sim = wantedCuisines.size > 0 ? matches / wantedCuisines.size : 0;
         return { ...r, simScore: sim };
       })
-      .sort((a, b) => b.simScore - a.simScore || b.weighted_rating - a.weighted_rating)
+      .sort((a, b) => b.simScore - a.simScore || (b.weighted_rating || 0) - (a.weighted_rating || 0))
       .slice(0, k);
 
     // 3. Preference-Based
     const prefRecs = [...cityPool]
       .filter(r => r.price_range === q.priceRange)
-      .sort((a, b) => b.weighted_rating - a.weighted_rating)
+      .sort((a, b) => (b.weighted_rating || 0) - (a.weighted_rating || 0))
       .slice(0, k);
 
     // 4. Hybrid (TasteMatch Recommender)

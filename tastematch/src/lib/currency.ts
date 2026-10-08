@@ -314,7 +314,7 @@ export interface CountryTierStats {
  * Returns null if fewer than 5 rated restaurants with valid cost exist (amendment 8).
  */
 export function computeCountryTierMedian(
-  allData: Array<{ country: string; price_range: number; average_cost_for_two: number | null; currency: string }>,
+  allData: Array<{ country: string; price_range: number | null; average_cost_for_two: number | null; currency: string }>,
   country: string,
   tier: 1 | 2 | 3 | 4,
 ): CountryTierStats {

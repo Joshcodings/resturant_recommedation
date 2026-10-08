@@ -25,7 +25,7 @@ function makeMock(overrides: Partial<RestaurantParsed> = {}): RestaurantParsed {
     has_online_delivery: 1,
     latitude: 28.63,
     longitude: 77.22,
-    hasCoords: true,
+    hasCoords: true, hasRating: true, hasPrice: true,
     ...overrides,
   };
 }

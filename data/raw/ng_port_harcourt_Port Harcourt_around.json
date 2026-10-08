@@ -1,0 +1,604 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-08T10:52:38Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 268971761,
+  "lat": 4.8227373,
+  "lon": 7.0397722,
+  "tags": {
+    "amenity": "restaurant",
+    "created_by": "JOSM",
+    "name": "La Chinan"
+  }
+},
+{
+  "type": "node",
+  "id": 501402596,
+  "lat": 4.7106698,
+  "lon": 7.1548961,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2006227",
+    "amenity": "restaurant",
+    "is_in:country": "Nigeria",
+    "name": "OPMC Restaurant",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 3604578822,
+  "lat": 4.8225713,
+  "lon": 7.0537150,
+  "tags": {
+    "addr:city": "Woji",
+    "addr:street": "Woji Road",
+    "alt_name": "Kilimanjaro Woji",
+    "amenity": "fast_food",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "contact:website": "https://kilimanjaro-restaurants.com/menu/woji",
+    "cuisine": "nigerian",
+    "name": "Kilimanjaro"
+  }
+},
+{
+  "type": "node",
+  "id": 4136197112,
+  "lat": 4.8134376,
+  "lon": 6.9836067,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Kilmongare Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 4209434459,
+  "lat": 4.7948943,
+  "lon": 7.0430043,
+  "tags": {
+    "addr:city": "Port Harcourt",
+    "addr:housenumber": "2",
+    "addr:postcode": "500211",
+    "addr:street": "Somitel Close",
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Somitel Hotel & Resorts Limited",
+    "smoking": "separated"
+  }
+},
+{
+  "type": "node",
+  "id": 5586215622,
+  "lat": 4.8242497,
+  "lon": 7.0064405,
+  "tags": {
+    "addr:city": "Port Harcourt",
+    "addr:street": "Port Harcourt - Aba Expressway",
+    "alt_name": "Kilimajaro Gra",
+    "amenity": "fast_food",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "cuisine": "nigerian",
+    "name": "Kilimanjaro",
+    "phone": "+234 700 5454 3663",
+    "takeaway": "yes",
+    "website": "https://www.kilimanjaro-restaurants.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 5593003023,
+  "lat": 4.8533584,
+  "lon": 7.0626126,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Genesis"
+  }
+},
+{
+  "type": "node",
+  "id": 5593776122,
+  "lat": 4.8360040,
+  "lon": 7.0253963,
+  "tags": {
+    "addr:housenumber": "31",
+    "addr:street": "Old Aba Road",
+    "amenity": "restaurant",
+    "name": "De Giant Expressway"
+  }
+},
+{
+  "type": "node",
+  "id": 5595084925,
+  "lat": 4.8481138,
+  "lon": 7.0498353,
+  "tags": {
+    "addr:street": "Enugu - Port Harcourt Expressway",
+    "amenity": "fast_food",
+    "branch": "Rumuibekwe",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "cuisine": "nigerian",
+    "name": "Kilimanjaro",
+    "takeaway": "yes",
+    "website": "https://kilimanjaro-restaurants.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 5597054521,
+  "lat": 4.8358700,
+  "lon": 7.0278927,
+  "tags": {
+    "addr:housenumber": "53",
+    "addr:street": "Old Aba Road",
+    "amenity": "fast_food",
+    "name": "Shandee's"
+  }
+},
+{
+  "type": "node",
+  "id": 5599579526,
+  "lat": 4.8488603,
+  "lon": 7.0512005,
+  "tags": {
+    "addr:street": "Enugu - Port Harcourt Expressway",
+    "amenity": "fast_food",
+    "name": "Mr Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 5599579536,
+  "lat": 4.8341644,
+  "lon": 7.0341089,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "The Promise"
+  }
+},
+{
+  "type": "node",
+  "id": 5599590229,
+  "lat": 4.8441588,
+  "lon": 7.0412718,
+  "tags": {
+    "addr:street": "Old Aba Road",
+    "amenity": "fast_food",
+    "name": "Best Bite"
+  }
+},
+{
+  "type": "node",
+  "id": 5599600229,
+  "lat": 4.8397021,
+  "lon": 7.0390484,
+  "tags": {
+    "addr:street": "Old Aba Road",
+    "amenity": "bar",
+    "name": "Dcircuit"
+  }
+},
+{
+  "type": "node",
+  "id": 5599600237,
+  "lat": 4.8345119,
+  "lon": 7.0335609,
+  "tags": {
+    "addr:street": "Trans Amadi Road",
+    "amenity": "fast_food",
+    "name": "The Chicken Replubic"
+  }
+},
+{
+  "type": "node",
+  "id": 5600372021,
+  "lat": 4.8340607,
+  "lon": 7.0487330,
+  "tags": {
+    "addr:housenumber": "74",
+    "addr:street": "Woji Road",
+    "amenity": "fast_food",
+    "name": "Ounje Palace"
+  }
+},
+{
+  "type": "node",
+  "id": 5600372723,
+  "lat": 4.8388217,
+  "lon": 7.0439728,
+  "tags": {
+    "addr:city": "Port Harcourt",
+    "addr:street": "Woji Road",
+    "alt_name": "Genesis Woji Road",
+    "amenity": "fast_food",
+    "name": "Genesis",
+    "website": "https://genesisrestaurant.com.ng/home/"
+  }
+},
+{
+  "type": "node",
+  "id": 5618995024,
+  "lat": 4.8358505,
+  "lon": 7.0253652,
+  "tags": {
+    "addr:street": "Market Road",
+    "amenity": "fast_food",
+    "name": "De Giant Express"
+  }
+},
+{
+  "type": "node",
+  "id": 5738102325,
+  "lat": 4.8533755,
+  "lon": 6.9747253,
+  "tags": {
+    "addr:street": "NTA Road",
+    "amenity": "fast_food",
+    "name": "Sizzlers"
+  }
+},
+{
+  "type": "node",
+  "id": 7134000985,
+  "lat": 4.7113655,
+  "lon": 7.1542667,
+  "tags": {
+    "addr:street": "OPMC",
+    "amenity": "restaurant",
+    "name": "OPMC Restaurant",
+    "name:sr": "Onne Restoran",
+    "opening_hours": "Mo-Su 06:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7956172590,
+  "lat": 4.8379349,
+  "lon": 7.0255247,
+  "tags": {
+    "alt_name": "Genesis Rumuomasi",
+    "amenity": "fast_food",
+    "name": "Genesis",
+    "phone": "+234 806 595 9218"
+  }
+},
+{
+  "type": "node",
+  "id": 7956224791,
+  "lat": 4.8260538,
+  "lon": 7.0796749,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Chicken Republic"
+  }
+},
+{
+  "type": "node",
+  "id": 7956225590,
+  "lat": 4.8380834,
+  "lon": 7.0704009,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ellsworth Event Center"
+  }
+},
+{
+  "type": "node",
+  "id": 7956225591,
+  "lat": 4.8258265,
+  "lon": 7.0811321,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Refill Fast Food & African Dishes"
+  }
+},
+{
+  "type": "node",
+  "id": 11874137669,
+  "lat": 4.8523691,
+  "lon": 7.0571119,
+  "tags": {
+    "amenity": "bar",
+    "name": "Stopover bar"
+  }
+},
+{
+  "type": "way",
+  "id": 514465271,
+  "center": {
+    "lat": 4.7946724,
+    "lon": 7.0293132
+  },
+  "tags": {
+    "addr:city": "Port Harcourt",
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "regional;african;portuguese",
+    "name": "Nado's"
+  }
+},
+{
+  "type": "way",
+  "id": 521564618,
+  "center": {
+    "lat": 4.8777734,
+    "lon": 6.9156886
+  },
+  "tags": {
+    "addr:city": "port harcourt",
+    "amenity": "cafe",
+    "building": "yes",
+    "cuisine": "regional;burger;pizza",
+    "internet_access": "yes",
+    "name": "Habitat Hotel & Resort",
+    "outdoor_seating": "yes",
+    "smoking": "outside"
+  }
+},
+{
+  "type": "way",
+  "id": 521805087,
+  "center": {
+    "lat": 4.8759477,
+    "lon": 6.9152637
+  },
+  "tags": {
+    "addr:city": "port harcourt",
+    "amenity": "cafe",
+    "building": "yes",
+    "internet_access": "no",
+    "name": "Car wash cafe"
+  }
+},
+{
+  "type": "way",
+  "id": 529672253,
+  "center": {
+    "lat": 4.8759413,
+    "lon": 6.9160932
+  },
+  "tags": {
+    "addr:city": "Rumualogu/Port Harcourt",
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Kendy's Bar"
+  }
+},
+{
+  "type": "way",
+  "id": 540407680,
+  "center": {
+    "lat": 4.8757973,
+    "lon": 6.9173298
+  },
+  "tags": {
+    "addr:city": "Rumualogu/Port Harcourt",
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Neighbourhood Bar",
+    "opening_hours": "24/7",
+    "smoking": "separated"
+  }
+},
+{
+  "type": "way",
+  "id": 541046677,
+  "center": {
+    "lat": 4.8954561,
+    "lon": 6.9068392
+  },
+  "tags": {
+    "addr:city": "Choba Port Harcourt",
+    "amenity": "restaurant",
+    "building": "yes",
+    "capacity": "5",
+    "delivery": "no",
+    "name": "Genesis Fast Food Choba",
+    "smoking": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 547049024,
+  "center": {
+    "lat": 4.8296182,
+    "lon": 6.9760819
+  },
+  "tags": {
+    "addr:street": "Ada George Road",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Pepperoni"
+  }
+},
+{
+  "type": "way",
+  "id": 547339647,
+  "center": {
+    "lat": 4.8056905,
+    "lon": 6.9309036
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Chews  Restaurant Ignatius Ajuru University of Education"
+  }
+},
+{
+  "type": "way",
+  "id": 555998774,
+  "center": {
+    "lat": 4.8983857,
+    "lon": 6.9065289
+  },
+  "tags": {
+    "addr:city": "Choba Port Harcourt",
+    "addr:street": "East - West Road",
+    "alt_name": "Kilimanjaro Choba",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Kilimanjaro",
+    "website": "https://www.kilimanjaro-restaurants.com/menu"
+  }
+},
+{
+  "type": "way",
+  "id": 556784959,
+  "center": {
+    "lat": 4.8756702,
+    "lon": 6.9135235
+  },
+  "tags": {
+    "addr:city": "Rumualogu/Port Harcourt",
+    "amenity": "cafe",
+    "building": "yes",
+    "internet_access": "no",
+    "name": "Viewing Centre",
+    "smoking": "separated"
+  }
+},
+{
+  "type": "way",
+  "id": 621398993,
+  "center": {
+    "lat": 4.8988639,
+    "lon": 6.9236564
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Quality food Kitchen"
+  }
+},
+{
+  "type": "way",
+  "id": 633418429,
+  "center": {
+    "lat": 4.8975279,
+    "lon": 6.9065125
+  },
+  "tags": {
+    "addr:city": "Choba Port Harcourt",
+    "amenity": "bar",
+    "building": "yes",
+    "name": "Zarakoza"
+  }
+},
+{
+  "type": "way",
+  "id": 1184373106,
+  "center": {
+    "lat": 4.8830562,
+    "lon": 6.9406649
+  },
+  "tags": {
+    "addr:city": "Rumuosi junctin",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Old Spice"
+  }
+},
+{
+  "type": "way",
+  "id": 1184373318,
+  "center": {
+    "lat": 4.8934578,
+    "lon": 6.9141061
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Dominoes Pizza"
+  }
+},
+{
+  "type": "way",
+  "id": 1350327928,
+  "center": {
+    "lat": 4.8910156,
+    "lon": 7.0016343
+  },
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "branch": "Rukpokwu",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "building": "yes",
+    "cuisine": "nigerian;pizza;chicken;ice_cream;breakfast;pasta;african",
+    "delivery": "yes",
+    "diet:chicken": "yes",
+    "diet:dairy": "yes",
+    "diet:local": "yes",
+    "diet:meat": "yes",
+    "diet:non-vegetarian": "yes",
+    "highchair": "yes",
+    "name": "Kilimanjaro",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "operator": "Sundry Foods",
+    "outdoor_seating": "no",
+    "smoking": "no",
+    "takeaway": "yes",
+    "website": "https://kilimanjaro-restaurants.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1363185717,
+  "center": {
+    "lat": 4.9055318,
+    "lon": 6.9192476
+  },
+  "tags": {
+    "addr:city": "University of Port Harcourt, Abuja Campus, Choba, Rivers State.",
+    "amenity": "restaurant",
+    "building": "restaurant",
+    "building:levels": "1",
+    "name": "Greenhouse Extension (Abuja Campus)"
+  }
+},
+{
+  "type": "way",
+  "id": 1365460401,
+  "center": {
+    "lat": 4.8997300,
+    "lon": 6.9213409
+  },
+  "tags": {
+    "addr:city": "University of Port Harcourt, Abuja Campus, Choba, Rivers State.",
+    "addr:street": "Prof. Owunari Abraham Georgewill Drive",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Mama Abuja"
+  }
+},
+{
+  "type": "way",
+  "id": 1419580733,
+  "center": {
+    "lat": 4.8998494,
+    "lon": 6.9211639
+  },
+  "tags": {
+    "addr:city": "University of Port Harcourt, Abuja Campus, Choba, Rivers State.",
+    "addr:street": "Prof. Owunari Abraham Georgewill Drive",
+    "amenity": "restaurant",
+    "building": "yes",
+    "diet:fish": "yes",
+    "name": "Bolle Joint"
+  }
+}
+
+  ]
+}

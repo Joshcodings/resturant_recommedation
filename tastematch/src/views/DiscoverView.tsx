@@ -13,7 +13,7 @@ import { CompareTray, CompareModal } from '@/components/compare/CompareComponent
 import { AlertTriangle, Info, Map, ChevronDown, CheckCircle2 } from 'lucide-react';
 
 export default function DiscoverView() {
-  const { data, loading, countryCityIndex } = useRestaurants();
+  const { data, loading, countryCityIndex, getCityCapabilities } = useRestaurants();
 
   // Selected filters
   const [country, setCountry] = useState('India');
@@ -53,6 +53,8 @@ export default function DiscoverView() {
       }
     }
   }, [countryCityIndex, country, city]);
+
+  const caps = getCityCapabilities(city);
 
   // Handle active preset overriding price selection
   const effectivePriceRange = useMemo(() => {
@@ -103,7 +105,7 @@ export default function DiscoverView() {
       _liveScore: liveScore(r, weights),
     }));
 
-    pool.sort((a, b) => b._liveScore - a._liveScore || b.votes - a.votes);
+    pool.sort((a, b) => b._liveScore - a._liveScore || (b.votes || 0) - (a.votes || 0));
 
     return pool.map((r, i) => ({
       ...r,
@@ -154,7 +156,9 @@ export default function DiscoverView() {
             maxWidth: 640,
           }}
         >
-          Data-driven restaurant recommendations powered by Kaggle’s Zomato dataset.
+          {country === 'Nigeria' 
+            ? 'Data-driven restaurant recommendations powered by OpenStreetMap data. '
+            : 'Data-driven restaurant recommendations powered by Kaggle’s Zomato dataset. '}
           Choose your city, set your preferences, or tune priorities live.
         </p>
 
@@ -191,6 +195,7 @@ export default function DiscoverView() {
               if (p?.requireOnlineDelivery) setNeedsOnlineDelivery(true);
             }}
             onSurpriseMe={handleSurpriseMe}
+            caps={caps}
           />
 
           {/* More Options & Priority Sliders */}
@@ -207,6 +212,7 @@ export default function DiscoverView() {
             onRadiusChange={setRadiusKm}
             diversificationLambda={diversificationLambda}
             onDiversificationChange={setDiversificationLambda}
+            caps={caps}
           />
         </div>
       </section>
@@ -215,6 +221,25 @@ export default function DiscoverView() {
       <section style={{ marginTop: 24 }}>
         {/* Notices and Warnings */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 20 }}>
+          
+          {/* Unrated City Banner */}
+          {!caps.hasRatings && (
+            <div style={{
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              borderRadius: 8,
+              padding: '12px 16px',
+              display: 'flex',
+              gap: 12,
+              alignItems: 'center',
+            }}>
+              <Info size={18} style={{ color: 'var(--accent-deep)' }} />
+              <p style={{ margin: 0, fontSize: 13, color: 'var(--text-muted)' }}>
+                No ratings available for {city}. Results are ordered by cuisine match, nearness and listing completeness, not by quality.
+              </p>
+            </div>
+          )}
+
           {/* Active Mode and Filter Status Badges */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
             <span
@@ -567,7 +592,7 @@ export default function DiscoverView() {
           const scored = rankedRestaurants.find(r => r.restaurant_id === s.restaurant_id) || {
             ...s,
             cuisineMatch: 0,
-            score: s.weighted_rating,
+            score: s.hasRating ? (s.weighted_rating || 0) : 0,
             rank: 0,
             whyThisPick: '',
           };

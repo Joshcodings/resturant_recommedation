@@ -1,0 +1,59 @@
+[
+  {
+    "city": "Abuja",
+    "kept_id": 10081962281791,
+    "kept_name": "Bites & Grills",
+    "dropped": [
+      {
+        "id": 10081962281811,
+        "name": "Bites & Grills",
+        "source_id": "node/8196228181"
+      },
+      {
+        "id": 10008812488552,
+        "name": "Bites & Grills",
+        "source_id": "way/881248855"
+      }
+    ],
+    "distance_m": 4
+  },
+  {
+    "city": "Abuja",
+    "kept_id": 10127556192011,
+    "kept_name": "IYABS PLACE",
+    "dropped": [
+      {
+        "id": 10127556208011,
+        "name": "IYABS PLACE",
+        "source_id": "node/12755620801"
+      }
+    ],
+    "distance_m": 1
+  },
+  {
+    "city": "Lagos",
+    "kept_id": 10052186373191,
+    "kept_name": "The Grill Room",
+    "dropped": [
+      {
+        "id": 10053818265541,
+        "name": "The Grill Room Bar",
+        "source_id": "node/5381826554"
+      }
+    ],
+    "distance_m": 8
+  },
+  {
+    "city": "Lagos",
+    "kept_id": 10135362466931,
+    "kept_name": "Balo's Place",
+    "dropped": [
+      {
+        "id": 10014755121992,
+        "name": "Balo's Place",
+        "source_id": "way/1475512199"
+      }
+    ],
+    "distance_m": 0
+  }
+]

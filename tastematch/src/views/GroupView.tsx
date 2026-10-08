@@ -337,7 +337,7 @@ export default function GroupView() {
                     const scored: ScoredRestaurant = {
                       ...r,
                       cuisineMatch: (r.matchA + r.matchB) / 2,
-                      score: r.weighted_rating,
+                      score: r.hasRating ? (r.weighted_rating || 0) : 0,
                       rank: r.rank,
                       whyThisPick: `Matches ${Math.round(r.matchA * 100)}% of Person A and ${Math.round(r.matchB * 100)}% of Person B preferences.`,
                     };
@@ -459,9 +459,9 @@ export default function GroupView() {
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border)', paddingTop: 10 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                           <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 14, color: 'var(--text)' }}>
-                            ⭐ {r.aggregate_rating.toFixed(1)}
+                            ⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}
                             <span style={{ fontSize: 11, fontWeight: 400, color: 'var(--text-muted)', marginLeft: 4 }}>
-                              ({formatVotes(r.votes)})
+                              ({r.hasRating ? formatVotes(r.votes) : 'n/a'})
                             </span>
                           </span>
                           <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
@@ -496,7 +496,7 @@ export default function GroupView() {
           const scored: ScoredRestaurant = {
             ...s,
             cuisineMatch: 0,
-            score: s.weighted_rating,
+            score: s.hasRating ? (s.weighted_rating || 0) : 0,
             rank: 0,
             whyThisPick: '',
           };

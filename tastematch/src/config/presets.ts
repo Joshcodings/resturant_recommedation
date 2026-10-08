@@ -4,6 +4,8 @@
  * An active preset overrides the UI price selection.
  */
 
+import type { CityCapabilities } from '@/lib/capabilities';
+
 export interface MoodPreset {
   id: string;
   label: string;
@@ -24,6 +26,8 @@ export interface MoodPreset {
   maxPriceRange: (1 | 2 | 3 | 4) | null;
   /** Minimum price_range, or null if not required */
   minPriceRange: (1 | 2 | 3 | 4) | null;
+  /** Which city capabilities must be true for this preset to be enabled */
+  requiredCapabilities?: (keyof CityCapabilities)[];
 }
 
 export const MOOD_PRESETS: MoodPreset[] = [
@@ -39,6 +43,7 @@ export const MOOD_PRESETS: MoodPreset[] = [
     requireOnlineDelivery: false,
     minPriceRange: 3,
     maxPriceRange: null,
+    requiredCapabilities: ['hasPrices', 'hasRatings', 'hasBooking'],
   },
   {
     id: 'cheap_eats',
@@ -52,6 +57,7 @@ export const MOOD_PRESETS: MoodPreset[] = [
     requireOnlineDelivery: false,
     minPriceRange: 1,
     maxPriceRange: 1,
+    requiredCapabilities: ['hasPrices', 'hasRatings'],
   },
   {
     id: 'hidden_gems',
@@ -65,6 +71,7 @@ export const MOOD_PRESETS: MoodPreset[] = [
     requireOnlineDelivery: false,
     minPriceRange: null,
     maxPriceRange: null,
+    requiredCapabilities: ['hasRatings'],
   },
   {
     id: 'crowd_favourites',
@@ -78,6 +85,7 @@ export const MOOD_PRESETS: MoodPreset[] = [
     requireOnlineDelivery: false,
     minPriceRange: null,
     maxPriceRange: null,
+    requiredCapabilities: ['hasRatings'],
   },
   {
     id: 'quick_bite',
@@ -91,5 +99,6 @@ export const MOOD_PRESETS: MoodPreset[] = [
     requireOnlineDelivery: true,
     minPriceRange: null,
     maxPriceRange: 2,
+    requiredCapabilities: ['hasPrices'], // OSM might not have delivery mapped, but we will limit by price
   },
 ];
