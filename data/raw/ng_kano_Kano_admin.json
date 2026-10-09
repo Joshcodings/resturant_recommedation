@@ -1,0 +1,640 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:17:39Z",
+    "timestamp_areas_base": "2026-10-08T05:09:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 359595074,
+  "lat": 11.9986821,
+  "lon": 8.5481942,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chinese"
+  }
+},
+{
+  "type": "node",
+  "id": 2541470332,
+  "lat": 12.0119973,
+  "lon": 8.5549855,
+  "tags": {
+    "addr:city": "Kano",
+    "amenity": "restaurant",
+    "cuisine": "lebanese",
+    "name": "Lebanese Club"
+  }
+},
+{
+  "type": "node",
+  "id": 2877344413,
+  "lat": 12.0048240,
+  "lon": 8.5446201,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Down Town Takeaway"
+  }
+},
+{
+  "type": "node",
+  "id": 2882629539,
+  "lat": 12.0075651,
+  "lon": 8.5394529,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Mr. Bigg's",
+    "opening_hours": "Mo-Sa 08:00-22:00; Su 09:00-22:00",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2886219694,
+  "lat": 11.9968985,
+  "lon": 8.5620969,
+  "tags": {
+    "addr:city": "Kano",
+    "addr:country": "NG",
+    "addr:housenumber": "67",
+    "addr:street": "Sultan Road",
+    "amenity": "restaurant",
+    "contact:phone": "+234 8122199999",
+    "contact:website": "http://www.cilantrorestaurants.com",
+    "cuisine": "indian",
+    "description": "Restaurant & Launge",
+    "name": "Cilantro",
+    "source": "http://www.openstreetmap.org/note/175872"
+  }
+},
+{
+  "type": "node",
+  "id": 3218897750,
+  "lat": 11.9969603,
+  "lon": 8.5501551,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fine Time Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 4515433259,
+  "lat": 12.0017710,
+  "lon": 8.5191692,
+  "tags": {
+    "addr:street": "Opp. Mukaddas Bafalle House",
+    "amenity": "fast_food",
+    "cuisine": "regional",
+    "drive_through": "yes",
+    "name": "M.Magaji Mai Shayi",
+    "operator": "Magaji",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4904052000,
+  "lat": 12.0249234,
+  "lon": 8.5659445,
+  "tags": {
+    "addr:city": "Kano",
+    "addr:street": "igbo road",
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "delivery": "yes",
+    "name": "igwe palace",
+    "outdoor_seating": "yes",
+    "smoking": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4914914397,
+  "lat": 12.0081482,
+  "lon": 8.5539521,
+  "tags": {
+    "addr:street": "Hadejia Road",
+    "amenity": "restaurant",
+    "capacity": "40",
+    "delivery": "yes",
+    "name": "Bakers Oven",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4914914398,
+  "lat": 12.0081331,
+  "lon": 8.5541675,
+  "tags": {
+    "addr:street": "Hadejia Road",
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "name": "Chicken Casle"
+  }
+},
+{
+  "type": "node",
+  "id": 5568912721,
+  "lat": 12.0017751,
+  "lon": 8.5429686,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Dalal Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5570853821,
+  "lat": 11.9975566,
+  "lon": 8.5519709,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Palace Chinese Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5779265353,
+  "lat": 12.0002659,
+  "lon": 8.5354044,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "barbecue;african;lebanese",
+    "name": "Halal Meat Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5781914253,
+  "lat": 12.0009278,
+  "lon": 8.5363267,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "african",
+    "name": "Hajiya Balangu Traditional Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 9189059026,
+  "lat": 11.9677916,
+  "lon": 8.5497514,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Hajiya Iya Mai Tuwo Nepa"
+  }
+},
+{
+  "type": "node",
+  "id": 9189356056,
+  "lat": 11.9727555,
+  "lon": 8.5094404,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Musa Mai Doya"
+  }
+},
+{
+  "type": "node",
+  "id": 9291311734,
+  "lat": 11.9548305,
+  "lon": 8.5866767,
+  "tags": {
+    "addr:city": "Kureken Sani",
+    "addr:housenumber": "5",
+    "addr:street": "grove st",
+    "amenity": "bar",
+    "brewery": "yes",
+    "min_age": "21",
+    "name": "bar and grille",
+    "opening_hours": "Mo-Su 08:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 12282062398,
+  "lat": 12.0491112,
+  "lon": 8.5804971,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "yes",
+    "name": "KWASHA KWASHA INVESTMENT AND COMMUNICATION SERVICES",
+    "operator": "private_individual",
+    "pay_amount": "500",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "yes",
+    "users_boy": "no",
+    "users_female": "yes",
+    "users_girl": "no",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282074103,
+  "lat": 12.0392005,
+  "lon": 8.5701980,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "yes",
+    "name": "MAMAN ABULKHAIRI INTERNET CAFE",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "yes",
+    "users_boy": "no",
+    "users_female": "yes",
+    "users_girl": "no",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282074104,
+  "lat": 12.0499430,
+  "lon": 8.5805418,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "yes",
+    "name": "ITACIYAR ZAMANI GLOBAL CONCEPT NIG.LTD",
+    "operator": "private_individual",
+    "pay_amount": "50000",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "no",
+    "users_boy": "yes",
+    "users_female": "no",
+    "users_girl": "no",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282074105,
+  "lat": 12.0550744,
+  "lon": 8.5834714,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "yes",
+    "name": "MADINA COMMUNICATION CENTER",
+    "operator": "private_individual",
+    "pay_amount": "70",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282074108,
+  "lat": 12.0436904,
+  "lon": 8.5723974,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "no",
+    "name": "M. SANI COMMUNICATION CENTER",
+    "operator": "private_individual",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "no",
+    "users_boy": "yes",
+    "users_female": "no",
+    "users_girl": "no",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282370366,
+  "lat": 11.9567342,
+  "lon": 8.4730532,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "yes",
+    "name": "SAGAGEE COMMUNICATION LAYIN TSAMIYA",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282370369,
+  "lat": 11.9628596,
+  "lon": 8.4732283,
+  "tags": {
+    "amenity": "cafe",
+    "fac_pay": "no",
+    "name": "BAKIN GANDU",
+    "operator": "community",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "cafe",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381286,
+  "lat": 12.0375783,
+  "lon": 8.5679307,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "AFAFATA",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "no",
+    "users_boy": "no",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381287,
+  "lat": 12.0415767,
+  "lon": 8.5728600,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "ANSA",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "no",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381291,
+  "lat": 12.0406020,
+  "lon": 8.5716650,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "JIRGIN NAMA",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381292,
+  "lat": 12.0431420,
+  "lon": 8.5666873,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "DAɗIN KOWA RESTAURANT",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "no",
+    "users_girl": "no",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381297,
+  "lat": 12.0522444,
+  "lon": 8.5820862,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "MOURTHY MINI RESTAURANT",
+    "operator": "private_individual",
+    "pay_amount": "300",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282381299,
+  "lat": 12.0473730,
+  "lon": 8.5698193,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "SARAKI SUYA SPOT",
+    "operator": "private_individual",
+    "pay_amount": "unknown",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "no",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12282400345,
+  "lat": 11.9561110,
+  "lon": 8.4687999,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "KANTIN NUHU",
+    "operator": "community",
+    "source": "ideamaps_2024",
+    "status": "functional"
+  }
+},
+{
+  "type": "node",
+  "id": 12282451411,
+  "lat": 11.9657651,
+  "lon": 8.4779308,
+  "tags": {
+    "amenity": "restaurant",
+    "fac_pay": "yes",
+    "name": "AMINU JIBO MAI WAINA",
+    "operator": "private_individual",
+    "pay_amount": "100",
+    "source": "ideamaps_2024",
+    "status": "functional",
+    "use": "eatery",
+    "users_PLWD": "yes",
+    "users_boy": "yes",
+    "users_female": "yes",
+    "users_girl": "yes",
+    "users_men": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12887296580,
+  "lat": 12.0009535,
+  "lon": 8.5530865,
+  "tags": {
+    "addr:city": "kano",
+    "addr:housenumber": "42",
+    "addr:postcode": "700101",
+    "addr:street": "Race Course Road",
+    "amenity": "restaurant",
+    "cuisine": "italian;asian;mexican;thai;american;french;noodle",
+    "diet:halal": "yes",
+    "diet:healthy": "yes",
+    "diet:meat": "yes",
+    "diet:non-vegetarian": "yes",
+    "diet:vegetarian": "yes",
+    "name": "Patoosh Cafe & Restaurant",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "phone": "08133552720,",
+    "website": "https://www.instagram.com/cafe_patoosh/"
+  }
+},
+{
+  "type": "way",
+  "id": 292290861,
+  "center": {
+    "lat": 12.0377255,
+    "lon": 8.5338207
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Pounded Yam & Co"
+  }
+},
+{
+  "type": "way",
+  "id": 500432363,
+  "center": {
+    "lat": 11.9863269,
+    "lon": 8.5420529
+  },
+  "tags": {
+    "addr:street": "State Road",
+    "amenity": "restaurant",
+    "name": "Yahuza Suya Spot"
+  }
+},
+{
+  "type": "way",
+  "id": 928070402,
+  "center": {
+    "lat": 11.9251886,
+    "lon": 8.4626571
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "brand": "House of Blues",
+    "brand:wikidata": "Q648898",
+    "brand:wikipedia": "en:House of Blues",
+    "building": "yes",
+    "cuisine": "american",
+    "name": "House"
+  }
+},
+{
+  "type": "way",
+  "id": 937459699,
+  "center": {
+    "lat": 11.9559616,
+    "lon": 8.5864877
+  },
+  "tags": {
+    "addr:city": "Mariri",
+    "addr:housenumber": "6",
+    "amenity": "cafe",
+    "brand": "Starbucks",
+    "brand:wikidata": "Q37158",
+    "brand:wikipedia": "en:Starbucks",
+    "building": "yes",
+    "cuisine": "coffee_shop",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Starbucks",
+    "official_name": "Starbucks Coffee",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 992770348,
+  "center": {
+    "lat": 11.9579766,
+    "lon": 8.5862875
+  },
+  "tags": {
+    "addr:city": "Mariri",
+    "addr:housenumber": "5",
+    "addr:street": "water st",
+    "amenity": "restaurant",
+    "brand": "Applebee's Neighborhood Grill & Bar",
+    "brand:wikidata": "Q621532",
+    "brand:wikipedia": "en:Applebee's",
+    "building": "yes",
+    "cuisine": "american",
+    "diet:vegetarian": "yes",
+    "name": "Applebee's",
+    "official_name": "Applebee's Neighborhood Grill & Bar",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "opening_hours:covid19": "restricted"
+  }
+}
+
+  ]
+}

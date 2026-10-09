@@ -1,0 +1,2322 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:18:59Z",
+    "timestamp_areas_base": "2026-10-08T05:09:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 501530290,
+  "lat": 12.0066969,
+  "lon": 8.5291548,
+  "tags": {
+    "capital": "6",
+    "name": "Fagge",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 2965065969,
+  "lat": 12.0564000,
+  "lon": 7.9889400,
+  "tags": {
+    "name": "Unguwar Hakimi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2966013434,
+  "lat": 12.0224000,
+  "lon": 9.0034000,
+  "tags": {
+    "name": "Gurduba Cikin Gari",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2966013435,
+  "lat": 12.0213000,
+  "lon": 8.9978500,
+  "tags": {
+    "name": "Gurduba Sabon Gari",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2969673847,
+  "lat": 10.7461000,
+  "lon": 8.7351900,
+  "tags": {
+    "name": "Kakume",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2969673849,
+  "lat": 10.7399000,
+  "lon": 8.7413200,
+  "tags": {
+    "name": "Turmusawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2970462058,
+  "lat": 10.7881000,
+  "lon": 8.7735900,
+  "tags": {
+    "alt_name": "Zainabi A",
+    "name": "Zainabi East",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2970462059,
+  "lat": 10.7875000,
+  "lon": 8.7703500,
+  "tags": {
+    "alt_name": "Zainabi B",
+    "name": "Zainabi West",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797941,
+  "lat": 11.9624000,
+  "lon": 8.6037800,
+  "tags": {
+    "name": "FARAWA",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797942,
+  "lat": 11.9845000,
+  "lon": 8.5481300,
+  "tags": {
+    "name": "Commissioner Road",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797943,
+  "lat": 12.0302000,
+  "lon": 8.5257100,
+  "tags": {
+    "name": "Cpl Bello Quaters",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797944,
+  "lat": 12.0266000,
+  "lon": 8.5811400,
+  "tags": {
+    "capital": "8",
+    "name": "Dakata",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797945,
+  "lat": 11.9713000,
+  "lon": 8.5571800,
+  "tags": {
+    "name": "Daurawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797946,
+  "lat": 12.0163000,
+  "lon": 8.5449400,
+  "tags": {
+    "name": "Ecwa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797947,
+  "lat": 12.0049638,
+  "lon": 8.5308436,
+  "tags": {
+    "capital": "8",
+    "name": "Fagge A",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797948,
+  "lat": 12.0074000,
+  "lon": 8.5290900,
+  "tags": {
+    "capital": "8",
+    "name": "Fagge B",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797949,
+  "lat": 12.0085000,
+  "lon": 8.5341000,
+  "tags": {
+    "capital": "8",
+    "name": "Fagge C",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797950,
+  "lat": 12.0090000,
+  "lon": 8.5270400,
+  "tags": {
+    "capital": "8",
+    "name": "Fagge D1",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797951,
+  "lat": 12.0327000,
+  "lon": 8.5536200,
+  "tags": {
+    "name": "Gama",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797952,
+  "lat": 11.9914000,
+  "lon": 8.5658500,
+  "tags": {
+    "capital": "8",
+    "name": "Giginyu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797953,
+  "lat": 11.9801000,
+  "lon": 8.5528600,
+  "tags": {
+    "name": "Government House",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797954,
+  "lat": 11.9707000,
+  "lon": 8.5636100,
+  "tags": {
+    "name": "Gra",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797956,
+  "lat": 11.9688000,
+  "lon": 8.5456400,
+  "tags": {
+    "alt_name": "Gyadi Gyadi Kudu",
+    "capital": "8",
+    "name": "Gyadi-Gyadin Kudu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:alt_name": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797957,
+  "lat": 11.9683000,
+  "lon": 8.5371900,
+  "tags": {
+    "name": "Hausawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797958,
+  "lat": 11.9795000,
+  "lon": 8.5877000,
+  "tags": {
+    "capital": "8",
+    "name": "Hotoro North",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797959,
+  "lat": 11.9698000,
+  "lon": 8.5854400,
+  "tags": {
+    "capital": "8",
+    "name": "Hotoro South",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797961,
+  "lat": 11.9592000,
+  "lon": 8.5720700,
+  "tags": {
+    "alt_name": "Kauye Alu",
+    "capital": "8",
+    "name": "Kafin Alu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:alt_name": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797962,
+  "lat": 11.9893000,
+  "lon": 8.5254700,
+  "tags": {
+    "capital": "8",
+    "name": "Kan Karofi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797963,
+  "lat": 11.9543000,
+  "lon": 8.5463300,
+  "tags": {
+    "name": "Karkasara",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797964,
+  "lat": 12.0124000,
+  "lon": 8.5800900,
+  "tags": {
+    "capital": "8",
+    "name": "Kawaji",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797965,
+  "lat": 11.9648000,
+  "lon": 8.5573700,
+  "tags": {
+    "name": "Kundila Phase 3",
+    "place": "suburb",
+    "short_name": "Kundila",
+    "source": "ehealthafrica.org",
+    "source:date": "2014",
+    "source:short_name": "ehealthafrica.org"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797966,
+  "lat": 11.9684000,
+  "lon": 8.5709400,
+  "tags": {
+    "name": "Limawa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797967,
+  "lat": 12.0102000,
+  "lon": 8.5518700,
+  "tags": {
+    "name": "Maganda",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797968,
+  "lat": 11.9599000,
+  "lon": 8.5899300,
+  "tags": {
+    "name": "Maradi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797969,
+  "lat": 11.9736000,
+  "lon": 8.5519900,
+  "tags": {
+    "name": "Marhaba",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797970,
+  "lat": 12.0338000,
+  "lon": 8.5294800,
+  "tags": {
+    "name": "Nigerian Air Force Base",
+    "place": "neighbourhood",
+    "short_name": "NAF Base",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797971,
+  "lat": 12.0307000,
+  "lon": 8.5355400,
+  "tags": {
+    "name": "Noman Land",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797972,
+  "lat": 12.0181000,
+  "lon": 8.5563600,
+  "tags": {
+    "name": "Police Barrack",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797973,
+  "lat": 12.0027000,
+  "lon": 8.5922500,
+  "tags": {
+    "name": "Raudakeyi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797974,
+  "lat": 12.0206000,
+  "lon": 8.5316400,
+  "tags": {
+    "capital": "8",
+    "name": "Sabon Gari West",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797975,
+  "lat": 12.0185000,
+  "lon": 8.5382400,
+  "tags": {
+    "alt_name": "Sabon Gari East",
+    "name": "Sabon Gari",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797976,
+  "lat": 11.9577318,
+  "lon": 8.5393998,
+  "tags": {
+    "name": "Sallari",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797977,
+  "lat": 11.9767000,
+  "lon": 8.5601400,
+  "tags": {
+    "capital": "6",
+    "name": "Tarauni",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797978,
+  "lat": 12.0057000,
+  "lon": 8.6071500,
+  "tags": {
+    "name": "Tokarawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797979,
+  "lat": 11.9629000,
+  "lon": 8.5314900,
+  "tags": {
+    "name": "Tudun Maliki",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797980,
+  "lat": 12.0329000,
+  "lon": 8.5685900,
+  "tags": {
+    "capital": "8",
+    "name": "Tudun Murtala",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797981,
+  "lat": 12.0247000,
+  "lon": 8.5577700,
+  "tags": {
+    "capital": "8",
+    "name": "Tudun Wada",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797982,
+  "lat": 11.9571000,
+  "lon": 8.5255400,
+  "tags": {
+    "name": "Unguwar Goje",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797983,
+  "lat": 11.9567000,
+  "lon": 8.5653400,
+  "tags": {
+    "name": "Unguwar Uku",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797984,
+  "lat": 11.9891000,
+  "lon": 8.5959800,
+  "tags": {
+    "name": "Walalambe",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797985,
+  "lat": 11.9590000,
+  "lon": 8.5812000,
+  "tags": {
+    "name": "Walawai",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797986,
+  "lat": 11.9954000,
+  "lon": 8.5922600,
+  "tags": {
+    "name": "Wuro Bagga",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797987,
+  "lat": 11.9947185,
+  "lon": 8.5263348,
+  "tags": {
+    "capital": "8",
+    "name": "Yakasai",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797988,
+  "lat": 12.0279000,
+  "lon": 8.5261400,
+  "tags": {
+    "name": "Zangeru",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974797989,
+  "lat": 11.9941000,
+  "lon": 8.5710000,
+  "tags": {
+    "name": "Zango",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2974820105,
+  "lat": 12.0002657,
+  "lon": 8.5758713,
+  "tags": {
+    "name": "Badawa",
+    "place": "suburb",
+    "source": "survey"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890856,
+  "lat": 12.0100000,
+  "lon": 8.5119700,
+  "tags": {
+    "capital": "8",
+    "name": "Adakawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890857,
+  "lat": 11.9979000,
+  "lon": 8.5035100,
+  "tags": {
+    "capital": "8",
+    "name": "Bakin Ruwa 1",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890858,
+  "lat": 12.0027000,
+  "lon": 8.5084400,
+  "tags": {
+    "name": "Bakin Ruwa 2",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890859,
+  "lat": 11.9794000,
+  "lon": 8.4783800,
+  "tags": {
+    "name": "Buk Old Site",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890860,
+  "lat": 12.0020000,
+  "lon": 8.5190600,
+  "tags": {
+    "capital": "8",
+    "name": "Chedi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890861,
+  "lat": 12.0238000,
+  "lon": 8.5199300,
+  "tags": {
+    "name": "Custom Barrack",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890862,
+  "lat": 12.0322000,
+  "lon": 8.5201500,
+  "tags": {
+    "name": "Custom Officers Mess",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890863,
+  "lat": 12.0327000,
+  "lon": 8.5175600,
+  "tags": {
+    "name": "Custom Staff School",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890864,
+  "lat": 12.0071000,
+  "lon": 8.5073200,
+  "tags": {
+    "capital": "6",
+    "name": "Dala",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890865,
+  "lat": 11.9839000,
+  "lon": 8.5225600,
+  "tags": {
+    "capital": "8",
+    "name": "Dan Agundi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890866,
+  "lat": 11.9929000,
+  "lon": 8.5071600,
+  "tags": {
+    "capital": "8",
+    "name": "Dandago",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890867,
+  "lat": 11.9952000,
+  "lon": 8.5204500,
+  "tags": {
+    "name": "Dirimin Iya",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890868,
+  "lat": 11.9874000,
+  "lon": 8.5134300,
+  "tags": {
+    "capital": "8",
+    "name": "Diso",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890869,
+  "lat": 11.9995000,
+  "lon": 8.4994000,
+  "tags": {
+    "capital": "8",
+    "name": "Dogon Nama 1",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890870,
+  "lat": 12.0047000,
+  "lon": 8.5044900,
+  "tags": {
+    "name": "Dogon Nama 2",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890872,
+  "lat": 11.9694000,
+  "lon": 8.4613400,
+  "tags": {
+    "name": "Dorayi Babba Cikin Gari",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890873,
+  "lat": 11.9750000,
+  "lon": 8.4713200,
+  "tags": {
+    "name": "Kabuga Housing Estate",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890874,
+  "lat": 11.9939000,
+  "lon": 8.4766200,
+  "tags": {
+    "name": "Dorayi Karama",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890875,
+  "lat": 11.9615000,
+  "lon": 8.4749300,
+  "tags": {
+    "capital": "8",
+    "name": "Dorayi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890876,
+  "lat": 12.0128000,
+  "lon": 8.5251500,
+  "tags": {
+    "capital": "8",
+    "name": "Fagge D2",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890877,
+  "lat": 11.9898000,
+  "lon": 8.5115000,
+  "tags": {
+    "capital": "8",
+    "name": "Galadanchi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890878,
+  "lat": 11.9714153,
+  "lon": 8.5269641,
+  "tags": {
+    "capital": "8",
+    "name": "Gandu",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890879,
+  "lat": 12.0306000,
+  "lon": 8.5128300,
+  "tags": {
+    "name": "Gidan Baban Gwari",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890880,
+  "lat": 11.9650000,
+  "lon": 8.4621700,
+  "tags": {
+    "name": "Unguwar Jakada",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890881,
+  "lat": 11.9920000,
+  "lon": 8.5186800,
+  "tags": {
+    "name": "Gidan Sarkin Kano",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890882,
+  "lat": 12.0367800,
+  "lon": 8.4870637,
+  "tags": {
+    "capital": "8",
+    "name": "Gobirawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890883,
+  "lat": 12.0057000,
+  "lon": 8.4910100,
+  "tags": {
+    "capital": "8",
+    "name": "Goron Dutse 1",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890884,
+  "lat": 11.9958000,
+  "lon": 8.5059000,
+  "tags": {
+    "name": "Goron Dutse 2",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890885,
+  "lat": 11.9770000,
+  "lon": 8.5192100,
+  "tags": {
+    "name": "Gra North",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890886,
+  "lat": 11.9754000,
+  "lon": 8.5216100,
+  "tags": {
+    "name": "Gandu GRA",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890887,
+  "lat": 11.9645000,
+  "lon": 8.4998200,
+  "tags": {
+    "name": "Gwale Rinji",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890888,
+  "lat": 12.0198000,
+  "lon": 8.5084300,
+  "tags": {
+    "capital": "8",
+    "name": "Gwammaja",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890889,
+  "lat": 11.9991199,
+  "lon": 8.5083157,
+  "tags": {
+    "capital": "8",
+    "name": "Gyaranya",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890890,
+  "lat": 12.0265000,
+  "lon": 8.5236700,
+  "tags": {
+    "name": "Hajj Camp",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890891,
+  "lat": 12.0041000,
+  "lon": 8.5115800,
+  "tags": {
+    "capital": "8",
+    "name": "Jakara",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890892,
+  "lat": 11.9717000,
+  "lon": 8.4860200,
+  "tags": {
+    "name": "Kabuga Salanta North",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890893,
+  "lat": 11.9688000,
+  "lon": 8.4884100,
+  "tags": {
+    "name": "Kabuga Salanta South",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890894,
+  "lat": 11.9968000,
+  "lon": 8.4861400,
+  "tags": {
+    "capital": "8",
+    "name": "Kabuga",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890895,
+  "lat": 12.0067785,
+  "lon": 8.5116849,
+  "tags": {
+    "capital": "8",
+    "name": "Kabuwaya South",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890896,
+  "lat": 12.0133000,
+  "lon": 8.5080500,
+  "tags": {
+    "name": "Kabuwaya North",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890897,
+  "lat": 12.0103000,
+  "lon": 8.5091100,
+  "tags": {
+    "capital": "8",
+    "name": "Kantudu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890898,
+  "lat": 12.0250770,
+  "lon": 8.5165247,
+  "tags": {
+    "name": "Katsina Road",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890899,
+  "lat": 12.0143236,
+  "lon": 8.5171742,
+  "tags": {
+    "capital": "8",
+    "name": "Kofar Mazugal",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890900,
+  "lat": 12.0224000,
+  "lon": 8.4908300,
+  "tags": {
+    "capital": "8",
+    "name": "Kofar Ruwa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890901,
+  "lat": 12.0238000,
+  "lon": 8.5253800,
+  "tags": {
+    "name": "Kwakwachi",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890902,
+  "lat": 11.9842000,
+  "lon": 8.5131700,
+  "tags": {
+    "name": "Lokon Makera",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890903,
+  "lat": 12.0021613,
+  "lon": 8.5062020,
+  "tags": {
+    "capital": "8",
+    "name": "Madigawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890904,
+  "lat": 11.9957000,
+  "lon": 8.4992600,
+  "tags": {
+    "name": "Mai Aduwa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890905,
+  "lat": 12.0150000,
+  "lon": 8.4986100,
+  "tags": {
+    "name": "Makafi C",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890906,
+  "lat": 11.9903000,
+  "lon": 8.4920400,
+  "tags": {
+    "name": "Makasa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890907,
+  "lat": 11.9949000,
+  "lon": 8.5114100,
+  "tags": {
+    "capital": "8",
+    "name": "Mandawari",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890908,
+  "lat": 12.0304000,
+  "lon": 8.5174700,
+  "tags": {
+    "name": "Nitel Quaters",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890909,
+  "lat": 12.0203000,
+  "lon": 8.5216900,
+  "tags": {
+    "name": "Police Barrack",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890910,
+  "lat": 11.9816000,
+  "lon": 8.4528200,
+  "tags": {
+    "capital": "8",
+    "name": "Rijiyar Zaki",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890911,
+  "lat": 11.9730000,
+  "lon": 8.4409900,
+  "tags": {
+    "name": "Rimin Gata",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890912,
+  "lat": 11.9872000,
+  "lon": 8.4975500,
+  "tags": {
+    "capital": "8",
+    "name": "Sani Mai Nagge",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890913,
+  "lat": 12.0006988,
+  "lon": 8.5164092,
+  "tags": {
+    "capital": "8",
+    "name": "Shahuchi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890914,
+  "lat": 11.9744000,
+  "lon": 8.5057400,
+  "tags": {
+    "capital": "8",
+    "name": "Sharada",
+    "place": "suburb",
+    "population": "gmaxplaza",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890915,
+  "lat": 11.9971000,
+  "lon": 8.5136300,
+  "tags": {
+    "alt_name": "She She",
+    "capital": "8",
+    "name": "Sheshe",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890916,
+  "lat": 12.0391000,
+  "lon": 8.4769200,
+  "tags": {
+    "capital": "8",
+    "name": "Tudun Fulani",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890917,
+  "lat": 12.0022000,
+  "lon": 8.5131300,
+  "tags": {
+    "capital": "8",
+    "name": "Tudun Nufawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890918,
+  "lat": 11.9883000,
+  "lon": 8.5171800,
+  "tags": {
+    "capital": "8",
+    "name": "Tudun Wazurchi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890919,
+  "lat": 11.9945000,
+  "lon": 8.4696400,
+  "tags": {
+    "name": "Tudun Yola",
+    "place": "suburb",
+    "source": "ehealthafrica.org;GNS",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890920,
+  "lat": 12.0157000,
+  "lon": 8.4748400,
+  "tags": {
+    "name": "Unguwar Damai",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890921,
+  "lat": 11.9578000,
+  "lon": 8.4664100,
+  "tags": {
+    "name": "Unguwar Fako",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890922,
+  "lat": 12.0308000,
+  "lon": 8.4681300,
+  "tags": {
+    "name": "Unguwar Gabas",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890923,
+  "lat": 11.9609000,
+  "lon": 8.5242700,
+  "tags": {
+    "name": "Unguwar Geza",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890924,
+  "lat": 11.9582000,
+  "lon": 8.4551600,
+  "tags": {
+    "name": "Unguwar Jakada",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890925,
+  "lat": 11.9542000,
+  "lon": 8.4783900,
+  "tags": {
+    "name": "Unguwar Sabo",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890926,
+  "lat": 11.9835000,
+  "lon": 8.4892000,
+  "tags": {
+    "name": "WATC Quarters",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890927,
+  "lat": 11.9664000,
+  "lon": 8.4490000,
+  "tags": {
+    "name": "Wagaga",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890930,
+  "lat": 11.9701000,
+  "lon": 8.4542100,
+  "tags": {
+    "name": "Watari A",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890931,
+  "lat": 12.0325000,
+  "lon": 8.5225000,
+  "tags": {
+    "name": "Yakudima Estate",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890932,
+  "lat": 12.0055000,
+  "lon": 8.4997100,
+  "tags": {
+    "capital": "8",
+    "name": "Yalwa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890933,
+  "lat": 11.9645000,
+  "lon": 8.5063000,
+  "tags": {
+    "name": "Yamadawa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890934,
+  "lat": 11.9714350,
+  "lon": 8.4716822,
+  "tags": {
+    "name": "Yamadawa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890935,
+  "lat": 11.9865000,
+  "lon": 8.5063800,
+  "tags": {
+    "name": "Yan Alewa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890936,
+  "lat": 12.0077000,
+  "lon": 8.5174300,
+  "tags": {
+    "capital": "8",
+    "name": "Zaitawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2990890937,
+  "lat": 12.0015000,
+  "lon": 8.5236000,
+  "tags": {
+    "capital": "8",
+    "name": "Zango",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2991659891,
+  "lat": 11.2518000,
+  "lon": 8.4010100,
+  "tags": {
+    "name": "Tsauni",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2991659892,
+  "lat": 11.2454000,
+  "lon": 8.4007200,
+  "tags": {
+    "capital": "8",
+    "name": "Unguwar Masu Rariya",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124106,
+  "lat": 11.9451000,
+  "lon": 8.5428000,
+  "tags": {
+    "capital": "8",
+    "name": "Darmanawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124110,
+  "lat": 11.9360000,
+  "lon": 8.5664600,
+  "tags": {
+    "name": "Gidan Dagaci",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124115,
+  "lat": 11.9512000,
+  "lon": 8.6050800,
+  "tags": {
+    "name": "Rehabilitation",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124116,
+  "lat": 11.9489283,
+  "lon": 8.5559660,
+  "tags": {
+    "name": "Rinji",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124119,
+  "lat": 11.9507000,
+  "lon": 8.5306700,
+  "tags": {
+    "name": "Unguwar Tijjani Maibu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124121,
+  "lat": 11.9441000,
+  "lon": 8.5746900,
+  "tags": {
+    "name": "Unguwar Yan Awaki",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124123,
+  "lat": 11.9466000,
+  "lon": 8.5689500,
+  "tags": {
+    "name": "Yan Awaki",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124124,
+  "lat": 11.9256000,
+  "lon": 8.5463900,
+  "tags": {
+    "name": "Yan Lemo",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124125,
+  "lat": 11.9404000,
+  "lon": 8.5597800,
+  "tags": {
+    "name": "Yar Akwa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2994124126,
+  "lat": 11.9269000,
+  "lon": 8.6076700,
+  "tags": {
+    "name": "Zara Unguwan Dawa",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2995274308,
+  "lat": 11.9596000,
+  "lon": 9.0586600,
+  "tags": {
+    "name": "Mabugar Kwashi",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2996302679,
+  "lat": 11.9110000,
+  "lon": 7.9438200,
+  "tags": {
+    "name": "Buremawa Waje",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 2996302681,
+  "lat": 11.9135000,
+  "lon": 7.9259300,
+  "tags": {
+    "name": "GSS Staff Quarters",
+    "place": "neighbourhood",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 3820316218,
+  "lat": 11.9545875,
+  "lon": 8.5396575,
+  "tags": {
+    "is_in:municipality": "Babban Giji",
+    "name": "Babban Giji",
+    "place": "suburb",
+    "source": "steadfast.com.ng"
+  }
+},
+{
+  "type": "node",
+  "id": 7500477291,
+  "lat": 11.5573000,
+  "lon": 7.8216700,
+  "tags": {
+    "name": "Ruma Sabon Gari",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500477292,
+  "lat": 11.5520000,
+  "lon": 7.8177100,
+  "tags": {
+    "name": "Hayi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500711824,
+  "lat": 11.7750000,
+  "lon": 8.0174900,
+  "tags": {
+    "name": "Gangare",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500711825,
+  "lat": 11.7806000,
+  "lon": 8.0135200,
+  "tags": {
+    "name": "Limanchi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500756623,
+  "lat": 11.4598000,
+  "lon": 8.2052100,
+  "tags": {
+    "name": "Hayin Gwarmai",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500763396,
+  "lat": 12.0086000,
+  "lon": 8.1299600,
+  "tags": {
+    "name": "Zango",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7500967151,
+  "lat": 12.1576000,
+  "lon": 8.2111000,
+  "tags": {
+    "name": "Kastelle",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501094847,
+  "lat": 12.2028000,
+  "lon": 8.2895800,
+  "tags": {
+    "name": "Santar Azargi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501248624,
+  "lat": 11.7699000,
+  "lon": 8.4191800,
+  "tags": {
+    "name": "Fegin Yawo",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501248625,
+  "lat": 11.7708000,
+  "lon": 8.4247400,
+  "tags": {
+    "name": "Gwanjawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501248626,
+  "lat": 11.7776000,
+  "lon": 8.4276000,
+  "tags": {
+    "name": "Labadiya",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501248630,
+  "lat": 11.7736000,
+  "lon": 8.4315800,
+  "tags": {
+    "name": "Tanawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501288404,
+  "lat": 11.9708000,
+  "lon": 8.4346500,
+  "tags": {
+    "name": "Buk New Site",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501405338,
+  "lat": 12.4360000,
+  "lon": 8.5117500,
+  "tags": {
+    "name": "Dambatta West",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501405339,
+  "lat": 12.4351000,
+  "lon": 8.5197900,
+  "tags": {
+    "name": "Dambatta East",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501405345,
+  "lat": 12.4208000,
+  "lon": 8.5110800,
+  "tags": {
+    "name": "Gra",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7501446148,
+  "lat": 12.3496000,
+  "lon": 8.5170100,
+  "tags": {
+    "name": "Shantake Yamma",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343713,
+  "lat": 12.0620000,
+  "lon": 8.4762500,
+  "tags": {
+    "name": "Yammata",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343716,
+  "lat": 12.0589000,
+  "lon": 8.4638300,
+  "tags": {
+    "name": "Zubainawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343717,
+  "lat": 12.0773000,
+  "lon": 8.4524800,
+  "tags": {
+    "name": "Kadawa Makabarta",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343725,
+  "lat": 12.0482000,
+  "lon": 8.4899200,
+  "tags": {
+    "name": "Dan Rimi",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343726,
+  "lat": 12.0494000,
+  "lon": 8.4815500,
+  "tags": {
+    "name": "Rijiyar Lemo",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343728,
+  "lat": 12.0694000,
+  "lon": 8.4551600,
+  "tags": {
+    "name": "Sharifai",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503343730,
+  "lat": 12.0565000,
+  "lon": 8.4903200,
+  "tags": {
+    "name": "Dan Rimi Kudu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503344413,
+  "lat": 12.0414000,
+  "lon": 8.5500100,
+  "tags": {
+    "name": "Kaura Goje",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503344414,
+  "lat": 12.0441000,
+  "lon": 8.5741900,
+  "tags": {
+    "name": "Zango",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503344415,
+  "lat": 12.0502000,
+  "lon": 8.5610100,
+  "tags": {
+    "name": "Gandu Agantasa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503344416,
+  "lat": 12.0403000,
+  "lon": 8.5899400,
+  "tags": {
+    "name": "Kauyen Rangaza Inkyan",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503405423,
+  "lat": 11.9530000,
+  "lon": 8.4871200,
+  "tags": {
+    "name": "Gwale Unguwar Lalle",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503405426,
+  "lat": 11.9492000,
+  "lon": 8.5106800,
+  "tags": {
+    "name": "Sabuwar Gandu",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503532968,
+  "lat": 11.7930000,
+  "lon": 8.8451300,
+  "tags": {
+    "name": "Police Barrack",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503532969,
+  "lat": 11.7997000,
+  "lon": 8.8399000,
+  "tags": {
+    "name": "Sabo Gari Gabas",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503532976,
+  "lat": 11.7929000,
+  "lon": 8.8409100,
+  "tags": {
+    "name": "Shagari Quaters",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503532977,
+  "lat": 11.7971000,
+  "lon": 8.8389400,
+  "tags": {
+    "name": "Sabon Gari Arewa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503532983,
+  "lat": 11.7861000,
+  "lon": 8.8378600,
+  "tags": {
+    "name": "Yansarki",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+},
+{
+  "type": "node",
+  "id": 7503704678,
+  "lat": 11.5262000,
+  "lon": 8.6638200,
+  "tags": {
+    "name": "Hausawa",
+    "place": "suburb",
+    "source": "ehealthafrica.org",
+    "source:date": "2014"
+  }
+}
+
+  ]
+}

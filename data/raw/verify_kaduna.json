@@ -1,0 +1,70 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:20:27Z",
+    "timestamp_areas_base": "2026-10-08T07:25:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "area",
+  "id": 3603709353,
+  "tags": {
+    "ISO3166-2": "NG-KD",
+    "admin_level": "4",
+    "boundary": "administrative",
+    "long_name:ar": "ولاية كادونا",
+    "name": "Kaduna",
+    "name:ar": "كادونا",
+    "name:az": "Kaduna ştatı",
+    "name:azb": "کادونا ایالتی",
+    "name:br": "Kaduna",
+    "name:ca": "Estat de Kaduna",
+    "name:ceb": "Kaduna State",
+    "name:da": "Kaduna",
+    "name:de": "Kaduna",
+    "name:en": "Kaduna State",
+    "name:es": "Estado de Kaduna",
+    "name:et": "Kaduna osariik",
+    "name:fa": "ایالت کادونا",
+    "name:ff": "Kaduna",
+    "name:fi": "Kaduna",
+    "name:fr": "État de Kaduna",
+    "name:gl": "Estado de Kaduna",
+    "name:ha": "Kaduna",
+    "name:he": "קדונה",
+    "name:hi": "कडूना राज्य",
+    "name:id": "Kaduna",
+    "name:ig": "Ȯra Kaduna",
+    "name:it": "Kaduna",
+    "name:ja": "カドゥナ州",
+    "name:ka": "კადუნის შტატი",
+    "name:ko": "카두나주",
+    "name:mrj": "Кадуна",
+    "name:nan": "Kaduna Chiu",
+    "name:nl": "Kaduna",
+    "name:no": "Kaduna",
+    "name:pl": "Kaduna",
+    "name:pt": "Kaduna",
+    "name:ro": "Statul Kaduna",
+    "name:ru": "Кадуна",
+    "name:sr": "Кадуна",
+    "name:sv": "Kaduna",
+    "name:sw": "Kaduna",
+    "name:tr": "Kaduna Eyaleti",
+    "name:uk": "Кадуна",
+    "name:war": "Kaduna",
+    "name:yo": "Ìpínlẹ̀ Kàdúná",
+    "name:zh": "卡杜纳州",
+    "source": "ehealthafrica.org",
+    "source:date": "2013",
+    "type": "boundary",
+    "wikidata": "Q878284",
+    "wikipedia": "en:Kaduna State"
+  }
+}
+
+  ]
+}

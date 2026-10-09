@@ -1,0 +1,144 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:26:34Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 5658578021,
+  "lat": 4.9684012,
+  "lon": 8.3386668,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Crunchies Fried Chicken",
+    "website": "https://crunchiesfriedchickenltd.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 7956218490,
+  "lat": 4.9954235,
+  "lon": 8.3335190,
+  "tags": {
+    "addr:postcode": "234",
+    "addr:street": "Murtala Mohammed Highway",
+    "amenity": "restaurant",
+    "name": "Native Delicacies Food"
+  }
+},
+{
+  "type": "node",
+  "id": 10680273193,
+  "lat": 5.0066408,
+  "lon": 8.3425529,
+  "tags": {
+    "addr:city": "Calabar, Cross River",
+    "addr:postcode": "540211",
+    "amenity": "bar",
+    "check_date:currency:XBT": "2023-02-20",
+    "currency:XBT": "yes",
+    "email": "info@digioats.io",
+    "name": "Don Mario Lounge",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "no",
+    "payment:onchain": "yes",
+    "phone": "+23 48174627386"
+  }
+},
+{
+  "type": "node",
+  "id": 12700716771,
+  "lat": 4.9873176,
+  "lon": 8.3355571,
+  "tags": {
+    "addr:city": "Calabar",
+    "addr:housenumber": "38",
+    "addr:postcode": "540222",
+    "addr:street": "MCC Road",
+    "alt_name": "Bitcoiners Hub",
+    "amenity": "cafe",
+    "amenity_1": "bar",
+    "check_date": "2026-08-27",
+    "check_date:currency:XBT": "2026-08-27",
+    "contact:facebook": "https://www.facebook.com/profile.php?id=61557781404762",
+    "contact:twitter": "https://x.com/bitcoincalabar",
+    "currency:XBT": "yes",
+    "description": "The Calabar Bitcoin Club Centre is a Bitcoin circular economy hub featuring a gaming hub, a Bitcoiners café, and a workspace.",
+    "name": "Calabar Bitcoin Club",
+    "payment:blink": "yes",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "yes",
+    "payment:onchain": "yes",
+    "phone": "+234 803 563 8456",
+    "survey:date": "2025-03-26",
+    "website": "https://bitcoinconfederation.org/"
+  }
+},
+{
+  "type": "node",
+  "id": 12705836770,
+  "lat": 4.9874985,
+  "lon": 8.3351517,
+  "tags": {
+    "addr:city": "Calabar",
+    "addr:housenumber": "35",
+    "addr:postcode": "540222",
+    "addr:street": "MCC Road",
+    "amenity": "restaurant",
+    "amenity_1": "bar",
+    "check_date:currency:XBT": "2026-07-30",
+    "cuisine": "african;european;american",
+    "currency:XBT": "yes",
+    "delivery": "yes",
+    "name": "Food and Wine Shop",
+    "opening_hours": "Mo-Su 09:00-23:00",
+    "payment:blink": "yes",
+    "payment:cash": "yes",
+    "payment:debit_cards": "yes",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "yes",
+    "payment:onchain": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12776692126,
+  "lat": 4.9808568,
+  "lon": 8.3421674,
+  "tags": {
+    "addr:city": "Calabar",
+    "addr:street": "Atekong Junction",
+    "amenity": "restaurant",
+    "check_date": "2026-05-07",
+    "check_date:currency:XBT": "2026-05-07",
+    "contact:facebook": "CHEFGREENSIGNATURE",
+    "contact:instagram": "chef_greensignature",
+    "cuisine": "african",
+    "currency:XBT": "yes",
+    "delivery": "yes",
+    "diet:healthy": "yes",
+    "diet:local": "yes",
+    "diet:meat": "yes",
+    "diet:organic": "yes",
+    "diet:seafood": "yes",
+    "email": "chefgreen525@gmail.com",
+    "name": "Chef Green Signature Local Cusine Hub",
+    "opening_hours": "Mo-Sa 18:00-00:00",
+    "outdoor_seating": "yes",
+    "payment:cards": "yes",
+    "payment:cash": "yes",
+    "payment:lightning": "yes",
+    "payment:lightning_contactless": "no",
+    "payment:onchain": "yes",
+    "phone": "+234 816 426 6713",
+    "survey:date": "2025-04-22"
+  }
+}
+
+  ]
+}

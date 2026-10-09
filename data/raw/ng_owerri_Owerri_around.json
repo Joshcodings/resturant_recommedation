@@ -1,0 +1,162 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:49:14Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 4029444715,
+  "lat": 5.4848588,
+  "lon": 7.0107705,
+  "tags": {
+    "amenity": "bar",
+    "name": "Dream Land Hotel, Splash Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444718,
+  "lat": 5.4852152,
+  "lon": 7.0116910,
+  "tags": {
+    "amenity": "bar",
+    "name": "Orange Room"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444722,
+  "lat": 5.4853926,
+  "lon": 7.0146359,
+  "tags": {
+    "amenity": "bar",
+    "name": "Jacob's Place"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444723,
+  "lat": 5.4840804,
+  "lon": 7.0145243,
+  "tags": {
+    "amenity": "bar",
+    "name": "Cathy's Suite",
+    "smoking": "outside"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444725,
+  "lat": 5.4847839,
+  "lon": 7.0126362,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Platinum Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444731,
+  "lat": 5.4809917,
+  "lon": 7.0114586,
+  "tags": {
+    "amenity": "bar",
+    "name": "Old Ibari Ogwa",
+    "smoking": "outside"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444734,
+  "lat": 5.4795926,
+  "lon": 7.0119361,
+  "tags": {
+    "amenity": "bar",
+    "name": "Daniel's Court"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444741,
+  "lat": 5.4823747,
+  "lon": 7.0150957,
+  "tags": {
+    "amenity": "bar",
+    "name": "Owerri Hotel Plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444747,
+  "lat": 5.4847702,
+  "lon": 7.0169546,
+  "tags": {
+    "amenity": "fast_food",
+    "delivery": "yes",
+    "drive_through": "yes",
+    "name": "Mr.Biggs",
+    "smoking": "no",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444748,
+  "lat": 5.4839534,
+  "lon": 7.0090481,
+  "tags": {
+    "amenity": "bar",
+    "name": "Dream Land Hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444766,
+  "lat": 5.4805536,
+  "lon": 7.0081049,
+  "tags": {
+    "amenity": "bar",
+    "name": "Starpkex Luxurious Guest House"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444770,
+  "lat": 5.4807125,
+  "lon": 7.0105714,
+  "tags": {
+    "amenity": "bar",
+    "name": "New Castle Hotel",
+    "smoking": "isolated"
+  }
+},
+{
+  "type": "node",
+  "id": 4029444771,
+  "lat": 5.4797679,
+  "lon": 7.0110459,
+  "tags": {
+    "amenity": "bar",
+    "name": "Real Hotels"
+  }
+},
+{
+  "type": "way",
+  "id": 791153417,
+  "center": {
+    "lat": 5.5058385,
+    "lon": 7.0441897
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Renny's place. IMSU"
+  }
+}
+
+  ]
+}

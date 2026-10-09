@@ -1,0 +1,403 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:17:39Z",
+    "timestamp_areas_base": "2026-10-08T07:25:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 501431694,
+  "lat": 6.3826069,
+  "lon": 7.4844616,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2022680",
+    "is_in:country": "Nigeria",
+    "name": "Awkunanaw",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 501497579,
+  "lat": 6.4753603,
+  "lon": 7.5850857,
+  "tags": {
+    "GNS:dsg_code": "PPL",
+    "GNS:dsg_string": "populated place",
+    "GNS:id": "-2006453",
+    "is_in:country": "Nigeria",
+    "name": "Emene",
+    "place": "suburb",
+    "source": "GNS"
+  }
+},
+{
+  "type": "node",
+  "id": 8753667617,
+  "lat": 6.4419304,
+  "lon": 7.5533283,
+  "tags": {
+    "name": "Independence Layout Phase II",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 8755461072,
+  "lat": 6.3732454,
+  "lon": 7.5363257,
+  "tags": {
+    "name": "Obeagu, Enugu south",
+    "place": "quarter"
+  }
+},
+{
+  "type": "node",
+  "id": 13153860144,
+  "lat": 6.4931689,
+  "lon": 7.5383702,
+  "tags": {
+    "name": "Abakpa Phase II",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13153907401,
+  "lat": 6.4429710,
+  "lon": 7.5196973,
+  "tags": {
+    "name": "Independence Layout",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13153907403,
+  "lat": 6.4857321,
+  "lon": 7.5261935,
+  "tags": {
+    "name": "Abakpa",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13153907404,
+  "lat": 6.4298920,
+  "lon": 7.6043747,
+  "tags": {
+    "name": "Happy Island",
+    "place": "quarter"
+  }
+},
+{
+  "type": "node",
+  "id": 13153907405,
+  "lat": 6.4581683,
+  "lon": 7.5240859,
+  "tags": {
+    "name": "New Haven",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13153907406,
+  "lat": 6.4712385,
+  "lon": 7.5272037,
+  "tags": {
+    "name": "Thinkers Corner",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170463399,
+  "lat": 6.4176005,
+  "lon": 7.4803533,
+  "tags": {
+    "name": "Achara",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170463400,
+  "lat": 6.4094433,
+  "lon": 7.5011149,
+  "tags": {
+    "name": "Uwani",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170584579,
+  "lat": 6.4606722,
+  "lon": 7.6011046,
+  "tags": {
+    "name": "Obinagu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170584580,
+  "lat": 6.3818029,
+  "lon": 7.5080696,
+  "tags": {
+    "name": "Amechi",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170584581,
+  "lat": 6.4116508,
+  "lon": 7.5411449,
+  "tags": {
+    "name": "Ugwuaji",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170584598,
+  "lat": 6.4515399,
+  "lon": 7.4794478,
+  "tags": {
+    "name": "New Market",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601816,
+  "lat": 6.4601943,
+  "lon": 7.4943674,
+  "tags": {
+    "name": "GRA",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601817,
+  "lat": 6.4792234,
+  "lon": 7.4883907,
+  "tags": {
+    "name": "Trans-Ekulu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601819,
+  "lat": 6.5089075,
+  "lon": 7.5012024,
+  "tags": {
+    "name": "Nike",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601820,
+  "lat": 6.4641651,
+  "lon": 7.4575465,
+  "tags": {
+    "name": "Coal Camp",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601821,
+  "lat": 6.4593553,
+  "lon": 7.4689258,
+  "tags": {
+    "name": "Iva Valley",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601822,
+  "lat": 6.5283540,
+  "lon": 7.5116209,
+  "tags": {
+    "name": "Nkwugo Nike",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601826,
+  "lat": 6.4365915,
+  "lon": 7.5004023,
+  "tags": {
+    "name": "Obiagu",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601828,
+  "lat": 6.4520216,
+  "lon": 7.5774082,
+  "tags": {
+    "name": "Proda",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601829,
+  "lat": 6.3912608,
+  "lon": 7.4997454,
+  "tags": {
+    "name": "Gariki",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13170601831,
+  "lat": 6.4302475,
+  "lon": 7.4802208,
+  "tags": {
+    "name": "Ogbete",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172200815,
+  "lat": 6.4989043,
+  "lon": 7.4894335,
+  "tags": {
+    "name": "Trans-Ekulu Extension",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172378166,
+  "lat": 6.4192084,
+  "lon": 7.5168783,
+  "tags": {
+    "name": "Maryland",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172378167,
+  "lat": 6.4479829,
+  "lon": 7.5017604,
+  "tags": {
+    "name": "Ogui",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172378168,
+  "lat": 6.3993773,
+  "lon": 7.4860953,
+  "tags": {
+    "name": "Agbani",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172378169,
+  "lat": 6.4275150,
+  "lon": 7.5496493,
+  "tags": {
+    "name": "Ishiagu",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13172434257,
+  "lat": 6.4369768,
+  "lon": 7.4884085,
+  "tags": {
+    "name": "Holy Ghost",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13172434258,
+  "lat": 6.4432626,
+  "lon": 7.4862301,
+  "tags": {
+    "name": "Secreteriat",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13173605828,
+  "lat": 6.3911240,
+  "lon": 7.5338152,
+  "tags": {
+    "name": "Centenary",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13173687945,
+  "lat": 6.5133614,
+  "lon": 7.5223013,
+  "tags": {
+    "name": "Amorji-Nike",
+    "place": "suburb"
+  }
+},
+{
+  "type": "node",
+  "id": 13173687974,
+  "lat": 6.5018992,
+  "lon": 7.5986586,
+  "tags": {
+    "name": "Nkwubor Nike",
+    "place": "neighbourhood"
+  }
+},
+{
+  "type": "node",
+  "id": 13630784415,
+  "lat": 6.4197648,
+  "lon": 7.6359166,
+  "tags": {
+    "name": "Vitality Bay",
+    "place": "quarter"
+  }
+},
+{
+  "type": "node",
+  "id": 13630784416,
+  "lat": 6.4396520,
+  "lon": 7.6692564,
+  "tags": {
+    "name": "Innovation Park",
+    "place": "quarter"
+  }
+}
+
+  ]
+}

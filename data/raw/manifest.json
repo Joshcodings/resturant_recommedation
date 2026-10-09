@@ -14,11 +14,39 @@
     "timestamp": "2026-10-08T20:38:30.358018+00:00"
   },
   {
+    "element_count": 6,
+    "file": "ng_calabar_Calabar_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:15000,4.9757,8.3417);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](ar",
+    "sha256": "d9d6c29991d8de6f50669e0c4f64572c79a04c1e53a8465e5b6c6e36a2071ce0",
+    "timestamp": "2026-10-09T08:23:34.977673+00:00"
+  },
+  {
+    "element_count": 88,
+    "file": "ng_enugu_Enugu_admin.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\narea[\"name\"=\"Enugu\"][\"admin_level\"=\"4\"][\"boundary\"=\"administrative\"]->.a;\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](area.a);\n  way[\"am",
+    "sha256": "636f271cd498b3b156a9e1d98b4ecd5417975a5f63be11c2aa02cfe3672c4b55",
+    "timestamp": "2026-10-09T08:13:32.715266+00:00"
+  },
+  {
     "element_count": 27,
     "file": "ng_ibadan_Ibadan_around.json",
     "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:25000,7.3775,3.947);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](aro",
     "sha256": "3b5dbe296d4a6ff395406baac59b9bb523ba0089d9e6a9d83b0c7794436f493d",
     "timestamp": "2026-10-08T10:27:08.330712+00:00"
+  },
+  {
+    "element_count": 28,
+    "file": "ng_kaduna_Kaduna_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:18000,10.5264,7.4384);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](a",
+    "sha256": "d169b5c419ddb9e09271e8718bb225944638fb1a9797d36f4613cea096697e5b",
+    "timestamp": "2026-10-09T08:21:52.339062+00:00"
+  },
+  {
+    "element_count": 38,
+    "file": "ng_kano_Kano_admin.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\narea[\"name\"=\"Kano\"][\"admin_level\"=\"4\"][\"boundary\"=\"administrative\"]->.a;\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](area.a);\n  way[\"ame",
+    "sha256": "0fed5eda0d2fe08b2f444b72542149a17984d8a0d0b5df71656a2c8913117b69",
+    "timestamp": "2026-10-09T08:16:09.613726+00:00"
   },
   {
     "element_count": 244,
@@ -28,10 +56,31 @@
     "timestamp": "2026-10-07T16:37:34.827656+00:00"
   },
   {
+    "element_count": 14,
+    "file": "ng_owerri_Owerri_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:15000,5.4836,7.0333);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](ar",
+    "sha256": "2002eb86683cc708c6b2686a8c17b7ef78a6c21d7b5ee6d6e00170dc564a1288",
+    "timestamp": "2026-10-09T08:46:43.793870+00:00"
+  },
+  {
     "element_count": 43,
     "file": "ng_port_harcourt_Port Harcourt_around.json",
     "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:20000,4.8156,7.0498);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](ar",
     "sha256": "15e6f00e407013b1d2f07db625c39f0e404b2af11a43aea864d7e3d9f328c0be",
     "timestamp": "2026-10-08T10:50:01.946320+00:00"
+  },
+  {
+    "element_count": 3,
+    "file": "ng_uyo_Uyo_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:15000,5.051,7.9328);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](aro",
+    "sha256": "9ba2ed4aa33c34291b497c4a5bacffd9a7fd64222b0857f4cab125344e3613ab",
+    "timestamp": "2026-10-09T08:35:30.894645+00:00"
+  },
+  {
+    "element_count": 16,
+    "file": "ng_warri_Warri_around.json",
+    "query_preview": "[out:json][timeout:180][maxsize:536870912];\n(\n  node[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](around:15000,5.5167,5.75);\n  way[\"amenity\"~\"^(restaurant|fast_food|cafe|bar)$\"][\"name\"](arou",
+    "sha256": "9bfb8a73cbb32dfd7c98ab733adfe53a1194bd1102a52a8c4fece2a353dca7e7",
+    "timestamp": "2026-10-09T08:37:24.748647+00:00"
   }
 ]

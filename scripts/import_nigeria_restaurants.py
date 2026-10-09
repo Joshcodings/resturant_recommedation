@@ -739,10 +739,24 @@ def import_city(region: dict, from_cache: bool) -> list[dict]:
         query, qlabel = build_admin_area_query(region)
 
     cache_path = RAW_DIR / f"ng_{city.lower().replace(' ', '_')}_{qlabel}.json"
-    raw = overpass_query(query, cache_path, from_cache)
-    elements = raw.get("elements", [])
-    record_raw_entry(cache_path, query, len(elements))
-    log(f"  Elements returned: {len(elements)}")
+    elements = []
+    try:
+        raw = overpass_query(query, cache_path, from_cache)
+        elements = raw.get("elements", [])
+        record_raw_entry(cache_path, query, len(elements))
+        log(f"  Elements returned: {len(elements)}")
+    except Exception as e:
+        if method == "admin_area" and not used_fallback:
+            log(f"  Admin-area query failed ({e}). Retrying with fallback around query...")
+            query, qlabel = build_around_query(region)
+            cache_path = RAW_DIR / f"ng_{city.lower().replace(' ', '_')}_{qlabel}.json"
+            raw = overpass_query(query, cache_path, from_cache)
+            elements = raw.get("elements", [])
+            record_raw_entry(cache_path, query, len(elements))
+            log(f"  Fallback elements returned: {len(elements)}")
+            used_fallback = True
+        else:
+            raise
 
     # If admin_area returned 0, retry with fallback
     if len(elements) == 0 and method == "admin_area" and not used_fallback:

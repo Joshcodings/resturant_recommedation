@@ -1,0 +1,49 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:37:09Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 5602955921,
+  "lat": 5.0276974,
+  "lon": 7.9301668,
+  "tags": {
+    "addr:housenumber": "40",
+    "addr:postcode": "234",
+    "addr:street": "40 Udoumana street",
+    "amenity": "bar",
+    "name": "Calwino bar",
+    "name:en": "Calwino geal and bar",
+    "phone": "08066576312"
+  }
+},
+{
+  "type": "node",
+  "id": 5754061133,
+  "lat": 5.0094857,
+  "lon": 7.9348052,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Cheeries Fast food"
+  }
+},
+{
+  "type": "node",
+  "id": 7240841089,
+  "lat": 5.0226635,
+  "lon": 7.9387689,
+  "tags": {
+    "addr:street": "Uruan street",
+    "amenity": "restaurant",
+    "name": "Night fast food",
+    "opening_hours": "Mo-Su 18:00-22:00"
+  }
+}
+
+  ]
+}

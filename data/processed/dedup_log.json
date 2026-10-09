@@ -83,6 +83,58 @@
     "distance_m": 6
   },
   {
+    "city": "Enugu",
+    "kept_id": 10057664766451,
+    "kept_name": "UNGEL UNEC",
+    "dropped": [
+      {
+        "id": 10006087117792,
+        "name": "UNGEL UNEC",
+        "source_id": "way/608711779"
+      }
+    ],
+    "distance_m": 17
+  },
+  {
+    "city": "Enugu",
+    "kept_id": 10087530715051,
+    "kept_name": "Ntachi osa",
+    "dropped": [
+      {
+        "id": 10087530781031,
+        "name": "Ntachi Osa",
+        "source_id": "node/8753078103"
+      }
+    ],
+    "distance_m": 15
+  },
+  {
+    "city": "Enugu",
+    "kept_id": 10087534987031,
+    "kept_name": "Timeless Bar and Grill",
+    "dropped": [
+      {
+        "id": 10087535036821,
+        "name": "Timeless Lounge",
+        "source_id": "node/8753503682"
+      }
+    ],
+    "distance_m": 25
+  },
+  {
+    "city": "Kaduna",
+    "kept_id": 10049126311061,
+    "kept_name": "Chicken Republic",
+    "dropped": [
+      {
+        "id": 10008467564792,
+        "name": "Chicken Republic",
+        "source_id": "way/846756479"
+      }
+    ],
+    "distance_m": 4
+  },
+  {
     "city": "Lagos",
     "kept_id": 10052186373191,
     "kept_name": "The Grill Room",

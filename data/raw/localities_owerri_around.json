@@ -1,0 +1,23 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:49:14Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 4033617078,
+  "lat": 5.4830148,
+  "lon": 7.0132415,
+  "tags": {
+    "is_in": "Owerri",
+    "name": "Area old D",
+    "place": "neighbourhood"
+  }
+}
+
+  ]
+}

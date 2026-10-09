@@ -1,0 +1,979 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:16:36Z",
+    "timestamp_areas_base": "2026-10-08T05:09:19Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2455133925,
+  "lat": 6.4539050,
+  "lon": 7.5127240,
+  "tags": {
+    "addr:street": "Bisala Road",
+    "amenity": "restaurant",
+    "ele": "217.199997",
+    "fixme": "many bad keys",
+    "name": "Citi Center"
+  }
+},
+{
+  "type": "node",
+  "id": 2460131167,
+  "lat": 6.4474229,
+  "lon": 7.4998656,
+  "tags": {
+    "addr:housenumber": "152.0",
+    "addr:street": "Ogui Road",
+    "amenity": "restaurant",
+    "fixme": "many bad keys",
+    "height": "227.699997",
+    "image": "https://enugupoi.appspot.com/view/binaryData?blobKey=build_POI-Picture-Form_1374250655%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2Fdata%5B%40key%3Duuid%3Adb260556-ec3a-4bb9-8464-f2e215beeba9%5D%2FPOI_Picture1",
+    "image:url": "https://enugupoi.appspot.com/view/binaryData?blobKey=build_POI-Picture-Form_1374250655%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2Fdata%5B%40key%3Duuid%3Adb260556-ec3a-4bb9-8464-f2e215beeba9%5D%2FPOI_Picture2",
+    "name": "Mr bigs stuffs"
+  }
+},
+{
+  "type": "node",
+  "id": 2492315229,
+  "lat": 6.4457704,
+  "lon": 7.4987015,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Gardenia Guest House"
+  }
+},
+{
+  "type": "node",
+  "id": 2728365916,
+  "lat": 6.4610031,
+  "lon": 7.5306974,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "African Princess Resort"
+  }
+},
+{
+  "type": "node",
+  "id": 2728367699,
+  "lat": 6.4527749,
+  "lon": 7.5021555,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Amazon Hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2728370040,
+  "lat": 6.4610767,
+  "lon": 7.5337215,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ascot Hotel Resort"
+  }
+},
+{
+  "type": "node",
+  "id": 2728400400,
+  "lat": 6.5104799,
+  "lon": 7.5133143,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Nike Lake Resort Hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5766476645,
+  "lat": 6.4246360,
+  "lon": 7.5062305,
+  "tags": {
+    "amenity": "cafe",
+    "cuisine": "pizza;burger;regional;chicken",
+    "name": "UNGEL UNEC"
+  }
+},
+{
+  "type": "node",
+  "id": 8752864734,
+  "lat": 6.4602159,
+  "lon": 7.5076514,
+  "tags": {
+    "amenity": "bar",
+    "name": "The Hometown Bar and Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 8752865904,
+  "lat": 6.4604308,
+  "lon": 7.5084143,
+  "tags": {
+    "amenity": "bar",
+    "name": "Golf Gardens"
+  }
+},
+{
+  "type": "node",
+  "id": 8752874422,
+  "lat": 6.4603722,
+  "lon": 7.5069515,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Village Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 8752885188,
+  "lat": 6.4618981,
+  "lon": 7.5107502,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Golden Bowl"
+  }
+},
+{
+  "type": "node",
+  "id": 8752900797,
+  "lat": 6.4576907,
+  "lon": 7.5131613,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "UGBA Plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 8752957843,
+  "lat": 6.4582798,
+  "lon": 7.5129779,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Open Sharaton"
+  }
+},
+{
+  "type": "node",
+  "id": 8753056906,
+  "lat": 6.4582063,
+  "lon": 7.5158725,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Lovik"
+  }
+},
+{
+  "type": "node",
+  "id": 8753071505,
+  "lat": 6.4586033,
+  "lon": 7.5196345,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ntachi osa"
+  }
+},
+{
+  "type": "node",
+  "id": 8753077539,
+  "lat": 6.4580439,
+  "lon": 7.5150138,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chazen Ice Cream Depot"
+  }
+},
+{
+  "type": "node",
+  "id": 8753077540,
+  "lat": 6.4576624,
+  "lon": 7.5158232,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Roka Drinks & Food Items Plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 8753078103,
+  "lat": 6.4587400,
+  "lon": 7.5196111,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ntachi Osa"
+  }
+},
+{
+  "type": "node",
+  "id": 8753085721,
+  "lat": 6.4580697,
+  "lon": 7.5151046,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "The Platinum Ice Co."
+  }
+},
+{
+  "type": "node",
+  "id": 8753093843,
+  "lat": 6.4587374,
+  "lon": 7.5170997,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Feel at Home"
+  }
+},
+{
+  "type": "node",
+  "id": 8753115900,
+  "lat": 6.4582063,
+  "lon": 7.5171905,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Oven and Batter Bakery Studio"
+  }
+},
+{
+  "type": "node",
+  "id": 8753140359,
+  "lat": 6.4591215,
+  "lon": 7.5172450,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama Ejima 3"
+  }
+},
+{
+  "type": "node",
+  "id": 8753147374,
+  "lat": 6.4587065,
+  "lon": 7.5182957,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Nwanyi Achi Special Abacha & Beer"
+  }
+},
+{
+  "type": "node",
+  "id": 8753159711,
+  "lat": 6.4580542,
+  "lon": 7.5191623,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chitis Hot Bread"
+  }
+},
+{
+  "type": "node",
+  "id": 8753161978,
+  "lat": 6.4582141,
+  "lon": 7.5183736,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Splendid Place"
+  }
+},
+{
+  "type": "node",
+  "id": 8753184302,
+  "lat": 6.4574200,
+  "lon": 7.5190481,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Snod Ice Cream"
+  }
+},
+{
+  "type": "node",
+  "id": 8753196386,
+  "lat": 6.4588302,
+  "lon": 7.5218787,
+  "tags": {
+    "amenity": "bar",
+    "name": "Lafta Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 8753209654,
+  "lat": 6.4572783,
+  "lon": 7.5233757,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Discovery Kitchen"
+  }
+},
+{
+  "type": "node",
+  "id": 8753220981,
+  "lat": 6.4588663,
+  "lon": 7.5210329,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama paul's Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 8753233091,
+  "lat": 6.4585389,
+  "lon": 7.5228879,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ntachi-Osa"
+  }
+},
+{
+  "type": "node",
+  "id": 8753251536,
+  "lat": 6.4577062,
+  "lon": 7.5245665,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Daisy life"
+  }
+},
+{
+  "type": "node",
+  "id": 8753260897,
+  "lat": 6.4579485,
+  "lon": 7.5244420,
+  "tags": {
+    "amenity": "bar",
+    "name": "Zeez Garden"
+  }
+},
+{
+  "type": "node",
+  "id": 8753272033,
+  "lat": 6.4578119,
+  "lon": 7.5271350,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Planet Food Restaurant and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753287719,
+  "lat": 6.4586369,
+  "lon": 7.5256795,
+  "tags": {
+    "amenity": "bar",
+    "name": "Cabrini Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753310205,
+  "lat": 6.4583713,
+  "lon": 7.5253915,
+  "tags": {
+    "amenity": "bar",
+    "name": "De Pines"
+  }
+},
+{
+  "type": "node",
+  "id": 8753322720,
+  "lat": 6.4583043,
+  "lon": 7.5272595,
+  "tags": {
+    "amenity": "bar",
+    "name": "Item 7"
+  }
+},
+{
+  "type": "node",
+  "id": 8753359749,
+  "lat": 6.4582612,
+  "lon": 7.5292727,
+  "tags": {
+    "amenity": "bar",
+    "name": "Dee Kings Place"
+  }
+},
+{
+  "type": "node",
+  "id": 8753360742,
+  "lat": 6.4582814,
+  "lon": 7.5299932,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Lec Shopping Centre /Outdoor Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 8753363424,
+  "lat": 6.4574779,
+  "lon": 7.5305330,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fan Milk"
+  }
+},
+{
+  "type": "node",
+  "id": 8753370650,
+  "lat": 6.4573141,
+  "lon": 7.5303275,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Dinmzy Treats"
+  }
+},
+{
+  "type": "node",
+  "id": 8753398265,
+  "lat": 6.4582096,
+  "lon": 7.5329813,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama's Pot"
+  }
+},
+{
+  "type": "node",
+  "id": 8753434474,
+  "lat": 6.4580300,
+  "lon": 7.5350795,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Fresh Choice Bakery"
+  }
+},
+{
+  "type": "node",
+  "id": 8753437262,
+  "lat": 6.4577966,
+  "lon": 7.5339254,
+  "tags": {
+    "amenity": "bar",
+    "name": "Sibax"
+  }
+},
+{
+  "type": "node",
+  "id": 8753443528,
+  "lat": 6.4582836,
+  "lon": 7.5349372,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Karas Place"
+  }
+},
+{
+  "type": "node",
+  "id": 8753445474,
+  "lat": 6.4577226,
+  "lon": 7.5335595,
+  "tags": {
+    "amenity": "bar",
+    "name": "Adrose Best Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753445475,
+  "lat": 6.4577203,
+  "lon": 7.5342348,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Continental Impressive Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 8753445476,
+  "lat": 6.4577562,
+  "lon": 7.5346820,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Happy Time"
+  }
+},
+{
+  "type": "node",
+  "id": 8753451961,
+  "lat": 6.4581063,
+  "lon": 7.5344426,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Goodway"
+  }
+},
+{
+  "type": "node",
+  "id": 8753453138,
+  "lat": 6.4580861,
+  "lon": 7.5342145,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Tosky"
+  }
+},
+{
+  "type": "node",
+  "id": 8753453518,
+  "lat": 6.4581580,
+  "lon": 7.5336115,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chi-Ella Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 8753473987,
+  "lat": 6.4607254,
+  "lon": 7.5346143,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "D'Junction Lounge & Wholesale"
+  }
+},
+{
+  "type": "node",
+  "id": 8753486657,
+  "lat": 6.4588851,
+  "lon": 7.5353664,
+  "tags": {
+    "amenity": "bar",
+    "name": "Legacy Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753488523,
+  "lat": 6.4592397,
+  "lon": 7.5346753,
+  "tags": {
+    "amenity": "bar",
+    "name": "DeCave"
+  }
+},
+{
+  "type": "node",
+  "id": 8753492488,
+  "lat": 6.4616590,
+  "lon": 7.5344223,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Pliis"
+  }
+},
+{
+  "type": "node",
+  "id": 8753498703,
+  "lat": 6.4616680,
+  "lon": 7.5347385,
+  "tags": {
+    "amenity": "bar",
+    "name": "Timeless Bar and Grill"
+  }
+},
+{
+  "type": "node",
+  "id": 8753503682,
+  "lat": 6.4616949,
+  "lon": 7.5345172,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Timeless Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 8753522735,
+  "lat": 6.4603708,
+  "lon": 7.5304562,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Elsies Bake House"
+  }
+},
+{
+  "type": "node",
+  "id": 8753527479,
+  "lat": 6.4565600,
+  "lon": 7.5228041,
+  "tags": {
+    "amenity": "bar",
+    "name": "Hatton Garden Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753544690,
+  "lat": 6.4557499,
+  "lon": 7.5246584,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Juwana Cusina"
+  }
+},
+{
+  "type": "node",
+  "id": 8753555914,
+  "lat": 6.4391755,
+  "lon": 7.5157417,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Roots restaurant & Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 8753567356,
+  "lat": 6.4573478,
+  "lon": 7.5187973,
+  "tags": {
+    "amenity": "bar",
+    "name": "Meeting Point Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753690719,
+  "lat": 6.4592719,
+  "lon": 7.5220516,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ntachi Osa New Haven"
+  }
+},
+{
+  "type": "node",
+  "id": 8753706768,
+  "lat": 6.4538476,
+  "lon": 7.5234758,
+  "tags": {
+    "amenity": "bar",
+    "name": "Bush Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753740302,
+  "lat": 6.4626528,
+  "lon": 7.4981260,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mama Onyinye Cafeteria"
+  }
+},
+{
+  "type": "node",
+  "id": 8753753629,
+  "lat": 6.5041921,
+  "lon": 7.5106251,
+  "tags": {
+    "amenity": "bar",
+    "name": "Another level Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8753783065,
+  "lat": 6.4574699,
+  "lon": 7.5087577,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Dolphin"
+  }
+},
+{
+  "type": "node",
+  "id": 8753844692,
+  "lat": 6.4396803,
+  "lon": 7.4976265,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Madam Omeife"
+  }
+},
+{
+  "type": "node",
+  "id": 8753846143,
+  "lat": 6.4394499,
+  "lon": 7.4951833,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Emily"
+  }
+},
+{
+  "type": "node",
+  "id": 8754449647,
+  "lat": 6.4186297,
+  "lon": 7.5143847,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Loma Linda Extension"
+  }
+},
+{
+  "type": "node",
+  "id": 8754456280,
+  "lat": 6.4601901,
+  "lon": 7.4967755,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "pizza",
+    "name": "Domino’s Pizza Enugu"
+  }
+},
+{
+  "type": "node",
+  "id": 8754459351,
+  "lat": 6.4629027,
+  "lon": 7.5131972,
+  "tags": {
+    "amenity": "bar",
+    "name": "Dragon Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8754473552,
+  "lat": 6.4329789,
+  "lon": 7.4965821,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Abacha special zik avenue"
+  }
+},
+{
+  "type": "node",
+  "id": 8754486210,
+  "lat": 6.4378288,
+  "lon": 7.5148660,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Kilimanjaro restaurant and Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 8754490471,
+  "lat": 6.4659889,
+  "lon": 7.4941831,
+  "tags": {
+    "amenity": "bar",
+    "name": "Voodoo lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 8754490616,
+  "lat": 6.4357716,
+  "lon": 7.4803746,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Genesis restaurant zik avenue"
+  }
+},
+{
+  "type": "node",
+  "id": 9234146448,
+  "lat": 6.4454276,
+  "lon": 7.5151507,
+  "tags": {
+    "amenity": "bar",
+    "name": "Cubana club & Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 10069258106,
+  "lat": 6.8793719,
+  "lon": 7.4194183,
+  "tags": {
+    "amenity": "bar",
+    "name": "Father Agbo Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 10543701167,
+  "lat": 6.4515434,
+  "lon": 7.5144055,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ntachi Osa"
+  }
+},
+{
+  "type": "node",
+  "id": 10581904941,
+  "lat": 6.4149041,
+  "lon": 7.4818256,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "bar": "yes",
+    "cuisine": "pizza;italian;chinese;mexican;asian;ice_cream",
+    "delivery": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "internet_access:ssid": "lambibambi69",
+    "name": "lambi",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "outdoor_seating": "yes",
+    "smoking": "outside",
+    "website": "https://lambiis2kwl4schwl.co.uk",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10581904942,
+  "lat": 6.4150197,
+  "lon": 7.4827251,
+  "tags": {
+    "air_conditioning": "yes",
+    "amenity": "bar",
+    "brewery": "yes;Guinness;Heineken;Augustiner;Warsteiner;Löwenbräu",
+    "internet_access": "wlan",
+    "min_age": "16",
+    "name": "drinks by lambi",
+    "opening_hours": "24/7",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:debit_cards": "yes",
+    "payment:mastercard": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13959213369,
+  "lat": 6.4671890,
+  "lon": 7.5229270,
+  "tags": {
+    "addr:city": "Enugu",
+    "addr:housenumber": "PLOT 7",
+    "addr:postcode": "400112",
+    "addr:street": "OWOR PREMIER LAYOUT OGUI NIKE INLAND TOWN,",
+    "amenity": "restaurant",
+    "cuisine": "african;soup",
+    "diet:chicken": "yes",
+    "diet:fish": "yes",
+    "diet:healthy": "yes",
+    "diet:local": "yes",
+    "diet:organic": "yes",
+    "name": "Jombo's Kitchen",
+    "opening_hours": "Mo-Sa 10:00-20:00",
+    "phone": "+2347030419101"
+  }
+},
+{
+  "type": "way",
+  "id": 608711779,
+  "center": {
+    "lat": 6.4246065,
+    "lon": 7.5063797
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "UNGEL UNEC"
+  }
+},
+{
+  "type": "way",
+  "id": 608930869,
+  "center": {
+    "lat": 6.4273032,
+    "lon": 7.5076473
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Jopal Inn"
+  }
+},
+{
+  "type": "way",
+  "id": 608971723,
+  "center": {
+    "lat": 6.4267228,
+    "lon": 7.5096638
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "EATERY",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 883433658,
+  "center": {
+    "lat": 6.8654712,
+    "lon": 7.4104963
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Chitis Resturant"
+  }
+},
+{
+  "type": "way",
+  "id": 1065970064,
+  "center": {
+    "lat": 6.4161517,
+    "lon": 7.5217164
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "regional",
+    "diet:local": "yes",
+    "name": "XX Arena and Lounge",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "phone": "+234 901 317 5035",
+    "website": "www.xxarena.com"
+  }
+},
+{
+  "type": "way",
+  "id": 1144816529,
+  "center": {
+    "lat": 6.4137905,
+    "lon": 7.4955124
+  },
+  "tags": {
+    "addr:city": "Enugu",
+    "addr:housenumber": "159",
+    "addr:postcode": "400107",
+    "addr:street": "Agbani Road",
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "branch": "& Pizza Jungle",
+    "brand": "Kilimanjaro",
+    "brand:wikidata": "Q28453128",
+    "building": "yes",
+    "cuisine": "nigerian",
+    "diet:meat": "yes",
+    "diet:vegetarian": "yes",
+    "drive_through": "yes",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipPNbG3x96hNdYsAhLNHJ6miIMdzfBV0D7L4S1Bh=s680-w680-h510",
+    "name": "Kilimanjaro",
+    "opening_hours": "Mo-Su 07:30-22:00",
+    "phone": "+2348100393579",
+    "source": "microsoft/BuildingFootprints",
+    "takeaway": "yes"
+  }
+}
+
+  ]
+}

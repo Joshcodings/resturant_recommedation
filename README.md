@@ -67,25 +67,26 @@ See [tastematch/README.md](tastematch/README.md) for full documentation on the h
 
 ## 🗺️ New Markets & OpenStreetMap (Beta)
 
-We are actively expanding into new markets starting with Nigeria (**Lagos**, **Abuja**, and **Port Harcourt**). Because the original Zomato dataset did not cover these regions, we fetch live place data from **OpenStreetMap (OSM) via Overpass API**.
+We are actively expanding into new markets starting with Nigeria (**Lagos**, **Abuja**, **Port Harcourt**, and **Kano**). Because the original Zomato dataset did not cover these regions, we fetch live place data from **OpenStreetMap (OSM) via Overpass API**.
 
 ### Verified Dataset Coverage (from `scripts/validate_datasets.py`):
-- **Total OSM Records**: 408 places
-  - **Lagos**: 242 (59.3%)
-  - **Abuja**: 123 (30.1%)
-  - **Port Harcourt**: 43 (10.5%)
+- **Total OSM Records**: 446 places
+  - **Lagos**: 242 (54.3%)
+  - **Abuja**: 123 (27.6%)
+  - **Port Harcourt**: 43 (9.6%)
+  - **Kano**: 38 (8.5%)
 - **Attribute Coverage**:
-  - Cuisines: 120 / 408 (29.4%)
-  - Localities: 246 / 408 (60.3%)
-  - Addresses: 125 / 408 (30.6%)
-  - Opening Hours: 64 / 408 (15.7%)
-  - Phone: 56 / 408 (13.7%)
-  - Website: 56 / 408 (13.7%)
+  - Cuisines: 131 / 446 (29.4%)
+  - Localities: 283 / 446 (63.5%)
+  - Addresses: 135 / 446 (30.3%)
+  - Opening Hours: 69 / 446 (15.5%)
+  - Phone: 58 / 446 (13.0%)
+  - Website: 58 / 446 (13.0%)
 - **Place Types**:
-  - Restaurants: 223
-  - Fast Food: 78
-  - Bars: 75
-  - Cafes: 32
+  - Restaurants: 248
+  - Fast Food: 82
+  - Bars: 76
+  - Cafes: 40
 
 ### Capabilities & Engine Behavior:
 - **Unrated/Unpriced Mode**: OSM data lacks standard Zomato ratings and average cost fields. The recommendation engine dynamically switches to an unrated heuristic mode — ranking places strictly by cuisine match, proximity, and listing completeness.

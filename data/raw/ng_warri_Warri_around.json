@@ -1,0 +1,196 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:39:52Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 5407647924,
+  "lat": 5.5375616,
+  "lon": 5.7463583,
+  "tags": {
+    "addr:housenumber": "Flat 33",
+    "addr:street": "Former NPA Housing Estate, Airport Road",
+    "amenity": "fast_food",
+    "name": "AJ Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 5407648222,
+  "lat": 5.5376490,
+  "lon": 5.7465368,
+  "tags": {
+    "addr:street": "Airport Road",
+    "amenity": "fast_food",
+    "name": "Chicken Replubic"
+  }
+},
+{
+  "type": "node",
+  "id": 5417271623,
+  "lat": 5.5415594,
+  "lon": 5.7657005,
+  "tags": {
+    "addr:street": "Airport Road",
+    "amenity": "fast_food",
+    "name": "Sizzler Fast Food"
+  }
+},
+{
+  "type": "node",
+  "id": 5427746023,
+  "lat": 5.5364877,
+  "lon": 5.7453885,
+  "tags": {
+    "addr:street": "Airport Road",
+    "amenity": "fast_food",
+    "name": "Fantaza"
+  }
+},
+{
+  "type": "node",
+  "id": 5428923132,
+  "lat": 5.5436616,
+  "lon": 5.7777887,
+  "tags": {
+    "addr:housenumber": "109",
+    "addr:street": "Effurun Sapele Road",
+    "amenity": "restaurant",
+    "name": "Homey Choice Restaurant",
+    "shop": "variety_store"
+  }
+},
+{
+  "type": "node",
+  "id": 5443807726,
+  "lat": 5.5693751,
+  "lon": 5.7434113,
+  "tags": {
+    "addr:street": "Refinery Road",
+    "amenity": "fast_food",
+    "name": "Sizzlers"
+  }
+},
+{
+  "type": "node",
+  "id": 5443808523,
+  "lat": 5.5682369,
+  "lon": 5.7969005,
+  "tags": {
+    "addr:street": "PTI Road",
+    "amenity": "fast_food",
+    "name": "Sizzlers"
+  }
+},
+{
+  "type": "node",
+  "id": 5446406422,
+  "lat": 5.5596151,
+  "lon": 5.7756022,
+  "tags": {
+    "addr:housenumber": "109a",
+    "addr:street": "Jakpa Road",
+    "amenity": "restaurant",
+    "name": "Dulcet Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5466611849,
+  "lat": 5.5576995,
+  "lon": 5.7599044,
+  "tags": {
+    "addr:street": "Odogun Avenue",
+    "amenity": "bar",
+    "name": "Akemis Bush Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5533349925,
+  "lat": 5.5397608,
+  "lon": 5.7836057,
+  "tags": {
+    "addr:housenumber": "68",
+    "addr:street": "Enerhen Road",
+    "amenity": "restaurant",
+    "name": "Eaters Renaissance"
+  }
+},
+{
+  "type": "node",
+  "id": 5557083022,
+  "lat": 5.5444273,
+  "lon": 5.7714626,
+  "tags": {
+    "addr:housenumber": "17",
+    "addr:street": "Airport Road",
+    "amenity": "fast_food",
+    "name": "Kom Chop"
+  }
+},
+{
+  "type": "node",
+  "id": 5560424226,
+  "lat": 5.5649441,
+  "lon": 5.7569956,
+  "tags": {
+    "addr:housenumber": "83",
+    "addr:street": "Hospital Road",
+    "amenity": "fast_food",
+    "name": "Kom Chop"
+  }
+},
+{
+  "type": "node",
+  "id": 5560446231,
+  "lat": 5.5633505,
+  "lon": 5.7523305,
+  "tags": {
+    "addr:housenumber": "40",
+    "addr:street": "Hospital Road",
+    "amenity": "fast_food",
+    "name": "Fountains Food"
+  }
+},
+{
+  "type": "node",
+  "id": 5564675826,
+  "lat": 5.5564670,
+  "lon": 5.7791029,
+  "tags": {
+    "addr:street": "Jakpa Road",
+    "amenity": "bar",
+    "name": "Tee and Tee Bar"
+  }
+},
+{
+  "type": "node",
+  "id": 5577106534,
+  "lat": 5.5442763,
+  "lon": 5.7653591,
+  "tags": {
+    "addr:street": "Bendel Estate",
+    "amenity": "bar",
+    "name": "NNPC Junior Staff Club"
+  }
+},
+{
+  "type": "node",
+  "id": 5670322128,
+  "lat": 5.5064750,
+  "lon": 5.8130596,
+  "tags": {
+    "addr:street": "Orhuwhorun Road",
+    "amenity": "fast_food",
+    "name": "Fantaza Fast Food"
+  }
+}
+
+  ]
+}

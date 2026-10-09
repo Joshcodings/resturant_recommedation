@@ -1,0 +1,389 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:24:18Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 544297029,
+  "lat": 10.5486078,
+  "lon": 7.4592312,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Kung Fu Chinese Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 544297961,
+  "lat": 10.5475918,
+  "lon": 7.4505505,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "pizza;regional;chinese;fish_and_chips;international",
+    "name": "Big Treat"
+  }
+},
+{
+  "type": "node",
+  "id": 552939923,
+  "lat": 10.5436064,
+  "lon": 7.4315809,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "lebanese",
+    "name": "Byblos"
+  }
+},
+{
+  "type": "node",
+  "id": 560941625,
+  "lat": 10.5164408,
+  "lon": 7.4403544,
+  "tags": {
+    "addr:street": "Independence Way",
+    "amenity": "fast_food",
+    "cuisine": "nigerian",
+    "name": "Food Planet",
+    "operator": "Private"
+  }
+},
+{
+  "type": "node",
+  "id": 560941626,
+  "lat": 10.5155200,
+  "lon": 7.4405553,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "nigerian",
+    "name": "Sweeties"
+  }
+},
+{
+  "type": "node",
+  "id": 1770349355,
+  "lat": 10.5118602,
+  "lon": 7.4543399,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Food Palace"
+  }
+},
+{
+  "type": "node",
+  "id": 1770350047,
+  "lat": 10.5114066,
+  "lon": 7.4546027,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Mr. Biggs"
+  }
+},
+{
+  "type": "node",
+  "id": 3382412670,
+  "lat": 10.5294521,
+  "lon": 7.4338766,
+  "tags": {
+    "amenity": "bar",
+    "name": "Command Guest House"
+  }
+},
+{
+  "type": "node",
+  "id": 4912505240,
+  "lat": 10.5475755,
+  "lon": 7.4568973,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "7 Star"
+  }
+},
+{
+  "type": "node",
+  "id": 4912514285,
+  "lat": 10.5363721,
+  "lon": 7.4686203,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Chinese Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 4912631106,
+  "lat": 10.5227378,
+  "lon": 7.4332680,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chicken Republic"
+  }
+},
+{
+  "type": "node",
+  "id": 4912680271,
+  "lat": 10.5379294,
+  "lon": 7.4414173,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Shawarma"
+  }
+},
+{
+  "type": "node",
+  "id": 4912799963,
+  "lat": 10.5327341,
+  "lon": 7.4520472,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "One Eleven 1-11"
+  }
+},
+{
+  "type": "node",
+  "id": 4912799964,
+  "lat": 10.5325205,
+  "lon": 7.4521384,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Nine Eleven 9-11"
+  }
+},
+{
+  "type": "node",
+  "id": 6181124287,
+  "lat": 10.5058073,
+  "lon": 7.4324104,
+  "tags": {
+    "addr:housenumber": "5",
+    "addr:street": "Jema'a Road",
+    "air_conditioning": "no",
+    "amenity": "restaurant",
+    "bar": "no",
+    "capacity": "50",
+    "cuisine": "african",
+    "delivery": "no",
+    "name": "Tawakalitu Restaurant",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "outdoor_seating": "no",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7365831287,
+  "lat": 10.4678430,
+  "lon": 7.4316821,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "brand:wikidata": "Q23461416",
+    "cuisine": "chicken",
+    "name": "Chicken Republic",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7365831290,
+  "lat": 10.4705508,
+  "lon": 7.4332961,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Rityz fast food"
+  }
+},
+{
+  "type": "node",
+  "id": 7428702738,
+  "lat": 10.5050880,
+  "lon": 7.4307806,
+  "tags": {
+    "addr:city": "Dadi Riba",
+    "addr:street": "Muri Road",
+    "amenity": "restaurant",
+    "cuisine": "regional;international;african",
+    "name": "West Point",
+    "opening_hours": "Mo-Su 09:00-21:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7428702740,
+  "lat": 10.5035250,
+  "lon": 7.4320653,
+  "tags": {
+    "addr:city": "Dadi Riba",
+    "addr:street": "Constitution Road",
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "brand": "Chicken Republic",
+    "brand:wikidata": "Q23461416",
+    "cuisine": "chicken",
+    "delivery": "no",
+    "name": "Chicken Republic",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "outdoor_seating": "no",
+    "takeaway": "yes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 10976924505,
+  "lat": 10.5456299,
+  "lon": 7.4503817,
+  "tags": {
+    "addr:street": "Isa Kaita Road",
+    "amenity": "fast_food",
+    "name": "Muffins & Brownies"
+  }
+},
+{
+  "type": "node",
+  "id": 11580587586,
+  "lat": 10.5481739,
+  "lon": 7.4521665,
+  "tags": {
+    "addr:city": "Kaduna",
+    "addr:housenumber": "37B Square",
+    "addr:postcode": "800273",
+    "addr:street": "Isa Kaita Road",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop;burger;pizza;sandwich;kebab",
+    "delivery": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "The Tea Place By JSEN Delights",
+    "opening_hours": "24/7",
+    "outdoor_seating": "yes",
+    "phone": "+2349042698816",
+    "website": "https://jsendelights.com"
+  }
+},
+{
+  "type": "node",
+  "id": 13042245164,
+  "lat": 10.6105151,
+  "lon": 7.4446288,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Bush Canteen"
+  }
+},
+{
+  "type": "way",
+  "id": 488835890,
+  "center": {
+    "lat": 10.5404394,
+    "lon": 7.4307603
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Shagalinku"
+  }
+},
+{
+  "type": "way",
+  "id": 846756479,
+  "center": {
+    "lat": 10.5227585,
+    "lon": 7.4332334
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Chicken Republic",
+    "opening_hours:covid19": "off"
+  }
+},
+{
+  "type": "way",
+  "id": 1244954327,
+  "center": {
+    "lat": 10.5099160,
+    "lon": 7.4331220
+  },
+  "tags": {
+    "addr:street": "Daura Road",
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "coffee_shop",
+    "name": "Saidu Mai Shayi",
+    "source": "microsoft/BuildingFootprints"
+  }
+},
+{
+  "type": "way",
+  "id": 1245038563,
+  "center": {
+    "lat": 10.5445851,
+    "lon": 7.4388582
+  },
+  "tags": {
+    "addr:city": "Unguwar Shanu",
+    "addr:street": "Ali Akilu Road",
+    "amenity": "restaurant",
+    "building": "yes",
+    "capacity": "100",
+    "cuisine": "pizza;chinese;coffee_shop;kebab;chicken;international;seafood",
+    "name": "Midway Cafe",
+    "opening_hours": "24/7",
+    "outdoor_seating": "yes",
+    "smoking": "outside",
+    "source": "microsoft/BuildingFootprints",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1245212659,
+  "center": {
+    "lat": 10.5136554,
+    "lon": 7.4308015
+  },
+  "tags": {
+    "addr:street": "Ahmadu Bello Way",
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "Disney Chicken",
+    "source": "microsoft/BuildingFootprints"
+  }
+},
+{
+  "type": "way",
+  "id": 1245590348,
+  "center": {
+    "lat": 10.5082130,
+    "lon": 7.4335818
+  },
+  "tags": {
+    "addr:city": "Kaduna North",
+    "addr:housenumber": "AZ 33",
+    "addr:postcode": "800211",
+    "addr:street": "Maiduguri Road",
+    "air_conditioning": "yes",
+    "amenity": "fast_food",
+    "building": "yes",
+    "cuisine": "ice_cream;snack",
+    "name": "Kaka Charee Ice Cream",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "operator": "Kaka Chari",
+    "payment:bank_transfer": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "smoking": "no",
+    "source": "microsoft/BuildingFootprints"
+  }
+}
+
+  ]
+}

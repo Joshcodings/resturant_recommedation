@@ -1,0 +1,69 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-09T08:15:36Z",
+    "timestamp_areas_base": "2026-10-08T07:25:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "area",
+  "id": 3603717212,
+  "tags": {
+    "ISO3166-2": "NG-EN",
+    "admin_level": "4",
+    "boundary": "administrative",
+    "name": "Enugu",
+    "name:ar": "إنوغو",
+    "name:az": "Enuqu ştatı",
+    "name:azb": "انوقو ایالتی",
+    "name:bg": "Енугу",
+    "name:ca": "Estat d'Enugu",
+    "name:ceb": "Enugu",
+    "name:da": "Enugu",
+    "name:de": "Enugu",
+    "name:en": "Enugu State",
+    "name:es": "Estado de Enugu",
+    "name:et": "Enugu osariik",
+    "name:fa": "ایالت انوگو",
+    "name:fi": "Enugu",
+    "name:fr": "État d'Enugu",
+    "name:gl": "Estado de Enugu",
+    "name:ha": "Enugu",
+    "name:hi": "एनुगु राज्य",
+    "name:id": "Enugu",
+    "name:ig": "Ȯra Enugu",
+    "name:it": "Enugu",
+    "name:ja": "エヌグ州",
+    "name:ka": "ენუგუს შტატი",
+    "name:ko": "에누구주",
+    "name:mrj": "Энугу",
+    "name:nan": "Enugu Chiu",
+    "name:nl": "Enugu",
+    "name:no": "Enugu",
+    "name:pl": "Enugu",
+    "name:pt": "Enugu",
+    "name:ro": "Statul Enugu",
+    "name:ru": "Энугу",
+    "name:sr": "Енугу",
+    "name:sv": "Enugu",
+    "name:sw": "Jimbo la Enugu",
+    "name:tr": "Enugu Eyaleti",
+    "name:uk": "Енугу",
+    "name:ur": "عنوگو ریاست",
+    "name:war": "Enugu",
+    "name:yo": "Ìpínlẹ̀ Ẹnúgu",
+    "name:zh": "埃努古州",
+    "official_name:ar": "ولاية إنوغو",
+    "source": "ehealthafrica.org",
+    "source:date": "2013",
+    "type": "boundary",
+    "wikidata": "Q3817714",
+    "wikipedia": "en:Enugu State"
+  }
+}
+
+  ]
+}
