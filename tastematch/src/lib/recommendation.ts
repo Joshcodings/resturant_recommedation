@@ -10,7 +10,7 @@ import { STAGE_NOTICES, STAGE_NOTICES_ANY_PRICE } from '@/types/recommendation';
 import { whyThisPick } from '@/lib/formatters';
 import type { MoodPreset } from '@/config/presets';
 import { haversineDistance, computeCentroid, isValidCoordinate } from '@/lib/location';
-import { UNRATED_WEIGHTS } from '@/config/rankingWeights';
+import { computeUnratedScore, computeFreshness, computeListingDetail } from '@/lib/rankingNG';
 import { PRICE_TIERS } from '@/lib/currency';
 
 export function isNum(x: number | null | undefined): x is number {
@@ -45,29 +45,17 @@ export function liveScore(r: ScoredRestaurant, weights: PriorityWeights): number
 
   // Unrated cities fallback logic (Nigeria)
   if (!r.hasRating) {
-    // According to plan: (count present of: cuisine, opening_hours, phone, website, address) / 5
-    const presentCount =
-      (r.cuisineList.length > 0 && r.cuisines !== 'Unspecified' ? 1 : 0) +
-      (r.opening_hours ? 1 : 0) +
-      (r.phone ? 1 : 0) +
-      (r.website ? 1 : 0) +
-      (r.address || r.locality ? 1 : 0);
-    const detailScore = presentCount / 5.0;
-
+    const detailScore = computeListingDetail(r);
+    const freshness = computeFreshness(r.osm_timestamp);
     const prox = r.distanceKm !== undefined ? Math.max(0, 1.0 - r.distanceKm / 10.0) : 0.5;
 
-    if (weights.cuisineMatch > 0) {
-      return (
-        UNRATED_WEIGHTS.withCuisineRequest.cuisineMatch * r.cuisineMatch +
-        UNRATED_WEIGHTS.withCuisineRequest.proximity * prox +
-        UNRATED_WEIGHTS.withCuisineRequest.listingDetail * detailScore
-      );
-    } else {
-      return (
-        UNRATED_WEIGHTS.noCuisineRequest.proximity * prox +
-        UNRATED_WEIGHTS.noCuisineRequest.listingDetail * detailScore
-      );
-    }
+    return computeUnratedScore({
+      cuisineMatch: r.cuisineMatch,
+      hasCuisineQuery: weights.cuisineMatch > 0,
+      proximity: prox,
+      listingDetail: detailScore,
+      freshness,
+    });
   }
 
   const fRating  = isNum(r.weighted_rating) ? r.weighted_rating / 5.0 : 0;
@@ -295,14 +283,16 @@ export function recommend(
     if (isRatedCity) {
       score = (r.weighted_rating || 0) + 0.5 * cuisineMatch;
     } else {
-      const detailScore = 
-        ((r.phone ? 1 : 0) + (r.opening_hours ? 1 : 0) + (r.website ? 1 : 0) + ((r.address || r.locality) ? 1 : 0)) / 4.0;
+      const detailScore = computeListingDetail(r);
+      const freshness = computeFreshness(r.osm_timestamp);
       const prox = distanceKm !== undefined ? Math.max(0, 1.0 - distanceKm / 10.0) : 0.5;
-      if (wanted.size > 0) {
-        score = 0.5 * cuisineMatch + 0.3 * prox + 0.2 * detailScore;
-      } else {
-        score = 0.6 * prox + 0.4 * detailScore;
-      }
+      score = computeUnratedScore({
+        cuisineMatch,
+        hasCuisineQuery: wanted.size > 0,
+        proximity: prox,
+        listingDetail: detailScore,
+        freshness,
+      });
     }
 
     return {
@@ -333,7 +323,15 @@ export function recommend(
     if (!anyPrice) sub = sub.filter(r => r.price_range === priceRange);
     if (wanted.size > 0) sub = sub.filter(r => r.cuisineMatch > 0);
 
-    const sorted = [...sub].sort((a, b) => b.score - a.score || (b.votes || 0) - (a.votes || 0));
+    const sorted = [...sub].sort((a, b) => {
+      const diff = b.score - a.score;
+      if (Math.abs(diff) > 1e-6) return diff;
+      const vDiff = (b.votes || 0) - (a.votes || 0);
+      if (vDiff !== 0) return vDiff;
+      const aKey = String(a.uid ?? a.restaurant_id ?? '');
+      const bKey = String(b.uid ?? b.restaurant_id ?? '');
+      return aKey.localeCompare(bKey);
+    });
     const seen = new Set<string>();
     const deduped: ScoredRestaurant[] = [];
     for (const r of sorted) {
@@ -394,7 +392,15 @@ export function recommend(
         sub = sub.filter(r => r.cuisineMatch > 0);
       }
 
-      const sorted = [...sub].sort((a, b) => b.score - a.score || (b.votes || 0) - (a.votes || 0));
+      const sorted = [...sub].sort((a, b) => {
+        const diff = b.score - a.score;
+        if (Math.abs(diff) > 1e-6) return diff;
+        const vDiff = (b.votes || 0) - (a.votes || 0);
+        if (vDiff !== 0) return vDiff;
+        const aKey = String(a.uid ?? a.restaurant_id ?? '');
+        const bKey = String(b.uid ?? b.restaurant_id ?? '');
+        return aKey.localeCompare(bKey);
+      });
       const seen = new Set<string>();
       const deduped: ScoredRestaurant[] = [];
       for (const r of sorted) {

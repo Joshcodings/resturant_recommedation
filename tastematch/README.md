@@ -1,7 +1,8 @@
-# TasteMatch — Explainable Restaurant Recommendation & Intelligence Platform
+# TasteMatch — Worldwide Restaurant Finder & Intelligence Platform
 
-> An explainable restaurant recommendation and restaurant intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries).
-> Built as a static React + Vite + TypeScript web application with **$0 infrastructure costs**, responsive mobile-first UI, and offline machine learning interpretability.
+> An explainable, worldwide restaurant recommendation and intelligence platform built on Kaggle's Zomato dataset (7,403 restaurants across 15 countries) and OpenStreetMap (1,263 verified Nigerian food venues across Lagos, Abuja, Benin City, Jos, Enugu, Kano, and more).
+>
+> Built as a zero-backend, 100% static React + Vite + TypeScript web application with **$0 infrastructure costs**, responsive mobile-first UI, offline machine learning interpretability, and full offline caching via Service Worker.
 
 ---
 
@@ -17,148 +18,138 @@
 - **Structured Attribution Breakdown**:
   - Every card and detail drawer reveals explicit decision factors: cuisine affinity, Bayesian weighted rating vs. raw votes, price tier match, social proof review volume, and centroid distance.
 
-### 2. Location Intelligence & Proximity Filtering
-- **Haversine Distance**: Accurate spherical distance calculations between restaurants and city centroids or user locations.
-- **Proximity Filtering**: Filter candidates within 3km, 5km, or 10km radius with distance badges (`📍 2.5km`).
-- **Interactive OpenStreetMap + Leaflet**: Clean dark/light styled tiles with zero API keys required.
+### 2. Nigerian Experience & Local Intelligence (Stage 5)
+- **Feature 1: Dish-First Search**:
+  - Search by local dishes (e.g. *Jollof*, *Suya*, *Amala*, *Pounded Yam*, *Shawarma*, *Egusi*).
+  - Strict compliance with Hard Rule 8: matches are explicitly labelled by source — `"cuisine tag: <cuisine>"` or `"matched in name"`. Never infers that a place serves a dish without tagging.
+- **Feature 2: Pay-How Filter**:
+  - Filter places accepting Cash, Cards (Mastercard/Visa), or Mobile Payment / Bank Transfer / POS.
+  - Sourced strictly from verified `payment:*` OpenStreetMap tags; never guessed.
+- **Feature 3: Naija Meal Clock Filter**:
+  - Filter by "Open Now", "Open Late (10 PM+)", or meal slots (Morning, Afternoon, Evening, Late Night) evaluated in **Africa/Lagos time (WAT, UTC+1)**.
+  - Conforms to Hard Rule 1: unknown hours return `null` and are excluded from "Open Now", accompanied by a transparent count of excluded places (*e.g., "1,092 places without listed hours excluded"*).
+- **Feature 4: Near a Landmark**:
+  - Proximity filtering around major landmarks in Lagos, Abuja, Port Harcourt, and Ibadan (*e.g. Lekki Toll Gate, Ikeja City Mall, National Stadium Abuja*).
+- **Feature 5: Power & Air Conditioning Badges**:
+  - Verified generator badges (`🔌 Generator Backup`) and AC badges (`❄️ Air Conditioning`) based strictly on OSM tags (`generator:source=*`, `air_conditioning=yes`).
+- **Feature 6: Food Run Planner**:
+  - Aggregate group food orders, calculate estimated costs, and generate one-click pre-filled WhatsApp ordering messages.
+- **Feature 7: Data-Saver Mode**:
+  - Low-bandwidth toggle that disables map tiles and heavy images, serving compact text cards to minimize cellular data usage.
+- **Feature 8: Owambe Crawl Itinerary Planner**:
+  - Builds deterministic 2- to 4-stop food crawl itineraries within a neighbourhood (e.g. Pre-drinks & Suya $\to$ Main Feast $\to$ Late Night Lounge).
+  - Computes pairwise walking/driving distances and generates a shareable WhatsApp itinerary.
+- **Feature 9: Community "Add a Place" Layer**:
+  - Local-storage backed persistence allowing users to save unlisted community spots immediately.
+  - Includes instant GeoJSON FeatureCollection and OSM tag snippet export for contributing to OpenStreetMap.
+  - Disclaims clearly: *"Stored in your browser only — export as GeoJSON or OSM tags to contribute upstream."*
+- **Feature 10: 36 State Capitals Switcher**:
+  - One-click navigation modal across all 36 Nigerian state capitals and FCT Abuja, showing place counts and handling unmapped cities gracefully.
+- **Feature 11: Compare Mode & Area Food Fingerprint**:
+  - Compare up to 3 restaurants side-by-side with Nigerian-specific attributes.
+  - Locality breakdown for areas with $\ge 15$ venues, stating strictly factual cuisine and venue distributions (*"What this area is known for: Most listed cuisine: X (n places)"*).
+- **Feature 12: Multilingual Draft Support**:
+  - UI switchable across **English**, **Nigerian Pidgin**, **Yoruba**, **Igbo**, and **Hausa**.
+  - All non-English strings include the required disclaimer: `(draft — needs native-speaker review)`.
 
-### 3. Machine Learning & Model Interpretability
-- **Supervised Regression Benchmark**:
-  - Directly exposes research experiments from `Zomato.ipynb` comparing Baseline, Ridge/Linear Regression, Random Forest, and HistGradientBoosting.
-  - Quantifies performance across Test MAE (0.278) and $R^2$ (0.695) under leakage-controlled splits (excluding votes from non-established baseline).
-- **Permutation Feature Importance**:
-  - Interactive bar charts revealing relative feature influence: Local Cost vs. Country Median ($+0.085$), Price Tier ($+0.053$), Geographic Cluster ($+0.041$), Table Booking ($+0.032$), Cuisine Diversity ($+0.019$).
-- **Error Distribution & Regional Residuals**:
-  - 80% error quantile ($\pm 0.44$ rating points).
-  - Explicit residual bias audit: Delhi NCR ($-0.012$ bias, MAE $0.328$) vs. International (14 countries, $+0.041$ bias, MAE $0.375$).
-- **Interactive Rating Simulator (Inference Sandbox)**:
-  - Real-time client-side rating predictor with an 80% confidence interval, allowing users to test how price tiers, relative cost, booking availability, delivery, and review counts affect predicted customer reception.
+### 3. Location Intelligence & Offline Map Capabilities
+- **Haversine Distance**: Accurate spherical distance calculations between restaurants, landmarks, and city centroids.
+- **MapLibre GL / OpenStreetMap**: Zero-API-key vector and raster maps with data-saver fallback.
+- **Service Worker (`public/sw.js`)**: Full offline caching of app shell, manifest, and previously loaded city shards.
 
-### 4. Offline Recommender Evaluation Framework
-Quantitative evaluation comparing 4 recommendation paradigms over an offline evaluation sample:
-- **Baseline (Top-Rated / Popularity)**: High raw ratings, but suffers from popularity bias (NDCG@5: 0.111, Coverage: 0.3%).
-- **Content-Based**: Maximizes cuisine match (Precision@5: 46.7%, NDCG@5: 0.486).
-- **Preference-Based**: Strict attribute alignment (Precision@5: 18.7%, NDCG@5: 0.172).
-- **TasteMatch Hybrid + MMR**: Achieves superior ranking and discovery balance (Precision@5: 60.7%, NDCG@5: 0.664, Catalog Coverage: 2.0%, Intra-List Diversity: 74.0%).
-
-### 5. Multi-Currency Converter & Live Exchange Rates
+### 4. Multi-Currency Converter & Live Exchange Rates
 - Primary rate fetch via jsDelivr currency API with Cloudflare mirror and Open ExchangeRate-API fallback.
 - Local storage caching (12h TTL) and bundled offline fallback (`rates-fallback.json`).
-- Formats amounts dynamically with `Intl.NumberFormat` across 15+ currencies (USD, INR, NGN, GBP, EUR, AED, etc.).
+- Formats amounts dynamically across NGN (₦), USD ($), INR (₹), GBP (£), EUR (€), AED, and more.
 
-### 6. Responsive Mobile-First Design & WCAG AA Contrast
-- **Ink & Lime Design System**: Contrast ratios computed live in code adhering strictly to WCAG AA ($\ge 4.5:1$).
-- **Responsive Layout**:
-  - Mobile ($\le 390\text{px}$): Bottom navigation bar (`Discover`, `Group`, `Insights`, `About`), stacked search bar, elevated compare tray, touch-friendly drawers.
-  - Tablet ($820\text{px}$) & Desktop ($1440\text{px}$): Dynamic grid layouts, fluid charts, multi-column detail drawers.
+---
+
+## 📊 Verified Dataset Figures (Backed by Executed Code)
+
+All figures below are computed directly by `scripts/validate_datasets.py` and automated test suites:
+
+- **Total Worldwide Places**: **8,666**
+  - **Kaggle Zomato Records**: **7,403** (across 15 countries: India, USA, South Africa, UAE, UK, Brazil, etc.)
+  - **Nigeria OpenStreetMap Records**: **1,263** (Lagos: 164, Benin City: 134, Abuja: 126, Jos: 114, Enugu: 88, Ikeja: 84, Kano: 41, Kaduna: 35, Ilorin: 35, and more)
+- **Data Shards**: **232 static JSON shards** (all files $\le 8$ MB; average shard $\le 12$ KB).
+- **Universal UIDs**: **8,666 unique UIDs** with 0 collisions.
+- **Automated Tests**: **18 test suites, 133 tests passed, 0 failures** (including complete Acceptance Tests T1–T22).
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
+# Navigate to web application directory
 cd tastematch
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 # App will run at http://localhost:5173/
-```
 
-Access hidden developer route at `http://localhost:5173/#/styleguide` to view design tokens, typography, and live contrast calculations.
+# Run complete Vitest test suite
+npm test -- --run
 
----
-
-## 🧪 Testing & Verification
-
-Comprehensive unit, integration, and acceptance tests built with **Vitest**:
-
-```bash
-npm test
-```
-
-### Test Suites (53/53 Passing)
-- `src/tests/recommendation.test.ts` (22 tests): Relaxation stages, deduplication, group consensus, mood presets.
-- `src/tests/currency.test.ts` (14 tests): Live rates normalization, cross-rate conversions, null handling, formatting rules.
-- `src/tests/recommendation_extensions.test.ts` (6 tests): Strict vs Flexible mode, MMR diversification, pairwise similarity, XAI attribution.
-- `src/tests/location.test.ts` (6 tests): Haversine distance, centroid math, proximity radius filter.
-- `src/tests/acceptance.test.ts` (3 tests): End-to-end user query acceptance test cases.
-- `src/tests/evaluation.test.ts` (2 tests): Offline benchmark computing Precision, Recall, NDCG, Coverage, Diversity.
-
----
-
-## 📁 Project Structure
-
-```
-tastematch/
-├── public/
-│   ├── data/
-│   │   ├── restaurants.json          # 7,403 cleaned records across 15 countries
-│   │   └── rates-fallback.json       # Bundled emergency currency fallback
-│   ├── favicon.svg
-│   └── _redirects
-├── src/
-│   ├── components/
-│   │   ├── card/RestaurantCard.tsx    # Restaurant card with XAI attribution & distance
-│   │   ├── compare/                   # Multi-restaurant comparison tray & modal
-│   │   ├── drawer/RestaurantDrawer.tsx# Detail drawer with Explainable AI attribution
-│   │   ├── map/RestaurantMap.tsx      # OpenStreetMap + Leaflet map
-│   │   └── search/                    # Search bar, location picker, mood presets, MMR slider
-│   ├── config/
-│   │   ├── emojis.ts                  # Cuisine emoji mappings
-│   │   ├── mlMetrics.ts               # ML leaderboard, permutation importances & simulator
-│   │   └── presets.ts                 # Mood presets (Date Night, Cheap Eats, etc.)
-│   ├── context/
-│   │   ├── CurrencyContext.tsx        # Multi-currency state & provider
-│   │   └── ThemeContext.tsx           # Ink & Lime dark/light theme state
-│   ├── lib/
-│   │   ├── currency.ts                # Rate fetcher, conversion & normalization
-│   │   ├── dataLoader.ts              # Dataset loader & validator
-│   │   ├── evaluation.ts              # Recommender benchmark metrics calculator
-│   │   ├── formatters.ts              # Formatters & WCAG contrast calculation
-│   │   ├── location.ts                # Haversine distance & centroid calculations
-│   │   └── recommendation.ts          # Hybrid recommender engine & MMR diversification
-│   ├── types/
-│   │   ├── recommendation.ts          # Query, XAI explanation, MMR types
-│   │   └── restaurant.ts              # Data schema definitions
-│   ├── views/
-│   │   ├── AboutModal.tsx             # Methodology, data notes, rate attribution
-│   │   ├── DiscoverView.tsx           # Main recommendation discovery interface
-│   │   ├── GroupView.tsx              # Two-person consensus dining view
-│   │   ├── InsightsView.tsx           # Market Analytics, ML Interpretability & Evaluation tabs
-│   │   └── StyleguideView.tsx         # Design tokens & live WCAG contrast checker
-│   ├── App.tsx                        # Responsive shell with mobile bottom nav
-│   ├── index.css                      # Tailwind v4 theme & responsive utility classes
-│   └── main.tsx
-├── scripts/
-│   └── capture_platform_responsive.cjs# Automated Puppeteer screenshot validation
-├── package.json
-└── vite.config.ts
+# Build production bundle
+npm run build
 ```
 
 ---
 
-## 🌐 Free Deployment Guide
+## 🧪 Automated Verification & Acceptance Tests T1–T22
 
-### Vercel (Recommended)
-1. Push your repository to GitHub.
-2. Go to [vercel.com/new](https://vercel.com/new) and import your repository.
-3. Set the Root Directory to `tastematch`.
-4. Framework Preset will be automatically detected as **Vite**.
-5. Click **Deploy**.
-
-### Netlify
-1. Run `npm run build`.
-2. Drag and drop the `tastematch/dist/` folder into [netlify.com/drop](https://netlify.com/drop).
-3. The included `public/_redirects` file ensures client-side HashRouter routes resolve smoothly.
-
-### GitHub Pages
-Set the base path in `vite.config.ts` or run:
-```bash
-VITE_BASE=/resturant_recommedation/ npm run build
-```
-Deploy the contents of `dist/` to your repository's `gh-pages` branch.
+TasteMatch includes automated test suites in `src/tests/` covering the full acceptance criteria:
+- **T1**: Countries listed (includes Nigeria and 14 worldwide countries)
+- **T2**: Nigeria cities listed (Lagos, Abuja, Port Harcourt, Ibadan, etc.)
+- **T3**: App opens on Nigeria without hard-coded country names in engine code (`config/defaults.ts`)
+- **T4**: Dish search labels match reasons correctly (`cuisine tag: <cuisine>` vs `matched in name`)
+- **T5**: Payment chips show only where tagged (never inferred)
+- **T6**: Open now ignores places without hours (`unknown = null`) and states excluded count
+- **T7**: Landmark search works using Haversine calculation
+- **T8**: Deterministic crawl produces identical itinerary and distance
+- **T9**: WhatsApp link opens with properly encoded text
+- **T10**: Service worker file exists in `public/sw.js` and caches assets
+- **T11**: Unrated places produce zero `NaN`, `"0"` price, or `"null"` strings
+- **T12**: Places without coordinates appear in list, omitted from map (`hasCoords = false`)
+- **T13**: Idempotent builds with verified manifest and shards
+- **T14**: Zomato regression fixtures match baseline exactly
+- **T15**: Original acceptance criteria satisfied
+- **T16**: `scripts/validate_datasets.py` passes with exit code 0
+- **T17**: Attribution visible for all data sources (ODbL, CC0, OpenStreetMap, Zomato Kaggle)
+- **T18**: Universal UID uniqueness across all shards
+- **T19**: Old shortlists load with backwards compatibility
+- **T20**: Near-me degrades gracefully when location permission is denied
+- **T21**: Community records never overwrite OSM fields
+- **T22**: `npm run build` succeeds cleanly
 
 ---
 
-## 📜 Dataset & Attribution
-- **Dataset**: Kaggle Zomato Public Restaurant dataset (~90% Delhi NCR, older snapshot).
-- **Exchange Rates**: Live rates provided by Fawaz Ahmed Currency API and [ExchangeRate-API](https://www.exchangerate-api.com).
+## 🤝 How to Contribute Data to OpenStreetMap
+
+TasteMatch directly consumes open data. To improve restaurant listings in Nigeria and worldwide, contribute directly to **[OpenStreetMap](https://www.openstreetmap.org/)**:
+
+1. Create a free account on [OpenStreetMap.org](https://www.openstreetmap.org/).
+2. Locate the venue using the **iD Editor** or **JOSM**.
+3. Add the following recommended tags:
+   - `amenity=restaurant` (or `fast_food`, `cafe`, `bar`)
+   - `name=<Venue Name>`
+   - `cuisine=<cuisine_type>` (e.g. `nigerian`, `african`, `suya`, `barbecue`)
+   - `opening_hours=<schedule>` (e.g. `Mo-Sa 08:00-22:00; Su 12:00-20:00` or `24/7`)
+   - `phone=+234...`
+   - `payment:cash=yes`
+   - `payment:cards=yes`
+   - `payment:bank_transfer=yes`
+   - `generator:source=diesel` / `generator:source=solar`
+   - `air_conditioning=yes`
+
+---
+
+## ⚖️ License & Attribution
+
+- **OpenStreetMap Data**: Licensed under the **[Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/)** by the OpenStreetMap Foundation. © OpenStreetMap contributors.
+- **Zomato Dataset**: Public Kaggle dataset used for educational and research purposes under CC-BY-NC-SA 4.0 guidelines.
+- **Community Layer**: Contributions via browser layer released under **CC0 1.0 Universal**.
+- **Notice**: *"Open data is incomplete and may include closed places."*

@@ -5,6 +5,8 @@ import { computeCityCapabilities } from '@/lib/capabilities';
 import type { CityCapabilities } from '@/lib/capabilities';
 import type { RestaurantParsed } from '@/types/restaurant';
 
+import { useCommunity } from '@/context/CommunityContext';
+
 interface RestaurantContextValue {
   data: RestaurantParsed[];
   loading: boolean;
@@ -19,18 +21,24 @@ interface RestaurantContextValue {
 const Ctx = createContext<RestaurantContextValue | null>(null);
 
 export function RestaurantProvider({ children }: { children: React.ReactNode }) {
-  const [data, setData]       = useState<RestaurantParsed[]>([]);
+  const [baseData, setBaseData] = useState<RestaurantParsed[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError]     = useState<string | null>(null);
+  const [error, setError]       = useState<string | null>(null);
+  const { communityPlaces }     = useCommunity();
 
   useEffect(() => {
     loadRestaurants()
-      .then(d => { setData(d); setLoading(false); })
+      .then(d => { setBaseData(d); setLoading(false); })
       .catch((e: unknown) => {
         setError(e instanceof Error ? e.message : 'Failed to load data');
         setLoading(false);
       });
   }, []);
+
+  const data = useMemo(() => {
+    if (communityPlaces.length === 0) return baseData;
+    return [...communityPlaces, ...baseData];
+  }, [baseData, communityPlaces]);
 
   const countryCityIndex = useMemo(() => buildCountryCityIndex(data), [data]);
   const vocabulary       = useMemo(() => buildVocabulary(data), [data]);

@@ -49,15 +49,21 @@ export default function AboutModal({ open, onClose }: Props) {
 
           <section>
             <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>
-              Data Source
+              Data Sources & Attribution
             </h3>
             <p style={{ margin: 0, color: 'var(--text-muted)' }}>
-              TasteMatch is powered by a public Zomato restaurant dataset sourced from Kaggle.
-              This dataset has <strong style={{ color: 'var(--text)' }}>no explicit date</strong> and
-              appears <strong style={{ color: 'var(--text)' }}>several years old</strong>.
-              Restaurants may have closed, changed ownership, or altered their details since the snapshot was taken.
+              TasteMatch is powered by two independent open datasets:
             </p>
+            <ul style={{ margin: '8px 0 0', paddingLeft: 20, color: 'var(--text-muted)' }}>
+              <li>
+                <strong style={{ color: 'var(--text)' }}>Zomato Dataset (Kaggle):</strong> Historical snapshot with no explicit date. Covers 7,403 rated places across 15 countries (~90% Delhi NCR).
+              </li>
+              <li style={{ marginTop: 6 }}>
+                <strong style={{ color: 'var(--text)' }}>OpenStreetMap (OSM):</strong> Live open geospatial data for Nigeria and worldwide expansion. Licensed under the <strong style={{ color: 'var(--text)' }}>Open Database License (ODbL)</strong>. © OpenStreetMap contributors.
+              </li>
+            </ul>
           </section>
+
 
           <section>
             <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>

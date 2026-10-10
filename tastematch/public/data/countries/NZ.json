@@ -1,0 +1,28 @@
+{
+  "cities": {
+    "Auckland": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "auckland-1.json"
+      ]
+    },
+    "Wellington City": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "wellington-city-1.json"
+      ]
+    }
+  },
+  "code": "NZ",
+  "country": "New Zealand"
+}

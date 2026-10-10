@@ -1,0 +1,50 @@
+{
+  "cities": {
+    "Bandung": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "bandung-1.json"
+      ]
+    },
+    "Bogor": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "bogor-1.json"
+      ]
+    },
+    "Jakarta": {
+      "count": 16,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "jakarta-1.json"
+      ]
+    },
+    "Tangerang": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "tangerang-1.json"
+      ]
+    }
+  },
+  "code": "ID",
+  "country": "Indonesia"
+}

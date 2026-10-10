@@ -1,0 +1,391 @@
+{
+  "cities": {
+    "Albany": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "albany-1.json"
+      ]
+    },
+    "Athens": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "athens-1.json"
+      ]
+    },
+    "Augusta": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "augusta-1.json"
+      ]
+    },
+    "Boise": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "boise-1.json"
+      ]
+    },
+    "Cedar Rapids/Iowa City": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "cedar-rapidsiowa-city-1.json"
+      ]
+    },
+    "Clatskanie": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "clatskanie-1.json"
+      ]
+    },
+    "Cochrane": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "cochrane-1.json"
+      ]
+    },
+    "Columbus": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "columbus-1.json"
+      ]
+    },
+    "Dalton": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "dalton-1.json"
+      ]
+    },
+    "Davenport": {
+      "count": 18,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "davenport-1.json"
+      ]
+    },
+    "Des Moines": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "des-moines-1.json"
+      ]
+    },
+    "Dubuque": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "dubuque-1.json"
+      ]
+    },
+    "Fernley": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "fernley-1.json"
+      ]
+    },
+    "Gainesville": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "gainesville-1.json"
+      ]
+    },
+    "Lakeview": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "lakeview-1.json"
+      ]
+    },
+    "Lincoln": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "lincoln-1.json"
+      ]
+    },
+    "Macon": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "macon-1.json"
+      ]
+    },
+    "Mc Millan": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mc-millan-1.json"
+      ]
+    },
+    "Miller": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "miller-1.json"
+      ]
+    },
+    "Monroe": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "monroe-1.json"
+      ]
+    },
+    "Ojo Caliente": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ojo-caliente-1.json"
+      ]
+    },
+    "Orlando": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "orlando-1.json"
+      ]
+    },
+    "Pensacola": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pensacola-1.json"
+      ]
+    },
+    "Pocatello": {
+      "count": 19,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pocatello-1.json"
+      ]
+    },
+    "Potrero": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "potrero-1.json"
+      ]
+    },
+    "Princeton": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "princeton-1.json"
+      ]
+    },
+    "Rest of Hawaii": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "rest-of-hawaii-1.json"
+      ]
+    },
+    "Savannah": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "savannah-1.json"
+      ]
+    },
+    "Sioux City": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "sioux-city-1.json"
+      ]
+    },
+    "Tampa Bay": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "tampa-bay-1.json"
+      ]
+    },
+    "Valdosta": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "valdosta-1.json"
+      ]
+    },
+    "Vernonia": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "vernonia-1.json"
+      ]
+    },
+    "Waterloo": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "waterloo-1.json"
+      ]
+    },
+    "Weirton": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "weirton-1.json"
+      ]
+    },
+    "Winchester Bay": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "winchester-bay-1.json"
+      ]
+    }
+  },
+  "code": "US",
+  "country": "USA"
+}

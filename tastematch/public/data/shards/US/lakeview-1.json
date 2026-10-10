@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.6,
+    "average_cost_for_two": 10.0,
+    "city": "Lakeview",
+    "country": "USA",
+    "cuisines": "Burger, Desserts, Sandwich",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 42.1885,
+    "locality": "Lakeview",
+    "longitude": -120.3458,
+    "price_range": 1,
+    "restaurant_id": 17557488,
+    "restaurant_name": "Burger Queen Drive In",
+    "uid": "zomato:17557488",
+    "votes": 41,
+    "weighted_rating": 3.838
+  }
+]

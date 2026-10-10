@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.3,
+    "average_cost_for_two": 10.0,
+    "city": "Vernonia",
+    "country": "USA",
+    "cuisines": "Coffee and Tea, Mediterranean",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 45.858667,
+    "locality": "Vernonia",
+    "longitude": -123.1954368,
+    "price_range": 1,
+    "restaurant_id": 17558738,
+    "restaurant_name": "Blue House Cafe",
+    "uid": "zomato:17558738",
+    "votes": 88,
+    "weighted_rating": 4.203
+  }
+]

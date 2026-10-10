@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.3,
+    "average_cost_for_two": 10.0,
+    "city": "Clatskanie",
+    "country": "USA",
+    "cuisines": "American, Breakfast, Desserts",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 46.126967,
+    "locality": "Clatskanie",
+    "longitude": -123.368151,
+    "price_range": 1,
+    "restaurant_id": 17558684,
+    "restaurant_name": "Berry Patch Restaurant",
+    "uid": "zomato:17558684",
+    "votes": 96,
+    "weighted_rating": 4.208
+  }
+]

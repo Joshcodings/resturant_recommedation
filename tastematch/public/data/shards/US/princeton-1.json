@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.0,
+    "average_cost_for_two": 70.0,
+    "city": "Princeton",
+    "country": "USA",
+    "cuisines": "Seafood",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 40.352385,
+    "locality": "Princeton",
+    "longitude": -74.651139,
+    "price_range": 4,
+    "restaurant_id": 17211719,
+    "restaurant_name": "Blue Point Grill",
+    "uid": "zomato:17211719",
+    "votes": 542,
+    "weighted_rating": 4.003
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.2,
+    "average_cost_for_two": 1000.0,
+    "city": "San Juan City",
+    "country": "Philippines",
+    "cuisines": "Filipino",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 1,
+    "latitude": 14.59345,
+    "locality": "Addition Hills",
+    "longitude": 121.0335917,
+    "price_range": 3,
+    "restaurant_id": 6310470,
+    "restaurant_name": "Guevarra's",
+    "uid": "zomato:6310470",
+    "votes": 458,
+    "weighted_rating": 4.226
+  },
+  {
+    "aggregate_rating": 4.3,
+    "average_cost_for_two": 700.0,
+    "city": "San Juan City",
+    "country": "Philippines",
+    "cuisines": "Korean",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 14.59889,
+    "locality": "Little Baguio",
+    "longitude": 121.03811,
+    "price_range": 3,
+    "restaurant_id": 6314605,
+    "restaurant_name": "Sodam Korean Restaurant",
+    "uid": "zomato:6314605",
+    "votes": 223,
+    "weighted_rating": 4.331
+  }
+]

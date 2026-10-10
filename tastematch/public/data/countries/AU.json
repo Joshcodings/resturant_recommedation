@@ -1,0 +1,259 @@
+{
+  "cities": {
+    "Armidale": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "armidale-1.json"
+      ]
+    },
+    "Balingup": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "balingup-1.json"
+      ]
+    },
+    "Beechworth": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "beechworth-1.json"
+      ]
+    },
+    "Dicky Beach": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "dicky-beach-1.json"
+      ]
+    },
+    "East Ballina": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "east-ballina-1.json"
+      ]
+    },
+    "Flaxton": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "flaxton-1.json"
+      ]
+    },
+    "Forrest": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "forrest-1.json"
+      ]
+    },
+    "Hepburn Springs": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "hepburn-springs-1.json"
+      ]
+    },
+    "Huskisson": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "huskisson-1.json"
+      ]
+    },
+    "Inverloch": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "inverloch-1.json"
+      ]
+    },
+    "Lakes Entrance": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "lakes-entrance-1.json"
+      ]
+    },
+    "Lorn": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "lorn-1.json"
+      ]
+    },
+    "Macedon": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "macedon-1.json"
+      ]
+    },
+    "Mayfield": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mayfield-1.json"
+      ]
+    },
+    "Middleton Beach": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "middleton-beach-1.json"
+      ]
+    },
+    "Montville": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "montville-1.json"
+      ]
+    },
+    "Palm Cove": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "palm-cove-1.json"
+      ]
+    },
+    "Paynesville": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "paynesville-1.json"
+      ]
+    },
+    "Penola": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "penola-1.json"
+      ]
+    },
+    "Phillip Island": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "phillip-island-1.json"
+      ]
+    },
+    "Tanunda": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "tanunda-1.json"
+      ]
+    },
+    "Trentham East": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "trentham-east-1.json"
+      ]
+    },
+    "Victor Harbor": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "victor-harbor-1.json"
+      ]
+    }
+  },
+  "code": "AU",
+  "country": "Australia"
+}

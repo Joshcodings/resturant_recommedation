@@ -1,5 +1,6 @@
 export interface Restaurant {
-  restaurant_id: number;
+  uid: string;                         // Primary key: "zomato:123", "osm:node/456", "ovt:<id>"
+  restaurant_id?: number | null;       // Legacy ID retained for Zomato records
   restaurant_name: string;
   locality: string | null;
   city: string;
@@ -16,18 +17,31 @@ export interface Restaurant {
   latitude: number;
   longitude: number;
   
-  // New optional fields for OSM / Nigerian data:
+  // Extended structured fields for OSM / Worldwide data:
   state?: string | null;
   address?: string | null;
   place_type?: string | null;
   opening_hours?: string | null;
   phone?: string | null;
   website?: string | null;
+  contact?: Record<string, any> | null;
+  addr?: Record<string, any> | null;
+  payment_methods?: { cash?: boolean; cards?: boolean; mobile_payment?: boolean; [k: string]: any } | null;
+  diet?: { halal?: boolean; vegetarian?: boolean; vegan?: boolean; [k: string]: any } | null;
+  amenities?: Record<string, any> | null;
+  osm_timestamp?: string | null;
+  osm_version?: number | null;
+  check_date?: string | null;
   data_source?: string | null;
   source_url?: string | null;
   source_id?: string | null;
-  retrieved_at?: string | null;
+  licence?: string | null;
   cuisines_raw?: string | null;
+  isLocalCommunity?: boolean;
+  source?: string | null;
+  added_at?: string | null;
+  power?: { backup_generator?: boolean | string; nepa?: string } | null;
+  air_conditioning?: boolean | null;
 }
 
 /** Pre-parsed extension attached at load time */
@@ -37,3 +51,13 @@ export interface RestaurantParsed extends Restaurant {
   hasRating: boolean;
   hasPrice: boolean;
 }
+
+export interface Landmark {
+  uid: string;
+  name: string;
+  category: 'airport' | 'university' | 'hospital' | 'market' | 'mall' | 'stadium' | 'bus_park' | 'hotel' | 'religious_centre' | string;
+  city: string;
+  latitude: number;
+  longitude: number;
+}
+

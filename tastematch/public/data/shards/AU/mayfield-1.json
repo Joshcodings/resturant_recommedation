@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 2.9,
+    "average_cost_for_two": 20.0,
+    "city": "Mayfield",
+    "country": "Australia",
+    "cuisines": "Asian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -32.899178,
+    "locality": "Mayfield",
+    "longitude": 151.7343832,
+    "price_range": 2,
+    "restaurant_id": 16611701,
+    "restaurant_name": "Star Buffet",
+    "uid": "zomato:16611701",
+    "votes": 11,
+    "weighted_rating": 3.522
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "addr": {
+      "city": "lagos",
+      "housenumber": "41",
+      "postcode": "101241",
+      "street": "Bishop Oluwole Street"
+    },
+    "address": "Bishop Oluwole Street",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "lagos",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "African",
+    "cuisines_raw": "african",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.4241681,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.4201059,
+    "opening_hours": "Tu-Su 12:00-02:00",
+    "osm_timestamp": "2024-09-04T18:07:25Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": "+234 916 000 6045",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Dulles Lagos",
+    "source_id": "way/653342929",
+    "state": "Unknown",
+    "uid": "osm:way/653342929",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "https://app.dinesurf.com/restaurants/dulles-lagos?tab=menus",
+    "weighted_rating": null
+  }
+]

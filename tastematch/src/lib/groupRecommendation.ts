@@ -46,9 +46,11 @@ export function groupRecommend(
     return { ...r, matchA, matchB, consensus, rank: 0 };
   });
 
-  // Sort: min(matchA, matchB) desc, then weighted_rating desc (amendment 2 — no additive blend)
+  // Sort: min(matchA, matchB) desc, then weighted_rating desc, then uid tie-break (amendment 2 — no additive blend)
   scored.sort((a, b) =>
-    b.consensus - a.consensus || (b.weighted_rating || 0) - (a.weighted_rating || 0)
+    b.consensus - a.consensus ||
+    ((b.weighted_rating || 0) - (a.weighted_rating || 0)) ||
+    a.uid.localeCompare(b.uid)
   );
 
   // Deduplicate by name

@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.5,
+    "average_cost_for_two": 1200.0,
+    "city": "Makati City",
+    "country": "Philippines",
+    "cuisines": "Japanese",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 1,
+    "latitude": 14.553708,
+    "locality": "Little Tokyo, Legaspi Village, Makati City",
+    "longitude": 121.014101,
+    "price_range": 3,
+    "restaurant_id": 6304287,
+    "restaurant_name": "Izakaya Kikufuji",
+    "uid": "zomato:6304287",
+    "votes": 591,
+    "weighted_rating": 4.498
+  },
+  {
+    "aggregate_rating": 4.8,
+    "average_cost_for_two": 1100.0,
+    "city": "Makati City",
+    "country": "Philippines",
+    "cuisines": "French, Japanese, Desserts",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 1,
+    "latitude": 14.565443,
+    "locality": "Century City Mall, Poblacion, Makati City",
+    "longitude": 121.027535,
+    "price_range": 3,
+    "restaurant_id": 6317637,
+    "restaurant_name": "Le Petit Souffle",
+    "uid": "zomato:6317637",
+    "votes": 314,
+    "weighted_rating": 4.754
+  }
+]

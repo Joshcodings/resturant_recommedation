@@ -1,5 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useRestaurants } from '@/context/RestaurantContext';
+import { DEFAULT_COUNTRY_NAME } from '@/config/defaults';
+import { computeLargestCity } from '@/lib/dataLoader';
 import {
   BarChart,
   Bar,
@@ -33,8 +35,18 @@ export default function InsightsView() {
   const { theme } = useTheme();
 
   const [activeTab, setActiveTab] = useState<ActiveTab>('market');
-  const [country, setCountry] = useState('India');
-  const [city, setCity] = useState('New Delhi');
+  const [country, setCountry] = useState<string>(DEFAULT_COUNTRY_NAME);
+  const [city, setCity] = useState('');
+
+  // Dynamically synchronize country and city when index loads
+  useEffect(() => {
+    if (Object.keys(countryCityIndex).length === 0) return;
+    const available = countryCityIndex[country] || [];
+    if (!available.includes(city) && available.length > 0) {
+      const largest = computeLargestCity(data, country) || available[0];
+      setCity(largest);
+    }
+  }, [countryCityIndex, country, city, data]);
 
   // Interactive ML Simulator state
   const [simPriceRange, setSimPriceRange] = useState(2);
@@ -58,18 +70,21 @@ export default function InsightsView() {
       return { total: 0, avgRating: 0, totalVotes: 0, deliveryPct: 0, bookingPct: 0 };
     }
     const total = cityData.length;
-    const ratedData = cityData.filter(r => r.hasRating);
-    const ratedCount = Math.max(ratedData.length, 1);
+    const ratedData = cityData.filter(r => r.hasRating && r.aggregate_rating !== null);
     
-    const avgRating = ratedData.reduce((s, r) => s + (r.aggregate_rating || 0), 0) / ratedCount;
-    const totalVotes = ratedData.reduce((s, r) => s + (r.votes || 0), 0);
+    const avgRatingStr = ratedData.length > 0
+      ? (ratedData.reduce((s, r) => s + (r.aggregate_rating || 0), 0) / ratedData.length).toFixed(2)
+      : 'n/a';
+    const totalVotesStr = ratedData.length > 0
+      ? ratedData.reduce((s, r) => s + (r.votes || 0), 0).toLocaleString()
+      : 'n/a';
     const deliveryPct = Math.round((cityData.filter(r => r.has_online_delivery === 1).length / total) * 100);
     const bookingPct = Math.round((cityData.filter(r => r.has_table_booking === 1).length / total) * 100);
 
     return {
       total,
-      avgRating: avgRating.toFixed(2),
-      totalVotes: totalVotes.toLocaleString(),
+      avgRating: avgRatingStr,
+      totalVotes: totalVotesStr,
       deliveryPct,
       bookingPct,
     };

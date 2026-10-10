@@ -1,0 +1,479 @@
+{
+  "cities": {
+    "Agra": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "agra-1.json"
+      ]
+    },
+    "Ahmedabad": {
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ahmedabad-1.json"
+      ]
+    },
+    "Allahabad": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "allahabad-1.json"
+      ]
+    },
+    "Amritsar": {
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "amritsar-1.json"
+      ]
+    },
+    "Aurangabad": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "aurangabad-1.json"
+      ]
+    },
+    "Bangalore": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "bangalore-1.json"
+      ]
+    },
+    "Bhopal": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "bhopal-1.json"
+      ]
+    },
+    "Bhubaneshwar": {
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "bhubaneshwar-1.json"
+      ]
+    },
+    "Chandigarh": {
+      "count": 18,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "chandigarh-1.json"
+      ]
+    },
+    "Chennai": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "chennai-1.json"
+      ]
+    },
+    "Coimbatore": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "coimbatore-1.json"
+      ]
+    },
+    "Dehradun": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "dehradun-1.json"
+      ]
+    },
+    "Faridabad": {
+      "count": 151,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "faridabad-1.json"
+      ]
+    },
+    "Ghaziabad": {
+      "count": 23,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ghaziabad-1.json"
+      ]
+    },
+    "Goa": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "goa-1.json"
+      ]
+    },
+    "Gurgaon": {
+      "count": 890,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "gurgaon-1.json"
+      ]
+    },
+    "Guwahati": {
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "guwahati-1.json"
+      ]
+    },
+    "Hyderabad": {
+      "count": 18,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "hyderabad-1.json"
+      ]
+    },
+    "Indore": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "indore-1.json"
+      ]
+    },
+    "Jaipur": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "jaipur-1.json"
+      ]
+    },
+    "Kanpur": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "kanpur-1.json"
+      ]
+    },
+    "Kochi": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "kochi-1.json"
+      ]
+    },
+    "Kolkata": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "kolkata-1.json"
+      ]
+    },
+    "Lucknow": {
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "lucknow-1.json"
+      ]
+    },
+    "Ludhiana": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ludhiana-1.json"
+      ]
+    },
+    "Mangalore": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mangalore-1.json"
+      ]
+    },
+    "Mohali": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mohali-1.json"
+      ]
+    },
+    "Mumbai": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mumbai-1.json"
+      ]
+    },
+    "Mysore": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mysore-1.json"
+      ]
+    },
+    "Nagpur": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "nagpur-1.json"
+      ]
+    },
+    "Nashik": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "nashik-1.json"
+      ]
+    },
+    "New Delhi": {
+      "count": 4048,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "new-delhi-1.json"
+      ]
+    },
+    "Noida": {
+      "count": 696,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "noida-1.json"
+      ]
+    },
+    "Panchkula": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "panchkula-1.json"
+      ]
+    },
+    "Patna": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "patna-1.json"
+      ]
+    },
+    "Puducherry": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "puducherry-1.json"
+      ]
+    },
+    "Pune": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pune-1.json"
+      ]
+    },
+    "Ranchi": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ranchi-1.json"
+      ]
+    },
+    "Secunderabad": {
+      "count": 2,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "secunderabad-1.json"
+      ]
+    },
+    "Surat": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "surat-1.json"
+      ]
+    },
+    "Vadodara": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "vadodara-1.json"
+      ]
+    },
+    "Varanasi": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "varanasi-1.json"
+      ]
+    },
+    "Vizag": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "vizag-1.json"
+      ]
+    }
+  },
+  "code": "IN",
+  "country": "India"
+}

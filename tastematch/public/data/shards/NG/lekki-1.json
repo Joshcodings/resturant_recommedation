@@ -1,0 +1,46 @@
+[
+  {
+    "addr": {
+      "city": "lekki",
+      "housenumber": "1E",
+      "postcode": "106104",
+      "street": "Babatope Bejide Crescent"
+    },
+    "address": "Babatope Bejide Crescent",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "lekki",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.4428561,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.4729848,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2025-07-31T10:42:59Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "+2349126000026",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Kachi’s kitchen",
+    "source_id": "node/13039092014",
+    "state": "Unknown",
+    "uid": "osm:node/13039092014",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

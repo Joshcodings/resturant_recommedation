@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.8,
+    "average_cost_for_two": 30.0,
+    "city": "Middleton Beach",
+    "country": "Australia",
+    "cuisines": "Bar Food, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -35.025861,
+    "locality": "Middleton Beach",
+    "longitude": 117.917166,
+    "price_range": 3,
+    "restaurant_id": 16609169,
+    "restaurant_name": "Three Anchors",
+    "uid": "zomato:16609169",
+    "votes": 176,
+    "weighted_rating": 3.769
+  }
+]

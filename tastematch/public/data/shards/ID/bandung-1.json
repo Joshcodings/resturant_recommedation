@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.2,
+    "average_cost_for_two": 150000.0,
+    "city": "Bandung",
+    "country": "Indonesia",
+    "cuisines": "Cafe, Coffee and Tea, Western",
+    "currency": "IDR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -6.887057501,
+    "locality": "Dago",
+    "longitude": 107.6127895,
+    "price_range": 3,
+    "restaurant_id": 18400530,
+    "restaurant_name": "Noah's Barn Coffeenery",
+    "uid": "zomato:18400530",
+    "votes": 22,
+    "weighted_rating": 4.266
+  }
+]

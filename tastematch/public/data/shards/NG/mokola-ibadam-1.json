@@ -1,0 +1,41 @@
+[
+  {
+    "addr": {
+      "city": "Mokola, Ibadam"
+    },
+    "address": null,
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Mokola, Ibadam",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 7.4005054,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.8904498,
+    "opening_hours": null,
+    "osm_timestamp": "2014-01-27T05:15:01Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Mr Biggs",
+    "source_id": "node/2639256412",
+    "state": "Unknown",
+    "uid": "osm:node/2639256412",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.0,
+    "average_cost_for_two": 850.0,
+    "city": "Santa Rosa",
+    "country": "Philippines",
+    "cuisines": "Italian, Pizza",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 14.23767897,
+    "locality": "Solenad 3, Don Jose, Santa Rosa",
+    "longitude": 121.0565874,
+    "price_range": 3,
+    "restaurant_id": 18182702,
+    "restaurant_name": "Nonna's Pasta & Pizzeria",
+    "uid": "zomato:18182702",
+    "votes": 72,
+    "weighted_rating": 4.192
+  },
+  {
+    "aggregate_rating": 3.6,
+    "average_cost_for_two": 800.0,
+    "city": "Santa Rosa",
+    "country": "Philippines",
+    "cuisines": "Cafe, American, Italian, Filipino",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 14.237082,
+    "locality": "Nuvali, Don Jose, Santa Rosa",
+    "longitude": 121.05704,
+    "price_range": 3,
+    "restaurant_id": 18185059,
+    "restaurant_name": "Cafe Arabelle",
+    "uid": "zomato:18185059",
+    "votes": 29,
+    "weighted_rating": 4.149
+  }
+]

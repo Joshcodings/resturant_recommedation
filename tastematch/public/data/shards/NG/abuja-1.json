@@ -1,0 +1,50 @@
+[
+  {
+    "addr": {
+      "city": "abuja",
+      "housenumber": "55",
+      "postcode": "900288",
+      "street": "Kumasi Crescent"
+    },
+    "address": "Kumasi Crescent",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "abuja",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Nigerian, Fast Food, Cafe",
+    "cuisines_raw": "regional;burger;coffee_shop",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 9.0793674,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 7.4768429,
+    "opening_hours": "24/7",
+    "osm_timestamp": "2023-06-20T16:36:04Z",
+    "osm_version": 1,
+    "payment_methods": {
+      "cards": true,
+      "cash": true,
+      "credit_cards": true
+    },
+    "phone": "+2348071419423",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "TOPPFCT",
+    "source_id": "node/10992401494",
+    "state": "Unknown",
+    "uid": "osm:node/10992401494",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

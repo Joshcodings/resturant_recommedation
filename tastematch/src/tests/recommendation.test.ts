@@ -11,6 +11,7 @@ let idCounter = 1;
 function mkR(overrides: Partial<RestaurantParsed> = {}): RestaurantParsed {
   const id = idCounter++;
   return {
+    uid:                overrides.uid || `zomato:${id}`,
     restaurant_id:      id,
     restaurant_name:    `Restaurant ${id}`,
     locality:           'Test Locality',

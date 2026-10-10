@@ -1,0 +1,47 @@
+[
+  {
+    "addr": {
+      "city": "Oluwa",
+      "housenumber": "204",
+      "postcode": "30241",
+      "street": "Iwo Road"
+    },
+    "address": "Iwo Road",
+    "aggregate_rating": null,
+    "amenities": {
+      "brand": "McDonald's",
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Oluwa",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Fast Food",
+    "cuisines_raw": "burger",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 7.4301072,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.9892693,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2021-12-06T19:10:22Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "+17076892033",
+    "place_type": "fast_food",
+    "price_range": null,
+    "restaurant_name": "McDonald's",
+    "source_id": "node/9316149078",
+    "state": "Unknown",
+    "uid": "osm:node/9316149078",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "www.mcdonalds.com",
+    "weighted_rating": null
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "jollof": {
+    "displayName": "Jollof Rice",
+    "cuisineTags": ["nigerian", "african", "west african"],
+    "nameKeywords": ["jollof"]
+  },
+  "suya": {
+    "displayName": "Suya",
+    "cuisineTags": ["suya", "barbecue", "bbq", "nigerian"],
+    "nameKeywords": ["suya", "soya"]
+  },
+  "amala": {
+    "displayName": "Amala",
+    "cuisineTags": ["nigerian", "african", "traditional"],
+    "nameKeywords": ["amala", "àmàlà"]
+  },
+  "ewedu": {
+    "displayName": "Ewedu",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["ewedu"]
+  },
+  "pounded yam": {
+    "displayName": "Pounded Yam",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["pounded yam", "iyan"]
+  },
+  "ofada": {
+    "displayName": "Ofada Rice",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["ofada"]
+  },
+  "egusi": {
+    "displayName": "Egusi Soup",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["egusi"]
+  },
+  "efo riro": {
+    "displayName": "Efo Riro",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["efo riro", "eforiro", "efo"]
+  },
+  "pepper soup": {
+    "displayName": "Pepper Soup",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["pepper soup", "peppersoup"]
+  },
+  "nkwobi": {
+    "displayName": "Nkwobi",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["nkwobi"]
+  },
+  "isi ewu": {
+    "displayName": "Isi Ewu",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["isi ewu", "isiewu"]
+  },
+  "ofe onugbu": {
+    "displayName": "Ofe Onugbu",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["ofe onugbu", "onugbu", "bitterleaf"]
+  },
+  "akara": {
+    "displayName": "Akara",
+    "cuisineTags": ["nigerian", "african", "street food"],
+    "nameKeywords": ["akara"]
+  },
+  "moi moi": {
+    "displayName": "Moi Moi",
+    "cuisineTags": ["nigerian", "african"],
+    "nameKeywords": ["moi moi", "moimoi"]
+  },
+  "small chops": {
+    "displayName": "Small Chops",
+    "cuisineTags": ["finger food", "nigerian", "snacks"],
+    "nameKeywords": ["small chops", "smallchops"]
+  },
+  "shawarma": {
+    "displayName": "Shawarma",
+    "cuisineTags": ["shawarma", "middle eastern", "fast food", "lebanese"],
+    "nameKeywords": ["shawarma", "sharwama", "sharma"]
+  },
+  "asun": {
+    "displayName": "Asun",
+    "cuisineTags": ["nigerian", "barbecue"],
+    "nameKeywords": ["asun"]
+  },
+  "boli and roasted fish": {
+    "displayName": "Boli and Roasted Fish",
+    "cuisineTags": ["street food", "nigerian"],
+    "nameKeywords": ["boli", "roasted plantain", "bole"]
+  },
+  "mama put": {
+    "displayName": "Mama Put",
+    "cuisineTags": ["nigerian", "traditional"],
+    "nameKeywords": ["mama put", "mamaput"]
+  },
+  "buka": {
+    "displayName": "Buka",
+    "cuisineTags": ["nigerian", "traditional"],
+    "nameKeywords": ["buka", "bukka"]
+  },
+  "bukateria": {
+    "displayName": "Bukateria",
+    "cuisineTags": ["nigerian", "traditional"],
+    "nameKeywords": ["bukateria", "bukateriat"]
+  }
+}

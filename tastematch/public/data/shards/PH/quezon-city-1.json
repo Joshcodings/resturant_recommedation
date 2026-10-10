@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.8,
+    "average_cost_for_two": 800.0,
+    "city": "Quezon City",
+    "country": "Philippines",
+    "cuisines": "Filipino, Mexican",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 14.649503,
+    "locality": "UP Town Center, Diliman, Quezon City",
+    "longitude": 121.075419,
+    "price_range": 3,
+    "restaurant_id": 6318433,
+    "restaurant_name": "Silantro Fil-Mex",
+    "uid": "zomato:6318433",
+    "votes": 294,
+    "weighted_rating": 4.752
+  }
+]

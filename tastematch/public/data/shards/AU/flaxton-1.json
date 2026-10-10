@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.5,
+    "average_cost_for_two": 30.0,
+    "city": "Flaxton",
+    "country": "Australia",
+    "cuisines": "Tea, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.6521332,
+    "locality": "Flaxton",
+    "longitude": 152.8771473,
+    "price_range": 3,
+    "restaurant_id": 16613507,
+    "restaurant_name": "Flaxton Gardens",
+    "uid": "zomato:16613507",
+    "votes": 37,
+    "weighted_rating": 3.591
+  }
+]

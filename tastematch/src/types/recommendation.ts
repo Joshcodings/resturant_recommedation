@@ -61,6 +61,8 @@ export interface ScoredRestaurant extends RestaurantParsed {
   whyThisPick: string;    // generated sentence from real fields
   explanation?: ExplanationBreakdown; // structured explainable breakdown
   distanceKm?: number;    // distance in km if coordinates available
+  matchReason?: string | null; // e.g. "cuisine tag: nigerian" or "matched in name"
+  distanceFromLandmark?: { landmarkName: string; distanceKm: number };
 }
 
 export interface RecommendationResult {

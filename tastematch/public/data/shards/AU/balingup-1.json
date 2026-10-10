@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.2,
+    "average_cost_for_two": 20.0,
+    "city": "Balingup",
+    "country": "Australia",
+    "cuisines": "Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -33.7845269,
+    "locality": "Balingup",
+    "longitude": 115.9844924,
+    "price_range": 2,
+    "restaurant_id": 16608864,
+    "restaurant_name": "Taste of Balingup",
+    "uid": "zomato:16608864",
+    "votes": 21,
+    "weighted_rating": 3.523
+  }
+]

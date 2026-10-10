@@ -1,0 +1,53 @@
+[
+  {
+    "addr": {
+      "city": "kano",
+      "housenumber": "42",
+      "postcode": "700101",
+      "street": "Race Course Road"
+    },
+    "address": "Race Course Road",
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "kano",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Italian, Other, American",
+    "cuisines_raw": "italian;asian;mexican;thai;american;french;noodle",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "halal": true,
+      "vegetarian": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 12.0009535,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 8.5530865,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2025-06-04T18:39:46Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "08133552720,",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Patoosh Cafe & Restaurant",
+    "source_id": "node/12887296580",
+    "state": "Unknown",
+    "uid": "osm:node/12887296580",
+    "unmapped_cuisines": [
+      "asian",
+      "mexican",
+      "thai",
+      "french",
+      "noodle"
+    ],
+    "votes": null,
+    "website": "https://www.instagram.com/cafe_patoosh/",
+    "weighted_rating": null
+  }
+]

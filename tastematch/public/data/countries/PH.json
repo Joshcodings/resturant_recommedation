@@ -1,0 +1,105 @@
+{
+  "cities": {
+    "Makati City": {
+      "count": 2,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "makati-city-1.json"
+      ]
+    },
+    "Mandaluyong City": {
+      "count": 4,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "mandaluyong-city-1.json"
+      ]
+    },
+    "Pasay City": {
+      "count": 3,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pasay-city-1.json"
+      ]
+    },
+    "Pasig City": {
+      "count": 3,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pasig-city-1.json"
+      ]
+    },
+    "Quezon City": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "quezon-city-1.json"
+      ]
+    },
+    "San Juan City": {
+      "count": 2,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "san-juan-city-1.json"
+      ]
+    },
+    "Santa Rosa": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "santa-rosa-1.json"
+      ]
+    },
+    "Tagaytay City": {
+      "count": 1,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "tagaytay-city-1.json"
+      ]
+    },
+    "Taguig City": {
+      "count": 4,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "taguig-city-1.json"
+      ]
+    }
+  },
+  "code": "PH",
+  "country": "Philippines"
+}

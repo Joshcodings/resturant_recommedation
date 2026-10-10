@@ -1,0 +1,43 @@
+[
+  {
+    "addr": null,
+    "address": null,
+    "aggregate_rating": null,
+    "amenities": {
+      "internet_access": true
+    },
+    "assignment_step": "step3_state_bbox",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Bauchi Area",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Other",
+    "cuisines_raw": "japanese",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 11.2462132,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 9.8358054,
+    "opening_hours": null,
+    "osm_timestamp": "2026-03-01T21:21:52Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "cafe",
+    "price_range": null,
+    "restaurant_name": "africas finest",
+    "source_id": "node/13610454706",
+    "state": "Bauchi",
+    "uid": "osm:node/13610454706",
+    "unmapped_cuisines": [
+      "japanese"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

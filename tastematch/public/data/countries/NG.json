@@ -1,0 +1,1128 @@
+{
+  "cities": {
+    "ABUJA": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abuja-1.json"
+      ]
+    },
+    "Abakaliki": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abakaliki-1.json"
+      ]
+    },
+    "Abeokuta": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abeokuta-1.json"
+      ]
+    },
+    "Abuja": {
+      "count": 126,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abuja-1.json"
+      ]
+    },
+    "Abuja Area": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abuja-area-1.json"
+      ]
+    },
+    "Abuja Nigeria": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abuja-nigeria-1.json"
+      ]
+    },
+    "Ado-Ekiti": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ado-ekiti-1.json"
+      ]
+    },
+    "Akure": {
+      "count": 26,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "akure-1.json"
+      ]
+    },
+    "Asaba": {
+      "count": 6,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "asaba-1.json"
+      ]
+    },
+    "Awka": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "awka-1.json"
+      ]
+    },
+    "Bauchi": {
+      "count": 17,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "bauchi-1.json"
+      ]
+    },
+    "Bauchi Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "bauchi-area-1.json"
+      ]
+    },
+    "Benin City": {
+      "count": 134,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "benin-city-1.json"
+      ]
+    },
+    "Benin City Area": {
+      "count": 47,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "benin-city-area-1.json"
+      ]
+    },
+    "Benin city": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "benin-city-1.json"
+      ]
+    },
+    "Birnin kebbi": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "birnin-kebbi-1.json"
+      ]
+    },
+    "Calabar": {
+      "count": 5,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "calabar-1.json"
+      ]
+    },
+    "Calabar Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "calabar-area-1.json"
+      ]
+    },
+    "Calabar, Cross River": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "calabar-cross-river-1.json"
+      ]
+    },
+    "Choba Port Harcourt": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "choba-port-harcourt-1.json"
+      ]
+    },
+    "Choba/Port Harcourt": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "chobaport-harcourt-1.json"
+      ]
+    },
+    "Dadi Riba": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "dadi-riba-1.json"
+      ]
+    },
+    "Dutse": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "dutse-1.json"
+      ]
+    },
+    "Enugu": {
+      "count": 88,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "enugu-1.json"
+      ]
+    },
+    "Eti-Osa": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "eti-osa-1.json"
+      ]
+    },
+    "Fagge D2": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "fagge-d2-1.json"
+      ]
+    },
+    "Gombe": {
+      "count": 28,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "gombe-1.json"
+      ]
+    },
+    "Gombe Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "gombe-area-1.json"
+      ]
+    },
+    "Gwagwalada": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "gwagwalada-1.json"
+      ]
+    },
+    "Gwarinpa": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "gwarinpa-1.json"
+      ]
+    },
+    "IBADAN": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ibadan-1.json"
+      ]
+    },
+    "Ibadan": {
+      "count": 28,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ibadan-1.json"
+      ]
+    },
+    "Ibadan Area": {
+      "count": 14,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ibadan-area-1.json"
+      ]
+    },
+    "Ijebu Ode": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ijebu-ode-1.json"
+      ]
+    },
+    "Ikeja": {
+      "count": 84,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ikeja-1.json"
+      ]
+    },
+    "Ikot Akpan-Ata": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ikot-akpan-ata-1.json"
+      ]
+    },
+    "Ikoyi": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ikoyi-1.json"
+      ]
+    },
+    "Ile-Ife": {
+      "count": 7,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ile-ife-1.json"
+      ]
+    },
+    "Ilorin": {
+      "count": 35,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ilorin-1.json"
+      ]
+    },
+    "Ilorin Area": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ilorin-area-1.json"
+      ]
+    },
+    "Ilorin, Kwara State, Nigeria": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ilorin-kwara-state-nigeria-1.json"
+      ]
+    },
+    "Ilupeju, Lagos": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ilupeju-lagos-1.json"
+      ]
+    },
+    "Joe": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "joe-1.json"
+      ]
+    },
+    "Jos": {
+      "count": 114,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "jos-1.json"
+      ]
+    },
+    "Jos Area": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "jos-area-1.json"
+      ]
+    },
+    "Jos-North": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "jos-north-1.json"
+      ]
+    },
+    "Kaduna": {
+      "count": 35,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kaduna-1.json"
+      ]
+    },
+    "Kaduna Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kaduna-area-1.json"
+      ]
+    },
+    "Kaduna North": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kaduna-north-1.json"
+      ]
+    },
+    "Kano": {
+      "count": 41,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kano-1.json"
+      ]
+    },
+    "Kano Area": {
+      "count": 5,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kano-area-1.json"
+      ]
+    },
+    "Katsina": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "katsina-1.json"
+      ]
+    },
+    "Kureken Sani": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kureken-sani-1.json"
+      ]
+    },
+    "LEKKI": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lekki-1.json"
+      ]
+    },
+    "Lagaos": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lagaos-1.json"
+      ]
+    },
+    "Lagos": {
+      "count": 164,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lagos-1.json"
+      ]
+    },
+    "Lagos Area": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lagos-area-1.json"
+      ]
+    },
+    "Lagos Island": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lagos-island-1.json"
+      ]
+    },
+    "Lekki": {
+      "count": 18,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lekki-1.json"
+      ]
+    },
+    "Lekki, Lagos": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lekki-lagos-1.json"
+      ]
+    },
+    "Lokoja Area": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lokoja-area-1.json"
+      ]
+    },
+    "Maiduguri": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "maiduguri-1.json"
+      ]
+    },
+    "Maiduguri Area": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "maiduguri-area-1.json"
+      ]
+    },
+    "Makurdi Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "makurdi-area-1.json"
+      ]
+    },
+    "Mariri": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "mariri-1.json"
+      ]
+    },
+    "Minna": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "minna-1.json"
+      ]
+    },
+    "Mokola, Ibadam": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "mokola-ibadam-1.json"
+      ]
+    },
+    "Nsukka": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "nsukka-1.json"
+      ]
+    },
+    "Ogbomosho": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ogbomosho-1.json"
+      ]
+    },
+    "Ogharefe": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "ogharefe-1.json"
+      ]
+    },
+    "Oluwa": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "oluwa-1.json"
+      ]
+    },
+    "Oshogbo": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "oshogbo-1.json"
+      ]
+    },
+    "Osogbo": {
+      "count": 16,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "osogbo-1.json"
+      ]
+    },
+    "Owerri": {
+      "count": 14,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "owerri-1.json"
+      ]
+    },
+    "Owerri Area": {
+      "count": 7,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "owerri-area-1.json"
+      ]
+    },
+    "Port Harcourt": {
+      "count": 33,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "port-harcourt-1.json"
+      ]
+    },
+    "Port Harcourt Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "port-harcourt-area-1.json"
+      ]
+    },
+    "Rumualogu/Port Harcourt": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "rumualoguport-harcourt-1.json"
+      ]
+    },
+    "Rumuosi junctin": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "rumuosi-junctin-1.json"
+      ]
+    },
+    "Sokoto": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "sokoto-1.json"
+      ]
+    },
+    "Unguwar Shanu": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "unguwar-shanu-1.json"
+      ]
+    },
+    "University of Port Harcourt, Abuja Campus, Choba, Rivers State.": {
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "university-of-port-harcourt-abuja-campus-choba-rivers-state-1.json"
+      ]
+    },
+    "Uyo": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "uyo-1.json"
+      ]
+    },
+    "Uyo Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "uyo-area-1.json"
+      ]
+    },
+    "Victoria Island": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "victoria-island-1.json"
+      ]
+    },
+    "Warri": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "warri-1.json"
+      ]
+    },
+    "Warri Area": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "warri-area-1.json"
+      ]
+    },
+    "Woji": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "woji-1.json"
+      ]
+    },
+    "Yenagoa": {
+      "count": 6,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "yenagoa-1.json"
+      ]
+    },
+    "Yenagoa, Bayelsa state": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "yenagoa-bayelsa-state-1.json"
+      ]
+    },
+    "Yola": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "yola-1.json"
+      ]
+    },
+    "Yola Area": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "yola-area-1.json"
+      ]
+    },
+    "Zaria": {
+      "count": 5,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "zaria-1.json"
+      ]
+    },
+    "abuja": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "abuja-1.json"
+      ]
+    },
+    "agbor": {
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "agbor-1.json"
+      ]
+    },
+    "arkilla": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "arkilla-1.json"
+      ]
+    },
+    "benin city": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "benin-city-1.json"
+      ]
+    },
+    "jos": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "jos-1.json"
+      ]
+    },
+    "kano": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "kano-1.json"
+      ]
+    },
+    "lagos": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lagos-1.json"
+      ]
+    },
+    "lekki": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "lekki-1.json"
+      ]
+    },
+    "port harcourt": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "shards": [
+        "port-harcourt-1.json"
+      ]
+    }
+  },
+  "code": "NG",
+  "country": "Nigeria"
+}

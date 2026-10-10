@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.3,
+    "average_cost_for_two": 70.0,
+    "city": "Vineland Station",
+    "country": "Canada",
+    "cuisines": "Italian, Mediterranean, Pizza",
+    "currency": "CAD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 43.1868697,
+    "locality": "Vineland Station",
+    "longitude": -79.3791465,
+    "price_range": 4,
+    "restaurant_id": 16654702,
+    "restaurant_name": "Lake House Restaurant",
+    "uid": "zomato:16654702",
+    "votes": 204,
+    "weighted_rating": 4.157
+  }
+]

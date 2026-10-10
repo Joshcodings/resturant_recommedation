@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 2.4,
+    "average_cost_for_two": 30.0,
+    "city": "Montville",
+    "country": "Australia",
+    "cuisines": "Coffee and Tea, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.690462,
+    "locality": "Montville",
+    "longitude": 152.893735,
+    "price_range": 3,
+    "restaurant_id": 16613059,
+    "restaurant_name": "Poets Cafe",
+    "uid": "zomato:16613059",
+    "votes": 193,
+    "weighted_rating": 2.659
+  }
+]

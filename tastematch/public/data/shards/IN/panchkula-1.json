@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.2,
+    "average_cost_for_two": 2000.0,
+    "city": "Panchkula",
+    "country": "India",
+    "cuisines": "North Indian, Middle Eastern, Pizza",
+    "currency": "INR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 30.6978586,
+    "locality": "Sector 9",
+    "longitude": 76.849258,
+    "price_range": 4,
+    "restaurant_id": 120519,
+    "restaurant_name": "Hops n Grains",
+    "uid": "zomato:120519",
+    "votes": 843,
+    "weighted_rating": 4.153
+  }
+]

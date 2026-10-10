@@ -1,0 +1,3426 @@
+[
+  {
+    "uid": "osm:way/804229085",
+    "name": "Lantoro catholic hospital",
+    "category": "hospital",
+    "city": "Abeokuta",
+    "latitude": 7.162724,
+    "longitude": 3.362504
+  },
+  {
+    "uid": "osm:way/839179595",
+    "name": "Neuropsychiatric Hospital",
+    "category": "hospital",
+    "city": "Abeokuta",
+    "latitude": 7.12652,
+    "longitude": 3.295569
+  },
+  {
+    "uid": "osm:node/10215220420",
+    "name": "Dusmar Presidential Hotel",
+    "category": "hotel",
+    "city": "Abeokuta",
+    "latitude": 7.13448,
+    "longitude": 3.352705
+  },
+  {
+    "uid": "osm:node/3230282285",
+    "name": "Green Legacy Resort",
+    "category": "hotel",
+    "city": "Abeokuta",
+    "latitude": 7.125043,
+    "longitude": 3.36117
+  },
+  {
+    "uid": "osm:way/669568923",
+    "name": "Cathedral Church of St. Peter",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.164123,
+    "longitude": 3.351731
+  },
+  {
+    "uid": "osm:way/1291133053",
+    "name": "Grace Reformed Baptist Church",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.121004,
+    "longitude": 3.321418
+  },
+  {
+    "uid": "osm:node/5803878354",
+    "name": "Ibara Central Mosque",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.139797,
+    "longitude": 3.337846
+  },
+  {
+    "uid": "osm:way/1068482822",
+    "name": "Ibara Muslim Community Praying Ground",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.129027,
+    "longitude": 3.326465
+  },
+  {
+    "uid": "osm:way/1213201994",
+    "name": "Ifa Palace of Ijẹmọ",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.164836,
+    "longitude": 3.34545
+  },
+  {
+    "uid": "osm:way/1213201992",
+    "name": "Ile Ìṣegun Temple",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.169633,
+    "longitude": 3.348484
+  },
+  {
+    "uid": "osm:way/669568922",
+    "name": "St. Peter and St. Paul Cathedral",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.167655,
+    "longitude": 3.358515
+  },
+  {
+    "uid": "osm:way/839185593",
+    "name": "TREM",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.12193,
+    "longitude": 3.336231
+  },
+  {
+    "uid": "osm:node/9629769653",
+    "name": "Upper Room Baptist Church, Abeokuta Parish",
+    "category": "religious_centre",
+    "city": "Abeokuta",
+    "latitude": 7.129588,
+    "longitude": 3.32081
+  },
+  {
+    "uid": "osm:way/316843082",
+    "name": "M.K.O Abiola Stadium",
+    "category": "stadium",
+    "city": "Abeokuta",
+    "latitude": 7.132436,
+    "longitude": 3.355233
+  },
+  {
+    "uid": "osm:way/705301227",
+    "name": "Federal University of Agriculture, Abeokuta",
+    "category": "university",
+    "city": "Abeokuta",
+    "latitude": 7.223279,
+    "longitude": 3.437235
+  },
+  {
+    "uid": "osm:node/5986883885",
+    "name": "God is Good",
+    "category": "bus_park",
+    "city": "Abuja",
+    "latitude": 9.065495,
+    "longitude": 7.438076
+  },
+  {
+    "uid": "osm:node/5234383123",
+    "name": "Nyanya bus station",
+    "category": "bus_park",
+    "city": "Abuja",
+    "latitude": 9.023419,
+    "longitude": 7.570635
+  },
+  {
+    "uid": "osm:node/9280067081",
+    "name": "Eye Foundation Hospital",
+    "category": "hospital",
+    "city": "Abuja",
+    "latitude": 8.999677,
+    "longitude": 7.481624
+  },
+  {
+    "uid": "osm:node/4709844289",
+    "name": "Barcelona",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.072728,
+    "longitude": 7.484054
+  },
+  {
+    "uid": "osm:node/4986968026",
+    "name": "Bestway Luxary Suites",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 8.999871,
+    "longitude": 7.481672
+  },
+  {
+    "uid": "osm:node/4236852256",
+    "name": "Bjorne Suites Ltd",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.071756,
+    "longitude": 7.471615
+  },
+  {
+    "uid": "osm:node/4637436990",
+    "name": "Bolton White Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.035197,
+    "longitude": 7.496262
+  },
+  {
+    "uid": "osm:node/4225150963",
+    "name": "Capital Lake Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.069793,
+    "longitude": 7.414198
+  },
+  {
+    "uid": "osm:node/7613039354",
+    "name": "Commodore Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.08247,
+    "longitude": 7.480334
+  },
+  {
+    "uid": "osm:node/4942180722",
+    "name": "Dennis hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.079881,
+    "longitude": 7.463888
+  },
+  {
+    "uid": "osm:node/3333833484",
+    "name": "Hotel De Bently",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.060699,
+    "longitude": 7.444497
+  },
+  {
+    "uid": "osm:node/5485177319",
+    "name": "Ibeto Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.003929,
+    "longitude": 7.468077
+  },
+  {
+    "uid": "osm:node/8843348117",
+    "name": "Kriscane Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.103741,
+    "longitude": 7.405206
+  },
+  {
+    "uid": "osm:node/4219094792",
+    "name": "L'Eola Suites",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.052505,
+    "longitude": 7.485831
+  },
+  {
+    "uid": "osm:node/4239610546",
+    "name": "Madugu. Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.064835,
+    "longitude": 7.426599
+  },
+  {
+    "uid": "osm:node/539000064",
+    "name": "Nicon Luxury Abuja",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.045407,
+    "longitude": 7.49419
+  },
+  {
+    "uid": "osm:node/3333891732",
+    "name": "Protea Hotel Abuja",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.093611,
+    "longitude": 7.476545
+  },
+  {
+    "uid": "osm:node/31203225",
+    "name": "Reiz Continental Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.049603,
+    "longitude": 7.485347
+  },
+  {
+    "uid": "osm:node/4224455328",
+    "name": "Sandralia Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.074785,
+    "longitude": 7.433738
+  },
+  {
+    "uid": "osm:node/6700203986",
+    "name": "Summerset Hotel",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.040921,
+    "longitude": 7.525694
+  },
+  {
+    "uid": "osm:node/3333833485",
+    "name": "The Nordic Villa",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.071925,
+    "longitude": 7.431372
+  },
+  {
+    "uid": "osm:node/4225150965",
+    "name": "The Nordic Villa Residence",
+    "category": "hotel",
+    "city": "Abuja",
+    "latitude": 9.071225,
+    "longitude": 7.429955
+  },
+  {
+    "uid": "osm:node/31445570",
+    "name": "Millipat Plaza",
+    "category": "mall",
+    "city": "Abuja",
+    "latitude": 9.032761,
+    "longitude": 7.44302
+  },
+  {
+    "uid": "osm:node/4239609893",
+    "name": "O'Neil Centre",
+    "category": "mall",
+    "city": "Abuja",
+    "latitude": 9.06568,
+    "longitude": 7.428818
+  },
+  {
+    "uid": "osm:node/4549849151",
+    "name": "New Utako Modern Market",
+    "category": "market",
+    "city": "Abuja",
+    "latitude": 9.065459,
+    "longitude": 7.445966
+  },
+  {
+    "uid": "osm:node/7373765723",
+    "name": "COZA (Commonwealth of Zion Assembly)",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.005756,
+    "longitude": 7.506092
+  },
+  {
+    "uid": "osm:node/6560585385",
+    "name": "Catholic Secretariat of Nigeria",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.019773,
+    "longitude": 7.473507
+  },
+  {
+    "uid": "osm:node/5986883886",
+    "name": "Champion Royal Assembly",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.186119,
+    "longitude": 7.347814
+  },
+  {
+    "uid": "osm:node/9252457269",
+    "name": "Grace & Truth",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.052262,
+    "longitude": 7.49828
+  },
+  {
+    "uid": "osm:node/8845867390",
+    "name": "Living Faith (Winners's Chapel)",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 8.990805,
+    "longitude": 7.56713
+  },
+  {
+    "uid": "osm:node/6957991585",
+    "name": "National Christian Centre",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.048399,
+    "longitude": 7.494884
+  },
+  {
+    "uid": "osm:node/31384738",
+    "name": "National Ecumenical Centre",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.051695,
+    "longitude": 7.494533
+  },
+  {
+    "uid": "osm:node/6115444165",
+    "name": "New Estate Baptist Church",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 8.999474,
+    "longitude": 7.477256
+  },
+  {
+    "uid": "osm:node/8813109533",
+    "name": "St Agnes Catholic Church",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.049303,
+    "longitude": 7.439633
+  },
+  {
+    "uid": "osm:node/6579610186",
+    "name": "Transforming Church, Gwarinpa",
+    "category": "religious_centre",
+    "city": "Abuja",
+    "latitude": 9.113735,
+    "longitude": 7.38918
+  },
+  {
+    "uid": "osm:node/3651962628",
+    "name": "Benin Garage",
+    "category": "bus_park",
+    "city": "Akure",
+    "latitude": 7.274837,
+    "longitude": 5.244901
+  },
+  {
+    "uid": "osm:node/11178545482",
+    "name": "Opposite FUTA Campus",
+    "category": "bus_park",
+    "city": "Akure",
+    "latitude": 7.307558,
+    "longitude": 5.138822
+  },
+  {
+    "uid": "osm:node/11258946337",
+    "name": "BHC, Ilere",
+    "category": "hospital",
+    "city": "Akure",
+    "latitude": 7.318616,
+    "longitude": 5.167382
+  },
+  {
+    "uid": "osm:node/11934296154",
+    "name": "Olyros Hospital",
+    "category": "hospital",
+    "city": "Akure",
+    "latitude": 7.292593,
+    "longitude": 5.150207
+  },
+  {
+    "uid": "osm:node/7824608684",
+    "name": "Helena Hotel",
+    "category": "hotel",
+    "city": "Akure",
+    "latitude": 7.276981,
+    "longitude": 5.21249
+  },
+  {
+    "uid": "osm:node/11243769940",
+    "name": "Hotel Continental",
+    "category": "hotel",
+    "city": "Akure",
+    "latitude": 7.242748,
+    "longitude": 5.200508
+  },
+  {
+    "uid": "osm:node/11569815835",
+    "name": "Adejuyigbe Shopping Center",
+    "category": "mall",
+    "city": "Akure",
+    "latitude": 7.292929,
+    "longitude": 5.151375
+  },
+  {
+    "uid": "osm:node/11243769938",
+    "name": "NEPA Ultra Modern Market",
+    "category": "mall",
+    "city": "Akure",
+    "latitude": 7.245286,
+    "longitude": 5.201845
+  },
+  {
+    "uid": "osm:node/6271074305",
+    "name": "Akure Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.25289,
+    "longitude": 5.19561
+  },
+  {
+    "uid": "osm:node/6271074309",
+    "name": "Bagbe Akure Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.251352,
+    "longitude": 5.19526
+  },
+  {
+    "uid": "osm:node/6271074312",
+    "name": "Ikota Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.3453,
+    "longitude": 5.15055
+  },
+  {
+    "uid": "osm:node/6271074334",
+    "name": "Ilado Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.20925,
+    "longitude": 5.26655
+  },
+  {
+    "uid": "osm:node/6271074321",
+    "name": "Ilaramoko Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.34852,
+    "longitude": 5.11405
+  },
+  {
+    "uid": "osm:node/7814299181",
+    "name": "Isikan Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.250846,
+    "longitude": 5.182521
+  },
+  {
+    "uid": "osm:node/7814299182",
+    "name": "Isikan Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.250742,
+    "longitude": 5.18291
+  },
+  {
+    "uid": "osm:node/6271074301",
+    "name": "Jilalu Market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.249439,
+    "longitude": 5.160153
+  },
+  {
+    "uid": "osm:node/7788530141",
+    "name": "Shasha market",
+    "category": "market",
+    "city": "Akure",
+    "latitude": 7.277539,
+    "longitude": 5.243797
+  },
+  {
+    "uid": "osm:node/11932543659",
+    "name": "Apostolic Faith Campus Fellowship",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.291402,
+    "longitude": 5.150686
+  },
+  {
+    "uid": "osm:node/11934126189",
+    "name": "Asude Mosque",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.290605,
+    "longitude": 5.1427
+  },
+  {
+    "uid": "osm:node/11932516534",
+    "name": "CCC Greenland Global Parish",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.290003,
+    "longitude": 5.150328
+  },
+  {
+    "uid": "osm:node/6138196717",
+    "name": "Christ Apostolic Church Revival Centre",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.229407,
+    "longitude": 5.194577
+  },
+  {
+    "uid": "osm:node/11934132277",
+    "name": "Daru Salam Mosque",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.29194,
+    "longitude": 5.147475
+  },
+  {
+    "uid": "osm:node/11935842754",
+    "name": "Deeper Life Campus Fellowship Secrétariat",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.289514,
+    "longitude": 5.145337
+  },
+  {
+    "uid": "osm:node/11934142302",
+    "name": "Embassy Mosque",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.293532,
+    "longitude": 5.153843
+  },
+  {
+    "uid": "osm:node/11934210410",
+    "name": "Gloven Tongues Of Fire Ministry",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.291103,
+    "longitude": 5.149578
+  },
+  {
+    "uid": "osm:node/11933521598",
+    "name": "Little Tokyo Mosque",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.290572,
+    "longitude": 5.149256
+  },
+  {
+    "uid": "osm:node/10310867778",
+    "name": "Mary queen of angels",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.247653,
+    "longitude": 5.223397
+  },
+  {
+    "uid": "osm:node/11932537665",
+    "name": "Mountain Of Fire",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.291723,
+    "longitude": 5.150185
+  },
+  {
+    "uid": "osm:node/11934084521",
+    "name": "Rescue Mosque",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.294015,
+    "longitude": 5.150699
+  },
+  {
+    "uid": "osm:node/7824650389",
+    "name": "Rock of Ages Evangelical Glorious Ministry",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.30768,
+    "longitude": 5.224829
+  },
+  {
+    "uid": "osm:node/11934346616",
+    "name": "Solomon's Palace Parish",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.292673,
+    "longitude": 5.15129
+  },
+  {
+    "uid": "osm:node/6138196718",
+    "name": "The Gospel of Jesus' Victory Int'l Ministry (Inc)",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.221106,
+    "longitude": 5.190582
+  },
+  {
+    "uid": "osm:node/11934280196",
+    "name": "The Redeem Christian Church Of God",
+    "category": "religious_centre",
+    "city": "Akure",
+    "latitude": 7.2909,
+    "longitude": 5.149478
+  },
+  {
+    "uid": "osm:node/7788616249",
+    "name": "New Stadium",
+    "category": "stadium",
+    "city": "Akure",
+    "latitude": 7.277116,
+    "longitude": 5.192626
+  },
+  {
+    "uid": "osm:node/981284618",
+    "name": "Edo Line",
+    "category": "bus_park",
+    "city": "Benin City",
+    "latitude": 6.343593,
+    "longitude": 5.62824
+  },
+  {
+    "uid": "osm:node/1994156693",
+    "name": "Abundant Grace Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.374214,
+    "longitude": 5.637105
+  },
+  {
+    "uid": "osm:node/1994156660",
+    "name": "Asemeblise of God Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.364276,
+    "longitude": 5.623595
+  },
+  {
+    "uid": "osm:node/1994156664",
+    "name": "Assemblies of God Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.360174,
+    "longitude": 5.623783
+  },
+  {
+    "uid": "osm:node/1994156988",
+    "name": "Beloveth Of Christ Gospel Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.363626,
+    "longitude": 5.633691
+  },
+  {
+    "uid": "osm:node/1994157227",
+    "name": "Christ Apostolic Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.370191,
+    "longitude": 5.638001
+  },
+  {
+    "uid": "osm:node/1994157269",
+    "name": "Christ Chosen Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.372026,
+    "longitude": 5.633613
+  },
+  {
+    "uid": "osm:node/1994157253",
+    "name": "Christ Chosen Church of God",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.382004,
+    "longitude": 5.632197
+  },
+  {
+    "uid": "osm:node/1994157270",
+    "name": "Christ Fellowship Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.380227,
+    "longitude": 5.641843
+  },
+  {
+    "uid": "osm:node/1994157248",
+    "name": "Christ Worshipper's Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.369365,
+    "longitude": 5.628639
+  },
+  {
+    "uid": "osm:node/1994157271",
+    "name": "Christian Pentecostal Mission",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.370087,
+    "longitude": 5.632611
+  },
+  {
+    "uid": "osm:node/1994157249",
+    "name": "Church of Truth",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.368032,
+    "longitude": 5.631757
+  },
+  {
+    "uid": "osm:node/1994157274",
+    "name": "Deeper Life Bible Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.373329,
+    "longitude": 5.637927
+  },
+  {
+    "uid": "osm:node/1994157334",
+    "name": "Flame Of Fire Revival Ministry",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.363096,
+    "longitude": 5.63361
+  },
+  {
+    "uid": "osm:node/1994157335",
+    "name": "Fountain Head of Life Gospel",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.358809,
+    "longitude": 5.628196
+  },
+  {
+    "uid": "osm:node/1994157339",
+    "name": "God Alife Ministry Int'Inc",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.369112,
+    "longitude": 5.628462
+  },
+  {
+    "uid": "osm:node/1994157340",
+    "name": "God's Anointed Oil Prayer Ministry",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.36885,
+    "longitude": 5.627747
+  },
+  {
+    "uid": "osm:node/1994157342",
+    "name": "God's Grace Ministries Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.369881,
+    "longitude": 5.632445
+  },
+  {
+    "uid": "osm:node/1994157341",
+    "name": "Golden Age Intl' Ministry",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.374275,
+    "longitude": 5.637561
+  },
+  {
+    "uid": "osm:node/1994157343",
+    "name": "Heavenly Pilgrims church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.367182,
+    "longitude": 5.631683
+  },
+  {
+    "uid": "osm:node/1994157344",
+    "name": "Holy Ghost Foundation Bible church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.375169,
+    "longitude": 5.631259
+  },
+  {
+    "uid": "osm:node/1994157345",
+    "name": "Holy spirit Catholic Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.370921,
+    "longitude": 5.636189
+  },
+  {
+    "uid": "osm:node/1994157349",
+    "name": "Jesus Power Assembly(JPA)",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.372348,
+    "longitude": 5.633198
+  },
+  {
+    "uid": "osm:node/1994157377",
+    "name": "Light of Life Ministry",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.360542,
+    "longitude": 5.631281
+  },
+  {
+    "uid": "osm:node/1994157439",
+    "name": "MFM Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.362642,
+    "longitude": 5.631119
+  },
+  {
+    "uid": "osm:node/1994157526",
+    "name": "Mountain of Faith",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.378231,
+    "longitude": 5.633902
+  },
+  {
+    "uid": "osm:node/1994157578",
+    "name": "New Covenant Bible Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.375677,
+    "longitude": 5.630286
+  },
+  {
+    "uid": "osm:node/1994157623",
+    "name": "New Life Bible Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.374396,
+    "longitude": 5.631911
+  },
+  {
+    "uid": "osm:node/1994157683",
+    "name": "Redeemed Christian Church of God",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.368957,
+    "longitude": 5.632267
+  },
+  {
+    "uid": "osm:node/1994157684",
+    "name": "Redeemed Christian Church of God",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.371177,
+    "longitude": 5.632933
+  },
+  {
+    "uid": "osm:node/1994157703",
+    "name": "Redeemed Christian Church of God",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.378955,
+    "longitude": 5.632144
+  },
+  {
+    "uid": "osm:node/1994157681",
+    "name": "Rejoincing Assemble",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.365311,
+    "longitude": 5.633571
+  },
+  {
+    "uid": "osm:node/1994157715",
+    "name": "The Lord Chosen Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.358061,
+    "longitude": 5.628577
+  },
+  {
+    "uid": "osm:node/1994157716",
+    "name": "The Redeem Christian Church",
+    "category": "religious_centre",
+    "city": "Benin City",
+    "latitude": 6.37106,
+    "longitude": 5.635179
+  },
+  {
+    "uid": "osm:node/979962730",
+    "name": "Edo College",
+    "category": "university",
+    "city": "Benin City",
+    "latitude": 6.332328,
+    "longitude": 5.646953
+  },
+  {
+    "uid": "osm:way/614932937",
+    "name": "Margaret Ekpo International Airport",
+    "category": "airport",
+    "city": "Calabar",
+    "latitude": 4.979218,
+    "longitude": 8.348572
+  },
+  {
+    "uid": "osm:way/669698361",
+    "name": "General Hospital Calabar",
+    "category": "hospital",
+    "city": "Calabar",
+    "latitude": 4.95307,
+    "longitude": 8.335663
+  },
+  {
+    "uid": "osm:node/12339390993",
+    "name": "Mambo Clinic",
+    "category": "hospital",
+    "city": "Calabar",
+    "latitude": 4.944117,
+    "longitude": 8.328866
+  },
+  {
+    "uid": "osm:way/669758839",
+    "name": "Nigerian Navy Reference Hospital Calabar",
+    "category": "hospital",
+    "city": "Calabar",
+    "latitude": 5.00105,
+    "longitude": 8.33298
+  },
+  {
+    "uid": "osm:way/669695779",
+    "name": "University of Calabar Teaching Hospital",
+    "category": "hospital",
+    "city": "Calabar",
+    "latitude": 4.955344,
+    "longitude": 8.350289
+  },
+  {
+    "uid": "osm:way/1157936874",
+    "name": "Armany Hotel",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 4.967225,
+    "longitude": 8.339151
+  },
+  {
+    "uid": "osm:node/10215240518",
+    "name": "Hilltop Lodges",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 4.962081,
+    "longitude": 8.329246
+  },
+  {
+    "uid": "osm:node/4759497531",
+    "name": "Jahas Guest House",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 4.980693,
+    "longitude": 8.342804
+  },
+  {
+    "uid": "osm:node/4885587621",
+    "name": "Nelbee Guest House",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 4.954384,
+    "longitude": 8.31935
+  },
+  {
+    "uid": "osm:node/12752186282",
+    "name": "Orange Resort, Calabar",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 5.003538,
+    "longitude": 8.356922
+  },
+  {
+    "uid": "osm:way/667081716",
+    "name": "Tinapa Lakeside Hotel",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 5.048032,
+    "longitude": 8.316166
+  },
+  {
+    "uid": "osm:node/4759497529",
+    "name": "Vanel Hotel",
+    "category": "hotel",
+    "city": "Calabar",
+    "latitude": 4.980862,
+    "longitude": 8.343709
+  },
+  {
+    "uid": "osm:way/669758906",
+    "name": "Calabar Mall",
+    "category": "mall",
+    "city": "Calabar",
+    "latitude": 4.960884,
+    "longitude": 8.32671
+  },
+  {
+    "uid": "osm:node/13685760531",
+    "name": "Doxa Commission Global",
+    "category": "religious_centre",
+    "city": "Calabar",
+    "latitude": 4.949584,
+    "longitude": 8.33605
+  },
+  {
+    "uid": "osm:way/669758904",
+    "name": "Sacred Heart Cathedral",
+    "category": "religious_centre",
+    "city": "Calabar",
+    "latitude": 4.957474,
+    "longitude": 8.318026
+  },
+  {
+    "uid": "osm:node/12339390995",
+    "name": "The Apostolic Church",
+    "category": "religious_centre",
+    "city": "Calabar",
+    "latitude": 4.943047,
+    "longitude": 8.331169
+  },
+  {
+    "uid": "osm:node/9373229765",
+    "name": "The Redeemed Christian Church of God",
+    "category": "religious_centre",
+    "city": "Calabar",
+    "latitude": 5.043987,
+    "longitude": 8.356286
+  },
+  {
+    "uid": "osm:way/669695695",
+    "name": "Abraham Ordia Stadium",
+    "category": "stadium",
+    "city": "Calabar",
+    "latitude": 4.944656,
+    "longitude": 8.343994
+  },
+  {
+    "uid": "osm:node/7056217385",
+    "name": "Hi-Quality Bakery",
+    "category": "stadium",
+    "city": "Calabar",
+    "latitude": 4.97953,
+    "longitude": 8.342149
+  },
+  {
+    "uid": "osm:way/617583331",
+    "name": "UJ Esuene Stadium",
+    "category": "stadium",
+    "city": "Calabar",
+    "latitude": 4.967621,
+    "longitude": 8.326806
+  },
+  {
+    "uid": "osm:relation/15518465",
+    "name": "Hope Waddell Training Institution",
+    "category": "university",
+    "city": "Calabar",
+    "latitude": 4.975797,
+    "longitude": 8.326273
+  },
+  {
+    "uid": "osm:relation/13734817",
+    "name": "University of Calabar",
+    "category": "university",
+    "city": "Calabar",
+    "latitude": 4.949395,
+    "longitude": 8.348443
+  },
+  {
+    "uid": "osm:node/14049723501",
+    "name": "University of Cross River State, Calabar Main Campus",
+    "category": "university",
+    "city": "Calabar",
+    "latitude": 4.931358,
+    "longitude": 8.329466
+  },
+  {
+    "uid": "osm:node/2455133007",
+    "name": "Bora Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.453076,
+    "longitude": 7.49051
+  },
+  {
+    "uid": "osm:node/2455133008",
+    "name": "Bridge Waters",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.451891,
+    "longitude": 7.493207
+  },
+  {
+    "uid": "osm:node/2455133009",
+    "name": "Carlton Crown Guest House",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.483247,
+    "longitude": 7.520712
+  },
+  {
+    "uid": "osm:node/2455133018",
+    "name": "Cintia Gardens",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.477091,
+    "longitude": 7.488871
+  },
+  {
+    "uid": "osm:node/2455133020",
+    "name": "Collery guest house",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.446103,
+    "longitude": 7.489179
+  },
+  {
+    "uid": "osm:node/2455133514",
+    "name": "Cosy Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.417798,
+    "longitude": 7.490654
+  },
+  {
+    "uid": "osm:node/2455133025",
+    "name": "Cunic Hotels Limited",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.478516,
+    "longitude": 7.494123
+  },
+  {
+    "uid": "osm:node/2455133027",
+    "name": "Davala Suites",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.449539,
+    "longitude": 7.510857
+  },
+  {
+    "uid": "osm:node/2455133028",
+    "name": "De Bloomindales",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.481992,
+    "longitude": 7.489892
+  },
+  {
+    "uid": "osm:node/2455133030",
+    "name": "Diamond Plaza Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.464778,
+    "longitude": 7.495219
+  },
+  {
+    "uid": "osm:node/2455133031",
+    "name": "Dontell Suites",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.47839,
+    "longitude": 7.503919
+  },
+  {
+    "uid": "osm:node/2455133048",
+    "name": "Etta Joe Guest House",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.483458,
+    "longitude": 7.520676
+  },
+  {
+    "uid": "osm:node/2455133050",
+    "name": "Extension Eddybina Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.477198,
+    "longitude": 7.507806
+  },
+  {
+    "uid": "osm:node/2455133070",
+    "name": "Golden Garden Suites",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.452924,
+    "longitude": 7.491541
+  },
+  {
+    "uid": "osm:node/2455133108",
+    "name": "HSB Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.470471,
+    "longitude": 7.495559
+  },
+  {
+    "uid": "osm:node/2455133301",
+    "name": "Mavis Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.473556,
+    "longitude": 7.499449
+  },
+  {
+    "uid": "osm:node/2455133344",
+    "name": "Midland Hotels",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.482876,
+    "longitude": 7.51665
+  },
+  {
+    "uid": "osm:node/2455133511",
+    "name": "Missouri Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.417598,
+    "longitude": 7.509589
+  },
+  {
+    "uid": "osm:node/2455133510",
+    "name": "Missuori Hotels",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.417555,
+    "longitude": 7.509718
+  },
+  {
+    "uid": "osm:node/2455133418",
+    "name": "Tamara Guest Inn",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.461007,
+    "longitude": 7.481726
+  },
+  {
+    "uid": "osm:node/2455133419",
+    "name": "The Courtyard Hotels & Resorts",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.455529,
+    "longitude": 7.487704
+  },
+  {
+    "uid": "osm:node/2455133421",
+    "name": "The coal city gardens",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.447507,
+    "longitude": 7.489062
+  },
+  {
+    "uid": "osm:node/2455133439",
+    "name": "Top 10 International Hotel",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.462775,
+    "longitude": 7.477306
+  },
+  {
+    "uid": "osm:node/2455133465",
+    "name": "Veronica Suite",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.464697,
+    "longitude": 7.497845
+  },
+  {
+    "uid": "osm:node/2455133474",
+    "name": "Victoria Gardens Hotel Limited",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.459907,
+    "longitude": 7.489305
+  },
+  {
+    "uid": "osm:node/2455133492",
+    "name": "Voyage Bay Guest House",
+    "category": "hotel",
+    "city": "Enugu",
+    "latitude": 6.413652,
+    "longitude": 7.52932
+  },
+  {
+    "uid": "osm:node/2455133397",
+    "name": "Provision Shop",
+    "category": "market",
+    "city": "Enugu",
+    "latitude": 6.465918,
+    "longitude": 7.59559
+  },
+  {
+    "uid": "osm:node/2455133482",
+    "name": "Victory Plaza",
+    "category": "market",
+    "city": "Enugu",
+    "latitude": 6.479254,
+    "longitude": 7.503113
+  },
+  {
+    "uid": "osm:node/2455132994",
+    "name": "Academy Of Leadership & Enterprise",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.465779,
+    "longitude": 7.50298
+  },
+  {
+    "uid": "osm:node/2455133034",
+    "name": "ESUT Medicine Student's Hostel",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.462455,
+    "longitude": 7.495811
+  },
+  {
+    "uid": "osm:node/2455133035",
+    "name": "ESUTH Pediatrics Emergency",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.461448,
+    "longitude": 7.494273
+  },
+  {
+    "uid": "osm:node/2455133051",
+    "name": "Eye Theatre/Clinic, Children Out Patient Clinic/Gynae Ward, Enugu State Teaching Hospital",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.461798,
+    "longitude": 7.493526
+  },
+  {
+    "uid": "osm:node/2455133099",
+    "name": "Graceland Private School",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.459873,
+    "longitude": 7.500532
+  },
+  {
+    "uid": "osm:node/2455133144",
+    "name": "Hematology Dept, Enugu State University Teaching Hospital",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.461937,
+    "longitude": 7.494073
+  },
+  {
+    "uid": "osm:node/2455133387",
+    "name": "Pharmacy Dept, Enugu State University Teaching Hospital",
+    "category": "university",
+    "city": "Enugu",
+    "latitude": 6.461387,
+    "longitude": 7.49381
+  },
+  {
+    "uid": "osm:node/501264336",
+    "name": "Old Ibadan Airport",
+    "category": "airport",
+    "city": "Ibadan",
+    "latitude": 7.431798,
+    "longitude": 3.909399
+  },
+  {
+    "uid": "osm:node/3084931569",
+    "name": "Boluwaji Bus Stop",
+    "category": "bus_park",
+    "city": "Ibadan",
+    "latitude": 7.341009,
+    "longitude": 3.906839
+  },
+  {
+    "uid": "osm:node/3084918961",
+    "name": "Boluwaji Health Centre",
+    "category": "hospital",
+    "city": "Ibadan",
+    "latitude": 7.343394,
+    "longitude": 3.905764
+  },
+  {
+    "uid": "osm:node/3084930763",
+    "name": "ade oyo maternity teaching hospital",
+    "category": "hospital",
+    "city": "Ibadan",
+    "latitude": 7.387016,
+    "longitude": 3.902507
+  },
+  {
+    "uid": "osm:node/3084912685",
+    "name": "sango pataki community health center",
+    "category": "hospital",
+    "city": "Ibadan",
+    "latitude": 7.427301,
+    "longitude": 3.89338
+  },
+  {
+    "uid": "osm:node/2639256383",
+    "name": "D'Rovans Hotel",
+    "category": "hotel",
+    "city": "Ibadan",
+    "latitude": 7.373274,
+    "longitude": 3.858477
+  },
+  {
+    "uid": "osm:node/2594871731",
+    "name": "Parkview Hotel",
+    "category": "hotel",
+    "city": "Ibadan",
+    "latitude": 7.42534,
+    "longitude": 3.912173
+  },
+  {
+    "uid": "osm:node/2639209663",
+    "name": "Plaza Park Hotel",
+    "category": "hotel",
+    "city": "Ibadan",
+    "latitude": 7.438381,
+    "longitude": 3.909212
+  },
+  {
+    "uid": "osm:node/2639256357",
+    "name": "Aleshinloye Market",
+    "category": "market",
+    "city": "Ibadan",
+    "latitude": 7.389428,
+    "longitude": 3.87005
+  },
+  {
+    "uid": "osm:node/2453679849",
+    "name": "Bodija Market",
+    "category": "market",
+    "city": "Ibadan",
+    "latitude": 7.437187,
+    "longitude": 3.915774
+  },
+  {
+    "uid": "osm:node/3084824648",
+    "name": "Oja Oba Market",
+    "category": "market",
+    "city": "Ibadan",
+    "latitude": 7.374258,
+    "longitude": 3.895131
+  },
+  {
+    "uid": "osm:node/2639209659",
+    "name": "Tolulope Plaza",
+    "category": "market",
+    "city": "Ibadan",
+    "latitude": 7.437896,
+    "longitude": 3.909606
+  },
+  {
+    "uid": "osm:node/959812250",
+    "name": "Arisekola Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.403456,
+    "longitude": 3.931564
+  },
+  {
+    "uid": "osm:node/2594871639",
+    "name": "Bodija Methodist Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.426364,
+    "longitude": 3.909989
+  },
+  {
+    "uid": "osm:node/2594871725",
+    "name": "Bodija Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.417308,
+    "longitude": 3.902077
+  },
+  {
+    "uid": "osm:node/3084884066",
+    "name": "Central Mosque, Odinjo.",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.359147,
+    "longitude": 3.912732
+  },
+  {
+    "uid": "osm:node/3084908545",
+    "name": "Christ Anglican Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.358404,
+    "longitude": 3.916558
+  },
+  {
+    "uid": "osm:node/3084920283",
+    "name": "Christ Baptist Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.344321,
+    "longitude": 3.906144
+  },
+  {
+    "uid": "osm:node/2594871656",
+    "name": "Glory Terbanacle",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.430619,
+    "longitude": 3.914093
+  },
+  {
+    "uid": "osm:node/3084931574",
+    "name": "Gospel Faith Mission International Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.348399,
+    "longitude": 3.876575
+  },
+  {
+    "uid": "osm:node/3084824647",
+    "name": "Ibi Ose Iba Oluyole Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.374497,
+    "longitude": 3.894131
+  },
+  {
+    "uid": "osm:node/959822332",
+    "name": "Iwo-Road Baptist Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.410829,
+    "longitude": 3.949449
+  },
+  {
+    "uid": "osm:node/3084946707",
+    "name": "Molete Baptist CHurch",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.350719,
+    "longitude": 3.880928
+  },
+  {
+    "uid": "osm:node/3084900856",
+    "name": "Ola Igbo Ola Anobi Central Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.361176,
+    "longitude": 3.91054
+  },
+  {
+    "uid": "osm:node/3084313970",
+    "name": "Oni Kuku Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.37429,
+    "longitude": 3.892097
+  },
+  {
+    "uid": "osm:node/2639209656",
+    "name": "OritaMefa Baptist Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.398272,
+    "longitude": 3.907793
+  },
+  {
+    "uid": "osm:node/3084824636",
+    "name": "Pelusheriki Mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.372081,
+    "longitude": 3.893821
+  },
+  {
+    "uid": "osm:node/2453679848",
+    "name": "SS Peter & Paul Catholic Church",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.42437,
+    "longitude": 3.911694
+  },
+  {
+    "uid": "osm:node/2594871627",
+    "name": "SS Peter & Paul Catholic Major Seminary",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.418348,
+    "longitude": 3.908943
+  },
+  {
+    "uid": "osm:node/3084951447",
+    "name": "lighthouse international christain center",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.432675,
+    "longitude": 3.905714
+  },
+  {
+    "uid": "osm:node/3084951448",
+    "name": "national council of womens societies",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.432571,
+    "longitude": 3.905376
+  },
+  {
+    "uid": "osm:node/3084916926",
+    "name": "sabo central mosque",
+    "category": "religious_centre",
+    "city": "Ibadan",
+    "latitude": 7.400862,
+    "longitude": 3.887135
+  },
+  {
+    "uid": "osm:node/2639220715",
+    "name": "Fedeal Cooperative College",
+    "category": "university",
+    "city": "Ibadan",
+    "latitude": 7.41209,
+    "longitude": 3.870719
+  },
+  {
+    "uid": "osm:node/2639256385",
+    "name": "NIHORT",
+    "category": "university",
+    "city": "Ibadan",
+    "latitude": 7.406795,
+    "longitude": 3.847721
+  },
+  {
+    "uid": "osm:node/2639220714",
+    "name": "School of Hygiene",
+    "category": "university",
+    "city": "Ibadan",
+    "latitude": 7.411303,
+    "longitude": 3.867436
+  },
+  {
+    "uid": "osm:way/370666112",
+    "name": "Murtala Mohammed International Airport",
+    "category": "airport",
+    "city": "Ikeja",
+    "latitude": 6.574132,
+    "longitude": 3.320076
+  },
+  {
+    "uid": "osm:node/11891454365",
+    "name": "Alimosho Health Centre",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.600378,
+    "longitude": 3.300346
+  },
+  {
+    "uid": "osm:node/11891454363",
+    "name": "Ckc Hospital",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.599811,
+    "longitude": 3.307895
+  },
+  {
+    "uid": "osm:node/11891454364",
+    "name": "Crystal Specialist Hospital",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.602584,
+    "longitude": 3.306225
+  },
+  {
+    "uid": "osm:node/11915825156",
+    "name": "Emc Hospital and Maternity",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.584641,
+    "longitude": 3.305345
+  },
+  {
+    "uid": "osm:node/11891476174",
+    "name": "Krowa Hospital",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.612179,
+    "longitude": 3.301522
+  },
+  {
+    "uid": "osm:node/11891454366",
+    "name": "Moria Clinic And Maternity Home",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.60392,
+    "longitude": 3.30192
+  },
+  {
+    "uid": "osm:node/11915825149",
+    "name": "Orisunbare Primary Health Care Center",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.569937,
+    "longitude": 3.302941
+  },
+  {
+    "uid": "osm:node/10232587966",
+    "name": "Pink Clinic Nigeria",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.576026,
+    "longitude": 3.386916
+  },
+  {
+    "uid": "osm:way/568367654",
+    "name": "Reddington Hospital - Ikeja GRA",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.583458,
+    "longitude": 3.357158
+  },
+  {
+    "uid": "osm:node/11891477754",
+    "name": "Royal Salvation Hospital",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.5915,
+    "longitude": 3.306496
+  },
+  {
+    "uid": "osm:node/11915825155",
+    "name": "Shasha Medical Centre",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.586979,
+    "longitude": 3.306116
+  },
+  {
+    "uid": "osm:node/11891477755",
+    "name": "Summit Hospital And Maternity Home",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.594275,
+    "longitude": 3.304206
+  },
+  {
+    "uid": "osm:node/11879397885",
+    "name": "The Tent Wellness Centre",
+    "category": "hospital",
+    "city": "Ikeja",
+    "latitude": 6.565792,
+    "longitude": 3.37226
+  },
+  {
+    "uid": "osm:node/10215240522",
+    "name": "Citilane Royal Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.602431,
+    "longitude": 3.352918
+  },
+  {
+    "uid": "osm:way/568367633",
+    "name": "De Renaissance Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.614013,
+    "longitude": 3.356033
+  },
+  {
+    "uid": "osm:node/6400283759",
+    "name": "Ehi Guest House",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.568115,
+    "longitude": 3.332441
+  },
+  {
+    "uid": "osm:node/6992566379",
+    "name": "Glonik Hotels",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.620226,
+    "longitude": 3.34453
+  },
+  {
+    "uid": "osm:node/11408650551",
+    "name": "Goldlux Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.623792,
+    "longitude": 3.303819
+  },
+  {
+    "uid": "osm:node/13031519774",
+    "name": "Paulson Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.606173,
+    "longitude": 3.389146
+  },
+  {
+    "uid": "osm:way/568367625",
+    "name": "Primal Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.583627,
+    "longitude": 3.357812
+  },
+  {
+    "uid": "osm:way/568367639",
+    "name": "Protea Hotel Ikeja Select",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.616662,
+    "longitude": 3.357005
+  },
+  {
+    "uid": "osm:way/568367622",
+    "name": "Radisson Blu Hotel Lagos Ikeja",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.581898,
+    "longitude": 3.358688
+  },
+  {
+    "uid": "osm:way/568367623",
+    "name": "Radisson Hotel Lagos Ikeja",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.582691,
+    "longitude": 3.358323
+  },
+  {
+    "uid": "osm:node/11085414005",
+    "name": "Radisson ikeja",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.583467,
+    "longitude": 3.357683
+  },
+  {
+    "uid": "osm:way/568367630",
+    "name": "Sheraton Lagos Hotel",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.583534,
+    "longitude": 3.360298
+  },
+  {
+    "uid": "osm:node/12357956574",
+    "name": "Work and Play place",
+    "category": "hotel",
+    "city": "Ikeja",
+    "latitude": 6.599939,
+    "longitude": 3.357833
+  },
+  {
+    "uid": "osm:node/13031543896",
+    "name": "Celestial Church of Christ",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.610303,
+    "longitude": 3.386337
+  },
+  {
+    "uid": "osm:node/13031543897",
+    "name": "Christ Apostolic Church CAC",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.610243,
+    "longitude": 3.386552
+  },
+  {
+    "uid": "osm:node/11373548330",
+    "name": "GracePlace Lagos",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.585057,
+    "longitude": 3.359415
+  },
+  {
+    "uid": "osm:node/7419153026",
+    "name": "Loyalty House International",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.626615,
+    "longitude": 3.354664
+  },
+  {
+    "uid": "osm:node/13031519775",
+    "name": "RCCG church",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.604471,
+    "longitude": 3.38958
+  },
+  {
+    "uid": "osm:way/223744991",
+    "name": "The Apostolic Church, LAWNA",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.588881,
+    "longitude": 3.388573
+  },
+  {
+    "uid": "osm:node/11385886095",
+    "name": "The Redeemed Christian Church of God, City of David Area Lagos Province 13",
+    "category": "religious_centre",
+    "city": "Ikeja",
+    "latitude": 6.609407,
+    "longitude": 3.380121
+  },
+  {
+    "uid": "osm:way/135655797",
+    "name": "Agege Stadium",
+    "category": "stadium",
+    "city": "Ikeja",
+    "latitude": 6.62372,
+    "longitude": 3.330056
+  },
+  {
+    "uid": "osm:node/13047974726",
+    "name": "Soludero Bus Terminal, Muritala Muhamed Way, Oko Erin, Nigeria",
+    "category": "bus_park",
+    "city": "Ilorin",
+    "latitude": 8.487369,
+    "longitude": 4.564477
+  },
+  {
+    "uid": "osm:node/13047974840",
+    "name": "Khadijat Memorial Hospital, Sango Road, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.510716,
+    "longitude": 4.587742
+  },
+  {
+    "uid": "osm:node/13047974817",
+    "name": "Midland Fertility Centre Ilorin Kwara State, Kano Road, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.477359,
+    "longitude": 4.512298
+  },
+  {
+    "uid": "osm:node/13047974776",
+    "name": "Ola Olu Hospital, Muritala Muhamed Way, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.469627,
+    "longitude": 4.568457
+  },
+  {
+    "uid": "osm:node/13047974773",
+    "name": "Olalomi Hospital, Stadium Road, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.479274,
+    "longitude": 4.550441
+  },
+  {
+    "uid": "osm:node/13047974766",
+    "name": "Olupelu Clinic and Maternity, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.495487,
+    "longitude": 4.510959
+  },
+  {
+    "uid": "osm:node/13047974705",
+    "name": "Tobi Hospital, Oko Erin, Nigeria",
+    "category": "hospital",
+    "city": "Ilorin",
+    "latitude": 8.483533,
+    "longitude": 4.540898
+  },
+  {
+    "uid": "osm:node/13047974833",
+    "name": "Kwara hotel, Challenge Road, Ilorin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.482207,
+    "longitude": 4.575413
+  },
+  {
+    "uid": "osm:node/13047974750",
+    "name": "POA Lakeside Resort and Gardens, Fate Road, behind Rotana Hotel, Ilorin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.493242,
+    "longitude": 4.581492
+  },
+  {
+    "uid": "osm:node/13047974745",
+    "name": "Princess Luxury Hotels and Tourism, Pipe Line Road, Ilorin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.475183,
+    "longitude": 4.596134
+  },
+  {
+    "uid": "osm:node/13047974741",
+    "name": "Rotana Hotel, Fate Road, Fate Road, Ilorin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.497871,
+    "longitude": 4.582494
+  },
+  {
+    "uid": "osm:node/13047974725",
+    "name": "SOMEWATT FRESH HOTELS LTD., Fate Road, beside Shoprite, Ilorin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.49887,
+    "longitude": 4.58442
+  },
+  {
+    "uid": "osm:node/13047974720",
+    "name": "Sultan royal hotel & resort Ltd, Ibrahim Taiwo Road, Oko Erin, Nigeria",
+    "category": "hotel",
+    "city": "Ilorin",
+    "latitude": 8.477081,
+    "longitude": 4.539728
+  },
+  {
+    "uid": "osm:node/13047974820",
+    "name": "Matanmi Shopping Complex, Oko Erin 240101, Kwara, Nigeria",
+    "category": "mall",
+    "city": "Ilorin",
+    "latitude": 8.484283,
+    "longitude": 4.563657
+  },
+  {
+    "uid": "osm:node/13047974729",
+    "name": "Shoprite Kwara Mall, Fate Road, Oko Erin, Nigeria",
+    "category": "mall",
+    "city": "Ilorin",
+    "latitude": 8.49908,
+    "longitude": 4.586122
+  },
+  {
+    "uid": "osm:node/13047974842",
+    "name": "Kankatu Market, Okelele Road, Oko Erin, Nigeria",
+    "category": "market",
+    "city": "Ilorin",
+    "latitude": 8.506394,
+    "longitude": 4.546448
+  },
+  {
+    "uid": "osm:node/13047974809",
+    "name": "New Kulende Market, Jebba Road, Oko Erin, Nigeria",
+    "category": "market",
+    "city": "Ilorin",
+    "latitude": 8.513708,
+    "longitude": 4.589413
+  },
+  {
+    "uid": "osm:node/13047974793",
+    "name": "Obbo fish and pork, Obo Road, Oko Erin, Nigeria",
+    "category": "market",
+    "city": "Ilorin",
+    "latitude": 8.481212,
+    "longitude": 4.561429
+  },
+  {
+    "uid": "osm:node/13047974785",
+    "name": "Oja Oba, Ilorin, Nigeria",
+    "category": "market",
+    "city": "Ilorin",
+    "latitude": 8.495987,
+    "longitude": 4.545999
+  },
+  {
+    "uid": "osm:node/13047974783",
+    "name": "Oja Tuntun Market Kwara Baboko Road, Oja Oba, Oko Erin 240101, Kwara, Nigeria",
+    "category": "market",
+    "city": "Ilorin",
+    "latitude": 8.487233,
+    "longitude": 4.539085
+  },
+  {
+    "uid": "osm:node/13047974857",
+    "name": "Ita Amodu General Mosque, Old Yidi Rd, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.485011,
+    "longitude": 4.551683
+  },
+  {
+    "uid": "osm:node/13047974856",
+    "name": "Ita Amodu General Mosque, Old Yidi Road, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.485011,
+    "longitude": 4.551683
+  },
+  {
+    "uid": "osm:node/13047974843",
+    "name": "Kankatu central mosque, Kankatu okelele, Ilorin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.480716,
+    "longitude": 4.541957
+  },
+  {
+    "uid": "osm:node/13047974826",
+    "name": "Living Faith Church Irewolede, Irewolede Road, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.459357,
+    "longitude": 4.551184
+  },
+  {
+    "uid": "osm:node/3690019206",
+    "name": "Noviziat der Brüder Ilorin",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.535814,
+    "longitude": 4.620718
+  },
+  {
+    "uid": "osm:node/3690019159",
+    "name": "Noviziat der Schwestern Ilorin",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.534106,
+    "longitude": 4.610746
+  },
+  {
+    "uid": "osm:node/13047974769",
+    "name": "Oloje Central Mosque, Alimi Rd, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.508969,
+    "longitude": 4.521892
+  },
+  {
+    "uid": "osm:node/13047974747",
+    "name": "Powerful Prayer Bible Church, Sabo Oke Road, Oko Erin, Nigeria;FHQC+RF9, Sabo Oke Rd, Oko Erin 240101, Kwara, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.489542,
+    "longitude": 4.571228
+  },
+  {
+    "uid": "osm:node/13047974731",
+    "name": "Shamsudeen Mosque, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.507747,
+    "longitude": 4.552583
+  },
+  {
+    "uid": "osm:node/13047974712",
+    "name": "Taoheed Mosque, Basin Road, Oko Erin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.502902,
+    "longitude": 4.594391
+  },
+  {
+    "uid": "osm:node/13047974768",
+    "name": "olorunsogo central mosque, geri-alimi, Ilorin, Nigeria",
+    "category": "religious_centre",
+    "city": "Ilorin",
+    "latitude": 8.468305,
+    "longitude": 4.512349
+  },
+  {
+    "uid": "osm:node/13047974830",
+    "name": "Kwara State Stadium, Ibrahim Taiwo Road, Ilorin, Nigeria",
+    "category": "stadium",
+    "city": "Ilorin",
+    "latitude": 8.482406,
+    "longitude": 4.549812
+  },
+  {
+    "uid": "osm:node/13047974829",
+    "name": "Kwara State Stadium, Oko Erin, Nigeria",
+    "category": "stadium",
+    "city": "Ilorin",
+    "latitude": 8.477164,
+    "longitude": 4.540697
+  },
+  {
+    "uid": "osm:node/13047974818",
+    "name": "Michael Imoudu National Institute Ilorin lFor Labour Studies, Ilorin, Nigeria",
+    "category": "university",
+    "city": "Ilorin",
+    "latitude": 8.438948,
+    "longitude": 4.595456
+  },
+  {
+    "uid": "osm:node/13047974810",
+    "name": "National Open University, Ilorin Study Centre, Sango Road, Oko Erin, Nigeria",
+    "category": "university",
+    "city": "Ilorin",
+    "latitude": 8.5142,
+    "longitude": 4.582642
+  },
+  {
+    "uid": "osm:node/9768958434",
+    "name": "Bingham university teaching hospitals",
+    "category": "hospital",
+    "city": "Jos",
+    "latitude": 9.930765,
+    "longitude": 8.877683
+  },
+  {
+    "uid": "osm:node/9768992270",
+    "name": "Excellence foundation international",
+    "category": "hospital",
+    "city": "Jos",
+    "latitude": 9.92905,
+    "longitude": 8.880253
+  },
+  {
+    "uid": "osm:node/9764082438",
+    "name": "Primary health care downbase",
+    "category": "hospital",
+    "city": "Jos",
+    "latitude": 9.956465,
+    "longitude": 8.851488
+  },
+  {
+    "uid": "osm:node/9768974963",
+    "name": "Stahealth specialist hospital",
+    "category": "hospital",
+    "city": "Jos",
+    "latitude": 9.931298,
+    "longitude": 8.878861
+  },
+  {
+    "uid": "osm:node/6515540489",
+    "name": "Hatfield hotel and suites",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.882257,
+    "longitude": 8.876969
+  },
+  {
+    "uid": "osm:node/6515540491",
+    "name": "Mope Hotel Passion for Comfort",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.896552,
+    "longitude": 8.85831
+  },
+  {
+    "uid": "osm:node/9768944293",
+    "name": "Paas' hotel",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.929712,
+    "longitude": 8.879863
+  },
+  {
+    "uid": "osm:node/6515540434",
+    "name": "Qualer Apartments & Hotels",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.870145,
+    "longitude": 8.845436
+  },
+  {
+    "uid": "osm:node/6515540488",
+    "name": "The Point Hotel & Suites",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.896803,
+    "longitude": 8.858419
+  },
+  {
+    "uid": "osm:node/6515540524",
+    "name": "Valada Hotel and Resorts",
+    "category": "hotel",
+    "city": "Jos",
+    "latitude": 9.899921,
+    "longitude": 8.875247
+  },
+  {
+    "uid": "osm:node/6120871131",
+    "name": "COCIN Shaka",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.877343,
+    "longitude": 8.900214
+  },
+  {
+    "uid": "osm:node/9768989043",
+    "name": "Central Mosque Na kwanan Soja",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.965768,
+    "longitude": 8.848985
+  },
+  {
+    "uid": "osm:node/9764049483",
+    "name": "Cocin LCC, new GRA, Ecwastaff",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.950324,
+    "longitude": 8.848018
+  },
+  {
+    "uid": "osm:node/9769013477",
+    "name": "Deeper Life Bible church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.928985,
+    "longitude": 8.880389
+  },
+  {
+    "uid": "osm:node/9764082696",
+    "name": "Ecwa church downbase",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.956032,
+    "longitude": 8.848617
+  },
+  {
+    "uid": "osm:node/3736619048",
+    "name": "El-Shaddai Covenant Church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.878799,
+    "longitude": 8.874718
+  },
+  {
+    "uid": "osm:node/6121138704",
+    "name": "Govt House Chapel",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.851508,
+    "longitude": 8.893343
+  },
+  {
+    "uid": "osm:node/6121060307",
+    "name": "Living Faith Church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.844247,
+    "longitude": 8.866766
+  },
+  {
+    "uid": "osm:node/9768989335",
+    "name": "Living Faith Church Hwolarza",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.968641,
+    "longitude": 8.843286
+  },
+  {
+    "uid": "osm:node/9764038035",
+    "name": "Living faith church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.956707,
+    "longitude": 8.852436
+  },
+  {
+    "uid": "osm:node/9764121037",
+    "name": "Living faith church, Ecwastaff",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.951225,
+    "longitude": 8.84978
+  },
+  {
+    "uid": "osm:node/9768992273",
+    "name": "Miracle Baptist Church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.972291,
+    "longitude": 8.84235
+  },
+  {
+    "uid": "osm:node/9764119834",
+    "name": "Mission minds international headquarters",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.95104,
+    "longitude": 8.849432
+  },
+  {
+    "uid": "osm:node/1905592970",
+    "name": "Muslim Mosque",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.960114,
+    "longitude": 8.889089
+  },
+  {
+    "uid": "osm:node/9769003734",
+    "name": "Reedemed Christian Church of God cornerstone parish army engineer",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.967418,
+    "longitude": 8.849857
+  },
+  {
+    "uid": "osm:node/9769012299",
+    "name": "Revival power mission",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.930699,
+    "longitude": 8.879079
+  },
+  {
+    "uid": "osm:node/9768910615",
+    "name": "St John's church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.931084,
+    "longitude": 8.875868
+  },
+  {
+    "uid": "osm:node/9768975340",
+    "name": "The Edifying assembly Jos",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.931206,
+    "longitude": 8.877633
+  },
+  {
+    "uid": "osm:node/1905654300",
+    "name": "The Good Shepherd Catholic chaplaincy",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.970222,
+    "longitude": 8.881035
+  },
+  {
+    "uid": "osm:node/9768989717",
+    "name": "The Gospel Faith Nation International",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.931439,
+    "longitude": 8.877211
+  },
+  {
+    "uid": "osm:node/9764087209",
+    "name": "The Redeem Christian church of God Downbase",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.955135,
+    "longitude": 8.847541
+  },
+  {
+    "uid": "osm:node/1905654293",
+    "name": "The chapel of faith",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.970728,
+    "longitude": 8.880322
+  },
+  {
+    "uid": "osm:node/9768986357",
+    "name": "Up up Jesus church",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.929836,
+    "longitude": 8.879789
+  },
+  {
+    "uid": "osm:node/6489157095",
+    "name": "Winners Chapel",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.938395,
+    "longitude": 8.862929
+  },
+  {
+    "uid": "osm:node/9764086245",
+    "name": "Zion Baptist church downbase",
+    "category": "religious_centre",
+    "city": "Jos",
+    "latitude": 9.956372,
+    "longitude": 8.849573
+  },
+  {
+    "uid": "osm:node/1880810674",
+    "name": "Kantin Kwari",
+    "category": "bus_park",
+    "city": "Kaduna",
+    "latitude": 10.520029,
+    "longitude": 7.430545
+  },
+  {
+    "uid": "osm:node/7359471294",
+    "name": "Federeal Neuro-Psychiatric Hospital, Barnawa",
+    "category": "hospital",
+    "city": "Kaduna",
+    "latitude": 10.463072,
+    "longitude": 7.429329
+  },
+  {
+    "uid": "osm:node/2862390778",
+    "name": "Kaduna Emergency Operations Center",
+    "category": "hospital",
+    "city": "Kaduna",
+    "latitude": 10.51355,
+    "longitude": 7.452553
+  },
+  {
+    "uid": "osm:node/317909388",
+    "name": "National Eye Centre Nigeria",
+    "category": "hospital",
+    "city": "Kaduna",
+    "latitude": 10.573804,
+    "longitude": 7.405322
+  },
+  {
+    "uid": "osm:node/1191103906",
+    "name": "Access Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.502385,
+    "longitude": 7.435731
+  },
+  {
+    "uid": "osm:node/553112139",
+    "name": "Adriel Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.530627,
+    "longitude": 7.426947
+  },
+  {
+    "uid": "osm:node/559427757",
+    "name": "Aso Motel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.529133,
+    "longitude": 7.43534
+  },
+  {
+    "uid": "osm:node/5836476989",
+    "name": "Bafra International Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.535679,
+    "longitude": 7.447272
+  },
+  {
+    "uid": "osm:node/553112133",
+    "name": "Command Guest House",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.529145,
+    "longitude": 7.433357
+  },
+  {
+    "uid": "osm:node/2911345759",
+    "name": "Crocodile Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.528055,
+    "longitude": 7.433728
+  },
+  {
+    "uid": "osm:node/6140177285",
+    "name": "Fina White Hotels",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.503523,
+    "longitude": 7.426488
+  },
+  {
+    "uid": "osm:node/1754870429",
+    "name": "Fina White House Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.504412,
+    "longitude": 7.43286
+  },
+  {
+    "uid": "osm:node/4912505229",
+    "name": "Gamji",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.54569,
+    "longitude": 7.447803
+  },
+  {
+    "uid": "osm:node/3331900771",
+    "name": "Gamji Golden Lodge",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.554836,
+    "longitude": 7.452817
+  },
+  {
+    "uid": "osm:node/557707068",
+    "name": "Gombe Jewel Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.558006,
+    "longitude": 7.446008
+  },
+  {
+    "uid": "osm:node/550137899",
+    "name": "Mussafir Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.502272,
+    "longitude": 7.42689
+  },
+  {
+    "uid": "osm:node/543689344",
+    "name": "NNA Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.502687,
+    "longitude": 7.430475
+  },
+  {
+    "uid": "osm:node/3373092551",
+    "name": "Quarter House Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.552934,
+    "longitude": 7.456469
+  },
+  {
+    "uid": "osm:node/4912750896",
+    "name": "Safaha",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.542506,
+    "longitude": 7.453206
+  },
+  {
+    "uid": "osm:node/544424311",
+    "name": "Sanab Luxury Inn",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.537485,
+    "longitude": 7.455982
+  },
+  {
+    "uid": "osm:node/1880778696",
+    "name": "Ziyara Hotel",
+    "category": "hotel",
+    "city": "Kaduna",
+    "latitude": 10.509532,
+    "longitude": 7.432406
+  },
+  {
+    "uid": "osm:node/4910976254",
+    "name": "Hadidi Shopping Complex",
+    "category": "mall",
+    "city": "Kaduna",
+    "latitude": 10.547173,
+    "longitude": 7.463815
+  },
+  {
+    "uid": "osm:node/5934681085",
+    "name": "Danfodio Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.527908,
+    "longitude": 7.410483
+  },
+  {
+    "uid": "osm:node/554794929",
+    "name": "Kano Road Central Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.515973,
+    "longitude": 7.429818
+  },
+  {
+    "uid": "osm:node/7359471349",
+    "name": "Living Faith Church & School",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.450744,
+    "longitude": 7.463509
+  },
+  {
+    "uid": "osm:node/1754897261",
+    "name": "Mosque (Audu Kwangila)",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.510566,
+    "longitude": 7.433116
+  },
+  {
+    "uid": "osm:node/7365831286",
+    "name": "Mountain of Fire",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.467912,
+    "longitude": 7.432292
+  },
+  {
+    "uid": "osm:node/7365831291",
+    "name": "RCCG Revelation Santuary",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.466405,
+    "longitude": 7.434796
+  },
+  {
+    "uid": "osm:node/1880883954",
+    "name": "Salamatu Kabir Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.505661,
+    "longitude": 7.424859
+  },
+  {
+    "uid": "osm:node/552969130",
+    "name": "St Johns Catholic Church",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.515904,
+    "longitude": 7.452922
+  },
+  {
+    "uid": "osm:node/462364812",
+    "name": "Sultan Bello Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.550812,
+    "longitude": 7.445513
+  },
+  {
+    "uid": "osm:node/4912656913",
+    "name": "Waff Road Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.530428,
+    "longitude": 7.440403
+  },
+  {
+    "uid": "osm:node/4912868605",
+    "name": "Yahaya Road Mosque",
+    "category": "religious_centre",
+    "city": "Kaduna",
+    "latitude": 10.541099,
+    "longitude": 7.464081
+  },
+  {
+    "uid": "osm:node/4912505214",
+    "name": "Dialogue Computer Training School",
+    "category": "university",
+    "city": "Kaduna",
+    "latitude": 10.546406,
+    "longitude": 7.439446
+  },
+  {
+    "uid": "osm:node/3085114204",
+    "name": "Ikotun Bus Station",
+    "category": "bus_park",
+    "city": "Lagos",
+    "latitude": 6.549378,
+    "longitude": 3.267998
+  },
+  {
+    "uid": "osm:node/3085114191",
+    "name": "Ikotun Terminal",
+    "category": "bus_park",
+    "city": "Lagos",
+    "latitude": 6.548011,
+    "longitude": 3.267787
+  },
+  {
+    "uid": "osm:node/4932079181",
+    "name": "Liberty Bus-Stop",
+    "category": "bus_park",
+    "city": "Lagos",
+    "latitude": 6.612953,
+    "longitude": 3.266489
+  },
+  {
+    "uid": "osm:node/4755897332",
+    "name": "Obalende Motor Park",
+    "category": "bus_park",
+    "city": "Lagos",
+    "latitude": 6.449635,
+    "longitude": 3.407376
+  },
+  {
+    "uid": "osm:node/2583682650",
+    "name": "Ogba Bus Park",
+    "category": "bus_park",
+    "city": "Lagos",
+    "latitude": 6.632501,
+    "longitude": 3.341742
+  },
+  {
+    "uid": "osm:node/4248396090",
+    "name": "Gramath Medical Center",
+    "category": "hospital",
+    "city": "Lagos",
+    "latitude": 6.686092,
+    "longitude": 3.247768
+  },
+  {
+    "uid": "osm:node/4872475575",
+    "name": "Rojafia Clinic",
+    "category": "hospital",
+    "city": "Lagos",
+    "latitude": 6.592971,
+    "longitude": 3.397454
+  },
+  {
+    "uid": "osm:node/4755897331",
+    "name": "B.B.Q. 'R' US Hotel (aka Moonways Hotel Ltd.)",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.430988,
+    "longitude": 3.420588
+  },
+  {
+    "uid": "osm:node/2991767888",
+    "name": "Benny Hotel",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.476357,
+    "longitude": 3.292109
+  },
+  {
+    "uid": "osm:node/4394496092",
+    "name": "Carliza",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.439509,
+    "longitude": 3.360126
+  },
+  {
+    "uid": "osm:node/2987186864",
+    "name": "Chelsea Suit",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.466158,
+    "longitude": 3.295058
+  },
+  {
+    "uid": "osm:node/2991754021",
+    "name": "Cosmila Hotel & Suites",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.481145,
+    "longitude": 3.303323
+  },
+  {
+    "uid": "osm:node/2987186862",
+    "name": "EUC Demordern Hotel & Suites",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.483824,
+    "longitude": 3.305117
+  },
+  {
+    "uid": "osm:node/4917613299",
+    "name": "Emota Hotel",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.515756,
+    "longitude": 3.327995
+  },
+  {
+    "uid": "osm:node/5665683282",
+    "name": "Five Star",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.544636,
+    "longitude": 3.277909
+  },
+  {
+    "uid": "osm:node/2987173862",
+    "name": "Golden Tulip",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.465363,
+    "longitude": 3.303077
+  },
+  {
+    "uid": "osm:node/4579125791",
+    "name": "Signature suites",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.426915,
+    "longitude": 3.436857
+  },
+  {
+    "uid": "osm:node/3011773362",
+    "name": "Vila Park",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.472272,
+    "longitude": 3.318181
+  },
+  {
+    "uid": "osm:node/5206471428",
+    "name": "West view hotel",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.553904,
+    "longitude": 3.325112
+  },
+  {
+    "uid": "osm:node/5206471623",
+    "name": "West view hotel",
+    "category": "hotel",
+    "city": "Lagos",
+    "latitude": 6.553926,
+    "longitude": 3.325159
+  },
+  {
+    "uid": "osm:node/5197102959",
+    "name": "Jakande Market",
+    "category": "market",
+    "city": "Lagos",
+    "latitude": 6.434932,
+    "longitude": 3.507972
+  },
+  {
+    "uid": "osm:node/3023669230",
+    "name": "Obuzu Market",
+    "category": "market",
+    "city": "Lagos",
+    "latitude": 6.462635,
+    "longitude": 3.285618
+  },
+  {
+    "uid": "osm:node/316140345",
+    "name": "75 Falolu Road",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.507962,
+    "longitude": 3.354325
+  },
+  {
+    "uid": "osm:node/4348789189",
+    "name": "Ayo Ni o",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.50253,
+    "longitude": 3.382463
+  },
+  {
+    "uid": "osm:node/4248414991",
+    "name": "C. A. C. Okeiselogo",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.685431,
+    "longitude": 3.247659
+  },
+  {
+    "uid": "osm:node/4348744892",
+    "name": "CCC HQ",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.498199,
+    "longitude": 3.38666
+  },
+  {
+    "uid": "osm:node/4350656493",
+    "name": "Jesus Fire Ministries Church",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.472143,
+    "longitude": 3.341146
+  },
+  {
+    "uid": "osm:node/4248395594",
+    "name": "Living Gospel Church",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.68651,
+    "longitude": 3.245611
+  },
+  {
+    "uid": "osm:node/4308307490",
+    "name": "Mfm HQ",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.509857,
+    "longitude": 3.387513
+  },
+  {
+    "uid": "osm:node/3045942397",
+    "name": "Osapa Kingdom Hall",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.439842,
+    "longitude": 3.512611
+  },
+  {
+    "uid": "osm:node/4348744891",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.499816,
+    "longitude": 3.38487
+  },
+  {
+    "uid": "osm:node/3137983129",
+    "name": "St Joseph Catholic Parish kirikiri",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.445916,
+    "longitude": 3.31157
+  },
+  {
+    "uid": "osm:node/2451654576",
+    "name": "Wisdom Pronaos",
+    "category": "religious_centre",
+    "city": "Lagos",
+    "latitude": 6.511921,
+    "longitude": 3.386794
+  },
+  {
+    "uid": "osm:node/4756396721",
+    "name": "AKTC Park",
+    "category": "bus_park",
+    "city": "Uyo",
+    "latitude": 5.055482,
+    "longitude": 7.884274
+  },
+  {
+    "uid": "osm:node/5656690323",
+    "name": "Fresh Spring Hotels & Towers",
+    "category": "hotel",
+    "city": "Uyo",
+    "latitude": 5.015391,
+    "longitude": 7.917011
+  },
+  {
+    "uid": "osm:node/5754058877",
+    "name": "Christ Embassy",
+    "category": "religious_centre",
+    "city": "Uyo",
+    "latitude": 5.006892,
+    "longitude": 7.935104
+  },
+  {
+    "uid": "osm:node/5754058875",
+    "name": "Full Life Christain Centre",
+    "category": "religious_centre",
+    "city": "Uyo",
+    "latitude": 5.00862,
+    "longitude": 7.931644
+  },
+  {
+    "uid": "osm:node/5754058876",
+    "name": "Insight Bible Church",
+    "category": "religious_centre",
+    "city": "Uyo",
+    "latitude": 5.009486,
+    "longitude": 7.930088
+  },
+  {
+    "uid": "osm:node/13045580553",
+    "name": "Life and peace missiom",
+    "category": "religious_centre",
+    "city": "Uyo",
+    "latitude": 4.992798,
+    "longitude": 7.956933
+  },
+  {
+    "uid": "osm:node/7024238955",
+    "name": "RCCG Zion Super Mega Parish Uyo",
+    "category": "religious_centre",
+    "city": "Uyo",
+    "latitude": 5.009906,
+    "longitude": 7.934734
+  },
+  {
+    "uid": "osm:node/12925132538",
+    "name": "Godswill Akpabio International Stadium",
+    "category": "stadium",
+    "city": "Uyo",
+    "latitude": 5.007144,
+    "longitude": 7.885569
+  },
+  {
+    "uid": "osm:way/421424865",
+    "name": "Godswill Akpabio International Stadium",
+    "category": "stadium",
+    "city": "Uyo",
+    "latitude": 5.006722,
+    "longitude": 7.884793
+  },
+  {
+    "uid": "osm:way/669841154",
+    "name": "Uyo Township Stadium",
+    "category": "stadium",
+    "city": "Uyo",
+    "latitude": 5.019009,
+    "longitude": 7.925614
+  },
+  {
+    "uid": "osm:way/669841130",
+    "name": "University of Uyo",
+    "category": "university",
+    "city": "Uyo",
+    "latitude": 5.041362,
+    "longitude": 7.925024
+  },
+  {
+    "uid": "osm:way/669841131",
+    "name": "University of Uyo",
+    "category": "university",
+    "city": "Uyo",
+    "latitude": 5.041395,
+    "longitude": 7.919645
+  },
+  {
+    "uid": "osm:way/669841132",
+    "name": "University of Uyo",
+    "category": "university",
+    "city": "Uyo",
+    "latitude": 5.037889,
+    "longitude": 7.978268
+  },
+  {
+    "uid": "osm:relation/9318350",
+    "name": "University of Uyo",
+    "category": "university",
+    "city": "Uyo",
+    "latitude": 5.037889,
+    "longitude": 7.950533
+  },
+  {
+    "uid": "osm:node/5425359221",
+    "name": "AKTC",
+    "category": "bus_park",
+    "city": "Warri",
+    "latitude": 5.548138,
+    "longitude": 5.780577
+  },
+  {
+    "uid": "osm:node/5427746036",
+    "name": "GIGM",
+    "category": "bus_park",
+    "city": "Warri",
+    "latitude": 5.548239,
+    "longitude": 5.780615
+  },
+  {
+    "uid": "osm:node/5427710121",
+    "name": "Libra Motors",
+    "category": "bus_park",
+    "city": "Warri",
+    "latitude": 5.54802,
+    "longitude": 5.780554
+  },
+  {
+    "uid": "osm:node/5428928324",
+    "name": "Multi Line",
+    "category": "bus_park",
+    "city": "Warri",
+    "latitude": 5.54282,
+    "longitude": 5.777601
+  },
+  {
+    "uid": "osm:node/5418924626",
+    "name": "Casa De Pedro Hotel",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.568312,
+    "longitude": 5.77603
+  },
+  {
+    "uid": "osm:node/5412456822",
+    "name": "Delta Palace Hotel",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.54126,
+    "longitude": 5.762403
+  },
+  {
+    "uid": "osm:node/5422453632",
+    "name": "Evon Hotel Annex",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.547992,
+    "longitude": 5.775616
+  },
+  {
+    "uid": "osm:node/5418924627",
+    "name": "Golden Tulip",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.574021,
+    "longitude": 5.801593
+  },
+  {
+    "uid": "osm:node/5420967329",
+    "name": "Hotel de Mark",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.549829,
+    "longitude": 5.781238
+  },
+  {
+    "uid": "osm:node/5428928322",
+    "name": "Julnize Paradise Home",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.539965,
+    "longitude": 5.7791
+  },
+  {
+    "uid": "osm:node/5427746122",
+    "name": "Seko Hotels",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.536947,
+    "longitude": 5.745738
+  },
+  {
+    "uid": "osm:node/5415928333",
+    "name": "TM PALACE Hotel",
+    "category": "hotel",
+    "city": "Warri",
+    "latitude": 5.54619,
+    "longitude": 5.774025
+  },
+  {
+    "uid": "osm:node/5428928325",
+    "name": "Assemblies of God Church",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.54468,
+    "longitude": 5.780903
+  },
+  {
+    "uid": "osm:node/5422459424",
+    "name": "CAGM",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.548593,
+    "longitude": 5.777276
+  },
+  {
+    "uid": "osm:node/5428871433",
+    "name": "Church of God Mission",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.54752,
+    "longitude": 5.780719
+  },
+  {
+    "uid": "osm:node/5428923128",
+    "name": "Foursquare Gospel Church",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.541659,
+    "longitude": 5.779782
+  },
+  {
+    "uid": "osm:node/5421885023",
+    "name": "God's Kingdom Society",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.519814,
+    "longitude": 5.765178
+  },
+  {
+    "uid": "osm:node/5422459427",
+    "name": "JHOM",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.552124,
+    "longitude": 5.777655
+  },
+  {
+    "uid": "osm:node/5425358821",
+    "name": "LGLC",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.555769,
+    "longitude": 5.780037
+  },
+  {
+    "uid": "osm:node/5407647722",
+    "name": "Mother of the Redeemer Catholic Church",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.546373,
+    "longitude": 5.780795
+  },
+  {
+    "uid": "osm:node/5410195422",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.554866,
+    "longitude": 5.765543
+  },
+  {
+    "uid": "osm:node/5412456823",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.539908,
+    "longitude": 5.762112
+  },
+  {
+    "uid": "osm:node/5418924638",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.561921,
+    "longitude": 5.758133
+  },
+  {
+    "uid": "osm:node/5418933423",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.562812,
+    "longitude": 5.75825
+  },
+  {
+    "uid": "osm:node/5422453628",
+    "name": "RCCG",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.55001,
+    "longitude": 5.779827
+  },
+  {
+    "uid": "osm:node/5416626635",
+    "name": "St. Anthony Catholic Church",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.54124,
+    "longitude": 5.760965
+  },
+  {
+    "uid": "osm:node/5421885025",
+    "name": "WLBC",
+    "category": "religious_centre",
+    "city": "Warri",
+    "latitude": 5.553738,
+    "longitude": 5.771682
+  },
+  {
+    "uid": "osm:node/5421895326",
+    "name": "Classical Int.  School",
+    "category": "university",
+    "city": "Warri",
+    "latitude": 5.522093,
+    "longitude": 5.761259
+  },
+  {
+    "uid": "osm:node/5428871424",
+    "name": "Mother of Redeemer Cat. Sec School",
+    "category": "university",
+    "city": "Warri",
+    "latitude": 5.548785,
+    "longitude": 5.781392
+  },
+  {
+    "uid": "osm:node/5415928321",
+    "name": "Our Lady High School",
+    "category": "university",
+    "city": "Warri",
+    "latitude": 5.546725,
+    "longitude": 5.779198
+  }
+]

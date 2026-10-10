@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 2.4,
+    "average_cost_for_two": 10.0,
+    "city": "Mc Millan",
+    "country": "USA",
+    "cuisines": "Breakfast, Burger",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 46.3718,
+    "locality": "Mc Millan",
+    "longitude": -85.7363,
+    "price_range": 1,
+    "restaurant_id": 17482142,
+    "restaurant_name": "Triangle Restaurant",
+    "uid": "zomato:17482142",
+    "votes": 17,
+    "weighted_rating": 3.618
+  }
+]

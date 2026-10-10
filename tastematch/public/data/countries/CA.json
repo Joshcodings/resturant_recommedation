@@ -1,0 +1,50 @@
+{
+  "cities": {
+    "Chatham-Kent": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "chatham-kent-1.json"
+      ]
+    },
+    "Consort": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "consort-1.json"
+      ]
+    },
+    "Vineland Station": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "vineland-station-1.json"
+      ]
+    },
+    "Yorkton": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "yorkton-1.json"
+      ]
+    }
+  },
+  "code": "CA",
+  "country": "Canada"
+}

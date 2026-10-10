@@ -1,0 +1,49 @@
+[
+  {
+    "addr": {
+      "city": "Unguwar Shanu",
+      "street": "Ali Akilu Road"
+    },
+    "address": "Ali Akilu Road",
+    "aggregate_rating": null,
+    "amenities": {
+      "capacity": "100",
+      "outdoor_seating": true,
+      "smoking": false,
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Unguwar Shanu",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Pizza, Chinese, Cafe, Other, Fast Food, International, Seafood",
+    "cuisines_raw": "pizza;chinese;coffee_shop;kebab;chicken;international;seafood",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 10.5445851,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 7.4388582,
+    "opening_hours": "24/7",
+    "osm_timestamp": "2024-01-31T19:28:36Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Midway Cafe",
+    "source_id": "way/1245038563",
+    "state": "Unknown",
+    "uid": "osm:way/1245038563",
+    "unmapped_cuisines": [
+      "kebab"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

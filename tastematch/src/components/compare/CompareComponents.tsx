@@ -1,7 +1,12 @@
+import { useState, useEffect, useMemo } from 'react';
 import { X } from 'lucide-react';
 import { useShortlist } from '@/context/ShortlistContext';
 import { useCurrency } from '@/context/CurrencyContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { PRICE_TIERS } from '@/lib/currency';
+import { isOpenNow } from '@/lib/openingHours';
+import { fetchLandmarks, findNearestLandmark } from '@/lib/landmarks';
+import type { Landmark } from '@/types/restaurant';
 
 interface Props {
   onCompare: () => void;
@@ -9,6 +14,7 @@ interface Props {
 
 export function CompareTray({ onCompare }: Props) {
   const { compareTray, removeFromCompare } = useShortlist();
+  const { t } = useLanguage();
   if (compareTray.length === 0) return null;
 
   return (
@@ -38,12 +44,13 @@ export function CompareTray({ onCompare }: Props) {
           flexShrink: 0,
         }}
       >
-        Compare ({compareTray.length}/3)
+        {t('btn_compare')} ({compareTray.length}/3)
       </span>
+
       <div style={{ display: 'flex', gap: 8, flex: 1, flexWrap: 'wrap' }}>
         {compareTray.map(r => (
           <span
-            key={r.restaurant_id}
+            key={r.uid}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -59,7 +66,7 @@ export function CompareTray({ onCompare }: Props) {
           >
             {r.restaurant_name}
             <button
-              onClick={() => removeFromCompare(r.restaurant_id)}
+              onClick={() => removeFromCompare(r.uid)}
               aria-label={`Remove ${r.restaurant_name} from compare`}
               style={{
                 background: 'none',
@@ -76,6 +83,7 @@ export function CompareTray({ onCompare }: Props) {
         ))}
       </div>
       <button
+        data-compare-tray-open="true"
         onClick={onCompare}
         disabled={compareTray.length < 2}
         style={{
@@ -93,8 +101,9 @@ export function CompareTray({ onCompare }: Props) {
           flexShrink: 0,
         }}
       >
-        Compare
+        {t('btn_compare')}
       </button>
+
     </div>
   );
 }
@@ -109,6 +118,32 @@ interface ModalProps {
 export function CompareModal({ open, onClose }: ModalProps) {
   const { compareTray, clearCompare } = useShortlist();
   const { convert, formatDual } = useCurrency();
+  const { t } = useLanguage();
+  const [landmarks, setLandmarks] = useState<Landmark[]>([]);
+
+  useEffect(() => {
+    fetchLandmarks().then(lms => setLandmarks(lms));
+  }, []);
+
+  // Nearest Landmark and distance (if landmark data exists)
+  const nearestLandmarkMap = useMemo(() => {
+    const map: Record<string, { landmarkName: string; distanceKm: number } | null> = {};
+    for (const r of compareTray) {
+      if ((r as any).distanceFromLandmark) {
+        map[r.uid] = (r as any).distanceFromLandmark;
+      } else if (landmarks.length > 0 && r.latitude && r.longitude) {
+        const match = findNearestLandmark(r, landmarks, 35.0);
+        if (match) {
+          map[r.uid] = { landmarkName: match.landmark.name, distanceKm: match.distanceKm };
+        } else {
+          map[r.uid] = null;
+        }
+      } else {
+        map[r.uid] = null;
+      }
+    }
+    return map;
+  }, [compareTray, landmarks]);
 
   if (!open || compareTray.length < 2) return null;
 
@@ -131,6 +166,32 @@ export function CompareModal({ open, onClose }: ModalProps) {
   const votes = compareTray.map(r => r.hasRating ? r.votes! : -1);
   const maxVotes = Math.max(...votes);
   const bestVotesIdx = maxVotes > -1 ? votes.indexOf(maxVotes) : -1;
+
+  // Feature 11: Nigerian-specific attribute checks
+  // Open Now status
+  const hasOpenHoursData = compareTray.some(r => !!r.opening_hours);
+
+  // Payment methods accepted (Cash, Cards/POS, Mobile payment)
+  const hasPaymentData = compareTray.some(
+    r =>
+      r.payment_methods &&
+      (r.payment_methods.cash !== undefined ||
+        r.payment_methods.cards !== undefined ||
+        r.payment_methods.mobile_payment !== undefined)
+  );
+
+  // Backup power / Generator
+  const hasPowerData = compareTray.some(
+    r => r.power?.backup_generator !== undefined && r.power?.backup_generator !== null
+  );
+
+  // Air Conditioning (AC)
+  const hasAcData = compareTray.some(
+    r => r.air_conditioning !== undefined && r.air_conditioning !== null
+  );
+
+  const hasLandmarkData = compareTray.some(r => nearestLandmarkMap[r.uid] !== null);
+
 
   return (
     <div
@@ -184,8 +245,9 @@ export function CompareModal({ open, onClose }: ModalProps) {
               color: 'var(--text)',
             }}
           >
-            Compare
+            {t('compare_title')}
           </h2>
+
           <div style={{ display: 'flex', gap: 8 }}>
             <button
               onClick={() => {
@@ -251,7 +313,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                 </th>
                 {compareTray.map(r => (
                   <th
-                    key={r.restaurant_id}
+                    key={r.uid}
                     style={{
                       padding: '8px 12px',
                       textAlign: 'left',
@@ -272,7 +334,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   City
                 </td>
                 {compareTray.map(r => (
-                  <td key={r.restaurant_id} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                  <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
                     {r.city}, {r.country}
                   </td>
                 ))}
@@ -284,7 +346,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   Cuisines
                 </td>
                 {compareTray.map(r => (
-                  <td key={r.restaurant_id} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                  <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
                     {r.cuisines}
                   </td>
                 ))}
@@ -299,7 +361,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   const isBest = idx === bestRatingIdx;
                   return (
                     <td
-                      key={r.restaurant_id}
+                      key={r.uid}
                       style={{
                         padding: '10px 12px',
                         color: 'var(--text)',
@@ -307,7 +369,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                         fontWeight: isBest ? 600 : 400,
                       }}
                     >
-                      ⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}
+                      ⭐ {r.hasRating && r.aggregate_rating !== null ? r.aggregate_rating.toFixed(1) : 'Unrated'}
                     </td>
                   );
                 })}
@@ -322,7 +384,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   const isBest = idx === bestVotesIdx;
                   return (
                     <td
-                      key={r.restaurant_id}
+                      key={r.uid}
                       style={{
                         padding: '10px 12px',
                         color: 'var(--text)',
@@ -330,7 +392,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                         fontWeight: isBest ? 600 : 400,
                       }}
                     >
-                      {r.hasRating ? r.votes!.toLocaleString() : 'n/a'}
+                      {r.hasRating && r.votes !== null ? r.votes.toLocaleString() : 'n/a'}
                     </td>
                   );
                 })}
@@ -346,7 +408,7 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   const isBest = idx === bestCostIdx;
                   return (
                     <td
-                      key={r.restaurant_id}
+                      key={r.uid}
                       style={{
                         padding: '10px 12px',
                         color: 'var(--text)',
@@ -385,10 +447,10 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   Price range
                 </td>
                 {compareTray.map(r => {
-                  const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
+                  const tier = r.price_range ? PRICE_TIERS[r.price_range as 1 | 2 | 3 | 4] : null;
                   return (
-                    <td key={r.restaurant_id} style={{ padding: '10px 12px', color: 'var(--text)' }}>
-                      {tier.name} {tier.dots}
+                    <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                      {tier ? `${tier.name} ${tier.dots}` : 'n/a'}
                     </td>
                   );
                 })}
@@ -400,8 +462,8 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   Table booking
                 </td>
                 {compareTray.map(r => (
-                  <td key={r.restaurant_id} style={{ padding: '10px 12px', color: 'var(--text)' }}>
-                    {r.has_table_booking === 1 ? '✓ Yes' : '– No'}
+                  <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                    {r.has_table_booking === 1 ? '✓ Yes' : r.has_table_booking === 0 ? '– No' : 'n/a'}
                   </td>
                 ))}
               </tr>
@@ -412,11 +474,127 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   Delivery
                 </td>
                 {compareTray.map(r => (
-                  <td key={r.restaurant_id} style={{ padding: '10px 12px', color: 'var(--text)' }}>
-                    {r.has_online_delivery === 1 ? '✓ Yes' : '– No'}
+                  <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                    {r.has_online_delivery === 1 ? '✓ Yes' : r.has_online_delivery === 0 ? '– No' : 'n/a'}
                   </td>
                 ))}
               </tr>
+
+              {/* Feature 11: Open now status */}
+              {hasOpenHoursData && (
+                <tr style={{ borderTop: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: 13 }}>
+                    {t('attr_open_now')}
+                  </td>
+                  {compareTray.map(r => {
+                    const status = r.opening_hours ? isOpenNow(r.opening_hours) : null;
+                    let display = '—';
+                    if (status === true) display = '🟢 Open Now';
+                    else if (status === false) display = '🔴 Closed';
+                    else if (r.opening_hours) display = 'Unlisted';
+                    return (
+                      <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                        {display}
+                      </td>
+                    );
+                  })}
+                </tr>
+              )}
+
+              {/* Feature 11: Payment methods accepted */}
+              {hasPaymentData && (
+                <tr style={{ borderTop: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: 13 }}>
+                    {t('attr_payment_methods')}
+                  </td>
+                  {compareTray.map(r => {
+                    let display = '—';
+                    if (r.payment_methods) {
+                      const p = r.payment_methods;
+                      const methods: string[] = [];
+                      if (p.cash) methods.push('Cash');
+                      if (p.cards) methods.push('Cards / POS');
+                      if (p.mobile_payment) methods.push('Transfer');
+                      display = methods.length > 0 ? methods.join(', ') : 'None listed';
+                    }
+                    return (
+                      <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                        {display}
+                      </td>
+                    );
+                  })}
+                </tr>
+              )}
+
+              {/* Feature 11: Backup power / Generator */}
+              {hasPowerData && (
+                <tr style={{ borderTop: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: 13 }}>
+                    {t('attr_backup_power')}
+                  </td>
+                  {compareTray.map(r => {
+                    const gen = r.power?.backup_generator;
+                    let display = '—';
+                    if (gen === true || gen === 'yes' || gen === 'generator') {
+                      display = '⚡ Yes (Generator)';
+                    } else if (gen === false || gen === 'no') {
+                      display = '– No';
+                    } else if (gen) {
+                      display = String(gen);
+                    }
+                    return (
+                      <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                        {display}
+                      </td>
+                    );
+                  })}
+                </tr>
+              )}
+
+              {/* Feature 11: Air conditioning (AC) */}
+              {hasAcData && (
+                <tr style={{ borderTop: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: 13 }}>
+                    {t('attr_air_conditioning')}
+                  </td>
+                  {compareTray.map(r => {
+                    let display = '—';
+                    if (r.air_conditioning === true) display = '❄️ Yes (AC)';
+                    else if (r.air_conditioning === false) display = '– No';
+                    return (
+                      <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                        {display}
+                      </td>
+                    );
+                  })}
+                </tr>
+              )}
+
+              {/* Feature 11: Nearest landmark */}
+              {hasLandmarkData && (
+                <tr style={{ borderTop: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 12px', color: 'var(--text-muted)', fontSize: 13 }}>
+                    {t('attr_nearest_landmark')}
+                  </td>
+                  {compareTray.map(r => {
+                    const lm = nearestLandmarkMap[r.uid];
+                    let display = '—';
+                    if (lm) {
+                      const dStr =
+                        lm.distanceKm < 1
+                          ? `${Math.round(lm.distanceKm * 1000)}m`
+                          : `${lm.distanceKm.toFixed(1)} km`;
+                      display = `📍 ${dStr} from ${lm.landmarkName}`;
+                    }
+                    return (
+                      <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
+                        {display}
+                      </td>
+                    );
+                  })}
+                </tr>
+              )}
+
             </tbody>
           </table>
         </div>

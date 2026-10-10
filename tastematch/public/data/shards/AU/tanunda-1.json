@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.4,
+    "average_cost_for_two": 30.0,
+    "city": "Tanunda",
+    "country": "Australia",
+    "cuisines": "Modern Australian, Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -34.519619,
+    "locality": "Tanunda",
+    "longitude": 138.966064,
+    "price_range": 3,
+    "restaurant_id": 16608059,
+    "restaurant_name": "1918 Bistro & Grill",
+    "uid": "zomato:16608059",
+    "votes": 339,
+    "weighted_rating": 4.305
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.0,
+    "average_cost_for_two": 25.0,
+    "city": "Consort",
+    "country": "Canada",
+    "cuisines": "Chinese, Canadian",
+    "currency": "CAD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 52.0082889,
+    "locality": "Consort",
+    "longitude": -110.7746994,
+    "price_range": 2,
+    "restaurant_id": 16643459,
+    "restaurant_name": "Consort Restaurant",
+    "uid": "zomato:16643459",
+    "votes": 6,
+    "weighted_rating": 3.513
+  }
+]

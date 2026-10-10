@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.1,
+    "average_cost_for_two": 20.0,
+    "city": "Trentham East",
+    "country": "Australia",
+    "cuisines": "Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.396942,
+    "locality": "Trentham East",
+    "longitude": 144.41272,
+    "price_range": 2,
+    "restaurant_id": 16605194,
+    "restaurant_name": "Pig and Whistle",
+    "uid": "zomato:16605194",
+    "votes": 87,
+    "weighted_rating": 3.939
+  }
+]

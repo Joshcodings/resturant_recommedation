@@ -41,8 +41,8 @@ export function formatCost(cost: number | null, currency: string): string {
 /**
  * Format vote count with commas.
  */
-export function formatVotes(votes: number | null): string {
-  if (votes === null) return '0';
+export function formatVotes(votes: number | null | undefined): string {
+  if (votes === null || votes === undefined) return 'n/a';
   return votes.toLocaleString();
 }
 

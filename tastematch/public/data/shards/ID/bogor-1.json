@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.0,
+    "average_cost_for_two": 250000.0,
+    "city": "Bogor",
+    "country": "Indonesia",
+    "cuisines": "Peranakan, Indonesian",
+    "currency": "IDR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -6.576578026,
+    "locality": "Bogor Utara",
+    "longitude": 106.8078499,
+    "price_range": 3,
+    "restaurant_id": 7423482,
+    "restaurant_name": "Lemongrass",
+    "uid": "zomato:7423482",
+    "votes": 1159,
+    "weighted_rating": 4.012
+  },
+  {
+    "aggregate_rating": 3.7,
+    "average_cost_for_two": 70000.0,
+    "city": "Bogor",
+    "country": "Indonesia",
+    "cuisines": "Cafe, Desserts, Beverages",
+    "currency": "IDR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -6.606916768,
+    "locality": "Bogor Timur",
+    "longitude": 106.8103014,
+    "price_range": 2,
+    "restaurant_id": 7423620,
+    "restaurant_name": "Momo Milk",
+    "uid": "zomato:7423620",
+    "votes": 783,
+    "weighted_rating": 3.736
+  }
+]

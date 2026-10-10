@@ -123,7 +123,7 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
           ) : (
             shortlist.map(r => (
               <div
-                key={r.restaurant_id}
+                key={r.uid}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -192,7 +192,7 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
                 <button
                   onClick={e => {
                     e.stopPropagation();
-                    removeFromShortlist(r.restaurant_id);
+                    removeFromShortlist(r.uid);
                   }}
                   aria-label={`Remove ${r.restaurant_name} from shortlist`}
                   title="Remove from shortlist"

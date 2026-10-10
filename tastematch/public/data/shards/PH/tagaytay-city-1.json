@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.5,
+    "average_cost_for_two": 1200.0,
+    "city": "Tagaytay City",
+    "country": "Philippines",
+    "cuisines": "Filipino",
+    "currency": "PHP",
+    "has_online_delivery": 0,
+    "has_table_booking": 1,
+    "latitude": 14.101834,
+    "locality": "Tagaytay City",
+    "longitude": 120.951589,
+    "price_range": 3,
+    "restaurant_id": 6318213,
+    "restaurant_name": "Balay Dako",
+    "uid": "zomato:6318213",
+    "votes": 211,
+    "weighted_rating": 4.494
+  }
+]

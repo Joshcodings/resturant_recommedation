@@ -1,0 +1,50 @@
+[
+  {
+    "addr": {
+      "city": "Lagaos",
+      "housenumber": "4b",
+      "place": "Victoria Island",
+      "street": "Ologun Agbaje Street"
+    },
+    "address": "Ologun Agbaje Street",
+    "aggregate_rating": null,
+    "amenities": {
+      "delivery": true,
+      "operator": "Road Chef",
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Lagaos",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "American",
+    "cuisines_raw": "american",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.42483,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.416748,
+    "opening_hours": "08:00-22:00",
+    "osm_timestamp": "2019-05-12T09:20:29Z",
+    "osm_version": 1,
+    "payment_methods": {
+      "notes": true
+    },
+    "phone": "08180390112",
+    "place_type": "fast_food",
+    "price_range": null,
+    "restaurant_name": "Road Chef",
+    "source_id": "way/689435680",
+    "state": "Unknown",
+    "uid": "osm:way/689435680",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "http://www.roadchefdrivethru.com",
+    "weighted_rating": null
+  }
+]

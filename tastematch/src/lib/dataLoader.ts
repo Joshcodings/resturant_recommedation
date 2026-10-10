@@ -2,11 +2,31 @@ import type { Restaurant, RestaurantParsed } from '@/types/restaurant';
 
 let _data: RestaurantParsed[] | null = null;
 
-/** Parse the raw JSON and add `cuisineList` and `hasCoords`. */
-function parseRestaurants(raw: Restaurant[]): RestaurantParsed[] {
+export function deriveUid(r: Partial<Restaurant> & { source_id?: string | null; data_source?: string | null }): string {
+  if (r.uid) return r.uid;
+  if (r.source_id) {
+    const prefix = r.data_source === 'OpenStreetMap' || !r.data_source ? 'osm' : r.data_source.toLowerCase();
+    return `${prefix}:${r.source_id}`;
+  }
+  if (typeof r.restaurant_id === 'number') {
+    if (r.restaurant_id >= 10_000_000_000_000) {
+      const rem = r.restaurant_id - 10_000_000_000_000;
+      const typeCode = rem % 10;
+      const osmId = Math.floor(rem / 10);
+      const typeStr = typeCode === 1 ? 'node' : typeCode === 2 ? 'way' : 'relation';
+      return `osm:${typeStr}/${osmId}`;
+    }
+    return `zomato:${r.restaurant_id}`;
+  }
+  return `unknown:${Math.random().toString(36).slice(2, 9)}`;
+}
+
+/** Parse the raw JSON and add `cuisineList`, `hasCoords`, and derive `uid`. */
+export function parseRestaurants(raw: Restaurant[]): RestaurantParsed[] {
   return raw.map(r => ({
     ...r,
-    cuisineList: r.cuisines
+    uid: deriveUid(r),
+    cuisineList: (r.cuisines || '')
       .split(',')
       .map(c => c.trim())
       .filter(Boolean),
@@ -83,3 +103,134 @@ export function getCityCuisines(data: RestaurantParsed[], city: string): string[
 export function getCityCount(data: RestaurantParsed[], city: string): number {
   return data.filter(r => r.city === city).length;
 }
+
+/**
+ * Dynamically compute the largest city by place count in a country.
+ * Never hard-coded (Rule 3).
+ */
+export function computeLargestCity(data: RestaurantParsed[], country: string): string {
+  const cityCounts: Record<string, number> = {};
+  for (const r of data) {
+    if (r.country === country) {
+      cityCounts[r.city] = (cityCounts[r.city] || 0) + 1;
+    }
+  }
+  let maxCount = -1;
+  let largest = '';
+  for (const [city, count] of Object.entries(cityCounts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      largest = city;
+    }
+  }
+  return largest;
+}
+
+// ─── Sharded Architecture Dynamic Loader ─────────────────────────────────────
+
+export interface CountryMetadata {
+  code: string;
+  name: string;
+  status: string;
+  places: number;
+  cities: number;
+  retrieved_at: string;
+  sources: string[];
+  licence: string;
+  attribution: string;
+  data_base_url: string;
+}
+
+export interface CityIndexItem {
+  count: number;
+  hasPrices: boolean;
+  hasRatings: boolean;
+  hasBooking: boolean;
+  hasDelivery: boolean;
+  hasHours: boolean;
+  shards: string[];
+}
+
+export interface CountryIndexData {
+  country: string;
+  code: string;
+  cities: Record<string, CityIndexItem>;
+}
+
+let _countriesCache: CountryMetadata[] | null = null;
+const _countryIndexCache = new Map<string, CountryIndexData>();
+// LRU Cache: keep last 5 cities loaded in memory
+const _cityCache = new Map<string, RestaurantParsed[]>();
+const MAX_CACHED_CITIES = 5;
+
+async function fetchWithRetry<T>(url: string, retries = 2, delayMs = 300): Promise<T> {
+  let attempt = 0;
+  while (attempt <= retries) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      return await res.json();
+    } catch (err) {
+      attempt++;
+      if (attempt > retries) throw err;
+      await new Promise(resolve => setTimeout(resolve, delayMs * attempt));
+    }
+  }
+  throw new Error(`Failed to fetch ${url} after ${retries} retries`);
+}
+
+/** Load countries catalog (countries.json) */
+export async function loadCountries(): Promise<CountryMetadata[]> {
+  if (_countriesCache) return _countriesCache;
+  const baseUrl = import.meta.env.BASE_URL;
+  _countriesCache = await fetchWithRetry<CountryMetadata[]>(`${baseUrl}data/countries.json`);
+  return _countriesCache;
+}
+
+/** Load city index with capabilities for a specific country (e.g. countries/NG.json) */
+export async function loadCountryIndex(countryCode: string): Promise<CountryIndexData> {
+  const upper = countryCode.toUpperCase();
+  if (_countryIndexCache.has(upper)) return _countryIndexCache.get(upper)!;
+
+  const baseUrl = import.meta.env.BASE_URL;
+  const index = await fetchWithRetry<CountryIndexData>(`${baseUrl}data/countries/${upper}.json`);
+  _countryIndexCache.set(upper, index);
+  return index;
+}
+
+/** Load shards for a specific city, managing LRU cache (last 5 cities) */
+export async function loadCityShards(
+  countryCode: string,
+  city: string,
+  shardFiles: string[],
+): Promise<RestaurantParsed[]> {
+  const cacheKey = `${countryCode.toUpperCase()}:${city}`;
+  if (_cityCache.has(cacheKey)) {
+    // Refresh LRU order: delete and re-insert
+    const existing = _cityCache.get(cacheKey)!;
+    _cityCache.delete(cacheKey);
+    _cityCache.set(cacheKey, existing);
+    return existing;
+  }
+
+  const baseUrl = import.meta.env.BASE_URL;
+  const rawList: Restaurant[] = [];
+
+  for (const filename of shardFiles) {
+    const shardUrl = `${baseUrl}data/shards/${countryCode.toUpperCase()}/${filename}`;
+    const chunk = await fetchWithRetry<Restaurant[]>(shardUrl);
+    rawList.push(...chunk);
+  }
+
+  const parsed = parseRestaurants(rawList);
+
+  // Evict oldest if cache exceeds limit
+  if (_cityCache.size >= MAX_CACHED_CITIES) {
+    const oldestKey = _cityCache.keys().next().value;
+    if (oldestKey) _cityCache.delete(oldestKey);
+  }
+
+  _cityCache.set(cacheKey, parsed);
+  return parsed;
+}
+

@@ -1,4 +1,4 @@
-import { Heart, Utensils, Bike, Sparkles, GitCompare } from 'lucide-react';
+import { Heart, Utensils, Bike, Sparkles, GitCompare, Share2 } from 'lucide-react';
 import { getCuisineEmoji } from '@/config/emojis';
 import { formatVotes, isFewVotes } from '@/lib/formatters';
 import { useShortlist } from '@/context/ShortlistContext';
@@ -24,7 +24,9 @@ interface Props {
   onHoverEnd: () => void;
   onOpen: () => void;
   onSimilar: () => void;
+  onFoodRun?: () => void;
   delay?: number;     // stagger delay in ms
+  distanceFromLandmark?: { landmarkName: string; distanceKm: number };
 }
 
 export default function RestaurantCard({
@@ -35,7 +37,9 @@ export default function RestaurantCard({
   onHoverEnd,
   onOpen,
   onSimilar,
+  onFoodRun,
   delay = 0,
+  distanceFromLandmark,
 }: Props) {
   const {
     addToShortlist,
@@ -47,8 +51,8 @@ export default function RestaurantCard({
   } = useShortlist();
   const { formatDual } = useCurrency();
 
-  const saved = isInShortlist(r.restaurant_id);
-  const compared = isInCompare(r.restaurant_id);
+  const saved = isInShortlist(r.uid);
+  const compared = isInCompare(r.uid);
 
   const emoji = getCuisineEmoji(r.cuisineList);
   const chips = r.cuisineList.slice(0, 3);
@@ -57,10 +61,10 @@ export default function RestaurantCard({
 
   const borderColor = isHovered || isActive ? 'var(--text-muted)' : 'var(--border)';
 
-  const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
+  const tier = r.hasPrice && r.price_range ? PRICE_TIERS[r.price_range as 1 | 2 | 3 | 4] : null;
   const costInfo = formatDual(r.average_cost_for_two, r.currency);
 
-  const tierTooltip = r.hasPrice ? `${tier.name}: ${costInfo.display} for two in ${r.country}${
+  const tierTooltip = tier ? `${tier.name}: ${costInfo.display} for two in ${r.country}${
     costInfo.listed ? ` (${costInfo.listed})` : ''
   }` : 'Price unavailable';
 
@@ -114,7 +118,25 @@ export default function RestaurantCard({
           {emoji}
         </div>
         <div style={{ flex: 1 }} />
-        {r.data_source === 'OpenStreetMap' && (
+        {(r.isLocalCommunity || r.uid?.startsWith('local:')) && (
+          <span
+            style={{
+              padding: '2px 8px',
+              borderRadius: 4,
+              fontSize: 10,
+              fontWeight: 700,
+              background: 'rgba(16, 185, 129, 0.15)',
+              border: '1px solid #10b981',
+              color: '#10b981',
+              fontFamily: 'Inter, sans-serif',
+              marginRight: 8,
+            }}
+            title="Locally added by you — stored in browser"
+          >
+            Added by you (local)
+          </span>
+        )}
+        {r.data_source === 'OpenStreetMap' && !r.isLocalCommunity && !r.uid?.startsWith('local:') && (
           <span
             style={{
               padding: '2px 6px',
@@ -148,7 +170,7 @@ export default function RestaurantCard({
           title={saved ? 'Remove from shortlist' : 'Save to shortlist'}
           onClick={e => {
             e.stopPropagation();
-            saved ? removeFromShortlist(r.restaurant_id) : addToShortlist(r);
+            saved ? removeFromShortlist(r.uid) : addToShortlist(r);
           }}
           style={{
             width: 32,
@@ -170,18 +192,38 @@ export default function RestaurantCard({
 
       {/* Name + locality */}
       <div>
-        <h3
-          style={{
-            margin: 0,
-            fontFamily: "'Space Grotesk', system-ui, sans-serif",
-            fontSize: 20,
-            fontWeight: 600,
-            lineHeight: '28px',
-            color: 'var(--text)',
-          }}
-        >
-          {r.restaurant_name}
-        </h3>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <h3
+            style={{
+              margin: 0,
+              fontFamily: "'Space Grotesk', system-ui, sans-serif",
+              fontSize: 20,
+              fontWeight: 600,
+              lineHeight: '28px',
+              color: 'var(--text)',
+            }}
+          >
+            {r.restaurant_name}
+          </h3>
+          {r.matchReason && (
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
+                padding: '2px 8px',
+                borderRadius: 999,
+                background: 'rgba(200, 240, 60, 0.15)',
+                color: 'var(--accent-deep)',
+                fontSize: 11,
+                fontWeight: 600,
+                border: '1px solid var(--accent)',
+              }}
+            >
+              {r.matchReason.startsWith('cuisine tag') ? '🎯' : '🔍'} {r.matchReason}
+            </span>
+          )}
+        </div>
         <p
           style={{
             margin: '2px 0 0',
@@ -192,6 +234,26 @@ export default function RestaurantCard({
         >
           {r.locality || r.city} {r.locality ? `· ${r.city}` : ''}
         </p>
+        {distanceFromLandmark && (
+          <div style={{ marginTop: 4 }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
+                padding: '2px 8px',
+                borderRadius: 999,
+                background: 'rgba(59, 130, 246, 0.1)',
+                color: 'rgb(37, 99, 235)',
+                fontSize: 12,
+                fontWeight: 500,
+                border: '1px solid rgba(59, 130, 246, 0.3)',
+              }}
+            >
+              📍 {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Cuisine chips */}
@@ -305,7 +367,7 @@ export default function RestaurantCard({
             }}
             title={costInfo.isConverted ? `Converted at live indicative exchange rate` : undefined}
           >
-            {costInfo.display} for two
+            {costInfo.display === 'n/a' ? 'Cost unlisted' : `${costInfo.display} for two`}
           </div>
           {costInfo.listed ? (
             <div
@@ -318,7 +380,7 @@ export default function RestaurantCard({
             >
               {costInfo.listed}
             </div>
-          ) : (
+          ) : costInfo.display !== 'n/a' ? (
             <div
               style={{
                 fontSize: 11,
@@ -329,30 +391,32 @@ export default function RestaurantCard({
             >
               listed cost
             </div>
-          )}
+          ) : null}
         </div>
       </div>
 
       {/* Price Tier Chip (Requirement 1 & 7) + Service badges */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-        <span
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '3px 9px',
-            borderRadius: 999,
-            background: 'var(--surface-2)',
-            border: '1px solid var(--border)',
-            fontSize: 12,
-            fontFamily: 'Inter, system-ui, sans-serif',
-            color: 'var(--text)',
-            fontWeight: 500,
-          }}
-          title={tierTooltip}
-          aria-label={tierTooltip}
-        >
-          {tier.name} {tier.dots}
-        </span>
+        {tier && (
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '3px 9px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 12,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text)',
+              fontWeight: 500,
+            }}
+            title={tierTooltip}
+            aria-label={tierTooltip}
+          >
+            {tier.name} {tier.dots}
+          </span>
+        )}
 
         {/* Distance Badge if available */}
         {r.distanceKm !== undefined && (
@@ -391,6 +455,118 @@ export default function RestaurantCard({
             style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}
           >
             <Bike size={14} strokeWidth={1.5} />
+          </span>
+        )}
+
+        {/* Real payment method badges from payment:* tags only (Rule: no tag = show nothing, not "cash only") */}
+        {r.payment_methods?.cash && (
+          <span
+            title="Accepts cash"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            💵 Cash
+          </span>
+        )}
+        {(r.payment_methods?.cards || r.payment_methods?.debit_cards || r.payment_methods?.credit_cards) && (
+          <span
+            title="Accepts cards"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            💳 Cards
+          </span>
+        )}
+        {(r.payment_methods?.mobile_payment || r.payment_methods?.bank_transfer || r.payment_methods?.pos) && (
+          <span
+            title="Accepts mobile payment / bank transfer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            📱 Mobile
+          </span>
+        )}
+
+        {/* Power & Breeze badges (F5: Real tags only, no tag = show nothing) */}
+        {r.amenities?.air_conditioning && (
+          <span
+            title="Air conditioning"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            ❄️ AC
+          </span>
+        )}
+        {r.amenities?.outdoor_seating && (
+          <span
+            title="Outdoor seating (breeze when hot/no power)"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            🌿 Outdoor Breeze
+          </span>
+        )}
+        {(r.amenities?.generator || r.amenities?.backup_generator || r.amenities?.['generator:source'] || (r as any).generator) && (
+          <span
+            title="Backup generator tagged"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              padding: '2px 8px',
+              borderRadius: 999,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              fontSize: 11,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              color: 'var(--text-muted)',
+            }}
+          >
+            ⚡ Backup Generator
           </span>
         )}
       </div>
@@ -456,8 +632,10 @@ export default function RestaurantCard({
           Similar
         </button>
         <button
-          onClick={() => (compared ? removeFromCompare(r.restaurant_id) : addToCompare(r))}
+          data-compare-btn="true"
+          onClick={() => (compared ? removeFromCompare(r.uid) : addToCompare(r))}
           aria-pressed={compared}
+
           style={{
             padding: '6px 12px',
             background: compared ? 'var(--surface-2)' : 'transparent',
@@ -475,7 +653,53 @@ export default function RestaurantCard({
           <GitCompare size={14} strokeWidth={1.5} />
           {compared ? 'Remove' : 'Compare'}
         </button>
+        {onFoodRun && (
+          <button
+            onClick={onFoodRun}
+            title="Organise a WhatsApp food run"
+            style={{
+              padding: '6px 12px',
+              background: 'transparent',
+              border: 'none',
+              color: 'var(--text-muted)',
+              fontSize: 13,
+              fontFamily: 'Inter, sans-serif',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              borderRadius: 6,
+            }}
+          >
+            <Share2 size={14} strokeWidth={1.5} />
+            Food Run
+          </button>
+        )}
+        {r.data_source === 'OpenStreetMap' && (!r.cuisines || !r.opening_hours || !r.phone) && (
+          <a
+            href={`https://www.openstreetmap.org/edit?${r.source_id ? r.source_id.replace('/', '=') : 'node'}`}
+            target="_blank"
+            rel="noreferrer"
+            onClick={e => e.stopPropagation()}
+            title="Add missing info on OpenStreetMap"
+            style={{
+              padding: '6px 10px',
+              borderRadius: 6,
+              background: 'transparent',
+              color: 'var(--accent-deep)',
+              fontSize: 12,
+              fontFamily: 'Inter, sans-serif',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+            }}
+          >
+            ✏️ Add info on OSM
+          </a>
+        )}
       </div>
     </article>
+
   );
 }

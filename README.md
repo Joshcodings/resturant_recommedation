@@ -1,94 +1,66 @@
-# Restaurant Recommendation and  Intelligence Platform
+# TasteMatch — Worldwide Restaurant Recommendation & Intelligence Platform
 
-> An explainable restaurant recommendation and restaurant intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries).
+> An explainable, worldwide restaurant recommendation and intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries) and OpenStreetMap (1,263 verified Nigerian food venues across Lagos, Abuja, Benin City, Jos, Enugu, Kano, and beyond).
+
+---
+
+## 🌟 Overview & Architectures
 
 This repository contains two complete implementations:
-1. **Python Streamlit Application (`app.py`)**: Designed for quick data science exploration and 1-click deployment on **Streamlit Community Cloud**.
-2. **TasteMatch Web Application (`tastematch/`)**: Full-featured React + TypeScript + Tailwind static web platform with offline ML interpretability, Leaflet maps, multi-currency conversion, and mobile-first responsiveness.
+1. **TasteMatch Web Application (`tastematch/`)**: Full-featured React + TypeScript + Tailwind static web platform with offline ML interpretability, OpenStreetMap maps, multi-currency conversion, local Nigerian features (dish search, payment tags, meal clock, generator/AC badges, food run planner, Owambe crawl planner, community additions, state capital switcher, compare mode, multilingual Pidgin/Yoruba/Igbo/Hausa drafts), and mobile-first responsiveness.
+2. **Python Streamlit Application (`app.py`)**: Data science exploration dashboard deployable to **Streamlit Community Cloud**.
 
 ---
 
-## 1-Click Deployment to Streamlit Community Cloud
+## 📊 Dataset & Verification Status
 
-The Streamlit app is fully configured and ready to deploy for free on [Streamlit Community Cloud](https://share.streamlit.io).
-
-### Step-by-Step Instructions:
-
-1. **Sign in to Streamlit**:
-   - Go to **[share.streamlit.io](https://share.streamlit.io)** and log in with your GitHub account.
-
-2. **Create New App**:
-   - Click the **"New app"** button (top right).
-
-3. **Configure Settings**:
-   - **Repository**: `Joshcodings/resturant_recommedation`
-   - **Branch**: `main`
-   - **Main file path**: `app.py`
-   - **App URL (optional)**: Custom subdomain if desired (e.g. `tastematch-recommender.streamlit.app`)
-
-4. **Deploy**:
-   - Click **"Deploy!"**.
-   - Streamlit Cloud will automatically detect `requirements.txt`, install dependencies (`streamlit`, `pandas`, `numpy`, `plotly`), and spin up your live web app in ~1-2 minutes.
+All numbers below are verified via executed automated test suites and `scripts/validate_datasets.py`:
+- **Total Places**: **8,666**
+  - **Zomato Kaggle (15 Countries)**: 7,403 places
+  - **OpenStreetMap Nigeria**: 1,263 places (Lagos, Benin City, Abuja, Jos, Enugu, Kano, Kaduna, Ilorin, etc.)
+- **Shards**: **232 static JSON shards** (all files $\le 8$ MB).
+- **Test Pass Rate**: **18 test suites, 133 tests passed, 0 failures** (including complete Acceptance Tests T1–T22).
+- **Production Build**: Clean exit code 0 (`tsc -b && vite build`).
 
 ---
 
-## Running the Streamlit App Locally
-
-```bash
-# Clone the repository
-git clone https://github.com/Joshcodings/resturant_recommedation.git
-cd resturant_recommedation
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the Streamlit app
-streamlit run app.py
-```
-
-The app will automatically open in your default browser at `http://localhost:8501`.
-
----
-
-## Running the TasteMatch React Web App
-
-For the static React + Vite web platform:
+## 🚀 Running the TasteMatch Web App
 
 ```bash
 cd tastematch
 npm install
 npm run dev
 # Open http://localhost:5173/
+
+# Run tests
+npm test -- --run
+
+# Build for production
+npm run build
 ```
 
-See [tastematch/README.md](tastematch/README.md) for full documentation on the hybrid recommendation pipeline, evaluation benchmark, and Vercel/Netlify deployment.
+See [tastematch/README.md](tastematch/README.md) for detailed documentation, feature breakdowns, and contribution instructions.
 
 ---
 
-## 🗺️ New Markets & OpenStreetMap (Beta)
+## 🎈 Running the Streamlit App
 
-We are actively expanding into new markets starting with Nigeria (**Lagos**, **Abuja**, **Port Harcourt**, and **Kano**). Because the original Zomato dataset did not cover these regions, we fetch live place data from **OpenStreetMap (OSM) via Overpass API**.
+```bash
+# Install Python dependencies
+pip install -r requirements.txt
 
-### Verified Dataset Coverage (from `scripts/validate_datasets.py`):
-- **Total OSM Records**: 446 places
-  - **Lagos**: 242 (54.3%)
-  - **Abuja**: 123 (27.6%)
-  - **Port Harcourt**: 43 (9.6%)
-  - **Kano**: 38 (8.5%)
-- **Attribute Coverage**:
-  - Cuisines: 131 / 446 (29.4%)
-  - Localities: 283 / 446 (63.5%)
-  - Addresses: 135 / 446 (30.3%)
-  - Opening Hours: 69 / 446 (15.5%)
-  - Phone: 58 / 446 (13.0%)
-  - Website: 58 / 446 (13.0%)
-- **Place Types**:
-  - Restaurants: 248
-  - Fast Food: 82
-  - Bars: 76
-  - Cafes: 40
+# Run dataset validator
+python scripts/validate_datasets.py
 
-### Capabilities & Engine Behavior:
-- **Unrated/Unpriced Mode**: OSM data lacks standard Zomato ratings and average cost fields. The recommendation engine dynamically switches to an unrated heuristic mode — ranking places strictly by cuisine match, proximity, and listing completeness.
-- **Graceful UI Degradation**: The UI dynamically hides sliders and options that require missing data fields, providing transparent context.
-- **Data Attribution**: The data extracted for these regions is licensed under [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/). See [NOTICE-OSM.md](NOTICE-OSM.md) for details.
+# Run Streamlit dashboard
+streamlit run app.py
+```
+
+---
+
+## ⚖️ License & Attribution
+
+- **OpenStreetMap Data**: Licensed under the **[Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1-0/)**. © OpenStreetMap contributors.
+- **Zomato Dataset**: Kaggle public dataset used under CC-BY-NC-SA 4.0 guidelines.
+- **Community Layer**: Released under **CC0 1.0 Universal**.
+- **Transparency Statement**: *"Open data is incomplete and may include closed places."*

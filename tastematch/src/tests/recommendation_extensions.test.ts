@@ -7,8 +7,10 @@ import {
 import type { RestaurantParsed } from '@/types/restaurant';
 
 function makeMock(overrides: Partial<RestaurantParsed> = {}): RestaurantParsed {
+  const id = overrides.restaurant_id || Math.floor(Math.random() * 100000);
   return {
-    restaurant_id: Math.floor(Math.random() * 100000),
+    uid: overrides.uid || `zomato:${id}`,
+    restaurant_id: id,
     restaurant_name: 'Test Diner',
     locality: 'Connaught Place',
     city: 'New Delhi',

@@ -70,23 +70,23 @@ export function morelikeThis(
     return 0.55 * cuisineSim + 0.25 * priceSim + 0.20 * ratingSim;
   }
 
-  const candidates = allData.filter(r => r.restaurant_id !== target.restaurant_id);
+  const candidates = allData.filter(r => r.uid !== target.uid);
 
   // Same city first
   const sameCity = candidates
     .filter(r => r.city === target.city)
     .map(r => ({ ...r, similarity: score(r) }))
-    .sort((a, b) => b.similarity - a.similarity)
+    .sort((a, b) => b.similarity - a.similarity || a.uid.localeCompare(b.uid))
     .slice(0, topN);
 
   if (sameCity.length >= topN) return sameCity;
 
   // Extend to same country
-  const cityIds = new Set(sameCity.map(r => r.restaurant_id));
+  const cityIds = new Set(sameCity.map(r => r.uid));
   const fromCountry = candidates
-    .filter(r => r.country === target.country && !cityIds.has(r.restaurant_id))
+    .filter(r => r.country === target.country && !cityIds.has(r.uid))
     .map(r => ({ ...r, similarity: score(r) }))
-    .sort((a, b) => b.similarity - a.similarity)
+    .sort((a, b) => b.similarity - a.similarity || a.uid.localeCompare(b.uid))
     .slice(0, topN - sameCity.length);
 
   return [...sameCity, ...fromCountry].slice(0, topN);

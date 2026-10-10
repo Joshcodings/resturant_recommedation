@@ -1,0 +1,17 @@
+{
+  "cities": {
+    "Singapore": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "singapore-1.json"
+      ]
+    }
+  },
+  "code": "SG",
+  "country": "Singapore"
+}

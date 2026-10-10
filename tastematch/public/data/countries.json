@@ -1,0 +1,226 @@
+[
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 23,
+    "code": "AU",
+    "data_base_url": "data/shards/AU/",
+    "licence": "CC0 / Public Domain",
+    "name": "Australia",
+    "places": 24,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 3,
+    "code": "BR",
+    "data_base_url": "data/shards/BR/",
+    "licence": "CC0 / Public Domain",
+    "name": "Brazil",
+    "places": 55,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 4,
+    "code": "CA",
+    "data_base_url": "data/shards/CA/",
+    "licence": "CC0 / Public Domain",
+    "name": "Canada",
+    "places": 4,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 43,
+    "code": "IN",
+    "data_base_url": "data/shards/IN/",
+    "licence": "CC0 / Public Domain",
+    "name": "India",
+    "places": 6513,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 4,
+    "code": "ID",
+    "data_base_url": "data/shards/ID/",
+    "licence": "CC0 / Public Domain",
+    "name": "Indonesia",
+    "places": 21,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 2,
+    "code": "NZ",
+    "data_base_url": "data/shards/NZ/",
+    "licence": "CC0 / Public Domain",
+    "name": "New Zealand",
+    "places": 40,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "© OpenStreetMap contributors, licensed under the Open Data Commons Open Database License (ODbL).",
+    "cities": 102,
+    "code": "NG",
+    "data_base_url": "data/shards/NG/",
+    "licence": "ODbL 1.0",
+    "name": "Nigeria",
+    "places": 1263,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "OpenStreetMap"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 9,
+    "code": "PH",
+    "data_base_url": "data/shards/PH/",
+    "licence": "CC0 / Public Domain",
+    "name": "Philippines",
+    "places": 22,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 1,
+    "code": "QA",
+    "data_base_url": "data/shards/QA/",
+    "licence": "CC0 / Public Domain",
+    "name": "Qatar",
+    "places": 20,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 1,
+    "code": "SG",
+    "data_base_url": "data/shards/SG/",
+    "licence": "CC0 / Public Domain",
+    "name": "Singapore",
+    "places": 20,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 6,
+    "code": "ZA",
+    "data_base_url": "data/shards/ZA/",
+    "licence": "CC0 / Public Domain",
+    "name": "South Africa",
+    "places": 60,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 1,
+    "code": "LK",
+    "data_base_url": "data/shards/LK/",
+    "licence": "CC0 / Public Domain",
+    "name": "Sri Lanka",
+    "places": 20,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 2,
+    "code": "TR",
+    "data_base_url": "data/shards/TR/",
+    "licence": "CC0 / Public Domain",
+    "name": "Turkey",
+    "places": 34,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 3,
+    "code": "AE",
+    "data_base_url": "data/shards/AE/",
+    "licence": "CC0 / Public Domain",
+    "name": "UAE",
+    "places": 60,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 4,
+    "code": "UK",
+    "data_base_url": "data/shards/UK/",
+    "licence": "CC0 / Public Domain",
+    "name": "UK",
+    "places": 79,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  },
+  {
+    "attribution": "Zomato Restaurant Kaggle archive for exploratory data analysis.",
+    "cities": 35,
+    "code": "US",
+    "data_base_url": "data/shards/US/",
+    "licence": "CC0 / Public Domain",
+    "name": "USA",
+    "places": 431,
+    "retrieved_at": "2026-10-09T00:00:00Z",
+    "sources": [
+      "Zomato Kaggle Archive"
+    ],
+    "status": "available"
+  }
+]

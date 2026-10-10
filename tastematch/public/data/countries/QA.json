@@ -1,0 +1,17 @@
+{
+  "cities": {
+    "Doha": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "doha-1.json"
+      ]
+    }
+  },
+  "code": "QA",
+  "country": "Qatar"
+}

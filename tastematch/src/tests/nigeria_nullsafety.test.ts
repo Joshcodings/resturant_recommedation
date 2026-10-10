@@ -5,6 +5,7 @@ import type { RestaurantParsed } from '../types/restaurant';
 // Synthetic Nigeria-like fixtures (clearly marked fake, never shipped)
 const MOCK_NIGERIA_DATA: RestaurantParsed[] = [
   {
+    uid: 'osm:node/1',
     restaurant_id: 10000000000001,
     restaurant_name: 'Fake Suya Spot',
     country: 'Nigeria',
@@ -29,6 +30,7 @@ const MOCK_NIGERIA_DATA: RestaurantParsed[] = [
     phone: '+234 123 456 7890',
   },
   {
+    uid: 'osm:node/2',
     restaurant_id: 10000000000002,
     restaurant_name: 'Fake Buka',
     country: 'Nigeria',

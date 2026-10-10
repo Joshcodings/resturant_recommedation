@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.7,
+    "average_cost_for_two": 10.0,
+    "city": "Fernley",
+    "country": "USA",
+    "cuisines": "Mexican",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 39.607515,
+    "locality": "Fernley",
+    "longitude": -119.252694,
+    "price_range": 1,
+    "restaurant_id": 17536645,
+    "restaurant_name": "Jehova es Mi Pastor Tacos y Burritos",
+    "uid": "zomato:17536645",
+    "votes": 83,
+    "weighted_rating": 3.825
+  }
+]

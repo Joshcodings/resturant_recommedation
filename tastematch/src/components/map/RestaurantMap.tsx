@@ -4,7 +4,9 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useTheme } from '@/context/ThemeContext';
 import { useCurrency } from '@/context/CurrencyContext';
+import { useDataSaver } from '@/context/DataSaverContext';
 import { PRICE_TIERS } from '@/lib/currency';
+import DataSaverSchematicMap from '@/components/map/DataSaverSchematicMap';
 import type { ScoredRestaurant } from '@/types/recommendation';
 
 // ─── Custom pin factory ───────────────────────────────────────────────────────
@@ -45,16 +47,30 @@ function MapCenter({ restaurants }: { restaurants: ScoredRestaurant[] }) {
 
 interface Props {
   restaurants: ScoredRestaurant[];
-  hoveredId: number | null;
-  onPinHover: (id: number) => void;
+  hoveredId: string | number | null;
+  onPinHover: (id: string) => void;
   onPinHoverEnd: () => void;
   onPinClick: (r: ScoredRestaurant) => void;
 }
 
 export default function RestaurantMap({ restaurants, hoveredId, onPinHover, onPinHoverEnd, onPinClick }: Props) {
+  const { isDataSaver } = useDataSaver();
+
+  if (isDataSaver) {
+    return (
+      <DataSaverSchematicMap
+        restaurants={restaurants}
+        hoveredId={hoveredId}
+        onPinHover={onPinHover}
+        onPinHoverEnd={onPinHoverEnd}
+        onPinClick={onPinClick}
+      />
+    );
+  }
+
   const { theme } = useTheme();
   const { formatDual } = useCurrency();
-  const markerRefs = useRef<Record<number, L.Marker>>({});
+  const markerRefs = useRef<Record<string, L.Marker>>({});
 
   const mapped = restaurants.filter(r => r.hasCoords);
 
@@ -88,15 +104,15 @@ export default function RestaurantMap({ restaurants, hoveredId, onPinHover, onPi
       <MapCenter restaurants={mapped} />
 
       {mapped.map((r, i) => {
-        const active = hoveredId === r.restaurant_id;
+        const active = hoveredId === r.uid || (r.restaurant_id !== undefined && hoveredId === r.restaurant_id);
         return (
           <Marker
-            key={r.restaurant_id}
+            key={r.uid}
             position={[r.latitude, r.longitude]}
             icon={makePin(r.rank || i + 1, active)}
-            ref={m => { if (m) markerRefs.current[r.restaurant_id] = m; }}
+            ref={m => { if (m) markerRefs.current[r.uid] = m; }}
             eventHandlers={{
-              mouseover: () => onPinHover(r.restaurant_id),
+              mouseover: () => onPinHover(r.uid),
               mouseout:  () => onPinHoverEnd(),
               click:     () => onPinClick(r),
             }}
@@ -104,17 +120,17 @@ export default function RestaurantMap({ restaurants, hoveredId, onPinHover, onPi
             <Popup>
               {(() => {
                 const costInfo = formatDual(r.average_cost_for_two, r.currency);
-                const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
+                const tier = r.hasPrice && r.price_range ? PRICE_TIERS[r.price_range as 1 | 2 | 3 | 4] : null;
                 return (
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: 13, minWidth: 160 }}>
                     <strong style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{r.restaurant_name}</strong>
                     <br />
                     <span style={{ color: '#666' }}>{r.locality || r.city}</span>
                     <br />
-                    <span>⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}</span>
+                    <span>⭐ {r.hasRating && r.aggregate_rating !== null ? r.aggregate_rating.toFixed(1) : 'Unrated'}</span>
                     <span style={{ margin: '0 6px', color: '#888' }}>·</span>
-                    <span style={{ fontWeight: 600 }}>{r.hasPrice ? costInfo.display : 'n/a'}</span>
-                    {r.hasPrice && (
+                    <span style={{ fontWeight: 600 }}>{costInfo.display !== 'n/a' ? costInfo.display : 'Cost unlisted'}</span>
+                    {tier && (
                       <>
                         <br />
                         <span style={{ fontSize: 11, color: '#888' }}>{tier.name} {tier.dots}</span>

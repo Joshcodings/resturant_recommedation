@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.4,
+    "average_cost_for_two": 20.0,
+    "city": "Penola",
+    "country": "Australia",
+    "cuisines": "Cafe, Coffee and Tea, Sandwich",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.379153,
+    "locality": "Penola",
+    "longitude": 140.837409,
+    "price_range": 2,
+    "restaurant_id": 16608483,
+    "restaurant_name": "DiVine",
+    "uid": "zomato:16608483",
+    "votes": 19,
+    "weighted_rating": 3.587
+  }
+]

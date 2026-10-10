@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.4,
+    "average_cost_for_two": 30.0,
+    "city": "Palm Cove",
+    "country": "Australia",
+    "cuisines": "Mediterranean, Seafood",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -16.748083,
+    "locality": "Palm Cove",
+    "longitude": 145.670768,
+    "price_range": 3,
+    "restaurant_id": 16613649,
+    "restaurant_name": "Vivo Bar and Grill",
+    "uid": "zomato:16613649",
+    "votes": 381,
+    "weighted_rating": 4.314
+  }
+]

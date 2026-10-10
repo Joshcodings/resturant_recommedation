@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.3,
+    "average_cost_for_two": 25.0,
+    "city": "Yorkton",
+    "country": "Canada",
+    "cuisines": "Asian",
+    "currency": "CAD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 51.2106824,
+    "locality": "Yorkton",
+    "longitude": -102.4613173,
+    "price_range": 2,
+    "restaurant_id": 16668008,
+    "restaurant_name": "Arigato Sushi",
+    "uid": "zomato:16668008",
+    "votes": 26,
+    "weighted_rating": 3.481
+  }
+]

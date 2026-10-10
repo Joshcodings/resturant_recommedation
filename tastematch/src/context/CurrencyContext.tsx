@@ -13,6 +13,7 @@ import {
   convertCurrency,
   formatCurrency,
 } from '@/lib/currency';
+import { DEFAULT_CURRENCY } from '@/config/defaults';
 
 interface CurrencyContextValue {
   selectedCurrency: string;
@@ -44,9 +45,9 @@ const CurrencyContext = createContext<CurrencyContextValue | null>(null);
 export function CurrencyProvider({ children }: { children: ReactNode }) {
   const [selectedCurrency, setSelectedCurrencyState] = useState<string>(() => {
     try {
-      return localStorage.getItem(STORAGE_KEY)?.toUpperCase() || 'USD';
+      return localStorage.getItem(STORAGE_KEY)?.toUpperCase() || DEFAULT_CURRENCY;
     } catch {
-      return 'USD';
+      return DEFAULT_CURRENCY;
     }
   });
 

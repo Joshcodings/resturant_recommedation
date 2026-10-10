@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.5,
+    "average_cost_for_two": 20.0,
+    "city": "Macedon",
+    "country": "Australia",
+    "cuisines": "Cafe",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.423189,
+    "locality": "Macedon",
+    "longitude": 144.564174,
+    "price_range": 2,
+    "restaurant_id": 17842104,
+    "restaurant_name": "Mr.",
+    "uid": "zomato:17842104",
+    "votes": 31,
+    "weighted_rating": 3.598
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "addr": {
+      "city": "Victoria Island",
+      "housenumber": "99",
+      "postcode": "101243",
+      "street": "Ajose Adeogun Street"
+    },
+    "address": "Ajose Adeogun Street",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true,
+      "delivery": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Victoria Island",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "African, Continental",
+    "cuisines_raw": "african;continental",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.4307508,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.4374689,
+    "opening_hours": "Tu-Su 19:00-03:00",
+    "osm_timestamp": "2024-07-05T07:09:13Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "+2349011111225",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Mercury Lagos",
+    "source_id": "node/12035213580",
+    "state": "Unknown",
+    "uid": "osm:node/12035213580",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "www.rahdahrooftop.com",
+    "weighted_rating": null
+  }
+]

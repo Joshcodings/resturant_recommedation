@@ -1,5 +1,5 @@
 import { useEffect, useRef, useMemo } from 'react';
-import { X, Utensils, Bike, MapPin } from 'lucide-react';
+import { X, Utensils, Bike, MapPin, Share2 } from 'lucide-react';
 import { formatVotes, isFewVotes } from '@/lib/formatters';
 import { getCuisineEmoji } from '@/config/emojis';
 import { morelikeThis } from '@/lib/similarity';
@@ -70,9 +70,11 @@ interface Props {
   restaurant: ScoredRestaurant | null;
   onClose: () => void;
   onOpenSimilar: (r: RestaurantParsed) => void;
+  onFoodRun?: (r: ScoredRestaurant) => void;
+  distanceFromLandmark?: { landmarkName: string; distanceKm: number };
 }
 
-export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }: Props) {
+export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, onFoodRun, distanceFromLandmark }: Props) {
   const { data, vocabulary } = useRestaurants();
   const { formatDual } = useCurrency();
   const panelRef = useRef<HTMLDivElement>(null);
@@ -133,14 +135,72 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
             display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, flexShrink: 0,
           }}>{getCuisineEmoji(r.cuisineList)}</div>
           <div style={{ flex: 1 }}>
-            <h2 style={{
-              margin: 0, fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 20, fontWeight: 600, color: 'var(--text)',
-            }}>{r.restaurant_name}</h2>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+              <h2 style={{
+                margin: 0, fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: 20, fontWeight: 600, color: 'var(--text)',
+              }}>{r.restaurant_name}</h2>
+              {r.matchReason && (
+                <span
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                    padding: '2px 8px',
+                    borderRadius: 999,
+                    background: 'rgba(200, 240, 60, 0.15)',
+                    color: 'var(--accent-deep)',
+                    fontSize: 11,
+                    fontWeight: 600,
+                    border: '1px solid var(--accent)',
+                  }}
+                >
+                  {r.matchReason.startsWith('cuisine tag') ? '🎯' : '🔍'} {r.matchReason}
+                </span>
+              )}
+              {(r.isLocalCommunity || r.uid?.startsWith('local:')) && (
+                <span
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                    padding: '2px 8px',
+                    borderRadius: 999,
+                    background: 'rgba(16, 185, 129, 0.15)',
+                    color: '#10b981',
+                    fontSize: 11,
+                    fontWeight: 600,
+                    border: '1px solid #10b981',
+                  }}
+                >
+                  Added by you (local)
+                </span>
+              )}
+            </div>
             <p style={{ margin: '2px 0 0', fontSize: 14, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
               <MapPin size={12} strokeWidth={1.5} style={{ display: 'inline', marginRight: 3 }} />
               {r.locality} · {r.city}
             </p>
+            {distanceFromLandmark && (
+              <div style={{ marginTop: 4 }}>
+                <span
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                    padding: '2px 8px',
+                    borderRadius: 999,
+                    background: 'rgba(59, 130, 246, 0.1)',
+                    color: 'rgb(37, 99, 235)',
+                    fontSize: 12,
+                    fontWeight: 500,
+                    border: '1px solid rgba(59, 130, 246, 0.3)',
+                  }}
+                >
+                  📍 {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
+                </span>
+              </div>
+            )}
           </div>
           <button
             onClick={onClose}
@@ -221,9 +281,9 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
 
           {/* Price & services */}
           {(() => {
-            const tier = PRICE_TIERS[(r.price_range as 1 | 2 | 3 | 4) || 2];
+            const tier = r.hasPrice && r.price_range ? PRICE_TIERS[r.price_range as 1 | 2 | 3 | 4] : null;
             const costInfo = formatDual(r.average_cost_for_two, r.currency);
-            const tierTooltip = r.hasPrice ? `${tier.name}: ${costInfo.display} for two in ${r.country}${costInfo.listed ? ` (${costInfo.listed})` : ''}` : 'Price unavailable';
+            const tierTooltip = tier ? `${tier.name}: ${costInfo.display} for two in ${r.country}${costInfo.listed ? ` (${costInfo.listed})` : ''}` : 'Price unavailable';
             return (
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -244,7 +304,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
                     title={tierTooltip}
                     aria-label={tierTooltip}
                   >
-                    {r.hasPrice ? `${tier.name} ${tier.dots}` : 'n/a'}
+                    {tier ? `${tier.name} ${tier.dots}` : 'n/a'}
                   </span>
                 </div>
             {r.has_table_booking === 1 && (
@@ -257,9 +317,68 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
                 <Bike size={14} strokeWidth={1.5} /> Online delivery
               </span>
             )}
+            {/* Real payment method indicators */}
+            {r.payment_methods?.cash && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                💵 Cash
+              </span>
+            )}
+            {(r.payment_methods?.cards || r.payment_methods?.debit_cards || r.payment_methods?.credit_cards) && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                💳 Cards
+              </span>
+            )}
+            {(r.payment_methods?.mobile_payment || r.payment_methods?.bank_transfer || r.payment_methods?.pos) && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                📱 Mobile / Transfer
+              </span>
+            )}
+            {/* Real Power & Breeze indicators (F5: Real tags only) */}
+            {r.amenities?.air_conditioning && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Air conditioning">
+                ❄️ AC
+              </span>
+            )}
+            {r.amenities?.outdoor_seating && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Outdoor seating (breeze when hot/no power)">
+                🌿 Outdoor Breeze
+              </span>
+            )}
+            {(r.amenities?.generator || r.amenities?.backup_generator || r.amenities?.['generator:source'] || (r as any).generator) && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Backup generator tagged">
+                ⚡ Backup Generator
+              </span>
+            )}
           </div>
         );
       })()}
+
+          {/* Organise WhatsApp Food Run (F6) */}
+          {onFoodRun && (
+            <button
+              type="button"
+              onClick={() => onFoodRun(r)}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 8,
+                padding: '12px 16px',
+                borderRadius: 10,
+                background: 'var(--surface-2)',
+                border: '1px solid var(--border)',
+                color: 'var(--text)',
+                fontSize: 13,
+                fontWeight: 600,
+                fontFamily: 'Inter, sans-serif',
+                cursor: 'pointer',
+                transition: 'all 150ms ease',
+              }}
+            >
+              <Share2 size={16} strokeWidth={1.8} style={{ color: '#10b981' }} />
+              Organise WhatsApp Food Run
+            </button>
+          )}
 
           {/* Explainable AI Attribution Section */}
           <div
@@ -354,13 +473,137 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar }:
               }}>More like this</div>
               <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
                 {similar.map(s => (
-                  <CompactCard key={s.restaurant_id} r={s} onOpen={() => onOpenSimilar(s)} />
+                  <CompactCard key={s.uid} r={s} onOpen={() => onOpenSimilar(s)} />
                 ))}
               </div>
             </div>
           )}
 
+          {/* Trust Panel & Verification (Feature 12 & Feature 8) */}
+          <div
+            style={{
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              borderRadius: 10,
+              padding: 14,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 10,
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <span style={{ fontSize: 13, fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif", color: 'var(--text)' }}>
+                🛡️ Trust & Data Verification
+              </span>
+              <span
+                style={{
+                  fontSize: 11,
+                  padding: '2px 8px',
+                  borderRadius: 4,
+                  background: 'var(--surface)',
+                  color: 'var(--text-muted)',
+                  border: '1px solid var(--border)',
+                }}
+              >
+                {r.data_source || 'Zomato'}
+              </span>
+            </div>
+
+            <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+              <div><strong>Source:</strong> {r.data_source || 'Zomato Public Dataset (Kaggle)'}</div>
+              <div><strong>UID:</strong> {r.uid}</div>
+              {r.osm_timestamp && (
+                <div><strong>Last Edited:</strong> {new Date(r.osm_timestamp).toLocaleDateString()} (v{r.osm_version || 1})</div>
+              )}
+            </div>
+
+            {/* Field Completeness Tick-Grid */}
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--text-muted)', marginBottom: 6, textTransform: 'uppercase' }}>
+                Field Completeness Grid:
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6, fontSize: 11, fontFamily: 'Inter, sans-serif' }}>
+                {[
+                  { label: 'Name', present: !!r.restaurant_name },
+                  { label: 'Coordinates', present: !!(r.hasCoords || (r.latitude && r.longitude)) },
+                  { label: 'Cuisines', present: !!(r.cuisines && r.cuisines.trim()) },
+                  { label: 'Opening Hours', present: !!r.opening_hours },
+                  { label: 'Phone', present: !!r.phone },
+                  { label: 'Website', present: !!r.website },
+                  { label: 'Payment Options', present: !!r.payment_methods },
+                  { label: 'Air Conditioning', present: r.air_conditioning !== null && r.air_conditioning !== undefined },
+                  { label: 'Backup Power', present: !!(r.power?.backup_generator || r.amenities?.generator) },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 4,
+                      color: item.present ? 'var(--text)' : 'var(--text-muted)',
+                    }}
+                  >
+                    <span>{item.present ? '✅' : '❌'}</span>
+                    <span>{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p style={{ margin: '4px 0 0', fontSize: 11, color: 'var(--text-muted)', fontStyle: 'italic', lineHeight: '16px' }}>
+              "Open data is incomplete and may include closed places."
+            </p>
+
+            {/* Actions: Add what you know on OSM & Report closed or wrong */}
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
+              {r.data_source === 'OpenStreetMap' && (
+                <a
+                  href={`https://www.openstreetmap.org/edit?${r.source_id ? r.source_id.replace('/', '=') : 'node'}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    padding: '6px 12px',
+                    borderRadius: 6,
+                    fontSize: 12,
+                    fontWeight: 600,
+                    background: 'rgba(200, 240, 60, 0.15)',
+                    border: '1px solid var(--accent)',
+                    color: 'var(--accent-deep)',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                  }}
+                >
+                  ✏️ Add what you know on OpenStreetMap
+                </a>
+              )}
+
+              <a
+                href={`https://github.com/Joshcodings/resturant_recommedation/issues/new?title=${encodeURIComponent(`[Data Issue] Report closed or wrong: ${r.restaurant_name} (${r.uid})`)}&body=${encodeURIComponent(`Place Name: ${r.restaurant_name}\nUID: ${r.uid}\nCity: ${r.city}\nSource: ${r.data_source || 'Zomato'}\n\nDescription of issue / Closure status:\n`)}`}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  padding: '6px 12px',
+                  borderRadius: 6,
+                  fontSize: 12,
+                  fontWeight: 500,
+                  background: 'var(--surface)',
+                  border: '1px solid var(--border)',
+                  color: 'var(--text-muted)',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 4,
+                }}
+              >
+                🚩 Report closed or wrong
+              </a>
+            </div>
+          </div>
+
           {/* Honesty note */}
+
           <p style={{
             margin: 0, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif',
             borderTop: '1px solid var(--border)', paddingTop: 16,

@@ -1,0 +1,41 @@
+[
+  {
+    "addr": {
+      "city": "Fagge D2"
+    },
+    "address": null,
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Fagge D2",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 12.0126769,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 8.5208532,
+    "opening_hours": null,
+    "osm_timestamp": "2016-09-11T08:33:53Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "food_shop",
+    "price_range": null,
+    "restaurant_name": "Abbatuwa",
+    "source_id": "way/441884763",
+    "state": "Unknown",
+    "uid": "osm:way/441884763",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

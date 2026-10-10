@@ -4,14 +4,18 @@ import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import { RestaurantProvider } from '@/context/RestaurantContext';
 import { CurrencyProvider } from '@/context/CurrencyContext';
 import { ShortlistProvider, useShortlist } from '@/context/ShortlistContext';
+import { DataSaverProvider, useDataSaver } from '@/context/DataSaverContext';
+import { CommunityProvider } from '@/context/CommunityContext';
+import { LanguageProvider, useLanguage } from '@/context/LanguageContext';
 import CurrencySelector from '@/components/currency/CurrencySelector';
+import LanguageSelector from '@/components/language/LanguageSelector';
 import DiscoverView from '@/views/DiscoverView';
 import GroupView from '@/views/GroupView';
 import InsightsView from '@/views/InsightsView';
 import StyleguideView from '@/views/StyleguideView';
 import AboutModal from '@/components/modals/AboutModal';
 import ShortlistDrawer from '@/components/modals/ShortlistDrawer';
-import { Sun, Moon, Heart, Info, Search, Users, BarChart3 } from 'lucide-react';
+import { Sun, Moon, Heart, Info, Search, Users, BarChart3, Zap, AlertTriangle } from 'lucide-react';
 import type { RestaurantParsed } from '@/types/restaurant';
 import './index.css';
 
@@ -25,6 +29,8 @@ interface TopBarProps {
 function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
   const { theme, toggleTheme } = useTheme();
   const { shortlist } = useShortlist();
+  const { isDataSaver, toggleDataSaver, dataSavedKB } = useDataSaver();
+  const { t } = useLanguage();
 
   return (
     <header
@@ -74,9 +80,9 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
       {/* Nav tabs: Discover, Group, Insights, About */}
       <nav className="desktop-nav" aria-label="Main navigation">
         {[
-          { to: '/', label: 'Discover' },
-          { to: '/group', label: 'Group' },
-          { to: '/insights', label: 'Insights' },
+          { to: '/', label: t('nav_discover') },
+          { to: '/group', label: t('nav_group') },
+          { to: '/insights', label: t('nav_insights') },
         ].map(({ to, label }) => (
           <NavLink
             key={to}
@@ -114,7 +120,7 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
             transition: 'color 150ms',
           }}
         >
-          About
+          {t('nav_about')}
         </button>
       </nav>
 
@@ -145,8 +151,37 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
           <span>{shortlist.length}</span>
         </button>
 
+        {/* Data Saver Mode Toggle (Feature 7) */}
+        <button
+          onClick={toggleDataSaver}
+          aria-label={`Data Saver is ${isDataSaver ? 'ON' : 'OFF'}`}
+          title={isDataSaver ? `Data Saver ON: ~${dataSavedKB} KB saved this session` : 'Enable Data Saver: suppresses map tiles, saves mobile data'}
+          style={{
+            height: 40,
+            padding: '0 12px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 6,
+            background: isDataSaver ? 'rgba(16, 185, 129, 0.15)' : 'var(--surface-2)',
+            border: isDataSaver ? '1px solid #10b981' : '1px solid var(--border)',
+            borderRadius: 8,
+            color: isDataSaver ? '#10b981' : 'var(--text-muted)',
+            cursor: 'pointer',
+            fontSize: 12,
+            fontWeight: 600,
+            transition: 'all 150ms ease',
+          }}
+        >
+          <Zap size={14} strokeWidth={2} fill={isDataSaver ? '#10b981' : 'none'} />
+          <span>{isDataSaver ? `Data Saver (~${dataSavedKB} KB)` : 'Data Saver'}</span>
+        </button>
+
+        {/* Language selector (Feature 12) */}
+        <LanguageSelector />
+
         {/* Currency selector (left of theme toggle per amendment 5) */}
         <CurrencySelector />
+
 
         {/* Theme toggle */}
         <button
@@ -251,9 +286,35 @@ function Footer({ onOpenAbout }: { onOpenAbout: () => void }) {
 function AppShell() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isShortlistOpen, setIsShortlistOpen] = useState(false);
+  const { isDraft, currentLanguage, disclaimer, t } = useLanguage();
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
+      {isDraft && (
+        <div
+          data-testid="language-draft-banner"
+          style={{
+            background: 'rgba(234, 179, 8, 0.12)',
+            borderBottom: '1px solid rgba(234, 179, 8, 0.35)',
+            color: 'var(--text)',
+            fontSize: 12,
+            padding: '7px 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 8,
+            fontFamily: 'Inter, sans-serif',
+            textAlign: 'center',
+          }}
+        >
+          <AlertTriangle size={14} style={{ color: '#d97706', flexShrink: 0 }} />
+          <span>
+            <strong>{currentLanguage.label} ({currentLanguage.nativeLabel})</strong>: {t('draft_disclaimer_notice')}{' '}
+            <strong style={{ color: '#b45309' }}>{disclaimer}</strong>.
+          </span>
+        </div>
+      )}
+
       <TopBar
         onOpenAbout={() => setIsAboutOpen(true)}
         onOpenShortlist={() => setIsShortlistOpen(true)}
@@ -283,19 +344,19 @@ function AppShell() {
       <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
         <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
           <Search size={18} strokeWidth={2} />
-          <span>Discover</span>
+          <span>{t('nav_discover')}</span>
         </NavLink>
         <NavLink to="/group" className={({ isActive }) => (isActive ? 'active' : '')}>
           <Users size={18} strokeWidth={2} />
-          <span>Group</span>
+          <span>{t('nav_group')}</span>
         </NavLink>
         <NavLink to="/insights" className={({ isActive }) => (isActive ? 'active' : '')}>
           <BarChart3 size={18} strokeWidth={2} />
-          <span>Insights</span>
+          <span>{t('nav_insights')}</span>
         </NavLink>
         <button onClick={() => setIsAboutOpen(true)} type="button">
           <Info size={18} strokeWidth={2} />
-          <span>About</span>
+          <span>{t('nav_about')}</span>
         </button>
       </nav>
 
@@ -314,16 +375,23 @@ function AppShell() {
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <RestaurantProvider>
-        <CurrencyProvider>
-          <ShortlistProvider>
-            <HashRouter>
-              <AppShell />
-            </HashRouter>
-          </ShortlistProvider>
-        </CurrencyProvider>
-      </RestaurantProvider>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider>
+        <DataSaverProvider>
+          <CommunityProvider>
+            <RestaurantProvider>
+              <CurrencyProvider>
+                <ShortlistProvider>
+                  <HashRouter>
+                    <AppShell />
+                  </HashRouter>
+                </ShortlistProvider>
+              </CurrencyProvider>
+            </RestaurantProvider>
+          </CommunityProvider>
+        </DataSaverProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
+

@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.4,
+    "average_cost_for_two": null,
+    "city": "Miller",
+    "country": "USA",
+    "cuisines": "Unknown",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 44.5158,
+    "locality": "Miller",
+    "longitude": -98.9891,
+    "price_range": 1,
+    "restaurant_id": 17606621,
+    "restaurant_name": "HI Lite Bar & Lounge",
+    "uid": "zomato:17606621",
+    "votes": 11,
+    "weighted_rating": 3.918
+  }
+]

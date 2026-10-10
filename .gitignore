@@ -7,3 +7,4 @@ tastematch/dist/
 __pycache__/
 *.pyc
 hf_space/
+data/out/

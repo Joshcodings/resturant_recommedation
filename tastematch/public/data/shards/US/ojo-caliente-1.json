@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.6,
+    "average_cost_for_two": 40.0,
+    "city": "Ojo Caliente",
+    "country": "USA",
+    "cuisines": "American, International, Southwestern",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 36.313638,
+    "locality": "Ojo Caliente",
+    "longitude": -106.057666,
+    "price_range": 3,
+    "restaurant_id": 17534788,
+    "restaurant_name": "The Artesian Restaurant",
+    "uid": "zomato:17534788",
+    "votes": 30,
+    "weighted_rating": 3.87
+  }
+]

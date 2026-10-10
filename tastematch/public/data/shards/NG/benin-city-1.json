@@ -1,0 +1,43 @@
+[
+  {
+    "addr": {
+      "city": "benin city",
+      "postcode": "300102",
+      "street": "Akhionbare Street"
+    },
+    "address": "Akhionbare Street",
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "benin city",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.3065016,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 5.6129985,
+    "opening_hours": null,
+    "osm_timestamp": "2025-11-16T18:33:16Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "+234 807 777 0568",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "The Patio",
+    "source_id": "node/13308727075",
+    "state": "Unknown",
+    "uid": "osm:node/13308727075",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

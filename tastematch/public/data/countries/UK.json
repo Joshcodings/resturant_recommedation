@@ -1,0 +1,50 @@
+{
+  "cities": {
+    "Birmingham": {
+      "count": 19,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "birmingham-1.json"
+      ]
+    },
+    "Edinburgh": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "edinburgh-1.json"
+      ]
+    },
+    "London": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "london-1.json"
+      ]
+    },
+    "Manchester": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "manchester-1.json"
+      ]
+    }
+  },
+  "code": "UK",
+  "country": "UK"
+}

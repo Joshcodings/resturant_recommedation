@@ -3,30 +3,88 @@ import { useRestaurants } from '@/context/RestaurantContext';
 import { recommend, liveScore, DEFAULT_WEIGHTS, type PriorityWeights } from '@/lib/recommendation';
 import type { RecommendationQuery, ScoredRestaurant } from '@/types/recommendation';
 import type { MoodPreset } from '@/config/presets';
+import { DEFAULT_COUNTRY_NAME } from '@/config/defaults';
+import { computeLargestCity } from '@/lib/dataLoader';
 import SearchBar from '@/components/search/SearchBar';
 import PresetChips from '@/components/search/PresetChips';
 import MoreOptions from '@/components/search/MoreOptions';
 import PlaceTypeChips from '@/components/search/PlaceTypeChips';
 import AreaDropdown from '@/components/search/AreaDropdown';
+import AmenityChips, { AMENITY_FILTERS } from '@/components/search/AmenityChips';
+import PaymentChips, { type PaymentFilterType, PAYMENT_FILTERS } from '@/components/search/PaymentChips';
+import MealClockFilter from '@/components/search/MealClockFilter';
+import LandmarkFilter from '@/components/search/LandmarkFilter';
+import { isOpenNow, isOpenLate, isOpenAtMealSlot, type MealSlot } from '@/lib/openingHours';
+import { fetchLandmarks, getLandmarksForCity, filterAndSortByLandmark } from '@/lib/landmarks';
+import type { Landmark } from '@/types/restaurant';
+import { matchDishOrKeyword } from '@/lib/dishSearch';
 import RestaurantCard from '@/components/card/RestaurantCard';
 import RestaurantMap from '@/components/map/RestaurantMap';
 import RestaurantDrawer from '@/components/drawer/RestaurantDrawer';
+import FoodRunModal from '@/components/modals/FoodRunModal';
+import AddPlaceModal from '@/components/modals/AddPlaceModal';
+import StateCapitalSwitcher from '@/components/search/StateCapitalSwitcher';
+import { NIGERIAN_STATE_CAPITALS } from '@/config/nigerianCapitals';
 import { CompareTray, CompareModal } from '@/components/compare/CompareComponents';
-import { AlertTriangle, Info, Map, ChevronDown, CheckCircle2 } from 'lucide-react';
+import AreaFoodFingerprint from '@/components/search/AreaFoodFingerprint';
+import {
+  AlertTriangle,
+  Info,
+  Map,
+  ChevronDown,
+  CheckCircle2,
+  Search,
+  Building2,
+  PlusCircle,
+  ExternalLink,
+} from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function DiscoverView() {
   const { data, loading, countryCityIndex, getCityCapabilities } = useRestaurants();
+  const { t } = useLanguage();
+
+  // Feature 9 & 10 Modal states
+  const [isAddPlaceOpen, setIsAddPlaceOpen] = useState(false);
+  const [isCapitalsOpen, setIsCapitalsOpen] = useState(false);
+  const [showGapsOnly, setShowGapsOnly] = useState(false);
+
 
   // Selected filters
-  const [country, setCountry] = useState('India');
-  const [city, setCity] = useState('New Delhi');
-  const [priceRange, setPriceRange] = useState<(1 | 2 | 3 | 4) | null>(2);
+  const [country, setCountry] = useState<string>(() => {
+    try {
+      return localStorage.getItem('tm-saved-country') || DEFAULT_COUNTRY_NAME;
+    } catch {
+      return DEFAULT_COUNTRY_NAME;
+    }
+  });
+  const [city, setCity] = useState<string>(() => {
+    try {
+      return localStorage.getItem('tm-saved-city') || '';
+    } catch {
+      return '';
+    }
+  });
+  const [priceRange, setPriceRange] = useState<(1 | 2 | 3 | 4) | null>(null);
   const [cuisines, setCuisines] = useState<string[]>([]);
   const [needsTableBooking, setNeedsTableBooking] = useState(false);
   const [needsOnlineDelivery, setNeedsOnlineDelivery] = useState(false);
   const [activePreset, setActivePreset] = useState<MoodPreset | null>(null);
   const [selectedPlaceType, setSelectedPlaceType] = useState<string | null>(null);
   const [selectedArea, setSelectedArea] = useState<string | null>(null);
+  const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
+  const [selectedPayment, setSelectedPayment] = useState<PaymentFilterType | null>(null);
+  const [dishQuery, setDishQuery] = useState('');
+
+  // Feature 3: Naija Meal Clock states
+  const [openNowOnly, setOpenNowOnly] = useState(false);
+  const [openLateOnly, setOpenLateOnly] = useState(false);
+  const [selectedMealSlot, setSelectedMealSlot] = useState<MealSlot | null>(null);
+
+  // Feature 4: Near a Landmark states
+  const [allLandmarks, setAllLandmarks] = useState<Landmark[]>([]);
+  const [selectedLandmark, setSelectedLandmark] = useState<Landmark | null>(null);
+  const [selectedLandmarkRadiusKm, setSelectedLandmarkRadiusKm] = useState<number>(2.0);
 
   // Engine controls: Mode, Proximity Radius, Diversification
   const [mode, setMode] = useState<'strict' | 'flexible'>('flexible');
@@ -40,23 +98,38 @@ export default function DiscoverView() {
   const [topN, setTopN] = useState(3);
 
   // Interactive sync states
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [hoveredId, setHoveredId] = useState<string | number | null>(null);
   const [drawerRestaurant, setDrawerRestaurant] = useState<ScoredRestaurant | null>(null);
   const [isCompareOpen, setIsCompareOpen] = useState(false);
   const [isMobileMapOpen, setIsMobileMapOpen] = useState(false);
+  const [foodRunRestaurant, setFoodRunRestaurant] = useState<ScoredRestaurant | null>(null);
+  const [isFoodRunOpen, setIsFoodRunOpen] = useState(false);
 
-  // Ensure default country & city match when index loads
+  // Ensure default country & city match when index loads (first visit dynamically chooses largest city)
   useEffect(() => {
     if (Object.keys(countryCityIndex).length > 0) {
       if (!countryCityIndex[country]) {
         const firstC = Object.keys(countryCityIndex)[0];
         setCountry(firstC);
-        setCity(countryCityIndex[firstC][0]);
-      } else if (!countryCityIndex[country].includes(city)) {
-        setCity(countryCityIndex[country][0]);
+        const largest = computeLargestCity(data, firstC) || countryCityIndex[firstC]?.[0] || '';
+        setCity(largest);
+      } else if (!city) {
+        const savedCity = typeof window !== 'undefined' ? localStorage.getItem('tm-saved-city') : null;
+        if (savedCity && countryCityIndex[country].includes(savedCity)) {
+          setCity(savedCity);
+        } else {
+          const largest = computeLargestCity(data, country) || countryCityIndex[country]?.[0] || '';
+          setCity(largest);
+        }
+      } else {
+        const isKnownCapital = country === 'Nigeria' && NIGERIAN_STATE_CAPITALS.some(sc => sc.capital.toLowerCase() === city.toLowerCase());
+        if (!countryCityIndex[country].includes(city) && !isKnownCapital) {
+          const largest = computeLargestCity(data, country) || countryCityIndex[country]?.[0] || '';
+          setCity(largest);
+        }
       }
     }
-  }, [countryCityIndex, country, city]);
+  }, [countryCityIndex, data, country, city]);
 
   const caps = getCityCapabilities(city);
 
@@ -109,7 +182,17 @@ export default function DiscoverView() {
       _liveScore: liveScore(r, weights),
     }));
 
-    pool.sort((a, b) => b._liveScore - a._liveScore || (b.votes || 0) - (a.votes || 0));
+    const isRatedCity = recommendation.scoringMode === 'rated';
+
+    pool.sort((a, b) => {
+      const scoreDiff = isRatedCity ? b._liveScore - a._liveScore : b.score - a.score;
+      if (Math.abs(scoreDiff) > 1e-6) return scoreDiff;
+      if (isRatedCity) {
+        const vDiff = (b.votes || 0) - (a.votes || 0);
+        if (vDiff !== 0) return vDiff;
+      }
+      return String(a.uid ?? a.restaurant_id ?? '').localeCompare(String(b.uid ?? b.restaurant_id ?? ''));
+    });
 
     return pool.map((r, i) => ({
       ...r,
@@ -148,17 +231,133 @@ export default function DiscoverView() {
     return cityRestaurants.some(r => r.data_source === 'OpenStreetMap');
   }, [cityRestaurants]);
 
-  // Filter ranked pool by area & place type if selected
+  // Load real OpenStreetMap landmarks on mount
+  useEffect(() => {
+    fetchLandmarks().then(lms => setAllLandmarks(lms));
+  }, []);
+
+  // Filter landmarks for current city
+  const cityLandmarks = useMemo(() => {
+    return getLandmarksForCity(allLandmarks, city);
+  }, [allLandmarks, city]);
+
+  const unlistedHoursCount = useMemo(() => {
+    return cityRestaurants.filter(r => !r.opening_hours).length;
+  }, [cityRestaurants]);
+
+  // Feature 8: Count places missing core details (cuisine, hours, or phone)
+  const gapsCount = useMemo(() => {
+    return cityRestaurants.filter(
+      r => r.data_source === 'OpenStreetMap' && (!r.cuisines || !r.opening_hours || !r.phone)
+    ).length;
+  }, [cityRestaurants]);
+
+  // Filter ranked pool by dish/text search, payment, area, place type, amenities, meal clock & landmarks
   const filteredRankedRestaurants = useMemo(() => {
     let pool = rankedRestaurants;
+
+    // Feature 8: Map Gaps filter
+    if (showGapsOnly) {
+      pool = pool.filter(
+        r => r.data_source === 'OpenStreetMap' && (!r.cuisines || !r.opening_hours || !r.phone)
+      );
+    }
+
+    // Feature 1: Dish-first search (Nigerian food dictionary + text match)
+    if (dishQuery.trim()) {
+      const matchedPool: typeof pool = [];
+      for (const r of pool) {
+        const match = matchDishOrKeyword(r, dishQuery);
+        if (match) {
+          matchedPool.push({
+            ...r,
+            matchReason: match.text,
+          });
+        }
+      }
+      pool = matchedPool;
+    }
+
+
+    // Feature 2: Pay-how filter from real payment:* tags only
+    if (selectedPayment) {
+      const payDef = PAYMENT_FILTERS.find(p => p.id === selectedPayment);
+      if (payDef) {
+        pool = pool.filter(r => payDef.check(r));
+      }
+    }
+
     if (selectedPlaceType) {
       pool = pool.filter(r => r.place_type === selectedPlaceType);
     }
     if (selectedArea) {
       pool = pool.filter(r => r.locality === selectedArea);
     }
+    if (selectedAmenities.length > 0) {
+      pool = pool.filter(r => {
+        return selectedAmenities.every(aId => {
+          const def = AMENITY_FILTERS.find(d => d.id === aId);
+          return def ? def.check(r) : true;
+        });
+      });
+    }
+
+    // Feature 3: Naija Meal Clock filter in Africa/Lagos time (WAT)
+    if (openNowOnly) {
+      pool = pool.filter(r => r.opening_hours && isOpenNow(r.opening_hours) === true);
+    }
+    if (openLateOnly) {
+      pool = pool.filter(r => r.opening_hours && isOpenLate(r.opening_hours) === true);
+    }
+    if (selectedMealSlot) {
+      if (selectedMealSlot === 'morning') {
+        pool = pool.filter(
+          r => r.place_type === 'cafe' || r.place_type === 'bakery' || (r.opening_hours && isOpenAtMealSlot(r.opening_hours, 'morning') === true)
+        );
+      } else if (selectedMealSlot === 'late-night') {
+        pool = pool.filter(
+          r => r.place_type === 'bar' || r.place_type === 'pub' || r.place_type === 'fast_food' || (r.opening_hours && isOpenAtMealSlot(r.opening_hours, 'late-night') === true)
+        );
+      } else if (selectedMealSlot === 'afternoon') {
+        pool = pool.filter(
+          r => (r.opening_hours ? isOpenAtMealSlot(r.opening_hours, 'afternoon') === true : true)
+        );
+      } else if (selectedMealSlot === 'evening') {
+        pool = pool.filter(
+          r => (r.opening_hours ? isOpenAtMealSlot(r.opening_hours, 'evening') === true : true)
+        );
+      }
+    }
+
+    // Feature 4: Near a landmark
+    if (selectedLandmark) {
+      const landmarkFiltered = filterAndSortByLandmark(pool, selectedLandmark, selectedLandmarkRadiusKm);
+      pool = landmarkFiltered.map(({ place, distanceKm }, idx) => ({
+        ...place,
+        rank: idx + 1,
+        distanceFromLandmark: {
+          landmarkName: selectedLandmark.name,
+          distanceKm,
+        },
+      }));
+    }
+
     return pool;
-  }, [rankedRestaurants, selectedPlaceType, selectedArea]);
+  }, [
+    rankedRestaurants,
+    dishQuery,
+    selectedPayment,
+    selectedPlaceType,
+    selectedArea,
+    selectedAmenities,
+    openNowOnly,
+    openLateOnly,
+    selectedMealSlot,
+    selectedLandmark,
+    selectedLandmarkRadiusKm,
+    showGapsOnly,
+  ]);
+
 
   // Sliced for display
   const displayedRestaurants = useMemo(() => {
@@ -209,8 +408,150 @@ export default function DiscoverView() {
           Choose your city, set your preferences, or tune priorities live.
         </p>
 
+        {/* Dish-First Search Box (Feature 1) */}
+        <div style={{ marginTop: 24, maxWidth: 640 }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              borderRadius: 10,
+              padding: '0 12px',
+              gap: 8,
+            }}
+          >
+            <Search size={16} color="var(--text-muted)" style={{ flexShrink: 0 }} />
+            <input
+              type="text"
+              placeholder={t('search_placeholder')}
+              value={dishQuery}
+              onChange={e => setDishQuery(e.target.value)}
+
+              style={{
+                width: '100%',
+                height: 42,
+                background: 'transparent',
+                border: 'none',
+                outline: 'none',
+                fontSize: 14,
+                color: 'var(--text)',
+                fontFamily: 'Inter, system-ui, sans-serif',
+              }}
+            />
+            {dishQuery && (
+              <button
+                type="button"
+                onClick={() => setDishQuery('')}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: 'var(--text-muted)',
+                  fontSize: 12,
+                  cursor: 'pointer',
+                  padding: '4px 6px',
+                }}
+              >
+                Clear
+              </button>
+            )}
+          </div>
+
+          {/* Quick Dish Suggestion Chips (Nigerian specialties) */}
+          {country === 'Nigeria' && (
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 8, alignItems: 'center' }}>
+              <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase' }}>
+                Popular:
+              </span>
+              {['Jollof', 'Suya', 'Amala', 'Egusi', 'Shawarma', 'Pepper Soup', 'Asun', 'Small Chops', 'Buka'].map(dish => {
+                const isActive = dishQuery.toLowerCase() === dish.toLowerCase();
+                return (
+                  <button
+                    key={dish}
+                    type="button"
+                    onClick={() => setDishQuery(isActive ? '' : dish)}
+                    style={{
+                      padding: '2px 8px',
+                      borderRadius: 999,
+                      fontSize: 11,
+                      border: isActive ? '1px solid var(--accent)' : '1px solid var(--border)',
+                      background: isActive ? 'var(--accent)' : 'var(--surface-2)',
+                      color: isActive ? 'var(--accent-ink)' : 'var(--text-muted)',
+                      cursor: 'pointer',
+                      fontWeight: isActive ? 600 : 500,
+                    }}
+                  >
+                    {dish}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* Feature 10 & 9: State Capitals Switcher & Add a Place toolbar */}
+        {country === 'Nigeria' && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 10,
+              marginTop: 16,
+              flexWrap: 'wrap',
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => setIsCapitalsOpen(true)}
+              style={{
+                height: 34,
+                padding: '0 12px',
+                borderRadius: 8,
+                background: 'var(--surface-2)',
+                border: '1px solid var(--border)',
+                color: 'var(--text)',
+                fontSize: 12,
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                transition: 'all 120ms ease',
+              }}
+            >
+              <Building2 size={14} color="var(--accent)" />
+              <span>🏛️ {t('state_capitals_title')}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsAddPlaceOpen(true)}
+              style={{
+                height: 34,
+                padding: '0 12px',
+                borderRadius: 8,
+                background: 'rgba(200, 240, 60, 0.12)',
+                border: '1px solid var(--accent)',
+                color: 'var(--accent-deep)',
+                fontSize: 12,
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                transition: 'all 120ms ease',
+              }}
+            >
+              <PlusCircle size={14} />
+              <span>+ {t('btn_add_place')}</span>
+            </button>
+
+          </div>
+        )}
+
         {/* Search Bar */}
-        <div style={{ marginTop: 32 }}>
+        <div style={{ marginTop: country === 'Nigeria' ? 12 : 20 }}>
           <SearchBar
             selectedCountry={country}
             onCountryChange={c => {
@@ -218,6 +559,13 @@ export default function DiscoverView() {
               setCuisines([]);
               setSelectedPlaceType(null);
               setSelectedArea(null);
+              setSelectedAmenities([]);
+              setSelectedPayment(null);
+              setDishQuery('');
+              setSelectedLandmark(null);
+              setOpenNowOnly(false);
+              setOpenLateOnly(false);
+              setSelectedMealSlot(null);
             }}
             selectedCity={city}
             onCityChange={c => {
@@ -225,9 +573,21 @@ export default function DiscoverView() {
               setCuisines([]);
               setSelectedPlaceType(null);
               setSelectedArea(null);
+              setSelectedAmenities([]);
+              setSelectedPayment(null);
+              setDishQuery('');
+              setSelectedLandmark(null);
+              setOpenNowOnly(false);
+              setOpenLateOnly(false);
+              setSelectedMealSlot(null);
             }}
             selectedPrice={priceRange}
-            onPriceChange={setPriceRange}
+            onPriceChange={val => {
+              setPriceRange(val);
+              if (activePreset) {
+                setActivePreset(null);
+              }
+            }}
             isPriceOverriddenByPreset={Boolean(activePreset?.priceRangeOverride)}
             selectedCuisines={cuisines}
             onCuisinesChange={setCuisines}
@@ -237,23 +597,74 @@ export default function DiscoverView() {
             }}
           />
 
-          {/* Area & Place Type Filters (OSM / Multi-locality markets) */}
-          {(localityCounts.filter(l => l.count >= 5).length >= 3 || hasOsmData) && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', marginTop: 12 }}>
-              <AreaDropdown
-                localities={localityCounts}
-                selectedArea={selectedArea}
-                onSelectArea={setSelectedArea}
-              />
-              {hasOsmData && (
-                <PlaceTypeChips
-                  selectedType={selectedPlaceType}
-                  onSelectType={setSelectedPlaceType}
-                  counts={placeTypeCounts}
+          {/* Area, Place Type, Amenity, Payment, Meal Clock & Landmark Filters */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 12 }}>
+            {(localityCounts.filter(l => l.count >= 5).length >= 3 || hasOsmData) && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+                <AreaDropdown
+                  localities={localityCounts}
+                  selectedArea={selectedArea}
+                  onSelectArea={setSelectedArea}
                 />
-              )}
-            </div>
-          )}
+                {hasOsmData && (
+                  <PlaceTypeChips
+                    selectedType={selectedPlaceType}
+                    onSelectType={setSelectedPlaceType}
+                    counts={placeTypeCounts}
+                  />
+                )}
+              </div>
+            )}
+
+            {selectedArea && (
+              <AreaFoodFingerprint
+                areaName={selectedArea}
+                restaurants={cityRestaurants}
+              />
+            )}
+
+            <AmenityChips
+              cityRestaurants={cityRestaurants}
+              selectedAmenities={selectedAmenities}
+              onToggleAmenity={id => {
+                setSelectedAmenities(prev =>
+                  prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+                );
+              }}
+            />
+
+            {/* Feature 2: Pay-How Filter Chips from real payment:* tags only */}
+            <PaymentChips
+              cityRestaurants={cityRestaurants}
+              selectedPayment={selectedPayment}
+              onSelectPayment={setSelectedPayment}
+            />
+
+            {/* Feature 3: Naija Meal Clock Filter */}
+            {hasOsmData && (
+              <MealClockFilter
+                openNowOnly={openNowOnly}
+                onToggleOpenNow={setOpenNowOnly}
+                openLateOnly={openLateOnly}
+                onToggleOpenLate={setOpenLateOnly}
+                selectedMealSlot={selectedMealSlot}
+                onSelectMealSlot={setSelectedMealSlot}
+                unlistedHoursCount={unlistedHoursCount}
+              />
+            )}
+
+            {/* Feature 4: Near a Landmark */}
+            {hasOsmData && cityLandmarks.length > 0 && (
+              <LandmarkFilter
+                cityName={city}
+                landmarks={cityLandmarks}
+                selectedLandmark={selectedLandmark}
+                selectedRadiusKm={selectedLandmarkRadiusKm}
+                onSelectLandmark={setSelectedLandmark}
+                onSelectRadiusKm={setSelectedLandmarkRadiusKm}
+              />
+            )}
+          </div>
 
           {/* Preset Chips */}
           <PresetChips
@@ -304,10 +715,11 @@ export default function DiscoverView() {
             }}>
               <Info size={18} style={{ color: 'var(--accent-deep)' }} />
               <p style={{ margin: 0, fontSize: 13, color: 'var(--text-muted)' }}>
-                No ratings available for {city}. Results are ordered by cuisine match, nearness and listing completeness, not by quality.
+                {t('unrated_notice').replace('this city', city)}
               </p>
             </div>
           )}
+
 
           {/* Active Mode and Filter Status Badges */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
@@ -389,6 +801,32 @@ export default function DiscoverView() {
                 <span>Exact match</span>
               </div>
             )}
+
+            {/* Feature 8: Map Gaps filter */}
+            {hasOsmData && gapsCount > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowGapsOnly(prev => !prev)}
+                title="Filter places missing cuisine, hours, or phone to contribute info"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '3px 10px',
+                  borderRadius: 999,
+                  border: showGapsOnly ? '1px solid #ff6b4a' : '1px solid var(--border)',
+                  background: showGapsOnly ? 'rgba(255, 107, 74, 0.15)' : 'var(--surface-2)',
+                  color: showGapsOnly ? '#ff6b4a' : 'var(--text-muted)',
+                  fontSize: 12,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  transition: 'all 120ms ease',
+                }}
+              >
+                <span>🔍 {showGapsOnly ? 'Data Gaps Only' : 'Data Gaps'} ({gapsCount})</span>
+              </button>
+            )}
           </div>
 
           {/* Stage notices */}
@@ -464,24 +902,112 @@ export default function DiscoverView() {
             ))}
           </div>
         ) : displayedRestaurants.length === 0 ? (
-          /* Empty State */
-          <div
-            style={{
-              padding: '64px 24px',
-              textAlign: 'center',
-              background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              borderRadius: 12,
-            }}
-          >
-            <span style={{ fontSize: 40 }}>🍽️</span>
-            <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, color: 'var(--text)', margin: '16px 0 8px' }}>
-              No matching restaurants found
-            </h3>
-            <p style={{ fontSize: 14, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', maxWidth: 400, margin: '0 auto' }}>
-              Try selecting "Any price", clearing cuisine filters, or relaxing table booking and delivery needs.
-            </p>
-          </div>
+          (recommendation?.cityRestaurantCount === 0 || !data.some(r => r.city.toLowerCase() === city.toLowerCase())) ? (
+            /* Friendly Empty State for Unmapped State Capitals / Cities */
+            <div
+              style={{
+                padding: '56px 24px',
+                textAlign: 'center',
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: 16,
+                maxWidth: 580,
+                margin: '0 auto',
+              }}
+            >
+              <div style={{ fontSize: 44, marginBottom: 12 }}>🗺️</div>
+              <h3
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: 20,
+                  fontWeight: 600,
+                  color: 'var(--text)',
+                  margin: '0 0 8px',
+                }}
+              >
+                {city} has 0 places mapped yet on OpenStreetMap
+              </h3>
+              <p
+                style={{
+                  fontSize: 14,
+                  color: 'var(--text-muted)',
+                  fontFamily: 'Inter, sans-serif',
+                  lineHeight: 1.5,
+                  maxWidth: 440,
+                  margin: '0 auto 24px',
+                }}
+              >
+                No restaurants or food spots have been mapped for {city} in our OpenStreetMap extract yet.
+                Be the first to add one locally, or contribute upstream to OpenStreetMap!
+              </p>
+
+              <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
+                <button
+                  type="button"
+                  onClick={() => setIsAddPlaceOpen(true)}
+                  style={{
+                    height: 40,
+                    padding: '0 18px',
+                    borderRadius: 8,
+                    background: 'var(--accent)',
+                    color: 'var(--accent-ink)',
+                    border: 'none',
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                    fontFamily: "'Space Grotesk', sans-serif",
+                  }}
+                >
+                  <PlusCircle size={15} /> Be the first to add one
+                </button>
+
+                <a
+                  href={`https://www.openstreetmap.org/search?query=${encodeURIComponent(city + ', Nigeria')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    height: 40,
+                    padding: '0 18px',
+                    borderRadius: 8,
+                    background: 'var(--surface-2)',
+                    color: 'var(--text)',
+                    border: '1px solid var(--border)',
+                    fontSize: 13,
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span>Map {city} on OpenStreetMap</span>
+                  <ExternalLink size={14} />
+                </a>
+              </div>
+            </div>
+          ) : (
+            /* Standard Filter Empty State */
+            <div
+              style={{
+                padding: '64px 24px',
+                textAlign: 'center',
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: 12,
+              }}
+            >
+              <span style={{ fontSize: 40 }}>🍽️</span>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, color: 'var(--text)', margin: '16px 0 8px' }}>
+                No matching restaurants found
+              </h3>
+              <p style={{ fontSize: 14, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', maxWidth: 400, margin: '0 auto' }}>
+                Try selecting "Any price", clearing cuisine filters, or relaxing table booking and delivery needs.
+              </p>
+            </div>
+          )
         ) : (
           /* 2-Column Split View (Cards 55%, Map 45% sticky) */
           <div
@@ -497,15 +1023,20 @@ export default function DiscoverView() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               {displayedRestaurants.map((r, i) => (
                 <RestaurantCard
-                  key={r.restaurant_id}
+                  key={r.uid}
                   r={r}
-                  isHovered={hoveredId === r.restaurant_id}
-                  isActive={drawerRestaurant?.restaurant_id === r.restaurant_id}
-                  onHover={() => setHoveredId(r.restaurant_id)}
+                  isHovered={hoveredId === r.uid || (r.restaurant_id !== undefined && hoveredId === r.restaurant_id)}
+                  isActive={drawerRestaurant?.uid === r.uid}
+                  onHover={() => setHoveredId(r.uid)}
                   onHoverEnd={() => setHoveredId(null)}
                   onOpen={() => setDrawerRestaurant(r)}
                   onSimilar={() => setDrawerRestaurant(r)}
+                  onFoodRun={() => {
+                    setFoodRunRestaurant(r);
+                    setIsFoodRunOpen(true);
+                  }}
                   delay={i * 40}
+                  distanceFromLandmark={r.distanceFromLandmark}
                 />
               ))}
 
@@ -657,8 +1188,13 @@ export default function DiscoverView() {
       <RestaurantDrawer
         restaurant={drawerRestaurant}
         onClose={() => setDrawerRestaurant(null)}
+        distanceFromLandmark={drawerRestaurant?.distanceFromLandmark}
+        onFoodRun={r => {
+          setFoodRunRestaurant(r);
+          setIsFoodRunOpen(true);
+        }}
         onOpenSimilar={s => {
-          const scored = rankedRestaurants.find(r => r.restaurant_id === s.restaurant_id) || {
+          const scored = rankedRestaurants.find(r => r.uid === s.uid) || {
             ...s,
             cuisineMatch: 0,
             score: s.hasRating ? (s.weighted_rating || 0) : 0,
@@ -672,6 +1208,46 @@ export default function DiscoverView() {
       {/* Compare Tray & Modal */}
       <CompareTray onCompare={() => setIsCompareOpen(true)} />
       <CompareModal open={isCompareOpen} onClose={() => setIsCompareOpen(false)} />
+
+      {/* Food Run Modal (F6) */}
+      <FoodRunModal
+        restaurant={foodRunRestaurant}
+        isOpen={isFoodRunOpen}
+        onClose={() => {
+          setIsFoodRunOpen(false);
+          setFoodRunRestaurant(null);
+        }}
+      />
+
+      {/* Feature 9: Add a Food Spot Modal */}
+      <AddPlaceModal
+        open={isAddPlaceOpen}
+        onClose={() => setIsAddPlaceOpen(false)}
+        defaultCity={city}
+        onPlaceAdded={newPlace => {
+          setCity(newPlace.city);
+        }}
+      />
+
+      {/* Feature 10: State Capital Switcher Modal */}
+      <StateCapitalSwitcher
+        open={isCapitalsOpen}
+        onClose={() => setIsCapitalsOpen(false)}
+        selectedCity={city}
+        onSelectCity={c => {
+          setCity(c);
+          setCuisines([]);
+          setSelectedPlaceType(null);
+          setSelectedArea(null);
+          setSelectedAmenities([]);
+          setSelectedPayment(null);
+          setDishQuery('');
+          setSelectedLandmark(null);
+          setOpenNowOnly(false);
+          setOpenLateOnly(false);
+          setSelectedMealSlot(null);
+        }}
+      />
     </div>
   );
 }

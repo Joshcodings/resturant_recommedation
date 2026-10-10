@@ -1,0 +1,77 @@
+<USER_REQUEST>
+ROLE
+You are a senior full-stack engineer in my existing repo (Joshcodings/resturant_recommedation, branch main at commit c759600). FIRST write an implementation plan artifact listing every file you will create or change, then WAIT for my approval. After approval work stage by stage and STOP at every GATE. This prompt REPLACES all earlier Nigeria/Lagos/worldwide prompts. Keep the existing 58 Vitest tests passing at every stage.
+
+GOAL
+TasteMatch becomes a worldwide restaurant finder where NIGERIA IS THE DEFAULT experience, plus features built around how Nigerians actually find food (WhatsApp, data costs, Naira, "where do I eat near X", cash/transfer/POS, power cuts, owambe-night planning). Lagos is a test case, never a limit: every Nigerian state capital and major city, then any country I name.
+
+WHAT I FOUND IN YOUR LAST COMMIT (verified by running code, fix these first)
+1. Coverage is thin: restaurants_ng.json has 408 places in 3 cities (Lagos 242, Abuja 123, Port Harcourt 43). Only ~30% have cuisines, 60% locality, 31% address, 16% opening_hours, 14% phone, 14% website. Nothing else of Nigeria is covered. Measure the real OSM count for Nigeria (Geofabrik extract via pyosmium, not Overpass bboxes) and report how many places the current query is missing and why (tag filter? bbox? timeout?).
+2. Default country is hard-coded 'India' in DiscoverView.tsx:21, InsightsView.tsx:36, GroupView.tsx:16 and evaluation.ts:86. Rule 3 below forbids hard-coded country names in UI/engine code.
+3. src/lib/rankingNG.ts is an empty file. Delete it or implement it; do not leave dead files.
+4. IDs are a numeric hash (10_000_000_000_000 + osm_id*10 + type). It works for OSM only. Add a string `uid` ("zomato:123", "osm:node/456", "ovt:<GERS id>") as the primary key everywhere (React keys, shortlist, compare, map), derive `uid` in dataLoader for old data, and migrate saved shortlists. Keep restaurant_id for Zomato only.
+5. Data lives in one file (restaurants_ng.json). Move to the sharded layout below so more than 3 cities can load without a 10 MB first download.
+6. The three known problems from my earlier review are still open and you must not touch them in this task (mlMetrics.ts numbers, Rating Simulator, circular benchmark) except to add a README note listing them as known issues.
+
+HARD RULES
+1. Real data only. Never invent names, ratings, votes, prices, hours, addresses, coordinates, cuisines, payment methods or amenities. Unknown = null, never 0, "", false or a default tier.
+2. Allowed sources: OpenStreetMap (Geofabrik extracts via pyosmium; Overpass only for tiny tests under 50 requests), Overture Maps Places (optional second layer), the existing Zomato data, and a community layer (see Feature 9). No Google/TripAdvisor/Zomato scraping, no paid API, no backend. The deployed app never calls Overpass or Overture.
+3. No hard-coded country or city names in UI or engine code. Defaults come from one config file (config/defaults.ts) containing defaultCountryCode "NG".
+4. Each source keeps its own files, licence and attribution. Read the CURRENT ODbL/Overture attribution wording from their own docs and show me the exact text before you add it. Do not mix records from two sources in one record without a logged merge.
+5. Every figure or claim in the UI, README or docs must come from code you ran. Never write "verified" or numbers from memory.
+6. Free deployment only. No credit card.
+7. Any text in Nigerian Pidgin, Yoruba, Igbo or Hausa is a DRAFT. Mark it "needs native-speaker review" in the code and in the report. Never claim it is correct.
+8. Never infer a cuisine, price, halal status, or quality from a restaurant's name. A name match may be used only for text search and must be labelled "matched in name".
+
+STAGE 0: BASELINE (before editing)
+Record top-10 uids and notices for India/New Delhi (price 2, North Indian+Chinese, table booking), USA/Orlando (price 4, Italian), India/Lucknow (price 3, Continental) and for Nigeria/Lagos (cuisine Nigerian, no price). Save as regression fixtures. Run npm test, tsc, build and paste the results.
+
+STAGE 1: MEASURE NIGERIA (GATE)
+Build scripts/sources/osm_extract.py reading the Geofabrik Nigeria .osm.pbf (check the CURRENT file URL and size on Geofabrik and tell me; if it is too big for this machine say so and propose the smaller alternative). Tags: amenity=restaurant|fast_food|cafe|bar|pub|food_court|ice_cream, shop=bakery|butcher|seafood (separate place_type "food_shop", off by default), and Nigerian informal food places where tagged. Keep these OSM tags as structured fields when present (do not guess): cuisine, opening_hours, phone, website, contact:*, addr:*, payment:cash, payment:cards, payment:mobile_payment (and any payment:* present), diet:halal, diet:vegetarian, diet:vegan, outdoor_seating, indoor_seating, air_conditioning, internet_access, wheelchair, takeaway, delivery, drive_through, smoking, capacity, brand, operator, and the element's last-edit timestamp, version and any check_date. City assignment chain: addr:city -> addr:state -> point-in-polygon against OSM boundary=administrative (admin_level 4 state, 6/8 LGA) -> nearest place=city|town within 25 km -> "Unassigned". Print % resolved at each step.
+GATE: print the coverage report (places per state and per city, top 30 cities, % with each field above), shard sizes, the 30 most common unmapped cuisine values, and 20 random rows for me to eyeball. Say plainly if coverage is weak and what that means for the features below.
+
+STAGE 2: NULL SAFETY AND UID (GATE)
+Grep for every use of aggregate_rating, weighted_rating, price_range, votes, has_table_booking, has_online_delivery, toFixed in tastematch/src and fix every unguarded one (remember JS turns null into 0 in comparisons and arithmetic: use isNum()). Add the new fields to types as optional/nullable. Add synthetic-fixture tests (fake, never shipped) asserting no NaN, "null", "undefined", "0" price or "NaN" anywhere in recommend(), group mode, similarity, presets, sliders, MMR, compare, insights. GATE: npm test, tsc, build, regression fixtures unchanged.
+
+STAGE 3: ARCHITECTURE (GATE)
+data/out/countries.json (code, name, status, places, cities, retrieved_at, sources, licence, attribution, data_base_url); countries/NG.json (city index with capabilities); shards/NG/<city>-<n>.json, max 8 MB raw each (split by locality or ~0.1 degree grid if larger). Convert Zomato into the same format with zero behaviour change. Loader: countries.json first, city index on country pick, shards on city pick, keep last 5 cities, skeletons, retry on failure. Builds idempotent (running twice gives identical SHA-256). scripts/validate_datasets.py exits 1 on: duplicate uid, non-Zomato record with rating/votes/price/cost, coordinates outside the country, missing required fields, shard over cap. GATE: fixtures unchanged, old restaurants.json path still works.
+
+STAGE 4: NIGERIA AS THE DEFAULT (GATE)
+- First visit opens on Nigeria, with the city chosen as follows: if the user has a saved choice use it; else Lagos (largest city by count in the index, computed, not hard-coded). Do NOT ask for geolocation on load. A "Near me" button asks only after a click, picks the nearest city by Haversine, never stores or sends the location, and handles denial gracefully.
+- Naira first: NGN is the default display currency for Nigeria; USD remains the base for Zomato countries.
+- Searchable country and city pickers (Intl.DisplayNames, accent-insensitive). Countries not built show "Not available yet" with a prefilled GitHub issue link.
+- Banner for cities without ratings: "No ratings available for {city}. Results are ordered by cuisine match, nearness, listing completeness and freshness, not by quality."
+- Ranking without ratings (config file, marked heuristic): with cuisines chosen 0.45 cuisineMatch + 0.25 proximity + 0.20 listingDetail + 0.10 freshness; without cuisines 0.5 proximity + 0.35 listingDetail + 0.15 freshness. freshness = 1 - min(months since last OSM edit, 36)/36, null if no timestamp (then renormalise). Tie-break by uid. Never mix rated and unrated scores in one ordering. Call it "listing completeness" and "freshness", never "quality".
+- Filters: place-type chips, Area dropdown (cities with >=3 localities of >=5 places), plus the amenity chips below, each shown only if at least 5 places in the city state it.
+- GATE: screenshots at 390, 820 and 1440 px, dark and light, and measured switch-city time on throttled 4G.
+
+STAGE 5: THE FEATURES (build in this order, one GATE after each pair)
+Each feature must work from real fields only and degrade gracefully when the field is missing.
+
+F1 Dish-first search. A search box that understands Nigerian food words (jollof, suya, amala, ewedu, pounded yam, ofada, egusi, efo riro, pepper soup, nkwobi, isi ewu, ofe onugbu, akara, moi moi, small chops, shawarma, asun, boli and roasted fish, mama put, buka, bukateria). Keep the dictionary in one JSON file (dish -> cuisine tags and name keywords). Results show WHY they matched: "cuisine tag: nigerian" or "matched in name" (never both claims mixed). Never imply a place serves a dish unless a cuisine tag says so.
+F2 Pay-how filter. Chips "Accepts cash", "Cards", "Mobile payment" from the payment:* tags only. Places with no payment tag show nothing, not "cash only".
+F3 Naija meal clock. Parse opening_hours client-side (use the opening_hours.js library, MIT, or write a strict small parser and test it) in Africa/Lagos time. "Open now" and "Open late (after 10 PM)" filters apply only to places that have hours; show "N places don't list hours" under the filter. Add morning / afternoon / evening / late-night quick chips that set time and place_type (breakfast spots = bakeries, cafes; late night = bars, fast food) without inventing menus.
+F4 Near a landmark. Extract landmarks from the same OSM extract (airports, universities, hospitals, big markets, malls, stadiums, bus parks, hotels, religious centres) with names; "Find food near {landmark}" with straight-line distance and a walking-time ESTIMATE labelled "straight-line, approx.". Works offline once the city shard is cached. Diaspora use case: "land at the airport, find food near my hotel".
+F5 Food Crawl builder. Pick an area and a number of stops (2 to 5). The app builds a route by place_type (e.g. small bites -> main -> drink/dessert), all within a walking radius you set (default 1.5 km), using nearest-neighbour ordering, deterministic and shareable by URL. Label it as a suggestion built from listings, not endorsements. Export the plan as an image and as text.
+F6 WhatsApp-first sharing. "Share on WhatsApp" using https://wa.me/?text= with a readable plain-text list (name, area, distance, map link). Shortlist export as a PNG card sized for WhatsApp Status. No tracking, no backend.
+F7 Data-saver and offline. PWA with a service worker that caches the app shell and visited city shards (cache name versioned). A "Data saver" toggle that swaps map tiles for a text-only list and a simple SVG dot plot of places, and shows the size of each shard before download. Report the measured download for the Lagos shard.
+F8 Make-the-map-better loop. Every place card with missing fields shows "Add what you know on OpenStreetMap" linking to the OSM editor for that exact element (use source_id; verify the URL format against OSM docs and test it). Add a per-city "Gaps" view: places missing cuisine / hours / phone, so a local can fix the real map and the next data refresh improves for everyone. This is how the data gets better without any backend.
+F9 Community facts layer (optional, only after F1 to F8 pass). A separate file data/community/community_ng.json (licence CC0, own attribution) fed by a GitHub Issue Form: place uid, field (e.g. has_generator, accepts_transfer, pepper_level, outdoor_seating), value, and an evidence link or photo. A GitHub Action validates the issue and opens a PR, and I merge. Show these as "Reported by the community, not verified" with the date, visually distinct from OSM facts. Never merge them into OSM records. Keep unmerged submissions out of the app.
+F10 Language and tone. A language switch: English (default), Naija Pidgin, Yoruba, Igbo, Hausa for navigation labels only (not data). Strings in i18n JSON files, all non-English files flagged "DRAFT: needs native-speaker review". Example Pidgin tone for the search placeholder: "Wetin you wan chop?" Do not translate restaurant data.
+F11 Area Food Fingerprint. For each locality with >=15 places, a small chart of its cuisine and place-type mix computed from the data, plus "what this area is known for" ONLY as "most listed cuisine: X (n places)". No claims about quality or popularity.
+F12 Trust panel in the drawer. For each place: source (OSM/Zomato), last edited date, which fields are present vs missing as a tick-grid, a "Report closed or wrong" link that opens a prefilled GitHub issue with the uid, and the sentence "Open data is incomplete and may include closed places."
+
+STAGE 6: HOSTING AND MORE COUNTRIES (GATE)
+Test and report for Hugging Face Datasets, the Netlify/Vercel/GitHub Pages public folder, and Cloudflare Pages: CORS headers, free size and bandwidth limits, and whether this use is allowed. Show me the comparison and wait for my choice. Then add countries one at a time from a config list, printing each coverage report and waiting for me to pick the next.
+
+STAGE 7: DOCS
+README with real numbers from code you ran, licence notices, per-source attribution in footer, About and drawer (exact text I approved), known-issues list, and a short "How to contribute data" section pointing to F8 and F9.
+
+ACCEPTANCE TESTS (automate, show command output)
+T1 countries listed; T2 Nigeria cities listed; T3 app opens on Nigeria without any hard-coded country name in src (grep proves it); T4 dish search labels match reasons correctly; T5 payment chips show only where tagged; T6 "Open now" ignores places without hours and says how many were excluded; T7 landmark search works; T8 crawl is deterministic for the same input; T9 WhatsApp link opens with encoded text; T10 offline reload of a visited city works; T11 unrated places never produce NaN, "0" price or "null"; T12 places without coordinates appear in the list but not on the map; T13 build twice gives identical SHA-256; T14 Zomato regression unchanged; T15 all old tests pass; T16 validator passes; T17 attribution visible in footer, About and drawer; T18 uid unique across shards; T19 old shortlists load; T20 Near me degrades gracefully when denied; T21 community records never overwrite OSM fields; T22 npm run build succeeds.
+
+REPORT BACK WITH: files created or changed, command outputs, the coverage report, measured performance numbers, and anything you could not verify. Say "not verified" instead of guessing.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T10:22:29+01:00.
+</ADDITIONAL_METADATA>

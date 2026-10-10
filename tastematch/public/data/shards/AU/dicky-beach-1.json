@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.6,
+    "average_cost_for_two": 7.0,
+    "city": "Dicky Beach",
+    "country": "Australia",
+    "cuisines": "Coffee and Tea, Tea, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.783576,
+    "locality": "Dicky Beach",
+    "longitude": 153.137401,
+    "price_range": 1,
+    "restaurant_id": 16615894,
+    "restaurant_name": "The Giggling Goat",
+    "uid": "zomato:16615894",
+    "votes": 29,
+    "weighted_rating": 3.637
+  }
+]

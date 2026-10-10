@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.9,
+    "average_cost_for_two": 700.0,
+    "city": "Inner City",
+    "country": "South Africa",
+    "cuisines": "Tapas",
+    "currency": "ZAR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.207091,
+    "locality": "Marshalltown",
+    "longitude": 28.031863,
+    "price_range": 4,
+    "restaurant_id": 18339373,
+    "restaurant_name": "Urbanologi",
+    "uid": "zomato:18339373",
+    "votes": 194,
+    "weighted_rating": 4.759
+  },
+  {
+    "aggregate_rating": 4.9,
+    "average_cost_for_two": 1540.0,
+    "city": "Inner City",
+    "country": "South Africa",
+    "cuisines": "European, Contemporary",
+    "currency": "ZAR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.203278,
+    "locality": "City and Suburban",
+    "longitude": 28.060192,
+    "price_range": 4,
+    "restaurant_id": 6501534,
+    "restaurant_name": "Cube - Tasting Kitchen",
+    "uid": "zomato:6501534",
+    "votes": 441,
+    "weighted_rating": 4.83
+  }
+]

@@ -15,6 +15,7 @@
 
 import type { RestaurantParsed } from '@/types/restaurant';
 import { recommend, computePairwiseSimilarity } from '@/lib/recommendation';
+import { APP_DEFAULTS } from '@/config/defaults';
 
 export interface MethodMetrics {
   methodName: string;
@@ -83,7 +84,7 @@ export function runRecommendationEvaluation(
     for (const c of testCuisines) {
       for (const p of testPrices.slice(0, 2)) {
         queries.push({
-          country: 'India',
+          country: APP_DEFAULTS.benchmarkCountryName,
           city,
           cuisines: c,
           priceRange: p,
@@ -94,7 +95,7 @@ export function runRecommendationEvaluation(
 
   // Pre-filter catalog for relevant queries
   const allCityRestaurants = data.filter(r => testCities.includes(r.city));
-  const totalCatalogSize = new Set(allCityRestaurants.map(r => r.restaurant_id)).size;
+  const totalCatalogSize = new Set(allCityRestaurants.map(r => r.uid)).size;
 
   const methods = [
     { id: 'baseline', name: 'Baseline (Top-Rated)', desc: 'Ranks strictly by Bayesian weighted rating' },
@@ -107,7 +108,7 @@ export function runRecommendationEvaluation(
     precisions: number[];
     recalls: number[];
     ndcgs: number[];
-    recommendedIds: Set<number>;
+    recommendedIds: Set<string>;
     diversities: number[];
   }> = {
     baseline: { precisions: [], recalls: [], ndcgs: [], recommendedIds: new Set(), diversities: [] },
@@ -181,7 +182,7 @@ export function runRecommendationEvaluation(
       const relVector: number[] = [];
 
       for (const item of list) {
-        results[id].recommendedIds.add(item.restaurant_id);
+        results[id].recommendedIds.add(item.uid);
         const rel = isRelevant(item) ? 1 : 0;
         if (rel === 1) hits++;
         relVector.push(rel);

@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 4.6,
+    "average_cost_for_two": 800.0,
+    "city": "Secunderabad",
+    "country": "India",
+    "cuisines": "Cafe, Continental",
+    "currency": "INR",
+    "has_online_delivery": 0,
+    "has_table_booking": 1,
+    "latitude": 17.4832159,
+    "locality": "Sainikpuri",
+    "longitude": 78.5521107,
+    "price_range": 2,
+    "restaurant_id": 90499,
+    "restaurant_name": "Coffee Cup",
+    "uid": "zomato:90499",
+    "votes": 1408,
+    "weighted_rating": 4.557
+  },
+  {
+    "aggregate_rating": 4.4,
+    "average_cost_for_two": 850.0,
+    "city": "Secunderabad",
+    "country": "India",
+    "cuisines": "North Indian, Chinese",
+    "currency": "INR",
+    "has_online_delivery": 1,
+    "has_table_booking": 1,
+    "latitude": 17.4589981,
+    "locality": "Karkhana",
+    "longitude": 78.5003662,
+    "price_range": 2,
+    "restaurant_id": 96814,
+    "restaurant_name": "Saffron Mantra",
+    "uid": "zomato:96814",
+    "votes": 494,
+    "weighted_rating": 4.304
+  }
+]

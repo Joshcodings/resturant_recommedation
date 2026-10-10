@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.7,
+    "average_cost_for_two": 20.0,
+    "city": "Forrest",
+    "country": "Australia",
+    "cuisines": "Cafe, Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -38.517292,
+    "locality": "Forrest",
+    "longitude": 143.714315,
+    "price_range": 2,
+    "restaurant_id": 16607969,
+    "restaurant_name": "Bespoke Harvest",
+    "uid": "zomato:16607969",
+    "votes": 29,
+    "weighted_rating": 3.674
+  }
+]

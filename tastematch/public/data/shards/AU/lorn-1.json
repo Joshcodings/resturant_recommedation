@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.6,
+    "average_cost_for_two": 20.0,
+    "city": "Lorn",
+    "country": "Australia",
+    "cuisines": "Breakfast, Coffee and Tea",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -32.728097,
+    "locality": "Lorn",
+    "longitude": 151.558475,
+    "price_range": 2,
+    "restaurant_id": 16611498,
+    "restaurant_name": "Stillwater on Belmore",
+    "uid": "zomato:16611498",
+    "votes": 18,
+    "weighted_rating": 3.643
+  }
+]

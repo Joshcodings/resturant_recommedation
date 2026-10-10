@@ -1,0 +1,45 @@
+[
+  {
+    "addr": {
+      "city": "Yenagoa, Bayelsa state",
+      "housenumber": "opposite Mike Okpokpor junction, Kpansia, Yenagoa 569101, Bayelsa",
+      "street": "Isaac Boro Expressway"
+    },
+    "address": "Isaac Boro Expressway",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Yenagoa, Bayelsa state",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 4.9223516,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 6.313321,
+    "opening_hours": "24/7",
+    "osm_timestamp": "2024-07-08T19:56:58Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "bar",
+    "price_range": null,
+    "restaurant_name": "De Moon",
+    "source_id": "node/11991960875",
+    "state": "Unknown",
+    "uid": "osm:node/11991960875",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

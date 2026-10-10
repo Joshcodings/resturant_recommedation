@@ -1,0 +1,43 @@
+[
+  {
+    "addr": {
+      "city": "Kureken Sani",
+      "housenumber": "5",
+      "street": "grove st"
+    },
+    "address": "grove st",
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Kureken Sani",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 11.9548305,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 8.5866767,
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "osm_timestamp": "2023-09-23T10:28:25Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "bar",
+    "price_range": null,
+    "restaurant_name": "bar and grille",
+    "source_id": "node/9291311734",
+    "state": "Unknown",
+    "uid": "osm:node/9291311734",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

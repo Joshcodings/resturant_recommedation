@@ -1,0 +1,28 @@
+{
+  "cities": {
+    "Ankara": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "ankara-1.json"
+      ]
+    },
+    "Istanbul": {
+      "count": 14,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "istanbul-1.json"
+      ]
+    }
+  },
+  "code": "TR",
+  "country": "Turkey"
+}

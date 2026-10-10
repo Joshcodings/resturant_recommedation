@@ -1,0 +1,39 @@
+{
+  "cities": {
+    "Abu Dhabi": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "abu-dhabi-1.json"
+      ]
+    },
+    "Dubai": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "dubai-1.json"
+      ]
+    },
+    "Sharjah": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": true,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "sharjah-1.json"
+      ]
+    }
+  },
+  "code": "AE",
+  "country": "UAE"
+}

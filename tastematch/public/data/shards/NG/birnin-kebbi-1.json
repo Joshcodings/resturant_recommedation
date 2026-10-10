@@ -1,0 +1,50 @@
+[
+  {
+    "addr": {
+      "city": "Birnin kebbi",
+      "postcode": "860101",
+      "street": "Amina rabo plaza, Birnin kebbi"
+    },
+    "address": "Amina rabo plaza, Birnin kebbi",
+    "aggregate_rating": null,
+    "amenities": {
+      "drive_through": true,
+      "operator": "Deelad"
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Birnin kebbi",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Shawarma, Other",
+    "cuisines_raw": "shawarma;crispy_chicken",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "halal": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 12.4379996,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 4.2087388,
+    "opening_hours": "24/7",
+    "osm_timestamp": "2024-04-02T12:08:39Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": "+234 818 216 8353",
+    "place_type": "fast_food",
+    "price_range": null,
+    "restaurant_name": "DEELAD PLACE",
+    "source_id": "node/11780081758",
+    "state": "Unknown",
+    "uid": "osm:node/11780081758",
+    "unmapped_cuisines": [
+      "crispy_chicken"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

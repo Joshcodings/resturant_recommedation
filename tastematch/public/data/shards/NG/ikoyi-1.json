@@ -1,0 +1,51 @@
+[
+  {
+    "addr": {
+      "city": "Ikoyi",
+      "housenumber": "190",
+      "postcode": "101233",
+      "street": "Awolowo Road"
+    },
+    "address": "Awolowo Road",
+    "aggregate_rating": null,
+    "amenities": {
+      "air_conditioning": true,
+      "smoking": false
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Ikoyi",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Unspecified",
+    "cuisines_raw": null,
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.4442171,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.423949,
+    "opening_hours": "We-Su 18:00-03:00",
+    "osm_timestamp": "2024-03-07T19:39:54Z",
+    "osm_version": 4,
+    "payment_methods": {
+      "cards": true,
+      "cash": true,
+      "credit_cards": true
+    },
+    "phone": null,
+    "place_type": "bar",
+    "price_range": null,
+    "restaurant_name": "SILK LAGOS",
+    "source_id": "node/11287504106",
+    "state": "Unknown",
+    "uid": "osm:node/11287504106",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "https://www.thesilklagos.com/",
+    "weighted_rating": null
+  }
+]

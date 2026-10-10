@@ -1,0 +1,92 @@
+[
+  {
+    "addr": {
+      "city": "Mariri",
+      "housenumber": "6"
+    },
+    "address": null,
+    "aggregate_rating": null,
+    "amenities": {
+      "brand": "Starbucks",
+      "internet_access": true,
+      "outdoor_seating": true,
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Mariri",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Cafe",
+    "cuisines_raw": "coffee_shop",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 11.9559616,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 8.5864877,
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "osm_timestamp": "2023-09-23T10:28:27Z",
+    "osm_version": 3,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "cafe",
+    "price_range": null,
+    "restaurant_name": "Starbucks",
+    "source_id": "way/937459699",
+    "state": "Unknown",
+    "uid": "osm:way/937459699",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  },
+  {
+    "addr": {
+      "city": "Mariri",
+      "housenumber": "5",
+      "street": "water st"
+    },
+    "address": "water st",
+    "aggregate_rating": null,
+    "amenities": {
+      "brand": "Applebee's Neighborhood Grill & Bar"
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Mariri",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "American",
+    "cuisines_raw": "american",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "vegetarian": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 11.9579766,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 8.5862875,
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "osm_timestamp": "2021-11-28T20:40:59Z",
+    "osm_version": 3,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Applebee's",
+    "source_id": "way/992770348",
+    "state": "Unknown",
+    "uid": "osm:way/992770348",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

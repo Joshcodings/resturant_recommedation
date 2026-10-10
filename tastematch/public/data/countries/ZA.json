@@ -1,0 +1,72 @@
+{
+  "cities": {
+    "Cape Town": {
+      "count": 20,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "cape-town-1.json"
+      ]
+    },
+    "Inner City": {
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "inner-city-1.json"
+      ]
+    },
+    "Johannesburg": {
+      "count": 6,
+      "hasBooking": true,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "johannesburg-1.json"
+      ]
+    },
+    "Pretoria": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "pretoria-1.json"
+      ]
+    },
+    "Randburg": {
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "randburg-1.json"
+      ]
+    },
+    "Sandton": {
+      "count": 11,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "sandton-1.json"
+      ]
+    }
+  },
+  "code": "ZA",
+  "country": "South Africa"
+}

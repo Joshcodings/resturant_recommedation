@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 3.7,
+    "average_cost_for_two": 300000.0,
+    "city": "Tangerang",
+    "country": "Indonesia",
+    "cuisines": "Indonesian",
+    "currency": "IDR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -6.241792,
+    "locality": "Alam Sutera Town Center, Serpong Utara",
+    "longitude": 106.652688,
+    "price_range": 3,
+    "restaurant_id": 18386856,
+    "restaurant_name": "Onokabe",
+    "uid": "zomato:18386856",
+    "votes": 155,
+    "weighted_rating": 3.845
+  },
+  {
+    "aggregate_rating": 4.9,
+    "average_cost_for_two": 200000.0,
+    "city": "Tangerang",
+    "country": "Indonesia",
+    "cuisines": "Sunda, Indonesian",
+    "currency": "IDR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -6.269913889,
+    "locality": "Pondok Aren",
+    "longitude": 106.7261194,
+    "price_range": 3,
+    "restaurant_id": 7417450,
+    "restaurant_name": "Talaga Sampireun",
+    "uid": "zomato:7417450",
+    "votes": 2212,
+    "weighted_rating": 4.887
+  }
+]

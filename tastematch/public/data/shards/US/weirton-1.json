@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.9,
+    "average_cost_for_two": 25.0,
+    "city": "Weirton",
+    "country": "USA",
+    "cuisines": "Burger, Greek, Sandwich",
+    "currency": "USD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": 40.396043,
+    "locality": "Weirton",
+    "longitude": -80.529488,
+    "price_range": 2,
+    "restaurant_id": 17694056,
+    "restaurant_name": "Theo Yianni's Authentic Greek Restaurant",
+    "uid": "zomato:17694056",
+    "votes": 156,
+    "weighted_rating": 3.932
+  }
+]

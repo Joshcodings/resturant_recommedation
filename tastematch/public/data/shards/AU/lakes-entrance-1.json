@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.8,
+    "average_cost_for_two": 7.0,
+    "city": "Lakes Entrance",
+    "country": "Australia",
+    "cuisines": "Breakfast, Coffee and Tea",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.8783865,
+    "locality": "Lakes Entrance",
+    "longitude": 147.9942247,
+    "price_range": 1,
+    "restaurant_id": 16605794,
+    "restaurant_name": "Funkey Monkey",
+    "uid": "zomato:16605794",
+    "votes": 97,
+    "weighted_rating": 3.752
+  }
+]

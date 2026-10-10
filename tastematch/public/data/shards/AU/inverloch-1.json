@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 3.7,
+    "average_cost_for_two": 7.0,
+    "city": "Inverloch",
+    "country": "Australia",
+    "cuisines": "Burger, Coffee and Tea, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -38.6347458,
+    "locality": "Inverloch",
+    "longitude": 145.7287133,
+    "price_range": 1,
+    "restaurant_id": 16606299,
+    "restaurant_name": "Beach Box Cafe",
+    "uid": "zomato:16606299",
+    "votes": 100,
+    "weighted_rating": 3.686
+  }
+]

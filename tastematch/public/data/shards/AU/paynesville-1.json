@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 2.6,
+    "average_cost_for_two": 120.0,
+    "city": "Paynesville",
+    "country": "Australia",
+    "cuisines": "Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.9194154,
+    "locality": "Paynesville",
+    "longitude": 147.7227832,
+    "price_range": 4,
+    "restaurant_id": 18255631,
+    "restaurant_name": "Pier 70",
+    "uid": "zomato:18255631",
+    "votes": 16,
+    "weighted_rating": 3.402
+  }
+]

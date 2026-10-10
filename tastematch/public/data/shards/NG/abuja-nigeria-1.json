@@ -1,0 +1,165 @@
+[
+  {
+    "addr": {
+      "city": "Abuja Nigeria",
+      "housenumber": "Shop 4",
+      "postcode": "900102",
+      "street": "Grace Court Estate, IDU Impresit, Karmo"
+    },
+    "address": "Grace Court Estate, IDU Impresit, Karmo",
+    "aggregate_rating": null,
+    "amenities": {
+      "delivery": true,
+      "internet_access": true,
+      "outdoor_seating": true,
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Abuja Nigeria",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Pizza, Nigerian, Fast Food, Other, Seafood, International",
+    "cuisines_raw": "pizza;regional;burger;sandwich;chicken;fish_and_chips;steak_house;seafood;international",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "vegetarian": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 9.0551174,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 7.38521,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2025-07-07T21:32:33Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": "+234 81 728 924 07",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Bites & Grills",
+    "source_id": "node/8196228179",
+    "state": "Unknown",
+    "uid": "osm:node/8196228179",
+    "unmapped_cuisines": [
+      "sandwich",
+      "fish_and_chips",
+      "steak_house"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  },
+  {
+    "addr": {
+      "city": "Abuja Nigeria",
+      "housenumber": "Shop 4",
+      "postcode": "900102",
+      "street": "Grace Court Estate, IDU Impresit, Karmo"
+    },
+    "address": "Grace Court Estate, IDU Impresit, Karmo",
+    "aggregate_rating": null,
+    "amenities": {
+      "delivery": true,
+      "drive_through": true,
+      "internet_access": true,
+      "operator": "Bites & Grills",
+      "outdoor_seating": true,
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Abuja Nigeria",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Pizza, Fast Food, Other, International",
+    "cuisines_raw": "pizza;burger;sandwich;fish_and_chips;steak_house;international;chicken",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "vegetarian": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 9.0550856,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 7.3852325,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2025-07-07T21:32:33Z",
+    "osm_version": 2,
+    "payment_methods": {
+      "cash": true
+    },
+    "phone": "+234 81 728 924 07",
+    "place_type": "fast_food",
+    "price_range": null,
+    "restaurant_name": "Bites & Grills",
+    "source_id": "node/8196228181",
+    "state": "Unknown",
+    "uid": "osm:node/8196228181",
+    "unmapped_cuisines": [
+      "sandwich",
+      "fish_and_chips",
+      "steak_house"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  },
+  {
+    "addr": {
+      "city": "Abuja Nigeria",
+      "housenumber": "Shop 4",
+      "postcode": "900102",
+      "street": "Grace Court Estate IDU Impresit, Karmo"
+    },
+    "address": "Grace Court Estate IDU Impresit, Karmo",
+    "aggregate_rating": null,
+    "amenities": {
+      "delivery": true,
+      "internet_access": true,
+      "outdoor_seating": true,
+      "takeaway": true
+    },
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Abuja Nigeria",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Fast Food, Pizza, Other, Seafood, Nigerian, Chinese",
+    "cuisines_raw": "burger;pizza;chicken;sandwich;fish_and_chips;seafood;regional;chinese;steak_house",
+    "data_source": "OpenStreetMap",
+    "diet": {
+      "vegetarian": true
+    },
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 9.0551768,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 7.3853675,
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "osm_timestamp": "2020-12-05T12:03:38Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": "+234 81 728 924 07",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Bites & Grills",
+    "source_id": "way/881248855",
+    "state": "Unknown",
+    "uid": "osm:way/881248855",
+    "unmapped_cuisines": [
+      "sandwich",
+      "fish_and_chips",
+      "steak_house"
+    ],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

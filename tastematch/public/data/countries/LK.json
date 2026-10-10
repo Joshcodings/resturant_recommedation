@@ -1,0 +1,17 @@
+{
+  "cities": {
+    "Colombo": {
+      "count": 20,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "colombo-1.json"
+      ]
+    }
+  },
+  "code": "LK",
+  "country": "Sri Lanka"
+}

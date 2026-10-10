@@ -1,0 +1,21 @@
+[
+  {
+    "aggregate_rating": 4.3,
+    "average_cost_for_two": 200.0,
+    "city": "Randburg",
+    "country": "South Africa",
+    "cuisines": "Cafe",
+    "currency": "ZAR",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -26.14026,
+    "locality": "Linden",
+    "longitude": 27.991791,
+    "price_range": 3,
+    "restaurant_id": 6502134,
+    "restaurant_name": "The Whippet",
+    "uid": "zomato:6502134",
+    "votes": 618,
+    "weighted_rating": 4.293
+  }
+]

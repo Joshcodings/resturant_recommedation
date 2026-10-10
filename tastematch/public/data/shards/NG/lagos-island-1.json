@@ -1,0 +1,43 @@
+[
+  {
+    "addr": {
+      "city": "Lagos Island",
+      "housename": "Syrian Club",
+      "street": "Ribadu Road"
+    },
+    "address": "Ribadu Road",
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Lagos Island",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Nigerian",
+    "cuisines_raw": "regional",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.4454377,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.4176431,
+    "opening_hours": null,
+    "osm_timestamp": "2025-04-02T00:38:33Z",
+    "osm_version": 1,
+    "payment_methods": null,
+    "phone": null,
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Syrian Club",
+    "source_id": "way/1373912034",
+    "state": "Unknown",
+    "uid": "osm:way/1373912034",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": null,
+    "weighted_rating": null
+  }
+]

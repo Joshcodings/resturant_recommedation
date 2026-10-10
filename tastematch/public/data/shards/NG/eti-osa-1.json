@@ -1,0 +1,43 @@
+[
+  {
+    "addr": {
+      "city": "Eti-Osa",
+      "housenumber": "864B",
+      "street": "Bishop Aboyade Cole Street"
+    },
+    "address": "Bishop Aboyade Cole Street",
+    "aggregate_rating": null,
+    "amenities": null,
+    "assignment_step": "step1_addr_city",
+    "average_cost_for_two": null,
+    "check_date": null,
+    "city": "Eti-Osa",
+    "contact": null,
+    "country": "Nigeria",
+    "cuisines": "Lebanese",
+    "cuisines_raw": "lebanese",
+    "data_source": "OpenStreetMap",
+    "diet": null,
+    "has_online_delivery": null,
+    "has_table_booking": null,
+    "latitude": 6.434135,
+    "licence": "ODbL 1.0",
+    "locality": null,
+    "longitude": 3.4316492,
+    "opening_hours": "Mo-Su 09:00-23:00",
+    "osm_timestamp": "2024-03-10T06:04:42Z",
+    "osm_version": 2,
+    "payment_methods": null,
+    "phone": "+2348035791444",
+    "place_type": "restaurant",
+    "price_range": null,
+    "restaurant_name": "Leila Restaurant",
+    "source_id": "node/11708247043",
+    "state": "Unknown",
+    "uid": "osm:node/11708247043",
+    "unmapped_cuisines": [],
+    "votes": null,
+    "website": "https://www.leilarestaurant.com/",
+    "weighted_rating": null
+  }
+]

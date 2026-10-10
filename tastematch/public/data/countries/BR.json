@@ -1,0 +1,39 @@
+{
+  "cities": {
+    "Brasilia": {
+      "count": 19,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "brasilia-1.json"
+      ]
+    },
+    "Rio de Janeiro": {
+      "count": 19,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "rio-de-janeiro-1.json"
+      ]
+    },
+    "Sao Paulo": {
+      "count": 17,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": true,
+      "hasRatings": true,
+      "shards": [
+        "sao-paulo-1.json"
+      ]
+    }
+  },
+  "code": "BR",
+  "country": "Brazil"
+}

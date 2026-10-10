@@ -1,0 +1,40 @@
+[
+  {
+    "aggregate_rating": 3.8,
+    "average_cost_for_two": 20.0,
+    "city": "Hepburn Springs",
+    "country": "Australia",
+    "cuisines": "Cafe, Coffee and Tea, Modern Australian",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.3123267,
+    "locality": "Hepburn Springs",
+    "longitude": 144.1387014,
+    "price_range": 2,
+    "restaurant_id": 16604358,
+    "restaurant_name": "Blue Bean Love Cafe",
+    "uid": "zomato:16604358",
+    "votes": 192,
+    "weighted_rating": 3.771
+  },
+  {
+    "aggregate_rating": 3.8,
+    "average_cost_for_two": 7.0,
+    "city": "Hepburn Springs",
+    "country": "Australia",
+    "cuisines": "Italian, Fusion, Cafe",
+    "currency": "AUD",
+    "has_online_delivery": 0,
+    "has_table_booking": 0,
+    "latitude": -37.275494,
+    "locality": "Hepburn Springs",
+    "longitude": 144.110062,
+    "price_range": 1,
+    "restaurant_id": 16604896,
+    "restaurant_name": "La Trattoria of Lavandula",
+    "uid": "zomato:16604896",
+    "votes": 93,
+    "weighted_rating": 3.75
+  }
+]
