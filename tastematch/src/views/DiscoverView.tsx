@@ -37,6 +37,10 @@ import {
   Building2,
   PlusCircle,
   ExternalLink,
+  Lock,
+  Zap,
+  MapPin,
+  UtensilsCrossed,
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -521,7 +525,7 @@ export default function DiscoverView() {
               }}
             >
               <Building2 size={14} color="var(--accent)" />
-              <span>🏛️ {t('state_capitals_title')}</span>
+              <span>{t('state_capitals_title')}</span>
             </button>
 
             <button
@@ -738,7 +742,8 @@ export default function DiscoverView() {
                 border: '1px solid var(--border)',
               }}
             >
-              {mode === 'strict' ? '🔒 Strict Mode' : '⚡ Flexible Mode'}
+              {mode === 'strict' ? <Lock size={12} /> : <Zap size={12} />}
+              <span>{mode === 'strict' ? 'Strict Mode' : 'Flexible Mode'}</span>
             </span>
 
             {radiusKm !== null && (
@@ -756,7 +761,8 @@ export default function DiscoverView() {
                   border: '1px solid var(--border)',
                 }}
               >
-                📍 Within {radiusKm} km
+                <MapPin size={12} />
+                <span>Within {radiusKm} km</span>
               </span>
             )}
 
@@ -824,7 +830,8 @@ export default function DiscoverView() {
                   transition: 'all 120ms ease',
                 }}
               >
-                <span>🔍 {showGapsOnly ? 'Data Gaps Only' : 'Data Gaps'} ({gapsCount})</span>
+                <Search size={12} />
+                <span>{showGapsOnly ? 'Data Gaps Only' : 'Data Gaps'} ({gapsCount})</span>
               </button>
             )}
           </div>
@@ -915,7 +922,9 @@ export default function DiscoverView() {
                 margin: '0 auto',
               }}
             >
-              <div style={{ fontSize: 44, marginBottom: 12 }}>🗺️</div>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+                <Map size={48} strokeWidth={1.5} color="var(--accent-deep)" />
+              </div>
               <h3
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
@@ -999,7 +1008,9 @@ export default function DiscoverView() {
                 borderRadius: 12,
               }}
             >
-              <span style={{ fontSize: 40 }}>🍽️</span>
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+                <UtensilsCrossed size={44} strokeWidth={1.5} color="var(--text-muted)" />
+              </div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, color: 'var(--text)', margin: '16px 0 8px' }}>
                 No matching restaurants found
               </h3>

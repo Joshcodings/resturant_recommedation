@@ -1,6 +1,5 @@
 import { MOOD_PRESETS, type MoodPreset } from '@/config/presets';
-import { Sparkles } from 'lucide-react';
-
+import { Sparkles, Heart, Coins, Gem, Flame, Zap } from 'lucide-react';
 import type { CityCapabilities } from '@/lib/capabilities';
 
 interface Props {
@@ -8,6 +7,23 @@ interface Props {
   onSelectPreset: (preset: MoodPreset | null) => void;
   onSurpriseMe: () => void;
   caps?: CityCapabilities;
+}
+
+function getPresetIcon(id: string) {
+  switch (id) {
+    case 'date_night':
+      return <Heart size={14} strokeWidth={1.75} />;
+    case 'cheap_eats':
+      return <Coins size={14} strokeWidth={1.75} />;
+    case 'hidden_gems':
+      return <Gem size={14} strokeWidth={1.75} />;
+    case 'crowd_favourites':
+      return <Flame size={14} strokeWidth={1.75} />;
+    case 'quick_bite':
+      return <Zap size={14} strokeWidth={1.75} />;
+    default:
+      return <Sparkles size={14} strokeWidth={1.75} />;
+  }
 }
 
 export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe, caps }: Props) {
@@ -64,7 +80,7 @@ export default function PresetChips({ activePreset, onSelectPreset, onSurpriseMe
               whiteSpace: 'nowrap',
             }}
           >
-            <span>{p.emoji}</span>
+            {getPresetIcon(p.id)}
             <span>{p.label}</span>
           </button>
         );

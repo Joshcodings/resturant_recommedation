@@ -1,14 +1,17 @@
+import React from 'react';
+import { Utensils, Sandwich, Coffee, Wine } from 'lucide-react';
+
 interface PlaceTypeOption {
   id: string;
   label: string;
-  icon?: string;
+  Icon?: React.ComponentType<{ size?: number; className?: string }>;
 }
 
 const DEFAULT_TYPES: PlaceTypeOption[] = [
-  { id: 'restaurant', label: 'Restaurants', icon: '🍽️' },
-  { id: 'fast_food', label: 'Fast Food', icon: '🍔' },
-  { id: 'cafe', label: 'Cafes', icon: '☕' },
-  { id: 'bar', label: 'Bars & Lounges', icon: '🍸' },
+  { id: 'restaurant', label: 'Restaurants', Icon: Utensils },
+  { id: 'fast_food', label: 'Fast Food', Icon: Sandwich },
+  { id: 'cafe', label: 'Cafes', Icon: Coffee },
+  { id: 'bar', label: 'Bars & Lounges', Icon: Wine },
 ];
 
 interface Props {
@@ -64,19 +67,19 @@ export default function PlaceTypeChips({ selectedType, onSelectType, counts }: P
           transition: 'all 150ms ease',
         }}
       >
-        All
+        <span>All</span>
       </button>
 
-      {DEFAULT_TYPES.map(t => {
-        const isSelected = selectedType === t.id;
-        const count = counts?.[t.id];
-        if (count !== undefined && count === 0) return null;
+      {DEFAULT_TYPES.map(item => {
+        const count = counts?.[item.id] || 0;
+        const isSelected = selectedType === item.id;
+        const Icon = item.Icon;
 
         return (
           <button
-            key={t.id}
+            key={item.id}
             type="button"
-            onClick={() => onSelectType(isSelected ? null : t.id)}
+            onClick={() => onSelectType(isSelected ? null : item.id)}
             style={{
               height: 32,
               padding: '0 12px',
@@ -94,9 +97,9 @@ export default function PlaceTypeChips({ selectedType, onSelectType, counts }: P
               transition: 'all 150ms ease',
             }}
           >
-            {t.icon && <span style={{ fontSize: 13 }}>{t.icon}</span>}
-            <span>{t.label}</span>
-            {count !== undefined && (
+            {Icon && <Icon size={13} />}
+            <span>{item.label}</span>
+            {count > 0 && (
               <span
                 style={{
                   fontSize: 11,

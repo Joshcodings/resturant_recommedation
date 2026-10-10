@@ -1,11 +1,13 @@
+import React from 'react';
 import type { RestaurantParsed } from '@/types/restaurant';
+import { Banknote, CreditCard, Smartphone } from 'lucide-react';
 
 export type PaymentFilterType = 'cash' | 'cards' | 'mobile_payment';
 
 export interface PaymentOption {
   id: PaymentFilterType;
   label: string;
-  icon: string;
+  Icon: React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
   check: (r: RestaurantParsed) => boolean;
 }
 
@@ -13,13 +15,13 @@ export const PAYMENT_FILTERS: PaymentOption[] = [
   {
     id: 'cash',
     label: 'Accepts cash',
-    icon: '💵',
+    Icon: Banknote,
     check: r => Boolean(r.payment_methods?.cash),
   },
   {
     id: 'cards',
     label: 'Cards',
-    icon: '💳',
+    Icon: CreditCard,
     check: r => Boolean(
       r.payment_methods?.cards ||
       r.payment_methods?.debit_cards ||
@@ -31,7 +33,7 @@ export const PAYMENT_FILTERS: PaymentOption[] = [
   {
     id: 'mobile_payment',
     label: 'Mobile payment',
-    icon: '📱',
+    Icon: Smartphone,
     check: r => Boolean(
       r.payment_methods?.mobile_payment ||
       r.payment_methods?.bank_transfer ||
@@ -89,6 +91,7 @@ export default function PaymentChips({
         if (count === 0) return null;
 
         const isSelected = selectedPayment === item.id;
+        const Icon = item.Icon;
 
         return (
           <button
@@ -112,7 +115,7 @@ export default function PaymentChips({
               transition: 'all 150ms ease',
             }}
           >
-            <span>{item.icon}</span>
+            <Icon size={13} strokeWidth={1.75} />
             <span>{item.label}</span>
             <span
               style={{

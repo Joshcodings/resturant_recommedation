@@ -3,8 +3,9 @@ import { contrastRatio, passesAA } from '@/lib/formatters';
 import { useTheme } from '@/context/ThemeContext';
 import {
   Heart, Utensils, Bike, Info, AlertTriangle, CheckCircle2,
-  ChevronDown, SlidersHorizontal, GitCompare, Sparkles,
+  ChevronDown, SlidersHorizontal, GitCompare, Sparkles, Coins, Gem, Flame,
 } from 'lucide-react';
+import CuisineIcon from '@/components/common/CuisineIcon';
 
 // ─── Helper: read a CSS variable from :root at render time ──────────────────
 
@@ -277,7 +278,11 @@ function ChipRow() {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       {/* Inactive preset chip */}
-      {['Date night 🕯️', 'Cheap eats 💸', 'Hidden gems 💎'].map(label => (
+      {[
+        { label: 'Date night', icon: Heart },
+        { label: 'Cheap eats', icon: Coins },
+        { label: 'Hidden gems', icon: Gem },
+      ].map(({ label, icon: Icon }) => (
         <button
           key={label}
           style={{
@@ -292,9 +297,13 @@ function ChipRow() {
             fontWeight: 500,
             cursor: 'pointer',
             whiteSpace: 'nowrap',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
           }}
         >
-          {label}
+          <Icon size={14} />
+          <span>{label}</span>
         </button>
       ))}
 
@@ -312,9 +321,13 @@ function ChipRow() {
           fontWeight: 600,
           cursor: 'pointer',
           whiteSpace: 'nowrap',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
         }}
       >
-        Crowd favourites 🔥
+        <Flame size={14} />
+        <span>Crowd favourites</span>
       </button>
 
       {/* Cuisine chip */}
@@ -647,12 +660,11 @@ function SampleCard() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: 20,
             flexShrink: 0,
           }}
           aria-hidden="true"
         >
-          🍛
+          <CuisineIcon cuisines={['North Indian']} size={20} />
         </div>
         <div style={{ flex: 1 }} />
         <span
@@ -1064,9 +1076,12 @@ export default function StyleguideView() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {lightSwatches.map(s => <Swatch key={s.name} {...s} />)}
         </div>
-        <p style={{ color: 'var(--text-muted)', fontSize: 13, fontFamily: 'Inter, sans-serif', marginTop: 12 }}>
-          ⚠️ Lime (<code>#C8F03C</code>) is never used as text on light backgrounds.
-          Use <code>--accent-deep</code> (#4A6100) for accent text on light surfaces.
+        <p style={{ color: 'var(--text-muted)', fontSize: 13, fontFamily: 'Inter, sans-serif', marginTop: 12, display: 'flex', alignItems: 'center', gap: 6 }}>
+          <AlertTriangle size={14} style={{ color: 'var(--warn)', flexShrink: 0 }} />
+          <span>
+            Lime (<code>#C8F03C</code>) is never used as text on light backgrounds.
+            Use <code>--accent-deep</code> (#4A6100) for accent text on light surfaces.
+          </span>
         </p>
       </Section>
 

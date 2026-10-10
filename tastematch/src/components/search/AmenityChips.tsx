@@ -1,9 +1,22 @@
+import React from 'react';
 import type { RestaurantParsed } from '@/types/restaurant';
+import {
+  Snowflake,
+  Wind,
+  Zap,
+  Wifi,
+  Accessibility,
+  Package,
+  Bike,
+  Car,
+  Salad,
+  Moon,
+} from 'lucide-react';
 
 export interface AmenityDefinition {
   id: string;
   label: string;
-  icon: string;
+  Icon: React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
   check: (r: RestaurantParsed) => boolean;
 }
 
@@ -11,19 +24,19 @@ export const AMENITY_FILTERS: AmenityDefinition[] = [
   {
     id: 'air_conditioning',
     label: 'AC',
-    icon: '❄️',
+    Icon: Snowflake,
     check: r => Boolean(r.amenities?.air_conditioning),
   },
   {
     id: 'outdoor_seating',
     label: 'Outdoor Breeze',
-    icon: '🌿',
+    Icon: Wind,
     check: r => Boolean(r.amenities?.outdoor_seating),
   },
   {
     id: 'generator',
     label: 'Backup Generator',
-    icon: '⚡',
+    Icon: Zap,
     check: r => Boolean(
       r.amenities?.generator ||
       r.amenities?.backup_generator ||
@@ -34,43 +47,43 @@ export const AMENITY_FILTERS: AmenityDefinition[] = [
   {
     id: 'internet_access',
     label: 'Wi-Fi',
-    icon: '📶',
+    Icon: Wifi,
     check: r => Boolean(r.amenities?.internet_access),
   },
   {
     id: 'wheelchair',
     label: 'Wheelchair Accessible',
-    icon: '♿',
+    Icon: Accessibility,
     check: r => Boolean(r.amenities?.wheelchair),
   },
   {
     id: 'takeaway',
     label: 'Takeaway',
-    icon: '🥡',
+    Icon: Package,
     check: r => Boolean(r.amenities?.takeaway),
   },
   {
     id: 'delivery',
     label: 'Delivery',
-    icon: '🛵',
+    Icon: Bike,
     check: r => Boolean(r.amenities?.delivery || r.has_online_delivery === 1),
   },
   {
     id: 'drive_through',
     label: 'Drive-through',
-    icon: '🚗',
+    Icon: Car,
     check: r => Boolean(r.amenities?.drive_through),
   },
   {
     id: 'vegetarian',
     label: 'Vegetarian Friendly',
-    icon: '🥗',
+    Icon: Salad,
     check: r => Boolean(r.diet?.vegetarian),
   },
   {
     id: 'halal',
     label: 'Halal',
-    icon: '☪️',
+    Icon: Moon,
     check: r => Boolean(r.diet?.halal),
   },
 ];
@@ -122,6 +135,7 @@ export default function AmenityChips({
 
       {qualifying.map(item => {
         const isSelected = selectedAmenities.includes(item.id);
+        const Icon = item.Icon;
 
         return (
           <button
@@ -145,7 +159,7 @@ export default function AmenityChips({
               transition: 'all 150ms ease',
             }}
           >
-            <span>{item.icon}</span>
+            <Icon size={13} strokeWidth={1.75} />
             <span>{item.label}</span>
             <span
               style={{

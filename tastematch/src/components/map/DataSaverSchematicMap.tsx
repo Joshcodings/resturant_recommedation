@@ -9,7 +9,7 @@
 
 import { useEffect, useMemo } from 'react';
 import { useDataSaver } from '@/context/DataSaverContext';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, MapPin } from 'lucide-react';
 import type { ScoredRestaurant } from '@/types/recommendation';
 
 interface Props {
@@ -291,8 +291,9 @@ export default function DataSaverSchematicMap({
 
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
                   {r.distanceKm !== undefined && (
-                    <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 500 }}>
-                      📍 {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}
+                    <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                      <MapPin size={11} />
+                      <span>{r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}</span>
                     </span>
                   )}
                 </div>

@@ -1,5 +1,23 @@
-import { Heart, Utensils, Bike, Sparkles, GitCompare, Share2 } from 'lucide-react';
-import { getCuisineEmoji } from '@/config/emojis';
+import {
+  Heart,
+  Utensils,
+  Bike,
+  Sparkles,
+  GitCompare,
+  Share2,
+  MapPin,
+  Target,
+  Search,
+  Banknote,
+  CreditCard,
+  Smartphone,
+  Snowflake,
+  Wind,
+  Zap,
+  AlertTriangle,
+  ExternalLink,
+} from 'lucide-react';
+import CuisineIcon from '@/components/common/CuisineIcon';
 import { formatVotes, isFewVotes } from '@/lib/formatters';
 import { useShortlist } from '@/context/ShortlistContext';
 import { useCurrency } from '@/context/CurrencyContext';
@@ -54,7 +72,6 @@ export default function RestaurantCard({
   const saved = isInShortlist(r.uid);
   const compared = isInCompare(r.uid);
 
-  const emoji = getCuisineEmoji(r.cuisineList);
   const chips = r.cuisineList.slice(0, 3);
   const extra = r.cuisineList.length - 3;
   const rankStr = String(r.rank).padStart(2, '0');
@@ -110,12 +127,11 @@ export default function RestaurantCard({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: 20,
             flexShrink: 0,
           }}
           aria-hidden="true"
         >
-          {emoji}
+          <CuisineIcon cuisineList={r.cuisineList} size={20} color="var(--accent-deep)" />
         </div>
         <div style={{ flex: 1 }} />
         {(r.isLocalCommunity || r.uid?.startsWith('local:')) && (
@@ -220,7 +236,8 @@ export default function RestaurantCard({
                 border: '1px solid var(--accent)',
               }}
             >
-              {r.matchReason.startsWith('cuisine tag') ? '🎯' : '🔍'} {r.matchReason}
+              {r.matchReason.startsWith('cuisine tag') ? <Target size={11} className="inline mr-1" /> : <Search size={11} className="inline mr-1" />}
+              <span>{r.matchReason}</span>
             </span>
           )}
         </div>
@@ -250,7 +267,8 @@ export default function RestaurantCard({
                 border: '1px solid rgba(59, 130, 246, 0.3)',
               }}
             >
-              📍 {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
+              <MapPin size={12} />
+              <span>{distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}</span>
             </span>
           </div>
         )}
@@ -435,7 +453,8 @@ export default function RestaurantCard({
             }}
             title={`Approx. ${r.distanceKm.toFixed(1)} km from city center`}
           >
-            📍 {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}
+            <MapPin size={11} style={{ marginRight: 3, flexShrink: 0 }} />
+            {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}
           </span>
         )}
 
@@ -465,6 +484,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -474,7 +494,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            💵 Cash
+            <Banknote size={12} strokeWidth={1.6} /> Cash
           </span>
         )}
         {(r.payment_methods?.cards || r.payment_methods?.debit_cards || r.payment_methods?.credit_cards) && (
@@ -483,6 +503,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -492,7 +513,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            💳 Cards
+            <CreditCard size={12} strokeWidth={1.6} /> Cards
           </span>
         )}
         {(r.payment_methods?.mobile_payment || r.payment_methods?.bank_transfer || r.payment_methods?.pos) && (
@@ -501,6 +522,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -510,7 +532,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            📱 Mobile
+            <Smartphone size={12} strokeWidth={1.6} /> Mobile
           </span>
         )}
 
@@ -521,6 +543,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -530,7 +553,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            ❄️ AC
+            <Snowflake size={12} strokeWidth={1.6} /> AC
           </span>
         )}
         {r.amenities?.outdoor_seating && (
@@ -539,6 +562,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -548,7 +572,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            🌿 Outdoor Breeze
+            <Wind size={12} strokeWidth={1.6} /> Outdoor Breeze
           </span>
         )}
         {(r.amenities?.generator || r.amenities?.backup_generator || r.amenities?.['generator:source'] || (r as any).generator) && (
@@ -557,6 +581,7 @@ export default function RestaurantCard({
             style={{
               display: 'inline-flex',
               alignItems: 'center',
+              gap: 4,
               padding: '2px 8px',
               borderRadius: 999,
               background: 'var(--surface-2)',
@@ -566,7 +591,7 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
             }}
           >
-            ⚡ Backup Generator
+            <Zap size={12} strokeWidth={1.6} /> Backup Generator
           </span>
         )}
       </div>
@@ -600,9 +625,13 @@ export default function RestaurantCard({
                     color: 'var(--warn)',
                     border: '1px solid rgba(255, 184, 77, 0.3)',
                     fontWeight: 500,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 3,
                   }}
                 >
-                  ⚠️ {item}
+                  <AlertTriangle size={11} strokeWidth={1.6} />
+                  <span>{item}</span>
                 </span>
               ))}
             </div>
@@ -695,7 +724,8 @@ export default function RestaurantCard({
               gap: 4,
             }}
           >
-            ✏️ Add info on OSM
+            <ExternalLink size={12} strokeWidth={1.6} />
+            Add info on OSM
           </a>
         )}
       </div>

@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react';
-import { X } from 'lucide-react';
+import { useState, useEffect, useMemo, type ReactNode } from 'react';
+import { X, Star, CheckCircle2, XCircle, Zap, Snowflake, MapPin, Check, Minus } from 'lucide-react';
 import { useShortlist } from '@/context/ShortlistContext';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useLanguage } from '@/context/LanguageContext';
@@ -369,7 +369,10 @@ export function CompareModal({ open, onClose }: ModalProps) {
                         fontWeight: isBest ? 600 : 400,
                       }}
                     >
-                      ⭐ {r.hasRating && r.aggregate_rating !== null ? r.aggregate_rating.toFixed(1) : 'Unrated'}
+                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        <Star size={12} fill="#eab308" stroke="#eab308" />
+                        <span>{r.hasRating && r.aggregate_rating !== null ? r.aggregate_rating.toFixed(1) : 'Unrated'}</span>
+                      </div>
                     </td>
                   );
                 })}
@@ -463,7 +466,17 @@ export function CompareModal({ open, onClose }: ModalProps) {
                 </td>
                 {compareTray.map(r => (
                   <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
-                    {r.has_table_booking === 1 ? '✓ Yes' : r.has_table_booking === 0 ? '– No' : 'n/a'}
+                    {r.has_table_booking === 1 ? (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#10b981' }}>
+                        <Check size={12} strokeWidth={2.5} /> Yes
+                      </span>
+                    ) : r.has_table_booking === 0 ? (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: 'var(--text-muted)' }}>
+                        <Minus size={12} strokeWidth={2} /> No
+                      </span>
+                    ) : (
+                      'n/a'
+                    )}
                   </td>
                 ))}
               </tr>
@@ -475,7 +488,17 @@ export function CompareModal({ open, onClose }: ModalProps) {
                 </td>
                 {compareTray.map(r => (
                   <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
-                    {r.has_online_delivery === 1 ? '✓ Yes' : r.has_online_delivery === 0 ? '– No' : 'n/a'}
+                    {r.has_online_delivery === 1 ? (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#10b981' }}>
+                        <Check size={12} strokeWidth={2.5} /> Yes
+                      </span>
+                    ) : r.has_online_delivery === 0 ? (
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: 'var(--text-muted)' }}>
+                        <Minus size={12} strokeWidth={2} /> No
+                      </span>
+                    ) : (
+                      'n/a'
+                    )}
                   </td>
                 ))}
               </tr>
@@ -488,9 +511,9 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   </td>
                   {compareTray.map(r => {
                     const status = r.opening_hours ? isOpenNow(r.opening_hours) : null;
-                    let display = '—';
-                    if (status === true) display = '🟢 Open Now';
-                    else if (status === false) display = '🔴 Closed';
+                    let display: ReactNode = '—';
+                    if (status === true) display = <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#10b981' }}><CheckCircle2 size={13} /> Open Now</span>;
+                    else if (status === false) display = <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#ef4444' }}><XCircle size={13} /> Closed</span>;
                     else if (r.opening_hours) display = 'Unlisted';
                     return (
                       <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
@@ -534,9 +557,9 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   </td>
                   {compareTray.map(r => {
                     const gen = r.power?.backup_generator;
-                    let display = '—';
+                    let display: ReactNode = '—';
                     if (gen === true || gen === 'yes' || gen === 'generator') {
-                      display = '⚡ Yes (Generator)';
+                      display = <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Zap size={13} strokeWidth={1.8} style={{ color: '#eab308' }} /> Yes (Generator)</span>;
                     } else if (gen === false || gen === 'no') {
                       display = '– No';
                     } else if (gen) {
@@ -558,8 +581,8 @@ export function CompareModal({ open, onClose }: ModalProps) {
                     {t('attr_air_conditioning')}
                   </td>
                   {compareTray.map(r => {
-                    let display = '—';
-                    if (r.air_conditioning === true) display = '❄️ Yes (AC)';
+                    let display: ReactNode = '—';
+                    if (r.air_conditioning === true) display = <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><Snowflake size={13} strokeWidth={1.8} style={{ color: '#06b6d4' }} /> Yes (AC)</span>;
                     else if (r.air_conditioning === false) display = '– No';
                     return (
                       <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>
@@ -578,13 +601,13 @@ export function CompareModal({ open, onClose }: ModalProps) {
                   </td>
                   {compareTray.map(r => {
                     const lm = nearestLandmarkMap[r.uid];
-                    let display = '—';
+                    let display: ReactNode = '—';
                     if (lm) {
                       const dStr =
                         lm.distanceKm < 1
                           ? `${Math.round(lm.distanceKm * 1000)}m`
                           : `${lm.distanceKm.toFixed(1)} km`;
-                      display = `📍 ${dStr} from ${lm.landmarkName}`;
+                      display = <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}><MapPin size={13} style={{ flexShrink: 0 }} /> {dStr} from {lm.landmarkName}</span>;
                     }
                     return (
                       <td key={r.uid} style={{ padding: '10px 12px', color: 'var(--text)' }}>

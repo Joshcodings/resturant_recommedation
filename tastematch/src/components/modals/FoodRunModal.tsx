@@ -91,7 +91,9 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
         <div className="flex items-start justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-xl">🍛</span>
+              <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                <Utensils className="w-4 h-4" />
+              </div>
               <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
                 Organise a Food Run
               </h2>
@@ -136,14 +138,14 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
                   key={dish}
                   type="button"
                   onClick={() => handleToggleDish(dish)}
-                  className={`text-xs px-2.5 py-1 rounded-lg transition-colors border ${
+                  className={`text-xs px-2.5 py-1 rounded-lg transition-colors border inline-flex items-center gap-1.5 ${
                     isSelected
                       ? 'bg-emerald-600 text-white border-emerald-600 font-medium'
                       : 'bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700 hover:border-zinc-400'
                   }`}
                 >
-                  {isSelected ? '✓ ' : '+ '}
-                  {dish}
+                  {isSelected ? <Check className="w-3 h-3" /> : <Plus className="w-3 h-3" />}
+                  <span>{dish}</span>
                 </button>
               );
             })}

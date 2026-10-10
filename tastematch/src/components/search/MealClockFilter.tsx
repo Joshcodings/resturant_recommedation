@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Clock, Sun, Sunset, Moon, Coffee } from 'lucide-react';
+import { Clock, Sun, Sunset, Moon, Coffee, Info } from 'lucide-react';
 import type { MealSlot } from '@/lib/openingHours';
 
 interface MealClockFilterProps {
@@ -46,13 +46,14 @@ export default function MealClockFilter({
               onToggleOpenNow(!openNowOnly);
               if (!openNowOnly) onToggleOpenLate(false);
             }}
-            className={`text-xs px-2.5 py-1 rounded-full font-medium transition-colors border ${
+            className={`text-xs px-2.5 py-1 rounded-full font-medium transition-colors border flex items-center gap-1.5 ${
               openNowOnly
                 ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
                 : 'bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-700 hover:border-emerald-500'
             }`}
           >
-            🟢 Open Now
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400" />
+            <span>Open Now</span>
           </button>
 
           <button
@@ -61,13 +62,14 @@ export default function MealClockFilter({
               onToggleOpenLate(!openLateOnly);
               if (!openLateOnly) onToggleOpenNow(false);
             }}
-            className={`text-xs px-2.5 py-1 rounded-full font-medium transition-colors border ${
+            className={`text-xs px-2.5 py-1 rounded-full font-medium transition-colors border flex items-center gap-1.5 ${
               openLateOnly
                 ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
                 : 'bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-700 hover:border-indigo-500'
             }`}
           >
-            🌙 Open Late (10 PM+)
+            <Moon className="w-3.5 h-3.5 text-indigo-400" />
+            <span>Open Late (10 PM+)</span>
           </button>
         </div>
       </div>
@@ -108,8 +110,9 @@ export default function MealClockFilter({
 
       {/* Unlisted hours disclaimer */}
       {isTimeFilterActive && (
-        <div className="text-xs text-amber-700 dark:text-amber-400 bg-amber-50/70 dark:bg-amber-950/30 px-2.5 py-1 rounded-md border border-amber-200/50 dark:border-amber-900/40 mt-0.5">
-          ℹ️ {unlistedHoursCount} places in this city don't list hours (only places with known opening hours are shown).
+        <div className="text-xs text-amber-700 dark:text-amber-400 bg-amber-50/70 dark:bg-amber-950/30 px-2.5 py-1 rounded-md border border-amber-200/50 dark:border-amber-900/40 mt-0.5 flex items-center gap-1.5">
+          <Info className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+          <span>{unlistedHoursCount} places in this city don't list hours (only places with known opening hours are shown).</span>
         </div>
       )}
     </div>

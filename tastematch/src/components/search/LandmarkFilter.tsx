@@ -1,5 +1,19 @@
 import { useState } from 'react';
-import { MapPin, Navigation, X } from 'lucide-react';
+import {
+  MapPin,
+  Navigation,
+  X,
+  ChevronDown,
+  Plane,
+  GraduationCap,
+  Building2,
+  Store,
+  ShoppingBag,
+  Trophy,
+  Bus,
+  Hotel,
+  Church,
+} from 'lucide-react';
 import type { Landmark } from '@/types/restaurant';
 import { LANDMARK_RADII, CATEGORY_LABELS } from '@/lib/landmarks';
 
@@ -10,6 +24,31 @@ interface LandmarkFilterProps {
   selectedRadiusKm: number;
   onSelectLandmark: (landmark: Landmark | null) => void;
   onSelectRadiusKm: (radius: number) => void;
+}
+
+export function getLandmarkCategoryIcon(cat: string) {
+  switch (cat) {
+    case 'airport':
+      return <Plane size={12} className="inline shrink-0" />;
+    case 'university':
+      return <GraduationCap size={12} className="inline shrink-0" />;
+    case 'hospital':
+      return <Building2 size={12} className="inline shrink-0" />;
+    case 'market':
+      return <Store size={12} className="inline shrink-0" />;
+    case 'mall':
+      return <ShoppingBag size={12} className="inline shrink-0" />;
+    case 'stadium':
+      return <Trophy size={12} className="inline shrink-0" />;
+    case 'bus_park':
+      return <Bus size={12} className="inline shrink-0" />;
+    case 'hotel':
+      return <Hotel size={12} className="inline shrink-0" />;
+    case 'religious_centre':
+      return <Church size={12} className="inline shrink-0" />;
+    default:
+      return <MapPin size={12} className="inline shrink-0" />;
+  }
 }
 
 export default function LandmarkFilter({
@@ -68,15 +107,15 @@ export default function LandmarkFilter({
               {selectedLandmark ? (
                 <>
                   <span>{selectedLandmark.name}</span>
-                  <span className="text-[10px] opacity-75 px-1 py-0.2 rounded bg-blue-100 dark:bg-blue-900/50">
-                    {CATEGORY_LABELS[selectedLandmark.category]?.icon || '📍'}
+                  <span className="text-[10px] opacity-75 px-1 py-0.2 rounded bg-blue-100 dark:bg-blue-900/50 flex items-center gap-1">
+                    {getLandmarkCategoryIcon(selectedLandmark.category)}
                   </span>
                 </>
               ) : (
                 <span className="text-zinc-400">Choose landmark (e.g. airport, bus park, mall...)</span>
               )}
             </span>
-            <span className="text-zinc-400 text-[10px] ml-1">▼</span>
+            <ChevronDown size={12} className="text-zinc-400 shrink-0 ml-1" />
           </button>
 
           {/* Landmark Dropdown modal */}
@@ -115,7 +154,7 @@ export default function LandmarkFilter({
                       >
                         <span className="truncate mr-2">{lm.name}</span>
                         <span className="text-[10px] text-zinc-400 shrink-0 flex items-center gap-1">
-                          <span>{catMeta.icon}</span>
+                          {getLandmarkCategoryIcon(lm.category)}
                           <span>{catMeta.label}</span>
                         </span>
                       </button>
@@ -129,37 +168,28 @@ export default function LandmarkFilter({
 
         {/* Radius selector */}
         {selectedLandmark && (
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="flex items-center gap-1">
             <span className="text-xs text-zinc-400">Within:</span>
-            <div className="flex items-center gap-1 bg-white dark:bg-zinc-800 p-0.5 rounded-lg border border-zinc-200 dark:border-zinc-700">
-              {LANDMARK_RADII.map((r) => {
-                const isCurrent = selectedRadiusKm === r.value;
-                return (
-                  <button
-                    key={r.value}
-                    type="button"
-                    onClick={() => onSelectRadiusKm(r.value)}
-                    className={`text-xs px-2 py-0.5 rounded transition-colors ${
-                      isCurrent
-                        ? 'bg-blue-600 text-white font-medium shadow-xs'
-                        : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700'
-                    }`}
-                  >
-                    {r.label}
-                  </button>
-                );
-              })}
-            </div>
+            {LANDMARK_RADII.map((r) => {
+              const isPicked = selectedRadiusKm === r.value;
+              return (
+                <button
+                  key={r.value}
+                  type="button"
+                  onClick={() => onSelectRadiusKm(r.value)}
+                  className={`text-xs px-2 py-1 rounded-md transition-colors border ${
+                    isPicked
+                      ? 'bg-blue-600 text-white border-blue-600 font-medium'
+                      : 'bg-white dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 border-zinc-200 dark:border-zinc-700 hover:border-blue-400'
+                  }`}
+                >
+                  {r.label}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>
-
-      {selectedLandmark && (
-        <div className="text-[11px] text-blue-700 dark:text-blue-300 bg-blue-50/70 dark:bg-blue-950/30 px-2.5 py-1 rounded-md border border-blue-200/50 dark:border-blue-900/40">
-          📍 Showing places within {selectedRadiusKm < 1 ? `${Math.round(selectedRadiusKm * 1000)}m` : `${selectedRadiusKm} km`} of{' '}
-          <strong>{selectedLandmark.name}</strong> ({CATEGORY_LABELS[selectedLandmark.category]?.label || 'Landmark'}), ordered by distance.
-        </div>
-      )}
     </div>
   );
 }

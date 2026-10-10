@@ -12,6 +12,7 @@
 
 import React, { useMemo } from 'react';
 import type { RestaurantParsed } from '@/types/restaurant';
+import { MapPin } from 'lucide-react';
 
 interface Props {
   areaName: string;
@@ -80,7 +81,8 @@ export const AreaFoodFingerprint: React.FC<Props> = ({ areaName, restaurants }) 
             gap: 6,
           }}
         >
-          📍 Area Food Fingerprint — {areaName}
+          <MapPin size={15} color="var(--accent-deep)" />
+          <span>Area Food Fingerprint — {areaName}</span>
         </span>
         <span
           style={{

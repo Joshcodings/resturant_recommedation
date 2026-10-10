@@ -656,7 +656,11 @@ export default function AddPlaceModal({
                         textDecoration: 'underline',
                       }}
                     >
-                      {isLocating ? 'Locating...' : '📍 Use My Location'}
+                      {isLocating ? 'Locating...' : (
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                          <MapPin size={11} /> Use My Location
+                        </span>
+                      )}
                     </button>
                     <button
                       type="button"

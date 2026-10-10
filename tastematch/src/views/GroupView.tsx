@@ -2,9 +2,9 @@ import { useState, useMemo, useEffect } from 'react';
 import { useRestaurants } from '@/context/RestaurantContext';
 import { groupRecommend } from '@/lib/groupRecommendation';
 import { planOwambeCrawl } from '@/lib/owambeCrawlPlanner';
-import { getCuisineEmoji } from '@/config/emojis';
 import { useDataSaver } from '@/context/DataSaverContext';
 import RestaurantDrawer from '@/components/drawer/RestaurantDrawer';
+import CuisineIcon from '@/components/common/CuisineIcon';
 import type { ScoredRestaurant } from '@/types/recommendation';
 import {
   Users,
@@ -15,10 +15,28 @@ import {
   ArrowRight,
   ShieldCheck,
   MapPin,
+  Moon,
+  Salad,
+  Leaf,
+  Footprints,
+  Banknote,
+  Flame,
+  UtensilsCrossed,
+  Wine,
+  Sparkles,
 } from 'lucide-react';
 import { DEFAULT_COUNTRY_NAME } from '@/config/defaults';
 import { computeLargestCity } from '@/lib/dataLoader';
 import { useLanguage } from '@/context/LanguageContext';
+
+function renderStageIcon(stageName: string) {
+  const s = stageName.toLowerCase();
+  if (s.includes('suya') || s.includes('pre-drinks')) return <Flame size={20} color="var(--accent-deep)" />;
+  if (s.includes('dinner') || s.includes('owambe') || s.includes('main')) return <UtensilsCrossed size={20} color="var(--accent-deep)" />;
+  if (s.includes('lounge') || s.includes('bar')) return <Wine size={20} color="var(--accent-deep)" />;
+  if (s.includes('chill') || s.includes('nightcap')) return <Moon size={20} color="var(--accent-deep)" />;
+  return <Sparkles size={20} color="var(--accent-deep)" />;
+}
 
 export default function GroupView() {
   const { data, countryCityIndex, getCuisines } = useRestaurants();
@@ -514,10 +532,11 @@ export default function GroupView() {
               </span>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {[
-                  { key: 'halal' as const, label: '☪️ Halal Friendly' },
-                  { key: 'vegetarian' as const, label: '🥗 Vegetarian' },
-                  { key: 'vegan' as const, label: '🌱 Vegan' },
+                  { key: 'halal' as const, label: 'Halal Friendly', icon: Moon },
+                  { key: 'vegetarian' as const, label: 'Vegetarian', icon: Salad },
+                  { key: 'vegan' as const, label: 'Vegan', icon: Leaf },
                 ].map((d) => {
+                  const Icon = d.icon;
                   const isChecked = crawlDiets[d.key];
                   return (
                     <button
@@ -536,9 +555,14 @@ export default function GroupView() {
                         fontSize: 12,
                         fontWeight: isChecked ? 600 : 500,
                         cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        transition: 'all 150ms ease',
                       }}
                     >
-                      {d.label}
+                      <Icon size={13} />
+                      <span>{d.label}</span>
                     </button>
                   );
                 })}
@@ -582,7 +606,6 @@ export default function GroupView() {
               }}
             >
               {consensusResults.map((r, i) => {
-                const emoji = getCuisineEmoji(r.cuisineList);
                 const rankStr = String(r.rank || i + 1).padStart(2, '0');
 
                 return (
@@ -622,10 +645,10 @@ export default function GroupView() {
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          fontSize: 20,
+                          flexShrink: 0,
                         }}
                       >
-                        {emoji}
+                        <CuisineIcon cuisines={r.cuisineList} size={20} />
                       </div>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <h3
@@ -742,7 +765,9 @@ export default function GroupView() {
               >
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span style={{ fontSize: 20 }}>🎉</span>
+                    <div style={{ width: 32, height: 32, borderRadius: 8, background: 'rgba(200, 240, 60, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-deep)' }}>
+                      <PartyPopper size={18} />
+                    </div>
                     <h2
                       style={{
                         margin: 0,
@@ -766,12 +791,12 @@ export default function GroupView() {
                       flexWrap: 'wrap',
                     }}
                   >
-                    <span>
-                      🚶 <strong>Route:</strong> ~{crawlPlan.totalDistanceKm} km (~{crawlPlan.totalWalkingMinutes} mins)
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                      <Footprints size={14} /> <strong>Route:</strong> ~{crawlPlan.totalDistanceKm} km (~{crawlPlan.totalWalkingMinutes} mins)
                     </span>
                     <span>·</span>
-                    <span>
-                      💰 <strong>Estimated Cost:</strong> {crawlPlan.estimatedCostText}
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                      <Banknote size={14} /> <strong>Estimated Cost:</strong> {crawlPlan.estimatedCostText}
                     </span>
                   </div>
                 </div>
@@ -869,11 +894,10 @@ export default function GroupView() {
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              fontSize: 22,
                               flexShrink: 0,
                             }}
                           >
-                            {stop.stageIcon}
+                            {renderStageIcon(stop.stageName)}
                           </div>
                           <div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

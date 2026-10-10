@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { X, Trash2, MapPin } from 'lucide-react';
+import { X, Trash2, MapPin, Bookmark, Star } from 'lucide-react';
 import { useShortlist } from '@/context/ShortlistContext';
-import { getCuisineEmoji } from '@/config/emojis';
+import CuisineIcon from '@/components/common/CuisineIcon';
 import { formatCost } from '@/lib/formatters';
 import type { RestaurantParsed } from '@/types/restaurant';
 
@@ -114,7 +114,7 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
                 gap: 12,
               }}
             >
-              <span style={{ fontSize: 36 }}>🔖</span>
+              <Bookmark size={36} strokeWidth={1.5} style={{ color: 'var(--text-muted)' }} />
               <p style={{ margin: 0, fontSize: 14 }}>No saved restaurants yet.</p>
               <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>
                 Click the heart icon on any card to save it to your shortlist.
@@ -148,11 +148,10 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: 20,
                     flexShrink: 0,
                   }}
                 >
-                  {getCuisineEmoji(r.cuisineList)}
+                  <CuisineIcon cuisines={r.cuisineList} size={20} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div
@@ -184,7 +183,10 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
                       {r.locality || r.city}
                     </span>
                     <span>·</span>
-                    <span>⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}</span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2 }}>
+                      <Star size={11} fill="#eab308" stroke="#eab308" />
+                      <span>{r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'}</span>
+                    </span>
                     <span>·</span>
                     <span>{r.hasPrice ? formatCost(r.average_cost_for_two, r.currency) : 'n/a'}</span>
                   </div>

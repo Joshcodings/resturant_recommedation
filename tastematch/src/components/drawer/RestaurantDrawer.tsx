@@ -1,7 +1,30 @@
 import { useEffect, useRef, useMemo } from 'react';
-import { X, Utensils, Bike, MapPin, Share2 } from 'lucide-react';
+import {
+  X,
+  Utensils,
+  Bike,
+  MapPin,
+  Share2,
+  Star,
+  Target,
+  Search,
+  Clock,
+  Phone,
+  Globe,
+  Banknote,
+  CreditCard,
+  Smartphone,
+  Snowflake,
+  Wind,
+  Zap,
+  Users,
+  ShieldCheck,
+  Check,
+  ExternalLink,
+  Flag,
+} from 'lucide-react';
+import CuisineIcon from '@/components/common/CuisineIcon';
 import { formatVotes, isFewVotes } from '@/lib/formatters';
-import { getCuisineEmoji } from '@/config/emojis';
 import { morelikeThis } from '@/lib/similarity';
 import { useRestaurants } from '@/context/RestaurantContext';
 import { useCurrency } from '@/context/CurrencyContext';
@@ -26,7 +49,9 @@ function CompactCard({ r, onOpen }: { r: RestaurantParsed & { similarity?: numbe
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-        <span style={{ fontSize: 20 }}>{getCuisineEmoji(r.cuisineList)}</span>
+        <div style={{ width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <CuisineIcon cuisines={r.cuisineList} size={20} />
+        </div>
         {matchPct !== null && (
           <span
             style={{
@@ -59,8 +84,9 @@ function CompactCard({ r, onOpen }: { r: RestaurantParsed & { similarity?: numbe
       >
         {r.restaurant_name}
       </div>
-      <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-        ⭐ {r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'} · {r.locality || r.city}
+      <div style={{ fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', display: 'flex', alignItems: 'center', gap: 3 }}>
+        <Star size={11} fill="#eab308" stroke="#eab308" />
+        <span>{r.hasRating ? r.aggregate_rating!.toFixed(1) : 'Unrated'} · {r.locality || r.city}</span>
       </div>
     </button>
   );
@@ -132,8 +158,8 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
         }}>
           <div style={{
             width: 48, height: 48, background: 'var(--surface-2)', borderRadius: 12,
-            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, flexShrink: 0,
-          }}>{getCuisineEmoji(r.cuisineList)}</div>
+            display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+          }}><CuisineIcon cuisines={r.cuisineList} size={24} /></div>
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
               <h2 style={{
@@ -155,7 +181,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                     border: '1px solid var(--accent)',
                   }}
                 >
-                  {r.matchReason.startsWith('cuisine tag') ? '🎯' : '🔍'} {r.matchReason}
+                  {r.matchReason.startsWith('cuisine tag') ? <Target size={12} /> : <Search size={12} />} {r.matchReason}
                 </span>
               )}
               {(r.isLocalCommunity || r.uid?.startsWith('local:')) && (
@@ -197,7 +223,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                     border: '1px solid rgba(59, 130, 246, 0.3)',
                   }}
                 >
-                  📍 {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
+                  <MapPin size={12} /> {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
                 </span>
               </div>
             )}
@@ -219,10 +245,10 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
             <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--surface-2)', padding: '2px 8px', borderRadius: 4, border: '1px solid var(--border)' }}>
               OpenStreetMap Data
             </span>
-            {r.place_type && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>📍 {r.place_type.replace('_', ' ')}</span>}
-            {r.opening_hours && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>🕒 {r.opening_hours}</span>}
-            {r.phone && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>📞 {r.phone}</span>}
-            {r.website && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}><a href={r.website} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)' }}>🌐 Website</a></span>}
+            {r.place_type && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><MapPin size={11} /> {r.place_type.replace('_', ' ')}</span>}
+            {r.opening_hours && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Clock size={11} /> {r.opening_hours}</span>}
+            {r.phone && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Phone size={11} /> {r.phone}</span>}
+            {r.website && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><a href={r.website} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Globe size={11} /> Website</a></span>}
           </div>
         )}
 
@@ -320,33 +346,33 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
             {/* Real payment method indicators */}
             {r.payment_methods?.cash && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-                💵 Cash
+                <Banknote size={13} strokeWidth={1.6} /> Cash
               </span>
             )}
             {(r.payment_methods?.cards || r.payment_methods?.debit_cards || r.payment_methods?.credit_cards) && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-                💳 Cards
+                <CreditCard size={13} strokeWidth={1.6} /> Cards
               </span>
             )}
             {(r.payment_methods?.mobile_payment || r.payment_methods?.bank_transfer || r.payment_methods?.pos) && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
-                📱 Mobile / Transfer
+                <Smartphone size={13} strokeWidth={1.6} /> Mobile / Transfer
               </span>
             )}
             {/* Real Power & Breeze indicators (F5: Real tags only) */}
             {r.amenities?.air_conditioning && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Air conditioning">
-                ❄️ AC
+                <Snowflake size={13} strokeWidth={1.6} /> AC
               </span>
             )}
             {r.amenities?.outdoor_seating && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Outdoor seating (breeze when hot/no power)">
-                🌿 Outdoor Breeze
+                <Wind size={13} strokeWidth={1.6} /> Outdoor Breeze
               </span>
             )}
             {(r.amenities?.generator || r.amenities?.backup_generator || r.amenities?.['generator:source'] || (r as any).generator) && (
               <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }} title="Backup generator tagged">
-                ⚡ Backup Generator
+                <Zap size={13} strokeWidth={1.6} /> Backup Generator
               </span>
             )}
           </div>
@@ -430,23 +456,23 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
             {r.explanation && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif', marginTop: 4 }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                  <span>🍴</span>
+                  <Utensils size={13} style={{ flexShrink: 0, marginTop: 2, color: 'var(--text-muted)' }} />
                   <span>{r.explanation.cuisineSummary}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                  <span>⭐</span>
+                  <Star size={13} fill="#eab308" stroke="#eab308" style={{ flexShrink: 0, marginTop: 2 }} />
                   <span>{r.explanation.qualitySummary}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                  <span>💵</span>
+                  <Banknote size={13} style={{ flexShrink: 0, marginTop: 2, color: 'var(--text-muted)' }} />
                   <span>{r.explanation.priceSummary}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                  <span>👥</span>
+                  <Users size={13} style={{ flexShrink: 0, marginTop: 2, color: 'var(--text-muted)' }} />
                   <span>{r.explanation.popularitySummary}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
-                  <span>📍</span>
+                  <MapPin size={13} style={{ flexShrink: 0, marginTop: 2, color: 'var(--text-muted)' }} />
                   <span>{r.explanation.locationSummary}</span>
                 </div>
 
@@ -492,8 +518,9 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <span style={{ fontSize: 13, fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif", color: 'var(--text)' }}>
-                🛡️ Trust & Data Verification
+              <span style={{ fontSize: 13, fontWeight: 600, fontFamily: "'Space Grotesk', sans-serif", color: 'var(--text)', display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <ShieldCheck size={16} strokeWidth={1.8} style={{ color: 'var(--accent-deep)' }} />
+                Trust & Data Verification
               </span>
               <span
                 style={{
@@ -539,11 +566,11 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: 4,
+                      gap: 6,
                       color: item.present ? 'var(--text)' : 'var(--text-muted)',
                     }}
                   >
-                    <span>{item.present ? '✅' : '❌'}</span>
+                    <span>{item.present ? <Check size={13} strokeWidth={2.2} style={{ color: '#10b981' }} /> : <X size={13} strokeWidth={2} style={{ color: 'var(--text-muted)' }} />}</span>
                     <span>{item.label}</span>
                   </div>
                 ))}
@@ -575,7 +602,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                     gap: 4,
                   }}
                 >
-                  ✏️ Add what you know on OpenStreetMap
+                  <ExternalLink size={12} strokeWidth={1.6} /> Add what you know on OpenStreetMap
                 </a>
               )}
 
@@ -597,7 +624,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                   gap: 4,
                 }}
               >
-                🚩 Report closed or wrong
+                <Flag size={12} strokeWidth={1.6} /> Report closed or wrong
               </a>
             </div>
           </div>
