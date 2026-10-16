@@ -14,13 +14,27 @@ This repository contains two complete implementations:
 
 ## 📊 Dataset & Verification Status
 
-All numbers below are verified via executed automated test suites and `scripts/validate_datasets.py`:
+All numbers below are verified dynamically via `scripts/validate_datasets.py` and automated test suites:
 - **Total Places**: **8,666**
-  - **Zomato Kaggle (15 Countries)**: 7,403 places
-  - **OpenStreetMap Nigeria**: 1,263 places (Lagos, Benin City, Abuja, Jos, Enugu, Kano, Kaduna, Ilorin, etc.)
-- **Shards**: **232 static JSON shards** (all files $\le 8$ MB).
-- **Test Pass Rate**: **18 test suites, 133 tests passed, 0 failures** (including complete Acceptance Tests T1–T22).
+  - **Zomato Kaggle (15 Countries)**: 7,403 places (~90% Delhi NCR)
+  - **OpenStreetMap Nigeria**: 1,263 places across 58 canonical cities (25 full cities with $\ge 5$ places, 33 cities marked *Limited coverage* with $< 5$ places)
+- **Nigeria OSM Field Coverage**:
+  - Cuisine: **21.5%** (271 places)
+  - Opening Hours: **13.5%** (171 places)
+  - Phone: **8.7%** (110 places)
+- **Shards**: **199 static JSON shards** (all files $\le 8$ MB cap).
+- **UID Uniqueness**: 8,666 universal UIDs with 0 collisions.
+- **Automated Test Pass Rate**: **20 test suites, 161 tests passed, 0 failures** (100% passing rate including Acceptance Tests T1–T22, WhatsApp share, and Location GPS suites).
 - **Production Build**: Clean exit code 0 (`tsc -b && vite build`).
+
+---
+
+## ⚠️ Known Issues
+
+The following items are open review observations preserved for backwards compatibility and research transparency:
+1. **`mlMetrics.ts` Offline Snapshot**: Metric values represent a static offline evaluation snapshot from the initial model training run and are not dynamically recomputed on the browser client.
+2. **Rating Simulator**: The Rating Simulator is an exploratory data science demonstration tool. In production ranking, unrated OpenStreetMap listings use verified feature and proximity scoring rather than synthesized ratings.
+3. **Circular Benchmark**: Model evaluations assess retrieval consistency against the training distribution snapshot rather than an external live ground-truth panel.
 
 ---
 

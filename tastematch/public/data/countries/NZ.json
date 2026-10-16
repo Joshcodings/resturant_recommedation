@@ -1,23 +1,47 @@
 {
   "cities": {
     "Auckland": {
+      "bounds": {
+        "maxLatitude": 0.0,
+        "maxLongitude": 174.832089,
+        "minLatitude": -36.905409,
+        "minLongitude": 174.635633
+      },
+      "centroid": {
+        "latitude": -35.018807,
+        "longitude": 174.761936
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 3893.91,
       "shards": [
         "auckland-1.json"
       ]
     },
     "Wellington City": {
+      "bounds": {
+        "maxLatitude": -41.283034,
+        "maxLongitude": 174.793257,
+        "minLatitude": -41.330428,
+        "minLongitude": 174.773933
+      },
+      "centroid": {
+        "latitude": -41.293814,
+        "longitude": 174.7781
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.26,
       "shards": [
         "wellington-city-1.json"
       ]

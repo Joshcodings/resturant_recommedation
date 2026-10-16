@@ -1,5 +1,5 @@
 // TasteMatch Service Worker for offline data caching
-const CACHE_NAME = 'tastematch-cache-v1';
+const CACHE_NAME = 'tastematch-cache-v2';
 const STATIC_URLS = [
   '/',
   '/index.html',
@@ -33,6 +33,30 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
+  const url = new URL(event.request.url);
+
+  // Bypass service worker for Vite dev server internals and HMR
+  if (url.pathname.startsWith('/@') || url.pathname.includes('node_modules')) {
+    return;
+  }
+
+  // Network-first strategy for page navigations to always load freshest assets
+  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkRes) => {
+          if (networkRes && networkRes.status === 200) {
+            const resClone = networkRes.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, resClone));
+          }
+          return networkRes;
+        })
+        .catch(() => caches.match(event.request).then((res) => res || caches.match('/index.html')))
+    );
+    return;
+  }
+
+  // Cache-first strategy for static assets and data shards
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;

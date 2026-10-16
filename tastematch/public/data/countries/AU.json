@@ -1,254 +1,530 @@
 {
   "cities": {
     "Armidale": {
+      "bounds": {
+        "maxLatitude": -30.514717,
+        "maxLongitude": 151.668879,
+        "minLatitude": -30.514717,
+        "minLongitude": 151.668879
+      },
+      "centroid": {
+        "latitude": -30.514717,
+        "longitude": 151.668879
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "armidale-1.json"
       ]
     },
     "Balingup": {
+      "bounds": {
+        "maxLatitude": -33.784527,
+        "maxLongitude": 115.984492,
+        "minLatitude": -33.784527,
+        "minLongitude": 115.984492
+      },
+      "centroid": {
+        "latitude": -33.784527,
+        "longitude": 115.984492
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "balingup-1.json"
       ]
     },
     "Beechworth": {
+      "bounds": {
+        "maxLatitude": -36.360439,
+        "maxLongitude": 146.685852,
+        "minLatitude": -36.360439,
+        "minLongitude": 146.685852
+      },
+      "centroid": {
+        "latitude": -36.360439,
+        "longitude": 146.685852
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "beechworth-1.json"
       ]
     },
     "Dicky Beach": {
+      "bounds": {
+        "maxLatitude": -26.783576,
+        "maxLongitude": 153.137401,
+        "minLatitude": -26.783576,
+        "minLongitude": 153.137401
+      },
+      "centroid": {
+        "latitude": -26.783576,
+        "longitude": 153.137401
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "dicky-beach-1.json"
       ]
     },
     "East Ballina": {
+      "bounds": {
+        "maxLatitude": -28.862663,
+        "maxLongitude": 153.593331,
+        "minLatitude": -28.862663,
+        "minLongitude": 153.593331
+      },
+      "centroid": {
+        "latitude": -28.862663,
+        "longitude": 153.593331
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "east-ballina-1.json"
       ]
     },
     "Flaxton": {
+      "bounds": {
+        "maxLatitude": -26.652133,
+        "maxLongitude": 152.877147,
+        "minLatitude": -26.652133,
+        "minLongitude": 152.877147
+      },
+      "centroid": {
+        "latitude": -26.652133,
+        "longitude": 152.877147
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "flaxton-1.json"
       ]
     },
     "Forrest": {
+      "bounds": {
+        "maxLatitude": -38.517292,
+        "maxLongitude": 143.714315,
+        "minLatitude": -38.517292,
+        "minLongitude": 143.714315
+      },
+      "centroid": {
+        "latitude": -38.517292,
+        "longitude": 143.714315
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "forrest-1.json"
       ]
     },
     "Hepburn Springs": {
+      "bounds": {
+        "maxLatitude": -37.275494,
+        "maxLongitude": 144.138701,
+        "minLatitude": -37.312327,
+        "minLongitude": 144.110062
+      },
+      "centroid": {
+        "latitude": -37.29391,
+        "longitude": 144.124382
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 2.41,
       "shards": [
         "hepburn-springs-1.json"
       ]
     },
     "Huskisson": {
+      "bounds": {
+        "maxLatitude": -35.03887,
+        "maxLongitude": 150.671074,
+        "minLatitude": -35.03887,
+        "minLongitude": 150.671074
+      },
+      "centroid": {
+        "latitude": -35.03887,
+        "longitude": 150.671074
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "huskisson-1.json"
       ]
     },
     "Inverloch": {
+      "bounds": {
+        "maxLatitude": -38.634746,
+        "maxLongitude": 145.728713,
+        "minLatitude": -38.634746,
+        "minLongitude": 145.728713
+      },
+      "centroid": {
+        "latitude": -38.634746,
+        "longitude": 145.728713
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "inverloch-1.json"
       ]
     },
     "Lakes Entrance": {
+      "bounds": {
+        "maxLatitude": -37.878386,
+        "maxLongitude": 147.994225,
+        "minLatitude": -37.878386,
+        "minLongitude": 147.994225
+      },
+      "centroid": {
+        "latitude": -37.878386,
+        "longitude": 147.994225
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "lakes-entrance-1.json"
       ]
     },
     "Lorn": {
+      "bounds": {
+        "maxLatitude": -32.728097,
+        "maxLongitude": 151.558475,
+        "minLatitude": -32.728097,
+        "minLongitude": 151.558475
+      },
+      "centroid": {
+        "latitude": -32.728097,
+        "longitude": 151.558475
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "lorn-1.json"
       ]
     },
     "Macedon": {
+      "bounds": {
+        "maxLatitude": -37.423189,
+        "maxLongitude": 144.564174,
+        "minLatitude": -37.423189,
+        "minLongitude": 144.564174
+      },
+      "centroid": {
+        "latitude": -37.423189,
+        "longitude": 144.564174
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "macedon-1.json"
       ]
     },
     "Mayfield": {
+      "bounds": {
+        "maxLatitude": -32.899178,
+        "maxLongitude": 151.734383,
+        "minLatitude": -32.899178,
+        "minLongitude": 151.734383
+      },
+      "centroid": {
+        "latitude": -32.899178,
+        "longitude": 151.734383
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "mayfield-1.json"
       ]
     },
     "Middleton Beach": {
+      "bounds": {
+        "maxLatitude": -35.025861,
+        "maxLongitude": 117.917166,
+        "minLatitude": -35.025861,
+        "minLongitude": 117.917166
+      },
+      "centroid": {
+        "latitude": -35.025861,
+        "longitude": 117.917166
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "middleton-beach-1.json"
       ]
     },
     "Montville": {
+      "bounds": {
+        "maxLatitude": -26.690462,
+        "maxLongitude": 152.893735,
+        "minLatitude": -26.690462,
+        "minLongitude": 152.893735
+      },
+      "centroid": {
+        "latitude": -26.690462,
+        "longitude": 152.893735
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "montville-1.json"
       ]
     },
     "Palm Cove": {
+      "bounds": {
+        "maxLatitude": -16.748083,
+        "maxLongitude": 145.670768,
+        "minLatitude": -16.748083,
+        "minLongitude": 145.670768
+      },
+      "centroid": {
+        "latitude": -16.748083,
+        "longitude": 145.670768
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "palm-cove-1.json"
       ]
     },
     "Paynesville": {
+      "bounds": {
+        "maxLatitude": -37.919415,
+        "maxLongitude": 147.722783,
+        "minLatitude": -37.919415,
+        "minLongitude": 147.722783
+      },
+      "centroid": {
+        "latitude": -37.919415,
+        "longitude": 147.722783
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "paynesville-1.json"
       ]
     },
     "Penola": {
+      "bounds": {
+        "maxLatitude": -37.379153,
+        "maxLongitude": 140.837409,
+        "minLatitude": -37.379153,
+        "minLongitude": 140.837409
+      },
+      "centroid": {
+        "latitude": -37.379153,
+        "longitude": 140.837409
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "penola-1.json"
       ]
     },
     "Phillip Island": {
+      "bounds": {
+        "maxLatitude": -38.448307,
+        "maxLongitude": 145.237813,
+        "minLatitude": -38.448307,
+        "minLongitude": 145.237813
+      },
+      "centroid": {
+        "latitude": -38.448307,
+        "longitude": 145.237813
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "phillip-island-1.json"
       ]
     },
     "Tanunda": {
+      "bounds": {
+        "maxLatitude": -34.519619,
+        "maxLongitude": 138.966064,
+        "minLatitude": -34.519619,
+        "minLongitude": 138.966064
+      },
+      "centroid": {
+        "latitude": -34.519619,
+        "longitude": 138.966064
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "tanunda-1.json"
       ]
     },
     "Trentham East": {
+      "bounds": {
+        "maxLatitude": -37.396942,
+        "maxLongitude": 144.41272,
+        "minLatitude": -37.396942,
+        "minLongitude": 144.41272
+      },
+      "centroid": {
+        "latitude": -37.396942,
+        "longitude": 144.41272
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "trentham-east-1.json"
       ]
     },
     "Victor Harbor": {
+      "bounds": {
+        "maxLatitude": -35.553661,
+        "maxLongitude": 138.624316,
+        "minLatitude": -35.553661,
+        "minLongitude": 138.624316
+      },
+      "centroid": {
+        "latitude": -35.553661,
+        "longitude": 138.624316
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "victor-harbor-1.json"
       ]

@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { Search, ChevronDown, Check, Navigation, Globe, ExternalLink, MapPin } from 'lucide-react';
+import { Search, ChevronDown, Check, Navigation, Globe, ExternalLink, MapPin, Compass } from 'lucide-react';
 import { useRestaurants } from '@/context/RestaurantContext';
 import { useCurrency } from '@/context/CurrencyContext';
-import { haversineDistance } from '@/lib/location';
-import { computeLargestCity } from '@/lib/dataLoader';
+import { useLocationContext } from '@/context/LocationContext';
+import { computeLargestCity, getCityCount } from '@/lib/dataLoader';
+import { fetchLandmarks } from '@/lib/landmarks';
+import type { Landmark } from '@/types/restaurant';
 import {
   PRICE_TIERS,
   computeCountryTierMedian,
@@ -96,15 +98,18 @@ export default function SearchBar({
 
   const cities = useMemo(() => {
     const list = countryCityIndex[selectedCountry] || [];
+    let allCities = list;
     if (selectedCountry === 'Nigeria') {
       const set = new Set(list);
       for (const sc of NIGERIAN_STATE_CAPITALS) {
         set.add(sc.capital);
       }
-      return Array.from(set).sort((a, b) => a.localeCompare(b));
+      allCities = Array.from(set);
     }
-    return list;
-  }, [countryCityIndex, selectedCountry]);
+    const full = allCities.filter(c => getCityCount(data, c) >= 5).sort((a, b) => a.localeCompare(b));
+    const limited = allCities.filter(c => getCityCount(data, c) < 5).sort((a, b) => a.localeCompare(b));
+    return [...full, ...limited];
+  }, [countryCityIndex, selectedCountry, data]);
   const cityCuisines = getCuisines(selectedCity);
 
   const [isCityOpen, setIsCityOpen] = useState(false);
@@ -115,9 +120,45 @@ export default function SearchBar({
   const [isCuisineOpen, setIsCuisineOpen] = useState(false);
   const [cuisineFilter, setCuisineFilter] = useState('');
 
-  // Geolocation states
-  const [isLocating, setIsLocating] = useState(false);
-  const [geoNotice, setGeoNotice] = useState<{ text: string; isError?: boolean } | null>(null);
+  const {
+    location,
+    status: geoStatus,
+    accuracyLabel,
+    statusMessage: geoStatusMessage,
+    permissionGuide,
+    coverageHonesty,
+    requestGpsLocation,
+    dismissCoverageHonesty,
+    confirmCoverageHonestyCity,
+    setManualLocality,
+    setManualLandmark,
+    setManualPin,
+  } = useLocationContext();
+
+  const [landmarks, setLandmarks] = useState<Landmark[]>([]);
+  const [showManualFallback, setShowManualFallback] = useState(false);
+  const [pinLatInput, setPinLatInput] = useState('');
+  const [pinLonInput, setPinLonInput] = useState('');
+
+  useEffect(() => {
+    fetchLandmarks().then(lms => setLandmarks(lms));
+  }, []);
+
+  const cityLocalities = useMemo(() => {
+    const set = new Set<string>();
+    for (const r of data) {
+      if (r.country === selectedCountry && r.city === selectedCity && r.locality) {
+        set.add(r.locality);
+      }
+    }
+    return Array.from(set).sort();
+  }, [data, selectedCountry, selectedCity]);
+
+  const cityLandmarks = useMemo(() => {
+    return landmarks.filter(
+      l => l.city.toLowerCase() === selectedCity.toLowerCase(),
+    );
+  }, [landmarks, selectedCity]);
 
   const cityDropdownRef = useRef<HTMLDivElement>(null);
   const cuisineDropdownRef = useRef<HTMLDivElement>(null);
@@ -211,75 +252,11 @@ export default function SearchBar({
     }
   };
 
-  // Near me geolocation handler (click-only, never stores/sends location, handles denial gracefully)
-  const handleNearMe = () => {
-    if (typeof window === 'undefined' || !navigator.geolocation) {
-      setGeoNotice({ text: 'Geolocation is not supported by your browser.', isError: true });
-      return;
-    }
-
-    setIsLocating(true);
-    setGeoNotice(null);
-
-    navigator.geolocation.getCurrentPosition(
-      position => {
-        setIsLocating(false);
-        const { latitude, longitude } = position.coords;
-
-        // Find nearest restaurant in current country with coordinates
-        const countryPlaces = data.filter(r => r.country === selectedCountry && r.hasCoords);
-
-        if (countryPlaces.length === 0) {
-          setGeoNotice({
-            text: `No coordinate locations available for ${selectedCountry}.`,
-            isError: true,
-          });
-          return;
-        }
-
-        let nearestCity = countryPlaces[0].city;
-        let minDist = Infinity;
-
-        for (const place of countryPlaces) {
-          const dist = haversineDistance(latitude, longitude, place.latitude, place.longitude);
-          if (dist < minDist) {
-            minDist = dist;
-            nearestCity = place.city;
-          }
-        }
-
-        onCityChange(nearestCity);
-        try {
-          localStorage.setItem('tm-saved-city', nearestCity);
-        } catch {
-          // ignore
-        }
-        setGeoNotice({
-          text: `Found nearest: ${nearestCity} (~${minDist.toFixed(1)} km)`,
-          isError: false,
-        });
-      },
-      error => {
-        setIsLocating(false);
-        if (error.code === 1) { // PERMISSION_DENIED
-          setGeoNotice({
-            text: 'Location permission denied. Please choose your city from the list.',
-            isError: true,
-          });
-        } else if (error.code === 3) { // TIMEOUT
-          setGeoNotice({
-            text: 'Location request timed out. Please choose your city from the list.',
-            isError: true,
-          });
-        } else {
-          setGeoNotice({
-            text: 'Could not access location. Please choose your city from the list.',
-            isError: true,
-          });
-        }
-      },
-      { timeout: 8000, maximumAge: 60000, enableHighAccuracy: false },
-    );
+  const handleNearMe = async () => {
+    const code = selectedCountry === 'Nigeria' ? 'NG' : (selectedCountry === 'India' ? 'IN' : 'NG');
+    await requestGpsLocation(code, (nearestCity) => {
+      onCityChange(nearestCity);
+    });
   };
 
   return (
@@ -400,45 +377,224 @@ export default function SearchBar({
             <button
               type="button"
               onClick={handleNearMe}
-              disabled={isLocating}
+              disabled={geoStatus === 'locating'}
               style={{
                 width: '100%',
                 height: 32,
                 borderRadius: 6,
                 border: '1px solid var(--accent)',
-                background: 'var(--surface)',
+                background: location?.source === 'gps' ? 'rgba(200, 240, 60, 0.15)' : 'var(--surface)',
                 color: 'var(--accent-deep)',
                 fontSize: 12,
                 fontWeight: 600,
-                cursor: isLocating ? 'wait' : 'pointer',
+                cursor: geoStatus === 'locating' ? 'wait' : 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: 6,
-                marginBottom: 8,
+                marginBottom: 6,
               }}
             >
               <Navigation size={13} />
-              <span>{isLocating ? 'Detecting nearest city...' : 'Near me (GPS)'}</span>
+              <span>
+                {geoStatus === 'locating'
+                  ? 'Finding GPS position...'
+                  : geoStatus === 'refining'
+                  ? `Refining... (${accuracyLabel || ''})`
+                  : location?.source === 'gps'
+                  ? `GPS: ${accuracyLabel || 'Active'}`
+                  : 'Near me (GPS)'}
+              </span>
             </button>
 
             {/* Geolocation feedback notice */}
-            {geoNotice && (
+            {geoStatusMessage && (
               <div
                 style={{
                   padding: '6px 10px',
                   borderRadius: 6,
                   fontSize: 11,
                   lineHeight: '15px',
-                  marginBottom: 8,
-                  background: geoNotice.isError ? 'rgba(235, 87, 87, 0.1)' : 'rgba(39, 174, 96, 0.1)',
-                  color: geoNotice.isError ? 'var(--warn)' : '#27ae60',
-                  border: `1px solid ${geoNotice.isError ? 'rgba(235, 87, 87, 0.2)' : 'rgba(39, 174, 96, 0.2)'}`,
+                  marginBottom: 6,
+                  background: geoStatus === 'error' ? 'rgba(235, 87, 87, 0.1)' : 'rgba(39, 174, 96, 0.1)',
+                  color: geoStatus === 'error' ? 'var(--warn)' : '#27ae60',
+                  border: `1px solid ${geoStatus === 'error' ? 'rgba(235, 87, 87, 0.2)' : 'rgba(39, 174, 96, 0.2)'}`,
                 }}
               >
-                {geoNotice.text}
+                {geoStatusMessage}
               </div>
             )}
+
+            {/* Browser permission instructions (2 short lines on denial) */}
+            {permissionGuide && (
+              <div
+                style={{
+                  padding: '8px 10px',
+                  borderRadius: 6,
+                  fontSize: 11,
+                  lineHeight: '16px',
+                  marginBottom: 6,
+                  background: 'rgba(235, 87, 87, 0.1)',
+                  color: 'var(--warn)',
+                  border: '1px solid rgba(235, 87, 87, 0.2)',
+                }}
+              >
+                <div style={{ fontWeight: 600, marginBottom: 2 }}>
+                  Location permission denied. {permissionGuide.title}
+                </div>
+                {permissionGuide.lines.map((l, i) => (
+                  <div key={i}>{l}</div>
+                ))}
+              </div>
+            )}
+
+            {/* Manual fallbacks that need no GPS */}
+            <div style={{ marginBottom: 8 }}>
+              <button
+                type="button"
+                onClick={() => setShowManualFallback(!showManualFallback)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: 'var(--text-muted)',
+                  fontSize: 11,
+                  cursor: 'pointer',
+                  padding: 0,
+                  textDecoration: 'underline',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 4,
+                }}
+              >
+                <Compass size={11} />
+                <span>{showManualFallback ? 'Hide manual fallbacks' : 'Manual location (no GPS): Area · Landmark · Pin'}</span>
+              </button>
+
+              {showManualFallback && (
+                <div
+                  style={{
+                    marginTop: 6,
+                    padding: 8,
+                    borderRadius: 6,
+                    background: 'var(--surface-2)',
+                    border: '1px solid var(--border)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 6,
+                  }}
+                >
+                  {/* 1. Locality fallback */}
+                  {cityLocalities.length > 0 && (
+                    <div>
+                      <label style={{ fontSize: 10, fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: 2 }}>
+                        Choose area in {selectedCity}:
+                      </label>
+                      <select
+                        onChange={(e) => {
+                          const loc = e.target.value;
+                          if (loc) {
+                            const matched = data.find(r => r.city === selectedCity && r.locality === loc && r.hasCoords);
+                            setManualLocality(loc, matched ? { lat: matched.latitude, lon: matched.longitude } : undefined);
+                          }
+                        }}
+                        style={{
+                          width: '100%',
+                          height: 28,
+                          fontSize: 11,
+                          borderRadius: 4,
+                          border: '1px solid var(--border)',
+                          background: 'var(--surface)',
+                          color: 'var(--text)',
+                        }}
+                      >
+                        <option value="">Select area...</option>
+                        {cityLocalities.map(loc => (
+                          <option key={loc} value={loc}>{loc}</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  {/* 2. Landmark fallback */}
+                  {cityLandmarks.length > 0 && (
+                    <div>
+                      <label style={{ fontSize: 10, fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: 2 }}>
+                        Choose landmark in {selectedCity} ({cityLandmarks.length}):
+                      </label>
+                      <select
+                        onChange={(e) => {
+                          const lmUid = e.target.value;
+                          const lm = cityLandmarks.find(l => l.uid === lmUid);
+                          if (lm) setManualLandmark(lm);
+                        }}
+                        style={{
+                          width: '100%',
+                          height: 28,
+                          fontSize: 11,
+                          borderRadius: 4,
+                          border: '1px solid var(--border)',
+                          background: 'var(--surface)',
+                          color: 'var(--text)',
+                        }}
+                      >
+                        <option value="">Select landmark...</option>
+                        {cityLandmarks.map(lm => (
+                          <option key={lm.uid} value={lm.uid}>{lm.name} ({lm.category})</option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  {/* 3. Map pin coords fallback */}
+                  <div>
+                    <label style={{ fontSize: 10, fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: 2 }}>
+                      Drop pin coordinates:
+                    </label>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      <input
+                        type="number"
+                        step="0.0001"
+                        placeholder="Lat"
+                        value={pinLatInput}
+                        onChange={e => setPinLatInput(e.target.value)}
+                        style={{ flex: 1, height: 26, fontSize: 11, padding: '0 4px', borderRadius: 4, border: '1px solid var(--border)', background: 'var(--surface)', color: 'var(--text)' }}
+                      />
+                      <input
+                        type="number"
+                        step="0.0001"
+                        placeholder="Lon"
+                        value={pinLonInput}
+                        onChange={e => setPinLonInput(e.target.value)}
+                        style={{ flex: 1, height: 26, fontSize: 11, padding: '0 4px', borderRadius: 4, border: '1px solid var(--border)', background: 'var(--surface)', color: 'var(--text)' }}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const lat = parseFloat(pinLatInput);
+                          const lon = parseFloat(pinLonInput);
+                          if (!isNaN(lat) && !isNaN(lon)) {
+                            setManualPin(lat, lon);
+                          }
+                        }}
+                        style={{
+                          padding: '0 8px',
+                          height: 26,
+                          fontSize: 11,
+                          fontWeight: 600,
+                          borderRadius: 4,
+                          background: 'var(--accent)',
+                          color: '#0C0D10',
+                          border: 'none',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        Set Pin
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* TAB: CITIES */}
             {activeTab === 'city' && (
@@ -484,35 +640,58 @@ export default function SearchBar({
                 </div>
 
                 <div style={{ maxHeight: 180, overflowY: 'auto' }}>
-                  {filteredCities.map(c => (
-                    <div
-                      key={c}
-                      onClick={() => {
-                        onCityChange(c);
-                        try {
-                          localStorage.setItem('tm-saved-city', c);
-                        } catch {
-                          // ignore
-                        }
-                        setIsCityOpen(false);
-                        setCityFilter('');
-                      }}
-                      style={{
-                        padding: '8px 10px',
-                        borderRadius: 6,
-                        fontSize: 13,
-                        cursor: 'pointer',
-                        color: c === selectedCity ? 'var(--accent-ink)' : 'var(--text)',
-                        background: c === selectedCity ? 'var(--accent)' : 'transparent',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                      }}
-                    >
-                      <span>{c}</span>
-                      {c === selectedCity && <Check size={14} strokeWidth={2} />}
-                    </div>
-                  ))}
+                  {filteredCities.map(c => {
+                    const count = getCityCount(data, c);
+                    const isLimited = count < 5;
+                    return (
+                      <div
+                        key={c}
+                        onClick={() => {
+                          onCityChange(c);
+                          try {
+                            localStorage.setItem('tm-saved-city', c);
+                          } catch {
+                            // ignore
+                          }
+                          setIsCityOpen(false);
+                          setCityFilter('');
+                        }}
+                        style={{
+                          padding: '8px 10px',
+                          borderRadius: 6,
+                          fontSize: 13,
+                          cursor: 'pointer',
+                          color: c === selectedCity ? 'var(--accent-ink)' : 'var(--text)',
+                          background: c === selectedCity ? 'var(--accent)' : 'transparent',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          gap: 8,
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, minWidth: 0 }}>
+                          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{c}</span>
+                          {isLimited && (
+                            <span
+                              style={{
+                                fontSize: 10,
+                                padding: '1px 5px',
+                                borderRadius: 4,
+                                background: c === selectedCity ? 'rgba(0,0,0,0.1)' : 'rgba(255, 184, 77, 0.15)',
+                                color: c === selectedCity ? 'var(--accent-ink)' : 'var(--warn)',
+                                border: c === selectedCity ? '1px solid rgba(0,0,0,0.2)' : '1px solid rgba(255, 184, 77, 0.3)',
+                                whiteSpace: 'nowrap',
+                              }}
+                              title="Fewer than 5 listings available in this city"
+                            >
+                              Limited coverage ({count})
+                            </span>
+                          )}
+                        </div>
+                        {c === selectedCity && <Check size={14} strokeWidth={2} />}
+                      </div>
+                    );
+                  })}
                   {filteredCities.length === 0 && (
                     <div style={{ padding: '8px 10px', fontSize: 12, color: 'var(--text-muted)' }}>
                       No cities match "{cityFilter}"
@@ -844,6 +1023,109 @@ export default function SearchBar({
           Find
         </button>
       </div>
+
+      {/* Coverage Honesty Modal: When user is > 40 km from nearest city centre */}
+      {coverageHonesty && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.65)',
+            backdropFilter: 'blur(3px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 100,
+            padding: 16,
+          }}
+        >
+          <div
+            style={{
+              background: 'var(--surface)',
+              border: '1px solid var(--border)',
+              borderRadius: 12,
+              padding: 24,
+              maxWidth: 440,
+              width: '100%',
+              boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
+              <MapPin size={22} style={{ color: 'var(--warn)' }} />
+              <h4 style={{ margin: 0, fontSize: 16, fontWeight: 700, color: 'var(--text)' }}>
+                Coverage Notice
+              </h4>
+            </div>
+            <p style={{ margin: '0 0 16px', fontSize: 13, lineHeight: '20px', color: 'var(--text)' }}>
+              You're about <strong>{Math.round(coverageHonesty.distanceKm)} km</strong> from <strong>{coverageHonesty.nearestCity}</strong>. We have no listings near you yet.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <button
+                type="button"
+                onClick={() => {
+                  confirmCoverageHonestyCity(coverageHonesty.nearestCity);
+                  onCityChange(coverageHonesty.nearestCity);
+                }}
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: 8,
+                  background: 'var(--accent)',
+                  color: '#0C0D10',
+                  fontWeight: 600,
+                  fontSize: 13,
+                  border: 'none',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                }}
+              >
+                1. Browse {coverageHonesty.nearestCity}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  dismissCoverageHonesty();
+                  setIsCityOpen(true);
+                  setActiveTab('city');
+                }}
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: 8,
+                  background: 'var(--surface-2)',
+                  border: '1px solid var(--border)',
+                  color: 'var(--text)',
+                  fontSize: 13,
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                }}
+              >
+                2. Pick another city from list
+              </button>
+              <a
+                href={`https://www.openstreetmap.org/edit#map=16/${coverageHonesty.userCoords.lat}/${coverageHonesty.userCoords.lon}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => dismissCoverageHonesty()}
+                style={{
+                  padding: '10px 14px',
+                  borderRadius: 8,
+                  background: 'transparent',
+                  border: '1px dashed var(--border)',
+                  color: 'var(--text-muted)',
+                  fontSize: 13,
+                  textAlign: 'left',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <span>3. Help add places here (OSM)</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

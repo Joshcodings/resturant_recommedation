@@ -3,6 +3,7 @@ import { useRestaurants } from '@/context/RestaurantContext';
 import { groupRecommend } from '@/lib/groupRecommendation';
 import { planOwambeCrawl } from '@/lib/owambeCrawlPlanner';
 import { useDataSaver } from '@/context/DataSaverContext';
+import { useLocationContext } from '@/context/LocationContext';
 import RestaurantDrawer from '@/components/drawer/RestaurantDrawer';
 import CuisineIcon from '@/components/common/CuisineIcon';
 import type { ScoredRestaurant } from '@/types/recommendation';
@@ -28,6 +29,8 @@ import {
 import { DEFAULT_COUNTRY_NAME } from '@/config/defaults';
 import { computeLargestCity } from '@/lib/dataLoader';
 import { useLanguage } from '@/context/LanguageContext';
+import WhatsAppShareModal from '@/components/common/WhatsAppShareModal';
+import { parsePlanDeepLink } from '@/lib/whatsappShare';
 
 function renderStageIcon(stageName: string) {
   const s = stageName.toLowerCase();
@@ -41,6 +44,7 @@ function renderStageIcon(stageName: string) {
 export default function GroupView() {
   const { data, countryCityIndex, getCuisines } = useRestaurants();
   const { isDataSaver, dataSavedKB } = useDataSaver();
+  const { location } = useLocationContext();
   const { t } = useLanguage();
 
   const [activeTab, setActiveTab] = useState<'consensus' | 'owambe'>('consensus');
@@ -58,6 +62,27 @@ export default function GroupView() {
       setCity(largest);
     }
   }, [countryCityIndex, country, city, data]);
+
+  // WhatsApp share modal state
+  const [isCrawlShareOpen, setIsCrawlShareOpen] = useState(false);
+
+  // Restore shared crawl plan from deep link hash/query
+  useEffect(() => {
+    const rawHash = typeof window !== 'undefined' ? window.location.hash : '';
+    const rawSearch = typeof window !== 'undefined' ? window.location.search : '';
+    const parsed = parsePlanDeepLink(rawHash) || parsePlanDeepLink(rawSearch);
+    if (parsed) {
+      if (parsed.city) {
+        setCity(parsed.city);
+      }
+      if (parsed.type === 'crawl' || (parsed.stops && parsed.stops.length > 0)) {
+        setActiveTab('owambe');
+      }
+      if (parsed.order && (parsed.order.length === 2 || parsed.order.length === 3 || parsed.order.length === 4)) {
+        setCrawlStopsCount(parsed.order.length as 2 | 3 | 4);
+      }
+    }
+  }, []);
 
   // Consensus mode states
   const [cuisinesA, setCuisinesA] = useState<string[]>(['Nigerian', 'Fast Food']);
@@ -115,8 +140,9 @@ export default function GroupView() {
       locality: selectedCrawlLocality,
       maxPrice: priceRange,
       diets: crawlDiets,
+      userLocation: location ? { latitude: location.lat, longitude: location.lon, source: location.source } : null,
     });
-  }, [cityRestaurants, city, crawlStopsCount, selectedCrawlLocality, priceRange, crawlDiets]);
+  }, [cityRestaurants, city, crawlStopsCount, selectedCrawlLocality, priceRange, crawlDiets, location]);
 
   const toggleCuisine = (person: 'A' | 'B', c: string) => {
     if (person === 'A') {
@@ -794,6 +820,14 @@ export default function GroupView() {
                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                       <Footprints size={14} /> <strong>Route:</strong> ~{crawlPlan.totalDistanceKm} km (~{crawlPlan.totalWalkingMinutes} mins)
                     </span>
+                    {crawlPlan.distanceFromUserKm !== undefined && (
+                      <>
+                        <span>·</span>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                          <MapPin size={14} /> <strong>Start:</strong> ~{crawlPlan.distanceFromUserKm} km from you
+                        </span>
+                      </>
+                    )}
                     <span>·</span>
                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                       <Banknote size={14} /> <strong>Estimated Cost:</strong> {crawlPlan.estimatedCostText}
@@ -825,10 +859,9 @@ export default function GroupView() {
                     <span>{copiedCrawl ? 'Copied!' : 'Copy'}</span>
                   </button>
 
-                  <a
-                    href={crawlPlan.waLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setIsCrawlShareOpen(true)}
                     style={{
                       height: 38,
                       padding: '0 16px',
@@ -840,13 +873,13 @@ export default function GroupView() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: 6,
-                      textDecoration: 'none',
+                      border: 'none',
                       cursor: 'pointer',
                     }}
                   >
                     <Share2 size={15} />
                     <span>Share via WhatsApp</span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -1000,6 +1033,16 @@ export default function GroupView() {
           setDrawerRestaurant(scored);
         }}
       />
+
+      {crawlPlan && (
+        <WhatsAppShareModal
+          open={isCrawlShareOpen}
+          onClose={() => setIsCrawlShareOpen(false)}
+          title={`TasteMatch Owambe: ${city} Food Crawl`}
+          message={crawlPlan.waMessage}
+          planDeepLink={crawlPlan.deepLink}
+        />
+      )}
     </div>
   );
 }

@@ -70,10 +70,26 @@ All figures below are computed directly by `scripts/validate_datasets.py` and au
 
 - **Total Worldwide Places**: **8,666**
   - **Kaggle Zomato Records**: **7,403** (across 15 countries: India, USA, South Africa, UAE, UK, Brazil, etc.)
-  - **Nigeria OpenStreetMap Records**: **1,263** (Lagos: 164, Benin City: 134, Abuja: 126, Jos: 114, Enugu: 88, Ikeja: 84, Kano: 41, Kaduna: 35, Ilorin: 35, and more)
-- **Data Shards**: **232 static JSON shards** (all files $\le 8$ MB; average shard $\le 12$ KB).
+  - **Nigeria OpenStreetMap Records**: **1,263** (Benin City: 183, Lagos: 170, Abuja: 134, Jos: 121, Enugu: 88, Ikeja: 84, Kano: 47, Ibadan: 43, Ilorin: 38, Port Harcourt: 36, and more across 58 canonical cities)
+- **Nigeria OSM Field Coverage**:
+  - Cuisine: **21.5%** (271 places)
+  - Opening Hours: **13.5%** (171 places)
+  - Phone: **8.7%** (110 places)
+- **City Coverage Classification**:
+  - Full cities ($\ge 5$ places): **25 cities**
+  - Limited coverage cities ($< 5$ places): **33 cities** (sorted below the main list with "Limited coverage" badge)
+- **Data Shards**: **199 static JSON shards** (all files $\le 8$ MB; average shard $\le 12$ KB).
 - **Universal UIDs**: **8,666 unique UIDs** with 0 collisions.
-- **Automated Tests**: **18 test suites, 133 tests passed, 0 failures** (including complete Acceptance Tests T1–T22).
+- **Automated Tests**: **20 test suites, 161 tests passed, 0 failures** (including complete Acceptance Tests T1–T22, WhatsApp share helper suite, and Location GPS suite).
+
+---
+
+## ⚠️ Known Issues
+
+The following items are open review observations preserved for backwards compatibility and research transparency:
+1. **`mlMetrics.ts` Offline Snapshot**: Metric figures represent a static offline evaluation snapshot from the initial model training run and are not dynamically recomputed on the browser client.
+2. **Rating Simulator**: The Rating Simulator is an exploratory data science demonstration tool. In production ranking, unrated OpenStreetMap listings use verified feature and proximity scoring rather than synthesized ratings.
+3. **Circular Benchmark**: Model evaluations assess retrieval consistency against the training distribution snapshot rather than an external live ground-truth panel.
 
 ---
 

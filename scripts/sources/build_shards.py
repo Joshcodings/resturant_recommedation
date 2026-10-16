@@ -11,6 +11,7 @@ Compiles multi-country sharded architecture for TasteMatch:
 """
 
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -29,7 +30,96 @@ PUBLIC_DATA_DIR = REPO_ROOT / "tastematch" / "public" / "data"
 
 MAX_SHARD_BYTES = 8 * 1024 * 1024  # 8 MB raw cap
 
-# Country ISO 3166-1 alpha-2 mapping
+# Canonical alias mapping for Nigerian cities to prevent duplicate shards, collisions, and fragmentation
+CITY_ALIASES = {
+    # Abuja variants
+    "ABUJA": "Abuja",
+    "abuja": "Abuja",
+    "Abuja Area": "Abuja",
+    "Abuja Nigeria": "Abuja",
+    # Benin City variants
+    "Benin City Area": "Benin City",
+    "Benin city": "Benin City",
+    "benin city": "Benin City",
+    # Ibadan variants
+    "IBADAN": "Ibadan",
+    "Ibadan Area": "Ibadan",
+    "Mokola, Ibadam": "Ibadan",
+    # Jos variants
+    "jos": "Jos",
+    "Jos Area": "Jos",
+    "Jos-North": "Jos",
+    # Kano variants
+    "kano": "Kano",
+    "Kano Area": "Kano",
+    # Lekki variants
+    "LEKKI": "Lekki",
+    "lekki": "Lekki",
+    "Lekki, Lagos": "Lekki",
+    # Lagos variants
+    "lagos": "Lagos",
+    "Lagos Area": "Lagos",
+    "Lagaos": "Lagos",
+    "Lagos Island": "Lagos",
+    "Ilupeju, Lagos": "Lagos",
+    # Port Harcourt variants
+    "port harcourt": "Port Harcourt",
+    "Port Harcourt Area": "Port Harcourt",
+    "Choba Port Harcourt": "Port Harcourt",
+    "Choba/Port Harcourt": "Port Harcourt",
+    "Rumualogu/Port Harcourt": "Port Harcourt",
+    "University of Port Harcourt, Abuja Campus, Choba, Rivers State.": "Port Harcourt",
+    # Owerri variants
+    "Owerri Area": "Owerri",
+    # Ilorin variants
+    "Ilorin Area": "Ilorin",
+    "Ilorin, Kwara State, Nigeria": "Ilorin",
+    # Kaduna variants
+    "Kaduna Area": "Kaduna",
+    "Kaduna North": "Kaduna",
+    # Calabar variants
+    "Calabar Area": "Calabar",
+    "Calabar, Cross River": "Calabar",
+    # Uyo variants
+    "Uyo Area": "Uyo",
+    # Warri variants
+    "Warri Area": "Warri",
+    # Bauchi variants
+    "Bauchi Area": "Bauchi",
+    # Gombe variants
+    "Gombe Area": "Gombe",
+    # Maiduguri variants
+    "Maiduguri Area": "Maiduguri",
+    # Yola variants
+    "Yola Area": "Yola",
+    # Lokoja variants
+    "Lokoja Area": "Lokoja",
+    # Makurdi variants
+    "Makurdi Area": "Makurdi",
+    # Osogbo variants
+    "Oshogbo": "Osogbo",
+    # Other case normalizations
+    "Birnin kebbi": "Birnin Kebbi",
+    "agbor": "Agbor",
+    "Yenagoa, Bayelsa state": "Yenagoa",
+}
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    R = 6371.0
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    a = (math.sin(dlat / 2) ** 2 +
+         math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) *
+         math.sin(dlon / 2) ** 2)
+    return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def slugify(text: str) -> str:
+    s = text.lower().strip()
+    s = re.sub(r"[^\w\s-]", "", s)
+    s = re.sub(r"[\s_-]+", "-", s)
+    return s or "unassigned"
 COUNTRY_CODES = {
     "Nigeria": "NG",
     "India": "IN",
@@ -100,13 +190,28 @@ def main() -> None:
         if not r.get("uid"):
             r["uid"] = f"zomato:{r['restaurant_id']}"
 
-    # Group by Country -> City
+    # Group by Country -> City with logged alias mappings
     country_groups: dict[str, dict[str, list[dict]]] = defaultdict(lambda: defaultdict(list))
+    alias_merge_log: dict[str, int] = defaultdict(int)
 
     for r in ng_places:
         country_name = r.get("country", "Nigeria")
-        city_name = r.get("city", "Unassigned")
-        country_groups[country_name][city_name].append(r)
+        raw_city = r.get("city", "Unassigned")
+        if raw_city in CITY_ALIASES:
+            canonical_city = CITY_ALIASES[raw_city]
+            alias_merge_log[f"{raw_city} -> {canonical_city}"] += 1
+        else:
+            canonical_city = raw_city
+        r["city"] = canonical_city
+        country_groups[country_name][canonical_city].append(r)
+
+    print("\n============================================================")
+    print("CITY ALIAS MERGE LOG:")
+    print("============================================================")
+    for mapping, cnt in sorted(alias_merge_log.items(), key=lambda x: -x[1]):
+        print(f"  Merged {cnt:>2} place(s): {mapping}")
+    print(f"Total merged alias mappings applied: {len(alias_merge_log)}")
+    print("============================================================\n")
 
     for r in zomato_places:
         country_name = r.get("country", "India")
@@ -115,6 +220,7 @@ def main() -> None:
 
     # Build countries catalog
     countries_catalog = []
+    build_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for country_name in sorted(country_groups.keys()):
         code = COUNTRY_CODES.get(country_name, country_name[:2].upper())
@@ -128,7 +234,7 @@ def main() -> None:
             "status": "available",
             "places": total_places,
             "cities": len(cities_map),
-            "retrieved_at": "2026-10-09T00:00:00Z",
+            "retrieved_at": build_timestamp,
             "sources": lic_info["sources"],
             "licence": lic_info["licence"],
             "attribution": lic_info["attribution"],
@@ -136,12 +242,48 @@ def main() -> None:
         }
         countries_catalog.append(country_entry)
 
+        # Clear existing shard files for this country to prevent stale/overwritten shards
+        for base in [OUT_DIR, PUBLIC_DATA_DIR]:
+            shard_dir = base / "shards" / code
+            if shard_dir.exists():
+                for old_f in shard_dir.glob("*.json"):
+                    old_f.unlink()
+            shard_dir.mkdir(parents=True, exist_ok=True)
+
         # Build country index with capabilities: countries/<CODE>.json
         city_index = {}
         for city_name in sorted(cities_map.keys()):
             places = cities_map[city_name]
             # Deterministic sort by uid
             places.sort(key=lambda x: str(x.get("uid", "")))
+
+            # Compute centroid, bounds, and radius from places with valid coords
+            coords_places = [
+                p for p in places
+                if p.get("latitude") is not None
+                and p.get("longitude") is not None
+                and (p.get("latitude") != 0 or p.get("longitude") != 0)
+            ]
+
+            centroid = None
+            bounds = None
+            radius_km = None
+
+            if coords_places:
+                avg_lat = sum(p["latitude"] for p in coords_places) / len(coords_places)
+                avg_lon = sum(p["longitude"] for p in coords_places) / len(coords_places)
+                centroid = {
+                    "latitude": round(avg_lat, 6),
+                    "longitude": round(avg_lon, 6),
+                }
+                bounds = {
+                    "minLatitude": round(min(p["latitude"] for p in coords_places), 6),
+                    "maxLatitude": round(max(p["latitude"] for p in coords_places), 6),
+                    "minLongitude": round(min(p["longitude"] for p in coords_places), 6),
+                    "maxLongitude": round(max(p["longitude"] for p in coords_places), 6),
+                }
+                max_d = max(haversine_km(avg_lat, avg_lon, p["latitude"], p["longitude"]) for p in coords_places)
+                radius_km = round(max(max_d, 1.0), 2)
 
             has_prices = any(p.get("price_range") is not None for p in places)
             has_ratings = any(p.get("aggregate_rating") is not None for p in places)
@@ -183,6 +325,10 @@ def main() -> None:
 
             city_index[city_name] = {
                 "count": len(places),
+                "limitedCoverage": len(places) < 5,
+                "centroid": centroid,
+                "bounds": bounds,
+                "radiusKm": radius_km,
                 "hasPrices": has_prices,
                 "hasRatings": has_ratings,
                 "hasBooking": has_booking,
@@ -218,6 +364,30 @@ def main() -> None:
         # Sort deterministically
         ng_places.sort(key=lambda x: str(x.get("uid", "")))
         json.dump(ng_places, f, indent=2, sort_keys=True, ensure_ascii=False)
+
+    # Write reconciled manifest.json with real build time
+    manifest_data = [
+        {
+            "file": "restaurants_ng.json",
+            "recordCount": len(ng_places),
+            "retrieved_at": build_timestamp,
+            "source": "OpenStreetMap",
+            "licence": "ODbL 1.0",
+        },
+        {
+            "file": "restaurants.json",
+            "recordCount": len(zomato_places),
+            "retrieved_at": build_timestamp,
+            "source": "Zomato Kaggle Archive",
+            "licence": "CC0 / Public Domain",
+        },
+    ]
+
+    for m_path in [REPO_ROOT / "data" / "manifest.json", PUBLIC_DATA_DIR / "manifest.json"]:
+        m_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(m_path, "w", encoding="utf-8") as f:
+            json.dump(manifest_data, f, indent=2, sort_keys=True)
+    print(f"Updated manifest.json with real build timestamp ({build_timestamp}) and reconciled record counts.")
 
     print(f"Generated {len(countries_catalog)} countries in countries.json")
     print(f"Shards generated and synced to both data/out/ and tastematch/public/data/")

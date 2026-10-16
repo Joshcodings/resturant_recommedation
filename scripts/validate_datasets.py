@@ -18,6 +18,7 @@ import os
 import sys
 from pathlib import Path
 from collections import Counter
+from datetime import datetime, timezone
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -120,7 +121,62 @@ def main() -> None:
                 errors.append(f"Shard exceeds 8 MB cap: {shard_file.name} ({size / (1024*1024):.2f} MB)")
         print(f"Verified {shard_count} shard files (all <= 8 MB cap)")
 
-    # 6. Report results
+    # 6. Structured Coverage in Nigeria OSM
+    with_cuisine = sum(1 for r in ng_records if r.get("cuisines") and r.get("cuisines") != "Unspecified")
+    with_hours = sum(1 for r in ng_records if r.get("opening_hours"))
+    with_phone = sum(1 for r in ng_records if r.get("phone"))
+    total_ng = len(ng_records) or 1
+
+    print("\n--- NIGERIA OSM STRUCTURED FIELD COVERAGE ---")
+    print(f"  Cuisine:       {with_cuisine:>4} / {total_ng} ({with_cuisine/total_ng*100:5.1f}%)")
+    print(f"  Opening Hours: {with_hours:>4} / {total_ng} ({with_hours/total_ng*100:5.1f}%)")
+    print(f"  Phone:         {with_phone:>4} / {total_ng} ({with_phone/total_ng*100:5.1f}%)")
+
+    # City counts and limited coverage analysis from canonical synced dataset
+    canonical_ng_path = REPO_ROOT / "tastematch" / "public" / "data" / "restaurants_ng.json"
+    if canonical_ng_path.exists():
+        with open(canonical_ng_path, "r", encoding="utf-8") as f:
+            canonical_records = json.load(f)
+    else:
+        canonical_records = ng_records
+
+    city_counts = Counter(r.get("city") for r in canonical_records)
+    limited_cities = [c for c, count in city_counts.items() if count < 5]
+    print(f"  Total Nigerian Cities (Canonical): {len(city_counts)} (Full: {len(city_counts)-len(limited_cities)}, Limited Coverage: {len(limited_cities)})")
+
+    # Save metrics artifact for About modal and README verification
+    metrics = {
+        "totalPlaces": len(seen_uids),
+        "zomatoPlaces": len(zomato_records),
+        "nigeriaPlaces": len(ng_records),
+        "shardCount": shard_count,
+        "nigeriaCitiesCount": len(city_counts),
+        "fullCitiesCount": len(city_counts) - len(limited_cities),
+        "limitedCoverageCitiesCount": len(limited_cities),
+        "coverage": {
+            "cuisineCount": with_cuisine,
+            "cuisinePct": round(with_cuisine / total_ng * 100, 1),
+            "hoursCount": with_hours,
+            "hoursPct": round(with_hours / total_ng * 100, 1),
+            "phoneCount": with_phone,
+            "phonePct": round(with_phone / total_ng * 100, 1),
+        },
+        "validatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "status": "PASS" if not errors else "FAIL",
+    }
+
+    metrics_paths = [
+        REPO_ROOT / "data" / "dataset_metrics.json",
+        REPO_ROOT / "tastematch" / "public" / "data" / "dataset_metrics.json",
+        REPO_ROOT / "tastematch" / "src" / "data" / "datasetMetrics.json",
+    ]
+    for mp in metrics_paths:
+        mp.parent.mkdir(parents=True, exist_ok=True)
+        with open(mp, "w", encoding="utf-8") as f:
+            json.dump(metrics, f, indent=2, sort_keys=True)
+    print(f"  Artifact generated: tastematch/src/data/datasetMetrics.json")
+
+    # 7. Report results
     print("-" * 60)
     if errors:
         print(f"FAILED with {len(errors)} error(s):", file=sys.stderr)

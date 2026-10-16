@@ -1,67 +1,139 @@
 {
   "cities": {
     "Cape Town": {
+      "bounds": {
+        "maxLatitude": -33.901746,
+        "maxLongitude": 18.514406,
+        "minLatitude": -33.979757,
+        "minLongitude": 18.381997
+      },
+      "centroid": {
+        "latitude": -33.92723,
+        "longitude": 18.425183
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 9.22,
       "shards": [
         "cape-town-1.json"
       ]
     },
     "Inner City": {
+      "bounds": {
+        "maxLatitude": -26.203278,
+        "maxLongitude": 28.060192,
+        "minLatitude": -26.207091,
+        "minLongitude": 28.031863
+      },
+      "centroid": {
+        "latitude": -26.205185,
+        "longitude": 28.046028
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.43,
       "shards": [
         "inner-city-1.json"
       ]
     },
     "Johannesburg": {
+      "bounds": {
+        "maxLatitude": -26.137391,
+        "maxLongitude": 28.036199,
+        "minLatitude": -26.14658,
+        "minLongitude": 28.011059
+      },
+      "centroid": {
+        "latitude": -26.141715,
+        "longitude": 28.020861
+      },
       "count": 6,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 1.54,
       "shards": [
         "johannesburg-1.json"
       ]
     },
     "Pretoria": {
+      "bounds": {
+        "maxLatitude": -25.761238,
+        "maxLongitude": 28.332471,
+        "minLatitude": -25.80283,
+        "minLongitude": 27.999097
+      },
+      "centroid": {
+        "latitude": -25.779439,
+        "longitude": 28.257866
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 25.99,
       "shards": [
         "pretoria-1.json"
       ]
     },
     "Randburg": {
+      "bounds": {
+        "maxLatitude": -26.14026,
+        "maxLongitude": 27.991791,
+        "minLatitude": -26.14026,
+        "minLongitude": 27.991791
+      },
+      "centroid": {
+        "latitude": -26.14026,
+        "longitude": 27.991791
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "randburg-1.json"
       ]
     },
     "Sandton": {
+      "bounds": {
+        "maxLatitude": -26.021111,
+        "maxLongitude": 28.089878,
+        "minLatitude": -26.134935,
+        "minLongitude": 28.014375
+      },
+      "centroid": {
+        "latitude": -26.072718,
+        "longitude": 28.039619
+      },
       "count": 11,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.57,
       "shards": [
         "sandton-1.json"
       ]

@@ -1,23 +1,47 @@
 {
   "cities": {
     "Ankara": {
+      "bounds": {
+        "maxLatitude": 39.946278,
+        "maxLongitude": 32.8698,
+        "minLatitude": 39.876239,
+        "minLongitude": 32.701775
+      },
+      "centroid": {
+        "latitude": 39.906429,
+        "longitude": 32.824276
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 10.58,
       "shards": [
         "ankara-1.json"
       ]
     },
     "Istanbul": {
+      "bounds": {
+        "maxLatitude": 41.104969,
+        "maxLongitude": 29.074116,
+        "minLatitude": 40.963935,
+        "minLongitude": 28.976127
+      },
+      "centroid": {
+        "latitude": 41.029904,
+        "longitude": 29.016331
+      },
       "count": 14,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 9.0,
       "shards": [
         "istanbul-1.json"
       ]

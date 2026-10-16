@@ -1,9 +1,16 @@
 [
   {
     "file": "restaurants_ng.json",
-    "recordCount": 446,
-    "retrieved_at": "2026-10-07T16:00:00Z",
-    "source": "OpenStreetMap",
-    "licence": "ODbL"
+    "licence": "ODbL 1.0",
+    "recordCount": 1263,
+    "retrieved_at": "2026-10-14T22:51:59Z",
+    "source": "OpenStreetMap"
+  },
+  {
+    "file": "restaurants.json",
+    "licence": "CC0 / Public Domain",
+    "recordCount": 7403,
+    "retrieved_at": "2026-10-14T22:51:59Z",
+    "source": "Zomato Kaggle Archive"
   }
 ]

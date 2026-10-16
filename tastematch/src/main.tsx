@@ -9,10 +9,18 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 
-if (typeof window !== 'undefined' && 'serviceWorker' in navigator && import.meta.env.PROD) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      // Soft fail in private/incompatible environments
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  if (import.meta.env.DEV) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (const reg of registrations) {
+        reg.unregister();
+      }
     });
-  });
+  } else if (import.meta.env.PROD) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {
+        // Soft fail in private/incompatible environments
+      });
+    });
+  }
 }

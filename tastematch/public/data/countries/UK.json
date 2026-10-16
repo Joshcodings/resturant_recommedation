@@ -1,45 +1,93 @@
 {
   "cities": {
     "Birmingham": {
+      "bounds": {
+        "maxLatitude": 52.514167,
+        "maxLongitude": -1.846811,
+        "minLatitude": 52.443963,
+        "minLongitude": -1.947514
+      },
+      "centroid": {
+        "latitude": 52.476801,
+        "longitude": -1.902367
+      },
       "count": 19,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.84,
       "shards": [
         "birmingham-1.json"
       ]
     },
     "Edinburgh": {
+      "bounds": {
+        "maxLatitude": 55.97698,
+        "maxLongitude": -3.171328,
+        "minLatitude": 55.941903,
+        "minLongitude": -3.208363
+      },
+      "centroid": {
+        "latitude": 55.95348,
+        "longitude": -3.192
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 2.87,
       "shards": [
         "edinburgh-1.json"
       ]
     },
     "London": {
+      "bounds": {
+        "maxLatitude": 51.524536,
+        "maxLongitude": -0.076581,
+        "minLatitude": 51.485509,
+        "minLongitude": -0.162092
+      },
+      "centroid": {
+        "latitude": 51.512016,
+        "longitude": -0.131088
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.02,
       "shards": [
         "london-1.json"
       ]
     },
     "Manchester": {
+      "bounds": {
+        "maxLatitude": 53.513525,
+        "maxLongitude": -2.189833,
+        "minLatitude": 53.441833,
+        "minLongitude": -2.254833
+      },
+      "centroid": {
+        "latitude": 53.478209,
+        "longitude": -2.239034
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.19,
       "shards": [
         "manchester-1.json"
       ]

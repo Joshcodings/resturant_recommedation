@@ -1,34 +1,70 @@
 {
   "cities": {
     "Abu Dhabi": {
+      "bounds": {
+        "maxLatitude": 24.495693,
+        "maxLongitude": 54.606854,
+        "minLatitude": 24.334217,
+        "minLongitude": 54.357829
+      },
+      "centroid": {
+        "latitude": 24.464269,
+        "longitude": 54.405998
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 20.54,
       "shards": [
         "abu-dhabi-1.json"
       ]
     },
     "Dubai": {
+      "bounds": {
+        "maxLatitude": 25.254105,
+        "maxLongitude": 55.351478,
+        "minLatitude": 25.095044,
+        "minLongitude": 55.178746
+      },
+      "centroid": {
+        "latitude": 25.198021,
+        "longitude": 55.274324
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 13.9,
       "shards": [
         "dubai-1.json"
       ]
     },
     "Sharjah": {
+      "bounds": {
+        "maxLatitude": 25.355083,
+        "maxLongitude": 55.460279,
+        "minLatitude": 25.288772,
+        "minLongitude": 55.370861
+      },
+      "centroid": {
+        "latitude": 25.3249,
+        "longitude": 55.397935
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.75,
       "shards": [
         "sharjah-1.json"
       ]

@@ -291,9 +291,12 @@ export default function DataSaverSchematicMap({
 
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
                   {r.distanceKm !== undefined && (
-                    <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                    <span
+                      style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: 3 }}
+                      title={r.distanceSource === 'gps' || r.distanceSource === 'pin' ? `Approx. ${r.distanceKm.toFixed(1)} km from you` : `Approx. ${r.distanceKm.toFixed(1)} km from city center`}
+                    >
                       <MapPin size={11} />
-                      <span>{r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}</span>
+                      <span>{r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`} {r.distanceSource === 'gps' || r.distanceSource === 'pin' ? 'from you' : 'from centre'}</span>
                     </span>
                   )}
                 </div>

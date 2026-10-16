@@ -1,9 +1,11 @@
-import { useEffect, useRef } from 'react';
-import { X, Trash2, MapPin, Bookmark, Star } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { X, Trash2, MapPin, Bookmark, Star, Share2 } from 'lucide-react';
 import { useShortlist } from '@/context/ShortlistContext';
 import CuisineIcon from '@/components/common/CuisineIcon';
 import { formatCost } from '@/lib/formatters';
 import type { RestaurantParsed } from '@/types/restaurant';
+import WhatsAppShareModal from '@/components/common/WhatsAppShareModal';
+import { generatePlanDeepLink, capMessageLength } from '@/lib/whatsappShare';
 
 interface Props {
   open: boolean;
@@ -14,6 +16,8 @@ interface Props {
 export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: Props) {
   const { shortlist, removeFromShortlist } = useShortlist();
   const panelRef = useRef<HTMLDivElement>(null);
+
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -31,6 +35,42 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
   }, [open, onClose]);
 
   if (!open) return null;
+
+  const shortlistDeepLink = generatePlanDeepLink({
+    type: 'shortlist',
+    city: shortlist[0]?.city || '',
+    stops: shortlist.map((r) => r.uid),
+  });
+
+  const fullShortlistMsg = () =>
+    [
+      `❤️ *My TasteMatch Shortlist (${shortlist.length} places)*`,
+      '',
+      ...shortlist.map(
+        (r, i) =>
+          `${i + 1}. *${r.restaurant_name}* (${r.locality || r.city})\n   🍴 ${r.cuisines || 'Cuisines unlisted'}`,
+      ),
+      '',
+      `Open plan: ${shortlistDeepLink}`,
+      '_Saved on TasteMatch_',
+    ].join('\n');
+
+  const shortShortlistMsg = () =>
+    [
+      `❤️ *My TasteMatch Shortlist (${shortlist.length} places)*`,
+      ...shortlist.map((r, i) => `${i + 1}. ${r.restaurant_name} (${r.locality || r.city})`),
+      '',
+      `Open plan: ${shortlistDeepLink}`,
+    ].join('\n');
+
+  const minimalShortlistMsg = () =>
+    `❤️ My TasteMatch Shortlist (${shortlist.length} places), open plan: ${shortlistDeepLink}`;
+
+  const shortlistMessage = capMessageLength({
+    full: fullShortlistMsg,
+    short: shortShortlistMsg,
+    minimal: minimalShortlistMsg,
+  });
 
   return (
     <>
@@ -101,6 +141,31 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
         </div>
 
         <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {shortlist.length > 0 && (
+            <button
+              type="button"
+              onClick={() => setIsShareModalOpen(true)}
+              style={{
+                width: '100%',
+                padding: '10px 14px',
+                borderRadius: 8,
+                background: '#10b981',
+                color: '#ffffff',
+                border: 'none',
+                fontSize: 13,
+                fontWeight: 600,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 6,
+                cursor: 'pointer',
+              }}
+            >
+              <Share2 size={15} />
+              <span>Share Shortlist via WhatsApp</span>
+            </button>
+          )}
+
           {shortlist.length === 0 ? (
             <div
               style={{
@@ -219,6 +284,16 @@ export default function ShortlistDrawer({ open, onClose, onSelectRestaurant }: P
           )}
         </div>
       </div>
+
+      {isShareModalOpen && (
+        <WhatsAppShareModal
+          open={isShareModalOpen}
+          onClose={() => setIsShareModalOpen(false)}
+          title="My TasteMatch Shortlist"
+          message={shortlistMessage}
+          planDeepLink={shortlistDeepLink}
+        />
+      )}
     </>
   );
 }

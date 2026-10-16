@@ -1,45 +1,93 @@
 {
   "cities": {
     "Chatham-Kent": {
+      "bounds": {
+        "maxLatitude": 42.397683,
+        "maxLongitude": -82.188438,
+        "minLatitude": 42.397683,
+        "minLongitude": -82.188438
+      },
+      "centroid": {
+        "latitude": 42.397683,
+        "longitude": -82.188438
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "chatham-kent-1.json"
       ]
     },
     "Consort": {
+      "bounds": {
+        "maxLatitude": 52.008289,
+        "maxLongitude": -110.774699,
+        "minLatitude": 52.008289,
+        "minLongitude": -110.774699
+      },
+      "centroid": {
+        "latitude": 52.008289,
+        "longitude": -110.774699
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "consort-1.json"
       ]
     },
     "Vineland Station": {
+      "bounds": {
+        "maxLatitude": 43.18687,
+        "maxLongitude": -79.379147,
+        "minLatitude": 43.18687,
+        "minLongitude": -79.379147
+      },
+      "centroid": {
+        "latitude": 43.18687,
+        "longitude": -79.379147
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "vineland-station-1.json"
       ]
     },
     "Yorkton": {
+      "bounds": {
+        "maxLatitude": 51.210682,
+        "maxLongitude": -102.461317,
+        "minLatitude": 51.210682,
+        "minLongitude": -102.461317
+      },
+      "centroid": {
+        "latitude": 51.210682,
+        "longitude": -102.461317
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "yorkton-1.json"
       ]

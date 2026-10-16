@@ -451,10 +451,10 @@ export default function RestaurantCard({
               color: 'var(--text-muted)',
               fontWeight: 500,
             }}
-            title={`Approx. ${r.distanceKm.toFixed(1)} km from city center`}
+            title={r.distanceSource === 'gps' || r.distanceSource === 'pin' ? `Approx. ${r.distanceKm.toFixed(1)} km from you` : `Approx. ${r.distanceKm.toFixed(1)} km from city center`}
           >
             <MapPin size={11} style={{ marginRight: 3, flexShrink: 0 }} />
-            {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`}
+            {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)}km`} {r.distanceSource === 'gps' || r.distanceSource === 'pin' ? 'from you' : 'from centre'}
           </span>
         )}
 

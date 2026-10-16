@@ -1,474 +1,990 @@
 {
   "cities": {
     "Agra": {
+      "bounds": {
+        "maxLatitude": 27.201725,
+        "maxLongitude": 78.057044,
+        "minLatitude": 27.157772,
+        "minLongitude": 77.998092
+      },
+      "centroid": {
+        "latitude": 27.16669,
+        "longitude": 78.032615
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.71,
       "shards": [
         "agra-1.json"
       ]
     },
     "Ahmedabad": {
+      "bounds": {
+        "maxLatitude": 23.064304,
+        "maxLongitude": 72.572009,
+        "minLatitude": 23.010451,
+        "minLongitude": 72.501764
+      },
+      "centroid": {
+        "latitude": 23.03691,
+        "longitude": 72.531324
+      },
       "count": 21,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.33,
       "shards": [
         "ahmedabad-1.json"
       ]
     },
     "Allahabad": {
+      "bounds": {
+        "maxLatitude": 25.459775,
+        "maxLongitude": 81.860187,
+        "minLatitude": 25.443994,
+        "minLongitude": 81.831681
+      },
+      "centroid": {
+        "latitude": 25.452495,
+        "longitude": 81.838391
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 2.38,
       "shards": [
         "allahabad-1.json"
       ]
     },
     "Amritsar": {
+      "bounds": {
+        "maxLatitude": 31.655589,
+        "maxLongitude": 74.884384,
+        "minLatitude": 31.622611,
+        "minLongitude": 74.862761
+      },
+      "centroid": {
+        "latitude": 31.637306,
+        "longitude": 74.875003
+      },
       "count": 21,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 2.34,
       "shards": [
         "amritsar-1.json"
       ]
     },
     "Aurangabad": {
+      "bounds": {
+        "maxLatitude": 19.888716,
+        "maxLongitude": 75.372353,
+        "minLatitude": 19.866969,
+        "minLongitude": 75.316722
+      },
+      "centroid": {
+        "latitude": 19.876526,
+        "longitude": 75.342275
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 3.15,
       "shards": [
         "aurangabad-1.json"
       ]
     },
     "Bangalore": {
+      "bounds": {
+        "maxLatitude": 13.029198,
+        "maxLongitude": 77.699386,
+        "minLatitude": 12.906229,
+        "minLongitude": 77.570997
+      },
+      "centroid": {
+        "latitude": 12.955034,
+        "longitude": 77.634406
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 10.73,
       "shards": [
         "bangalore-1.json"
       ]
     },
     "Bhopal": {
+      "bounds": {
+        "maxLatitude": 23.266261,
+        "maxLongitude": 77.43702,
+        "minLatitude": 23.184992,
+        "minLongitude": 77.373573
+      },
+      "centroid": {
+        "latitude": 23.229104,
+        "longitude": 77.416668
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.6,
       "shards": [
         "bhopal-1.json"
       ]
     },
     "Bhubaneshwar": {
+      "bounds": {
+        "maxLatitude": 20.353675,
+        "maxLongitude": 85.846838,
+        "minLatitude": 20.283989,
+        "minLongitude": 85.808236
+      },
+      "centroid": {
+        "latitude": 20.324315,
+        "longitude": 85.825588
+      },
       "count": 21,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.77,
       "shards": [
         "bhubaneshwar-1.json"
       ]
     },
     "Chandigarh": {
+      "bounds": {
+        "maxLatitude": 30.74089,
+        "maxLongitude": 76.806363,
+        "minLatitude": 30.705069,
+        "minLongitude": 76.759845
+      },
+      "centroid": {
+        "latitude": 30.720205,
+        "longitude": 76.789939
+      },
       "count": 18,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 2.88,
       "shards": [
         "chandigarh-1.json"
       ]
     },
     "Chennai": {
+      "bounds": {
+        "maxLatitude": 13.091809,
+        "maxLongitude": 80.275235,
+        "minLatitude": 12.972793,
+        "minLongitude": 80.174568
+      },
+      "centroid": {
+        "latitude": 13.034893,
+        "longitude": 80.23815
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.02,
       "shards": [
         "chennai-1.json"
       ]
     },
     "Coimbatore": {
+      "bounds": {
+        "maxLatitude": 11.026117,
+        "maxLongitude": 77.015393,
+        "minLatitude": 10.96185,
+        "minLongitude": 76.940432
+      },
+      "centroid": {
+        "latitude": 11.009894,
+        "longitude": 76.978171
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.4,
       "shards": [
         "coimbatore-1.json"
       ]
     },
     "Dehradun": {
+      "bounds": {
+        "maxLatitude": 30.372202,
+        "maxLongitude": 78.077151,
+        "minLatitude": 30.319528,
+        "minLongitude": 78.040267
+      },
+      "centroid": {
+        "latitude": 30.345854,
+        "longitude": 78.059878
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 3.48,
       "shards": [
         "dehradun-1.json"
       ]
     },
     "Faridabad": {
+      "bounds": {
+        "maxLatitude": 28.50064,
+        "maxLongitude": 77.342322,
+        "minLatitude": 28.363214,
+        "minLongitude": 77.283011
+      },
+      "centroid": {
+        "latitude": 28.42676,
+        "longitude": 77.315119
+      },
       "count": 151,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 8.57,
       "shards": [
         "faridabad-1.json"
       ]
     },
     "Ghaziabad": {
+      "bounds": {
+        "maxLatitude": 28.669858,
+        "maxLongitude": 77.378751,
+        "minLatitude": 28.633788,
+        "minLongitude": 77.323154
+      },
+      "centroid": {
+        "latitude": 28.637283,
+        "longitude": 77.366764
+      },
       "count": 23,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.44,
       "shards": [
         "ghaziabad-1.json"
       ]
     },
     "Goa": {
+      "bounds": {
+        "maxLatitude": 15.585658,
+        "maxLongitude": 73.950889,
+        "minLatitude": 15.157944,
+        "minLongitude": 73.742294
+      },
+      "centroid": {
+        "latitude": 15.503761,
+        "longitude": 73.791184
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 42.09,
       "shards": [
         "goa-1.json"
       ]
     },
     "Gurgaon": {
+      "bounds": {
+        "maxLatitude": 28.521692,
+        "maxLongitude": 77.142751,
+        "minLatitude": 28.239367,
+        "minLongitude": 77.012953
+      },
+      "centroid": {
+        "latitude": 28.466227,
+        "longitude": 77.073171
+      },
       "count": 890,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 26.13,
       "shards": [
         "gurgaon-1.json"
       ]
     },
     "Guwahati": {
+      "bounds": {
+        "maxLatitude": 26.193764,
+        "maxLongitude": 91.806493,
+        "minLatitude": 26.132988,
+        "minLongitude": 91.752221
+      },
+      "centroid": {
+        "latitude": 26.172739,
+        "longitude": 91.770591
+      },
       "count": 21,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.69,
       "shards": [
         "guwahati-1.json"
       ]
     },
     "Hyderabad": {
+      "bounds": {
+        "maxLatitude": 17.45971,
+        "maxLongitude": 78.449654,
+        "minLatitude": 17.410371,
+        "minLongitude": 78.329645
+      },
+      "centroid": {
+        "latitude": 17.432761,
+        "longitude": 78.396257
+      },
       "count": 18,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.47,
       "shards": [
         "hyderabad-1.json"
       ]
     },
     "Indore": {
+      "bounds": {
+        "maxLatitude": 22.761593,
+        "maxLongitude": 75.903365,
+        "minLatitude": 22.651847,
+        "minLongitude": 75.866059
+      },
+      "centroid": {
+        "latitude": 22.736775,
+        "longitude": 75.888197
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 9.46,
       "shards": [
         "indore-1.json"
       ]
     },
     "Jaipur": {
+      "bounds": {
+        "maxLatitude": 26.956431,
+        "maxLongitude": 75.837333,
+        "minLatitude": 26.766536,
+        "minLongitude": 75.75282
+      },
+      "centroid": {
+        "latitude": 26.895981,
+        "longitude": 75.794475
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 15.01,
       "shards": [
         "jaipur-1.json"
       ]
     },
     "Kanpur": {
+      "bounds": {
+        "maxLatitude": 26.492106,
+        "maxLongitude": 80.372929,
+        "minLatitude": 26.463504,
+        "minLongitude": 80.299775
+      },
+      "centroid": {
+        "latitude": 26.477425,
+        "longitude": 80.330656
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.48,
       "shards": [
         "kanpur-1.json"
       ]
     },
     "Kochi": {
+      "bounds": {
+        "maxLatitude": 10.035573,
+        "maxLongitude": 76.349516,
+        "minLatitude": 9.957144,
+        "minLongitude": 76.242981
+      },
+      "centroid": {
+        "latitude": 9.992868,
+        "longitude": 76.301189
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.0,
       "shards": [
         "kochi-1.json"
       ]
     },
     "Kolkata": {
+      "bounds": {
+        "maxLatitude": 22.577821,
+        "maxLongitude": 88.433452,
+        "minLatitude": 22.514119,
+        "minLongitude": 88.322337
+      },
+      "centroid": {
+        "latitude": 22.541206,
+        "longitude": 88.372488
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.0,
       "shards": [
         "kolkata-1.json"
       ]
     },
     "Lucknow": {
+      "bounds": {
+        "maxLatitude": 26.867445,
+        "maxLongitude": 81.02325,
+        "minLatitude": 26.834638,
+        "minLongitude": 80.927431
+      },
+      "centroid": {
+        "latitude": 26.852996,
+        "longitude": 80.977687
+      },
       "count": 21,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.01,
       "shards": [
         "lucknow-1.json"
       ]
     },
     "Ludhiana": {
+      "bounds": {
+        "maxLatitude": 30.914057,
+        "maxLongitude": 75.842739,
+        "minLatitude": 30.873988,
+        "minLongitude": 75.786976
+      },
+      "centroid": {
+        "latitude": 30.894166,
+        "longitude": 75.819896
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 3.28,
       "shards": [
         "ludhiana-1.json"
       ]
     },
     "Mangalore": {
+      "bounds": {
+        "maxLatitude": 12.898979,
+        "maxLongitude": 74.859464,
+        "minLatitude": 12.870736,
+        "minLongitude": 74.840483
+      },
+      "centroid": {
+        "latitude": 12.875844,
+        "longitude": 74.850344
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 2.76,
       "shards": [
         "mangalore-1.json"
       ]
     },
     "Mohali": {
+      "bounds": {
+        "maxLatitude": 30.695551,
+        "maxLongitude": 76.718789,
+        "minLatitude": 30.695551,
+        "minLongitude": 76.718789
+      },
+      "centroid": {
+        "latitude": 30.695551,
+        "longitude": 76.718789
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "mohali-1.json"
       ]
     },
     "Mumbai": {
+      "bounds": {
+        "maxLatitude": 19.254567,
+        "maxLongitude": 72.972281,
+        "minLatitude": 18.927584,
+        "minLongitude": 72.813074
+      },
+      "centroid": {
+        "latitude": 19.114387,
+        "longitude": 72.848456
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 20.84,
       "shards": [
         "mumbai-1.json"
       ]
     },
     "Mysore": {
+      "bounds": {
+        "maxLatitude": 12.352058,
+        "maxLongitude": 76.665808,
+        "minLatitude": 12.284747,
+        "minLongitude": 76.603067
+      },
+      "centroid": {
+        "latitude": 12.319143,
+        "longitude": 76.631949
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.58,
       "shards": [
         "mysore-1.json"
       ]
     },
     "Nagpur": {
+      "bounds": {
+        "maxLatitude": 21.159225,
+        "maxLongitude": 79.081847,
+        "minLatitude": 21.089224,
+        "minLongitude": 79.038663
+      },
+      "centroid": {
+        "latitude": 21.137276,
+        "longitude": 79.068846
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.36,
       "shards": [
         "nagpur-1.json"
       ]
     },
     "Nashik": {
+      "bounds": {
+        "maxLatitude": 20.020918,
+        "maxLongitude": 73.77734,
+        "minLatitude": 19.977209,
+        "minLongitude": 73.720768
+      },
+      "centroid": {
+        "latitude": 20.003298,
+        "longitude": 73.757831
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.34,
       "shards": [
         "nashik-1.json"
       ]
     },
     "New Delhi": {
+      "bounds": {
+        "maxLatitude": 28.740125,
+        "maxLongitude": 77.339103,
+        "minLatitude": 28.478595,
+        "minLongitude": 76.985746
+      },
+      "centroid": {
+        "latitude": 28.614645,
+        "longitude": 77.200737
+      },
       "count": 4048,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 20.99,
       "shards": [
         "new-delhi-1.json"
       ]
     },
     "Noida": {
+      "bounds": {
+        "maxLatitude": 28.628408,
+        "maxLongitude": 77.528308,
+        "minLatitude": 28.0,
+        "minLongitude": 0.0
+      },
+      "centroid": {
+        "latitude": 28.565439,
+        "longitude": 77.243804
+      },
       "count": 696,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7415.57,
       "shards": [
         "noida-1.json"
       ]
     },
     "Panchkula": {
+      "bounds": {
+        "maxLatitude": 30.697859,
+        "maxLongitude": 76.849258,
+        "minLatitude": 30.697859,
+        "minLongitude": 76.849258
+      },
+      "centroid": {
+        "latitude": 30.697859,
+        "longitude": 76.849258
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "panchkula-1.json"
       ]
     },
     "Patna": {
+      "bounds": {
+        "maxLatitude": 25.634209,
+        "maxLongitude": 85.148632,
+        "minLatitude": 25.606628,
+        "minLongitude": 85.074775
+      },
+      "centroid": {
+        "latitude": 25.614549,
+        "longitude": 85.126646
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.28,
       "shards": [
         "patna-1.json"
       ]
     },
     "Puducherry": {
+      "bounds": {
+        "maxLatitude": 11.990786,
+        "maxLongitude": 79.8358,
+        "minLatitude": 11.925872,
+        "minLongitude": 79.82895
+      },
+      "centroid": {
+        "latitude": 11.936968,
+        "longitude": 79.832904
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.0,
       "shards": [
         "puducherry-1.json"
       ]
     },
     "Pune": {
+      "bounds": {
+        "maxLatitude": 18.636215,
+        "maxLongitude": 73.916619,
+        "minLatitude": 18.51421,
+        "minLongitude": 73.751081
+      },
+      "centroid": {
+        "latitude": 18.551124,
+        "longitude": 73.849671
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 14.05,
       "shards": [
         "pune-1.json"
       ]
     },
     "Ranchi": {
+      "bounds": {
+        "maxLatitude": 23.416792,
+        "maxLongitude": 85.390464,
+        "minLatitude": 23.333017,
+        "minLongitude": 85.316842
+      },
+      "centroid": {
+        "latitude": 23.365082,
+        "longitude": 85.331148
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 7.15,
       "shards": [
         "ranchi-1.json"
       ]
     },
     "Secunderabad": {
+      "bounds": {
+        "maxLatitude": 17.483216,
+        "maxLongitude": 78.552111,
+        "minLatitude": 17.458998,
+        "minLongitude": 78.500366
+      },
+      "centroid": {
+        "latitude": 17.471107,
+        "longitude": 78.526238
+      },
       "count": 2,
       "hasBooking": true,
       "hasDelivery": true,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 3.06,
       "shards": [
         "secunderabad-1.json"
       ]
     },
     "Surat": {
+      "bounds": {
+        "maxLatitude": 21.186884,
+        "maxLongitude": 72.814492,
+        "minLatitude": 21.149569,
+        "minLongitude": 72.768726
+      },
+      "centroid": {
+        "latitude": 21.168827,
+        "longitude": 72.787681
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 3.22,
       "shards": [
         "surat-1.json"
       ]
     },
     "Vadodara": {
+      "bounds": {
+        "maxLatitude": 22.32,
+        "maxLongitude": 73.170937,
+        "minLatitude": 22.307898,
+        "minLongitude": 73.158921
+      },
+      "centroid": {
+        "latitude": 22.311468,
+        "longitude": 73.166966
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 1.0,
       "shards": [
         "vadodara-1.json"
       ]
     },
     "Varanasi": {
+      "bounds": {
+        "maxLatitude": 25.338373,
+        "maxLongitude": 83.010021,
+        "minLatitude": 25.270943,
+        "minLongitude": 82.971977
+      },
+      "centroid": {
+        "latitude": 25.309059,
+        "longitude": 82.992199
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.34,
       "shards": [
         "varanasi-1.json"
       ]
     },
     "Vizag": {
+      "bounds": {
+        "maxLatitude": 17.783869,
+        "maxLongitude": 83.382858,
+        "minLatitude": 17.71069,
+        "minLongitude": 83.301614
+      },
+      "centroid": {
+        "latitude": 17.729957,
+        "longitude": 83.323489
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 8.69,
       "shards": [
         "vizag-1.json"
       ]

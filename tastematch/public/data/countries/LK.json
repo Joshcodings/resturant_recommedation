@@ -1,12 +1,24 @@
 {
   "cities": {
     "Colombo": {
+      "bounds": {
+        "maxLatitude": 6.932814,
+        "maxLongitude": 79.902941,
+        "minLatitude": 6.850283,
+        "minLongitude": 79.843575
+      },
+      "centroid": {
+        "latitude": 6.904368,
+        "longitude": 79.861
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.11,
       "shards": [
         "colombo-1.json"
       ]

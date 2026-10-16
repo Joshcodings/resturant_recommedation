@@ -204,8 +204,9 @@ function buildExplanation(
   const servicesSummary = services.length > 0 ? `Offers ${services.join(' & ')}` : undefined;
 
   const locName = r.locality || r.city;
+  const originLabel = r.distanceSource === 'gps' || r.distanceSource === 'pin' ? 'you' : 'center';
   const locationSummary = r.distanceKm !== undefined
-    ? `${locName} (${r.distanceKm.toFixed(1)} km from center)`
+    ? `${locName} (${r.distanceKm.toFixed(1)} km from ${originLabel})`
     : `${locName}`;
 
   return {
@@ -250,6 +251,9 @@ export function recommend(
   const scoringMode = isRatedCity ? 'rated' : 'unrated';
 
   const centroid = computeCentroid(pool);
+  const proximityOrigin = query.userLocation
+    ? { latitude: query.userLocation.latitude, longitude: query.userLocation.longitude, source: query.userLocation.source || 'gps' }
+    : (centroid ? { latitude: centroid.latitude, longitude: centroid.longitude, source: 'city-centre' as const } : null);
 
   if (needsTableBooking)   pool = pool.filter(r => r.has_table_booking   === 1);
   if (needsOnlineDelivery) pool = pool.filter(r => r.has_online_delivery  === 1);
@@ -275,8 +279,10 @@ export function recommend(
   const scored: ScoredRestaurant[] = pool.map(r => {
     const cuisineMatch = computeCuisineMatch(wanted, r.cuisineList);
     let distanceKm: number | undefined;
-    if (centroid && isValidCoordinate(r.latitude, r.longitude)) {
-      distanceKm = haversineDistance(centroid.latitude, centroid.longitude, r.latitude, r.longitude);
+    let distanceSource: 'gps' | 'city-centre' | 'pin' | undefined;
+    if (proximityOrigin && isValidCoordinate(r.latitude, r.longitude)) {
+      distanceKm = haversineDistance(proximityOrigin.latitude, proximityOrigin.longitude, r.latitude, r.longitude);
+      distanceSource = proximityOrigin.source;
     }
     
     let score = 0;
@@ -302,6 +308,7 @@ export function recommend(
       rank: 0,
       whyThisPick: '',
       distanceKm,
+      distanceSource,
     };
   });
 

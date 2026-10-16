@@ -1,4 +1,5 @@
 import { X } from 'lucide-react';
+import datasetMetrics from '@/data/datasetMetrics.json';
 
 interface Props {
   open: boolean;
@@ -49,42 +50,44 @@ export default function AboutModal({ open, onClose }: Props) {
 
           <section>
             <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>
-              Data Sources & Attribution
+              Data Sources & Attribution (Validator-Verified)
             </h3>
             <p style={{ margin: 0, color: 'var(--text-muted)' }}>
-              TasteMatch is powered by two independent open datasets:
+              TasteMatch is powered by two independent open datasets totalling <strong style={{ color: 'var(--text)' }}>{datasetMetrics.totalPlaces.toLocaleString()}</strong> verified places:
             </p>
             <ul style={{ margin: '8px 0 0', paddingLeft: 20, color: 'var(--text-muted)' }}>
               <li>
-                <strong style={{ color: 'var(--text)' }}>Zomato Dataset (Kaggle):</strong> Historical snapshot with no explicit date. Covers 7,403 rated places across 15 countries (~90% Delhi NCR).
+                <strong style={{ color: 'var(--text)' }}>Zomato Dataset (Kaggle):</strong> Historical snapshot covering <strong style={{ color: 'var(--text)' }}>{datasetMetrics.zomatoPlaces.toLocaleString()}</strong> rated places across 15 countries (~90% Delhi NCR).
               </li>
               <li style={{ marginTop: 6 }}>
-                <strong style={{ color: 'var(--text)' }}>OpenStreetMap (OSM):</strong> Live open geospatial data for Nigeria and worldwide expansion. Licensed under the <strong style={{ color: 'var(--text)' }}>Open Database License (ODbL)</strong>. © OpenStreetMap contributors.
+                <strong style={{ color: 'var(--text)' }}>OpenStreetMap (OSM):</strong> Live geospatial data for Nigeria covering <strong style={{ color: 'var(--text)' }}>{datasetMetrics.nigeriaPlaces.toLocaleString()}</strong> places across <strong style={{ color: 'var(--text)' }}>{datasetMetrics.nigeriaCitiesCount}</strong> cities. Licensed under the <strong style={{ color: 'var(--text)' }}>Open Database License (ODbL)</strong>. © OpenStreetMap contributors.
               </li>
             </ul>
           </section>
 
-
           <section>
             <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>
-              Geographic Skew
+              Geographic Skew & Coverage
             </h3>
             <p style={{ margin: 0, color: 'var(--text-muted)' }}>
-              Approximately <strong style={{ color: 'var(--text)' }}>90% of the 7,403 rated restaurants</strong> are
+              Approximately <strong style={{ color: 'var(--text)' }}>90% of the {datasetMetrics.zomatoPlaces.toLocaleString()} rated Zomato restaurants</strong> are
               from the <strong style={{ color: 'var(--text)' }}>Delhi NCR region of India</strong>.
-              Other cities and countries are represented in the data but with far fewer entries — recommendations
-              in those areas may be limited.
+              In Nigeria, {datasetMetrics.fullCitiesCount} cities have 5 or more places, while {datasetMetrics.limitedCoverageCitiesCount} cities with fewer than 5 listings are flagged as <em>"Limited coverage"</em>.
             </p>
           </section>
 
           <section>
             <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>
-              Coverage & Exclusions
+              Field Coverage & Honesty
             </h3>
             <p style={{ margin: 0, color: 'var(--text-muted)' }}>
-              Only <strong style={{ color: 'var(--text)' }}>rated restaurants</strong> with at least one vote are included.
-              Unrated or unreviewed restaurants are excluded from all recommendations.
+              We never invent or infer data not present in open records. Nigerian OpenStreetMap verified field coverage:
             </p>
+            <ul style={{ margin: '8px 0 0', paddingLeft: 20, color: 'var(--text-muted)' }}>
+              <li>Cuisine classification: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.cuisinePct}%</strong> ({datasetMetrics.coverage.cuisineCount.toLocaleString()} places)</li>
+              <li>Opening hours: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.hoursPct}%</strong> ({datasetMetrics.coverage.hoursCount.toLocaleString()} places)</li>
+              <li>Phone contact: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.phonePct}%</strong> ({datasetMetrics.coverage.phoneCount.toLocaleString()} places)</li>
+            </ul>
           </section>
 
           <section>
@@ -96,19 +99,8 @@ export default function AboutModal({ open, onClose }: Props) {
               The weighted rating uses a Bayesian approach that pulls ratings with
               <strong style={{ color: 'var(--text)' }}> very few votes toward the city average</strong>
               — or the country average for cities with fewer than 30 rated restaurants.
-              This prevents a restaurant with 2 five-star votes from outranking one with 500 honest reviews.
               Ratings with fewer than 20 votes are marked <em>"few votes"</em> throughout the app.
-            </p>
-          </section>
-
-          <section>
-            <h3 style={{ margin: '0 0 8px', fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: 'var(--text)' }}>
-              What We Don't Show
-            </h3>
-            <p style={{ margin: 0, color: 'var(--text-muted)' }}>
-              TasteMatch never invents or infers information not present in the dataset.
-              We do <strong style={{ color: 'var(--text)' }}>not</strong> show:
-              opening hours, phone numbers, menu items, photos, real-time availability, or reviews.
+              Unrated OSM listings use proximity and verified feature scoring without simulated ratings.
             </p>
           </section>
 
@@ -134,8 +126,7 @@ export default function AboutModal({ open, onClose }: Props) {
 
           <section style={{ borderTop: '1px solid var(--border)', paddingTop: 16, marginTop: 4 }}>
             <p style={{ margin: 0, fontSize: 12, color: 'var(--text-muted)' }}>
-              TasteMatch is a university data science project. Dataset: Zomato Restaurants Dataset via Kaggle.
-              Built with React, Vite, TypeScript, Tailwind CSS, Leaflet, and Recharts. Zero paid APIs.
+              TasteMatch dataset snapshot: {datasetMetrics.totalPlaces.toLocaleString()} total places across {datasetMetrics.shardCount} shards. Validated: {new Date(datasetMetrics.validatedAt).toLocaleDateString()}. Zero paid APIs.
             </p>
           </section>
         </div>

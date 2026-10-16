@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useRestaurants } from '@/context/RestaurantContext';
+import { useLocationContext } from '@/context/LocationContext';
 import { recommend, liveScore, DEFAULT_WEIGHTS, type PriorityWeights } from '@/lib/recommendation';
 import type { RecommendationQuery, ScoredRestaurant } from '@/types/recommendation';
 import type { MoodPreset } from '@/config/presets';
@@ -46,6 +47,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export default function DiscoverView() {
   const { data, loading, countryCityIndex, getCityCapabilities } = useRestaurants();
+  const { location } = useLocationContext();
   const { t } = useLanguage();
 
   // Feature 9 & 10 Modal states
@@ -160,6 +162,9 @@ export default function DiscoverView() {
       mode,
       radiusKm,
       diversificationLambda,
+      userLocation: location
+        ? { latitude: location.lat, longitude: location.lon, source: location.source }
+        : undefined,
     };
 
     return recommend(data, query, activePreset);
@@ -175,6 +180,7 @@ export default function DiscoverView() {
     mode,
     radiusKm,
     diversificationLambda,
+    location,
   ]);
 
   // Live re-ranking over qualifyingPool using priority sliders (amendment 1)

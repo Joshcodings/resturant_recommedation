@@ -1,1125 +1,1337 @@
 {
   "cities": {
-    "ABUJA": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "abuja-1.json"
-      ]
-    },
     "Abakaliki": {
+      "bounds": {
+        "maxLatitude": 6.33382,
+        "maxLongitude": 8.109969,
+        "minLatitude": 6.313528,
+        "minLongitude": 8.075175
+      },
+      "centroid": {
+        "latitude": 6.323978,
+        "longitude": 8.097338
+      },
       "count": 3,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 2.68,
       "shards": [
         "abakaliki-1.json"
       ]
     },
     "Abeokuta": {
+      "bounds": {
+        "maxLatitude": 7.133841,
+        "maxLongitude": 3.380292,
+        "minLatitude": 7.118159,
+        "minLongitude": 3.33956
+      },
+      "centroid": {
+        "latitude": 7.126,
+        "longitude": 3.359926
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 2.41,
       "shards": [
         "abeokuta-1.json"
       ]
     },
     "Abuja": {
-      "count": 126,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "abuja-1.json"
-      ]
-    },
-    "Abuja Area": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "abuja-area-1.json"
-      ]
-    },
-    "Abuja Nigeria": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "abuja-nigeria-1.json"
-      ]
-    },
-    "Ado-Ekiti": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ado-ekiti-1.json"
-      ]
-    },
-    "Akure": {
-      "count": 26,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "akure-1.json"
-      ]
-    },
-    "Asaba": {
-      "count": 6,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "asaba-1.json"
-      ]
-    },
-    "Awka": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "awka-1.json"
-      ]
-    },
-    "Bauchi": {
-      "count": 17,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "bauchi-1.json"
-      ]
-    },
-    "Bauchi Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "bauchi-area-1.json"
-      ]
-    },
-    "Benin City": {
+      "bounds": {
+        "maxLatitude": 9.309039,
+        "maxLongitude": 7.684659,
+        "minLatitude": 8.954774,
+        "minLongitude": 7.240398
+      },
+      "centroid": {
+        "latitude": 9.0661,
+        "longitude": 7.472557
+      },
       "count": 134,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 37.14,
       "shards": [
-        "benin-city-1.json"
+        "abuja-1.json"
       ]
     },
-    "Benin City Area": {
-      "count": 47,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "benin-city-area-1.json"
-      ]
-    },
-    "Benin city": {
-      "count": 1,
+    "Ado-Ekiti": {
+      "bounds": {
+        "maxLatitude": 7.597008,
+        "maxLongitude": 5.295081,
+        "minLatitude": 7.59654,
+        "minLongitude": 5.281464
+      },
+      "centroid": {
+        "latitude": 7.596774,
+        "longitude": 5.288272
+      },
+      "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "ado-ekiti-1.json"
+      ]
+    },
+    "Agbor": {
+      "bounds": {
+        "maxLatitude": 6.254825,
+        "maxLongitude": 6.210095,
+        "minLatitude": 6.25398,
+        "minLongitude": 6.209925
+      },
+      "centroid": {
+        "latitude": 6.254263,
+        "longitude": 6.210012
+      },
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "agbor-1.json"
+      ]
+    },
+    "Akure": {
+      "bounds": {
+        "maxLatitude": 7.306852,
+        "maxLongitude": 5.21904,
+        "minLatitude": 7.237091,
+        "minLongitude": 5.135029
+      },
+      "centroid": {
+        "latitude": 7.289495,
+        "longitude": 5.154794
+      },
+      "count": 26,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 9.17,
+      "shards": [
+        "akure-1.json"
+      ]
+    },
+    "Asaba": {
+      "bounds": {
+        "maxLatitude": 6.241823,
+        "maxLongitude": 6.748262,
+        "minLatitude": 6.177054,
+        "minLongitude": 6.698972
+      },
+      "centroid": {
+        "latitude": 6.218335,
+        "longitude": 6.714538
+      },
+      "count": 6,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 5.91,
+      "shards": [
+        "asaba-1.json"
+      ]
+    },
+    "Awka": {
+      "bounds": {
+        "maxLatitude": 6.247637,
+        "maxLongitude": 7.12073,
+        "minLatitude": 6.226959,
+        "minLongitude": 7.074447
+      },
+      "centroid": {
+        "latitude": 6.234681,
+        "longitude": 7.092635
+      },
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 3.42,
+      "shards": [
+        "awka-1.json"
+      ]
+    },
+    "Bauchi": {
+      "bounds": {
+        "maxLatitude": 11.246213,
+        "maxLongitude": 9.835805,
+        "minLatitude": 10.257496,
+        "minLongitude": 9.765359
+      },
+      "centroid": {
+        "latitude": 10.349103,
+        "longitude": 9.804587
+      },
+      "count": 18,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 99.81,
+      "shards": [
+        "bauchi-1.json"
+      ]
+    },
+    "Benin City": {
+      "bounds": {
+        "maxLatitude": 7.564671,
+        "maxLongitude": 6.63982,
+        "minLatitude": 6.25314,
+        "minLongitude": 5.390072
+      },
+      "centroid": {
+        "latitude": 6.507432,
+        "longitude": 5.624201
+      },
+      "count": 183,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 162.14,
       "shards": [
         "benin-city-1.json"
       ]
     },
-    "Birnin kebbi": {
+    "Birnin Kebbi": {
+      "bounds": {
+        "maxLatitude": 12.438,
+        "maxLongitude": 4.208739,
+        "minLatitude": 12.438,
+        "minLongitude": 4.208739
+      },
+      "centroid": {
+        "latitude": 12.438,
+        "longitude": 4.208739
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "birnin-kebbi-1.json"
       ]
     },
     "Calabar": {
-      "count": 5,
+      "bounds": {
+        "maxLatitude": 5.889301,
+        "maxLongitude": 8.342553,
+        "minLatitude": 4.968401,
+        "minLongitude": 7.95256
+      },
+      "centroid": {
+        "latitude": 5.116491,
+        "longitude": 8.282882
+      },
+      "count": 7,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 93.39,
       "shards": [
         "calabar-1.json"
       ]
     },
-    "Calabar Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "calabar-area-1.json"
-      ]
-    },
-    "Calabar, Cross River": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "calabar-cross-river-1.json"
-      ]
-    },
-    "Choba Port Harcourt": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "choba-port-harcourt-1.json"
-      ]
-    },
-    "Choba/Port Harcourt": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "chobaport-harcourt-1.json"
-      ]
-    },
     "Dadi Riba": {
+      "bounds": {
+        "maxLatitude": 10.505088,
+        "maxLongitude": 7.432065,
+        "minLatitude": 10.503525,
+        "minLongitude": 7.430781
+      },
+      "centroid": {
+        "latitude": 10.504307,
+        "longitude": 7.431423
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "dadi-riba-1.json"
       ]
     },
     "Dutse": {
+      "bounds": {
+        "maxLatitude": 11.720727,
+        "maxLongitude": 9.359968,
+        "minLatitude": 11.69213,
+        "minLongitude": 9.332083
+      },
+      "centroid": {
+        "latitude": 11.709422,
+        "longitude": 9.349932
+      },
       "count": 4,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 2.73,
       "shards": [
         "dutse-1.json"
       ]
     },
     "Enugu": {
+      "bounds": {
+        "maxLatitude": 6.51048,
+        "maxLongitude": 7.535366,
+        "minLatitude": 6.413791,
+        "minLongitude": 7.480375
+      },
+      "centroid": {
+        "latitude": 6.453604,
+        "longitude": 7.51755
+      },
       "count": 88,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 6.34,
       "shards": [
         "enugu-1.json"
       ]
     },
     "Eti-Osa": {
+      "bounds": {
+        "maxLatitude": 6.434135,
+        "maxLongitude": 3.431649,
+        "minLatitude": 6.434135,
+        "minLongitude": 3.431649
+      },
+      "centroid": {
+        "latitude": 6.434135,
+        "longitude": 3.431649
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "eti-osa-1.json"
       ]
     },
     "Fagge D2": {
+      "bounds": {
+        "maxLatitude": 12.012677,
+        "maxLongitude": 8.520853,
+        "minLatitude": 12.012677,
+        "minLongitude": 8.520853
+      },
+      "centroid": {
+        "latitude": 12.012677,
+        "longitude": 8.520853
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "fagge-d2-1.json"
       ]
     },
     "Gombe": {
-      "count": 28,
+      "bounds": {
+        "maxLatitude": 10.316437,
+        "maxLongitude": 11.23157,
+        "minLatitude": 9.897522,
+        "minLongitude": 11.13206
+      },
+      "centroid": {
+        "latitude": 10.280043,
+        "longitude": 11.17561
+      },
+      "count": 29,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 42.81,
       "shards": [
         "gombe-1.json"
       ]
     },
-    "Gombe Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "gombe-area-1.json"
-      ]
-    },
     "Gwagwalada": {
+      "bounds": {
+        "maxLatitude": 9.132072,
+        "maxLongitude": 7.189673,
+        "minLatitude": 8.943336,
+        "minLongitude": 7.076784
+      },
+      "centroid": {
+        "latitude": 8.991171,
+        "longitude": 7.110984
+      },
       "count": 4,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 17.89,
       "shards": [
         "gwagwalada-1.json"
       ]
     },
     "Gwarinpa": {
+      "bounds": {
+        "maxLatitude": 9.118109,
+        "maxLongitude": 7.409425,
+        "minLatitude": 9.117239,
+        "minLongitude": 7.394924
+      },
+      "centroid": {
+        "latitude": 9.117674,
+        "longitude": 7.402175
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "gwarinpa-1.json"
       ]
     },
-    "IBADAN": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ibadan-1.json"
-      ]
-    },
     "Ibadan": {
-      "count": 28,
+      "bounds": {
+        "maxLatitude": 8.716068,
+        "maxLongitude": 4.471213,
+        "minLatitude": 7.348152,
+        "minLongitude": 3.860508
+      },
+      "centroid": {
+        "latitude": 7.546984,
+        "longitude": 3.964511
+      },
+      "count": 44,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 141.46,
       "shards": [
         "ibadan-1.json"
-      ]
-    },
-    "Ibadan Area": {
-      "count": 14,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ibadan-area-1.json"
       ]
     },
     "Ijebu Ode": {
+      "bounds": {
+        "maxLatitude": 6.89268,
+        "maxLongitude": 3.9248,
+        "minLatitude": 6.821376,
+        "minLongitude": 3.723606
+      },
+      "centroid": {
+        "latitude": 6.857028,
+        "longitude": 3.824203
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 11.79,
       "shards": [
         "ijebu-ode-1.json"
       ]
     },
     "Ikeja": {
+      "bounds": {
+        "maxLatitude": 6.721822,
+        "maxLongitude": 3.432402,
+        "minLatitude": 6.520981,
+        "minLongitude": 3.154087
+      },
+      "centroid": {
+        "latitude": 6.599902,
+        "longitude": 3.365802
+      },
       "count": 84,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 24.63,
       "shards": [
         "ikeja-1.json"
       ]
     },
     "Ikot Akpan-Ata": {
+      "bounds": {
+        "maxLatitude": 4.579364,
+        "maxLongitude": 7.581607,
+        "minLatitude": 4.579364,
+        "minLongitude": 7.581607
+      },
+      "centroid": {
+        "latitude": 4.579364,
+        "longitude": 7.581607
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "ikot-akpan-ata-1.json"
       ]
     },
     "Ikoyi": {
+      "bounds": {
+        "maxLatitude": 6.444217,
+        "maxLongitude": 3.423949,
+        "minLatitude": 6.444217,
+        "minLongitude": 3.423949
+      },
+      "centroid": {
+        "latitude": 6.444217,
+        "longitude": 3.423949
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "ikoyi-1.json"
       ]
     },
     "Ile-Ife": {
+      "bounds": {
+        "maxLatitude": 7.517254,
+        "maxLongitude": 4.527443,
+        "minLatitude": 7.495495,
+        "minLongitude": 4.51391
+      },
+      "centroid": {
+        "latitude": 7.510758,
+        "longitude": 4.523003
+      },
       "count": 7,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 1.74,
       "shards": [
         "ile-ife-1.json"
       ]
     },
     "Ilorin": {
-      "count": 35,
+      "bounds": {
+        "maxLatitude": 8.828855,
+        "maxLongitude": 5.090743,
+        "minLatitude": 8.122034,
+        "minLongitude": 4.520893
+      },
+      "centroid": {
+        "latitude": 8.478764,
+        "longitude": 4.609007
+      },
+      "count": 39,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 65.73,
       "shards": [
         "ilorin-1.json"
       ]
     },
-    "Ilorin Area": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ilorin-area-1.json"
-      ]
-    },
-    "Ilorin, Kwara State, Nigeria": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ilorin-kwara-state-nigeria-1.json"
-      ]
-    },
-    "Ilupeju, Lagos": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ilupeju-lagos-1.json"
-      ]
-    },
     "Joe": {
+      "bounds": {
+        "maxLatitude": 9.928975,
+        "maxLongitude": 8.874942,
+        "minLatitude": 9.928975,
+        "minLongitude": 8.874942
+      },
+      "centroid": {
+        "latitude": 9.928975,
+        "longitude": 8.874942
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "joe-1.json"
       ]
     },
     "Jos": {
-      "count": 114,
+      "bounds": {
+        "maxLatitude": 9.980773,
+        "maxLongitude": 9.889651,
+        "minLatitude": 8.95061,
+        "minLongitude": 8.848158
+      },
+      "centroid": {
+        "latitude": 9.895665,
+        "longitude": 8.903638
+      },
+      "count": 121,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 133.43,
       "shards": [
         "jos-1.json"
       ]
     },
-    "Jos Area": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "jos-area-1.json"
-      ]
-    },
-    "Jos-North": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "jos-north-1.json"
-      ]
-    },
     "Kaduna": {
-      "count": 35,
+      "bounds": {
+        "maxLatitude": 10.610515,
+        "maxLongitude": 7.46862,
+        "minLatitude": 9.959122,
+        "minLongitude": 6.769283
+      },
+      "centroid": {
+        "latitude": 10.514881,
+        "longitude": 7.425486
+      },
+      "count": 37,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 94.74,
       "shards": [
         "kaduna-1.json"
       ]
     },
-    "Kaduna Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "kaduna-area-1.json"
-      ]
-    },
-    "Kaduna North": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "kaduna-north-1.json"
-      ]
-    },
     "Kano": {
-      "count": 41,
+      "bounds": {
+        "maxLatitude": 12.055074,
+        "maxLongitude": 8.794351,
+        "minLatitude": 11.278337,
+        "minLongitude": 8.462657
+      },
+      "centroid": {
+        "latitude": 11.932196,
+        "longitude": 8.567811
+      },
+      "count": 47,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 74.76,
       "shards": [
         "kano-1.json"
       ]
     },
-    "Kano Area": {
-      "count": 5,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "kano-area-1.json"
-      ]
-    },
     "Katsina": {
+      "bounds": {
+        "maxLatitude": 12.973024,
+        "maxLongitude": 7.68311,
+        "minLatitude": 12.824812,
+        "minLongitude": 7.585768
+      },
+      "centroid": {
+        "latitude": 12.92149,
+        "longitude": 7.627527
+      },
       "count": 4,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 12.32,
       "shards": [
         "katsina-1.json"
       ]
     },
     "Kureken Sani": {
+      "bounds": {
+        "maxLatitude": 11.95483,
+        "maxLongitude": 8.586677,
+        "minLatitude": 11.95483,
+        "minLongitude": 8.586677
+      },
+      "centroid": {
+        "latitude": 11.95483,
+        "longitude": 8.586677
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "kureken-sani-1.json"
       ]
     },
-    "LEKKI": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lekki-1.json"
-      ]
-    },
-    "Lagaos": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lagaos-1.json"
-      ]
-    },
     "Lagos": {
-      "count": 164,
+      "bounds": {
+        "maxLatitude": 6.612984,
+        "maxLongitude": 3.873171,
+        "minLatitude": 6.421711,
+        "minLongitude": 2.8886
+      },
+      "centroid": {
+        "latitude": 6.452349,
+        "longitude": 3.411232
+      },
+      "count": 172,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 57.85,
       "shards": [
         "lagos-1.json"
       ]
     },
-    "Lagos Area": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lagos-area-1.json"
-      ]
-    },
-    "Lagos Island": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lagos-island-1.json"
-      ]
-    },
     "Lekki": {
-      "count": 18,
+      "bounds": {
+        "maxLatitude": 6.669384,
+        "maxLongitude": 3.671536,
+        "minLatitude": 6.430418,
+        "minLongitude": 3.455687
+      },
+      "centroid": {
+        "latitude": 6.457987,
+        "longitude": 3.520522
+      },
+      "count": 24,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 28.82,
       "shards": [
         "lekki-1.json"
       ]
     },
-    "Lekki, Lagos": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lekki-lagos-1.json"
-      ]
-    },
-    "Lokoja Area": {
+    "Lokoja": {
+      "bounds": {
+        "maxLatitude": 8.557444,
+        "maxLongitude": 7.720576,
+        "minLatitude": 7.818598,
+        "minLongitude": 6.042348
+      },
+      "centroid": {
+        "latitude": 8.188021,
+        "longitude": 6.881462
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 101.12,
       "shards": [
-        "lokoja-area-1.json"
+        "lokoja-1.json"
       ]
     },
     "Maiduguri": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "maiduguri-1.json"
-      ]
-    },
-    "Maiduguri Area": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "maiduguri-area-1.json"
-      ]
-    },
-    "Makurdi Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "makurdi-area-1.json"
-      ]
-    },
-    "Mariri": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "mariri-1.json"
-      ]
-    },
-    "Minna": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "minna-1.json"
-      ]
-    },
-    "Mokola, Ibadam": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "mokola-ibadam-1.json"
-      ]
-    },
-    "Nsukka": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "nsukka-1.json"
-      ]
-    },
-    "Ogbomosho": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ogbomosho-1.json"
-      ]
-    },
-    "Ogharefe": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "ogharefe-1.json"
-      ]
-    },
-    "Oluwa": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "oluwa-1.json"
-      ]
-    },
-    "Oshogbo": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "oshogbo-1.json"
-      ]
-    },
-    "Osogbo": {
-      "count": 16,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "osogbo-1.json"
-      ]
-    },
-    "Owerri": {
-      "count": 14,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "owerri-1.json"
-      ]
-    },
-    "Owerri Area": {
-      "count": 7,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "owerri-area-1.json"
-      ]
-    },
-    "Port Harcourt": {
-      "count": 33,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "port-harcourt-1.json"
-      ]
-    },
-    "Port Harcourt Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "port-harcourt-area-1.json"
-      ]
-    },
-    "Rumualogu/Port Harcourt": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "rumualoguport-harcourt-1.json"
-      ]
-    },
-    "Rumuosi junctin": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "rumuosi-junctin-1.json"
-      ]
-    },
-    "Sokoto": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "sokoto-1.json"
-      ]
-    },
-    "Unguwar Shanu": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "unguwar-shanu-1.json"
-      ]
-    },
-    "University of Port Harcourt, Abuja Campus, Choba, Rivers State.": {
-      "count": 3,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "university-of-port-harcourt-abuja-campus-choba-rivers-state-1.json"
-      ]
-    },
-    "Uyo": {
-      "count": 4,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "uyo-1.json"
-      ]
-    },
-    "Uyo Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "uyo-area-1.json"
-      ]
-    },
-    "Victoria Island": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "victoria-island-1.json"
-      ]
-    },
-    "Warri": {
-      "count": 20,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "warri-1.json"
-      ]
-    },
-    "Warri Area": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "warri-area-1.json"
-      ]
-    },
-    "Woji": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "woji-1.json"
-      ]
-    },
-    "Yenagoa": {
+      "bounds": {
+        "maxLatitude": 12.899957,
+        "maxLongitude": 13.155556,
+        "minLatitude": 11.275026,
+        "minLongitude": 12.002722
+      },
+      "centroid": {
+        "latitude": 11.911933,
+        "longitude": 12.919959
+      },
       "count": 6,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 122.47,
       "shards": [
-        "yenagoa-1.json"
+        "maiduguri-1.json"
       ]
     },
-    "Yenagoa, Bayelsa state": {
+    "Makurdi": {
+      "bounds": {
+        "maxLatitude": 7.49196,
+        "maxLongitude": 7.696852,
+        "minLatitude": 7.49196,
+        "minLongitude": 7.696852
+      },
+      "centroid": {
+        "latitude": 7.49196,
+        "longitude": 7.696852
+      },
       "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "makurdi-1.json"
+      ]
+    },
+    "Mariri": {
+      "bounds": {
+        "maxLatitude": 11.957977,
+        "maxLongitude": 8.586488,
+        "minLatitude": 11.955962,
+        "minLongitude": 8.586287
+      },
+      "centroid": {
+        "latitude": 11.956969,
+        "longitude": 8.586388
+      },
+      "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
-        "yenagoa-bayelsa-state-1.json"
+        "mariri-1.json"
       ]
     },
-    "Yola": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "yola-1.json"
-      ]
-    },
-    "Yola Area": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "yola-area-1.json"
-      ]
-    },
-    "Zaria": {
-      "count": 5,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "zaria-1.json"
-      ]
-    },
-    "abuja": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "abuja-1.json"
-      ]
-    },
-    "agbor": {
+    "Minna": {
+      "bounds": {
+        "maxLatitude": 9.622087,
+        "maxLongitude": 6.546595,
+        "minLatitude": 9.531011,
+        "minLongitude": 6.442802
+      },
+      "centroid": {
+        "latitude": 9.575917,
+        "longitude": 6.494421
+      },
       "count": 4,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": true,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 7.59,
       "shards": [
-        "agbor-1.json"
+        "minna-1.json"
+      ]
+    },
+    "Nsukka": {
+      "bounds": {
+        "maxLatitude": 6.879372,
+        "maxLongitude": 7.419418,
+        "minLatitude": 6.865471,
+        "minLongitude": 7.410496
+      },
+      "centroid": {
+        "latitude": 6.872422,
+        "longitude": 7.414957
+      },
+      "count": 2,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "nsukka-1.json"
+      ]
+    },
+    "Ogbomosho": {
+      "bounds": {
+        "maxLatitude": 8.145082,
+        "maxLongitude": 4.248194,
+        "minLatitude": 8.136526,
+        "minLongitude": 4.236344
+      },
+      "centroid": {
+        "latitude": 8.141072,
+        "longitude": 4.242426
+      },
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "ogbomosho-1.json"
+      ]
+    },
+    "Ogharefe": {
+      "bounds": {
+        "maxLatitude": 5.945969,
+        "maxLongitude": 5.662333,
+        "minLatitude": 5.945969,
+        "minLongitude": 5.662333
+      },
+      "centroid": {
+        "latitude": 5.945969,
+        "longitude": 5.662333
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "ogharefe-1.json"
+      ]
+    },
+    "Oluwa": {
+      "bounds": {
+        "maxLatitude": 7.430107,
+        "maxLongitude": 3.989269,
+        "minLatitude": 7.430107,
+        "minLongitude": 3.989269
+      },
+      "centroid": {
+        "latitude": 7.430107,
+        "longitude": 3.989269
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "oluwa-1.json"
+      ]
+    },
+    "Osogbo": {
+      "bounds": {
+        "maxLatitude": 7.798133,
+        "maxLongitude": 4.574129,
+        "minLatitude": 7.675619,
+        "minLongitude": 4.449304
+      },
+      "centroid": {
+        "latitude": 7.695336,
+        "longitude": 4.473416
+      },
+      "count": 17,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 13.63,
+      "shards": [
+        "osogbo-1.json"
+      ]
+    },
+    "Owerri": {
+      "bounds": {
+        "maxLatitude": 5.771329,
+        "maxLongitude": 7.357191,
+        "minLatitude": 5.124207,
+        "minLongitude": 6.800957
+      },
+      "centroid": {
+        "latitude": 5.486942,
+        "longitude": 7.000977
+      },
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 56.41,
+      "shards": [
+        "owerri-1.json"
+      ]
+    },
+    "Port Harcourt": {
+      "bounds": {
+        "maxLatitude": 5.055895,
+        "maxLongitude": 7.154896,
+        "minLatitude": 4.71067,
+        "minLongitude": 6.729483
+      },
+      "centroid": {
+        "latitude": 4.850551,
+        "longitude": 6.994486
+      },
+      "count": 46,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 37.19,
+      "shards": [
+        "port-harcourt-1.json"
+      ]
+    },
+    "Rumuosi junctin": {
+      "bounds": {
+        "maxLatitude": 4.883056,
+        "maxLongitude": 6.940665,
+        "minLatitude": 4.883056,
+        "minLongitude": 6.940665
+      },
+      "centroid": {
+        "latitude": 4.883056,
+        "longitude": 6.940665
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "rumuosi-junctin-1.json"
+      ]
+    },
+    "Sokoto": {
+      "bounds": {
+        "maxLatitude": 13.060106,
+        "maxLongitude": 5.231144,
+        "minLatitude": 13.041615,
+        "minLongitude": 5.217778
+      },
+      "centroid": {
+        "latitude": 13.053866,
+        "longitude": 5.222481
+      },
+      "count": 3,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.65,
+      "shards": [
+        "sokoto-1.json"
+      ]
+    },
+    "Unguwar Shanu": {
+      "bounds": {
+        "maxLatitude": 10.544585,
+        "maxLongitude": 7.438858,
+        "minLatitude": 10.544585,
+        "minLongitude": 7.438858
+      },
+      "centroid": {
+        "latitude": 10.544585,
+        "longitude": 7.438858
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "unguwar-shanu-1.json"
+      ]
+    },
+    "Uyo": {
+      "bounds": {
+        "maxLatitude": 5.181633,
+        "maxLongitude": 7.952487,
+        "minLatitude": 5.009486,
+        "minLongitude": 7.710003
+      },
+      "centroid": {
+        "latitude": 5.05419,
+        "longitude": 7.893246
+      },
+      "count": 5,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 24.75,
+      "shards": [
+        "uyo-1.json"
+      ]
+    },
+    "Victoria Island": {
+      "bounds": {
+        "maxLatitude": 6.430751,
+        "maxLongitude": 3.437469,
+        "minLatitude": 6.430751,
+        "minLongitude": 3.437469
+      },
+      "centroid": {
+        "latitude": 6.430751,
+        "longitude": 3.437469
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "victoria-island-1.json"
+      ]
+    },
+    "Warri": {
+      "bounds": {
+        "maxLatitude": 5.646951,
+        "maxLongitude": 5.963465,
+        "minLatitude": 5.376358,
+        "minLongitude": 5.710238
+      },
+      "centroid": {
+        "latitude": 5.547803,
+        "longitude": 5.776135
+      },
+      "count": 21,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 23.48,
+      "shards": [
+        "warri-1.json"
+      ]
+    },
+    "Woji": {
+      "bounds": {
+        "maxLatitude": 4.822571,
+        "maxLongitude": 7.053715,
+        "minLatitude": 4.822571,
+        "minLongitude": 7.053715
+      },
+      "centroid": {
+        "latitude": 4.822571,
+        "longitude": 7.053715
+      },
+      "count": 1,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
+      "shards": [
+        "woji-1.json"
+      ]
+    },
+    "Yenagoa": {
+      "bounds": {
+        "maxLatitude": 4.951114,
+        "maxLongitude": 6.349348,
+        "minLatitude": 4.922352,
+        "minLongitude": 6.312289
+      },
+      "centroid": {
+        "latitude": 4.937478,
+        "longitude": 6.326953
+      },
+      "count": 7,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": true,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 2.91,
+      "shards": [
+        "yenagoa-1.json"
+      ]
+    },
+    "Yola": {
+      "bounds": {
+        "maxLatitude": 9.765051,
+        "maxLongitude": 12.580559,
+        "minLatitude": 9.084077,
+        "minLongitude": 11.773359
+      },
+      "centroid": {
+        "latitude": 9.333389,
+        "longitude": 12.307828
+      },
+      "count": 4,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 64.88,
+      "shards": [
+        "yola-1.json"
+      ]
+    },
+    "Zaria": {
+      "bounds": {
+        "maxLatitude": 11.128109,
+        "maxLongitude": 7.722839,
+        "minLatitude": 11.099393,
+        "minLongitude": 7.706848
+      },
+      "centroid": {
+        "latitude": 11.107932,
+        "longitude": 7.717531
+      },
+      "count": 5,
+      "hasBooking": false,
+      "hasDelivery": false,
+      "hasHours": false,
+      "hasPrices": false,
+      "hasRatings": false,
+      "limitedCoverage": false,
+      "radiusKm": 2.53,
+      "shards": [
+        "zaria-1.json"
       ]
     },
     "arkilla": {
+      "bounds": {
+        "maxLatitude": 13.025229,
+        "maxLongitude": 5.192685,
+        "minLatitude": 13.025229,
+        "minLongitude": 5.192685
+      },
+      "centroid": {
+        "latitude": 13.025229,
+        "longitude": 5.192685
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": false,
       "hasRatings": false,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "arkilla-1.json"
-      ]
-    },
-    "benin city": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "benin-city-1.json"
-      ]
-    },
-    "jos": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "jos-1.json"
-      ]
-    },
-    "kano": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "kano-1.json"
-      ]
-    },
-    "lagos": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lagos-1.json"
-      ]
-    },
-    "lekki": {
-      "count": 1,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": true,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "lekki-1.json"
-      ]
-    },
-    "port harcourt": {
-      "count": 2,
-      "hasBooking": false,
-      "hasDelivery": false,
-      "hasHours": false,
-      "hasPrices": false,
-      "hasRatings": false,
-      "shards": [
-        "port-harcourt-1.json"
       ]
     }
   },

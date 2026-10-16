@@ -1,100 +1,208 @@
 {
   "cities": {
     "Makati City": {
+      "bounds": {
+        "maxLatitude": 14.565443,
+        "maxLongitude": 121.027535,
+        "minLatitude": 14.553708,
+        "minLongitude": 121.014101
+      },
+      "centroid": {
+        "latitude": 14.559576,
+        "longitude": 121.020818
+      },
       "count": 2,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "makati-city-1.json"
       ]
     },
     "Mandaluyong City": {
+      "bounds": {
+        "maxLatitude": 14.585318,
+        "maxLongitude": 121.057508,
+        "minLatitude": 14.581404,
+        "minLongitude": 121.056314
+      },
+      "centroid": {
+        "latitude": 14.583734,
+        "longitude": 121.056782
+      },
       "count": 4,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "mandaluyong-city-1.json"
       ]
     },
     "Pasay City": {
+      "bounds": {
+        "maxLatitude": 14.55299,
+        "maxLongitude": 120.98009,
+        "minLatitude": 14.531333,
+        "minLongitude": 120.979333
+      },
+      "centroid": {
+        "latitude": 14.541441,
+        "longitude": 120.979697
+      },
       "count": 3,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.28,
       "shards": [
         "pasay-city-1.json"
       ]
     },
     "Pasig City": {
+      "bounds": {
+        "maxLatitude": 14.572041,
+        "maxLongitude": 121.06082,
+        "minLatitude": 14.567689,
+        "minLongitude": 121.056532
+      },
+      "centroid": {
+        "latitude": 14.570193,
+        "longitude": 121.058423
+      },
       "count": 3,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "pasig-city-1.json"
       ]
     },
     "Quezon City": {
+      "bounds": {
+        "maxLatitude": 14.649503,
+        "maxLongitude": 121.075419,
+        "minLatitude": 14.649503,
+        "minLongitude": 121.075419
+      },
+      "centroid": {
+        "latitude": 14.649503,
+        "longitude": 121.075419
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "quezon-city-1.json"
       ]
     },
     "San Juan City": {
+      "bounds": {
+        "maxLatitude": 14.59889,
+        "maxLongitude": 121.03811,
+        "minLatitude": 14.59345,
+        "minLongitude": 121.033592
+      },
+      "centroid": {
+        "latitude": 14.59617,
+        "longitude": 121.035851
+      },
       "count": 2,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "san-juan-city-1.json"
       ]
     },
     "Santa Rosa": {
+      "bounds": {
+        "maxLatitude": 14.237679,
+        "maxLongitude": 121.05704,
+        "minLatitude": 14.237082,
+        "minLongitude": 121.056587
+      },
+      "centroid": {
+        "latitude": 14.23738,
+        "longitude": 121.056814
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "santa-rosa-1.json"
       ]
     },
     "Tagaytay City": {
+      "bounds": {
+        "maxLatitude": 14.101834,
+        "maxLongitude": 120.951589,
+        "minLatitude": 14.101834,
+        "minLongitude": 120.951589
+      },
+      "centroid": {
+        "latitude": 14.101834,
+        "longitude": 120.951589
+      },
       "count": 1,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "tagaytay-city-1.json"
       ]
     },
     "Taguig City": {
+      "bounds": {
+        "maxLatitude": 14.55436,
+        "maxLongitude": 121.053725,
+        "minLatitude": 14.545655,
+        "minLongitude": 121.045878
+      },
+      "centroid": {
+        "latitude": 14.548803,
+        "longitude": 121.049831
+      },
       "count": 4,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "taguig-city-1.json"
       ]

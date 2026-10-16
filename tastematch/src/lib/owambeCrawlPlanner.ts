@@ -20,6 +20,7 @@
 
 import type { RestaurantParsed } from '@/types/restaurant';
 import { haversineDistance } from '@/lib/location';
+import { generatePlanDeepLink, capMessageLength } from '@/lib/whatsappShare';
 
 export interface CrawlStop {
   stageNumber: number;
@@ -39,6 +40,7 @@ export interface CrawlPlanOptions {
     vegetarian?: boolean;
     vegan?: boolean;
   };
+  userLocation?: { latitude: number; longitude: number; source?: string } | null;
 }
 
 export interface CrawlPlanResult {
@@ -49,6 +51,9 @@ export interface CrawlPlanResult {
   waMessage: string;
   waLink: string;
   neighbourhood: string;
+  deepLink?: string;
+  distanceFromUserKm?: number;
+  distanceSource?: string;
 }
 
 // Stage archetypes
@@ -261,26 +266,56 @@ export function planOwambeCrawl(
 
   const nHood = seed.locality || seed.city;
 
-  // 5. Preformatted WhatsApp message
-  const waLines: string[] = [
-    `🎉 *TasteMatch Owambe / Food Crawl: ${city} (${nHood})*`,
-    `🚶 *Total Route:* ~${totalDistKm.toFixed(1)} km (approx ${totalWalkingMins} mins walk/drive)`,
-    `💰 *Estimated Cost:* ${costText}`,
-    '',
-    '*Itinerary:*',
-    ...stops.map((s, idx) => {
-      const distInfo =
-        idx > 0 && s.distanceFromPreviousKm !== undefined
-          ? ` (➔ ${s.distanceFromPreviousKm.toFixed(1)} km / ~${s.walkingMinutesFromPrevious} mins)`
-          : '';
-      return `${s.stageNumber}. ${s.stageIcon} *${s.restaurant.restaurant_name}* [${s.stageName}]${distInfo}\n   📍 ${s.restaurant.locality || s.restaurant.city}`;
-    }),
-    '',
-    'Reply with your confirmation or order!',
-    '_Organised via TasteMatch Owambe Planner_',
-  ];
+  const deepLink = generatePlanDeepLink({
+    type: 'crawl',
+    city,
+    stops: stops.map((s) => s.restaurant.uid),
+    order: stops.map((s) => s.stageNumber),
+  });
 
-  const waMessage = waLines.join('\n');
+  // 5. Preformatted WhatsApp message with length cap (< 1500 chars)
+  const fullGenerator = () =>
+    [
+      `🎉 *TasteMatch Owambe / Food Crawl: ${city} (${nHood})*`,
+      `🚶 *Total Route:* ~${totalDistKm.toFixed(1)} km (approx ${totalWalkingMins} mins walk/drive)`,
+      `💰 *Estimated Cost:* ${costText}`,
+      '',
+      '*Itinerary:*',
+      ...stops.map((s, idx) => {
+        const distInfo =
+          idx > 0 && s.distanceFromPreviousKm !== undefined
+            ? ` (➔ ${s.distanceFromPreviousKm.toFixed(1)} km / ~${s.walkingMinutesFromPrevious} mins)`
+            : '';
+        return `${s.stageNumber}. ${s.stageIcon} *${s.restaurant.restaurant_name}* [${s.stageName}]${distInfo}\n   📍 ${s.restaurant.locality || s.restaurant.city}`;
+      }),
+      '',
+      'Reply with your confirmation or order!',
+      `Open plan: ${deepLink}`,
+      '_Organised via TasteMatch Owambe Planner_',
+    ].join('\n');
+
+  const shortGenerator = () =>
+    [
+      `🎉 *TasteMatch Owambe Crawl: ${city}*`,
+      `Route: ~${totalDistKm.toFixed(1)} km (~${totalWalkingMins} mins)`,
+      '',
+      ...stops.map(
+        (s) =>
+          `${s.stageNumber}. ${s.stageIcon} ${s.restaurant.restaurant_name} (${s.restaurant.locality || s.restaurant.city})`,
+      ),
+      '',
+      `Open plan: ${deepLink}`,
+    ].join('\n');
+
+  const minimalGenerator = () =>
+    `🎉 TasteMatch Crawl in ${city} (${stops.length} stops), open the plan: ${deepLink}`;
+
+  const waMessage = capMessageLength({
+    full: fullGenerator,
+    short: shortGenerator,
+    minimal: minimalGenerator,
+  });
+
   const waLink = `https://wa.me/?text=${encodeURIComponent(waMessage)}`;
 
   return {
@@ -291,5 +326,8 @@ export function planOwambeCrawl(
     waMessage,
     waLink,
     neighbourhood: nHood,
+    deepLink,
+    distanceFromUserKm: options.userLocation ? Number(haversineDistance(options.userLocation.latitude, options.userLocation.longitude, seed.latitude, seed.longitude).toFixed(1)) : undefined,
+    distanceSource: options.userLocation?.source || undefined,
   };
 }

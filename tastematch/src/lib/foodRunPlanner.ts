@@ -11,12 +11,15 @@
 import type { RestaurantParsed } from '@/types/restaurant';
 import dishDictionary from '@/config/dishDictionary.json';
 
+import { generatePlanDeepLink, capMessageLength } from '@/lib/whatsappShare';
+
 export interface FoodRunParams {
   restaurantName: string;
   localityOrCity: string;
   dishes: string[];
   averageCostForTwo: number | null;
   currency: string;
+  restaurantUid?: string;
 }
 
 export interface FoodRunResult {
@@ -25,6 +28,7 @@ export interface FoodRunResult {
   estimatedCostText: string;
   isValid: boolean;
   error?: string;
+  deepLink?: string;
 }
 
 /**
@@ -108,20 +112,48 @@ export function formatFoodRunMessage(params: FoodRunParams): FoodRunResult {
 
   const costText = getEstimatedCostText(averageCostForTwo, currency);
 
-  const lines: string[] = [
-    `🍽️ *Food Run: ${restaurantName}*`,
-    `📍 ${localityOrCity}`,
-    '',
-    '*Order List:*',
-    ...dishes.map((dish) => `[ ] ${dish}`),
-    '',
-    `💰 *Estimated Total:* ${costText}`,
-    `🛵 *Who's in? Reply with your order or check off above!*`,
-    '',
-    `_Organised via TasteMatch_`,
-  ];
+  const deepLink = generatePlanDeepLink({
+    type: 'foodrun',
+    city: localityOrCity,
+    stops: params.restaurantUid ? [params.restaurantUid] : [],
+    dishes,
+    restaurantName,
+    restaurantUid: params.restaurantUid,
+  });
 
-  const message = lines.join('\n');
+  const fullGenerator = () =>
+    [
+      `🍽️ *Food Run: ${restaurantName}*`,
+      `📍 ${localityOrCity}`,
+      '',
+      '*Order List:*',
+      ...dishes.map((dish) => `[ ] ${dish}`),
+      '',
+      `💰 *Estimated Total:* ${costText}`,
+      `🛵 *Who's in? Reply with your order or check off above!*`,
+      '',
+      `Open plan: ${deepLink}`,
+      '_Organised via TasteMatch_',
+    ].join('\n');
+
+  const shortGenerator = () =>
+    [
+      `🍽️ *Food Run: ${restaurantName}* (${localityOrCity})`,
+      dishes.map((d) => `• ${d}`).join(', '),
+      `💰 Total: ${costText}`,
+      '',
+      `Open plan: ${deepLink}`,
+    ].join('\n');
+
+  const minimalGenerator = () =>
+    `🍽️ Food run for ${restaurantName} (${dishes.length} dishes), open plan: ${deepLink}`;
+
+  const message = capMessageLength({
+    full: fullGenerator,
+    short: shortGenerator,
+    minimal: minimalGenerator,
+  });
+
   const waLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
   return {
@@ -129,5 +161,6 @@ export function formatFoodRunMessage(params: FoodRunParams): FoodRunResult {
     waLink,
     estimatedCostText: costText,
     isValid: true,
+    deepLink,
   };
 }

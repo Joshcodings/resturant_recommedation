@@ -52,6 +52,8 @@ export interface RecommendationQuery {
   radiusKm?: number | null;
   /** Diversification trade-off lambda (0 to 1, default 0.85) */
   diversificationLambda?: number;
+  /** Optional user location for proximity ranking */
+  userLocation?: { latitude: number; longitude: number; source?: 'gps' | 'city-centre' | 'pin' };
 }
 
 export interface ScoredRestaurant extends RestaurantParsed {
@@ -61,6 +63,7 @@ export interface ScoredRestaurant extends RestaurantParsed {
   whyThisPick: string;    // generated sentence from real fields
   explanation?: ExplanationBreakdown; // structured explainable breakdown
   distanceKm?: number;    // distance in km if coordinates available
+  distanceSource?: 'gps' | 'city-centre' | 'pin';
   matchReason?: string | null; // e.g. "cuisine tag: nigerian" or "matched in name"
   distanceFromLandmark?: { landmarkName: string; distanceKm: number };
 }

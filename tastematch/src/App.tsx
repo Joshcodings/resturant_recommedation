@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { HashRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { HashRouter, Routes, Route, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { parsePlanDeepLink } from '@/lib/whatsappShare';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import { RestaurantProvider } from '@/context/RestaurantContext';
 import { CurrencyProvider } from '@/context/CurrencyContext';
@@ -7,6 +8,7 @@ import { ShortlistProvider, useShortlist } from '@/context/ShortlistContext';
 import { DataSaverProvider, useDataSaver } from '@/context/DataSaverContext';
 import { CommunityProvider } from '@/context/CommunityContext';
 import { LanguageProvider, useLanguage } from '@/context/LanguageContext';
+import { LocationProvider } from '@/context/LocationContext';
 import CurrencySelector from '@/components/currency/CurrencySelector';
 import LanguageSelector from '@/components/language/LanguageSelector';
 import DiscoverView from '@/views/DiscoverView';
@@ -287,6 +289,20 @@ function AppShell() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isShortlistOpen, setIsShortlistOpen] = useState(false);
   const { isDraft, currentLanguage, disclaimer, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const rawHash = typeof window !== 'undefined' ? window.location.hash : '';
+    const rawSearch = typeof window !== 'undefined' ? window.location.search : '';
+    const parsed = parsePlanDeepLink(rawHash) || parsePlanDeepLink(rawSearch);
+    if (parsed) {
+      if ((parsed.type === 'crawl' || (parsed.stops && parsed.stops.length > 1)) && location.pathname !== '/group') {
+        const query = rawHash.includes('?') ? rawHash.split('?')[1] : (rawSearch.replace(/^\?/, '') || '');
+        navigate(`/group?${query}`);
+      }
+    }
+  }, [location, navigate]);
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
@@ -380,13 +396,15 @@ export default function App() {
         <DataSaverProvider>
           <CommunityProvider>
             <RestaurantProvider>
-              <CurrencyProvider>
-                <ShortlistProvider>
-                  <HashRouter>
-                    <AppShell />
-                  </HashRouter>
-                </ShortlistProvider>
-              </CurrencyProvider>
+              <LocationProvider>
+                <CurrencyProvider>
+                  <ShortlistProvider>
+                    <HashRouter>
+                      <AppShell />
+                    </HashRouter>
+                  </ShortlistProvider>
+                </CurrencyProvider>
+              </LocationProvider>
             </RestaurantProvider>
           </CommunityProvider>
         </DataSaverProvider>

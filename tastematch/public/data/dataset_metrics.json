@@ -1,0 +1,19 @@
+{
+  "coverage": {
+    "cuisineCount": 271,
+    "cuisinePct": 21.5,
+    "hoursCount": 171,
+    "hoursPct": 13.5,
+    "phoneCount": 110,
+    "phonePct": 8.7
+  },
+  "fullCitiesCount": 25,
+  "limitedCoverageCitiesCount": 33,
+  "nigeriaCitiesCount": 58,
+  "nigeriaPlaces": 1263,
+  "shardCount": 199,
+  "status": "PASS",
+  "totalPlaces": 8666,
+  "validatedAt": "2026-10-15T04:41:55Z",
+  "zomatoPlaces": 7403
+}

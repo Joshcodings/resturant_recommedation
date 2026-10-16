@@ -5,6 +5,7 @@ import {
   getSuggestedDishesForRestaurant,
   formatFoodRunMessage,
 } from '@/lib/foodRunPlanner';
+import WhatsAppShareModal from '@/components/common/WhatsAppShareModal';
 
 interface FoodRunModalProps {
   restaurant: RestaurantParsed | null;
@@ -26,6 +27,8 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
     }
   }, [restaurant, isOpen]);
 
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+
   const suggestions = useMemo(() => {
     if (!restaurant) return [];
     return getSuggestedDishesForRestaurant(restaurant);
@@ -39,6 +42,7 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
       dishes: selectedDishes,
       averageCostForTwo: restaurant.average_cost_for_two,
       currency: restaurant.currency || 'NGN',
+      restaurantUid: restaurant.uid,
     });
   }, [restaurant, selectedDishes]);
 
@@ -245,13 +249,10 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
             {copied ? 'Copied Order!' : 'Copy Message'}
           </button>
 
-          <a
-            href={foodRun.isValid ? foodRun.waLink : undefined}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              if (!foodRun.isValid) e.preventDefault();
-            }}
+          <button
+            type="button"
+            onClick={() => setIsShareModalOpen(true)}
+            disabled={!foodRun.isValid}
             className={`px-4 py-2 text-xs font-semibold rounded-xl flex items-center gap-1.5 transition-colors ${
               foodRun.isValid
                 ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/30 cursor-pointer'
@@ -259,10 +260,18 @@ export default function FoodRunModal({ restaurant, isOpen, onClose }: FoodRunMod
             }`}
           >
             <Send className="w-4 h-4" />
-            Open in WhatsApp
-          </a>
+            Share via WhatsApp
+          </button>
         </div>
       </div>
+
+      <WhatsAppShareModal
+        open={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
+        title={`Food Run: ${restaurant.restaurant_name}`}
+        message={foodRun.message}
+        planDeepLink={foodRun.deepLink}
+      />
     </div>
   );
 }

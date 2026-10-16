@@ -1,34 +1,70 @@
 {
   "cities": {
     "Brasilia": {
+      "bounds": {
+        "maxLatitude": -15.720118,
+        "maxLongitude": -47.8685,
+        "minLatitude": -15.860621,
+        "minLongitude": -48.019092
+      },
+      "centroid": {
+        "latitude": -15.808132,
+        "longitude": -47.917263
+      },
       "count": 19,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 11.45,
       "shards": [
         "brasilia-1.json"
       ]
     },
     "Rio de Janeiro": {
+      "bounds": {
+        "maxLatitude": -22.905293,
+        "maxLongitude": -43.162667,
+        "minLatitude": -23.0115,
+        "minLongitude": -43.377
+      },
+      "centroid": {
+        "latitude": -22.967471,
+        "longitude": -43.213824
+      },
       "count": 19,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 17.41,
       "shards": [
         "rio-de-janeiro-1.json"
       ]
     },
     "Sao Paulo": {
+      "bounds": {
+        "maxLatitude": -23.486535,
+        "maxLongitude": -46.581672,
+        "minLatitude": -23.609207,
+        "minLongitude": -46.746958
+      },
+      "centroid": {
+        "latitude": -23.564722,
+        "longitude": -46.660518
+      },
       "count": 17,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 11.84,
       "shards": [
         "sao-paulo-1.json"
       ]

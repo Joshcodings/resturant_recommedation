@@ -1,386 +1,806 @@
 {
   "cities": {
     "Albany": {
+      "bounds": {
+        "maxLatitude": 31.622412,
+        "maxLongitude": -83.8389,
+        "minLatitude": 31.5308,
+        "minLongitude": -84.2233
+      },
+      "centroid": {
+        "latitude": 31.602963,
+        "longitude": -84.186592
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 33.9,
       "shards": [
         "albany-1.json"
       ]
     },
     "Athens": {
+      "bounds": {
+        "maxLatitude": 33.9652,
+        "maxLongitude": -83.3389,
+        "minLatitude": 33.924275,
+        "minLongitude": -83.4293
+      },
+      "centroid": {
+        "latitude": 33.953808,
+        "longitude": -83.380491
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 4.98,
       "shards": [
         "athens-1.json"
       ]
     },
     "Augusta": {
+      "bounds": {
+        "maxLatitude": 33.544342,
+        "maxLongitude": -81.965571,
+        "minLatitude": 33.4086,
+        "minLongitude": -82.1997
+      },
+      "centroid": {
+        "latitude": 33.489171,
+        "longitude": -82.053205
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 14.04,
       "shards": [
         "augusta-1.json"
       ]
     },
     "Boise": {
+      "bounds": {
+        "maxLatitude": 43.619274,
+        "maxLongitude": -116.185034,
+        "minLatitude": 43.5777,
+        "minLongitude": -116.5629
+      },
+      "centroid": {
+        "latitude": 43.610375,
+        "longitude": -116.241882
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 26.11,
       "shards": [
         "boise-1.json"
       ]
     },
     "Cedar Rapids/Iowa City": {
+      "bounds": {
+        "maxLatitude": 42.0468,
+        "maxLongitude": -91.482165,
+        "minLatitude": 41.6428,
+        "minLongitude": -91.7266
+      },
+      "centroid": {
+        "latitude": 41.820306,
+        "longitude": -91.585511
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 25.58,
       "shards": [
         "cedar-rapidsiowa-city-1.json"
       ]
     },
     "Clatskanie": {
+      "bounds": {
+        "maxLatitude": 46.126967,
+        "maxLongitude": -123.368151,
+        "minLatitude": 46.126967,
+        "minLongitude": -123.368151
+      },
+      "centroid": {
+        "latitude": 46.126967,
+        "longitude": -123.368151
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "clatskanie-1.json"
       ]
     },
     "Cochrane": {
+      "bounds": {
+        "maxLatitude": 51.183934,
+        "maxLongitude": -114.472474,
+        "minLatitude": 51.183934,
+        "minLongitude": -114.472474
+      },
+      "centroid": {
+        "latitude": 51.183934,
+        "longitude": -114.472474
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "cochrane-1.json"
       ]
     },
     "Columbus": {
+      "bounds": {
+        "maxLatitude": 32.7455,
+        "maxLongitude": -84.927047,
+        "minLatitude": 32.4637,
+        "minLongitude": -85.0213
+      },
+      "centroid": {
+        "latitude": 32.519378,
+        "longitude": -84.96644
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 25.66,
       "shards": [
         "columbus-1.json"
       ]
     },
     "Dalton": {
+      "bounds": {
+        "maxLatitude": 34.9546,
+        "maxLongitude": -84.767911,
+        "minLatitude": 34.474635,
+        "minLongitude": -85.294955
+      },
+      "centroid": {
+        "latitude": 34.775855,
+        "longitude": -85.056924
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 35.56,
       "shards": [
         "dalton-1.json"
       ]
     },
     "Davenport": {
+      "bounds": {
+        "maxLatitude": 41.5944,
+        "maxLongitude": -90.491245,
+        "minLatitude": 41.520389,
+        "minLongitude": -90.6136
+      },
+      "centroid": {
+        "latitude": 41.562602,
+        "longitude": -90.541739
+      },
       "count": 18,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.94,
       "shards": [
         "davenport-1.json"
       ]
     },
     "Des Moines": {
+      "bounds": {
+        "maxLatitude": 42.048779,
+        "maxLongitude": -93.577383,
+        "minLatitude": 41.545869,
+        "minLongitude": -93.772033
+      },
+      "centroid": {
+        "latitude": 41.639892,
+        "longitude": -93.662813
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 45.5,
       "shards": [
         "des-moines-1.json"
       ]
     },
     "Dubuque": {
+      "bounds": {
+        "maxLatitude": 42.527556,
+        "maxLongitude": -90.645294,
+        "minLatitude": 42.49092,
+        "minLongitude": -90.740213
+      },
+      "centroid": {
+        "latitude": 42.501024,
+        "longitude": -90.678075
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 5.22,
       "shards": [
         "dubuque-1.json"
       ]
     },
     "Fernley": {
+      "bounds": {
+        "maxLatitude": 39.607515,
+        "maxLongitude": -119.252694,
+        "minLatitude": 39.607515,
+        "minLongitude": -119.252694
+      },
+      "centroid": {
+        "latitude": 39.607515,
+        "longitude": -119.252694
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "fernley-1.json"
       ]
     },
     "Gainesville": {
+      "bounds": {
+        "maxLatitude": 34.7024,
+        "maxLongitude": -83.520693,
+        "minLatitude": 34.0901,
+        "minLongitude": -83.989317
+      },
+      "centroid": {
+        "latitude": 34.422646,
+        "longitude": -83.851656
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 37.3,
       "shards": [
         "gainesville-1.json"
       ]
     },
     "Lakeview": {
+      "bounds": {
+        "maxLatitude": 42.1885,
+        "maxLongitude": -120.3458,
+        "minLatitude": 42.1885,
+        "minLongitude": -120.3458
+      },
+      "centroid": {
+        "latitude": 42.1885,
+        "longitude": -120.3458
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "lakeview-1.json"
       ]
     },
     "Lincoln": {
+      "bounds": {
+        "maxLatitude": 40.8143,
+        "maxLongitude": -96.7072,
+        "minLatitude": 40.8143,
+        "minLongitude": -96.7072
+      },
+      "centroid": {
+        "latitude": 40.8143,
+        "longitude": -96.7072
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "lincoln-1.json"
       ]
     },
     "Macon": {
+      "bounds": {
+        "maxLatitude": 32.929278,
+        "maxLongitude": -83.594494,
+        "minLatitude": 32.552684,
+        "minLongitude": -83.787993
+      },
+      "centroid": {
+        "latitude": 32.730633,
+        "longitude": -83.66087
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 25.0,
       "shards": [
         "macon-1.json"
       ]
     },
     "Mc Millan": {
+      "bounds": {
+        "maxLatitude": 46.3718,
+        "maxLongitude": -85.7363,
+        "minLatitude": 46.3718,
+        "minLongitude": -85.7363
+      },
+      "centroid": {
+        "latitude": 46.3718,
+        "longitude": -85.7363
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "mc-millan-1.json"
       ]
     },
     "Miller": {
+      "bounds": {
+        "maxLatitude": 44.5158,
+        "maxLongitude": -98.9891,
+        "minLatitude": 44.5158,
+        "minLongitude": -98.9891
+      },
+      "centroid": {
+        "latitude": 44.5158,
+        "longitude": -98.9891
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "miller-1.json"
       ]
     },
     "Monroe": {
+      "bounds": {
+        "maxLatitude": 42.606306,
+        "maxLongitude": -89.653487,
+        "minLatitude": 42.606306,
+        "minLongitude": -89.653487
+      },
+      "centroid": {
+        "latitude": 42.606306,
+        "longitude": -89.653487
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "monroe-1.json"
       ]
     },
     "Ojo Caliente": {
+      "bounds": {
+        "maxLatitude": 36.313638,
+        "maxLongitude": -106.057666,
+        "minLatitude": 36.313638,
+        "minLongitude": -106.057666
+      },
+      "centroid": {
+        "latitude": 36.313638,
+        "longitude": -106.057666
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "ojo-caliente-1.json"
       ]
     },
     "Orlando": {
+      "bounds": {
+        "maxLatitude": 28.811653,
+        "maxLongitude": -81.266871,
+        "minLatitude": 28.371338,
+        "minLongitude": -81.585226
+      },
+      "centroid": {
+        "latitude": 28.524832,
+        "longitude": -81.416288
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 35.07,
       "shards": [
         "orlando-1.json"
       ]
     },
     "Pensacola": {
+      "bounds": {
+        "maxLatitude": 30.4982,
+        "maxLongitude": -86.857339,
+        "minLatitude": 30.308468,
+        "minLongitude": -87.427707
+      },
+      "centroid": {
+        "latitude": 30.395173,
+        "longitude": -87.198116
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 32.69,
       "shards": [
         "pensacola-1.json"
       ]
     },
     "Pocatello": {
+      "bounds": {
+        "maxLatitude": 43.1903,
+        "maxLongitude": -112.0127,
+        "minLatitude": 42.6192,
+        "minLongitude": -112.461326
+      },
+      "centroid": {
+        "latitude": 42.866106,
+        "longitude": -112.395193
+      },
       "count": 19,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 41.59,
       "shards": [
         "pocatello-1.json"
       ]
     },
     "Potrero": {
+      "bounds": {
+        "maxLatitude": 32.613431,
+        "maxLongitude": -116.704731,
+        "minLatitude": 32.613431,
+        "minLongitude": -116.704731
+      },
+      "centroid": {
+        "latitude": 32.613431,
+        "longitude": -116.704731
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "potrero-1.json"
       ]
     },
     "Princeton": {
+      "bounds": {
+        "maxLatitude": 40.352385,
+        "maxLongitude": -74.651139,
+        "minLatitude": 40.352385,
+        "minLongitude": -74.651139
+      },
+      "centroid": {
+        "latitude": 40.352385,
+        "longitude": -74.651139
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "princeton-1.json"
       ]
     },
     "Rest of Hawaii": {
+      "bounds": {
+        "maxLatitude": 21.677078,
+        "maxLongitude": -155.997362,
+        "minLatitude": 19.642752,
+        "minLongitude": -157.948486
+      },
+      "centroid": {
+        "latitude": 20.997573,
+        "longitude": -157.106178
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 189.9,
       "shards": [
         "rest-of-hawaii-1.json"
       ]
     },
     "Savannah": {
+      "bounds": {
+        "maxLatitude": 32.081394,
+        "maxLongitude": -80.848297,
+        "minLatitude": 31.99581,
+        "minLongitude": -81.0979
+      },
+      "centroid": {
+        "latitude": 32.069733,
+        "longitude": -81.06867
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 22.34,
       "shards": [
         "savannah-1.json"
       ]
     },
     "Sioux City": {
+      "bounds": {
+        "maxLatitude": 42.7956,
+        "maxLongitude": -96.1608,
+        "minLatitude": 42.4351,
+        "minLongitude": -96.4204
+      },
+      "centroid": {
+        "latitude": 42.498723,
+        "longitude": -96.378936
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 37.52,
       "shards": [
         "sioux-city-1.json"
       ]
     },
     "Tampa Bay": {
+      "bounds": {
+        "maxLatitude": 28.082909,
+        "maxLongitude": -82.41294,
+        "minLatitude": 27.770026,
+        "minLongitude": -82.843253
+      },
+      "centroid": {
+        "latitude": 27.898321,
+        "longitude": -82.568287
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 27.59,
       "shards": [
         "tampa-bay-1.json"
       ]
     },
     "Valdosta": {
+      "bounds": {
+        "maxLatitude": 30.8971,
+        "maxLongitude": -83.279,
+        "minLatitude": 30.816436,
+        "minLongitude": -83.332796
+      },
+      "centroid": {
+        "latitude": 30.848183,
+        "longitude": -83.301594
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.2,
       "shards": [
         "valdosta-1.json"
       ]
     },
     "Vernonia": {
+      "bounds": {
+        "maxLatitude": 45.858667,
+        "maxLongitude": -123.195437,
+        "minLatitude": 45.858667,
+        "minLongitude": -123.195437
+      },
+      "centroid": {
+        "latitude": 45.858667,
+        "longitude": -123.195437
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "vernonia-1.json"
       ]
     },
     "Waterloo": {
+      "bounds": {
+        "maxLatitude": 42.5464,
+        "maxLongitude": -92.323032,
+        "minLatitude": 42.458979,
+        "minLongitude": -92.466597
+      },
+      "centroid": {
+        "latitude": 42.511039,
+        "longitude": -92.40852
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 8.62,
       "shards": [
         "waterloo-1.json"
       ]
     },
     "Weirton": {
+      "bounds": {
+        "maxLatitude": 40.396043,
+        "maxLongitude": -80.529488,
+        "minLatitude": 40.396043,
+        "minLongitude": -80.529488
+      },
+      "centroid": {
+        "latitude": 40.396043,
+        "longitude": -80.529488
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "weirton-1.json"
       ]
     },
     "Winchester Bay": {
+      "bounds": {
+        "maxLatitude": 43.678998,
+        "maxLongitude": -124.175346,
+        "minLatitude": 43.678998,
+        "minLongitude": -124.175346
+      },
+      "centroid": {
+        "latitude": 43.678998,
+        "longitude": -124.175346
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "winchester-bay-1.json"
       ]

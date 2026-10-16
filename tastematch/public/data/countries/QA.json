@@ -1,12 +1,24 @@
 {
   "cities": {
     "Doha": {
+      "bounds": {
+        "maxLatitude": 25.350325,
+        "maxLongitude": 51.546714,
+        "minLatitude": 25.224394,
+        "minLongitude": 51.350047
+      },
+      "centroid": {
+        "latitude": 25.286205,
+        "longitude": 51.512866
+      },
       "count": 20,
       "hasBooking": true,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 16.99,
       "shards": [
         "doha-1.json"
       ]

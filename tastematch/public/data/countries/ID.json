@@ -1,45 +1,93 @@
 {
   "cities": {
     "Bandung": {
+      "bounds": {
+        "maxLatitude": -6.887058,
+        "maxLongitude": 107.61279,
+        "minLatitude": -6.887058,
+        "minLongitude": 107.61279
+      },
+      "centroid": {
+        "latitude": -6.887058,
+        "longitude": 107.61279
+      },
       "count": 1,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.0,
       "shards": [
         "bandung-1.json"
       ]
     },
     "Bogor": {
+      "bounds": {
+        "maxLatitude": -6.576578,
+        "maxLongitude": 106.810301,
+        "minLatitude": -6.606917,
+        "minLongitude": 106.80785
+      },
+      "centroid": {
+        "latitude": -6.591747,
+        "longitude": 106.809076
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 1.69,
       "shards": [
         "bogor-1.json"
       ]
     },
     "Jakarta": {
+      "bounds": {
+        "maxLatitude": -6.101298,
+        "maxLongitude": 106.911335,
+        "minLatitude": -6.278012,
+        "minLongitude": 106.728508
+      },
+      "centroid": {
+        "latitude": -6.201226,
+        "longitude": 106.819522
+      },
       "count": 16,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 11.32,
       "shards": [
         "jakarta-1.json"
       ]
     },
     "Tangerang": {
+      "bounds": {
+        "maxLatitude": -6.241792,
+        "maxLongitude": 106.726119,
+        "minLatitude": -6.269914,
+        "minLongitude": 106.652688
+      },
+      "centroid": {
+        "latitude": -6.255853,
+        "longitude": 106.689404
+      },
       "count": 2,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": true,
+      "radiusKm": 4.35,
       "shards": [
         "tangerang-1.json"
       ]

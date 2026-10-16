@@ -81,6 +81,9 @@ export default function AddPlaceModal({
   const [copiedType, setCopiedType] = useState<string | null>(null);
   const [isLocating, setIsLocating] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [accuracyWarning, setAccuracyWarning] = useState<string | null>(null);
+  const [needsPinConfirmation, setNeedsPinConfirmation] = useState(false);
+  const [pinConfirmed, setPinConfirmed] = useState(true);
 
   // Sync city when defaultCity changes
   useEffect(() => {
@@ -90,32 +93,53 @@ export default function AddPlaceModal({
   if (!open) return null;
 
   const handleUseLocation = () => {
-    if (!navigator.geolocation) {
-      alert('Geolocation is not supported by your browser.');
+    if (typeof window === 'undefined' || !navigator.geolocation) {
+      setErrorMsg('Geolocation is not supported by your browser.');
       return;
     }
     setIsLocating(true);
+    setErrorMsg(null);
+    setAccuracyWarning(null);
+
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        setLatitude(pos.coords.latitude.toFixed(6));
-        setLongitude(pos.coords.longitude.toFixed(6));
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        const acc = pos.coords.accuracy;
+
+        setLatitude(lat.toFixed(6));
+        setLongitude(lon.toFixed(6));
         setIsLocating(false);
+
+        if (acc > 150) {
+          setNeedsPinConfirmation(true);
+          setPinConfirmed(false);
+          setAccuracyWarning(
+            `GPS accuracy is ~${Math.round(acc)}m (worse than 150m). Please move the pin to the exact entrance and confirm below.`,
+          );
+        } else {
+          setNeedsPinConfirmation(false);
+          setPinConfirmed(true);
+          setAccuracyWarning(null);
+        }
       },
       (err) => {
         console.warn('Geolocation error:', err);
         setIsLocating(false);
-        // Fallback to city capital coords if available
-        const matched = NIGERIAN_STATE_CAPITALS.find(
-          (c) => c.capital.toLowerCase() === city.toLowerCase(),
-        );
-        if (matched) {
-          setLatitude(matched.lat.toFixed(6));
-          setLongitude(matched.lng.toFixed(6));
+        // Never fall back silently to state capital coordinates! Keep fields empty.
+        setLatitude('');
+        setLongitude('');
+        setNeedsPinConfirmation(false);
+        setPinConfirmed(true);
+        if (err.code === 1) {
+          setErrorMsg('Location permission denied. Please enter coordinates manually or leave blank.');
+        } else if (err.code === 3) {
+          setErrorMsg('Location request timed out. Please enter coordinates manually or leave blank.');
         } else {
-          alert('Could not retrieve current location. Please enter coordinates manually or leave blank.');
+          setErrorMsg('Could not retrieve current location. Please enter coordinates manually or leave blank.');
         }
       },
-      { timeout: 8000 },
+      { timeout: 10000, enableHighAccuracy: true },
     );
   };
 
@@ -126,6 +150,9 @@ export default function AddPlaceModal({
     if (matched) {
       setLatitude(matched.lat.toFixed(6));
       setLongitude(matched.lng.toFixed(6));
+      setNeedsPinConfirmation(false);
+      setPinConfirmed(true);
+      setAccuracyWarning(null);
     }
   };
 
@@ -138,8 +165,22 @@ export default function AddPlaceModal({
 
     const latNum = latitude ? parseFloat(latitude) : null;
     const lngNum = longitude ? parseFloat(longitude) : null;
-    const priceNum = priceNaira ? parseInt(priceNaira, 10) : null;
 
+    // Validate coordinates are within Nigeria bounds
+    if (latNum !== null && lngNum !== null && !isNaN(latNum) && !isNaN(lngNum)) {
+      if (latNum < 4.0 || latNum > 14.0 || lngNum < 2.6 || lngNum > 14.7) {
+        setErrorMsg("Coordinates must be within Nigeria's borders (lat 4.0°–14.0° N, lon 2.6°–14.7° E).");
+        return;
+      }
+    }
+
+    // Require pin confirmation if accuracy was worse than 150m
+    if (needsPinConfirmation && !pinConfirmed) {
+      setErrorMsg('Please confirm the exact entrance pin location before submitting.');
+      return;
+    }
+
+    const priceNum = priceNaira ? parseInt(priceNaira, 10) : null;
     const finalCuisine = cuisine === 'Other' ? customCuisine || 'Nigerian' : cuisine;
 
     const newPlace = addCommunityPlace({
@@ -172,6 +213,9 @@ export default function AddPlaceModal({
     setOpeningHours('');
     setPhone('');
     setErrorMsg(null);
+    setNeedsPinConfirmation(false);
+    setPinConfirmed(true);
+    setAccuracyWarning(null);
     onClose();
   };
 
@@ -715,6 +759,95 @@ export default function AddPlaceModal({
                     }}
                   />
                 </div>
+                {needsPinConfirmation && !pinConfirmed && (
+                  <div
+                    style={{
+                      marginTop: 10,
+                      padding: 12,
+                      borderRadius: 8,
+                      background: 'rgba(234, 179, 8, 0.1)',
+                      border: '1px solid rgba(234, 179, 8, 0.3)',
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#eab308', fontSize: 12, fontWeight: 600 }}>
+                      <MapPin size={14} /> Move the pin to the exact entrance
+                    </div>
+                    <p style={{ margin: '4px 0 8px', fontSize: 11, color: 'var(--text-muted)' }}>
+                      {accuracyWarning}
+                    </p>
+                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const lat = parseFloat(latitude) || 0;
+                          setLatitude((lat + 0.0001).toFixed(6));
+                        }}
+                        style={{ padding: '4px 8px', fontSize: 11, borderRadius: 4, background: 'var(--surface-2)', border: '1px solid var(--border)', color: 'var(--text)', cursor: 'pointer' }}
+                      >
+                        ▲ North (+10m)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const lat = parseFloat(latitude) || 0;
+                          setLatitude((lat - 0.0001).toFixed(6));
+                        }}
+                        style={{ padding: '4px 8px', fontSize: 11, borderRadius: 4, background: 'var(--surface-2)', border: '1px solid var(--border)', color: 'var(--text)', cursor: 'pointer' }}
+                      >
+                        ▼ South (-10m)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const lon = parseFloat(longitude) || 0;
+                          setLongitude((lon + 0.0001).toFixed(6));
+                        }}
+                        style={{ padding: '4px 8px', fontSize: 11, borderRadius: 4, background: 'var(--surface-2)', border: '1px solid var(--border)', color: 'var(--text)', cursor: 'pointer' }}
+                      >
+                        ► East (+10m)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const lon = parseFloat(longitude) || 0;
+                          setLongitude((lon - 0.0001).toFixed(6));
+                        }}
+                        style={{ padding: '4px 8px', fontSize: 11, borderRadius: 4, background: 'var(--surface-2)', border: '1px solid var(--border)', color: 'var(--text)', cursor: 'pointer' }}
+                      >
+                        ◄ West (-10m)
+                      </button>
+                      <button
+                        type="button"
+                        data-btn-confirm-pin="true"
+                        onClick={() => {
+                          setPinConfirmed(true);
+                          setErrorMsg(null);
+                        }}
+                        style={{
+                          marginLeft: 'auto',
+                          padding: '5px 12px',
+                          fontSize: 12,
+                          fontWeight: 600,
+                          borderRadius: 6,
+                          background: '#10b981',
+                          color: '#ffffff',
+                          border: 'none',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 4,
+                        }}
+                      >
+                        <Check size={13} /> Confirm Entrance Pin
+                      </button>
+                    </div>
+                  </div>
+                )}
+                {pinConfirmed && needsPinConfirmation && (
+                  <div style={{ marginTop: 6, fontSize: 11, color: '#10b981', display: 'flex', alignItems: 'center', gap: 4 }}>
+                    <Check size={12} /> Entrance pin confirmed at {latitude}, {longitude}
+                  </div>
+                )}
               </div>
 
               {/* Opening Hours & Phone */}

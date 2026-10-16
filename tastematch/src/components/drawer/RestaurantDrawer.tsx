@@ -1,4 +1,6 @@
-import { useEffect, useRef, useMemo } from 'react';
+import { useEffect, useRef, useMemo, useState } from 'react';
+import WhatsAppShareModal from '@/components/common/WhatsAppShareModal';
+import { generatePlanDeepLink, capMessageLength } from '@/lib/whatsappShare';
 import {
   X,
   Utensils,
@@ -104,6 +106,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
   const { data, vocabulary } = useRestaurants();
   const { formatDual } = useCurrency();
   const panelRef = useRef<HTMLDivElement>(null);
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   const similar = useMemo(() => {
     if (!restaurant || data.length === 0) return [];
@@ -130,6 +133,47 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
 
   const r = restaurant;
   const chips = r.cuisineList;
+
+  const placeDeepLink = generatePlanDeepLink({
+    type: 'restaurant',
+    city: r.city,
+    stops: [r.uid],
+    restaurantUid: r.uid,
+    restaurantName: r.restaurant_name,
+  });
+
+  const fullShareText = () =>
+    [
+      `🍽️ *${r.restaurant_name}*`,
+      `📍 ${r.locality ? `${r.locality}, ` : ''}${r.city}`,
+      r.cuisines ? `🍴 Cuisines: ${r.cuisines}` : '',
+      r.hasRating ? `⭐ Rating: ${r.aggregate_rating?.toFixed(1)}` : '',
+      r.opening_hours ? `🕒 Hours: ${r.opening_hours}` : '',
+      r.phone ? `📞 Phone: ${r.phone}` : '',
+      '',
+      `Open on TasteMatch: ${placeDeepLink}`,
+      '_Found on TasteMatch_',
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+  const shortShareText = () =>
+    [
+      `🍽️ *${r.restaurant_name}* (${r.locality || r.city})`,
+      r.cuisines ? `🍴 ${r.cuisines}` : '',
+      `Open: ${placeDeepLink}`,
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+  const minimalShareText = () =>
+    `🍽️ Check out ${r.restaurant_name} in ${r.city}: ${placeDeepLink}`;
+
+  const placeShareMessage = capMessageLength({
+    full: fullShareText,
+    short: shortShareText,
+    minimal: minimalShareText,
+  });
 
   return (
     <>
@@ -224,6 +268,27 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                   }}
                 >
                   <MapPin size={12} /> {distanceFromLandmark.distanceKm < 1 ? `${Math.round(distanceFromLandmark.distanceKm * 1000)}m` : `${distanceFromLandmark.distanceKm.toFixed(1)} km`} from {distanceFromLandmark.landmarkName}
+                </span>
+              </div>
+            )}
+            {r.distanceKm !== undefined && (
+              <div style={{ marginTop: 4 }}>
+                <span
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                    padding: '2px 8px',
+                    borderRadius: 999,
+                    background: 'var(--surface-2)',
+                    color: 'var(--text-muted)',
+                    fontSize: 12,
+                    fontWeight: 500,
+                    border: '1px solid var(--border)',
+                  }}
+                  title={r.distanceSource === 'gps' || r.distanceSource === 'pin' ? `Approx. ${r.distanceKm.toFixed(1)} km from you` : `Approx. ${r.distanceKm.toFixed(1)} km from city center`}
+                >
+                  <MapPin size={12} /> {r.distanceKm < 1 ? `${Math.round(r.distanceKm * 1000)}m` : `${r.distanceKm.toFixed(1)} km`} from {r.distanceSource === 'gps' || r.distanceSource === 'pin' ? 'you' : 'city centre'}
                 </span>
               </div>
             )}
@@ -379,17 +444,43 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
         );
       })()}
 
-          {/* Organise WhatsApp Food Run (F6) */}
-          {onFoodRun && (
+          {/* Action Buttons: Food Run & Share Place */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {onFoodRun && (
+              <button
+                type="button"
+                onClick={() => onFoodRun(r)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 8,
+                  padding: '12px 16px',
+                  borderRadius: 10,
+                  background: 'var(--surface-2)',
+                  border: '1px solid var(--border)',
+                  color: 'var(--text)',
+                  fontSize: 13,
+                  fontWeight: 600,
+                  fontFamily: 'Inter, sans-serif',
+                  cursor: 'pointer',
+                  transition: 'all 150ms ease',
+                }}
+              >
+                <Utensils size={16} strokeWidth={1.8} style={{ color: '#10b981' }} />
+                Organise WhatsApp Food Run
+              </button>
+            )}
+
             <button
               type="button"
-              onClick={() => onFoodRun(r)}
+              onClick={() => setIsShareModalOpen(true)}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: 8,
-                padding: '12px 16px',
+                padding: '10px 16px',
                 borderRadius: 10,
                 background: 'var(--surface-2)',
                 border: '1px solid var(--border)',
@@ -402,9 +493,9 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
               }}
             >
               <Share2 size={16} strokeWidth={1.8} style={{ color: '#10b981' }} />
-              Organise WhatsApp Food Run
+              Share Place via WhatsApp
             </button>
-          )}
+          </div>
 
           {/* Explainable AI Attribution Section */}
           <div
@@ -639,6 +730,16 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
           </p>
         </div>
       </div>
+
+      {isShareModalOpen && (
+        <WhatsAppShareModal
+          open={isShareModalOpen}
+          onClose={() => setIsShareModalOpen(false)}
+          title={r.restaurant_name}
+          message={placeShareMessage}
+          planDeepLink={placeDeepLink}
+        />
+      )}
     </>
   );
 }

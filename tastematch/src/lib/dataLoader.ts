@@ -141,8 +141,24 @@ export interface CountryMetadata {
   data_base_url: string;
 }
 
+export interface CityCentroid {
+  latitude: number;
+  longitude: number;
+}
+
+export interface CityBounds {
+  minLatitude: number;
+  maxLatitude: number;
+  minLongitude: number;
+  maxLongitude: number;
+}
+
 export interface CityIndexItem {
   count: number;
+  limitedCoverage?: boolean;
+  centroid?: CityCentroid | null;
+  bounds?: CityBounds | null;
+  radiusKm?: number | null;
   hasPrices: boolean;
   hasRatings: boolean;
   hasBooking: boolean;

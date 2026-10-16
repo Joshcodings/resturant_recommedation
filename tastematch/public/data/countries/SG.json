@@ -1,12 +1,24 @@
 {
   "cities": {
     "Singapore": {
+      "bounds": {
+        "maxLatitude": 1.331128,
+        "maxLongitude": 103.86212,
+        "minLatitude": 1.278373,
+        "minLongitude": 103.807081
+      },
+      "centroid": {
+        "latitude": 1.293916,
+        "longitude": 103.848734
+      },
       "count": 20,
       "hasBooking": false,
       "hasDelivery": false,
       "hasHours": false,
       "hasPrices": true,
       "hasRatings": true,
+      "limitedCoverage": false,
+      "radiusKm": 6.21,
       "shards": [
         "singapore-1.json"
       ]

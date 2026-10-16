@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-10T20:01:20.002Z",
+  "capturedAt": "2026-10-15T07:12:37.365Z",
   "description": "Stage 0 regression fixtures for New Delhi, Orlando, Lucknow, and Lagos",
   "India/New Delhi (price 2, North Indian + Chinese, table booking)": {
     "stage": "exact_all",
@@ -171,18 +171,18 @@
     "notice": "Showing the highest-rated restaurants in this city.",
     "scoringMode": "unrated",
     "isLimitedData": false,
-    "cityRestaurantCount": 164,
+    "cityRestaurantCount": 172,
     "top10_uids": [
       "osm:way/740741853",
       "osm:node/6863933664",
       "osm:node/5243385158",
       "osm:way/742173943",
+      "osm:way/1373912034",
       "osm:node/8920097433",
       "osm:node/5661711450",
       "osm:node/8554836918",
       "osm:node/4270075603",
-      "osm:node/2987186867",
-      "osm:node/13421752852"
+      "osm:node/2987186867"
     ],
     "top10_restaurant_ids": [
       null,
@@ -201,24 +201,24 @@
       "Indigo Bar Restaurant  and Suites",
       "Nok by Alara",
       "Iya Eba",
+      "Syrian Club",
       "Circa NonPareil",
       "Kilimanjaro",
       "Danfo",
       "Chicken Republic Opebi",
-      "Tantalizers",
-      "Purple Jasmine cafe"
+      "Tantalizers"
     ],
     "top10_scores": [
-      0.905,
-      0.823,
-      0.81,
-      0.865,
-      0.765,
-      0.777,
-      0.698,
-      0.613,
-      0.545,
-      0.417
+      0.915,
+      0.813,
+      0.802,
+      0.875,
+      0.804,
+      0.752,
+      0.773,
+      0.685,
+      0.612,
+      0.544
     ]
   }
 }
