@@ -1,3 +1,14 @@
+---
+title: TasteMatch Restaurant Recommender
+emoji: 🍽️
+colorFrom: yellow
+colorTo: green
+sdk: streamlit
+sdk_version: "1.35.0"
+app_file: app.py
+pinned: false
+---
+
 # TasteMatch — Worldwide Restaurant Recommendation & Intelligence Platform
 
 > An explainable, worldwide restaurant recommendation and intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries) and OpenStreetMap (1,263 verified Nigerian food venues across Lagos, Abuja, Benin City, Jos, Enugu, Kano, and beyond).

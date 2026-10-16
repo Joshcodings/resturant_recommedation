@@ -17,10 +17,12 @@ def load():
         with open(os.path.join(base_dir, "manifest.json"), "r", encoding="utf-8") as f:
             manifest = json.load(f)
             for entry in manifest:
-                if "file" in entry:
-                    with open(os.path.join(base_dir, entry["file"]), "r", encoding="utf-8") as ext_f:
-                        extra_data = json.load(ext_f)
-                        data.extend(extra_data)
+                if "file" in entry and entry["file"] != "restaurants.json":
+                    file_path = os.path.join(base_dir, entry["file"])
+                    if os.path.exists(file_path):
+                        with open(file_path, "r", encoding="utf-8") as ext_f:
+                            extra_data = json.load(ext_f)
+                            data.extend(extra_data)
     except Exception as e:
         print(f"No valid manifest found or failed to load: {e}")
         
