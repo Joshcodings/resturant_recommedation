@@ -193,8 +193,27 @@ export default function DiscoverView() {
           distanceKm: undefined,
         });
       }
+    } else if (!placeSlug) {
+      setDrawerRestaurant(null);
     }
   }, [citySlug, cuisineSlug, placeSlug, countryCityIndex, data, getCuisines]);
+
+  // Persist selected country & city in localStorage
+  useEffect(() => {
+    if (country) {
+      try {
+        localStorage.setItem('tm-saved-country', country);
+      } catch {}
+    }
+  }, [country]);
+
+  useEffect(() => {
+    if (city) {
+      try {
+        localStorage.setItem('tm-saved-city', city);
+      } catch {}
+    }
+  }, [city]);
 
   const handleOpenRestaurant = (r: ScoredRestaurant) => {
     setDrawerRestaurant(r);
@@ -219,9 +238,9 @@ export default function DiscoverView() {
     setDrawerRestaurant(null);
     if (locationState.pathname.startsWith('/place/')) {
       if (country === 'Nigeria' && city) {
-        navigate(`/ng/${getCitySlug(city)}`);
+        navigate(`/ng/${getCitySlug(city)}`, { replace: true });
       } else {
-        navigate('/');
+        navigate('/', { replace: true });
       }
     }
   };
@@ -670,6 +689,9 @@ export default function DiscoverView() {
               setOpenNowOnly(false);
               setOpenLateOnly(false);
               setSelectedMealSlot(null);
+              if (c !== 'Nigeria' && locationState.pathname.startsWith('/ng/')) {
+                navigate('/', { replace: true });
+              }
             }}
             selectedCity={city}
             onCityChange={c => {
@@ -686,6 +708,8 @@ export default function DiscoverView() {
               setSelectedMealSlot(null);
               if (country === 'Nigeria' && c) {
                 navigate(`/ng/${getCitySlug(c)}`);
+              } else if (locationState.pathname.startsWith('/ng/')) {
+                navigate('/', { replace: true });
               }
             }}
             selectedPrice={priceRange}
@@ -1371,6 +1395,7 @@ export default function DiscoverView() {
         onClose={() => setIsCapitalsOpen(false)}
         selectedCity={city}
         onSelectCity={c => {
+          setCountry('Nigeria');
           setCity(c);
           setCuisines([]);
           setSelectedPlaceType(null);
@@ -1382,6 +1407,7 @@ export default function DiscoverView() {
           setOpenNowOnly(false);
           setOpenLateOnly(false);
           setSelectedMealSlot(null);
+          navigate(`/ng/${getCitySlug(c)}`);
         }}
       />
     </div>

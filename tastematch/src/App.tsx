@@ -40,6 +40,8 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
   const { isDataSaver, toggleDataSaver, dataSavedKB } = useDataSaver();
   const { t } = useLanguage();
 
+  const location = useLocation();
+
   return (
     <header
       className="top-bar-header"
@@ -88,29 +90,35 @@ function TopBar({ onOpenAbout, onOpenShortlist }: TopBarProps) {
       {/* Nav tabs: Discover, Group, Insights, About */}
       <nav className="desktop-nav" aria-label="Main navigation">
         {[
-          { to: '/', label: t('nav_discover') },
+          { to: '/', label: t('nav_discover'), isDiscover: true },
           { to: '/group', label: t('nav_group') },
           { to: '/insights', label: t('nav_insights') },
-        ].map(({ to, label }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={to === '/'}
-            style={({ isActive }) => ({
-              padding: '6px 14px',
-              borderRadius: 8,
-              fontSize: 14,
-              fontWeight: 500,
-              fontFamily: 'Inter, sans-serif',
-              color: isActive ? 'var(--accent-ink)' : 'var(--text-muted)',
-              background: isActive ? 'var(--accent)' : 'transparent',
-              textDecoration: 'none',
-              transition: 'color 150ms, background 150ms',
-            })}
-          >
-            {label}
-          </NavLink>
-        ))}
+        ].map(({ to, label, isDiscover }) => {
+          const isActuallyActive = isDiscover
+            ? location.pathname === '/' || location.pathname.startsWith('/ng') || location.pathname.startsWith('/place')
+            : location.pathname.startsWith(to);
+
+          return (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === '/'}
+              style={{
+                padding: '6px 14px',
+                borderRadius: 8,
+                fontSize: 14,
+                fontWeight: 500,
+                fontFamily: 'Inter, sans-serif',
+                color: isActuallyActive ? 'var(--accent-ink)' : 'var(--text-muted)',
+                background: isActuallyActive ? 'var(--accent)' : 'transparent',
+                textDecoration: 'none',
+                transition: 'color 150ms, background 150ms',
+              }}
+            >
+              {label}
+            </NavLink>
+          );
+        })}
 
         {/* About tab triggers honesty modal */}
         <button
@@ -417,7 +425,13 @@ function AppShell() {
 
       {/* Mobile Bottom Navigation Bar (below 768px) */}
       <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
-        <NavLink to="/" end className={({ isActive }) => (isActive ? 'active' : '')}>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive || location.pathname.startsWith('/ng') || location.pathname.startsWith('/place') ? 'active' : ''
+          }
+        >
           <Search size={18} strokeWidth={2} />
           <span>{t('nav_discover')}</span>
         </NavLink>
