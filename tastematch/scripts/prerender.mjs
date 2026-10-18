@@ -13,7 +13,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.resolve(rootDir, 'dist');
-const dataFilePath = path.resolve(rootDir, '../data/processed/restaurants_ng_full.json');
+let dataFilePath = path.resolve(rootDir, '../data/processed/restaurants_ng_full.json');
+if (!fs.existsSync(dataFilePath)) {
+  dataFilePath = path.resolve(rootDir, 'public/data/restaurants_ng.json');
+}
 
 const BASE_URL = 'https://tastematch.pages.dev';
 
