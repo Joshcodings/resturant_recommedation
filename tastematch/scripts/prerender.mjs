@@ -110,6 +110,7 @@ function generateOgSvg({ title, subtitle, tag, details = [] }) {
 }
 
 async function renderPngFromSvg(svg) {
+  if (!Resvg) return null;
   try {
     const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: 1200 } });
     return resvg.render().asPng();
