@@ -1,7 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Resvg } from '@resvg/resvg-js';
+let Resvg = null;
+try {
+  const resvgModule = await import('@resvg/resvg-js');
+  Resvg = resvgModule.Resvg;
+} catch (e) {
+  console.warn('Note: @resvg/resvg-js not available, skipping dynamic rasterization:', e.message);
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
