@@ -1,7 +1,6 @@
 [build]
-  base = "tastematch"
-  publish = "dist"
-  command = "npm run build"
+  command = "cd tastematch && npm install && npm run build"
+  publish = "tastematch/dist"
 
 [build.environment]
   NODE_VERSION = "20"

@@ -1,0 +1,9 @@
+{
+  "name": "tastematch-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix tastematch run build",
+    "test": "npm --prefix tastematch test"
+  }
+}
