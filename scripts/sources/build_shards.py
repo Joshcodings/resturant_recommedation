@@ -98,10 +98,22 @@ CITY_ALIASES = {
     "Makurdi Area": "Makurdi",
     # Osogbo variants
     "Oshogbo": "Osogbo",
-    # Other case normalizations
+    # Other case normalizations and suburban districts
     "Birnin kebbi": "Birnin Kebbi",
     "agbor": "Agbor",
     "Yenagoa, Bayelsa state": "Yenagoa",
+    "Gwarinpa": "Abuja",
+    "Gwagwalada": "Abuja",
+    "Woji": "Port Harcourt",
+    "Rumuosi junctin": "Port Harcourt",
+    "Dadi Riba": "Kano",
+    "Fagge D2": "Kano",
+    "Mariri": "Kano",
+    "Kureken Sani": "Kano",
+    "Unguwar Shanu": "Kaduna",
+    "Joe": "Jos",
+    "Ikot Akpan-Ata": "Uyo",
+    "Nsukka": "Enugu",
 }
 
 
@@ -143,9 +155,9 @@ COUNTRY_CODES = {
 
 LICENCES = {
     "NG": {
-        "sources": ["OpenStreetMap"],
-        "licence": "ODbL 1.0",
-        "attribution": "© OpenStreetMap contributors, licensed under the Open Data Commons Open Database License (ODbL).",
+        "sources": ["OpenStreetMap", "Overture Maps"],
+        "licence": "ODbL 1.0 (OSM) / CDLA Permissive 2.0 (Overture)",
+        "attribution": "© OpenStreetMap contributors (ODbL) & Data © Overture Maps Foundation (CDLA Permissive 2.0). https://overturemaps.org",
     },
     "DEFAULT": {
         "sources": ["Zomato Kaggle Archive"],
@@ -371,8 +383,8 @@ def main() -> None:
             "file": "restaurants_ng.json",
             "recordCount": len(ng_places),
             "retrieved_at": build_timestamp,
-            "source": "OpenStreetMap",
-            "licence": "ODbL 1.0",
+            "source": "OpenStreetMap & Overture Maps",
+            "licence": "ODbL 1.0 / CDLA Permissive 2.0",
         },
         {
             "file": "restaurants.json",

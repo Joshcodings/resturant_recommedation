@@ -1,0 +1,659 @@
+[
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/5586215622",
+    "osm_name": null,
+    "overture_id": "1527cdbc-61d2-4f68-8215-c660ae0eb750",
+    "overture_name": "Kilimanjaro Mall GRA Junction",
+    "distance_meters": 18.17,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/3604578822",
+    "osm_name": null,
+    "overture_id": "ca628e81-3323-49af-ba74-23ac9bad4c26",
+    "overture_name": "Kilimanjaro Restaurant",
+    "distance_meters": 5.32,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/5509059324",
+    "osm_name": null,
+    "overture_id": "0ff8a364-1b3b-4418-bafd-e1090e4dfea5",
+    "overture_name": "Pepperoni Opolo",
+    "distance_meters": 4.87,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/541046677",
+    "osm_name": null,
+    "overture_id": "57a19ee0-ef06-4d82-befe-5a43916080bb",
+    "overture_name": "Genesis Restaurant",
+    "distance_meters": 20.63,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/555998774",
+    "osm_name": null,
+    "overture_id": "100d587e-4790-4e82-8e57-11055f523330",
+    "overture_name": "Kilimanjaro Fast Food",
+    "distance_meters": 15.1,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/7956172590",
+    "osm_name": null,
+    "overture_id": "211304f4-dd94-4982-8019-72cec0a2401b",
+    "overture_name": "Genesis Restaurant",
+    "distance_meters": 4.47,
+    "fields_enriched": [
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/5600372723",
+    "osm_name": null,
+    "overture_id": "7ebb85d6-ef5e-47a2-a13a-8cd1a0ec7d2e",
+    "overture_name": "Genesis Restaurant, Woji",
+    "distance_meters": 35.48,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/7956218490",
+    "osm_name": null,
+    "overture_id": "b8ff9167-eaf9-46d2-98d1-b20ae5016dd9",
+    "overture_name": "Native Delicacies",
+    "distance_meters": 35.68,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8754456280",
+    "osm_name": null,
+    "overture_id": "11223a1f-b561-4888-88d2-7e2088a18337",
+    "overture_name": "Domino's Pizza Enugu",
+    "distance_meters": 10.47,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8753783065",
+    "osm_name": null,
+    "overture_id": "5cb929cb-c4f6-40a3-87e2-a83234be0d6e",
+    "overture_name": "Dolphin Restaurant",
+    "distance_meters": 18.24,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8752957843",
+    "osm_name": null,
+    "overture_id": "7a14e098-c0e2-4a98-ae07-c78cdf008dd4",
+    "overture_name": "Open Sharaton",
+    "distance_meters": 27.89,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8753846143",
+    "osm_name": null,
+    "overture_id": "60dc41d1-9465-49bc-a95b-c2401cd71839",
+    "overture_name": "Emily Restaurant",
+    "distance_meters": 6.78,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1184098761",
+    "osm_name": null,
+    "overture_id": "faa07cfd-9623-4ad4-8800-63b349331ed7",
+    "overture_name": "Crunchies Fried Chicken",
+    "distance_meters": 17.83,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1274075736",
+    "osm_name": null,
+    "overture_id": "e4a2b625-b88b-492c-a5ef-4556be9cb62f",
+    "overture_name": "Biobak Kitchen",
+    "distance_meters": 17.84,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/9648481173",
+    "osm_name": null,
+    "overture_id": "0d6ddd3e-de46-4a59-91e2-61b7b41df33b",
+    "overture_name": "Renao Abuja",
+    "distance_meters": 23.0,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/11922113363",
+    "osm_name": null,
+    "overture_id": "fd5c6d6c-2b92-4ada-ac03-a53405eb5563",
+    "overture_name": "Pizza Hut",
+    "distance_meters": 7.36,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1245212659",
+    "osm_name": null,
+    "overture_id": "c2569793-12d3-4a58-a1db-eb6ca80bd4fc",
+    "overture_name": "Disney Chicken",
+    "distance_meters": 12.95,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/6181124287",
+    "osm_name": null,
+    "overture_id": "46ee8221-6457-4af7-b282-41d906064a1e",
+    "overture_name": "Tawakalitu Restaurant",
+    "distance_meters": 8.15,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/424704775",
+    "osm_name": null,
+    "overture_id": "84ec8ce2-0982-41c4-bf87-ce5e08976a8f",
+    "overture_name": "BluCabana Restaurant and Cafe",
+    "distance_meters": 22.94,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/891293840",
+    "osm_name": null,
+    "overture_id": "db59cf3d-e50b-4751-a6ef-b7ec48881808",
+    "overture_name": "Drumstix",
+    "distance_meters": 20.75,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/300348530",
+    "osm_name": null,
+    "overture_id": "49ea7645-97ad-487a-b45c-c6253640f5cf",
+    "overture_name": "Salamander Cafe",
+    "distance_meters": 0.05,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/11049395905",
+    "osm_name": null,
+    "overture_id": "b51e8201-99d7-4aea-aa4b-2d86552c1f05",
+    "overture_name": "Spice Platter",
+    "distance_meters": 0.86,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/9968158689",
+    "osm_name": null,
+    "overture_id": "18f0adf5-8239-43e3-9214-c2e5de5585f1",
+    "overture_name": "The Cube Cafe",
+    "distance_meters": 11.3,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1411437160",
+    "osm_name": null,
+    "overture_id": "aaf96b57-2a22-4ab9-9bf1-fe6930985631",
+    "overture_name": "Chester Fries Fast Food",
+    "distance_meters": 13.91,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8367587117",
+    "osm_name": null,
+    "overture_id": "5fe4de77-375a-420b-84ed-8ff41f65091d",
+    "overture_name": "Nkoyo",
+    "distance_meters": 49.51,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8367237917",
+    "osm_name": null,
+    "overture_id": "f649c4f3-15d9-47b6-bb1f-69af8fb4eef1",
+    "overture_name": "My Coffee",
+    "distance_meters": 43.24,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/9310271563",
+    "osm_name": null,
+    "overture_id": "5985c59d-0f7d-4efc-b31b-e498fb564a51",
+    "overture_name": "Silk Road Restaurant Abuja",
+    "distance_meters": 11.07,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1122738882",
+    "osm_name": null,
+    "overture_id": "bd801be5-8851-480e-ba48-70079f200ec1",
+    "overture_name": "Shagalinku Restaurant Abuja",
+    "distance_meters": 17.6,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1086236989",
+    "osm_name": null,
+    "overture_id": "13c55af7-78b2-4c47-8e66-56ff2169f541",
+    "overture_name": "New Yorker Wuse",
+    "distance_meters": 8.32,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/6864045530",
+    "osm_name": null,
+    "overture_id": "31e9f3de-95e7-4095-92a3-e43aa89ae082",
+    "overture_name": "Indigo Restaurant and Lounge",
+    "distance_meters": 22.52,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/299203358",
+    "osm_name": null,
+    "overture_id": "0062f2b3-a462-4dcf-9333-da554a6ccf1e",
+    "overture_name": "The Pasha",
+    "distance_meters": 14.63,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/5448332307",
+    "osm_name": null,
+    "overture_id": "f636893b-7e82-445e-bc08-476a9e7bc4bc",
+    "overture_name": "Oriental Restaurant",
+    "distance_meters": 39.63,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/5448332309",
+    "osm_name": null,
+    "overture_id": "4b4b17b2-450e-4b1f-b88f-5c92a29dc409",
+    "overture_name": "Capital Bar",
+    "distance_meters": 16.46,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/778635334",
+    "osm_name": null,
+    "overture_id": "2b0e93f1-1d75-4c52-8af7-11a44c51fb01",
+    "overture_name": "Secret Garden",
+    "distance_meters": 5.73,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/999889096",
+    "osm_name": null,
+    "overture_id": "f21bc2db-c9b9-4e3e-85a4-312ab401d581",
+    "overture_name": "The Junkyard Grills",
+    "distance_meters": 22.12,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/9968183938",
+    "osm_name": null,
+    "overture_id": "f3ec47c0-aaa3-4e05-bab9-d173707f4aa7",
+    "overture_name": "Galaxy Pizza",
+    "distance_meters": 28.53,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/181653526",
+    "osm_name": null,
+    "overture_id": "1c7b7dbc-c966-47b6-8d0e-c27b3ce59c85",
+    "overture_name": "Jevinik Restaurant",
+    "distance_meters": 22.54,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/219651175",
+    "osm_name": null,
+    "overture_id": "37bcc41f-f366-4cbd-aa21-1aae1a1abc53",
+    "overture_name": "City View Restaurant",
+    "distance_meters": 34.31,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/776646793",
+    "osm_name": null,
+    "overture_id": "7238153e-e025-4dd8-846e-170a73f6c787",
+    "overture_name": "Mandi Place and Restaurant",
+    "distance_meters": 18.72,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/8323579141",
+    "osm_name": null,
+    "overture_id": "17d4168f-83fd-47b5-8d13-680c5e1e2ea8",
+    "overture_name": "Johnny Rockets",
+    "distance_meters": 18.69,
+    "fields_enriched": [
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/999889102",
+    "osm_name": null,
+    "overture_id": "95743449-3ceb-41e4-b233-73e58d592d2d",
+    "overture_name": "Keje",
+    "distance_meters": 12.26,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/743690568",
+    "osm_name": null,
+    "overture_id": "5af67cf5-bcd9-4082-9f09-a9bb1e6fe432",
+    "overture_name": "L and N Kitchen",
+    "distance_meters": 15.49,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/176843653",
+    "osm_name": null,
+    "overture_id": "76bc6b8c-4025-44ba-a6c0-ba5921aecef9",
+    "overture_name": "Wakkis Food",
+    "distance_meters": 7.6,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/6226970887",
+    "osm_name": null,
+    "overture_id": "08b22796-9253-44ea-aa18-674a643c6908",
+    "overture_name": "Famous Potatoes",
+    "distance_meters": 29.45,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/12588281873",
+    "osm_name": null,
+    "overture_id": "6952ac2e-3903-4f74-9e89-197559be1884",
+    "overture_name": "Chopsticks",
+    "distance_meters": 33.48,
+    "fields_enriched": [
+      "phone",
+      "website"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/1085885753",
+    "osm_name": null,
+    "overture_id": "e4ba07cd-3994-497a-9ba8-d02497a816dc",
+    "overture_name": "Cantina Restaurant",
+    "distance_meters": 17.7,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/6121086018",
+    "osm_name": null,
+    "overture_id": "00f82a0c-a01b-43bc-baa9-9dbf7d7a97a1",
+    "overture_name": "Karibajo Eatries",
+    "distance_meters": 16.22,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/2308438980",
+    "osm_name": null,
+    "overture_id": "18eb40b5-e248-40fe-92ff-706cc6405fd5",
+    "overture_name": "Mr. Bigg's",
+    "distance_meters": 39.6,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/9772356709",
+    "osm_name": null,
+    "overture_id": "98eccfd1-ad6c-4579-97b8-20651094dca9",
+    "overture_name": "Barcardi, Jos, Plateau State.",
+    "distance_meters": 34.8,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/488835890",
+    "osm_name": null,
+    "overture_id": "557517cb-0760-4490-8727-6d5002b9d7b2",
+    "overture_name": "Shagalinku Restaurant",
+    "distance_meters": 14.31,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/11580587586",
+    "osm_name": null,
+    "overture_id": "36c681aa-979f-4a6d-a28d-d5e2baa81b49",
+    "overture_name": "The Tea Place By JSEN Delights",
+    "distance_meters": 12.96,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/6145372585",
+    "osm_name": null,
+    "overture_id": "162a1bd9-dafe-4aa4-82e7-acb80ef6ae8d",
+    "overture_name": "Apple White",
+    "distance_meters": 9.01,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/2886219694",
+    "osm_name": null,
+    "overture_id": "71cef060-17d5-41b9-bb9f-198b9ab2075a",
+    "overture_name": "Cilantro Kano",
+    "distance_meters": 42.94,
+    "fields_enriched": [],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/500432363",
+    "osm_name": null,
+    "overture_id": "c6f58e7f-1a04-42b3-b442-910748e551c2",
+    "overture_name": "Yahuza Suya Spot",
+    "distance_meters": 38.58,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:way/292290861",
+    "osm_name": null,
+    "overture_id": "bd26d9d6-586e-4f0c-a71a-a02291922e27",
+    "overture_name": "Pounded Yam And Co",
+    "distance_meters": 32.74,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  },
+  {
+    "type": "merge_enrichment",
+    "osm_uid": "osm:node/7253556885",
+    "osm_name": null,
+    "overture_id": "45d2d15d-eddc-448d-a2f0-349b6e71d87c",
+    "overture_name": "White Light Bakery",
+    "distance_meters": 14.08,
+    "fields_enriched": [
+      "phone"
+    ],
+    "timestamp": "2026-10-17T21:21:42Z"
+  }
+]

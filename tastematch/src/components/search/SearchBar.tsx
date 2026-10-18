@@ -3,6 +3,7 @@ import { Search, ChevronDown, Check, Navigation, Globe, ExternalLink, MapPin, Co
 import { useRestaurants } from '@/context/RestaurantContext';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useLocationContext } from '@/context/LocationContext';
+import { trackEvent } from '@/lib/analytics';
 import { computeLargestCity, getCityCount } from '@/lib/dataLoader';
 import { fetchLandmarks } from '@/lib/landmarks';
 import type { Landmark } from '@/types/restaurant';
@@ -253,6 +254,7 @@ export default function SearchBar({
   };
 
   const handleNearMe = async () => {
+    trackEvent({ type: 'near_me_click' });
     const code = selectedCountry === 'Nigeria' ? 'NG' : (selectedCountry === 'India' ? 'IN' : 'NG');
     await requestGpsLocation(code, (nearestCity) => {
       onCityChange(nearestCity);
@@ -1000,7 +1002,14 @@ export default function SearchBar({
         }}
       >
         <button
-          onClick={onFind}
+          onClick={() => {
+            trackEvent({
+              type: 'search',
+              city: selectedCity,
+              cuisine: selectedCuisines[0],
+            });
+            onFind();
+          }}
           className="search-bar-find-btn"
           style={{
             height: 44,

@@ -4,7 +4,10 @@ import json
 import os
 import numpy as np
 
-st.set_page_config(page_title="Restaurant Recommender", page_icon="🍽️")
+st.set_page_config(page_title="TasteMatch — Data Science Demo", page_icon="🔬")
+
+st.caption("🔬 **Data Science Exploration Demo** — Exploratory Streamlit baseline model inspection. For the full production web app with offline maps, mobile WhatsApp ordering, and interactive search, visit [**TasteMatch Production**](https://tastematch.pages.dev).")
+st.title("TasteMatch — Recommendation Science Demo")
 
 @st.cache_data
 def load():

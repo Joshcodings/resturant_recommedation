@@ -31,6 +31,8 @@ export interface NewCommunityPlaceInput {
   longitude?: number | null;
   openingHours?: string;
   phone?: string;
+  contributorName?: string;
+  optInCredit?: boolean;
 }
 
 interface CommunityContextValue {
@@ -106,6 +108,9 @@ function mapInputToRestaurant(input: NewCommunityPlaceInput): RestaurantParsed {
     amenities: {
       air_conditioning: input.airConditioning ? 'yes' : undefined,
     },
+    contributor_credit: input.optInCredit
+      ? (input.contributorName?.trim() ? `Added by ${input.contributorName.trim()}` : 'Added by Anonymous')
+      : null,
   };
 
   return place;

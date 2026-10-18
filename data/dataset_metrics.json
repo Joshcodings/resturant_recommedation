@@ -1,19 +1,21 @@
 {
   "coverage": {
-    "cuisineCount": 271,
-    "cuisinePct": 21.5,
+    "cuisineCount": 2915,
+    "cuisinePct": 74.6,
     "hoursCount": 171,
-    "hoursPct": 13.5,
-    "phoneCount": 110,
-    "phonePct": 8.7
+    "hoursPct": 4.4,
+    "localityCount": 3180,
+    "localityPct": 81.4,
+    "phoneCount": 2251,
+    "phonePct": 57.6
   },
-  "fullCitiesCount": 25,
-  "limitedCoverageCitiesCount": 33,
-  "nigeriaCitiesCount": 58,
-  "nigeriaPlaces": 1263,
-  "shardCount": 199,
+  "fullCitiesCount": 31,
+  "limitedCoverageCitiesCount": 15,
+  "nigeriaCitiesCount": 46,
+  "nigeriaPlaces": 3907,
+  "shardCount": 187,
   "status": "PASS",
-  "totalPlaces": 8666,
-  "validatedAt": "2026-10-15T04:41:55Z",
+  "totalPlaces": 11310,
+  "validatedAt": "2026-10-18T12:11:28Z",
   "zomatoPlaces": 7403
 }

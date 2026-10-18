@@ -7,7 +7,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Australia",
     "places": 24,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -21,7 +21,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Brazil",
     "places": 55,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -35,7 +35,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Canada",
     "places": 4,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -49,7 +49,7 @@
     "licence": "CC0 / Public Domain",
     "name": "India",
     "places": 6513,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -63,7 +63,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Indonesia",
     "places": 21,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -77,23 +77,24 @@
     "licence": "CC0 / Public Domain",
     "name": "New Zealand",
     "places": 40,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
     "status": "available"
   },
   {
-    "attribution": "© OpenStreetMap contributors, licensed under the Open Data Commons Open Database License (ODbL).",
-    "cities": 58,
+    "attribution": "© OpenStreetMap contributors (ODbL) & Data © Overture Maps Foundation (CDLA Permissive 2.0). https://overturemaps.org",
+    "cities": 46,
     "code": "NG",
     "data_base_url": "data/shards/NG/",
-    "licence": "ODbL 1.0",
+    "licence": "ODbL 1.0 (OSM) / CDLA Permissive 2.0 (Overture)",
     "name": "Nigeria",
-    "places": 1263,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "places": 3907,
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
-      "OpenStreetMap"
+      "OpenStreetMap",
+      "Overture Maps"
     ],
     "status": "available"
   },
@@ -105,7 +106,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Philippines",
     "places": 22,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -119,7 +120,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Qatar",
     "places": 20,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -133,7 +134,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Singapore",
     "places": 20,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -147,7 +148,7 @@
     "licence": "CC0 / Public Domain",
     "name": "South Africa",
     "places": 60,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -161,7 +162,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Sri Lanka",
     "places": 20,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -175,7 +176,7 @@
     "licence": "CC0 / Public Domain",
     "name": "Turkey",
     "places": 34,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -189,7 +190,7 @@
     "licence": "CC0 / Public Domain",
     "name": "UAE",
     "places": 60,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -203,7 +204,7 @@
     "licence": "CC0 / Public Domain",
     "name": "UK",
     "places": 79,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],
@@ -217,7 +218,7 @@
     "licence": "CC0 / Public Domain",
     "name": "USA",
     "places": 431,
-    "retrieved_at": "2026-10-14T22:51:59Z",
+    "retrieved_at": "2026-10-17T21:22:09Z",
     "sources": [
       "Zomato Kaggle Archive"
     ],

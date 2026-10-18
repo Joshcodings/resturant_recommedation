@@ -89,6 +89,10 @@
     "cuisines": "Unspecified",
     "cuisines_raw": null,
     "data_source": "OpenStreetMap",
+    "data_sources": [
+      "OpenStreetMap",
+      "Overture Maps"
+    ],
     "diet": null,
     "has_online_delivery": null,
     "has_table_booking": null,
@@ -99,8 +103,13 @@
     "opening_hours": null,
     "osm_timestamp": "2023-06-22T00:53:29Z",
     "osm_version": 1,
+    "overture_meta": {
+      "confidence": 0.664,
+      "id": "faa07cfd-9623-4ad4-8800-63b349331ed7",
+      "merged_at": "2026-10-17T21:21:42Z"
+    },
     "payment_methods": null,
-    "phone": null,
+    "phone": "+2349062439146",
     "place_type": "restaurant",
     "price_range": null,
     "restaurant_name": "Crunchies Restaurant",
@@ -111,5 +120,293 @@
     "votes": null,
     "website": null,
     "weighted_rating": null
+  },
+  {
+    "address": "21 Alo St",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.330538,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.097939,
+    "name": "Tropicana Restaurant Grill and Bar",
+    "opening_hours": null,
+    "overture_confidence": 0.595,
+    "phone": "+2349043159852",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_1fb66fe5",
+    "restaurant_name": "Tropicana Restaurant Grill and Bar",
+    "uid": "overture:1fb66fe5-dcac-4d06-b44a-30369708a362",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "Abatete St",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.31977,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.114756,
+    "name": "Good Tessy Kitchen (De Snail Republic)",
+    "opening_hours": null,
+    "overture_confidence": 0.506,
+    "phone": "+2348033221445",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_3b39e7d5",
+    "restaurant_name": "Good Tessy Kitchen (De Snail Republic)",
+    "uid": "overture:3b39e7d5-7380-4ad0-97a3-90aa869e90ad",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "58 Hilltop Road, beside salvation Ministry Waterworks Abakaliki Ebonyi state. ",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.340895,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.04832,
+    "name": "uto_ndu_tastitreats",
+    "opening_hours": null,
+    "overture_confidence": 0.583,
+    "phone": "+2348058007976",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_42e61d1d",
+    "restaurant_name": "uto_ndu_tastitreats",
+    "uid": "overture:42e61d1d-ce3e-429a-973a-e95acb1e757a",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "No 1 Town planning Road off waterworks Abakaliki, Ebonyi state",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Lounge"
+    ],
+    "cuisines": "Lounge",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.322531,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.116069,
+    "name": "Xclusive Palace Lounge",
+    "opening_hours": null,
+    "overture_confidence": 0.708,
+    "phone": null,
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_7bedfa6a",
+    "restaurant_name": "Xclusive Palace Lounge",
+    "uid": "overture:7bedfa6a-40a0-468c-bedc-762bbab90fca",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "39 Afikpo road Abakaliki beside first Bank Nig PLC",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Casual Eatery"
+    ],
+    "cuisines": "Casual Eatery",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.314448,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.106691,
+    "name": "Winnybakes",
+    "opening_hours": null,
+    "overture_confidence": 0.517,
+    "phone": "+2348035499414",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_9e5082ac",
+    "restaurant_name": "Winnybakes",
+    "uid": "overture:9e5082ac-76ac-4ca0-b7fa-8b341e64cc28",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "Alo St",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Bar"
+    ],
+    "cuisines": "Bar",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.330767,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.098338,
+    "name": "Kentoby Bar",
+    "opening_hours": null,
+    "overture_confidence": 0.542,
+    "phone": null,
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_c25d5178",
+    "restaurant_name": "Kentoby Bar",
+    "uid": "overture:c25d5178-5393-44fa-b984-571579e685e2",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "Abakaliki, Abakaliki",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.314922,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.106994,
+    "name": "Citi Exotic Restaurant",
+    "opening_hours": null,
+    "overture_confidence": 0.548,
+    "phone": null,
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_cef0e3d7",
+    "restaurant_name": "Citi Exotic Restaurant",
+    "uid": "overture:cef0e3d7-752c-4c8a-9dc8-72462f5406bd",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "22 Hilltop St",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.328472,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.121075,
+    "name": "Hill top",
+    "opening_hours": null,
+    "overture_confidence": 0.544,
+    "phone": "+2349122445375",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_d69599c9",
+    "restaurant_name": "Hill top",
+    "uid": "overture:d69599c9-215a-4736-9d41-fef23f00c82d",
+    "votes": null,
+    "website": null
+  },
+  {
+    "address": "No 13 Udensi-Ugorji Lane, Off Agbadu-ozo Street",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Abakaliki",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Cafe"
+    ],
+    "cuisines": "Cafe",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 6.310777,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Abakaliki",
+    "longitude": 8.098651,
+    "name": "Gr8printz Internet Cafe",
+    "opening_hours": null,
+    "overture_confidence": 0.762,
+    "phone": "+2349025180163",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_e2f5e3f1",
+    "restaurant_name": "Gr8printz Internet Cafe",
+    "uid": "overture:e2f5e3f1-9855-4896-adac-51611dc5fd3b",
+    "votes": null,
+    "website": "http://gr8printz.blogspot.com.ng/"
   }
 ]

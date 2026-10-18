@@ -1,0 +1,103 @@
+name: Restaurant Owner Claim
+description: Claim and verify your restaurant listing on TasteMatch (Free, verified in under 3 minutes)
+title: "[Owner Claim]: "
+labels: ["owner-claim"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## TasteMatch Restaurant Owner Verification
+        Claim your restaurant for a **100% free** listing with a direct **Order on WhatsApp** button, printable QR poster, and verified hours.
+        Data provided here is reviewed manually before being published to the TasteMatch community layer.
+  - type: input
+    id: restaurant_name
+    attributes:
+      label: Restaurant Name
+      description: Exact name of your restaurant or eatery.
+      placeholder: "e.g. Mama Cass Restaurant"
+    validations:
+      required: true
+  - type: input
+    id: place_uid
+    attributes:
+      label: Place UID
+      description: TasteMatch UID or OpenStreetMap ID (e.g. osm:node/12345678). If not yet listed, write "not_listed".
+      placeholder: "osm:node/..."
+    validations:
+      required: true
+  - type: input
+    id: city_locality
+    attributes:
+      label: City & Locality
+      description: Location of your restaurant in Nigeria.
+      placeholder: "e.g. Ikeja, Lagos"
+    validations:
+      required: true
+  - type: input
+    id: owner_name
+    attributes:
+      label: Owner / Manager Full Name
+      description: Your name for verification purposes.
+      placeholder: "e.g. Funke Adeleke"
+    validations:
+      required: true
+  - type: input
+    id: whatsapp_phone
+    attributes:
+      label: Owner WhatsApp Phone Number (234 Format)
+      description: Official WhatsApp business or order number. Must be 234 format (e.g. 2348012345678 or 08012345678).
+      placeholder: "2348012345678"
+    validations:
+      required: true
+  - type: input
+    id: opening_hours
+    attributes:
+      label: Opening Hours
+      description: When is your kitchen open?
+      placeholder: "e.g. Mo-Sa 09:00-21:00; Su 12:00-20:00"
+    validations:
+      required: false
+  - type: input
+    id: cuisines
+    attributes:
+      label: Cuisines / Specialties
+      description: Comma-separated food specialties.
+      placeholder: "e.g. Nigerian, Jollof Rice, Suya, Small Chops"
+    validations:
+      required: false
+  - type: input
+    id: menu_url
+    attributes:
+      label: Menu Link or Photo URL
+      description: Link to your online menu, Instagram highlight, Google Drive menu photo, or website.
+      placeholder: "https://instagram.com/..."
+    validations:
+      required: false
+  - type: dropdown
+    id: delivery
+    attributes:
+      label: Do you offer delivery?
+      options:
+        - "Yes (in-house or rider dispatch)"
+        - "No (dine-in / pickup only)"
+    validations:
+      required: true
+  - type: input
+    id: proof_url
+    attributes:
+      label: Proof of Ownership / Business Link
+      description: Link to your official Instagram page, Facebook page, Google Business Profile, or public photo of storefront sign.
+      placeholder: "https://instagram.com/yourrestaurant"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Declarations
+      options:
+        - label: I confirm I am the authorized owner or manager of this restaurant.
+          required: true
+        - label: I consent to publishing this business information (name, hours, WhatsApp number) on TasteMatch for diner discovery and orders.
+          required: true
+        - label: I understand that OpenStreetMap data remains preserved and community owner data is kept in a distinct verified layer.
+          required: true

@@ -1,6 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useRestaurants } from '@/context/RestaurantContext';
 import { useLocationContext } from '@/context/LocationContext';
+import { slugify, getCitySlug, getCuisineSlug, getPlaceSlug, parsePlaceSlug } from '@/lib/routes';
+import { trackEvent } from '@/lib/analytics';
 import { recommend, liveScore, DEFAULT_WEIGHTS, type PriorityWeights } from '@/lib/recommendation';
 import type { RecommendationQuery, ScoredRestaurant } from '@/types/recommendation';
 import type { MoodPreset } from '@/config/presets';
@@ -17,7 +20,7 @@ import MealClockFilter from '@/components/search/MealClockFilter';
 import LandmarkFilter from '@/components/search/LandmarkFilter';
 import { isOpenNow, isOpenLate, isOpenAtMealSlot, type MealSlot } from '@/lib/openingHours';
 import { fetchLandmarks, getLandmarksForCity, filterAndSortByLandmark } from '@/lib/landmarks';
-import type { Landmark } from '@/types/restaurant';
+import type { Landmark, Restaurant } from '@/types/restaurant';
 import { matchDishOrKeyword } from '@/lib/dishSearch';
 import RestaurantCard from '@/components/card/RestaurantCard';
 import RestaurantMap from '@/components/map/RestaurantMap';
@@ -28,6 +31,8 @@ import StateCapitalSwitcher from '@/components/search/StateCapitalSwitcher';
 import { NIGERIAN_STATE_CAPITALS } from '@/config/nigerianCapitals';
 import { CompareTray, CompareModal } from '@/components/compare/CompareComponents';
 import AreaFoodFingerprint from '@/components/search/AreaFoodFingerprint';
+import { LaunchAreaCard } from '@/components/LaunchAreaCard';
+import { GapsView } from '@/components/GapsView';
 import {
   AlertTriangle,
   Info,
@@ -46,9 +51,12 @@ import {
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function DiscoverView() {
-  const { data, loading, countryCityIndex, getCityCapabilities } = useRestaurants();
+  const { data, loading, countryCityIndex, getCityCapabilities, getCuisines } = useRestaurants();
   const { location } = useLocationContext();
   const { t } = useLanguage();
+  const { citySlug, cuisineSlug, placeSlug } = useParams<{ citySlug?: string; cuisineSlug?: string; placeSlug?: string }>();
+  const navigate = useNavigate();
+  const locationState = useLocation();
 
   // Feature 9 & 10 Modal states
   const [isAddPlaceOpen, setIsAddPlaceOpen] = useState(false);
@@ -111,6 +119,20 @@ export default function DiscoverView() {
   const [foodRunRestaurant, setFoodRunRestaurant] = useState<ScoredRestaurant | null>(null);
   const [isFoodRunOpen, setIsFoodRunOpen] = useState(false);
 
+  // Phase 4: Track dish_search when dish query changes (debounced, no PII/coords)
+  useEffect(() => {
+    const trimmed = dishQuery.trim();
+    if (!trimmed) return;
+    const timer = setTimeout(() => {
+      trackEvent({
+        type: 'dish_search',
+        queryLength: trimmed.length,
+        cuisineTag: trimmed.slice(0, 30),
+      });
+    }, 600);
+    return () => clearTimeout(timer);
+  }, [dishQuery]);
+
   // Ensure default country & city match when index loads (first visit dynamically chooses largest city)
   useEffect(() => {
     if (Object.keys(countryCityIndex).length > 0) {
@@ -136,6 +158,73 @@ export default function DiscoverView() {
       }
     }
   }, [countryCityIndex, data, country, city]);
+
+  // Sync URL route params: /ng/:citySlug, /ng/:citySlug/:cuisineSlug, /place/:placeSlug
+  useEffect(() => {
+    if (citySlug && countryCityIndex['Nigeria']) {
+      const matchedCity = countryCityIndex['Nigeria'].find(c => slugify(c) === citySlug.toLowerCase());
+      if (matchedCity) {
+        setCountry('Nigeria');
+        setCity(matchedCity);
+        if (cuisineSlug) {
+          const available = getCuisines(matchedCity);
+          const matchedCuisine = available.find(cu => slugify(cu) === cuisineSlug.toLowerCase());
+          if (matchedCuisine) {
+            setCuisines([matchedCuisine]);
+          }
+        }
+      }
+    } else if (placeSlug && data.length > 0) {
+      const parsedUid = parsePlaceSlug(placeSlug);
+      const place = data.find(r =>
+        (parsedUid && r.uid === parsedUid) ||
+        getPlaceSlug(r) === placeSlug ||
+        r.uid.replace(/[:/]/g, '-').toLowerCase() === placeSlug.toLowerCase()
+      );
+      if (place) {
+        if (place.country) setCountry(place.country);
+        if (place.city) setCity(place.city);
+        setDrawerRestaurant({
+          ...place,
+          cuisineMatch: 1.0,
+          score: place.hasRating ? (place.weighted_rating || 0) : 1.0,
+          rank: 1,
+          whyThisPick: 'Opened directly from URL',
+          distanceKm: undefined,
+        });
+      }
+    }
+  }, [citySlug, cuisineSlug, placeSlug, countryCityIndex, data, getCuisines]);
+
+  const handleOpenRestaurant = (r: ScoredRestaurant) => {
+    setDrawerRestaurant(r);
+    navigate(`/place/${getPlaceSlug(r)}`);
+  };
+
+  const handleOpenPlace = (p: Restaurant) => {
+    const scored: ScoredRestaurant = {
+      ...(p as any),
+      cuisineList: p.cuisines ? p.cuisines.split(',').map((s: string) => s.trim()).filter(Boolean) : [],
+      hasCoords: !!(p.latitude && p.longitude),
+      hasRating: p.aggregate_rating !== null && p.aggregate_rating !== undefined,
+      hasPrice: p.price_range !== null && p.price_range !== undefined,
+      score: 1.0,
+      rank: 1,
+      whyThisPick: '',
+    };
+    handleOpenRestaurant(scored);
+  };
+
+  const handleCloseDrawer = () => {
+    setDrawerRestaurant(null);
+    if (locationState.pathname.startsWith('/place/')) {
+      if (country === 'Nigeria' && city) {
+        navigate(`/ng/${getCitySlug(city)}`);
+      } else {
+        navigate('/');
+      }
+    }
+  };
 
   const caps = getCityCapabilities(city);
 
@@ -471,7 +560,7 @@ export default function DiscoverView() {
           {country === 'Nigeria' && (
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 8, alignItems: 'center' }}>
               <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase' }}>
-                Popular:
+                Dishes:
               </span>
               {['Jollof', 'Suya', 'Amala', 'Egusi', 'Shawarma', 'Pepper Soup', 'Asun', 'Small Chops', 'Buka'].map(dish => {
                 const isActive = dishQuery.toLowerCase() === dish.toLowerCase();
@@ -479,7 +568,12 @@ export default function DiscoverView() {
                   <button
                     key={dish}
                     type="button"
-                    onClick={() => setDishQuery(isActive ? '' : dish)}
+                    onClick={() => {
+                      if (!isActive) {
+                        trackEvent({ type: 'dish_search', cuisineTag: dish });
+                      }
+                      setDishQuery(isActive ? '' : dish);
+                    }}
                     style={{
                       padding: '2px 8px',
                       borderRadius: 999,
@@ -590,6 +684,9 @@ export default function DiscoverView() {
               setOpenNowOnly(false);
               setOpenLateOnly(false);
               setSelectedMealSlot(null);
+              if (country === 'Nigeria' && c) {
+                navigate(`/ng/${getCitySlug(c)}`);
+              }
             }}
             selectedPrice={priceRange}
             onPriceChange={val => {
@@ -600,7 +697,14 @@ export default function DiscoverView() {
             }}
             isPriceOverriddenByPreset={Boolean(activePreset?.priceRangeOverride)}
             selectedCuisines={cuisines}
-            onCuisinesChange={setCuisines}
+            onCuisinesChange={newCuisines => {
+              setCuisines(newCuisines);
+              if (country === 'Nigeria' && city && newCuisines.length === 1) {
+                navigate(`/ng/${getCitySlug(city)}/${getCuisineSlug(newCuisines[0])}`);
+              } else if (country === 'Nigeria' && city && newCuisines.length === 0) {
+                navigate(`/ng/${getCitySlug(city)}`);
+              }
+            }}
             onFind={() => {
               // Smooth scroll to results
               window.scrollTo({ top: 380, behavior: 'smooth' });
@@ -1038,7 +1142,22 @@ export default function DiscoverView() {
           >
             {/* Cards List Column */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {displayedRestaurants.map((r, i) => (
+              {country === 'Nigeria' && (
+                <LaunchAreaCard
+                  places={data}
+                  onSelectRestaurant={handleOpenPlace}
+                />
+              )}
+
+              {showGapsOnly ? (
+                <GapsView
+                  city={city}
+                  places={data.filter(p => p.city.toLowerCase() === city.toLowerCase())}
+                  onSelectRestaurant={handleOpenPlace}
+                  onClaimRestaurant={(r) => navigate(`/claim/${getPlaceSlug(r)}`)}
+                />
+              ) : (
+                displayedRestaurants.map((r, i) => (
                 <RestaurantCard
                   key={r.uid}
                   r={r}
@@ -1046,8 +1165,8 @@ export default function DiscoverView() {
                   isActive={drawerRestaurant?.uid === r.uid}
                   onHover={() => setHoveredId(r.uid)}
                   onHoverEnd={() => setHoveredId(null)}
-                  onOpen={() => setDrawerRestaurant(r)}
-                  onSimilar={() => setDrawerRestaurant(r)}
+                  onOpen={() => handleOpenRestaurant(r)}
+                  onSimilar={() => handleOpenRestaurant(r)}
                   onFoodRun={() => {
                     setFoodRunRestaurant(r);
                     setIsFoodRunOpen(true);
@@ -1055,7 +1174,7 @@ export default function DiscoverView() {
                   delay={i * 40}
                   distanceFromLandmark={r.distanceFromLandmark}
                 />
-              ))}
+              )))}
 
               {/* Show more button (up to 10) (amendment 1) */}
               {displayedRestaurants.length < filteredRankedRestaurants.length && displayedRestaurants.length < 10 && (
@@ -1101,7 +1220,7 @@ export default function DiscoverView() {
                 hoveredId={hoveredId}
                 onPinHover={id => setHoveredId(id)}
                 onPinHoverEnd={() => setHoveredId(null)}
-                onPinClick={r => setDrawerRestaurant(r)}
+                onPinClick={r => handleOpenRestaurant(r)}
               />
             </div>
           </div>
@@ -1193,7 +1312,7 @@ export default function DiscoverView() {
               onPinHover={id => setHoveredId(id)}
               onPinHoverEnd={() => setHoveredId(null)}
               onPinClick={r => {
-                setDrawerRestaurant(r);
+                handleOpenRestaurant(r);
                 setIsMobileMapOpen(false);
               }}
             />
@@ -1204,7 +1323,7 @@ export default function DiscoverView() {
       {/* Detail Drawer */}
       <RestaurantDrawer
         restaurant={drawerRestaurant}
-        onClose={() => setDrawerRestaurant(null)}
+        onClose={handleCloseDrawer}
         distanceFromLandmark={drawerRestaurant?.distanceFromLandmark}
         onFoodRun={r => {
           setFoodRunRestaurant(r);
@@ -1218,7 +1337,7 @@ export default function DiscoverView() {
             rank: 0,
             whyThisPick: '',
           };
-          setDrawerRestaurant(scored as ScoredRestaurant);
+          handleOpenRestaurant(scored as ScoredRestaurant);
         }}
       />
 

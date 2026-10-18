@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-15T07:12:37.365Z",
+  "capturedAt": "2026-10-18T12:07:52.337Z",
   "description": "Stage 0 regression fixtures for New Delhi, Orlando, Lucknow, and Lagos",
   "India/New Delhi (price 2, North Indian + Chinese, table booking)": {
     "stage": "exact_all",
@@ -171,18 +171,18 @@
     "notice": "Showing the highest-rated restaurants in this city.",
     "scoringMode": "unrated",
     "isLimitedData": false,
-    "cityRestaurantCount": 172,
+    "cityRestaurantCount": 1013,
     "top10_uids": [
       "osm:way/740741853",
       "osm:node/6863933664",
-      "osm:node/5243385158",
-      "osm:way/742173943",
-      "osm:way/1373912034",
       "osm:node/8920097433",
-      "osm:node/5661711450",
-      "osm:node/8554836918",
+      "osm:node/5243385158",
       "osm:node/4270075603",
-      "osm:node/2987186867"
+      "osm:way/742173943",
+      "osm:node/5661711450",
+      "osm:node/2987186867",
+      "osm:way/1373912034",
+      "osm:node/8554836918"
     ],
     "top10_restaurant_ids": [
       null,
@@ -199,26 +199,26 @@
     "top10_names": [
       "Ghana High",
       "Indigo Bar Restaurant  and Suites",
-      "Nok by Alara",
-      "Iya Eba",
-      "Syrian Club",
       "Circa NonPareil",
-      "Kilimanjaro",
-      "Danfo",
+      "Nok by Alara",
       "Chicken Republic Opebi",
-      "Tantalizers"
+      "Iya Eba",
+      "Kilimanjaro",
+      "Tantalizers",
+      "Syrian Club",
+      "Danfo"
     ],
     "top10_scores": [
-      0.915,
-      0.813,
-      0.802,
-      0.875,
-      0.804,
-      0.752,
-      0.773,
-      0.685,
+      0.687,
+      0.65,
+      0.65,
+      0.659,
       0.612,
-      0.544
+      0.647,
+      0.61,
+      0.584,
+      0.578,
+      0.53
     ]
   }
 }

@@ -125,12 +125,14 @@ def main() -> None:
     with_cuisine = sum(1 for r in ng_records if r.get("cuisines") and r.get("cuisines") != "Unspecified")
     with_hours = sum(1 for r in ng_records if r.get("opening_hours"))
     with_phone = sum(1 for r in ng_records if r.get("phone"))
+    with_locality = sum(1 for r in ng_records if r.get("locality"))
     total_ng = len(ng_records) or 1
 
     print("\n--- NIGERIA OSM STRUCTURED FIELD COVERAGE ---")
     print(f"  Cuisine:       {with_cuisine:>4} / {total_ng} ({with_cuisine/total_ng*100:5.1f}%)")
     print(f"  Opening Hours: {with_hours:>4} / {total_ng} ({with_hours/total_ng*100:5.1f}%)")
     print(f"  Phone:         {with_phone:>4} / {total_ng} ({with_phone/total_ng*100:5.1f}%)")
+    print(f"  Locality:      {with_locality:>4} / {total_ng} ({with_locality/total_ng*100:5.1f}%)")
 
     # City counts and limited coverage analysis from canonical synced dataset
     canonical_ng_path = REPO_ROOT / "tastematch" / "public" / "data" / "restaurants_ng.json"
@@ -143,6 +145,35 @@ def main() -> None:
     city_counts = Counter(r.get("city") for r in canonical_records)
     limited_cities = [c for c, count in city_counts.items() if count < 5]
     print(f"  Total Nigerian Cities (Canonical): {len(city_counts)} (Full: {len(city_counts)-len(limited_cities)}, Limited Coverage: {len(limited_cities)})")
+
+    # 7. Locality Regression Validation against Previous Build
+    prev_ng_path = REPO_ROOT / "data" / "processed" / "restaurants_ng.json"
+    if prev_ng_path.exists():
+        with open(prev_ng_path, "r", encoding="utf-8") as f:
+            prev_records = json.load(f)
+
+        prev_city_counts = Counter(r.get("city") for r in prev_records)
+        prev_full_cities = {c for c, count in prev_city_counts.items() if count >= 5}
+
+        print("\n--- LOCALITY REGRESSION CHECK (FULL CITIES) ---")
+        for city in sorted(prev_full_cities):
+            prev_tot = prev_city_counts[city]
+            prev_loc = sum(1 for r in prev_records if r.get("city") == city and r.get("locality"))
+            prev_pct = (prev_loc / prev_tot) * 100.0
+
+            curr_places = [r for r in ng_records if r.get("city") == city]
+            curr_tot = len(curr_places)
+            curr_loc = sum(1 for r in curr_places if r.get("locality"))
+            curr_pct = (curr_loc / curr_tot) * 100.0 if curr_tot > 0 else 0.0
+
+            diff = curr_pct - prev_pct
+            status = "PASS" if diff >= -5.0 else "FAIL"
+            print(f"  {city:15}: Prev {prev_loc:>3}/{prev_tot:>3} ({prev_pct:5.1f}%) -> Curr {curr_loc:>3}/{curr_tot:>3} ({curr_pct:5.1f}%) | Diff: {diff:+5.1f}% [{status}]")
+
+            if diff < -5.0:
+                errors.append(
+                    f"Locality coverage regression in full city '{city}': dropped from {prev_pct:.1f}% to {curr_pct:.1f}% (>5 percentage points drop)"
+                )
 
     # Save metrics artifact for About modal and README verification
     metrics = {
@@ -160,6 +191,8 @@ def main() -> None:
             "hoursPct": round(with_hours / total_ng * 100, 1),
             "phoneCount": with_phone,
             "phonePct": round(with_phone / total_ng * 100, 1),
+            "localityCount": with_locality,
+            "localityPct": round(with_locality / total_ng * 100, 1),
         },
         "validatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "status": "PASS" if not errors else "FAIL",

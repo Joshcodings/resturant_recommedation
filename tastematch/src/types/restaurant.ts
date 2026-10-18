@@ -42,6 +42,16 @@ export interface Restaurant {
   added_at?: string | null;
   power?: { backup_generator?: boolean | string; nepa?: string } | null;
   air_conditioning?: boolean | null;
+  contributor_credit?: string | null;
+  cuisineList?: string[];
+  name?: string;
+  telephone?: string | null;
+  owner_whatsapp?: string | null;
+  osm_id?: string | number | null;
+  osm_type?: string | null;
+  overture_confidence?: number | null;
+  data_sources?: string[] | null;
+  overture_meta?: Record<string, any> | null;
 }
 
 /** Pre-parsed extension attached at load time */

@@ -11,31 +11,36 @@ pinned: false
 
 # TasteMatch — Worldwide Restaurant Recommendation & Intelligence Platform
 
+🌐 **Live Production Web App**: [https://tastematch.pages.dev](https://tastematch.pages.dev)  
+🔬 **Data Science Exploration Demo**: [Streamlit on Hugging Face Spaces](https://huggingface.co/spaces/JoshuaAdeyemi/resturant_recommedation)
+
 > An explainable, worldwide restaurant recommendation and intelligence platform built on Kaggle's public Zomato dataset (7,403 rated restaurants across 15 countries) and OpenStreetMap (1,263 verified Nigerian food venues across Lagos, Abuja, Benin City, Jos, Enugu, Kano, and beyond).
 
 ---
 
 ## 🌟 Overview & Architectures
 
-This repository contains two complete implementations:
-1. **TasteMatch Web Application (`tastematch/`)**: Full-featured React + TypeScript + Tailwind static web platform with offline ML interpretability, OpenStreetMap maps, multi-currency conversion, local Nigerian features (dish search, payment tags, meal clock, generator/AC badges, food run planner, Owambe crawl planner, community additions, state capital switcher, compare mode, multilingual Pidgin/Yoruba/Igbo/Hausa drafts), and mobile-first responsiveness.
-2. **Python Streamlit Application (`app.py`)**: Data science exploration dashboard deployable to **Streamlit Community Cloud**.
+This repository contains two distinct implementations:
+1. **TasteMatch Production Web App (`tastematch/`)**: Full-featured React + TypeScript + Tailwind static web platform with offline ML interpretability, OpenStreetMap maps, multi-currency conversion, local Nigerian features (dish search, payment tags, meal clock, generator/AC badges, food run planner, Owambe crawl planner, community additions, state capital switcher, compare mode, multilingual Pidgin/Yoruba/Igbo/Hausa drafts), and mobile-first responsiveness. Live at [https://tastematch.pages.dev](https://tastematch.pages.dev).
+2. **Data Science Demo (`app.py`)**: Python Streamlit exploration dashboard hosted on Hugging Face Spaces for exploratory data analysis, feature experimentation, and baseline inspection. Clearly separate from the production client web platform.
 
 ---
 
 ## 📊 Dataset & Verification Status
 
 All numbers below are verified dynamically via `scripts/validate_datasets.py` and automated test suites:
-- **Total Places**: **8,666**
+- **Total Places**: **11,310**
   - **Zomato Kaggle (15 Countries)**: 7,403 places (~90% Delhi NCR)
-  - **OpenStreetMap Nigeria**: 1,263 places across 58 canonical cities (25 full cities with $\ge 5$ places, 33 cities marked *Limited coverage* with $< 5$ places)
-- **Nigeria OSM Field Coverage**:
-  - Cuisine: **21.5%** (271 places)
-  - Opening Hours: **13.5%** (171 places)
-  - Phone: **8.7%** (110 places)
-- **Shards**: **199 static JSON shards** (all files $\le 8$ MB cap).
-- **UID Uniqueness**: 8,666 universal UIDs with 0 collisions.
-- **Automated Test Pass Rate**: **20 test suites, 161 tests passed, 0 failures** (100% passing rate including Acceptance Tests T1–T22, WhatsApp share, and Location GPS suites).
+  - **Nigeria (OpenStreetMap + Overture Places Deduplicated)**: 3,907 verified places across 46 canonical cities (31 full cities with $\ge 5$ places, 15 cities marked *Limited coverage* with $< 5$ places)
+- **Nigeria Structured Field Coverage**:
+  - Locality: **81.4%** (3,180 places verified)
+  - Cuisine: **74.6%** (2,915 places)
+  - Phone: **57.6%** (2,251 places)
+  - Opening Hours: **4.4%** (171 places)
+- **Shards**: **187 static JSON shards** (all files $\le 8$ MB cap).
+- **UID Uniqueness**: 11,310 universal UIDs with 0 collisions.
+- **Automated Test Pass Rate**: **24 test suites, 193 tests passed, 0 failures** (100% passing rate including Acceptance Tests T1–T22, Phase 1 SEO/prerendering, Phase 2 Owner Toolkit, Phase 3 Overture Deduplication, and Phase 4 A13 Privacy Analytics).
+- **Prerendering & SEO**: **4,086 static HTML pages**, `sitemap.xml` (882.7 KB), and `robots.txt` generated at build time.
 - **Production Build**: Clean exit code 0 (`tsc -b && vite build`).
 
 ---

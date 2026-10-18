@@ -1,0 +1,75 @@
+name: Add a Place (Community Contributor)
+description: Submit a new restaurant or food spot to the TasteMatch community layer
+title: "[Community Place]: "
+labels: ["community-add-place"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## TasteMatch Community Place Submission
+        Help make Nigerian food discovery dense, accurate, and useful for everyone.
+        Real data only: unknown fields should be left blank. Never invent ratings or reviews.
+  - type: input
+    id: restaurant_name
+    attributes:
+      label: Restaurant / Eatery Name
+      placeholder: "e.g. Iya Basira Buka"
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: City
+      placeholder: "e.g. Lagos, Abuja, Port Harcourt, Ibadan"
+    validations:
+      required: true
+  - type: input
+    id: locality
+    attributes:
+      label: Locality / Neighbourhood
+      placeholder: "e.g. Yaba, Garki, Bodija"
+    validations:
+      required: false
+  - type: input
+    id: cuisine
+    attributes:
+      label: Cuisine or Specialty
+      placeholder: "e.g. Amala, Nigerian, Suya, Shawarma"
+    validations:
+      required: false
+  - type: input
+    id: phone
+    attributes:
+      label: Phone Number (Optional)
+      placeholder: "e.g. 2348012345678"
+    validations:
+      required: false
+  - type: input
+    id: opening_hours
+    attributes:
+      label: Opening Hours (Optional)
+      placeholder: "e.g. Mo-Sa 08:00-20:00"
+    validations:
+      required: false
+  - type: input
+    id: coordinates
+    attributes:
+      label: GPS Coordinates (Optional)
+      placeholder: "e.g. 6.5244, 3.3792"
+    validations:
+      required: false
+  - type: input
+    id: contributor_name
+    attributes:
+      label: Contributor Credit Name (Optional)
+      description: If you want to be credited, provide your name or social handle. Otherwise leave blank for Anonymous.
+      placeholder: "e.g. Chidi or leave blank"
+    validations:
+      required: false
+  - type: checkboxes
+    id: opt_in_credit
+    attributes:
+      label: Contributor Credit Opt-In
+      options:
+        - label: I opt-in to display "Added by <my name>" on this community listing.
+          required: false

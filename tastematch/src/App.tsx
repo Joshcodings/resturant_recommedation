@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { parsePlanDeepLink } from '@/lib/whatsappShare';
+import { trackEvent } from '@/lib/analytics';
+import InstallPromptBanner from '@/components/common/InstallPromptBanner';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
 import { RestaurantProvider } from '@/context/RestaurantContext';
 import { CurrencyProvider } from '@/context/CurrencyContext';
 import { ShortlistProvider, useShortlist } from '@/context/ShortlistContext';
 import { DataSaverProvider, useDataSaver } from '@/context/DataSaverContext';
 import { CommunityProvider } from '@/context/CommunityContext';
+import { OwnerProvider } from '@/context/OwnerContext';
 import { LanguageProvider, useLanguage } from '@/context/LanguageContext';
 import { LocationProvider } from '@/context/LocationContext';
 import CurrencySelector from '@/components/currency/CurrencySelector';
@@ -15,6 +18,9 @@ import DiscoverView from '@/views/DiscoverView';
 import GroupView from '@/views/GroupView';
 import InsightsView from '@/views/InsightsView';
 import StyleguideView from '@/views/StyleguideView';
+import ClaimView from '@/views/ClaimView';
+import TakedownView from '@/views/TakedownView';
+import PrivacyView from '@/views/PrivacyView';
 import AboutModal from '@/components/modals/AboutModal';
 import ShortlistDrawer from '@/components/modals/ShortlistDrawer';
 import { Sun, Moon, Heart, Info, Search, Users, BarChart3, Zap, AlertTriangle } from 'lucide-react';
@@ -258,7 +264,38 @@ function Footer({ onOpenAbout }: { onOpenAbout: () => void }) {
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+          <NavLink
+            to="/claim"
+            style={{
+              color: 'var(--accent-deep)',
+              fontSize: 13,
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            Claim Restaurant
+          </NavLink>
+          <NavLink
+            to="/takedown"
+            style={{
+              color: 'var(--text-muted)',
+              fontSize: 13,
+              textDecoration: 'underline',
+            }}
+          >
+            Takedown / Correction
+          </NavLink>
+          <NavLink
+            to="/privacy"
+            style={{
+              color: 'var(--text-muted)',
+              fontSize: 13,
+              textDecoration: 'underline',
+            }}
+          >
+            Privacy & NDPA
+          </NavLink>
           <button
             onClick={onOpenAbout}
             style={{
@@ -294,6 +331,11 @@ function AppShell() {
 
   useEffect(() => {
     const rawHash = typeof window !== 'undefined' ? window.location.hash : '';
+    if (rawHash.startsWith('#/')) {
+      const cleanRoute = rawHash.slice(1);
+      navigate(cleanRoute, { replace: true });
+      return;
+    }
     const rawSearch = typeof window !== 'undefined' ? window.location.search : '';
     const parsed = parsePlanDeepLink(rawHash) || parsePlanDeepLink(rawSearch);
     if (parsed) {
@@ -303,6 +345,14 @@ function AppShell() {
       }
     }
   }, [location, navigate]);
+
+  useEffect(() => {
+    trackEvent({
+      type: 'page_view',
+      path: location.pathname,
+      title: document.title,
+    });
+  }, [location.pathname]);
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg)' }}>
@@ -335,10 +385,18 @@ function AppShell() {
         onOpenAbout={() => setIsAboutOpen(true)}
         onOpenShortlist={() => setIsShortlistOpen(true)}
       />
+      <InstallPromptBanner />
 
       <main style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<DiscoverView />} />
+          <Route path="/ng/:citySlug" element={<DiscoverView />} />
+          <Route path="/ng/:citySlug/:cuisineSlug" element={<DiscoverView />} />
+          <Route path="/place/:placeSlug" element={<DiscoverView />} />
+          <Route path="/claim" element={<ClaimView />} />
+          <Route path="/claim/:placeSlug" element={<ClaimView />} />
+          <Route path="/takedown" element={<TakedownView />} />
+          <Route path="/privacy" element={<PrivacyView />} />
           <Route path="/group" element={<GroupView />} />
           <Route path="/insights" element={<InsightsView />} />
           <Route
@@ -351,6 +409,7 @@ function AppShell() {
           />
           {/* Hidden dev route — not in nav (amendment 8) */}
           <Route path="/styleguide" element={<StyleguideView />} />
+          <Route path="*" element={<DiscoverView />} />
         </Routes>
       </main>
 
@@ -395,17 +454,19 @@ export default function App() {
       <ThemeProvider>
         <DataSaverProvider>
           <CommunityProvider>
-            <RestaurantProvider>
-              <LocationProvider>
-                <CurrencyProvider>
-                  <ShortlistProvider>
-                    <HashRouter>
-                      <AppShell />
-                    </HashRouter>
-                  </ShortlistProvider>
-                </CurrencyProvider>
-              </LocationProvider>
-            </RestaurantProvider>
+            <OwnerProvider>
+              <RestaurantProvider>
+                <LocationProvider>
+                  <CurrencyProvider>
+                    <ShortlistProvider>
+                      <BrowserRouter>
+                        <AppShell />
+                      </BrowserRouter>
+                    </ShortlistProvider>
+                  </CurrencyProvider>
+                </LocationProvider>
+              </RestaurantProvider>
+            </OwnerProvider>
           </CommunityProvider>
         </DataSaverProvider>
       </ThemeProvider>

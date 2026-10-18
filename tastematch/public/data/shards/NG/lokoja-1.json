@@ -72,5 +72,37 @@
     "votes": null,
     "website": null,
     "weighted_rating": null
+  },
+  {
+    "address": "92 Idimu Rd",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Lokoja",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Lounge"
+    ],
+    "cuisines": "Lounge",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 8.403772,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Lagos",
+    "longitude": 6.694108,
+    "name": "Above Lounge Lagos",
+    "opening_hours": null,
+    "overture_confidence": 0.93,
+    "phone": "+2349038400000",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_81d27572",
+    "restaurant_name": "Above Lounge Lagos",
+    "uid": "overture:81d27572-de65-44d1-adc9-7ef582ac42a7",
+    "votes": null,
+    "website": null
   }
 ]

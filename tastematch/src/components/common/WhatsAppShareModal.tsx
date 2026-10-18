@@ -23,6 +23,7 @@ import {
   clearRecentNumbers,
   shareViaNativeSheet,
 } from '@/lib/whatsappShare';
+import { trackEvent } from '@/lib/analytics';
 
 interface Props {
   open: boolean;
@@ -62,6 +63,7 @@ export default function WhatsAppShareModal({
   const phoneNorm = normalizePhoneNumber(phoneInput);
 
   const handleNativeShare = async () => {
+    trackEvent({ type: 'whatsapp_share_clicked', shareType: 'NativeSheet' });
     const res = await shareViaNativeSheet({
       title,
       text: message,
@@ -74,6 +76,7 @@ export default function WhatsAppShareModal({
 
   const handleSendToNumber = () => {
     if (!phoneNorm.isValid) return;
+    trackEvent({ type: 'whatsapp_share_clicked', shareType: 'DirectNumber' });
     if (rememberNumber) {
       saveRecentNumber(phoneNorm.normalized);
       setRecentNumbers(getRecentNumbers());
@@ -429,6 +432,7 @@ export default function WhatsAppShareModal({
               <div>
                 <a
                   href={buildWaMobileAppLink(message)}
+                  onClick={() => trackEvent({ type: 'whatsapp_share_clicked', shareType: 'MobileDeepLink' })}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -455,6 +459,7 @@ export default function WhatsAppShareModal({
                   href={buildWaWebLink(message)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent({ type: 'whatsapp_share_clicked', shareType: 'WebLink' })}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -476,6 +481,7 @@ export default function WhatsAppShareModal({
                 </a>
                 <a
                   href={buildWaMobileAppLink(message)}
+                  onClick={() => trackEvent({ type: 'whatsapp_share_clicked', shareType: 'AppDeepLink' })}
                   style={{
                     display: 'flex',
                     alignItems: 'center',

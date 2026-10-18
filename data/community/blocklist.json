@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-10-17",
+  "description": "Blocklist for spam, fraudulent submissions, and abusive numbers.",
+  "blocked_numbers": [
+    "2340000000000"
+  ],
+  "blocked_domains": [
+    "spam.com",
+    "scam.ng",
+    "fake-restaurant.xyz"
+  ],
+  "blocked_names": []
+}

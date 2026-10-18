@@ -1,0 +1,73 @@
+name: Takedown or Listing Correction Request
+description: Request removal, correction, or privacy erasure of a restaurant listing (7-day review SLA)
+title: "[Takedown/Correction]: "
+labels: ["takedown-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## TasteMatch Listing Removal & Correction Policy
+        We respect restaurant owner autonomy and the Nigerian Data Protection Act (NDPA 2023).
+        If you are the owner, authorized manager, or representative and wish to remove, update, or claim privacy erasure for a listing, please submit this form.
+        **Review SLA:** Requests are reviewed and acted upon within **7 business days**.
+  - type: input
+    id: restaurant_name
+    attributes:
+      label: Restaurant Name
+      placeholder: "e.g. Taste & Joy Eatery"
+    validations:
+      required: true
+  - type: input
+    id: place_uid
+    attributes:
+      label: Place UID or URL
+      placeholder: "e.g. osm:node/12345678 or https://tastematch.pages.dev/place/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: requester_role
+    attributes:
+      label: Your Relationship to this Restaurant
+      options:
+        - "Owner / Sole Proprietor"
+        - "General Manager / Authorized Staff"
+        - "Legal Representative"
+        - "Patron reporting permanent closure"
+    validations:
+      required: true
+  - type: input
+    id: contact_info
+    attributes:
+      label: Contact Email or Phone Number
+      description: We will use this to confirm identity and notify you when the request is processed.
+      placeholder: "owner@restaurant.ng or 2348012345678"
+    validations:
+      required: true
+  - type: dropdown
+    id: action_requested
+    attributes:
+      label: Action Requested
+      options:
+        - "Permanent Takedown / Removal from TasteMatch"
+        - "Correction of Inaccurate Business Details"
+        - "Mark as Permanently Closed"
+        - "Removal of Owner Contact / WhatsApp Number"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details and Evidence
+      description: Please describe why this change is requested and provide a link or info confirming your authorization.
+      placeholder: "Please provide any relevant details or links..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Acknowledgment
+      options:
+        - label: I declare under penalty of false representation that I am authorized to submit this request.
+          required: true
+        - label: I understand this request will be processed within 7 business days.
+          required: true

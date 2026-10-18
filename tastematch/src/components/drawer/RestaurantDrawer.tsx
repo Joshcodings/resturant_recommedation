@@ -1,6 +1,8 @@
 import { useEffect, useRef, useMemo, useState } from 'react';
 import WhatsAppShareModal from '@/components/common/WhatsAppShareModal';
-import { generatePlanDeepLink, capMessageLength } from '@/lib/whatsappShare';
+import { capMessageLength } from '@/lib/whatsappShare';
+import { getPlaceShareUrl } from '@/lib/routes';
+import { trackEvent } from '@/lib/analytics';
 import {
   X,
   Utensils,
@@ -30,6 +32,9 @@ import { formatVotes, isFewVotes } from '@/lib/formatters';
 import { morelikeThis } from '@/lib/similarity';
 import { useRestaurants } from '@/context/RestaurantContext';
 import { useCurrency } from '@/context/CurrencyContext';
+import { useOwner } from '@/context/OwnerContext';
+import OwnerToolkit from '@/components/owner/OwnerToolkit';
+import ClaimRestaurantModal from '@/components/owner/ClaimRestaurantModal';
 import { PRICE_TIERS } from '@/lib/currency';
 import type { ScoredRestaurant } from '@/types/recommendation';
 import type { RestaurantParsed } from '@/types/restaurant';
@@ -105,13 +110,29 @@ interface Props {
 export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, onFoodRun, distanceFromLandmark }: Props) {
   const { data, vocabulary } = useRestaurants();
   const { formatDual } = useCurrency();
+  const { getOwnerByUid, getOwnerByNameAndCity } = useOwner();
   const panelRef = useRef<HTMLDivElement>(null);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  const [isClaimModalOpen, setIsClaimModalOpen] = useState(false);
+
+  const ownerProfile = useMemo(() => {
+    if (!restaurant) return null;
+    return getOwnerByUid(restaurant.uid) || getOwnerByNameAndCity(restaurant.restaurant_name, restaurant.city);
+  }, [restaurant, getOwnerByUid, getOwnerByNameAndCity]);
 
   const similar = useMemo(() => {
     if (!restaurant || data.length === 0) return [];
     return morelikeThis(restaurant, data, vocabulary, 5);
   }, [restaurant, data, vocabulary]);
+
+  // Phase 4: Track place_opened event (with place UID only, no coordinates or PII)
+  useEffect(() => {
+    if (!restaurant) return;
+    trackEvent({
+      type: 'place_opened',
+      placeUid: restaurant.uid,
+    });
+  }, [restaurant?.uid]);
 
   // Focus trap & Esc close
   useEffect(() => {
@@ -134,13 +155,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
   const r = restaurant;
   const chips = r.cuisineList;
 
-  const placeDeepLink = generatePlanDeepLink({
-    type: 'restaurant',
-    city: r.city,
-    stops: [r.uid],
-    restaurantUid: r.uid,
-    restaurantName: r.restaurant_name,
-  });
+  const placeShareUrl = getPlaceShareUrl(r);
 
   const fullShareText = () =>
     [
@@ -151,7 +166,7 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
       r.opening_hours ? `🕒 Hours: ${r.opening_hours}` : '',
       r.phone ? `📞 Phone: ${r.phone}` : '',
       '',
-      `Open on TasteMatch: ${placeDeepLink}`,
+      `Open on TasteMatch: ${placeShareUrl}`,
       '_Found on TasteMatch_',
     ]
       .filter(Boolean)
@@ -161,13 +176,13 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
     [
       `🍽️ *${r.restaurant_name}* (${r.locality || r.city})`,
       r.cuisines ? `🍴 ${r.cuisines}` : '',
-      `Open: ${placeDeepLink}`,
+      `Open: ${placeShareUrl}`,
     ]
       .filter(Boolean)
       .join('\n');
 
   const minimalShareText = () =>
-    `🍽️ Check out ${r.restaurant_name} in ${r.city}: ${placeDeepLink}`;
+    `🍽️ Check out ${r.restaurant_name} in ${r.city}: ${placeShareUrl}`;
 
   const placeShareMessage = capMessageLength({
     full: fullShareText,
@@ -243,7 +258,25 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
                     border: '1px solid #10b981',
                   }}
                 >
-                  Added by you (local)
+                  {r.contributor_credit || 'Added by you (local)'}
+                </span>
+              )}
+              {ownerProfile && (
+                <span
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 4,
+                    padding: '2px 8px',
+                    borderRadius: 999,
+                    background: 'rgba(16, 185, 129, 0.15)',
+                    color: '#10b981',
+                    fontSize: 11,
+                    fontWeight: 600,
+                    border: '1px solid #10b981',
+                  }}
+                >
+                  <ShieldCheck size={12} /> {ownerProfile.attribution}
                 </span>
               )}
             </div>
@@ -304,18 +337,41 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
           ><X size={18} strokeWidth={1.5} /></button>
         </div>
 
-        {/* OSM info bar if applicable */}
-        {r.data_source === 'OpenStreetMap' && (
-          <div style={{ padding: '12px 20px 0', display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-            <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--surface-2)', padding: '2px 8px', borderRadius: 4, border: '1px solid var(--border)' }}>
-              OpenStreetMap Data
-            </span>
-            {r.place_type && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><MapPin size={11} /> {r.place_type.replace('_', ' ')}</span>}
-            {r.opening_hours && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Clock size={11} /> {r.opening_hours}</span>}
-            {r.phone && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Phone size={11} /> {r.phone}</span>}
-            {r.website && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><a href={r.website} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Globe size={11} /> Website</a></span>}
-          </div>
-        )}
+        {/* Dual-layer info bar: OSM data preserved, Owner community data kept distinct */}
+        <div style={{ padding: '12px 20px 0', display: 'flex', flexDirection: 'column', gap: 8 }}>
+          {r.data_source === 'OpenStreetMap' && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
+              <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--surface-2)', padding: '2px 8px', borderRadius: 4, border: '1px solid var(--border)' }}>
+                OpenStreetMap
+              </span>
+              {r.place_type && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><MapPin size={11} /> {r.place_type.replace('_', ' ')}</span>}
+              {r.opening_hours && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Clock size={11} /> {r.opening_hours}</span>}
+              {r.phone && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Phone size={11} /> {r.phone}</span>}
+              {r.website && <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><a href={r.website} target="_blank" rel="noreferrer" style={{ color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 3 }}><Globe size={11} /> Website</a></span>}
+            </div>
+          )}
+
+          {ownerProfile && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
+              <span style={{ fontSize: 11, color: '#10b981', display: 'inline-flex', alignItems: 'center', gap: 4, background: 'rgba(16, 185, 129, 0.1)', padding: '2px 8px', borderRadius: 4, border: '1px solid rgba(16, 185, 129, 0.25)', fontWeight: 600 }}>
+                {ownerProfile.attribution}
+              </span>
+              {ownerProfile.opening_hours && (
+                <span style={{ fontSize: 11, color: 'var(--text)', display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                  <Clock size={11} style={{ color: '#10b981' }} /> {ownerProfile.opening_hours}
+                  {r.opening_hours && r.opening_hours !== ownerProfile.opening_hours && (
+                    <span style={{ fontSize: 10, color: 'var(--warn)', marginLeft: 4 }}>(differs from OSM)</span>
+                  )}
+                </span>
+              )}
+              {ownerProfile.whatsapp_phone && (
+                <span style={{ fontSize: 11, color: 'var(--text)', display: 'inline-flex', alignItems: 'center', gap: 3 }}>
+                  <Phone size={11} style={{ color: '#10b981' }} /> WhatsApp: {ownerProfile.whatsapp_phone}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* Content */}
         <div style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -443,6 +499,15 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
           </div>
         );
       })()}
+
+          {/* Owner Perks & WhatsApp Ordering Toolkit */}
+          {r.country === 'Nigeria' && (
+            <OwnerToolkit
+              restaurant={r}
+              ownerProfile={ownerProfile}
+              onOpenClaimModal={() => setIsClaimModalOpen(true)}
+            />
+          )}
 
           {/* Action Buttons: Food Run & Share Place */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -674,11 +739,21 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
 
             {/* Actions: Add what you know on OSM & Report closed or wrong */}
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 4 }}>
-              {r.data_source === 'OpenStreetMap' && (
+              {(r.data_source === 'OpenStreetMap' || r.country === 'Nigeria') && (
                 <a
-                  href={`https://www.openstreetmap.org/edit?${r.source_id ? r.source_id.replace('/', '=') : 'node'}`}
+                  href={(() => {
+                    const cleanId = r.source_id ? r.source_id.replace('/', '=') : '';
+                    if (cleanId && r.latitude && r.longitude) {
+                      return `https://www.openstreetmap.org/edit?${cleanId}#map=19/${r.latitude}/${r.longitude}`;
+                    } else if (cleanId) {
+                      return `https://www.openstreetmap.org/edit?${cleanId}`;
+                    } else if (r.latitude && r.longitude) {
+                      return `https://www.openstreetmap.org/edit#map=19/${r.latitude}/${r.longitude}`;
+                    }
+                    return `https://www.openstreetmap.org/search?query=${encodeURIComponent(`${r.restaurant_name} ${r.city} Nigeria`)}`;
+                  })()}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   style={{
                     padding: '6px 12px',
                     borderRadius: 6,
@@ -726,7 +801,9 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
             margin: 0, fontSize: 12, color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif',
             borderTop: '1px solid var(--border)', paddingTop: 16,
           }}>
-            Data from the Zomato dataset snapshot. Opening hours, phone numbers, and current availability are not shown. Restaurant may have closed.
+            {r.data_source === 'OpenStreetMap' || r.country === 'Nigeria'
+              ? 'Data from OpenStreetMap and verified community owners. Restaurants may have closed or changed hours.'
+              : 'Data from the Zomato dataset snapshot. Opening hours, phone numbers, and current availability are not shown. Restaurant may have closed.'}
           </p>
         </div>
       </div>
@@ -737,7 +814,15 @@ export default function RestaurantDrawer({ restaurant, onClose, onOpenSimilar, o
           onClose={() => setIsShareModalOpen(false)}
           title={r.restaurant_name}
           message={placeShareMessage}
-          planDeepLink={placeDeepLink}
+          planDeepLink={placeShareUrl}
+        />
+      )}
+
+      {isClaimModalOpen && (
+        <ClaimRestaurantModal
+          open={isClaimModalOpen}
+          onClose={() => setIsClaimModalOpen(false)}
+          restaurant={r}
         />
       )}
     </>

@@ -84,6 +84,7 @@ export default function AboutModal({ open, onClose }: Props) {
               We never invent or infer data not present in open records. Nigerian OpenStreetMap verified field coverage:
             </p>
             <ul style={{ margin: '8px 0 0', paddingLeft: 20, color: 'var(--text-muted)' }}>
+              <li>Locality / neighborhood: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.localityPct}%</strong> ({datasetMetrics.coverage.localityCount.toLocaleString()} places)</li>
               <li>Cuisine classification: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.cuisinePct}%</strong> ({datasetMetrics.coverage.cuisineCount.toLocaleString()} places)</li>
               <li>Opening hours: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.hoursPct}%</strong> ({datasetMetrics.coverage.hoursCount.toLocaleString()} places)</li>
               <li>Phone contact: <strong style={{ color: 'var(--text)' }}>{datasetMetrics.coverage.phonePct}%</strong> ({datasetMetrics.coverage.phoneCount.toLocaleString()} places)</li>

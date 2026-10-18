@@ -13,6 +13,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCommunity } from '@/context/CommunityContext';
 import { NIGERIAN_STATE_CAPITALS } from '@/config/nigerianCapitals';
+import { trackEvent } from '@/lib/analytics';
 import type { RestaurantParsed } from '@/types/restaurant';
 import {
   X,
@@ -76,6 +77,8 @@ export default function AddPlaceModal({
   const [longitude, setLongitude] = useState<string>('');
   const [openingHours, setOpeningHours] = useState('');
   const [phone, setPhone] = useState('');
+  const [contributorName, setContributorName] = useState('');
+  const [optInCredit, setOptInCredit] = useState(false);
 
   const [activeTab, setActiveTab] = useState<'form' | 'export'>('form');
   const [copiedType, setCopiedType] = useState<string | null>(null);
@@ -198,6 +201,13 @@ export default function AddPlaceModal({
       longitude: lngNum && !isNaN(lngNum) ? lngNum : null,
       openingHours: openingHours.trim() || undefined,
       phone: phone.trim() || undefined,
+      contributorName: contributorName.trim() || undefined,
+      optInCredit,
+    });
+
+    trackEvent({
+      type: 'add_place_submitted',
+      city: city.trim(),
     });
 
     if (onPlaceAdded) {
@@ -212,6 +222,8 @@ export default function AddPlaceModal({
     setLongitude('');
     setOpeningHours('');
     setPhone('');
+    setContributorName('');
+    setOptInCredit(false);
     setErrorMsg(null);
     setNeedsPinConfirmation(false);
     setPinConfirmed(true);
@@ -895,6 +907,47 @@ export default function AddPlaceModal({
                     }}
                   />
                 </div>
+              </div>
+
+              {/* Contributor Credit Section (Opt-in) */}
+              <div style={{ background: 'var(--surface-2)', padding: 12, borderRadius: 8, border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <input
+                    type="checkbox"
+                    id="optInCredit"
+                    checked={optInCredit}
+                    onChange={(e) => setOptInCredit(e.target.checked)}
+                    style={{ width: 16, height: 16, accentColor: 'var(--accent)' }}
+                  />
+                  <label htmlFor="optInCredit" style={{ fontSize: 12, color: 'var(--text)', cursor: 'pointer', fontWeight: 500 }}>
+                    Credit me on this listing ("Added by &lt;name&gt;")
+                  </label>
+                </div>
+
+                {optInCredit && (
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Your name or handle (leave empty for Anonymous)"
+                      value={contributorName}
+                      onChange={(e) => setContributorName(e.target.value)}
+                      style={{
+                        width: '100%',
+                        height: 36,
+                        padding: '0 12px',
+                        borderRadius: 6,
+                        background: 'var(--surface)',
+                        border: '1px solid var(--border)',
+                        color: 'var(--text)',
+                        fontSize: 12,
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                    <span style={{ fontSize: 10, color: 'var(--text-muted)', display: 'block', marginTop: 4 }}>
+                      Display: {contributorName.trim() ? `Added by ${contributorName.trim()}` : 'Added by Anonymous'}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Submit Button */}

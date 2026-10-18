@@ -1,0 +1,818 @@
+{
+  "Warri": {
+    "osm_baseline": 20,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Yenagoa": {
+    "osm_baseline": 6,
+    "overture_new_places": 5,
+    "overture_merges": 1,
+    "phones_added": 6,
+    "websites_added": 1,
+    "categories_added": 5
+  },
+  "Warri Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Yenagoa, Bayelsa state": {
+    "osm_baseline": 1,
+    "overture_new_places": 9,
+    "overture_merges": 0,
+    "phones_added": 8,
+    "websites_added": 0,
+    "categories_added": 9
+  },
+  "Ogharefe": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Port Harcourt": {
+    "osm_baseline": 33,
+    "overture_new_places": 171,
+    "overture_merges": 3,
+    "phones_added": 150,
+    "websites_added": 64,
+    "categories_added": 171
+  },
+  "Woji": {
+    "osm_baseline": 1,
+    "overture_new_places": 77,
+    "overture_merges": 1,
+    "phones_added": 68,
+    "websites_added": 33,
+    "categories_added": 77
+  },
+  "Owerri": {
+    "osm_baseline": 14,
+    "overture_new_places": 66,
+    "overture_merges": 0,
+    "phones_added": 53,
+    "websites_added": 20,
+    "categories_added": 66
+  },
+  "Uyo": {
+    "osm_baseline": 4,
+    "overture_new_places": 86,
+    "overture_merges": 0,
+    "phones_added": 73,
+    "websites_added": 30,
+    "categories_added": 86
+  },
+  "Owerri Area": {
+    "osm_baseline": 7,
+    "overture_new_places": 5,
+    "overture_merges": 0,
+    "phones_added": 5,
+    "websites_added": 0,
+    "categories_added": 5
+  },
+  "Uyo Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 7,
+    "overture_merges": 0,
+    "phones_added": 6,
+    "websites_added": 2,
+    "categories_added": 7
+  },
+  "Calabar": {
+    "osm_baseline": 5,
+    "overture_new_places": 61,
+    "overture_merges": 1,
+    "phones_added": 49,
+    "websites_added": 16,
+    "categories_added": 61
+  },
+  "Port Harcourt Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 7,
+    "overture_merges": 0,
+    "phones_added": 5,
+    "websites_added": 2,
+    "categories_added": 7
+  },
+  "Calabar, Cross River": {
+    "osm_baseline": 1,
+    "overture_new_places": 8,
+    "overture_merges": 0,
+    "phones_added": 7,
+    "websites_added": 5,
+    "categories_added": 8
+  },
+  "port harcourt": {
+    "osm_baseline": 2,
+    "overture_new_places": 1,
+    "overture_merges": 0,
+    "phones_added": 1,
+    "websites_added": 0,
+    "categories_added": 1
+  },
+  "Rumualogu/Port Harcourt": {
+    "osm_baseline": 3,
+    "overture_new_places": 2,
+    "overture_merges": 0,
+    "phones_added": 2,
+    "websites_added": 1,
+    "categories_added": 2
+  },
+  "Choba Port Harcourt": {
+    "osm_baseline": 3,
+    "overture_new_places": 2,
+    "overture_merges": 2,
+    "phones_added": 4,
+    "websites_added": 2,
+    "categories_added": 2
+  },
+  "Choba/Port Harcourt": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Calabar Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 6,
+    "overture_merges": 0,
+    "phones_added": 5,
+    "websites_added": 1,
+    "categories_added": 6
+  },
+  "Ikot Akpan-Ata": {
+    "osm_baseline": 1,
+    "overture_new_places": 3,
+    "overture_merges": 0,
+    "phones_added": 2,
+    "websites_added": 1,
+    "categories_added": 3
+  },
+  "Rumuosi junctin": {
+    "osm_baseline": 1,
+    "overture_new_places": 17,
+    "overture_merges": 0,
+    "phones_added": 15,
+    "websites_added": 7,
+    "categories_added": 17
+  },
+  "University of Port Harcourt, Abuja Campus, Choba, Rivers State.": {
+    "osm_baseline": 3,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lagos": {
+    "osm_baseline": 164,
+    "overture_new_places": 841,
+    "overture_merges": 0,
+    "phones_added": 612,
+    "websites_added": 226,
+    "categories_added": 841
+  },
+  "Lagos Area": {
+    "osm_baseline": 4,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lekki": {
+    "osm_baseline": 18,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ibadan": {
+    "osm_baseline": 28,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Mokola, Ibadam": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ikeja": {
+    "osm_baseline": 84,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lekki, Lagos": {
+    "osm_baseline": 3,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ibadan Area": {
+    "osm_baseline": 14,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "IBADAN": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Abeokuta": {
+    "osm_baseline": 2,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Oluwa": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "LEKKI": {
+    "osm_baseline": 2,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ilupeju, Lagos": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ikoyi": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Eti-Osa": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ijebu Ode": {
+    "osm_baseline": 2,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Victoria Island": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "lekki": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Osogbo": {
+    "osm_baseline": 16,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "lagos": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lagaos": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lagos Island": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Benin City": {
+    "osm_baseline": 134,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "agbor": {
+    "osm_baseline": 4,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Benin City Area": {
+    "osm_baseline": 47,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "benin city": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Benin city": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ile-Ife": {
+    "osm_baseline": 7,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Akure": {
+    "osm_baseline": 26,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ado-Ekiti": {
+    "osm_baseline": 2,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Oshogbo": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Lokoja Area": {
+    "osm_baseline": 2,
+    "overture_new_places": 1,
+    "overture_merges": 0,
+    "phones_added": 1,
+    "websites_added": 0,
+    "categories_added": 1
+  },
+  "Enugu": {
+    "osm_baseline": 88,
+    "overture_new_places": 84,
+    "overture_merges": 4,
+    "phones_added": 72,
+    "websites_added": 27,
+    "categories_added": 84
+  },
+  "Awka": {
+    "osm_baseline": 4,
+    "overture_new_places": 57,
+    "overture_merges": 0,
+    "phones_added": 45,
+    "websites_added": 12,
+    "categories_added": 57
+  },
+  "Makurdi Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Asaba": {
+    "osm_baseline": 6,
+    "overture_new_places": 72,
+    "overture_merges": 0,
+    "phones_added": 63,
+    "websites_added": 14,
+    "categories_added": 72
+  },
+  "Nsukka": {
+    "osm_baseline": 2,
+    "overture_new_places": 9,
+    "overture_merges": 0,
+    "phones_added": 7,
+    "websites_added": 2,
+    "categories_added": 9
+  },
+  "Abakaliki": {
+    "osm_baseline": 3,
+    "overture_new_places": 9,
+    "overture_merges": 1,
+    "phones_added": 7,
+    "websites_added": 1,
+    "categories_added": 9
+  },
+  "Ogbomosho": {
+    "osm_baseline": 4,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ilorin Area": {
+    "osm_baseline": 3,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ilorin, Kwara State, Nigeria": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Ilorin": {
+    "osm_baseline": 35,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Minna": {
+    "osm_baseline": 4,
+    "overture_new_places": 14,
+    "overture_merges": 0,
+    "phones_added": 10,
+    "websites_added": 6,
+    "categories_added": 14
+  },
+  "Abuja": {
+    "osm_baseline": 126,
+    "overture_new_places": 177,
+    "overture_merges": 31,
+    "phones_added": 167,
+    "websites_added": 83,
+    "categories_added": 177
+  },
+  "Abuja Area": {
+    "osm_baseline": 3,
+    "overture_new_places": 15,
+    "overture_merges": 0,
+    "phones_added": 13,
+    "websites_added": 6,
+    "categories_added": 15
+  },
+  "Gwarinpa": {
+    "osm_baseline": 2,
+    "overture_new_places": 81,
+    "overture_merges": 0,
+    "phones_added": 61,
+    "websites_added": 35,
+    "categories_added": 81
+  },
+  "Kaduna Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Abuja Nigeria": {
+    "osm_baseline": 3,
+    "overture_new_places": 63,
+    "overture_merges": 0,
+    "phones_added": 47,
+    "websites_added": 25,
+    "categories_added": 63
+  },
+  "abuja": {
+    "osm_baseline": 1,
+    "overture_new_places": 184,
+    "overture_merges": 0,
+    "phones_added": 166,
+    "websites_added": 79,
+    "categories_added": 184
+  },
+  "ABUJA": {
+    "osm_baseline": 1,
+    "overture_new_places": 151,
+    "overture_merges": 0,
+    "phones_added": 131,
+    "websites_added": 65,
+    "categories_added": 151
+  },
+  "Gwagwalada": {
+    "osm_baseline": 4,
+    "overture_new_places": 11,
+    "overture_merges": 0,
+    "phones_added": 7,
+    "websites_added": 2,
+    "categories_added": 11
+  },
+  "Jos": {
+    "osm_baseline": 114,
+    "overture_new_places": 5,
+    "overture_merges": 3,
+    "phones_added": 2,
+    "websites_added": 1,
+    "categories_added": 5
+  },
+  "jos": {
+    "osm_baseline": 2,
+    "overture_new_places": 22,
+    "overture_merges": 0,
+    "phones_added": 19,
+    "websites_added": 6,
+    "categories_added": 22
+  },
+  "Joe": {
+    "osm_baseline": 1,
+    "overture_new_places": 9,
+    "overture_merges": 0,
+    "phones_added": 9,
+    "websites_added": 1,
+    "categories_added": 9
+  },
+  "Jos-North": {
+    "osm_baseline": 1,
+    "overture_new_places": 26,
+    "overture_merges": 0,
+    "phones_added": 20,
+    "websites_added": 4,
+    "categories_added": 26
+  },
+  "Jos Area": {
+    "osm_baseline": 4,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Yola": {
+    "osm_baseline": 2,
+    "overture_new_places": 24,
+    "overture_merges": 0,
+    "phones_added": 19,
+    "websites_added": 6,
+    "categories_added": 24
+  },
+  "Gombe Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 1,
+    "overture_merges": 0,
+    "phones_added": 1,
+    "websites_added": 0,
+    "categories_added": 1
+  },
+  "Yola Area": {
+    "osm_baseline": 2,
+    "overture_new_places": 3,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 3
+  },
+  "Zaria": {
+    "osm_baseline": 5,
+    "overture_new_places": 17,
+    "overture_merges": 1,
+    "phones_added": 10,
+    "websites_added": 4,
+    "categories_added": 17
+  },
+  "Kaduna": {
+    "osm_baseline": 35,
+    "overture_new_places": 21,
+    "overture_merges": 4,
+    "phones_added": 18,
+    "websites_added": 5,
+    "categories_added": 21
+  },
+  "Dadi Riba": {
+    "osm_baseline": 2,
+    "overture_new_places": 31,
+    "overture_merges": 0,
+    "phones_added": 26,
+    "websites_added": 8,
+    "categories_added": 31
+  },
+  "Kano": {
+    "osm_baseline": 41,
+    "overture_new_places": 28,
+    "overture_merges": 3,
+    "phones_added": 21,
+    "websites_added": 5,
+    "categories_added": 28
+  },
+  "Unguwar Shanu": {
+    "osm_baseline": 1,
+    "overture_new_places": 26,
+    "overture_merges": 0,
+    "phones_added": 21,
+    "websites_added": 6,
+    "categories_added": 26
+  },
+  "Kaduna North": {
+    "osm_baseline": 1,
+    "overture_new_places": 9,
+    "overture_merges": 0,
+    "phones_added": 6,
+    "websites_added": 5,
+    "categories_added": 9
+  },
+  "Dutse": {
+    "osm_baseline": 4,
+    "overture_new_places": 2,
+    "overture_merges": 0,
+    "phones_added": 2,
+    "websites_added": 2,
+    "categories_added": 2
+  },
+  "Kano Area": {
+    "osm_baseline": 5,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Bauchi": {
+    "osm_baseline": 17,
+    "overture_new_places": 12,
+    "overture_merges": 0,
+    "phones_added": 8,
+    "websites_added": 2,
+    "categories_added": 12
+  },
+  "Kureken Sani": {
+    "osm_baseline": 1,
+    "overture_new_places": 3,
+    "overture_merges": 0,
+    "phones_added": 3,
+    "websites_added": 1,
+    "categories_added": 3
+  },
+  "Bauchi Area": {
+    "osm_baseline": 1,
+    "overture_new_places": 2,
+    "overture_merges": 0,
+    "phones_added": 1,
+    "websites_added": 0,
+    "categories_added": 2
+  },
+  "Mariri": {
+    "osm_baseline": 2,
+    "overture_new_places": 3,
+    "overture_merges": 0,
+    "phones_added": 2,
+    "websites_added": 1,
+    "categories_added": 3
+  },
+  "Gombe": {
+    "osm_baseline": 28,
+    "overture_new_places": 15,
+    "overture_merges": 1,
+    "phones_added": 13,
+    "websites_added": 1,
+    "categories_added": 15
+  },
+  "Maiduguri Area": {
+    "osm_baseline": 2,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Maiduguri": {
+    "osm_baseline": 4,
+    "overture_new_places": 14,
+    "overture_merges": 0,
+    "phones_added": 13,
+    "websites_added": 2,
+    "categories_added": 14
+  },
+  "Birnin kebbi": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "arkilla": {
+    "osm_baseline": 1,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Sokoto": {
+    "osm_baseline": 3,
+    "overture_new_places": 0,
+    "overture_merges": 0,
+    "phones_added": 0,
+    "websites_added": 0,
+    "categories_added": 0
+  },
+  "Katsina": {
+    "osm_baseline": 4,
+    "overture_new_places": 11,
+    "overture_merges": 0,
+    "phones_added": 8,
+    "websites_added": 2,
+    "categories_added": 11
+  },
+  "kano": {
+    "osm_baseline": 1,
+    "overture_new_places": 39,
+    "overture_merges": 0,
+    "phones_added": 35,
+    "websites_added": 16,
+    "categories_added": 39
+  },
+  "Fagge D2": {
+    "osm_baseline": 1,
+    "overture_new_places": 19,
+    "overture_merges": 0,
+    "phones_added": 16,
+    "websites_added": 7,
+    "categories_added": 19
+  }
+}

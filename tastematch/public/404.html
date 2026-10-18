@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TasteMatch — Redirecting...</title>
+    <script>
+      // Single Page App redirect for hosts serving 404.html on deep links
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace('/' + (path.startsWith('/') ? path.slice(1) : path) + search + hash);
+    </script>
+  </head>
+  <body style="background:#0C0D10;color:#F4F5F6;font-family:system-ui,sans-serif;padding:32px;text-align:center;">
+    <p>Redirecting to TasteMatch...</p>
+    <a href="/" style="color:#C8F03C;">Click here if not redirected</a>
+  </body>
+</html>

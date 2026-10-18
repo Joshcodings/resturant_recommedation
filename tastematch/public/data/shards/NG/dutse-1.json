@@ -148,5 +148,69 @@
     "votes": null,
     "website": null,
     "weighted_rating": null
+  },
+  {
+    "address": "No. 68 Dutsen Maidodo Quarters Birnin kudu",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Dutse",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 11.450001,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Birnin Kudu",
+    "longitude": 9.5,
+    "name": "Abushuraim Hausa Dishes and Bakery",
+    "opening_hours": null,
+    "overture_confidence": 0.568,
+    "phone": "+2348151232969",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_02e4bc6b",
+    "restaurant_name": "Abushuraim Hausa Dishes and Bakery",
+    "uid": "overture:02e4bc6b-7001-49d5-813f-50f1fce2b20a",
+    "votes": null,
+    "website": "http://www.shettypopularhausadishes.blogspot.com/"
+  },
+  {
+    "address": "No. 1Gidan Sulaiman, Abdullahi mai Kano Way, ",
+    "aggregate_rating": null,
+    "attribution": "Data © Overture Maps Foundation, licensed under CDLA Permissive 2.0. https://overturemaps.org",
+    "city": "Dutse",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "cuisineList": [
+      "Restaurant"
+    ],
+    "cuisines": "Restaurant",
+    "data_source": "Overture Maps",
+    "data_sources": [
+      "Overture Maps"
+    ],
+    "hasCoords": true,
+    "latitude": 11.777499,
+    "licence": "CDLA Permissive 2.0",
+    "locality": "Dutse",
+    "longitude": 9.334169,
+    "name": "Hasinah Confectionery & Restaurant",
+    "opening_hours": null,
+    "overture_confidence": 0.78,
+    "phone": "+2347047006060",
+    "price_range": null,
+    "rating_text": null,
+    "restaurant_id": "ov_70651f78",
+    "restaurant_name": "Hasinah Confectionery & Restaurant",
+    "uid": "overture:70651f78-74e9-4acb-81da-9cb452cfa288",
+    "votes": null,
+    "website": "http://www.hasinahconfectionery.com/"
   }
 ]
